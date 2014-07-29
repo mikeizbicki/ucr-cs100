@@ -1,0 +1,12 @@
+Script started on Mon 28 Jul 2014 03:19:08 PM PDT
+]0;user@userland: ~user@userland:~$ lx[Ks
+[0m[01;34mblog[0m  [01;36mdocs[0m  [01;34mdownload[0m  [01;34mDropbox[0m  [01;34mimg[0m  lecture1  [01;34mpapers[0m  [01;34mproj[0m  [01;34mtmp[0m
+]0;user@userland: ~user@userland:~$ ct [K[K[Kat[K[Kcat [K[K[K[Kecho "this is the contents"
+this is the contents
+]0;user@userland: ~user@userland:~$ echo "this is the contents" > file
+]0;user@userland: ~user@userland:~$ cat file
+this is the contents
+]0;user@userland: ~user@userland:~$ exit
+exit
+
+Script done on Mon 28 Jul 2014 03:20:36 PM PDT

@@ -8,7 +8,7 @@ There are two ways you can install Linux.  The first is as a dual boot operating
 
 ### grading
 
-50 points for a fully working Linux installation
+25 points for a fully working Linux installation.  You must install all the tools we will be using in class.
 
 If you installed Linux onto a laptop, bring your laptop to class and I will check you off.  You must have wireless internet working for full credit!  
 
@@ -20,5 +20,5 @@ If you installed Linux onto a desktop machine, then we will ssh into your deskto
 
 ### extra credit
 
-There is a Linux program called `wine` that lets you run windows programs from Linux.  If you install wine and can use it to run any 3D windows game---I don't care which, you pick---then you will get 10 points of extra credit.
+There is a Linux program called `wine` that lets you run windows programs from Linux.  If you install wine and can use it to run any 3D windows game---I don't care which, you pick---then you will get 5 points of extra credit.
 
