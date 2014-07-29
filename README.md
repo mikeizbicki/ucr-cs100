@@ -1,5 +1,3 @@
-This is an in class edit.
-
 # cs100 - software construction
 
 This is a course on [how to be a hacker](http://www.catb.org/esr/faqs/hacker-howto.html).  Being a hacker [means a lot of things](http://www.catb.org/jargon/html/H/hacker.html).  It means:
