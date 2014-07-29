@@ -18,7 +18,7 @@ Write a command shell called `rshell`.  Your shell will perform the following st
 
 For example, in the command `ls -lR /`, you would execute the program `/usr/bin/ls` passing into it the parameters `-lR` and `/`.  But in the command `ls # -lR /`, you would execute `/usr/bin/ls`, but you would not pass any parameters because they appear in the comment section.
 
-**IMPORTANT:** Most bash commands are actually executables located in `/usr/bin`.  But some commands are special and are built in to bash.  The `cd` command is the most common example.  So while the `ls` command` should "just work" for you, the `cd` command won't.  You'll be adding this feature in a later homework.
+**IMPORTANT:** Most bash commands are actually executables located in `/usr/bin`.  But some commands are special and are built in to bash.  The `cd` command is the most common example.  So while the `ls` command should "just work" for you, the `cd` command won't.  You'll be adding this feature in a later homework.
 
 **HINT:** Pay careful attention to how you parse the command string the user enters.  There are many ways to mess this up and introduce bugs into your program.  You will be adding more parsing features in future assignments, so it will make your life much easier if you do it right the first time!
 
