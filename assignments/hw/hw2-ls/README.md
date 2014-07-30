@@ -24,7 +24,9 @@ You should run them as well to verify that you've submitted your code successful
 
 ### project structure
 
-All source files created for this program should be in your project's `src` folder.  You will have to modify the Makefile so that it builds both the `rshell` program and your `ls` program.  Both binaries should be placed in the `bin` folder.  Remember that binaries should not get added to your git repo, and you will be penalized if they are.
+All source files created for this program should be in your project's `src` folder.  
+
+You will have to modify the `Makefile` to include a target called `ls` which builds your `ls` program.  The `all` target should build *both* `rshell` and `ls`.  Both binaries should be placed in the `bin` folder.  Remember that binaries should not get added to your git repo, and you will be penalized if they are.
 
 ### testing
 

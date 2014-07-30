@@ -1,6 +1,12 @@
 # vim files
 *.swp
 
+# tex fils
+*.aux
+*.pdf
+*.ps
+*.log
+
 # Compiled Object files
 *.slo
 *.lo
