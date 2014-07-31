@@ -1,18 +1,27 @@
-#include <iostream>
-#include <string>
-
+#include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <errno.h>
+#include <stdio.h>
+
+#include <iostream>
+
+int errno2;
 
 int main()
 {
-    std::string str = "hello";
     char *str2 = "goodbye";
 
-    std::cout << str2 << std::endl;
-
-    int fd=open("testfile",O_RDWR);
-    write(fd,"goodbye\n",8);
+    int fd;
+    if ((fd=open("testfile",O_RDWR))==-1)    {
+        perror("there was an error openning the file");
+        exit(1);
+        // std::cout << "there was an error openning the file; errno=" << errno << std::endl;
+    }
+    if (write(fd,"goodbye\n",8)==-1) {
+        perror ("write failed");
+        exit(1);
+    }
 
     return 0;
 }
