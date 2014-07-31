@@ -30,9 +30,11 @@ You should memorize the following commands, what they do, and how to use them.
 
 You must be familiar with the following commands and what they do.  You do NOT need to memorize how to use them exactly.  You should be looking up the man page whenever you use them
 
-`diff`
-
 `git merge`
+
+`top`
+
+`kill`
 
 ### vim commands 
 
@@ -65,3 +67,8 @@ You must be familiar with the following functions and what they do.  You do NOT 
 `errno`
 
 `perror`
+
+`fork`
+
+`exec` and the related functions
+

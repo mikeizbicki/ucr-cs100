@@ -26,7 +26,7 @@ lecturer: Mike Izbicki
 
 teaching assistant: Bryan Marsh
 
-office hours: TBD
+office hours: Mondays, Wednesdays, right after lab until lecture; room WCH110
 
 **IMPORTANT:** If you want to contact the instructors about the course, you should NOT do it via email.  Instead, you should report an issue via github.  We will talk about how to do this in class.  This is a system similar to the piazza system you may already be familiar with, but it more popular for open source software development. 
 
