@@ -8,7 +8,7 @@ Write a command shell called `rshell`.  Your shell will perform the following st
 
 2. Read in a command on one line.  Commands will have the form: `commandName [ argumentList ] [ & ]`, where `commandName` is an executable program located in `/usr/bin` and `argumentList` is a list of zero or more words.
 
-3. Execute the command.  This will require using the system functions `fork`, `open`, `exec`, and `wait`.
+3. Execute the command.  This will require using the system functions `fork`, `exec`, and `wait`.
 
 4. If the command was followed by the `&` character, do not wait for the command to finish; immediately return to step 1.  Otherwise, wait until the command finishes before returning to step 1.
 
