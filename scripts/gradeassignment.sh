@@ -31,11 +31,6 @@ downloadgrades $user
 
 file="$classname-$user/$assn/grade"
 
-if [ ! -f "$file" ]; then
-    echo "github account $user does not have assignment $assn"
-    exit
-fi
-
 gradefile "$file"
 
 uploadgrades $user

@@ -1,5 +1,6 @@
 # vim files
 *.swp
+*.swo
 
 # tex fils
 *.aux

@@ -25,9 +25,9 @@ function downloadgrades {
         cd ..
     fi
 
-    cd $clonedir
+    #cd $clonedir
     #git checkout --quiet init
-    cd ..
+    #cd ..
 }
 
 function uploadgrades {
@@ -40,10 +40,11 @@ function uploadgrades {
     git commit -m "graded assignment using automatic scripts"
 
     echo "changes committed... uploading to github"
-    #if [ `git push origin` ]; then
+    git push origin
+    #if [ $? ]; then
         #echo "upload successful :)"
     #else
-        #echo "upload failed :( error code; $?"
+        #echo "upload failed :( error code: $?"
     #fi
     cd ..
 }
@@ -51,8 +52,12 @@ function uploadgrades {
 function gradefile {
     file="$1"
 
+    mkdir -p `dirname $1`
+
     # let the grader know who they're grading
     echo "#####################################" >> "$file"
+    echo "#" >> "$file"
+    echo "# $file" >> "$file"
     echo "#" >> "$file"
     echo "# name      = $name" >> "$file"
     echo "# csaccount = $csaccount" >> "$file"
