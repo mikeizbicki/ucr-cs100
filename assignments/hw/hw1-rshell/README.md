@@ -44,7 +44,7 @@ You should run them as well to verify that you've submitted your code successful
 
 You must have a directory called `src` which contains all the source code files for the project.
 
-You must have a `Makefile` in the root directory.  You must compile using `g++` with the flags: `-Wall -Werror -ansi -strict`.
+You must have a `Makefile` in the root directory.  You must compile using `g++` with the flags: `-Wall -Werror -ansi -pedantic`.
 
 You must NOT have a directory called `bin` in the project; however, when the project is built, this directory must be created and all executable files placed here.
 
