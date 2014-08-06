@@ -1,0 +1,57 @@
+\documentclass{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{listings}
+\lstset{numbers=left,frame=single}
+
+\title{Quiz 3 - sizeof}
+\author{CS100 - software construction}
+
+\newcommand{\sizeof}[1]{\texttt{sizeof({#1})~~~}}
+\newcommand{\ptr}[1]{\sizeof{{#1}} & \sizeof{{#1}*} & \sizeof{{#1}**}\vspace{0.45in}\\\hline}
+\newcommand{\ptrU}[1]{
+    \ptr{{#1}}
+    \ptr{unsigned {#1}}
+    }
+
+\begin{document}
+\maketitle
+
+On a 64 bit machine (e.g. one of the lab machines), what do the following applications of \texttt{sizeof} return?
+\vspace{0.15in}
+
+\noindent
+\begin{tabular}{p{2.3in}p{2.3in}p{2.3in}}
+\hline
+\ptrU{char}
+\ptrU{short}
+\ptrU{int}
+\ptrU{long}
+\ptrU{long long}
+\ptr{float}
+\ptr{double}
+\end{tabular}
+
+\newpage
+Given the following code:
+\begin{lstlisting}
+    struct s1 { char a; };
+    struct s2 { char a; char b; };
+    struct s3 { char a; int b; };
+    struct s4 { char a; int b; char c; };
+    struct s5 { char a; char b; int c; };
+\end{lstlisting}
+Fill out the table below in the same manner.
+\vspace{0.15in}
+
+\noindent
+\begin{tabular}{p{2.3in}p{2.3in}p{2.3in}}
+\hline
+\ptr{s1}
+\ptr{s2}
+\ptr{s3}
+\ptr{s4}
+\ptr{s5}
+\end{tabular}
+
+\end{document}
