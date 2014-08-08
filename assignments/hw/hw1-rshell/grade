@@ -1,1 +1,14 @@
-/ 100
+20 / 100
+-80 did not compile
+Giving me errors:
+	g++ -Wall -Werror -ansi -pedantic src/hw1.cpp -o bin/rshell
+	cc1plus: warnings being treated as errors
+	src/hw1.cpp: In function ¡Æint main()¡Ç:
+	src/hw1.cpp:22: warning: comparison between signed and unsigned integer expressions
+	src/hw1.cpp:35: warning: comparison between signed and unsigned integer expressions
+	src/hw1.cpp:73: error: no matching function for call to ¡Æwait::wait(int)¡Ç
+	/usr/include/bits/waitstatus.h:68: note: candidates are: wait::wait()
+	/usr/include/bits/waitstatus.h:68: note:                 wait::wait(const wait&)
+	make: *** [all] Error 1
+
+Giving points for creating the repository correctly but in the future if program does not compile a zero will be given. 
