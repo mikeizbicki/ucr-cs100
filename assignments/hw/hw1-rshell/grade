@@ -1,5 +1,4 @@
 20 / 100
-
 -80 did not compile
 Giving me errors:
 	g++ -Wall -Werror -ansi -pedantic src/hw1.cpp -o bin/rshell
