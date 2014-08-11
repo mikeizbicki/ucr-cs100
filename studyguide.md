@@ -30,6 +30,8 @@ You should memorize the following commands, what they do, and how to use them.
 
 `make` (You should also be able to write your own `Makefile`s from scratch.)
 
+`which`
+
 You must be familiar with the following commands and what they do.  You do NOT need to memorize how to use them exactly.  You should be looking up the man page whenever you use them.
 
 `git merge`
@@ -49,6 +51,14 @@ You must be familiar with the following commands and what they do.  You do NOT n
 `history`
 
 `grep`
+
+`export`
+
+`env`
+
+`gdb`
+
+`valgrind`
 
 You should memorize the following bash commands, what they do, and how to use them.
 
