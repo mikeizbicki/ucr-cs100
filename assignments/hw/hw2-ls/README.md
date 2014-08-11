@@ -2,7 +2,7 @@
 
 ### coding requirements
 
-Write a C++ program that implements a subset of the GNU `ls` command.  In particular, you must support: the `-a`, `-l` and `-r` optional flags; and the ability to pass in zero, one, or many files.  Notice that the GNU `ls` command handles files and folders differently, and you must reproduce this functionality exactly.  You will use the functions `readdir` and `stat`, which are provided by Unix operating systems.  For details on the use of these functions, visit their man pages.
+Write a C++ program that implements a subset of the GNU `ls` command.  In particular, you must support: the `-a`, `-l` and `-R` optional flags; and the ability to pass in zero, one, or many files.  Notice that the GNU `ls` command handles files and folders differently, and you must reproduce this functionality exactly.  You will use the functions `readdir` and `stat`, which are provided by Unix operating systems.  For details on the use of these functions, visit their man pages.
 
 To get you started, the file `ls.cpp` contains code that reads the files in the current working directory.  
 
@@ -32,7 +32,7 @@ You will have to modify the `Makefile` to include a target called `ls` which bui
 
 Again, the tests you choose will be the most important part of your grade.  
 
-Remember that the commands `ls -l -r`, `ls -r -l`, `ls -lr` and `ls -rl` should all do the same thing.  You must consider how these flags interact with the `-a` flag and the optional file parameters.
+Remember that the commands `ls -l -R`, `ls -R -l`, `ls -lR` and `ls -Rl` should all do the same thing.  You must consider how these flags interact with the `-a` flag and the optional file parameters.
 
 **IMPORTANT:** If you are unsure if your test cases are sufficient, ask one of the instructors to review them *before the deadline*.
 
@@ -52,7 +52,7 @@ You SHOULD talk to other students about test cases.  You are allowed to freely s
 
 25 points for the `-l` flag
 
-25 points for the `-r` flag
+25 points for the `-R` flag
 
 #### extra credit
 
