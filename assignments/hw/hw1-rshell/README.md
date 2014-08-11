@@ -36,7 +36,7 @@ $ make
 $ bin/rshell
 ```
 
-You should run them as well to verify that you've submitted your code successfully.
+You should ssh into `well.cs.ucr.edu` and run the above commands to verify that you've submitted your code successfully.
 
 ### project structure
 
