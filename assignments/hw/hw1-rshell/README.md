@@ -36,7 +36,7 @@ $ make
 $ bin/rshell
 ```
 
-You should ssh into `well.cs.ucr.edu` and run the above commands to verify that you've submitted your code successfully.
+You should ssh into `well.cs.ucr.edu` and run the above commands to verify that you've submitted your code successfully.  To ensure that your `hw1` tag is getting pushed to github correctly, you may have to run the command: `git push origin hw1` instead of just `git push`.  
 
 ### project structure
 
