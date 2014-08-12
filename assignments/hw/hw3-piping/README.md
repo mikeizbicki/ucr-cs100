@@ -14,7 +14,7 @@ $ cat < existingInputFile | tr A-Z a-z | tee newOutputFile1 | tr a-z A-Z > newOu
 
 ### submission instructions
 
-You will add this code to your `rshell` project on github.  Create a branch called `redirect` and do all of your work under this branch.  When finished, merge with the `master` branch and create a tag called `hw2`.
+You will add this code to your `rshell` project on github.  Create a branch called `redirect` and do all of your work under this branch.  When finished, merge with the `master` branch and create a tag called `hw3`.
 
 To download and grade your homework, the TA will run the following commands:
 
