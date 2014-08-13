@@ -1,0 +1,23 @@
+40 / 100
+
++20 pts extra credit
+
+Did not follow specs create a hw1 tag for this assignmment. Will need to resubmit. See https://github.com/mikeizbicki/ucr-cs100/issues/36 for more details. Did not make a tag for hw1.
+
+-25 pts For late submissions
+
+-5pts don't proberly parse the '&'
+
+-5 pts rshell exectuable uploaded, rememember never include executables in your repository
+
+-5pts test file not named exec.script
+
+-30 pts
+	number of syscalls... 7
+	number of perror..... 1
+	grade modifier....... -30
+-10 did not test for comments
+
+NOTE: I was being generous with the test script, but in the future you will need to show more test cases and be more thorough.
+
+
