@@ -32,6 +32,12 @@ You should memorize the following commands, what they do, and how to use them.
 
 `which`
 
+`head`
+
+`tail`
+
+`tee`
+
 You must be familiar with the following commands and what they do.  You do NOT need to memorize how to use them exactly.  You should be looking up the man page whenever you use them.
 
 `git merge`
@@ -124,3 +130,14 @@ You must be familiar with the following functions and what they do.  You do NOT 
 
 `exec` and the related functions
 
+`opendir`
+
+`readdir`
+
+`closedir`
+
+`dup`
+
+`dup2`
+
+`pipe`
