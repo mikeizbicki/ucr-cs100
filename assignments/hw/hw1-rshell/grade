@@ -1,4 +1,19 @@
-15 / 100
+25 / 100
 
--5 no LICENSE FILE
--80 Did not compile
+
++20 extra credit
+-25 pts late submision
+-25 pts program not compiling on first try
+
+-35pts :
+	number of syscalls... 8
+	number of perror..... 1
+	grade modifier....... -35
+-10 '&' not working 
+-10 some commands don't work 
+	+10 please fix this by the next rshell interation
+ 
+NOTE: Was generous on grading for the test cases. Next time be a little more thorough
+
+score was less than 
+
