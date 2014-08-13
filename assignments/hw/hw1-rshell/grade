@@ -1,4 +1,4 @@
-90 / 100
+95 / 100
 
 +20 extra credit
 -20  for not properly having the number of perror per syscall 
@@ -9,6 +9,6 @@
 	*ex. emacs main.cpp & 
 	will open up to files main.cpp and &
 	* Looks like you forgot to parse out &
--5 no exec branch
+
 
 NOTE: Don't forget to show all the cases you test. For this assignment was a little lenient. In the future test more throughly. 
