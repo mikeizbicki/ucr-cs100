@@ -1,14 +1,17 @@
-0 / 100
+60 / 100
 
 Did not follow specs create a hw1 tag for this assignmment. Will need to resubmit. See https://github.com/mikeizbicki/ucr-cs100/issues/36 for more details.
 
-Problems:
--25  for not properly having the number of perror per syscall 
+-25 pts For late submissions
 
+Problems:
+-5 pts:
 	number of syscalls... 6
-	number of perror..... 1
-	grade modifier....... -25
--5 no exec branch 
-I stopped checking other problems since you did not follow the specs 
+	number of perror..... 5
+	grade modifier....... -5
+
+-10 pts times not having the '&', your rshell treats it if its still there.
+
+WARNING: In the future have the .o files either in the bin folder or remove them.
 NOTE: Don't forget to show all the cases you test. For this assignment was a little lenient. In the future test more throughly. 
 
