@@ -22,12 +22,15 @@ for file in studentinfo/*; do
     
     totalgrade=`totalGrade "$githubaccount"`
     totaloutof=`totalOutOf "$githubaccount"`
+    rtotaloutof=`runningTotalOutOf "$githubaccount"`
+    rpercent=`bc <<< "scale=2; 100 * $totalgrade/$rtotaloutof"`
     percent=`bc <<< "scale=2; 100 * $totalgrade/$totaloutof"`
 
     printf " $(pad "$name" 20) |"
     printf " $(pad "$csaccount" 10) |"
     printf " $(pad "$githubaccount" 16) |"
-    printf " %4s / %4s | $percent \n" $totalgrade $totaloutof
+    printf " %4s / %4s | $rpercent " $totalgrade $rtotaloutof
+    echo
 done
 
 echo "================================================================================"

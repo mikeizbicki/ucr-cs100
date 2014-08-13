@@ -1,3 +1,6 @@
+notes/
+gradetmp/
+
 # vim files
 *.swp
 *.swo

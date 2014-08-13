@@ -39,7 +39,7 @@ echo "==========================================="
 echo "    grade        |  assignment"
 echo "==========================================="
 
-for f in `find "./$classname-$user" -name grade | sort`; do
+for f in `find "./$tmpdir/$classname-$user" -name grade | sort`; do
     dir=`dirname $f`
     assn=`basename $dir`
     grade="---"

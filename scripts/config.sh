@@ -9,20 +9,21 @@
 
 # the github project name
 classname="ucr-cs100"
+tmpdir="gradetmp"
 
 #######################################
 # download/edit grades
 
 function downloadgrades {
     local user=$1
-    clonedir="$classname-$user"
+    clonedir="$tmpdir/$classname-$user"
     if [ ! -d "$clonedir" ]; then
         giturl="https://github.com/$user/$classname.git"
         git clone --quiet "$giturl" "$clonedir" 
     else
         cd "$clonedir"
         git pull origin --quiet > /dev/null
-        cd ..
+        cd ../..
     fi
 
     #cd $clonedir
@@ -32,7 +33,7 @@ function downloadgrades {
 
 function uploadgrades {
     local user=$1
-    clonedir="$classname-$user"
+    clonedir="$tmpdir/$classname-$user"
     cd "$clonedir"
     for f in `find . -name grade`; do
         git add $f
@@ -46,7 +47,7 @@ function uploadgrades {
     #else
         #echo "upload failed :( error code: $?"
     #fi
-    cd ..
+    cd ../..
 }
 
 function gradefile {
@@ -69,12 +70,15 @@ function gradefile {
 
     vim "$file"
 
-    # delete all the comments from the file
-    tmpfile="${file}.tmp"
-    sed "/^\#/d" "$file" > "$tmpfile"
-    rm "$file"
-    mv "$tmpfile" "$file"
+    # add spaces around the / in the grade file
 
+    # delete all the comments from the file
+    sed -i "/^\#/d" "$file" 
+
+    #tmpfile="${file}.tmp"
+    #sed -i "/^\#/d" "$file" > "$tmpfile"
+    #rm "$file"
+    #mv "$tmpfile" "$file"
     # FIXME: the above implementation is unsafe whenever the tmpfile already exists
     # sed can't write to it's own output, though
 }
@@ -88,20 +92,20 @@ function isGraded {
 }
 
 function getGrade {
-    head -n 1 "$1" | awk '{print $1;}'
+    head -n 1 "$1" | sed 's/\// /' | awk '{print $1;}'
 }
 
 function getOutOf {
     if isGraded $1; then
-        head -n 1 "$1" | awk '{print $3;}'
+        head -n 1 "$1" | sed 's/\// /' | awk '{print $2;}'
     else
-        head -n 1 "$1" | awk '{print $2;}'
+        head -n 1 "$1" | sed 's/\// /' | awk '{print $1;}'
     fi
 }
 
 function totalGrade {
     local totalgrade=0
-    for f in `find "./$classname-$1" -name grade`; do
+    for f in `find "./$tmpdir/$classname-$1" -name grade`; do
         if isGraded "$f"; then
             local grade=$(getGrade "$f")
             totalgrade=$[$totalgrade+$grade]
@@ -112,7 +116,7 @@ function totalGrade {
 
 function runningTotalOutOf {
     totaloutof=0
-    for f in `find "./$classname-$1/" -name grade`; do
+    for f in `find "./$tmpdir/$classname-$1/" -name grade`; do
         if isGraded "$f"; then
             local outof=$(getOutOf "$f")
             totaloutof=$[$totaloutof+$outof]
@@ -123,7 +127,7 @@ function runningTotalOutOf {
 
 function totalOutOf {
     totaloutof=0
-    for f in `find "./$classname-$1/" -name grade`; do
+    for f in `find "./$tmpdir/$classname-$1/" -name grade`; do
         local outof=$(getOutOf "$f")
         totaloutof=$[$totaloutof+$outof]
     done
