@@ -1,2 +1,11 @@
-/ 100
+115 / 100
+-0 :)
+	number of syscalls... 29
+	number of perror..... 40
+	grade modifier....... -0
+
++25pts extra credit
+
+-10 pts can't take file names as a parameter
+
 
