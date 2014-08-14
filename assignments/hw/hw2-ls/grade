@@ -1,2 +1,20 @@
-/ 100
+5 / 100
+
+NOTE: You have executables uploaded onto your repo.Points will be taken off in the future
+
+-25 pts:
+	number of syscalls... 6
+	number of perror..... 1
+	grade modifier....... -25
+
+-5 pts did not thoroughly test your program
+
+
+-10 pts for not outputing all the information for the -l flag
+
+-5 pts not able to get all possible combinations of flags to work. For instance -la 
+
+-25 pts -R does not work
+
+-25 pts is not able to handle optional paramaters
 
