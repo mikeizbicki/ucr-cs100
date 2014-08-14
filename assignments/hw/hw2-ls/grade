@@ -1,2 +1,11 @@
-/ 100
+105 / 100
+
+-10pts: 
+	number of syscalls... 16
+	number of perror..... 14
+	grade modifier....... -10
+
++25 pts extra credit
+
+-10 pts can't take directories as a paramater
 
