@@ -1,2 +1,14 @@
-/ 100
+55 / 100
+
+-5pts:
+	number of syscalls... 6
+	number of perror..... 5
+	grade modifier....... -5
+
+-25 pts did not implement optional file paramaters
+
+WARNING getting a stat warning when using -R, illegal seek
+-15 pts for -R not working when combines with other paramaters
+
+
 
