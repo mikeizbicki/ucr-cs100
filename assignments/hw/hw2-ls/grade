@@ -1,4 +1,4 @@
-105 / 100
+115 / 100
 
 -10pts: 
 	number of syscalls... 16
@@ -8,4 +8,4 @@
 +25 pts extra credit
 
 -10 pts can't take directories as a paramater
-
+	+10 pts grading error
