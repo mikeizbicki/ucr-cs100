@@ -29,7 +29,7 @@ fi
 
 downloadgrades $user
 
-file="$classname-$user/$assn/grade"
+file="$tmpdir/$classname-$user/$assn/grade"
 
 gradefile "$file"
 
