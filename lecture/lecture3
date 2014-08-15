@@ -1,0 +1,468 @@
+Script started on Wed 30 Jul 2014 03:24:35 PM PDT
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ touch "this has spaces"
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ ls
+[0m[01;32ma.out[0m        [01;34mfacebook[0m  lecture1  lecture3  testfile
+cmdline.cpp  [01;34mgittest[0m   lecture2  test      this has spaces
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ cat this has spaces
+cat: this: No such file or directory
+cat: has: No such file or directory
+cat: spaces: No such file or directory
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ cat this has spaces"[1@"
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ manm[K ls
+[?1049h[?1h=LS(1)                          User Commands                          LS(1)[m
+[m
+[1mNAME[0m[m
+       ls - list directory contents[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mls[0m [[4mOPTION[24m]... [[4mFILE[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+       List information about the FILEs (the current directory by default).[m
+       Sort entries alphabetically if none of [1m-cftuvSUX[0m nor [1m--sort[0m is spec‐[m
+       ified.[m
+[m
+       Mandatory  arguments to long options are mandatory for short options[m
+       too.[m
+[m
+       [1m-a[0m, [1m--all[0m[m
+              do not ignore entries starting with .[m
+[m
+       [1m-A[0m, [1m--almost-all[0m[m
+              do not list implied . and ..[m
+[m
+       [1m--author[0m[m
+              with [1m-l[0m, print the author of each file[m
+[m
+       [1m-b[0m, [1m--escape[0m[m
+              print C-style escapes for nongraphic characters[m
+[m
+[7m Manual page ls(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ man getlogin_r
+[?1049h[?1h=GETLOGIN(3)              Linux Programmer's Manual              GETLOGIN(3)[m
+[m
+[1mNAME[0m[m
+       getlogin, getlogin_r, cuserid - get username[m
+[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<unistd.h>[0m[m
+[m
+       [1mchar[0m [1m*getlogin(void);[0m[m
+       [1mint[0m [1mgetlogin_r(char[0m [1m*[0m[4mbuf[24m[1m,[0m [1msize_t[0m [4mbufsize[24m[1m);[0m[m
+[m
+       [1m#include[0m [1m<stdio.h>[0m[m
+[m
+       [1mchar[0m [1m*cuserid(char[0m [1m*[0m[4mstring[24m[1m);[0m[m
+[m
+   Feature Test Macro Requirements for glibc (see [1mfeature_test_macros[0m(7)):[m
+[m
+       [1mgetlogin_r[0m(): _REENTRANT || _POSIX_C_SOURCE >= 199506L[m
+       [1mcuserid[0m(): _XOPEN_SOURCE[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mgetlogin[0m()  returns a pointer to a string containing the name of the[m
+       user logged in on the controlling terminal of the process, or a NULL[m
+       pointer  if  this  information  cannot be determined.  The string is[m
+       statically allocated and might be overwritten on subsequent calls to[m
+       this function or to [1mcuserid[0m().[m
+[m
+       [1mgetlogin_r[0m()  returns  this  same  username in the array [4mbuf[24m of size[m
+[7m Manual page getlogin_r(3) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mbufsize[24m.[m
+[7m Manual page getlogin_r(3) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page getlogin_r(3) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mcuserid[0m() returns a pointer to a string containing a username  asso‐[m
+[7m Manual page getlogin_r(3) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ciated  with the effective user ID of the process.  If [4mstring[24m is not[m
+[7m Manual page getlogin_r(3) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       a NULL pointer, it should  be  an  array  that  can  hold  at  least[m
+[7m Manual page getlogin_r(3) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mL_cuserid[0m  characters; the string is returned in this array.  Other‐[m
+[7m Manual page getlogin_r(3) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       wise, a pointer to a string in a  static  area  is  returned.   This[m
+[7m Manual page getlogin_r(3) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       string  is  statically  allocated and might be overwritten on subse‐[m
+[7m Manual page getlogin_r(3) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       quent calls to this function or to [1mgetlogin[0m().[m
+[7m Manual page getlogin_r(3) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page getlogin_r(3) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The macro [1mL_cuserid[0m is an integer constant that indicates  how  long[m
+[7m Manual page getlogin_r(3) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       an  array you might need to store a username.  [1mL_cuserid[0m is declared[m
+[7m Manual page getlogin_r(3) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       in [4m<stdio.h>[24m.[m
+[7m Manual page getlogin_r(3) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page getlogin_r(3) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       These functions let your program identify positively the user who is[m
+[7m Manual page getlogin_r(3) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       running  ([1mcuserid[0m())  or the user who logged in this session ([1mgetlo‐[0m[m
+[7m Manual page getlogin_r(3) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mgin[0m()).  (These can differ when set-user-ID programs are involved.)[m
+[7m Manual page getlogin_r(3) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page getlogin_r(3) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       For most purposes, it is more useful to use the environment variable[m
+[7m Manual page getlogin_r(3) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mLOGNAME[0m  to  find  out  who the user is.  This is more flexible pre‐[m
+[7m Manual page getlogin_r(3) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       cisely because the user can set [1mLOGNAME[0m arbitrarily.[m
+[7m Manual page getlogin_r(3) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page getlogin_r(3) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mRETURN[0m [1mVALUE[0m[m
+[7m Manual page getlogin_r(3) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mgetlogin[0m() returns a pointer to the username  when  successful,  and[m
+[7m Manual page getlogin_r(3) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       NULL  on  failure.   [1mgetlogin_r[0m()  returns  0  when  successful, and[m
+[7m Manual page getlogin_r(3) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       nonzero on failure.[m
+[7m Manual page getlogin_r(3) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page getlogin_r(3) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mERRORS[0m[m
+[7m Manual page getlogin_r(3) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       POSIX specifies[m
+[7m Manual page getlogin_r(3) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page getlogin_r(3) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mEMFILE[0m The calling process already has the maximum allowed number of[m
+[7m Manual page getlogin_r(3) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              open files.[m
+[7m Manual page getlogin_r(3) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page getlogin_r(3) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mENFILE[0m The  system  already  has  the maximum allowed number of open[m
+[7m Manual page getlogin_r(3) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              files.[m
+[7m Manual page getlogin_r(3) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page getlogin_r(3) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mENXIO[0m  The calling process has no controlling tty.[m
+[7m Manual page getlogin_r(3) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page getlogin_r(3) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mERANGE[0m (getlogin_r) The length of the username, including the termi‐[m
+[7m Manual page getlogin_r(3) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              nating null byte, is larger than [4mbufsize[24m.[m
+[7m Manual page getlogin_r(3) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page getlogin_r(3) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Linux/glibc also has[m
+[7m Manual page getlogin_r(3) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page getlogin_r(3) line 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mENOENT[0m There was no corresponding entry in the utmp-file.[m
+[7m Manual page getlogin_r(3) line 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page getlogin_r(3) line 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mENOMEM[0m Insufficient memory to allocate passwd structure.[m
+[7m Manual page getlogin_r(3) line 49 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page getlogin_r(3) line 50 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mENOTTY[0m Standard input didn't refer to a terminal.  (See BUGS.)[m
+[7m Manual page getlogin_r(3) line 51 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page getlogin_r(3) line 52 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mFILES[0m[m
+[7m Manual page getlogin_r(3) line 53 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4m/etc/passwd[24m[m
+[7m Manual page getlogin_r(3) line 54 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              password database file[m
+[7m Manual page getlogin_r(3) line 55 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page getlogin_r(3) line 56 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4m/var/run/utmp[24m[m
+[7m Manual page getlogin_r(3) line 57 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              (traditionally    [4m/etc/utmp[24m;    some   libc   versions   used[m
+[7m Manual page getlogin_r(3) line 58 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4m/var/adm/utmp[24m)[m
+[7m Manual page getlogin_r(3) line 59 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page getlogin_r(3) line 60 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mCONFORMING[0m [1mTO[0m[m
+[7m Manual page getlogin_r(3) line 61 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mgetlogin[0m() and [1mgetlogin_r[0m() specified in POSIX.1-2001.[m
+[7m Manual page getlogin_r(3) line 62 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page getlogin_r(3) line 63 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       System V has a [1mcuserid[0m() function which uses the real user ID rather[m
+[7m Manual page getlogin_r(3) line 64 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       than  the effective user ID.  The [1mcuserid[0m() function was included in[m
+[7m Manual page getlogin_r(3) line 65 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the 1988 version of POSIX, but removed from the  1990  version.   It[m
+[7m Manual page getlogin_r(3) line 66 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       was present in SUSv2, but removed in POSIX.1-2001.[m
+[7m Manual page getlogin_r(3) line 67 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page getlogin_r(3) line 68 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       OpenBSD  has  [1mgetlogin[0m()  and  [1msetlogin[0m(), and a username associated[m
+[7m Manual page getlogin_r(3) line 69 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       with a session, even if it has no controlling tty.[m
+[7m Manual page getlogin_r(3) line 70 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page getlogin_r(3) line 71 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mBUGS[0m[m
+[7m Manual page getlogin_r(3) line 72 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Unfortunately, it is often rather easy to  fool  [1mgetlogin[0m().   Some‐[m
+[7m Manual page getlogin_r(3) line 73 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       times  it  does  not work at all, because some program messed up the[m
+[7m Manual page getlogin_r(3) line 74 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       utmp file.  Often, it gives only the first 8 characters of the login[m
+[7m Manual page getlogin_r(3) line 75 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       name.   The  user  currently logged in on the controlling tty of our[m
+[7m Manual page getlogin_r(3) line 76 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       program need not be the user who started it.  Avoid  [1mgetlogin[0m()  for[m
+[7m Manual page getlogin_r(3) line 77 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       security-related purposes.[m
+[7m Manual page getlogin_r(3) line 78 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page getlogin_r(3) line 79 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Note  that  glibc  does  not follow the POSIX specification and uses[m
+[7m Manual page getlogin_r(3) line 80 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mstdin[24m instead of [4m/dev/tty[24m.  A  bug.   (Other  recent  systems,  like[m
+[7m Manual page getlogin_r(3) line 81 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       SunOS  5.8 and HP-UX 11.11 and FreeBSD 4.8 all return the login name[m
+[7m Manual page getlogin_r(3) line 82 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       also when [4mstdin[24m is redirected.)[m
+[7m Manual page getlogin_r(3) line 83 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page getlogin_r(3) line 84 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Nobody knows precisely what [1mcuserid[0m() does;  avoid  it  in  portable[m
+[7m Manual page getlogin_r(3) line 85 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       programs.   Or avoid it altogether: use [4mgetpwuid(geteuid())[24m instead,[m
+[7m Manual page getlogin_r(3) line 86 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       if that is what you meant.  [1mDo[0m [1mnot[0m [1muse[0m [1mcuserid[0m().[m
+[7m Manual page getlogin_r(3) line 87 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page getlogin_r(3) line 88 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mSEE[0m [1mALSO[0m[m
+[7m Manual page getlogin_r(3) line 89 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mgeteuid[0m(2), [1mgetuid[0m(2), [1mutmp[0m(5)[m
+[7m Manual page getlogin_r(3) line 90 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page getlogin_r(3) line 91 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mCOLOPHON[0m[m
+[7m Manual page getlogin_r(3) line 92 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       This page is part of release 3.44 of the Linux [4mman-pages[24m project.  A[m
+[7m Manual page getlogin_r(3) line 93 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       description  of  the  project, and information about reporting bugs,[m
+[7m Manual page getlogin_r(3) line 94 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       can be found at http://www.kernel.org/doc/man-pages/.[m
+[7m Manual page getlogin_r(3) line 95 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page getlogin_r(3) line 96 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[KGNU                              2008-06-29                     GETLOGIN(3)[m
+[7m Manual page getlogin_r(3) line 97 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7mManual page getlogin_r(3) line 97/126 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7mManual page getlogin_r(3) line 97/126 (END) (press h for help or q to quit)[27m[K[K[?1l>[?1049l]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ clear
+[H[2J]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ vim main.cpp
+[?1049h[?1h=[1;29r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[29;1H"main.cpp" [New File][>c[1;1H[33m  1 [m
+[1m[34m~                                                                            [3;1H~                                                                            [4;1H~                                                                            [5;1H~                                                                            [6;1H~                                                                            [7;1H~                                                                            [8;1H~                                                                            [9;1H~                                                                            [10;1H~                                                                            [11;1H~                                                                            [12;1H~                                                                            [13;1H~                                                                            [14;1H~                                                                            [15;1H~                                                                            [16;1H~                                                                            [17;1H~                                                                            [18;1H~                                                                            [19;1H~                                                                            [20;1H~                                                                            [21;1H~                                                                            [22;1H~                                                                            [23;1H~                                                                            [24;1H~                                                                            [25;1H~                                                                            [26;1H~                                                                            [27;1H~                                                                            [28;1H~                                                                            [m[29;60H0,0-1[9CAll]2;main.cpp (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[29;1H[1m-- INSERT --[m[29;13H[K[29;60H0,1[11CAll[1;5H[?12l[?25h[?25l[33m [m#[29;60H1,2]2;main.cpp + (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[1;6H[?12l[?25h[?25l#i[29;62H3[1;7H[?12l[?25h[?25lin[29;62H4[1;8H[?12l[?25h[?25lnc[29;62H5[1;9H[?12l[?25h[?25lcl[29;62H6[1;10H[?12l[?25h[?25llu[29;62H7[1;11H[?12l[?25h[?25lud[29;62H8[1;12H[?12l[?25h[?25lde[29;62H9[1;13H[?12l[?25h[?25l[29;62H10[1;14H[?12l[?25h[?25l[1;5H[35m#include <[m[29;63H1[1;15H[?12l[?25h[?25l[35m<[mi[29;63H2[1;16H[?12l[?25h[?25lio[29;63H3[1;17H[?12l[?25h[?25los[29;63H4[1;18H[?12l[?25h[?25lst[29;63H5[1;19H[?12l[?25h[?25ltr[29;63H6[1;20H[?12l[?25h[?25lre[29;63H7[1;21H[?12l[?25h[?25lea[29;63H8[1;22H[?12l[?25h[?25lam[29;63H9[1;23H[?12l[?25h[?25l[1;14H[31m<iostream>[m[29;62H20[1;24H[?12l[?25h[?25l
+[33m  2 [m[2;5H[K[29;60H2,1 [2;5H[?12l[?25h[?25l
+[33m  3 [m[3;5H[K[29;60H3[3;5H[?12l[?25h[?25l[33m [mi[29;62H2[3;6H[?12l[?25h[?25lin[29;62H3[3;7H[?12l[?25h[?25l[32mint[m[29;62H4[3;8H[?12l[?25h[?25l[29;62H5[3;9H[?12l[?25h[?25l m[29;62H6[3;10H[?12l[?25h[?25lma[29;62H7[3;11H[?12l[?25h[?25lai[29;62H8[3;12H[?12l[?25h[?25lin[29;62H9[3;13H[?12l[?25h[?25ln9[29;62H10[3;14H[?12l[?25h[?25l9[1m[37m[41m)[m[29;60H[K[29;60H3,11[10CAll[3;15H[?12l[?25h[?25l[3;14H[K[29;63H0[3;14H[?12l[?25h[?25l[3;13H[K[29;62H9 [3;13H[?12l[?25h[?25ln([29;60H[K[29;60H3,10[10CAll[3;14H[?12l[?25h[?25l()[46m()[m[29;60H[K[29;60H3,11[10CAll[3;15H[?12l[?25h[?25l
+[33m  4 [m[4;5H[K[3;13H()[29;60H4,1 [4;5H[?12l[?25h[?25l[33m [m{[29;60H[K[29;60H4,2[11CAll[4;6H[?12l[?25h[?25l
+[33m  5 [m    [5;9H[K[29;60H5,5[5;9H[?12l[?25h[?25l[5;4H[33m [m}[4;5H[46m{[5;5H}[m[29;60H[K[29;60H5,2[11CAll[5;6H[?12l[?25h[?25l[29;60H[K[29;60H4,2[11CAll[4;6H[?12l[?25h[?25l[5;4H[33m [m[46m [m
+[33m  6 [m}[6;6H[K[4;5H{[5;5H [29;60H5,5[5;9H[?12l[?25h[?25l r[29;62H6[5;10H[?12l[?25h[?25lre[29;62H7[5;11H[?12l[?25h[?25let[29;62H8[5;12H[?12l[?25h[?25ltu[29;62H9[5;13H[?12l[?25h[?25lur[29;62H10[5;14H[?12l[?25h[?25l[33mreturn[m[29;63H1[5;15H[?12l[?25h[?25l[29;63H2[5;16H[?12l[?25h[?25l [31m0[m[29;63H3[5;17H[?12l[?25h[?25l[31m0[m;[29;63H4[5;18H[?12l[?25h[?25l[4;5H[46m{[6;5H}[m[29;60H[K[29;60H4,2[11CAll[4;6H[?12l[?25h[?25l[5;9H[K[6;4H[33m [m[46m [m   [33mreturn[m [31m0[m;
+[33m  7 [m}[7;6H[K[4;5H{[6;5H [29;60H5,5[5;9H[?12l[?25h[?25l c[29;62H6[5;10H[?12l[?25h[?25lco[29;62H7[5;11H[?12l[?25h[?25lou[29;62H8[5;12H[?12l[?25h[?25lut[29;62H9[5;13H[?12l[?25h[?25l[29;62H10[5;14H[?12l[?25h[?25l <[29;63H1[5;15H[?12l[?25h[?25l<<[29;63H2[5;16H[?12l[?25h[?25l[29;63H3[5;17H[?12l[?25h[?25l [31m"[m[29;63H4[5;18H[?12l[?25h[?25l[31m"h[m[29;63H5[5;19H[?12l[?25h[?25l[31mhe[m[29;63H6[5;20H[?12l[?25h[?25l[31mel[m[29;63H7[5;21H[?12l[?25h[?25l[31mll[m[29;63H8[5;22H[?12l[?25h[?25l[31mlo[m[29;63H9[5;23H[?12l[?25h[?25l[31mo"[m[29;62H20[5;24H[?12l[?25h[?25l[29;63H1[5;25H[?12l[?25h[?25l <[29;63H2[5;26H[?12l[?25h[?25l<<[29;63H3[5;27H[?12l[?25h[?25l[29;63H4[5;28H[?12l[?25h[?25l e[29;63H5[5;29H[?12l[?25h[?25len[29;63H6[5;30H[?12l[?25h[?25lnd[29;63H7[5;31H[?12l[?25h[?25ldl[29;63H8[5;32H[?12l[?25h[?25ll;[29;63H9[5;33H[?12l[?25h[29;1H[K[5;32H[?25l[29;60H5,28[10CAll[5;32H[?12l[?25h[?25l[29;60H[K[29;1H:[?12l[?25hw[?25l[?12l[?25h[?25l"main.cpp" [New] 7L, 79C written[27C5,28[10CAll]2;main.cpp (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[29;60H[K[29;60H5,28[10CAll[5;32H[?12l[?25h[?25l[29;62H1 [5;5H[?12l[?25h[?25l[29;62H5[5;9H[?12l[?25h[?25l[29;1H[1m-- INSERT --[m[29;13H[K[29;60H5,5[11CAll[5;9H[?12l[?25h[?25l scout << [31m"hello"[m << endl;[29;62H6]2;main.cpp + (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[5;10H[?12l[?25h[?25lstcout << [31m"hello"[m << endl;[29;62H7[5;11H[?12l[?25h[?25ltdcout << [31m"hello"[m << endl;[29;62H8[5;12H[?12l[?25h[?25l[33mstd[m:cout << [31m"hello"[m << endl;[29;62H9[5;13H[?12l[?25h[?25lstd::cout << [31m"hello"[m << endl;[29;62H10[5;14H[?12l[?25h[?25l[29;62H34[5;38H[?12l[?25h[?25l[29;63H3[5;37H[?12l[?25h[?25l[29;62H29[5;33H[?12l[?25h[?25l sendl;[29;62H30[5;34H[?12l[?25h[?25lstendl;[29;63H1[5;35H[?12l[?25h[?25ltdendl;[29;63H2[5;36H[?12l[?25h[?25ld:endl;[29;63H3[5;37H[?12l[?25h[?25l::endl;[29;63H4[5;38H[?12l[?25h[?25l[4;5H[46m{[7;5H}[m[29;60H[K[29;60H4,2[11CAll[4;6H[?12l[?25h[?25l[3;13H[46m()[m[4;5H{[7;5H}[29;60H[K[29;60H3,11[10CAll[3;15H[?12l[?25h[?25l()[29;60H2,1 [2;5H[?12l[?25h[?25l[3;13H[46m()[m[29;60H[K[29;60H3,11[10CAll[3;15H[?12l[?25h[?25l()[4;5H[46m{[7;5H}[m[29;60H[K[29;60H4,2[11CAll[4;6H[?12l[?25h[?25l{[7;5H}[29;60H5,34[5;38H[?12l[?25h[?25l[29;63H5[5;39H[?12l[?25h[?25l[29;63H6[5;40H[?12l[?25h[?25l[29;63H7[5;41H[?12l[?25h[?25l[29;63H6[5;40H[?12l[?25h[?25l[29;63H5[5;39H[?12l[?25h[?25l[29;63H4[5;38H[?12l[?25h[?25l[29;63H3[5;37H[?12l[?25h[?25l[29;63H2[5;36H[?12l[?25h[?25l[29;63H1[5;35H[?12l[?25h[?25l[29;63H0[5;34H[?12l[?25h[?25l[29;62H29[5;33H[?12l[?25h[?25l[29;62H30[5;34H[?12l[?25h[?25l[29;63H1[5;35H[?12l[?25h[?25l[29;63H2[5;36H[?12l[?25h[?25l[29;63H3[5;37H[?12l[?25h[?25l[29;63H4[5;38H[?12l[?25h[?25l[29;63H3[5;37H[?12l[?25h[?25l[29;63H2[5;36H[?12l[?25h[?25l[29;63H1[5;35H[?12l[?25h[?25l[29;63H0[5;34H[?12l[?25h[?25l[29;62H29[5;33H[?12l[?25h[?25l[29;62H30[5;34H[?12l[?25h[?25l[29;63H1[5;35H[?12l[?25h[?25l[29;63H2[5;36H[?12l[?25h[?25l[29;63H3[5;37H[?12l[?25h[?25l[29;63H4[5;38H[?12l[?25h[?25l[29;63H5[5;39H[?12l[?25h[?25l[29;63H6[5;40H[?12l[?25h[?25l[29;63H7[5;41H[?12l[?25h[?25l[29;63H6[5;40H[?12l[?25h[?25l[29;63H5[5;39H[?12l[?25h[?25l[29;63H4[5;38H[?12l[?25h[?25l[29;63H3[5;37H[?12l[?25h[?25l[29;63H2[5;36H[?12l[?25h[?25l[29;63H1[5;35H[?12l[?25h[?25l[29;63H0[5;34H[?12l[?25h[?25l[29;62H29[5;33H[?12l[?25h[?25l[29;63H8[5;32H[?12l[?25h[?25l[29;63H7[5;31H[?12l[?25h[?25l[29;63H6[5;30H[?12l[?25h[?25l[29;63H5[5;29H[?12l[?25h[?25l[29;63H4[5;28H[?12l[?25h[?25l[29;63H3[5;27H[?12l[?25h[?25l[29;63H2[5;26H[?12l[?25h[?25l[29;63H1[5;25H[?12l[?25h[?25l[29;63H0[5;24H[?12l[?25h[?25l[29;62H19[5;23H[?12l[?25h[?25l[29;63H8[5;22H[?12l[?25h[?25l[29;63H7[5;21H[?12l[?25h[?25l[29;63H6[5;20H[?12l[?25h[?25l[29;63H5[5;19H[?12l[?25h[?25l[29;63H4[5;18H[?12l[?25h[?25l[29;63H3[5;17H[?12l[?25h[?25l[29;63H2[5;16H[?12l[?25h[?25l[29;63H1[5;15H[?12l[?25h[?25l[29;63H0[5;14H[?12l[?25h[?25l[29;62H9 [5;13H[?12l[?25h[?25l[29;62H8[5;12H[?12l[?25h[?25l[29;62H7[5;11H[?12l[?25h[29;1H[K[5;10H[?25l[29;60H5,6[11CAll[5;10H[?12l[?25h[?25l[29;60H[K[29;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"main.cpp" 7L, 89C written]2;user@userland: ~/proj/ucr-cs100/lecture]1;user@userland: ~/proj/ucr-cs100/lecture
+[?1l>[?12l[?25h[?1049l]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ g++ main.cpp 
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ ./a.out 
+hello
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ vim [4@./a.out[C[5@g++ main.cpp[C[1Pvim main.cpp
+[?1049h[?1h=[1;29r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[29;1H"main.cpp" 7L, 89C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
+[33m  2 
+  3 [m[32mint[m main()
+[33m  4 [m{
+[33m  5 [m    std::cout << [31m"hello"[m << std::endl;
+[33m  6 [m    [33mreturn[m [31m0[m;
+[33m  7 [m}
+[1m[34m~                                                                            [9;1H~                                                                            [10;1H~                                                                            [11;1H~                                                                            [12;1H~                                                                            [13;1H~                                                                            [14;1H~                                                                            [15;1H~                                                                            [16;1H~                                                                            [17;1H~                                                                            [18;1H~                                                                            [19;1H~                                                                            [20;1H~                                                                            [21;1H~                                                                            [22;1H~                                                                            [23;1H~                                                                            [24;1H~                                                                            [25;1H~                                                                            [26;1H~                                                                            [27;1H~                                                                            [28;1H~                                                                            [m[29;60H1,1[11CAll]2;main.cpp (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[29;60H2,0-1[2;5H[?12l[?25h[?25l[29;60H3,1  [3;5H[?12l[?25h[?25l[4;5H[46m{[7;5H}[m[29;60H4[4;5H[?12l[?25h[?25l[29;1H[1m-- INSERT --[m[29;13H[K[29;60H5,5[11CTop[5;9H[K[6;8H std::cout << [31m"hello"[m << std::endl;[7;4H[33m [m[46m [m   [33mreturn[m [31m0[m;
+[33m  8 [m}[8;6H[K[4;5H{[7;5H ]2;main.cpp + (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[5;9H[?12l[?25h[?25l s[29;62H6[11CAll[5;10H[?12l[?25h[?25lst[29;62H7[5;11H[?12l[?25h[?25ltd[29;62H8[5;12H[?12l[?25h[?25l[33mstd[m:[29;62H9[5;13H[?12l[?25h[?25lstd::[29;62H10[5;14H[?12l[?25h[?25l:s[29;63H1[5;15H[?12l[?25h[?25lst[29;63H2[5;16H[?12l[?25h[?25ltr[29;63H3[5;17H[?12l[?25h[?25lri[29;63H4[5;18H[?12l[?25h[?25lin[29;63H5[5;19H[?12l[?25h[?25lng[29;63H6[5;20H[?12l[?25h[?25l[4;5H[46m{[8;5H}[m[29;60H[K[29;60H4,2[11CAll[4;6H[?12l[?25h[?25l[3;13H[46m()[m[4;5H{[8;5H}[29;60H[K[29;60H3,11[10CAll[3;15H[?12l[?25h[?25l()[29;60H2,1 [2;5H[?12l[?25h[?25l[29;60H1,16[1;20H[?12l[?25h[?25l[29;60H2,1 [2;5H[?12l[?25h[?25l[33m [m#[29;62H2[2;6H[?12l[?25h[?25l#i[29;62H3[2;7H[?12l[?25h[?25lin[29;62H4[2;8H[?12l[?25h[?25lnc[29;62H5[2;9H[?12l[?25h[?25lcl[29;62H6[2;10H[?12l[?25h[?25llu[29;62H7[2;11H[?12l[?25h[?25lud[29;62H8[2;12H[?12l[?25h[?25lde[29;62H9[2;13H[?12l[?25h[?25l[29;62H10[2;14H[?12l[?25h[?25l[2;5H[35m#include <[m[29;63H1[2;15H[?12l[?25h[?25l[35m<[ms[29;63H2[2;16H[?12l[?25h[?25lst[29;63H3[2;17H[?12l[?25h[?25ltr[29;63H4[2;18H[?12l[?25h[?25lri[29;63H5[2;19H[?12l[?25h[?25lin[29;63H6[2;20H[?12l[?25h[?25lng[29;63H7[2;21H[?12l[?25h[?25l[2;14H[31m<string>[m[29;63H8[2;22H[?12l[?25h[?25l[3;5H[K[4;4H[33m [m[32mint[m main()[5;4H[33m [m{[5;9H[K[6;13H:string[6;20H[K[7;8H std::cout << [31m"hello"[m << std::endl;[8;4H[33m [m    [33mreturn[m [31m0[m;
+[33m  9 [m}[9;6H[K[29;60H3,1 [3;5H[?12l[?25h[?25l[29;60H4[4;5H[?12l[?25h[?25l[5;5H[46m{[9;5H}[m[29;60H5[5;5H[?12l[?25h[?25l{[9;5H}[29;60H6[6;5H[?12l[?25h[?25l[29;63H6[6;20H[?12l[?25h[?25l[29;63H7[6;21H[?12l[?25h[?25l s[29;63H8[6;22H[?12l[?25h[?25lst[29;63H9[6;23H[?12l[?25h[?25ltr[29;62H20[6;24H[?12l[?25h[?25l[29;63H1[6;25H[?12l[?25h[?25l =[29;63H2[6;26H[?12l[?25h[?25l[29;63H3[6;27H[?12l[?25h[?25l [31m"[m[29;63H4[6;28H[?12l[?25h[?25l[31m"h[m[29;63H5[6;29H[?12l[?25h[?25l[31mhe[m[29;63H6[6;30H[?12l[?25h[?25l[31mel[m[29;63H7[6;31H[?12l[?25h[?25l[31mll[m[29;63H8[6;32H[?12l[?25h[?25l[31mlo[m[29;63H9[6;33H[?12l[?25h[?25l[31mo"[m[29;62H30[6;34H[?12l[?25h[?25l[31m"[m;[29;63H1[6;35H[?12l[?25h[?25l[29;60H7[7;35H[?12l[?25h[?25l[29;63H0[7;34H[?12l[?25h[?25l[29;62H29[7;33H[?12l[?25h[?25l[29;63H8[7;32H[?12l[?25h[?25l[29;63H7[7;31H[?12l[?25h[?25l[29;63H6[7;30H[?12l[?25h[?25l[29;63H5[7;29H[?12l[?25h[?25l[31mo << std::[m[31m[41mendl[m[31m;[m[7;42H[K[29;63H4[7;28H[?12l[?25h[?25l[31ml << std::[m[31m[41mendl[m[31m;[m[7;41H[K[29;63H3[7;27H[?12l[?25h[?25l[31ml << std::[m[31m[41mendl[m[31m;[m[7;40H[K[29;63H2[7;26H[?12l[?25h[?25l[31me << std::[m[31m[41mendl[m[31m;[m[7;39H[K[29;63H1[7;25H[?12l[?25h[?25l[31mh << std::[m[31m[41mendl[m[31m;[m[7;38H[K[29;63H0[7;24H[?12l[?25h[?25l[31m" << std::[m[31m[41mendl[m[31m;[m[7;37H[K[29;62H19[7;23H[?12l[?25h[?25l  << std::endl;[7;36H[K[29;63H8[7;22H[?12l[?25h[?25l s << std::endl;[29;63H9[7;23H[?12l[?25h[?25lst << std::endl;[29;62H20[7;24H[?12l[?25h[?25ltr << std::endl;[29;63H1[7;25H[?12l[?25h[29;1H[K[7;24H[?25l[29;60H7,20[10CAll[7;24H[?12l[?25h[?25l[29;60H[K[29;1H:[?12l[?25hw[?25l[?12l[?25h[?25l"main.cpp" 9L, 134C written[32C7,20[10CAll]2;main.cpp (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[29;60H[K[29;60H7,20[10CAll[7;24H[?12l[?25h[?25l[29;1H[K[29;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"main.cpp" 9L, 134C written]2;user@userland: ~/proj/ucr-cs100/lecture]1;user@userland: ~/proj/ucr-cs100/lecture
+[?1l>[?12l[?25h[?1049l]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ vim main.cpp[4P./a.out [5@g++ main.cpp[C
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ g++ main.cpp [1Pvim main.cpp[4P./a.out 
+hello
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ ./a.out [5@g++ main.cpp[C[1Pvim main.cpp
+[?1049h[?1h=[1;29r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[29;1H"main.cpp" 9L, 134C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
+[33m  2 [m[35m#include [m[31m<string>[m
+[33m  3 
+  4 [m[32mint[m main()
+[33m  5 [m{
+[33m  6 [m    std::string str = [31m"hello"[m;
+[33m  7 [m    std::cout << str << std::endl;
+[33m  8 [m    [33mreturn[m [31m0[m;
+[33m  9 [m}
+[1m[34m~                                                                            [11;1H~                                                                            [12;1H~                                                                            [13;1H~                                                                            [14;1H~                                                                            [15;1H~                                                                            [16;1H~                                                                            [17;1H~                                                                            [18;1H~                                                                            [19;1H~                                                                            [20;1H~                                                                            [21;1H~                                                                            [22;1H~                                                                            [23;1H~                                                                            [24;1H~                                                                            [25;1H~                                                                            [26;1H~                                                                            [27;1H~                                                                            [28;1H~                                                                            [m[29;60H1,1[11CAll]2;main.cpp (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[29;60H2[2;5H[?12l[?25h[?25l[29;60H3,0-1[3;5H[?12l[?25h[?25l[29;60H4,1  [4;5H[?12l[?25h[?25l[5;5H[46m{[9;5H}[m[29;60H5[5;5H[?12l[?25h[?25l{[9;5H}[29;60H6[6;5H[?12l[?25h[?25l[29;1H[1m-- INSERT --[m[29;13H[K[29;60H7,5[11CTop[7;9H[K[8;8H std::cout << str << std::endl;[9;4H[33m [m    [33mreturn[m [31m0[m;
+[33m 10 [m}[10;6H[K]2;main.cpp + (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[7;9H[?12l[?25h[?25l[29;60H6[13CAll[6;9H[?12l[?25h[?25l[5;5H[46m{[10;5H}[m[29;60H[K[29;60H5,2[11CAll[5;6H[?12l[?25h[?25l{[10;5H}[29;60H6,5[6;9H[?12l[?25h[?25l[29;62H6[6;10H[?12l[?25h[?25l[29;62H7[6;11H[?12l[?25h[?25l[29;62H8[6;12H[?12l[?25h[?25l[29;62H9[6;13H[?12l[?25h[?25l[29;62H10[6;14H[?12l[?25h[?25l[29;63H1[6;15H[?12l[?25h[?25l[29;60H7,1 [7;5H[?12l[?25h[?25l[29;62H5[7;9H[?12l[?25h[?25l c[29;62H6[7;10H[?12l[?25h[?25lch[29;62H7[7;11H[?12l[?25h[?25lha[29;62H8[7;12H[?12l[?25h[?25l[32mchar[m[29;62H9[7;13H[?12l[?25h[?25l[32mr[m*[29;62H10[7;14H[?12l[?25h[?25l[29;62H9 [7;13H[?12l[?25h[?25l[32mr[m *[29;62H10[7;14H[?12l[?25h[?25l[29;63H1[7;15H[?12l[?25h[?25l*s[29;63H2[7;16H[?12l[?25h[?25lst[29;63H3[7;17H[?12l[?25h[?25ltr[29;63H4[7;18H[?12l[?25h[?25lr2[29;63H5[7;19H[?12l[?25h[?25l[29;63H6[7;20H[?12l[?25h[?25l =[29;63H7[7;21H[?12l[?25h[?25l[29;63H8[7;22H[?12l[?25h[?25l [31m"[m[29;63H9[7;23H[?12l[?25h[?25l[31m"g[m[29;62H20[7;24H[?12l[?25h[?25l[31mgo[m[29;63H1[7;25H[?12l[?25h[?25l[31moo[m[29;63H2[7;26H[?12l[?25h[?25l[31mod[m[29;63H3[7;27H[?12l[?25h[?25l[31mdb[m[29;63H4[7;28H[?12l[?25h[?25l[31mbu[m[29;63H5[7;29H[?12l[?25h[?25l[31mue[m[29;63H6[7;30H[?12l[?25h[?25l[7;29H[K[29;63H5[7;29H[?12l[?25h[?25l[7;28H[K[29;63H4[7;28H[?12l[?25h[?25l[31mby[m[29;63H5[7;29H[?12l[?25h[?25l[31mye[m[29;63H6[7;30H[?12l[?25h[?25l[31me"[m[29;63H7[7;31H[?12l[?25h[?25l[31m"[m;[29;63H8[7;32H[?12l[?25h[?25l[8;9H[K[9;8H std::cout << str << std::endl;[10;4H[33m [m    [33mreturn[m [31m0[m;
+[33m 11 [m}[11;6H[K[29;60H8,5 [8;9H[?12l[?25h[29;1H[K[8;5H[?25l[29;60H8,0-1[9CAll[8;5H[?12l[?25h[?25l[29;60H[K[29;1H:[?12l[?25hw[?25l[?12l[?25h[?25l"main.cpp" 11L, 163C written[31C8,0-1[9CAll]2;main.cpp (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[29;60H[K[29;60H8,0-1[9CAll[8;5H[?12l[?25h[?25l[29;60H9,5  [9;9H[?12l[?25h[?25l[29;62H15[9;19H[?12l[?25h[?25l[29;63H8[9;22H[?12l[?25h[?25l[29;62H22[9;26H[?12l[?25h[?25l[29;63H1[9;25H[?12l[?25h[?25l[29;1H[1m-- INSERT --[m[29;13H[K[29;60H9,21[10CAll[9;25H[?12l[?25h[?25lr2 << std::endl;[29;63H2]2;main.cpp + (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[9;26H[?12l[?25h[29;1H[K[9;25H[?25l[29;60H9,21[10CAll[9;25H[?12l[?25h[?25l[29;60H[K[29;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"main.cpp" 11L, 164C written]2;user@userland: ~/proj/ucr-cs100/lecture]1;user@userland: ~/proj/ucr-cs100/lecture
+[?1l>[?12l[?25h[?1049l]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ vim main.cpp[4P./a.out [5@g++ main.cpp[C
+main.cpp: In function ‘int main()’:
+main.cpp:7:18: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ g++ main.cpp [1Pvim main.cpp[4P./a.out 
+goodbye
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ ./a.out [5@g++ main.cpp[C[1Pvim main.cpp
+[?1049h[?1h=[1;29r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[29;1H"main.cpp" 11L, 164C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
+[33m  2 [m[35m#include [m[31m<string>[m
+[33m  3 
+  4 [m[32mint[m main()
+[33m  5 [m{
+[33m  6 [m    std::string str = [31m"hello"[m;
+[33m  7 [m    [32mchar[m *str2 = [31m"goodbye"[m;
+[33m  8 
+  9 [m    std::cout << str2 << std::endl;
+[33m 10 [m    [33mreturn[m [31m0[m;
+[33m 11 [m}
+[1m[34m~                                                                            [13;1H~                                                                            [14;1H~                                                                            [15;1H~                                                                            [16;1H~                                                                            [17;1H~                                                                            [18;1H~                                                                            [19;1H~                                                                            [20;1H~                                                                            [21;1H~                                                                            [22;1H~                                                                            [23;1H~                                                                            [24;1H~                                                                            [25;1H~                                                                            [26;1H~                                                                            [27;1H~                                                                            [28;1H~                                                                            [m[29;60H1,1[11CAll]2;main.cpp (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[29;60H2[2;5H[?12l[?25h[?25l[29;60H3,0-1[3;5H[?12l[?25h[?25l[29;60H4,1  [4;5H[?12l[?25h[?25l[5;5H[46m{[11;5H}[m[29;60H5[5;5H[?12l[?25h[?25l{[11;5H}[29;60H6[6;5H[?12l[?25h[?25l[29;60H7[7;5H[?12l[?25h[?25l[29;60H8,0-1[8;5H[?12l[?25h[?25l[29;60H9,1  [9;5H[?12l[?25h[?25l[29;62H5[9;9H[?12l[?25h[?25l[29;1H[1m-- INSERT --[m[29;13H[K[29;60H10,5[10CTop[10;9H[K[11;4H[33m [m    [33mreturn[m [31m0[m;
+[33m 12 [m}[12;6H[K]2;main.cpp + (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[10;9H[?12l[?25h[?25l[11;9H[K[12;4H[33m [m    [33mreturn[m [31m0[m;
+[33m 13 [m}[13;6H[K[29;61H1[12CAll[11;9H[?12l[?25h[?25l[29;61H0,1[10;5H[?12l[?25h[?25l[12;9H[K[13;4H[33m [m    [33mreturn[m [31m0[m;
+[33m 14 [m}[14;6H[K[29;61H1[11;5H[?12l[?25h[?25l[29;63H5[11;9H[?12l[?25h[?25l w[29;63H6[11;10H[?12l[?25h[?25lwr[29;63H7[11;11H[?12l[?25h[?25lri[29;63H8[11;12H[?12l[?25h[?25lit[29;63H9[11;13H[?12l[?25h[?25lte[29;63H10[11;14H[?12l[?25h[?25le([29;60H[K[29;60H11,11[9CAll[11;15H[?12l[?25h[?25l()[46m()[m[29;60H[K[29;60H11,12[9CAll[11;16H[?12l[?25h[?25l()[29;61H0,1 [10;5H[?12l[?25h[?25l[29;60H9,12[9;16H[?12l[?25h[?25l[29;60H8,1 [8;5H[?12l[?25h[?25l[29;60H7,12[7;16H[?12l[?25h[?25l[29;60H6[6;16H[?12l[?25h[?25l[5;5H[46m{[14;5H}[m[29;60H[K[29;60H5,2[11CAll[5;6H[?12l[?25h[?25l[4;13H[46m()[m[5;5H{[14;5H}[29;60H[K[29;60H4,11[10CAll[4;15H[?12l[?25h[?25l()[29;60H3,1 [3;5H[?12l[?25h[?25l[29;60H2,12[2;16H[?12l[?25h[?25l[29;60H3,1 [3;5H[?12l[?25h[?25l[4;5H[K[5;4H[33m [m[32mint[m main()[6;4H[33m [m{[6;9H[K[7;8H std::string str = [31m"hello"[m;[8;8H [32mchar[m *str2 = [31m"goodbye"[m;[9;9H[K[10;8H std::cout << str2 << std::endl;[11;9H[K[12;8H write()[13;9H[K[14;4H[33m [m    [33mreturn[m [31m0[m;
+[33m 15 [m}[15;6H[K[29;60H4[4;5H[?12l[?25h[?25l[29;60H3[3;5H[?12l[?25h[?25l[5;5H[K[6;4H[33m [m[32mint[m main()[7;4H[33m [m{[7;9H[K[8;8H std::string str = [31m"hello"[m;[9;8H [32mchar[m *str2 = [31m"goodbye"[m;[10;9H[K[11;8H std::cout << str2 << std::endl;[12;9H[K[13;8H write()[14;9H[K[15;4H[33m [m    [33mreturn[m [31m0[m;
+[33m 16 [m}[16;6H[K[29;60H4[4;5H[?12l[?25h[?25l[33m [m#[29;62H2[4;6H[?12l[?25h[?25l#i[29;62H3[4;7H[?12l[?25h[?25lin[29;62H4[4;8H[?12l[?25h[?25lnc[29;62H5[4;9H[?12l[?25h[?25lcl[29;62H6[4;10H[?12l[?25h[?25llu[29;62H7[4;11H[?12l[?25h[?25lud[29;62H8[4;12H[?12l[?25h[?25lde[29;62H9[4;13H[?12l[?25h[?25l[29;62H10[4;14H[?12l[?25h[?25l[4;5H[35m#include <[m[29;63H1[4;15H[?12l[?25h[?25l[35m<[mu[29;63H2[4;16H[?12l[?25h[?25lun[29;63H3[4;17H[?12l[?25h[?25lni[29;63H4[4;18H[?12l[?25h[?25lis[29;63H5[4;19H[?12l[?25h[?25lst[29;63H6[4;20H[?12l[?25h[?25ltd[29;63H7[4;21H[?12l[?25h[?25ld.[29;63H8[4;22H[?12l[?25h[?25l.h[29;63H9[4;23H[?12l[?25h[?25l[4;14H[31m<unistd.h>[m[29;62H20[4;24H[?12l[?25h[29;1H[K[4;23H[?25l[29;60H4,19[10CAll[4;23H[?12l[?25h[?25l[29;60H[K[29;1H:[?12l[?25hw[?25l[?12l[?25h[?25l"main.cpp" 16L, 199C written[31C4,19[10CAll]2;main.cpp (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[29;60H[K[29;60H4,19[10CAll[4;23H[?12l[?25h[?25l[29;63H8[4;22H[?12l[?25h[?25l[29;63H7[4;21H[?12l[?25h[?25l[29;63H6[4;20H[?12l[?25h[?25l[29;63H5[4;19H[?12l[?25h[?25l[29;63H4[4;18H[?12l[?25h[?25l[29;63H3[4;17H[?12l[?25h[?25l[29;63H2[4;16H[?12l[?25h[?25l[29;63H1[4;15H[?12l[?25h[?25l[29;63H2[4;16H[?12l[?25h[?25l[29;63H3[4;17H[?12l[?25h[?25l[29;63H4[4;18H[?12l[?25h[?25l[29;63H5[4;19H[?12l[?25h[?25l[29;63H6[4;20H[?12l[?25h[?25l[29;63H5[4;19H[?12l[?25h[?25l[29;63H4[4;18H[?12l[?25h[?25l[29;63H3[4;17H[?12l[?25h[?25l[29;60H5,0-1[5;5H[?12l[?25h[?25l[6;13H[46m()[m[29;60H6,10 [6;14H[?12l[?25h[?25l()[7;5H[46m{[16;5H}[m[29;60H7,1 [7;5H[?12l[?25h[?25l{[16;5H}[29;60H8,13[8;17H[?12l[?25h[?25l[29;60H9[9;17H[?12l[?25h[?25l[29;60H10,0-1[10;5H[?12l[?25h[?25l[29;61H1,13 [11;17H[?12l[?25h[?25l[29;61H2,0-1[12;5H[?12l[?25h[?25l[13;14H[46m()[m[29;61H3,11 [13;15H[?12l[?25h[?25l[29;1H[K[29;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"main.cpp" 16L, 199C written]2;user@userland: ~/proj/ucr-cs100/lecture]1;user@userland: ~/proj/ucr-cs100/lecture
+[?1l>[?12l[?25h[?1049l]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ man write
+[?1049h[?1h=WRITE(1)                BSD General Commands Manual                WRITE(1)[m
+[m
+[1mNAME[0m[m
+     [1mwrite[0m — send a message to another user[m
+[m
+[1mSYNOPSIS[0m[m
+     [1mwrite[0m [4muser[24m [[4mtty[24m][m
+[m
+[1mDESCRIPTION[0m[m
+     The [1mwrite[0m utility allows you to communicate with other users, by copy‐[m
+     ing lines from your terminal to theirs.[m
+[m
+     When you run the [1mwrite[0m command, the user you are writing to gets a[m
+     message of the form:[m
+[m
+           Message from yourname@yourhost on yourtty at hh:mm ...[m
+[m
+     Any further lines you enter will be copied to the specified user's[m
+     terminal.  If the other user wants to reply, they must run [1mwrite[0m as[m
+     well.[m
+[m
+     When you are done, type an end-of-file or interrupt character.  The[m
+     other user will see the message ‘EOF’ indicating that the conversation[m
+     is over.[m
+[m
+     You can prevent people (other than the super-user) from writing to you[m
+     with the mesg(1) command.[m
+[m
+[7m Manual page write(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ man writevim main.cpp
+[?1049h[?1h=[1;29r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[29;1H"main.cpp" 16L, 199C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
+[33m  2 [m[35m#include [m[31m<string>[m
+[33m  3 
+  4 [m[35m#include [m[31m<unistd.h>[m
+[33m  5 
+  6 [m[32mint[m main()
+[33m  7 [m{
+[33m  8 [m    std::string str = [31m"hello"[m;
+[33m  9 [m    [32mchar[m *str2 = [31m"goodbye"[m;
+[33m 10 
+ 11 [m    std::cout << str2 << std::endl;
+[33m 12 
+ 13 [m    write()
+[33m 14 
+ 15 [m    [33mreturn[m [31m0[m;
+[33m 16 [m}
+[1m[34m~                                                                            [18;1H~                                                                            [19;1H~                                                                            [20;1H~                                                                            [21;1H~                                                                            [22;1H~                                                                            [23;1H~                                                                            [24;1H~                                                                            [25;1H~                                                                            [26;1H~                                                                            [27;1H~                                                                            [28;1H~                                                                            [m[29;60H1,1[11CAll]2;main.cpp (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[29;60H2[2;5H[?12l[?25h[?25l[29;60H3,0-1[3;5H[?12l[?25h[?25l[29;60H4,1  [4;5H[?12l[?25h[?25l[29;60H5,0-1[5;5H[?12l[?25h[?25l[29;60H6,1  [6;5H[?12l[?25h[?25l[7;5H[46m{[16;5H}[m[29;60H7[7;5H[?12l[?25h[?25l{[16;5H}[29;60H8[8;5H[?12l[?25h[?25l[29;60H9[9;5H[?12l[?25h[?25l[29;60H10,0-1[10;5H[?12l[?25h[?25l[29;61H1,1  [11;5H[?12l[?25h[?25l[29;61H2,0-1[12;5H[?12l[?25h[?25l[29;61H3,1  [13;5H[?12l[?25h[?25l[29;61H4,0-1[14;5H[?12l[?25h[?25l[29;61H5,1  [15;5H[?12l[?25h[?25l[29;61H4,0-1[14;5H[?12l[?25h[?25l[29;61H3,1  [13;5H[?12l[?25h[?25l[29;61H2,0-1[12;5H[?12l[?25h[?25l[29;61H3,1  [13;5H[?12l[?25h[?25l[9C[46m()[m[29;64H1[13;15H[?12l[?25h[?25l[29;1H[1m-- INSERT --[m[29;13H[K[29;60H13,11[9CAll[13;15H[?12l[?25h[?25l[46m([m[31m[46m0[m)[31m0[m[46m)[m[29;64H2]2;main.cpp + (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[13;16H[?12l[?25h[?25l[31m0[m[46m,[m),[46m)[m[29;64H3[13;17H[?12l[?25h[?25l,[31m[46m"[m[31m)[15;5H    [m[31m[44mreturn[m[31m 0;[16;5H}[13;17H"[m[31m[46m)[m[29;64H4[13;18H[?12l[?25h[?25l[31m"[m[31m[46mg[m[31m)g[m[31m[46m)[m[29;64H5[13;19H[?12l[?25h[?25l[31mg[m[31m[46mo[m[31m)o[m[31m[46m)[m[29;64H6[13;20H[?12l[?25h[?25l[31mo[m[31m[46mo[m[31m)o[m[31m[46m)[m[29;64H7[13;21H[?12l[?25h[?25l[31mo[m[31m[46md[m[31m)d[m[31m[46m)[m[29;64H8[13;22H[?12l[?25h[?25l[31md[m[31m[46mb[m[31m)b[m[31m[46m)[m[29;64H9[13;23H[?12l[?25h[?25l[31mb[m[31m[46my[m[31m)y[m[31m[46m)[m[29;63H20[13;24H[?12l[?25h[?25l[31my[m[31m[46me[m[31m)e[m[31m[46m)[m[29;64H1[13;25H[?12l[?25h[?25l[31me[m[31m[46m"[m)[15;5H    [33mreturn[m [1C;[16;5H}[13;25H[31m"[m[46m)[m[29;64H2[13;26H[?12l[?25h[?25l[31m"[m[46m,[m),[46m)[m[29;64H3[13;27H[?12l[?25h[?25l,[31m[46m7[m)[31m7[m[46m)[m[29;64H4[13;28H[?12l[?25h[?25l[29;60H[K[29;60H13,25[9CAll[13;29H[?12l[?25h[?25l[46m)[m;[13;14H([13C)[29;64H6[13;30H[?12l[?25h[?25l[29;61H4,1 [14;5H[?12l[?25h[29;1H[K[14;5H[?25l[29;60H14,0-1[8CAll[14;5H[?12l[?25h[?25l[29;60H[K[29;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"main.cpp" 16L, 213C written]2;user@userland: ~/proj/ucr-cs100/lecture]1;user@userland: ~/proj/ucr-cs100/lecture
+[?1l>[?12l[?25h[?1049l]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ vim main.cpp[3Pman writevim main.cpp[4P./a.out [5@g++ main.cpp[C
+main.cpp: In function ‘int main()’:
+main.cpp:9:18: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ g++ main.cpp [1Pvim main.cpp[3Pman writevim main.cpp[4P./a.out 
+goodbye
+goodbye]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ clear
+[H[2J]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ vim main.cpp 
+[?1049h[?1h=[1;29r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[29;1H"main.cpp" 16L, 213C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
+[33m  2 [m[35m#include [m[31m<string>[m
+[33m  3 
+  4 [m[35m#include [m[31m<unistd.h>[m
+[33m  5 
+  6 [m[32mint[m main()
+[33m  7 [m{
+[33m  8 [m    std::string str = [31m"hello"[m;
+[33m  9 [m    [32mchar[m *str2 = [31m"goodbye"[m;
+[33m 10 
+ 11 [m    std::cout << str2 << std::endl;
+[33m 12 
+ 13 [m    write([31m0[m,[31m"goodbye"[m,[31m7[m);
+[33m 14 
+ 15 [m    [33mreturn[m [31m0[m;
+[33m 16 [m}
+[1m[34m~                                                                            [18;1H~                                                                            [19;1H~                                                                            [20;1H~                                                                            [21;1H~                                                                            [22;1H~                                                                            [23;1H~                                                                            [24;1H~                                                                            [25;1H~                                                                            [26;1H~                                                                            [27;1H~                                                                            [28;1H~                                                                            [m[29;60H1,1[11CAll]2;main.cpp (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[29;60H2[2;5H[?12l[?25h[?25l[29;60H3,0-1[3;5H[?12l[?25h[?25l[29;60H4,1  [4;5H[?12l[?25h[?25l[29;60H5,0-1[5;5H[?12l[?25h[?25l[29;60H6,1  [6;5H[?12l[?25h[?25l[7;5H[46m{[16;5H}[m[29;60H7[7;5H[?12l[?25h[?25l{[16;5H}[29;60H8[8;5H[?12l[?25h[?25l[29;60H9[9;5H[?12l[?25h[?25l[29;60H10,0-1[10;5H[?12l[?25h[?25l[29;61H1,1  [11;5H[?12l[?25h[?25l[29;61H2,0-1[12;5H[?12l[?25h[?25l[29;61H3,1  [13;5H[?12l[?25h[?25l[29;61H4,0-1[14;5H[?12l[?25h[?25l[29;61H3,1  [13;5H[?12l[?25h[?25l[29;63H25[13;29H[?12l[?25h[?25l[13;14H[46m([13C)[m[29;64H4[13;28H[?12l[?25h[?25l[13;14H([13C)[29;64H3[13;27H[?12l[?25h[?25l[29;64H2[13;26H[?12l[?25h[?25l[29;64H1[13;25H[?12l[?25h[?25l[29;1H[1m-- INSERT --[m[29;13H[K[29;60H13,21[9CAll[13;25H[?12l[?25h[?25l[31me[m[35m\"[m[31m,7);[15;5H    [m[31m[44mreturn[m[31m 0;[16;5H}[m[29;64H2]2;main.cpp + (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[13;26H[?12l[?25h[?25l[35m\n[m[31m"[m,[31m7[m);[15;5H    [33mreturn[m [1C;[16;5H}[29;64H3[13;27H[?12l[?25h[?25l[29;64H4[13;28H[?12l[?25h[?25l[29;64H5[13;29H[?12l[?25h[?25l[13;14H[46m([15C)[m[29;64H6[13;30H[?12l[?25h[?25l[13;14H([15C)[29;64H5[13;29H[?12l[?25h[29;1H[K[13;28H[?25l[29;60H13,24[9CAll[13;28H[?12l[?25h[?25l[31m"8[?12l[?25h[?25l[m[29;1H1 change; before #2  1 seconds ago[29;60H[K[13;27H[31m"[m,[29;60H13,24[9CAll[13;28H[?12l[?25h[?25l[29;64H5[13;29H[?12l[?25h[?25l,u[?12l[?25h[?25l,[31m8[?12l[?25h[?25l[m[29;1H[K[29;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"main.cpp" 16L, 215C written]2;user@userland: ~/proj/ucr-cs100/lecture]1;user@userland: ~/proj/ucr-cs100/lecture
+[?1l>[?12l[?25h[?1049l]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ vim main.cpp [8Pclear./a.out [5@g++ main.cpp[C
+main.cpp: In function ‘int main()’:
+main.cpp:9:18: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ g++ main.cpp vim[C[C[C[C[C[C[C[C[C[C[8Pclear./a.out 
+goodbye
+goodbye
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ ./a.out [5@g++ main.cpp[Cvim[C[C[C[C[C[C[C[C[C[C
+[?1049h[?1h=[1;29r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[29;1H"main.cpp" 16L, 215C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
+[33m  2 [m[35m#include [m[31m<string>[m
+[33m  3 
+  4 [m[35m#include [m[31m<unistd.h>[m
+[33m  5 
+  6 [m[32mint[m main()
+[33m  7 [m{
+[33m  8 [m    std::string str = [31m"hello"[m;
+[33m  9 [m    [32mchar[m *str2 = [31m"goodbye"[m;
+[33m 10 
+ 11 [m    std::cout << str2 << std::endl;
+[33m 12 
+ 13 [m    write([31m0[m,[31m"goodbye[m[35m\n[m[31m"[m,[31m8[m);
+[33m 14 
+ 15 [m    [33mreturn[m [31m0[m;
+[33m 16 [m}
+[1m[34m~                                                                            [18;1H~                                                                            [19;1H~                                                                            [20;1H~                                                                            [21;1H~                                                                            [22;1H~                                                                            [23;1H~                                                                            [24;1H~                                                                            [25;1H~                                                                            [26;1H~                                                                            [27;1H~                                                                            [28;1H~                                                                            [m[29;60H1,1[11CAll]2;main.cpp (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[29;60H2[2;5H[?12l[?25h[?25l[29;60H3,0-1[3;5H[?12l[?25h[?25l[29;60H4,1  [4;5H[?12l[?25h[?25l[29;60H5,0-1[5;5H[?12l[?25h[?25l[29;60H6,1  [6;5H[?12l[?25h[?25l[7;5H[46m{[16;5H}[m[29;60H7[7;5H[?12l[?25h[?25l{[16;5H}[29;60H8[8;5H[?12l[?25h[?25l[29;60H9[9;5H[?12l[?25h[?25l[29;60H10,0-1[10;5H[?12l[?25h[?25l[29;61H1,1  [11;5H[?12l[?25h[?25l[29;61H2,0-1[12;5H[?12l[?25h[?25l[29;61H1,1  [11;5H[?12l[?25h[?25l[29;61H2,0-1[12;5H[?12l[?25h[?25l[29;61H1,1  [11;5H[?12l[?25h[?25l[29;63H2[11;6H[?12l[?25h[?25l[29;63H3[11;7H[?12l[?25h[?25l[29;63H4[11;8H[?12l[?25h[?25l[29;63H5[11;9H[?12l[?25h[?25l[29;63H6[11;10H[?12l[?25h[?25l[29;63H7[11;11H[?12l[?25h[?25l[29;63H8[11;12H[?12l[?25h[?25l[29;63H9[11;13H[?12l[?25h[?25l[29;63H10[11;14H[?12l[?25h[?25l: << str2 << std::endl;[11;36H[K]2;main.cpp + (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[11;14H[?12l[?25h[?25l[29;1H[1m-- INSERT --[m[29;13H[K[29;60H11,10[9CAll[11;14H[?12l[?25h[?25l:c << str2 << std::endl;[29;64H1[11;15H[?12l[?25h[?25lce << str2 << std::endl;[29;64H2[11;16H[?12l[?25h[?25ler << str2 << std::endl;[29;64H3[11;17H[?12l[?25h[?25lrr << str2 << std::endl;[29;64H4[11;18H[?12l[?25h[29;1H[K[11;17H[?25l[29;60H11,13[9CAll[11;17H[?12l[?25h[?25l[29;60H[K[29;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"main.cpp" 16L, 215C written]2;user@userland: ~/proj/ucr-cs100/lecture]1;user@userland: ~/proj/ucr-cs100/lecture
+[?1l>[?12l[?25h[?1049l]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ vim main.cpp [5P./a.out[C[5@g++ main.cpp[C
+main.cpp: In function ‘int main()’:
+main.cpp:9:18: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ g++ main.cpp vim[C[C[C[C[C[C[C[C[C[C[5P./a.out[C
+goodbye
+goodbye
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ ./a.out <[K> stdout
+goodbye
+goodbye
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ vim main.cpp 
+[?1049h[?1h=[1;29r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[29;1H"main.cpp" 16L, 215C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
+[33m  2 [m[35m#include [m[31m<string>[m
+[33m  3 
+  4 [m[35m#include [m[31m<unistd.h>[m
+[33m  5 
+  6 [m[32mint[m main()
+[33m  7 [m{
+[33m  8 [m    std::string str = [31m"hello"[m;
+[33m  9 [m    [32mchar[m *str2 = [31m"goodbye"[m;
+[33m 10 
+ 11 [m    std::cerr << str2 << std::endl;
+[33m 12 
+ 13 [m    write([31m0[m,[31m"goodbye[m[35m\n[m[31m"[m,[31m8[m);
+[33m 14 
+ 15 [m    [33mreturn[m [31m0[m;
+[33m 16 [m}
+[1m[34m~                                                                            [18;1H~                                                                            [19;1H~                                                                            [20;1H~                                                                            [21;1H~                                                                            [22;1H~                                                                            [23;1H~                                                                            [24;1H~                                                                            [25;1H~                                                                            [26;1H~                                                                            [27;1H~                                                                            [28;1H~                                                                            [m[29;60H1,1[11CAll]2;main.cpp (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[29;60H2[2;5H[?12l[?25h[?25l[29;60H3,0-1[3;5H[?12l[?25h[?25l[29;60H4,1  [4;5H[?12l[?25h[?25l[29;60H5,0-1[5;5H[?12l[?25h[?25l[29;60H6,1  [6;5H[?12l[?25h[?25l[7;5H[46m{[16;5H}[m[29;60H7[7;5H[?12l[?25h[?25l{[16;5H}[29;60H8[8;5H[?12l[?25h[?25l[29;60H9[9;5H[?12l[?25h[?25l[29;60H10,0-1[10;5H[?12l[?25h[?25l[29;61H1,1  [11;5H[?12l[?25h[?25l[29;61H2,0-1[12;5H[?12l[?25h[?25l[29;61H3,1  [13;5H[?12l[?25h[?25l    [34m//write(0,"goodbye\[m[34m[41mn[m[34m",8);]2;main.cpp + (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[m[29;61H4,0-1[14;5H[?12l[?25h[?25l[29;1H[K[29;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"main.cpp" 16L, 217C written]2;user@userland: ~/proj/ucr-cs100/lecture]1;user@userland: ~/proj/ucr-cs100/lecture
+[?1l>[?12l[?25h[?1049l]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ vim main.cpp ./a.out > stdout[K[5@g++ main.cpp[C
+main.cpp: In function ‘int main()’:
+main.cpp:9:18: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ g++ main.cpp vim[C[C[C[C[C[C[C[C[C[C./a.out > stdout
+goodbye
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ cat stdp[C[C[C[C[C[C[C[C[Kout 
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ cat stdout ./a.out > stdout[3Pg++ main.cpp vim[C[C[C[C[C[C[C[C[C[C
+[?1049h[?1h=[1;29r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[29;1H"main.cpp" 16L, 217C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
+[33m  2 [m[35m#include [m[31m<string>[m
+[33m  3 
+  4 [m[35m#include [m[31m<unistd.h>[m
+[33m  5 
+  6 [m[32mint[m main()
+[33m  7 [m{
+[33m  8 [m    std::string str = [31m"hello"[m;
+[33m  9 [m    [32mchar[m *str2 = [31m"goodbye"[m;
+[33m 10 
+ 11 [m    std::cerr << str2 << std::endl;
+[33m 12 
+ 13 [m    [34m//write(0,"goodbye\[m[34m[41mn[m[34m",8);[m
+[33m 14 
+ 15 [m    [33mreturn[m [31m0[m;
+[33m 16 [m}
+[1m[34m~                                                                            [18;1H~                                                                            [19;1H~                                                                            [20;1H~                                                                            [21;1H~                                                                            [22;1H~                                                                            [23;1H~                                                                            [24;1H~                                                                            [25;1H~                                                                            [26;1H~                                                                            [27;1H~                                                                            [28;1H~                                                                            [m[29;60H1,1[11CAll]2;main.cpp (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[29;60H2[2;5H[?12l[?25h[?25l[29;60H1[1;5H[?12l[?25h[?25l[29;60H2[2;5H[?12l[?25h[?25l[29;60H3,0-1[3;5H[?12l[?25h[?25l[29;60H4,1  [4;5H[?12l[?25h[?25l[29;60H5,0-1[5;5H[?12l[?25h[?25l[29;60H6,1  [6;5H[?12l[?25h[?25l[7;5H[46m{[16;5H}[m[29;60H7[7;5H[?12l[?25h[?25l{[16;5H}[29;60H8[8;5H[?12l[?25h[?25l[29;60H9[9;5H[?12l[?25h[?25l[29;60H10,0-1[10;5H[?12l[?25h[?25l[29;61H1,1  [11;5H[?12l[?25h[?25l[29;61H2,0-1[12;5H[?12l[?25h[?25l[29;61H1,1  [11;5H[?12l[?25h[?25l[29;61H2,0-1[12;5H[?12l[?25h[?25l[29;61H1,1  [11;5H[?12l[?25h[?25l[29;63H5[11;9H[?12l[?25h[?25l[29;63H15[11;19H[?12l[?25h[?25l[29;64H4[11;18H[?12l[?25h[?25l[29;64H3[11;17H[?12l[?25h[?25l[29;64H2[11;16H[?12l[?25h[?25l[29;64H1[11;15H[?12l[?25h[?25lc << str2 << std::endl;[11;37H[K]2;main.cpp + (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[11;15H[?12l[?25h[?25l[29;1H[1m-- INSERT --[m[29;13H[K[29;60H11,11[9CAll[11;15H[?12l[?25h[?25lco << str2 << std::endl;[29;64H2[11;16H[?12l[?25h[?25lou << str2 << std::endl;[29;64H3[11;17H[?12l[?25h[?25lut << str2 << std::endl;[29;64H4[11;18H[?12l[?25h[29;1H[K[11;17H[?25l[29;60H11,13[9CAll[11;17H[?12l[?25h[?25l[29;60H[K[29;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"main.cpp" 16L, 217C written]2;user@userland: ~/proj/ucr-cs100/lecture]1;user@userland: ~/proj/ucr-cs100/lecture
+[?1l>[?12l[?25h[?1049l]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ vim main.cpp [2Pcat stdout[C./a.out > stdout[3Pg++ main.cpp 
+main.cpp: In function ‘int main()’:
+main.cpp:9:18: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ g++ main.cpp vim[C[C[C[C[C[C[C[C[C[C[2Pcat stdout[C./a.out > stdout
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ ./a.out > stdout[3Pg++ main.cpp vim[C[C[C[C[C[C[C[C[C[C[2Pcat stdout[C
+goodbye
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ cat stdout ./a.out > stdout
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ ./a.out > stdout
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ ./a.out > stdout
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ ./a.out > stdout
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ ./a.out > stdout
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ ./a.out > stdout
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ ./a.out > stdout
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ ./a.out > stdout
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ ./a.out > stdout
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ ./a.out > stdout
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ ./a.out > stdout[5Pcat stdout ./a.out > stdout[5Pcat stdout 
+goodbye
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ cat stdout ./a.out > stdout> stdout
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ ./a.out >> stdout
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ ./a.out >> stdout
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ ./a.out >> stdout
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ ./a.out >> stdout
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ ./a.out >> stdout
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ ./a.out >> stdout
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ ./a.out >> stdout
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ ./a.out >> stdout[6Pcat stdout ./a.out > stdout[5Pcat stdout 
+goodbye
+goodbye
+goodbye
+goodbye
+goodbye
+goodbye
+goodbye
+goodbye
+goodbye
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ clear
+[H[2J]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ clearat stdout ./a.out >> stdout[6Pcat stdout ./a.out > stdout[5Pcat stdout ./a.out > stdout[5Pcat stdout ./a.out >> stdout[6Pcat stdout [6Plear[Kvim main.cpp 
+[?1049h[?1h=[1;29r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[29;1H"main.cpp" 16L, 217C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
+[33m  2 [m[35m#include [m[31m<string>[m
+[33m  3 
+  4 [m[35m#include [m[31m<unistd.h>[m
+[33m  5 
+  6 [m[32mint[m main()
+[33m  7 [m{
+[33m  8 [m    std::string str = [31m"hello"[m;
+[33m  9 [m    [32mchar[m *str2 = [31m"goodbye"[m;
+[33m 10 
+ 11 [m    std::cout << str2 << std::endl;
+[33m 12 
+ 13 [m    [34m//write(0,"goodbye\[m[34m[41mn[m[34m",8);[m
+[33m 14 
+ 15 [m    [33mreturn[m [31m0[m;
+[33m 16 [m}
+[1m[34m~                                                                            [18;1H~                                                                            [19;1H~                                                                            [20;1H~                                                                            [21;1H~                                                                            [22;1H~                                                                            [23;1H~                                                                            [24;1H~                                                                            [25;1H~                                                                            [26;1H~                                                                            [27;1H~                                                                            [28;1H~                                                                            [m[29;60H1,1[11CAll]2;main.cpp (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[29;60H2[2;5H[?12l[?25h[?25l[29;60H3,0-1[3;5H[?12l[?25h[?25l[29;60H4,1  [4;5H[?12l[?25h[?25l[29;60H5,0-1[5;5H[?12l[?25h[?25l[29;60H6,1  [6;5H[?12l[?25h[?25l[7;5H[46m{[16;5H}[m[29;60H7[7;5H[?12l[?25h[?25l{[16;5H}[29;60H8[8;5H[?12l[?25h[?25l[29;60H9[9;5H[?12l[?25h[?25l[29;60H10,0-1[10;5H[?12l[?25h[?25l[29;61H1,1  [11;5H[?12l[?25h[?25l[29;61H2,0-1[12;5H[?12l[?25h[?25l[29;61H3,1  [13;5H[?12l[?25h[?25l[29;61H4,0-1[14;5H[?12l[?25h[?25l[29;61H3,1  [13;5H[?12l[?25h[?25l[29;61H2,0-1[12;5H[?12l[?25h[?25l[29;61H3,1  [13;5H[?12l[?25h[?25l[29;1H"main.cpp" "main.cpp"main.cpp" [13;8H write([31m0[m,[31m"goodbye[m[35m\n[m[31m"[m,[31m8[m);[13;32H[K]2;main.cpp + (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[29;63H5[13;9H[?12l[?25h[?25l[29;61H2,0-1[12;5H[?12l[?25h[?25l[29;1H[1m-- INSERT --[m[29;13H[K[29;60H13,1[10CTop[13;9H[K[14;8H write([31m0[m,[31m"goodbye[m[35m\n[m[31m"[m,[31m8[m);[15;9H[K[16;4H[33m [m    [33mreturn[m [31m0[m;
+[33m 17 [m}[17;6H[K[13;5H[?12l[?25h[?25l[29;63H5[10CAll[13;9H[?12l[?25h[?25l o[29;63H6[13;10H[?12l[?25h[?25lop[29;63H7[13;11H[?12l[?25h[?25lpe[29;63H8[13;12H[?12l[?25h[?25len[29;63H9[13;13H[?12l[?25h[?25ln([29;60H[K[29;60H13,10[9CAll[13;14H[?12l[?25h[?25l()[46m()[m[29;60H[K[29;60H13,11[9CAll[13;15H[?12l[?25h[?25l[29;64H0[13;14H[?12l[?25h[?25l[46m([m[31m[46m"[m[31m)[14;5H    write(0,[m[1Cgoodbye\n[1C[31m,8);[16;5H    [m[31m[44mreturn[m[31m 0;[17;5H}[13;14H"[m[31m[46m)[m[29;64H1[13;15H[?12l[?25h[?25l[31m"[m[31m[46m"[m)[14;5H    write([1C,[1C[31mgoodbye[m[35m\n[m[1C,[1C);[16;5H    [33mreturn[m [1C;[17;5H}[13;15H[31m"[m[46m)[m[29;64H2[13;16H[?12l[?25h[?25l([2C)[29;64H1[13;15H[?12l[?25h[?25l[31m"t"[m)[29;64H2[13;16H[?12l[?25h[?25l[31mte"[m)[29;64H3[13;17H[?12l[?25h[?25l[31mes"[m)[29;64H4[13;18H[?12l[?25h[?25l[31mst"[m)[29;64H5[13;19H[?12l[?25h[?25l[31mtf"[m)[29;64H6[13;20H[?12l[?25h[?25l[31mfi"[m)[29;64H7[13;21H[?12l[?25h[?25l[31mil"[m)[29;64H8[13;22H[?12l[?25h[?25l[31mle"[m)[29;64H9[13;23H[?12l[?25h[?25l[13;15H[31m[41mtestfile[m[13;13H[46m([10C)[m[29;63H20[13;24H[?12l[?25h[29;1H[K[13;23H[?25l[13;13H([10C)[29;60H13,19[9CAll[13;23H[?12l[?25h[?25l[29;60H[K[29;1H:[?12l[?25hs[?25l[?12l[?25he[?25l[?12l[?25ht[?25l[?12l[?25h[?25l [?12l[?25hn[?25l[?12l[?25ho[?25l[?12l[?25hs[?25l[?12l[?25hp[?25l[?12l[?25he[?25l[?12l[?25hl[?25l[?12l[?25hl[?25l[?12l[?25h[?25l[13;15H[31mtestfile[m[29;60H13,19[9CAll[13;23H[?12l[?25h[?25l[29;1H[1m-- INSERT --[m[29;60H[K[29;60H13,20[9CAll[13;13H[46m([10C)[?12l[?25h[?25l[m[31m"[m[46m,[m),[46m)[m[29;64H1[13;25H[?12l[?25h[?25l,[46mO[m)O[46m)[m[29;64H2[13;26H[?12l[?25h[?25lO[46m_[m)_[46m)[m[29;64H3[13;27H[?12l[?25h[?25l_[46mR[m)R[46m)[m[29;64H4[13;28H[?12l[?25h[?25lR[46mD[m)D[46m)[m[29;64H5[13;29H[?12l[?25h[?25lD[46mR[m)R[46m)[m[29;64H6[13;30H[?12l[?25h[?25lR[46mW[m)W[46m)[m[29;64H7[13;31H[?12l[?25h[29;1H[K[13;30H[?25l[13;13H([17C)[29;60H13,26[9CAll[13;30H[?12l[?25h[?25l[29;60H[K[29;1H:[?12l[?25hw[?25l[?12l[?25h[?25l"main.cpp" 17L, 243C written[31C13,26[9CAll]2;main.cpp (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[29;60H[K[29;60H13,26[9CAll[13;30H[?12l[?25h[?25l[29;63H1 [13;5H[?12l[?25h[?25l[29;63H5[13;9H[?12l[?25h[?25l[29;1H[1m-- INSERT --[m[29;13H[K[29;60H13,5[10CAll[13;9H[?12l[?25h[?25l iopen([31m"testfile"[m,O_RDRW)[29;63H6]2;main.cpp + (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[13;10H[?12l[?25h[?25linopen([31m"testfile"[m,O_RDRW)[29;63H7[13;11H[?12l[?25h[?25lntopen([31m"testfile"[m,O_RDRW)[29;63H8[13;12H[?12l[?25h[?25l[32mint[m open([31m"testfile"[m,O_RDRW)[29;63H9[13;13H[?12l[?25h[?25l fopen([31m"testfile"[m,O_RDRW)[29;63H10[13;14H[?12l[?25h[?25lfdopen([31m"testfile"[m,O_RDRW)[29;64H1[13;15H[?12l[?25h[?25ld=open([31m"testfile"[m,O_RDRW)[29;64H2[13;16H[?12l[?25h[?25l= open([31m"testfile"[m,O_RDRW)[29;64H3[13;17H[?12l[?25h[?25l=open([31m"testfile"[m,O_RDRW)[13;39H[K[29;64H2[13;16H[?12l[?25h[29;1H[K[13;15H[?25l[29;60H13,11[9CAll[13;15H[?12l[?25h[?25l[29;61H4[14;15H[?12l[?25h[?25l(,[31m"goodbye[m[35m\n[m[31m"[m,[31m8[m);[14;31H[K[14;15H[?12l[?25h[?25l[29;1H[1m-- INSERT --[m[29;60H[K[29;60H14,11[9CAll[14;15H[?12l[?25h[?25l(f,[31m"goodbye[m[35m\n[m[31m"[m,[31m8[m);[29;64H2[14;16H[?12l[?25h[?25lfd,[31m"goodbye[m[35m\n[m[31m"[m,[31m8[m);[29;64H3[14;17H[?12l[?25h[29;1H[K[14;16H[?25l[29;60H14,12[9CAll[14;16H[?12l[?25h[?25l[29;60H[K[29;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"main.cpp" 17L, 251C written]2;user@userland: ~/proj/ucr-cs100/lecture]1;user@userland: ~/proj/ucr-cs100/lecture
+[?1l>[?12l[?25h[?1049l]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ g++ main.cpp 
+main.cpp: In function ‘int main()’:
+main.cpp:9:18: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+main.cpp:13:28: error: ‘O_RDRW’ was not declared in this scope
+main.cpp:13:34: error: ‘open’ was not declared in this scope
+main.cpp:14:5: error: expected ‘,’ or ‘;’ before ‘write’
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ g++ main.cpp vim[C[C[C[C[C[C[C[C[C[C
+[?1049h[?1h=[1;29r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[29;1H"main.cpp" 17L, 251C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
+[33m  2 [m[35m#include [m[31m<string>[m
+[33m  3 
+  4 [m[35m#include [m[31m<unistd.h>[m
+[33m  5 
+  6 [m[32mint[m main()
+[33m  7 [m{
+[33m  8 [m    std::string str = [31m"hello"[m;
+[33m  9 [m    [32mchar[m *str2 = [31m"goodbye"[m;
+[33m 10 
+ 11 [m    std::cout << str2 << std::endl;
+[33m 12 
+ 13 [m    [32mint[m fd=open([31m"[m[31m[41mtestfile[m[31m"[m,O_RDRW)
+[33m 14 [m    write(fd,[31m"goodbye[m[35m\n[m[31m"[m,[31m8[m);
+[33m 15 
+ 16 [m    [33mreturn[m [31m0[m;
+[33m 17 [m}
+[1m[34m~                                                                            [19;1H~                                                                            [20;1H~                                                                            [21;1H~                                                                            [22;1H~                                                                            [23;1H~                                                                            [24;1H~                                                                            [25;1H~                                                                            [26;1H~                                                                            [27;1H~                                                                            [28;1H~                                                                            [m[29;60H1,1[11CAll]2;main.cpp (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[29;60H2[2;5H[?12l[?25h[?25l[29;60H3,0-1[3;5H[?12l[?25h[?25l[29;60H4,1  [4;5H[?12l[?25h[?25l[29;60H5,0-1[5;5H[?12l[?25h[?25l[29;60H6,1  [6;5H[?12l[?25h[?25l[7;5H[46m{[17;5H}[m[29;60H7[7;5H[?12l[?25h[?25l{[17;5H}[29;60H8[8;5H[?12l[?25h[?25l[29;60H9[9;5H[?12l[?25h[?25l[29;60H10,0-1[10;5H[?12l[?25h[?25l[29;61H1,1  [11;5H[?12l[?25h[?25l[29;61H2,0-1[12;5H[?12l[?25h[?25l[29;61H3,1  [13;5H[?12l[?25h[?25l[29;1H[1m-- INSERT --[m[29;13H[K[29;60H13,35[9CAll[13;20H[46m([17C)[m[29;60H[K[29;60H13,35[9CAll[13;39H[?12l[?25h[?25l[46m)[m;[13;20H([17C)[29;64H6]2;main.cpp + (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[13;40H[?12l[?25h[29;1H[K[13;39H[?25l[29;60H13,35[9CAll[13;39H[?12l[?25h[?25l[29;61H2,0-1[12;5H[?12l[?25h[?25l[29;61H1,35 [11;39H[?12l[?25h[?25l[29;61H0,0-1[10;5H[?12l[?25h[?25l[29;60H9,27  [9;31H[?12l[?25h[?25l[29;60H8,30[8;34H[?12l[?25h[?25l[7;5H[46m{[17;5H}[m[29;60H7,1 [7;5H[?12l[?25h[?25l[6;13H[46m()[m[7;5H{[17;5H}[29;60H6,10[6;14H[?12l[?25h[?25l()[29;60H5,0-1[5;5H[?12l[?25h[?25l[29;1H[1m-- INSERT --[m[29;60H[K[29;60H5,1[11CTop[6;5H[K[7;4H[33m [m[32mint[m main()[8;4H[33m [m{[8;9H[K[9;8H std::string str = [31m"hello"[m;[10;8H [32mchar[m *str2 = [31m"goodbye"[m;[11;9H[K[12;8H std::cout << str2 << std::endl;[13;9H[K[14;8H [32mint[m fd=open([31m"[m[31m[41mtestfile[m[31m"[m,O_RDRW);[15;8H write(fd,[31m"goodbye[m[35m\n[m[31m"[m,[31m8[m);[16;9H[K[17;4H[33m [m    [33mreturn[m [31m0[m;
+[33m 18 [m}[18;6H[K[5;5H[?12l[?25h[?25l[33m [m#[29;62H2[11CAll[5;6H[?12l[?25h[?25l#i[29;62H3[5;7H[?12l[?25h[?25lin[29;62H4[5;8H[?12l[?25h[?25lnc[29;62H5[5;9H[?12l[?25h[?25lcl[29;62H6[5;10H[?12l[?25h[?25llu[29;62H7[5;11H[?12l[?25h[?25lud[29;62H8[5;12H[?12l[?25h[?25lde[29;62H9[5;13H[?12l[?25h[?25l[29;62H10[5;14H[?12l[?25h[?25l[5;5H[35m#include <[m[29;63H1[5;15H[?12l[?25h[?25l[29;60H6,1 [6;5H[?12l[?25h[?25l[7;13H[46m()[m[29;60H[K[29;60H7,11[10CAll[7;15H[?12l[?25h[?25l()[8;5H[46m{[18;5H}[m[29;60H[K[29;60H8,2[11CAll[8;6H[?12l[?25h[?25l{[18;5H}[29;60H9,11[9;15H[?12l[?25h[?25l[29;60H10,11[10;15H[?12l[?25h[?25l[29;61H1,1 [11;5H[?12l[?25h[?25l[29;61H2,11[12;15H[?12l[?25h[?25l[29;61H3,1 [13;5H[?12l[?25h[?25l[29;61H4,11[14;15H[?12l[?25h[?25l[15;14H[46m([16C)[m[29;60H[K[29;60H15,11[9CAll[15;15H[?12l[?25h[?25l([16C)[29;61H4[14;15H[?12l[?25h[?25l[29;63H36[14;40H[?12l[?25h[?25l[14;20H[46m([17C)[m[29;60H[K[29;60H14,35[9CAll[14;39H[?12l[?25h[?25l[29;64H4[14;38H[?12l[?25h[?25l[14;20H([17C)[29;64H3[14;37H[?12l[?25h[?25lDW);[14;39H[K[29;64H2[14;36H[?12l[?25h[?25l[14;20H[46m([16C)[m[29;64H3[14;37H[?12l[?25h[?25lW[46mR[m);R[46m)[m[29;64H4[14;38H[?12l[?25h[?25l[14;20H([17C)[29;61H3,1 [13;5H[?12l[?25h[?25l[14;20H[46m([17C)[m[29;61H4,34[14;38H[?12l[?25h[?25l[14;20H([17C)[29;61H3,1 [13;5H[?12l[?25h[?25l[29;61H2,34[12;38H[?12l[?25h[?25l[29;61H1,1 [11;5H[?12l[?25h[?25l[29;61H0,28[10;32H[?12l[?25h[?25l[29;60H9,31 [9;35H[?12l[?25h[?25l[8;5H[46m{[18;5H}[m[29;60H[K[29;60H8,2[11CAll[8;6H[?12l[?25h[?25l[7;13H[46m()[m[8;5H{[18;5H}[29;60H[K[29;60H7,11[10CAll[7;15H[?12l[?25h[?25l()[29;60H6,1 [6;5H[?12l[?25h[?25l[29;60H5,11[5;15H[?12l[?25h[?25l[29;60H4,20[4;24H[?12l[?25h[?25l[29;60H5,11[5;15H[?12l[?25h[?25l[35m<[mf[29;63H2[5;16H[?12l[?25h[?25lfc[29;63H3[5;17H[?12l[?25h[?25lcn[29;63H4[5;18H[?12l[?25h[?25lnt[29;63H5[5;19H[?12l[?25h[?25ltl[29;63H6[5;20H[?12l[?25h[?25ll.[29;63H7[5;21H[?12l[?25h[?25l.g[29;63H8[5;22H[?12l[?25h[?25l[5;21H[K[29;63H7[5;21H[?12l[?25h[?25l.h[29;63H8[5;22H[?12l[?25h[?25l[5;14H[31m<fcntl.h>[m[29;63H9[5;23H[?12l[?25h[29;1H[K[5;22H[?25l[29;60H5,18[10CAll[5;22H[?12l[?25h[?25l[29;60H[K[29;1H:[?12l[?25hw[?25l[?12l[?25h[?25l"main.cpp" 18L, 271C written[31C5,18[10CAll]2;main.cpp (~/proj/ucr-cs100/lecture) - VIM]1;main.cpp[29;60H[K[29;60H5,18[10CAll[5;22H[?12l[?25h[?25l[29;60H6,0-1[6;5H[?12l[?25h[?25l[7;13H[46m()[m[29;60H7,10 [7;14H[?12l[?25h[?25l()[8;5H[46m{[18;5H}[m[29;60H8,1 [8;5H[?12l[?25h[?25l{[18;5H}[29;60H9,18[9;22H[?12l[?25h[?25l[29;60H10,18[10;22H[?12l[?25h[?25l[29;61H1,0-1[11;5H[?12l[?25h[?25l[29;61H2,18 [12;22H[?12l[?25h[?25l[29;61H3,0-1[13;5H[?12l[?25h[?25l[29;61H4,18 [14;22H[?12l[?25h[?25l[29;1H[K[29;1H:[?12l[?25hs[?25l[?12l[?25he[?25l[?12l[?25ht[?25l[?12l[?25h[?25l [?12l[?25hn[?25l[?12l[?25ho[?25l[?12l[?25hs[?25l[?12l[?25hp[?25l[?12l[?25he[?25l[?12l[?25hl[?25l[?12l[?25hl[?25l[?12l[?25h[?25l[14;22H[31mtestfile[m[29;60H14,18[9CAll[14;22H[?12l[?25h[?25l[29;1H[K[29;1H:[?12l[?25hw[?25l[?12l[?25h[?25l"main.cpp" 18L, 271C written[31C14,18[9CAll[29;60H[K[29;60H14,18[9CAll[14;22H[?12l[?25h[?25l[29;1H[K[29;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"main.cpp" 18L, 271C written]2;user@userland: ~/proj/ucr-cs100/lecture]1;user@userland: ~/proj/ucr-cs100/lecture
+[?1l>[?12l[?25h[?1049l]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ vim main.cpp g++[C[C[C[C[C[C[C[C[C[C
+main.cpp: In function ‘int main()’:
+main.cpp:10:18: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ g++ main.cpp vim[C[C[C[C[C[C[C[C[C[Cg++[C[C[C[C[C[C[C[C[C[Cvim[C[C[C[C[C[C[C[C[C[Cg++[C[C[C[C[C[C[C[C[C[C[Kls
+[0m[01;32ma.out[0m        [01;34mfacebook[0m  lecture1  lecture3  stdout  testfile
+cmdline.cpp  [01;34mgittest[0m   lecture2  main.cpp  test    this has spaces
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ cat testfile 
+hello world
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ echo "" >[C[C[C[C[C [C[C[C[C[C[C[C[Ctestfile 
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ echo "" > testfile [6Pcat[C[C[C[C[C[C[C[C[C[C
+
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ [K]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ exit
+exit
+
+Script done on Wed 30 Jul 2014 04:36:58 PM PDT

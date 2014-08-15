@@ -1,5 +1,15 @@
+notes/
+gradetmp/
+
 # vim files
 *.swp
+*.swo
+
+# tex fils
+*.aux
+*.pdf
+*.ps
+*.log
 
 # Compiled Object files
 *.slo

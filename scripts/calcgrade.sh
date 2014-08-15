@@ -1,6 +1,9 @@
 #!/bin/bash
 
-user="$1"
+#
+# This script takes a github account as a parameter.  It then displays all the
+# grades associated with the account
+#
 
 scriptdir=`dirname "$0"`
 source "$scriptdir/config.sh"
@@ -8,6 +11,7 @@ source "$scriptdir/config.sh"
 ########################################
 # check for valid command line params
 
+user="$1"
 if [ -z $user ]
 then
     echo "no user name given"
@@ -35,7 +39,7 @@ echo "==========================================="
 echo "    grade        |  assignment"
 echo "==========================================="
 
-for f in `find "./$classname-$user" -name grade | sort`; do
+for f in `find "./$tmpdir/$classname-$user" -name grade | sort`; do
     dir=`dirname $f`
     assn=`basename $dir`
     grade="---"

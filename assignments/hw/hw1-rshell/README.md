@@ -8,7 +8,7 @@ Write a command shell called `rshell`.  Your shell will perform the following st
 
 2. Read in a command on one line.  Commands will have the form: `commandName [ argumentList ] [ & ]`, where `commandName` is an executable program located in `/usr/bin` and `argumentList` is a list of zero or more words.
 
-3. Execute the command.  This will require using the system functions `fork`, `open`, `exec`, and `wait`.
+3. Execute the command.  This will require using the system functions `fork`, `exec`, and `wait`.
 
 4. If the command was followed by the `&` character, do not wait for the command to finish; immediately return to step 1.  Otherwise, wait until the command finishes before returning to step 1.
 
@@ -36,7 +36,7 @@ $ make
 $ bin/rshell
 ```
 
-You should run them as well to verify that you've submitted your code successfully.
+You should ssh into `well.cs.ucr.edu` and run the above commands to verify that you've submitted your code successfully.  To ensure that your `hw1` tag is getting pushed to github correctly, you may have to run the command: `git push origin hw1` instead of just `git push`.  
 
 ### project structure
 
@@ -44,7 +44,7 @@ You should run them as well to verify that you've submitted your code successful
 
 You must have a directory called `src` which contains all the source code files for the project.
 
-You must have a `Makefile` in the root directory.  You must compile using `g++` with the flags: `-Wall -Werror -ansi -pedantic`.
+You must have a `Makefile` in the root directory.  In the `Makefile` you will have two targets.  The first target is called `all` and the second target is called `rshell`.  Both of these targets will compile compile your program using `g++` with the flags: `-Wall -Werror -ansi -pedantic`.
 
 You must NOT have a directory called `bin` in the project; however, when the project is built, this directory must be created and all executable files placed here.
 
