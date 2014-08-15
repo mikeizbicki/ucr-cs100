@@ -39,6 +39,8 @@ syscalls="
     open
     read
     write
+    opendir
+    closedir
     readdir
     readdir_r
     stat
@@ -51,39 +53,40 @@ syscalls="
     get_current_directory_name
     signal
     sigaction
+    getpwuid
+    getgrgid
     "
 
-# calculate number of syscalls
-echo
-echo "lines with syscalls:"
-numsyscalls="0"
+args=""
 for syscall in $syscalls; do
-    lines=`cat $@ | "$rmcomments" | $rmstr | $rminclude | grep -n -e "\<$syscall\> *("`
-    count=0
-    if [ ! -z "$lines" ]; then
-        IFS=$'\n'
-        for line in $lines; do
-            echo "  $line"
-        done
-        IFS=" "
-        count=`echo $lines | wc -l`
-    fi
-    numsyscalls=$[$numsyscalls + $count]
+    args="$args -e \<$syscall\>( "
 done
 
+# calculate number of syscalls
+syscalls=`cat $@ | "$rmcomments" | $rmstr | $rminclude | sed -e 's/^[ \t]*//' | grep $args -n | sed -e 's/^\([1234567890][1234567890]\):/0\1:/' | sed -e 's/\([1234567890]\):/\1:  /'` 
+numsyscalls=$(echo "$syscalls" | wc -l)
+
 # calculate number of perror
+perrors=`cat $@ | "$rmcomments" | $rmstr | $rminclude | sed -e 's/^[ \t]*//' | grep -n -e "\<perror\>" | sed -e 's/^\([1234567890][1234567890]\):/0\1:/' | sed -e 's/\([1234567890]\):/\1:  /'` 
+numperror=`echo "$perrors" | wc -l`
+
+# print vars
+function printvars {
+    [ ! -z "$2" ] && export GREP_COLOR="$2"
+    if [ ! -z "$1" ]; then
+        IFS=$'\n'
+        for line in $1; do
+            IFS=' '
+            echo "  $line" | grep -e "\<perror\>(" $args --color=always
+        done
+    fi
+}
 echo
-echo "lines with perror:"
-lines=`cat $@ | "$rmcomments" | $rmstr | $rminclude | grep -n -e "\<perror\>"` 
-numperror=0
-if [ ! -z "$lines" ]; then
-    IFS=$'\n'
-    for line in $lines; do
-        echo "  $line"
-    done
-    IFS=" "
-    numperror=`echo "$lines" | wc -l`
-fi
+echo "lines with syscalls:"
+out="$(printvars "$syscalls" '1;31') 
+     $(printvars "$perrors" '1;32')
+    "
+echo "$out" | sed -e 's/^ */  /' | sort 
 
 # calculate the grade modifier
 grademod="0"
