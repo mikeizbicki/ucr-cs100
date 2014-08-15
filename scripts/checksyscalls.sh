@@ -59,11 +59,11 @@ syscalls="
 
 args=""
 for syscall in $syscalls; do
-    args="$args -e \<$syscall\>( "
+    args="$args -e \<$syscall\>[^(]*([^)]*) "
 done
 
 # calculate number of syscalls
-syscalls=`cat $@ | "$rmcomments" | $rmstr | $rminclude | sed -e 's/^[ \t]*//' | grep $args -n | sed -e 's/^\([1234567890][1234567890]\):/0\1:/' | sed -e 's/\([1234567890]\):/\1:  /'` 
+syscalls=`cat $@ | "$rmcomments" | $rmstr | $rminclude | sed -e 's/^[ \t]*//' | grep -o $args -n | sed -e 's/^\([1234567890][1234567890]\):/0\1:/' | sed -e 's/\([1234567890]\):/\1:  /'` 
 numsyscalls=$(echo "$syscalls" | wc -l)
 
 # calculate number of perror
@@ -77,7 +77,7 @@ function printvars {
         IFS=$'\n'
         for line in $1; do
             IFS=' '
-            echo "  $line" | grep -e "\<perror\>(" $args --color=always
+            echo "  $line" | grep -e "\<perror\>([^)]*)" $args --color=always
         done
     fi
 }
