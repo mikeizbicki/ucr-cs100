@@ -1,2 +1,12 @@
-/ 100
+70 / 100
+
+-20 pts: 
+	number of syscalls... 8
+	number of perror..... 4
+	grade modifier....... -20
+
++25 pts extra credit 
+-25 pts -R flag not working
+-10 pt ls not able to work on files
+
 
