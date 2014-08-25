@@ -15,7 +15,7 @@ First, you're going to practice sending these emails.  Then, you're going to wri
 First, telnet into the local SMTP webserver:
 
 ```
-telnet email.cs.ucr.edu 25
+telnet mail.cs.ucr.edu 25
 ```
 
 Telnet is a simple command line utility that let's us send commands over the network.  Whatever you type in gets sent over the network to the server you're connected to.
@@ -43,7 +43,7 @@ In this part of the lab, you're going to write a bash script that sends spam to 
 For example, if you were a jerk, you could spoof an email from me to one of your classmates using the command:
 
 ```
-$ ./spam.sh classmate@ucr.edu mike@izbicki.me
+$ ./sendspam.sh classmate@ucr.edu mike@izbicki.me
 Class is cancelled forever.  
 There is no more homework.
 Everyone get's an A++++++.
