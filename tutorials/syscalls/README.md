@@ -237,7 +237,9 @@ Later on, you can output buf if you want.
 ##getpwuid:
 **includes:** `#include <pwd.h>`
           `#include <sys/types.h>`
+
 **declaraton:** `struct passwd *getpwuid(uid_t uid);`
+
 **returns:** If an error occurs NULL is returned, otherwise it returns a pointer to a passwd struct(seen below)
  
 Notes: As you can probably see, getpwuid is a bit different, as it is a struct. It takes in the  user’s ID, which is in a numerical form. After that, it will return a pointer to a structure, which contains these fields:
@@ -297,4 +299,4 @@ if(!(gp = getgrgid(s.st_gid)))
 
 ##Conclusion:
 
-Thanks for reading our short tutorial on a couple of important syscalls! These only scratch the surface of the many syscalls that exist, and we encourage you to explore as many of them as you can. We hope that our explanations, as well as our coding examples can greatly help your understanding of some initially confusing syscalls.
+Thanks for reading our short tutorial on a couple of important syscalls! These only scratch the surface of the many syscalls that exist, and we encourage you to explore as many of them as you can. We hope that our explanations, as well as our coding examples can greatly help your understanding of some initially confusing syscalls. Be sure to refer to the man pages of each syscall for the most up-to-date informatioin!
