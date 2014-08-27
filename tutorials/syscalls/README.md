@@ -52,8 +52,8 @@ Now, we’ll add perror to the last example:
 int pid = fork();
 if(pid == -1)//fork’s return value for an error is -1
 {
-    perror("There was an error with fork(). ");
-    exit(1);//there was an error with fork so exit the program and go back and fix it
+   perror("There was an error with fork(). ");
+   exit(1);//there was an error with fork so exit the program and go back and fix it
 }
 else if(pid == 0)//when pid is 0 you are in the child process
 {
@@ -79,8 +79,8 @@ examples: here is an example of wait with fork.
 int pid = fork();
 if(pid == -1)//fork’s return value for an error is -1
 {
-    perror("There was an error with fork(). ");
-    exit(1);//there was an error with fork so exit the program and go back and fix it
+   perror("There was an error with fork(). ");
+   exit(1);//there was an error with fork so exit the program and go back and fix it
 }
 else if(pid == 0)//when pid is 0 you are in the child process
 {
@@ -91,7 +91,7 @@ else if(pid == 0)//when pid is 0 you are in the child process
 else if(pid > 0) //parent function
 {
    if( -1 == wait(0)) //wait for the child process to finish executing
-    perror(“There was an error with wait().”);
+   perror(“There was an error with wait().”);
 }
 ```
 
@@ -119,8 +119,8 @@ We’ll show you an example of execvp that was used in created a bash shell, thi
 int pid = fork();
 if(pid == -1)//fork’s return value for an error is -1
 {
-    perror("There was an error with fork(). ");
-    exit(1);//there was an error with fork so exit the program and go back and fix it
+   perror("There was an error with fork(). ");
+   exit(1);//there was an error with fork so exit the program and go back and fix it
 }
 else if(pid == 0)//when pid is 0 you are in the child process
 {
@@ -129,13 +129,13 @@ else if(pid == 0)//when pid is 0 you are in the child process
       perror("There was an error in execvp. ");
 
 
-      exit(1);  //when the child process finishes doing what we want it to, cout, we want to kill the child process so it doesn’t go on in the program so we exit
+   exit(1);  //when the child process finishes doing what we want it to, cout, we want to kill the child process so it doesn’t go on in the program so we exit
 }
 //if pid is not 0 then we’re in the parent
 else if(pid > 0) //parent function
 {
    if( -1 == wait(0)) //wait for the child process to finish executing
-    perror(“There was an error with wait().);
+   perror(“There was an error with wait().);
 }
 ```
 
@@ -171,24 +171,24 @@ if(pipe(fd) == -1)//call to pipe, it puts the read end and write end file descri
 int pid = fork();
 if(pid == -1)//fork’s return value for an error is -1
 {
-    perror("There was an error with fork(). ");
-    exit(1);//there was an error with fork so exit the program and go back and fix it
+   perror("There was an error with fork(). ");
+   exit(1);//there was an error with fork so exit the program and go back and fix it
 }
 else if(pid == 0)//when pid is 0 you are in the child process
 {
    cout<<"This is the child process ";
 
-     //write to the pipe
-     if(-1 == dup2(fd[1],1))//make stdout the write end of the pipe 
-         perror("There was an error with dup2. ");
-     if(-1 == close(fd[0])//close the read end of the pipe
-         perror("There was an error with close. ");
+   //write to the pipe
+   if(-1 == dup2(fd[1],1))//make stdout the write end of the pipe 
+      perror("There was an error with dup2. ");
+   if(-1 == close(fd[0])//close the read end of the pipe
+      perror("There was an error with close. ");
 
    if(-1 == execvp(argv[0], argv)) 
       perror("There was an error in execvp. ");
 
 
-      exit(1);  //when the child process finishes doing what we want it to, cout, we want to kill the child process so it doesn’t go on in the program so we exit
+   exit(1);  //when the child process finishes doing what we want it to, cout, we want to kill the child process so it doesn’t go on in the program so we exit
 }
 //if pid is not 0 then we’re in the parent
 else if(pid > 0) //parent function
@@ -198,11 +198,11 @@ else if(pid > 0) //parent function
    if(-1 == (savestdin = dup(0)))//need to restore later or infinite loop
       perror("There is an error with dup. ")
    if(-1 == dup2(fd[0],0))//make stdin the read end of the pipe 
-         perror("There was an error with dup2. ");
-     if(-1 == close(fd[1])//close the write end of the pipe
-         perror("There was an error with close. ");
+      perror("There was an error with dup2. ");
+    if(-1 == close(fd[1])//close the write end of the pipe
+      perror("There was an error with close. ");
    if( -1 == wait(0)) //wait for the child process to finish executing
-    perror(“There was an error with wait().);
+      perror(“There was an error with wait().);
 
    //here you have to do another fork with a child process to execute the right side of the pipe command, as in the above example (“names | sort”) you would execute the sort command, we will leave this as an example for you to do.
 
