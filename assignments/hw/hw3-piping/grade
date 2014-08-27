@@ -1,1 +1,8 @@
-100 / 100
+90 / 100
+
+-10 
+	number of syscalls... 34
+  	number of perror..... 32
+  	grade modifier....... -10
+
+
