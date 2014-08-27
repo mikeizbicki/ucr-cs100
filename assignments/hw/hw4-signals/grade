@@ -1,9 +1,5 @@
-75 / 100
+100 / 100
 
--25 pts 
- 
-   number of syscalls... 9
-  number of perror..... 4
-  grade modifier....... -25
+-syscalls fixed 
 
 
