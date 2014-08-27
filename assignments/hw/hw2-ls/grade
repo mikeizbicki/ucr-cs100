@@ -1,9 +1,10 @@
-115 / 100
+120 / 100
 
--10pts: 
-	number of syscalls... 16
-	number of perror..... 14
-	grade modifier....... -10
+-5pts: 
+	number of syscalls... 15
+  	number of perror..... 14
+  	grade modifier....... -5
+
 
 +25 pts extra credit
 
