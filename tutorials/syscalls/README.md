@@ -2,14 +2,19 @@
 ###By: Katherine Gallaher and Daniel Ting
 
 Here, we will present a list of functions that will be useful when programming your own shell.  These functions are called system calls, they differ from regular functions because a syscall requests a specific service from the operating system’s kernel. 
+
 What’s really cool about syscalls is how you can check if an error occured. Each syscall has access to a universal variable ‘errno’ (include <errno.h> to use this variable) that it sets to indicate what error happened. The return value of each syscall tells you whether an error occurred, be sure to check what return value indicates an error occurred. 
+
 Syscalls might seem confusing to use but we’ll try our best to explain some of them in this list! If you want any more info be sure to google the man page.
 
 
 
 fork:
+
 includes:  #include <unistd.h>
+
 declaration: pid_t fork(void);
+
 returns: fork returns the pid of the child process that it creates, if an error occurs -1 is returned.
 
     Fork creates a new process so you can have two things happening at once. To create this new process fork creates a copy of the process that was already running. This new process is called a child process. 
