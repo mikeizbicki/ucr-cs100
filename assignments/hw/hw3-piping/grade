@@ -1,1 +1,11 @@
-/ 100
+0 / 100
+
+Did not compile
+
+-5 pts
+
+  number of syscalls... 12
+  number of perror..... 11
+  grade modifier....... -5
+
+
