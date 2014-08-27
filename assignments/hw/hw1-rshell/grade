@@ -1,14 +1,14 @@
-60 / 100
+65 / 100
 
 Did not follow specs create a hw1 tag for this assignmment. Will need to resubmit. See https://github.com/mikeizbicki/ucr-cs100/issues/36 for more details.
 
 -25 pts For late submissions
 
 Problems:
--5 pts:
-	number of syscalls... 6
-	number of perror..... 5
-	grade modifier....... -5
+-0 pts:
+  number of syscalls... 5
+  number of perror..... 5
+  grade modifier....... -0
 
 -10 pts times not having the '&', your rshell treats it if its still there.
 
