@@ -1,5 +1,5 @@
-Syscalls and How to Use Them
-By: Katherine Gallaher and Daniel Ting
+#Syscalls and How to Use Them
+#By: Katherine Gallaher and Daniel Ting
 
 Here, we will present a list of functions that will be useful when programming your own shell.  These functions are called system calls, they differ from regular functions because a syscall requests a specific service from the operating system’s kernel. 
 What’s really cool about syscalls is how you can check if an error occured. Each syscall has access to a universal variable ‘errno’ (include <errno.h> to use this variable) that it sets to indicate what error happened. The return value of each syscall tells you whether an error occurred, be sure to check what return value indicates an error occurred. 
