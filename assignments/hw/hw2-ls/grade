@@ -1,9 +1,6 @@
-55 / 100
+60 / 100
 
--5pts:
-	number of syscalls... 6
-	number of perror..... 5
-	grade modifier....... -5
+
 
 -25 pts did not implement optional file paramaters
 
