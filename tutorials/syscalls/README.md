@@ -17,12 +17,14 @@ declaration: pid_t fork(void);
 
 returns: fork returns the pid of the child process that it creates, if an error occurs -1 is returned.
 
-    Fork creates a new process so you can have two things happening at once. To create this new process fork creates a copy of the process that was already running. This new process is called a child process. 
-    If you’re creating your own bash shell you will need to use fork. When you create your own bash shell you will use the child process of the fork to execute all of your commands. Inside of the child process is where you’ll use exec.
-    Fork is one of the more complicated syscalls and is harder to understand, we highly encourage you look up more on it.
+Fork creates a new process so you can have two things happening at once. To create this new process fork creates a copy of the process that was already running. This new process is called a child process. 
+
+If you’re creating your own bash shell you will need to use fork. When you create your own bash shell you will use the child process of the fork to execute all of your commands. Inside of the child process is where you’ll use exec.
+
+Fork is one of the more complicated syscalls and is harder to understand, we highly encourage you look up more on it.
 
 Here is an example of fork:
-
+```
 int pid = fork();
 if(pid == 0)//when pid is 0 you are in the child process
 {
@@ -30,6 +32,7 @@ if(pid == 0)//when pid is 0 you are in the child process
    exit(1);  //when the child process finishes doing what we want it to, cout, we want to kill the child process so it doesn’t go on in the program so we exit
 }
 //if pid is not 0 then we’re in the parent
+```
 
 Here we’re setting pid, which is an int (which also works even though the declaration returns pid_t), to the pid ID of the child process when we’re in the parent, else we return 0 in the child. Everything that happens inside the if statement is everything the child process executes. This happens because fork returns 0 when it is the child process, that’s how we know when to go in the if statement. You have to have the exit() statement when you’re done executing everything you want to in the child or else the child will run alongside the parent. 
 
