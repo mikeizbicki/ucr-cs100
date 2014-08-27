@@ -156,13 +156,13 @@ As we told you above, execvp finds the path for you. If you wanted to use execv 
 
 **returns:** When an error occurs -1 is returned, otherwise 0 is returned.
 
-   Pipe is another syscall that is harder to understand, please look up more information on the man page if you need it!
+Pipe is another syscall that is harder to understand, please look up more information on the man page if you need it!
    
-    Essentially, pipe creates an imaginary file that you can write and read to. The parameter is an int array with two elements, these are the file descriptors for the imaginary file. fd[0] is the read end of the pipe and fd[1] is the write end of the pipe. 
+Essentially, pipe creates an imaginary file that you can write and read to. The parameter is an int array with two elements, these are the file descriptors for the imaginary file. fd[0] is the read end of the pipe and fd[1] is the write end of the pipe. 
 
-   This function is extremely useful when implementing piping in your own bash shell. Piping is moving the stdout of the left side of the pipe into the stdin of whatever program is on the right side of the pipe. For example, you have an executable “names” which outputs a list of names in a random order you can pipe this into “sort” which will sort it alphabetically. This command would look like: “names | sort”.
+This function is extremely useful when implementing piping in your own bash shell. Piping is moving the stdout of the left side of the pipe into the stdin of whatever program is on the right side of the pipe. For example, you have an executable “names” which outputs a list of names in a random order you can pipe this into “sort” which will sort it alphabetically. This command would look like: “names | sort”.
    
-   Now that we’ve gone over the basics of what piping is we can talk about how to use the syscall pipe to create this. Because pipe creates an imaginary file that you can read and write from you can use this to do your own piping. You will take the stdout of the command on the left side of the pipe symbol ( | ) and write it to the pipe with dup. Then, later, you will read that data from the read end of the pipe.
+Now that we’ve gone over the basics of what piping is we can talk about how to use the syscall pipe to create this. Because pipe creates an imaginary file that you can read and write from you can use this to do your own piping. You will take the stdout of the command on the left side of the pipe symbol ( | ) and write it to the pipe with dup. Then, later, you will read that data from the read end of the pipe.
  
 Here’s an example using pipe:
 ```
