@@ -38,11 +38,11 @@ Here we’re setting pid, which is an int (which also works even though the decl
 
 ##perror:
 
-includes: `#include <stdio.h>, #include <errno.h>`
+**includes:** `#include <stdio.h>, #include <errno.h>`
 
-declaration: `void perror(const char *s);`
+**declaration:** `void perror(const char *s);`
 
-returns: No return value.
+**returns:** No return value.
 
 Perror is used when an error occurs in a syscall. The parameter of of perror (const char *s) is whatever c-string you wish to output when an error happens. Perror outputs your custom c-string and then it outputs information on the specific error that happened using information from errno. 
     Perror becomes very useful when you’re debugging your program. If something has gone wrong and you don’t know why, you should add perror statements after each syscall. If an error happened you’ll get your own custom message about it. Perrors are extremely crucial while coding, and adding them after each syscall is considered proper coding etiquette - in fact, many instructors and professors may dock points for not having them. 
@@ -66,13 +66,13 @@ This example adds perror to the example we started in fork. The if statement bas
 
 ##wait:
 
-includes: `#include <sys/types.h>`
+**includes:** `#include <sys/types.h>`
           `#include <sys/wait.h>`
 
-declaration: `pid_t wait(int *status);`
+**declaration:** `pid_t wait(int *status);`
         usually when using wait, it is used as such: `wait(0);`
 
-returns: When an error occurs -1 is returned otherwise it returns the pid of the child that was killed.
+**returns:** When an error occurs -1 is returned otherwise it returns the pid of the child that was killed.
 
 examples: here is an example of wait with fork.
 ```
@@ -99,9 +99,9 @@ Notes: Wait is commonly used along with the fork function (and is pretty much ne
 
 ##exec:
 
-includes: `#include <unistd.h>`
+**includes:** `#include <unistd.h>`
 
-declaration: (multiple declarations depending on which exec funtion is used)
+**declaration:** (multiple declarations depending on which exec funtion is used)
 
 Here is an example of the two most common ones:
 
@@ -109,7 +109,7 @@ Here is an example of the two most common ones:
 
 `int execvp(const char *file, char *const argv[]);`
 
-returns: exec only returns if there was an error, and in that particular case, it returns a -1.
+**returns:** exec only returns if there was an error, and in that particular case, it returns a -1.
 
 Exec can be used to perform commands in the bash shell, such as ls, cat, and echo, they usually take in some form of converted user input. The two most commonly used ones are execv and execvp. We encourage you to look up the other forms of exec. 
 Execv requires that you append the path for the command to it, while execvp will automatically retrieve the path for you. Unless you are specifically required to use execv (e.g. your instructor wants you to use the path variable to find the particular command the user input), PLEASE use execvp. It will save you so much time, and will give you many more hours of much needed sleep.
@@ -145,16 +145,16 @@ As we told you above, execvp finds the path for you. If you wanted to use execv 
 
 ##pipe:
 
-includes: `#include <unistd.h>`
+**includes:** `#include <unistd.h>`
           `#include <fcntl.h>`
 
-declaration: There are two different declarations for pipe:
+**declaration:** There are two different declarations for pipe:
 
            `  int pipe(int pipefd[2]);`
 
             ` int pipe2(int pipefd[2], int flags);`
 
-returns: When an error occurs -1 is returned, otherwise 0 is returned.
+**returns:** When an error occurs -1 is returned, otherwise 0 is returned.
 
    Pipe is another syscall that is harder to understand, please look up more information on the man page if you need it!
    
@@ -217,11 +217,11 @@ Here we see the full use of pipe to implement piping in a shell. When we call pi
 
 ##getcwd:
 
-includes: `#include <unistd.h>`
+**includes:** `#include <unistd.h>`
 
-declaraton: `char *getcwd(char *buf, size_t size);`
+**declaraton:** `char *getcwd(char *buf, size_t size);`
 
-returns: When successful, the function returns a pointer to a string containing the pathname of the current working directory. On error, it returns NULL.
+**returns:** When successful, the function returns a pointer to a string containing the pathname of the current working directory. On error, it returns NULL.
 
    As stated above, getcwd gets the c-string containing the current working directory. It inserts the c-string into buf to be used later. The parameter size is the length of the char* you pass in as the first parameters. For example, if you created char directory[250], you’d pass in (directory, 250).
 
@@ -237,10 +237,10 @@ if(!getcwd(buf,1024))
 Later on, you can output buf if you want.
 
 ##getpwuid:
-includes: `#include <pwd.h>`
+**includes:** `#include <pwd.h>`
           `#include <sys/types.h>`
-declaraton: `struct passwd *getpwuid(uid_t uid);`
-returns: If an error occurs NULL is returned, otherwise it returns a pointer to a passwd struct(seen below)
+**declaraton:** `struct passwd *getpwuid(uid_t uid);`
+**returns:** If an error occurs NULL is returned, otherwise it returns a pointer to a passwd struct(seen below)
  
 Notes: As you can probably see, getpwuid is a bit different, as it is a struct. It takes in the  user’s ID, which is in a numerical form. After that, it will return a pointer to a structure, which contains these fields:
 ```
@@ -268,12 +268,12 @@ if(!(pw = getpwuid(s.st_uid)))
 
 ##getgrgid:
 
-includes: `#include <sys/types.h>`
+**includes:** `#include <sys/types.h>`
           `#include <grp.h>`
 
-declaraton: `struct group *getgrgid(gid_t gid);`
+**declaraton:** `struct group *getgrgid(gid_t gid);`
 
-returns: If an error occurs NULL is returned, otherwise it returns a pointer to a group struct
+**returns:** If an error occurs NULL is returned, otherwise it returns a pointer to a group struct
  
 Much like getpwuid, getgrgid also returns a pointer to a structure, which contains these fields:
 ```
