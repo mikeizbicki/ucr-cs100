@@ -1,10 +1,11 @@
-95 / 100
+100 / 100
 
 +20 extra credit
--20  for not properly having the number of perror per syscall 
-	number of syscalls... 6
-	number of perror..... 2	
-	grade modifier....... -20
+-15  for not properly having the number of perror per syscall 
+	 number of syscalls... 5
+  	number of perror..... 2
+  	grade modifier....... -15
+
 -5 & not working properly
 	*ex. emacs main.cpp & 
 	will open up to files main.cpp and &
