@@ -1,9 +1,10 @@
-70 / 100
+85 / 100
 
--20 pts: 
-	number of syscalls... 8
-	number of perror..... 4
-	grade modifier....... -20
+-5 pts: 
+	number of syscalls... 5
+  	number of perror..... 4
+  	grade modifier....... -5
+
 
 +25 pts extra credit 
 -25 pts -R flag not working
