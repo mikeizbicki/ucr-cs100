@@ -1,9 +1,11 @@
-95 / 100
+100 / 100
 
--15  for not properly having the number of perror per syscall 
-	number of syscalls... 7
-	number of perror..... 4
-	grade modifier....... -15
+-10  for not properly having the number of perror per syscall 
+	 number of syscalls... 6
+  	number of perror..... 4
+  	grade modifier....... -10
+
+
 +20  extra credit 
 
 Testing:
