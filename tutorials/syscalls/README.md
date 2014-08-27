@@ -9,12 +9,9 @@ Syscalls might seem confusing to use but we’ll try our best to explain some of
 
 
 
-fork:
-
+**fork:**
 includes:  #include <unistd.h>
-
 declaration: pid_t fork(void);
-
 returns: fork returns the pid of the child process that it creates, if an error occurs -1 is returned.
 
     Fork creates a new process so you can have two things happening at once. To create this new process fork creates a copy of the process that was already running. This new process is called a child process. 
@@ -33,7 +30,7 @@ if(pid == 0)//when pid is 0 you are in the child process
 
 Here we’re setting pid, which is an int (which also works even though the declaration returns pid_t), to the pid ID of the child process when we’re in the parent, else we return 0 in the child. Everything that happens inside the if statement is everything the child process executes. This happens because fork returns 0 when it is the child process, that’s how we know when to go in the if statement. You have to have the exit() statement when you’re done executing everything you want to in the child or else the child will run alongside the parent. 
 
-perror:
+**perror:**
 includes: #include <stdio.h>, #include <errno.h>
 declaration: void perror(const char *s);
 returns: No return value.
@@ -58,7 +55,7 @@ else if(pid == 0)//when pid is 0 you are in the child process
 
 This example adds perror to the example we started in fork. The if statement basically says, if there’s an error in the syscall then output an error message and exit the program. As you can see, perror’s parameter is a c-string, in this case it’s, “There was an error with fork().” this message can be customized however you wish to be more descriptive, for example you can state at what line of the code the error is happening at, so you can go back and try to fix the error.
 
-wait:
+**wait:**
 includes: #include <sys/types.h>
        #include <sys/wait.h>
 declaration: pid_t wait(int *status);
@@ -87,7 +84,7 @@ else if(pid > 0) //parent function
 
 Notes: Wait is commonly used along with the fork function (and is pretty much necessary). Wait is used in the parent function, and tells the parent process to wait for the child process to finish executing before moving on. It also prevents two processes from running at once. 
 
-exec:
+**exec:**
 includes: #include <unistd.h>
 declaration: (multiple declarations depending on which exec funtion is used)
 Here is an example of the two most common ones:
@@ -125,7 +122,7 @@ else if(pid > 0) //parent function
 The parameters for execvp are: (const char *file, char *const argv[]). In this example file is argv[0] and argv[] is argv. Our argv is the user input of what command they want to execute each element of argv is a part of the command. For example, the user can input “ls -l -a” and argv[0] = ls, argv[1]=-l, argv[2]=-a. 
 As we told you above, execvp finds the path for you. If you wanted to use execv you would have to add the path to the front of the command, for example if you input “ls” the program would change it to “/usr/bin/ls” for the execv call.
 
-pipe:
+**pipe:**
 includes: #include <unistd.h>
         #include <fcntl.h>
 declaration: There are two different declarations for pipe:
@@ -188,7 +185,7 @@ if(-1 == dup2(savestdin,0))//restore stdin
 
 Here we see the full use of pipe to implement piping in a shell. When we call pipe we have our int fd[2] as the parameter, pipe populates this array with the file descriptors of the read and write end of the imaginary file that is created. Then we fork the process, and in the child we change the stdout of whatever you are running to the write end of the imaginary file. In our example of “names|sort” the output of our names executable will be the input of our file. Then we go to our parent function and set the stdin to the read end of the pipe. We do this because we want the thing we wrote to the imaginary file to be the input to the right side of the pipe. In our example “names|sort” we want the names output to be the input of the sort program. After this we have to immediately call another fork function to execute the right side of the pipe. For this we have to call a function that is similar to the exec example, we will leave this as a workable example for you.
 
-getcwd:
+**getcwd:**
 includes: #include <unistd.h>
 declaraton: char *getcwd(char *buf, size_t size);
 returns: When successful, the function returns a pointer to a string containing the pathname of the current working directory. On error, it returns NULL.
@@ -205,7 +202,7 @@ if(!getcwd(buf,1024))
 
 Later on, you can output buf if you want.
 
-getpwuid:
+**getpwuid:**
 includes: #include <pwd.h>
        #include <sys/types.h>
 declaraton: struct passwd *getpwuid(uid_t uid);
@@ -233,7 +230,7 @@ struct passwd *pw;
 if(!(pw = getpwuid(s.st_uid)))
    perror("there was an error in getpwuid. ");
 
-getgrgid:
+**getgrgid:**
 includes: #include <sys/types.h>
        #include <grp.h>
 declaraton: struct group *getgrgid(gid_t gid);
@@ -260,5 +257,5 @@ if(!(gp = getgrgid(s.st_gid)))
    perror("there was an error in getgrgid. ");
 
 
-Conclusion:
+**Conclusion:**
 Thanks for reading our short tutorial on a couple of important syscalls! These only scratch the surface of the many syscalls that exist, and we encourage you to explore as many of them as you can. We hope that our explanations, as well as our coding examples can greatly help your understanding of some initially confusing syscalls.
