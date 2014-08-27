@@ -103,11 +103,7 @@ Notes: Wait is commonly used along with the fork function (and is pretty much ne
 
 **declaration:** (multiple declarations depending on which exec funtion is used)
 
-Here is an example of the two most common ones:
-
-`int execv(const char *path, char *const argv[]);`
-
-`int execvp(const char *file, char *const argv[]);`
+Here is an example of the two most common ones: `int execv(const char *path, char *const argv[]);`  `int execvp(const char *file, char *const argv[]);`
 
 **returns:** exec only returns if there was an error, and in that particular case, it returns a -1.
 
