@@ -13,7 +13,7 @@ Syscalls might seem confusing to use but we’ll try our best to explain some of
 
 includes:  #include <unistd.h>
 
-declaration: `pid_t fork(void);
+declaration: `pid_t fork(void);`
 
 returns: fork returns the pid of the child process that it creates, if an error occurs -1 is returned.
 
