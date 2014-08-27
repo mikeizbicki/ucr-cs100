@@ -1,8 +1,9 @@
-0 / 100
--100 did not compile
+10 / 100
+
 
 -30 pts:
 	number of syscalls... 11
   	number of perror..... 5
   	grade modifier....... -30
-
+-20 pts cd not working
+-40 PATH not implemented
