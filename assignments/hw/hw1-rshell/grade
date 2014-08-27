@@ -1,4 +1,4 @@
-35 / 100
+40 / 100
 Did not follow specs. Did not create hw1 Tag. No Makefile.Etc Will need to resubmit. See https://github.com/mikeizbicki/ucr-cs100/issues/36 for more details.
 
 -25 Late submission
@@ -8,10 +8,11 @@ Did not follow specs. Did not create hw1 Tag. No Makefile.Etc Will need to resub
 
 -5 don't properly parse '&'
 
--20 pts 
-	number of syscalls... 6
-	number of perror..... 2
-	grade modifier....... -20
+-15 pts 
+	number of syscalls... 5
+ 	 number of perror..... 2
+  	grade modifier....... -15
+
 
 -5 pts exectuable submittted to repo
 
