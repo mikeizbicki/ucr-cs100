@@ -149,10 +149,8 @@ As we told you above, execvp finds the path for you. If you wanted to use execv 
           `#include <fcntl.h>`
 
 **declaration:** There are two different declarations for pipe:
-
-           `  int pipe(int pipefd[2]);`
-
-            ` int pipe2(int pipefd[2], int flags);`
+               `int pipe(int pipefd[2]);`
+               `int pipe2(int pipefd[2], int flags);`
 
 **returns:** When an error occurs -1 is returned, otherwise 0 is returned.
 
