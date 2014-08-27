@@ -11,11 +11,11 @@ Syscalls might seem confusing to use but we’ll try our best to explain some of
 
 ##fork:
 
-includes:  `#include <unistd.h>`
+**includes:**  `#include <unistd.h>`
 
-declaration: `pid_t fork(void);`
+**declaration:** `pid_t fork(void);`
 
-returns: fork returns the pid of the child process that it creates, if an error occurs -1 is returned.
+**returns:** fork returns the pid of the child process that it creates, if an error occurs -1 is returned.
 
 Fork creates a new process so you can have two things happening at once. To create this new process fork creates a copy of the process that was already running. This new process is called a child process. 
 
