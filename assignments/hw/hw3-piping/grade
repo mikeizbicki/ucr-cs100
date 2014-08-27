@@ -1,1 +1,8 @@
 / 100
+
+-5 pts:
+  number of syscalls... 4
+  number of perror..... 3
+  grade modifier....... -5
+
+
