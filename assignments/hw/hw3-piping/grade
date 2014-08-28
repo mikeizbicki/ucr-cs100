@@ -1,9 +1,9 @@
-10 / 100
+25 / 100
 
 -15 pts
 
 	number of syscalls... 13
   	number of perror..... 10
   	grade modifier....... -15
--25 >> does not work
+-10 >> does not work
 -50 | not working 
