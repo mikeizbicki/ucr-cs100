@@ -73,3 +73,9 @@ Welcome to our "Learning GitHub/VIM/Terminal Series!"
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/j9MueYcWJbg/0.jpg)](https://www.youtube.com/watch?v=j9MueYcWJbg)
+
+
+11. Learning The Terminal: Scripting
+---
+
+[![Alt text for your video](http://img.youtube.com/vi/XGfmOQMETbY/0.jpg)](https://www.youtube.com/watch?v=XGfmOQMETbY)
