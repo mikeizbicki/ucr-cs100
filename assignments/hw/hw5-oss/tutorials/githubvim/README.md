@@ -9,7 +9,7 @@ Well lucky for you, our new series on YouTube was made specifically for **you**!
 
 Our names are Rashid, Kyler, and Shawn, Junior Computer Science Majors at the *University of California, Riverside*-and we present to you our YouTube mini-series on **"How To Use GitHub & VIM!""**  
 
-We were three student, lost, confused, and not knowing how to survive life in CS100, but we won't let that happen to you! That's why we've created this mini-series to help guide you through this process and help you achieve the greatness you possess within you. I'm not saying that these video tutorials will give you a 100% in the class, but you can GUARANTEE, you we will cut down the number of problems you would have encountered if you weren't given this guide.
+We were three student, lost, confused, and not knowing how to survive life in CS100, but we won't let that happen to you! That's why we've created this mini-series to help guide you through this process and help you achieve the greatness you possess within you. I'm not saying that these video tutorials will give you a 100% in the class, but we can GUARANTEE you'll have a head start in the class.
 
 Welcome to our "Learning GitHub/VIM/Terminal Series!"
 ===
@@ -37,3 +37,9 @@ Welcome to our "Learning GitHub/VIM/Terminal Series!"
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/Qf9-iMzz8tU/0.jpg)](https://www.youtube.com/watch?v=Qf9-iMzz8tU)
+
+
+5. Learning GitHub: README.md & License Files
+---
+
+[![Alt text for your video](http://img.youtube.com/vi/HZaB8uVMXAg/0.jpg)](https://www.youtube.com/watch?v=HZaB8uVMXAg)
