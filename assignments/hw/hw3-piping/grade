@@ -1,8 +1,15 @@
-/ 100
+0 / 100
 
 -25 pts 
   number of syscalls... 6
   number of perror..... 1
   grade modifier....... -25
+
+-100 did not make/compile
+g++ -Wall -Werror -ansi -pedantic src/rshell.cpp -o ./bin/rshell
+g++ -Wall -Werror -ansi -pedantic src/ls.cpp -o ./bin/rshell
+src/ls.cpp: In function ¡Æint main(int, char**)¡Ç:
+src/ls.cpp:198: error: ¡Æpath¡Ç was not declared in this scope
+make: *** [ls] Error 1
 
 
