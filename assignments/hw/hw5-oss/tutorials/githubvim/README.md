@@ -43,3 +43,9 @@ Welcome to our "Learning GitHub/VIM/Terminal Series!"
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/HZaB8uVMXAg/0.jpg)](https://www.youtube.com/watch?v=HZaB8uVMXAg)
+
+
+6. Learning VIM: Getting Started
+---
+
+[![Alt text for your video](http://img.youtube.com/vi/jQkyU6bgMIs/0.jpg)](https://www.youtube.com/watch?v=jQkyU6bgMIs)
