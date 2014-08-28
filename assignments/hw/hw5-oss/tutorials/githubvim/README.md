@@ -55,7 +55,7 @@ Scroll below to view our "Learning GitHub/VIM/Terminal Series!"
 * Learn to delete the tag on your github repository within your terminal
 
 
-5. Learning GitHub: README.md & License Files
+5. Learning GitHub: `README.md` & `License` Files
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/HZaB8uVMXAg/0.jpg)](https://www.youtube.com/watch?v=HZaB8uVMXAg)
