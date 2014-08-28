@@ -106,7 +106,15 @@ Scroll below to view our "Learning GitHub/VIM/Terminal Series!"
 * Learn a few simple tricks to Pre-Pend to a line of text
 
 
-11. Learning The Terminal: Scripting
+11. Learning The Terminal: The `ls` command
+---
+
+[![Alt text for your video](http://img.youtube.com/vi/RMxvcc_QUUI/0.jpg)](https://www.youtube.com/watch?v=RMxvcc_QUUI)
+* Learn what does the ls command do
+* Learn what the ls command can do when combined with it's flags
+
+
+12. Learning The Terminal: Scripting
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/XGfmOQMETbY/0.jpg)](https://www.youtube.com/watch?v=XGfmOQMETbY)
@@ -116,7 +124,7 @@ Scroll below to view our "Learning GitHub/VIM/Terminal Series!"
 * Learn to view a script
 
 
-12. Helpful Hints: Spectacle App
+13. Helpful Hints: Spectacle App
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/-PWJe6vr0rk/0.jpg)](https://www.youtube.com/watch?v=-PWJe6vr0rk)
