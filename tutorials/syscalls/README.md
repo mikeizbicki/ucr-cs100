@@ -4,7 +4,7 @@ Here, we will present a list of functions that will be useful when programming y
 
 What’s really cool about syscalls is how you can check if an error occured. Each syscall has access to a universal variable ‘errno’ (include <errno.h> to use this variable) that it sets to indicate what error happened. The return value of each syscall tells you whether an error occurred, be sure to check what return value indicates an error occurred. 
 
-Syscalls might seem confusing to use but we’ll try our best to explain some of them in this list! If you want any more info be sure to google the man page.
+Syscalls might seem confusing to use but we’ll try our best to explain some of them in this list! If you want any more info we've included a link to the man page for each syscall.
 
 
 
