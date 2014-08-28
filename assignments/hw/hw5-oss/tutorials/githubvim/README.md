@@ -19,14 +19,14 @@ Contributor List(Last Name Hidden For Privacy Purposes)
 4. Shawn -------
 
 
-Scroll below to view our "Learning GitHub/VIM/Terminal Series!"
----
+#Scroll below to view our "Learning GitHub/VIM/Terminal Series!"
+
 **Click The Images Below To Be Taken To YouTube To Watch**
 
 **Click [HERE](https://www.youtube.com/watch?v=V5eSFwYpufs&list=PLQ6W7BIxh4zvhBTcir1Flhf-nTfSxbeHP) To Watch The Entire Playlist In Order**
 
 
-1. Learning GitHub: Getting Started
+Learning GitHub: Getting Started
 --------
 
 [![Alt text for your video](http://img.youtube.com/vi/Fv5Cy8i14ck/0.jpg)](https://www.youtube.com/watch?v=Fv5Cy8i14ck)
@@ -35,7 +35,7 @@ Scroll below to view our "Learning GitHub/VIM/Terminal Series!"
 * Learn to clone your repository to your local machine  
 
 
-2. Learning GitHub: Creating a file and Pushing/Pulling with GitHub
+Learning GitHub: Creating a file and Pushing/Pulling with GitHub
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/8vrVJT29K58/0.jpg)](https://www.youtube.com/watch?v=8vrVJT29K58)
