@@ -59,27 +59,27 @@ Scroll below to view our "Learning GitHub/VIM/Terminal Series!"
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/HZaB8uVMXAg/0.jpg)](https://www.youtube.com/watch?v=HZaB8uVMXAg)
-* Learn the reason why we have a README.md & License file
-* Learn what should be included within your README.md
-* Learn to format your README.md file
+* Learn the reason why we have a `README.md` & `License` file
+* Learn what should be included within your `README.md`
+* Learn to format your `README.md` file
 * Review the GNU License file
 
 
-6. Learning VIM: Getting Started
+6. Learning `VIM`: Getting Started
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/jQkyU6bgMIs/0.jpg)](https://www.youtube.com/watch?v=jQkyU6bgMIs)
-* Learn what VIM is
-* Learn to open the VIM editor
-* Learn to edit a file with the VIM editor
-* Learn the basic uses of VIM (more detailed within our whole series of VIM videos below)
+* Learn what `VIM` is
+* Learn to open the `VIM` editor
+* Learn to edit a file with the `VIM` editor
+* Learn the basic uses of `VIM` (more detailed within our whole series of `VIM` videos below)
 
 
-7. Learning VIM: Deletion
+7. Learning `VIM`: Deletion
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/qjJ3nIcExhE/0.jpg)](https://www.youtube.com/watch?v=qjJ3nIcExhE)
-* Learn the many ways to use deletion in VIM
+* Learn the many ways to use deletion in `VIM`
 * Learn secrets that'll enable you to effectively delete single to multiple items faster
 
 
@@ -87,11 +87,11 @@ Scroll below to view our "Learning GitHub/VIM/Terminal Series!"
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/-DN_xww8jOM/0.jpg)](https://www.youtube.com/watch?v=-DN_xww8jOM)
-* Learn the many ways to use v & shift-v to select text(s)
+* Learn the many ways to use `v` & `shift-v` to select text(s)
 * Learn the many ways to copy text
-* Learn the many ways to paste using p, P, and the dd buffer
+* Learn the many ways to paste using `p`, `P`, and the `dd` buffer
 
-9. Learning VIM: Indentation
+9. Learning `VIM`: Indentation
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/UAcSoRLRLug/0.jpg)](https://www.youtube.com/watch?v=UAcSoRLRLug)
@@ -110,15 +110,15 @@ Scroll below to view our "Learning GitHub/VIM/Terminal Series!"
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/RMxvcc_QUUI/0.jpg)](https://www.youtube.com/watch?v=RMxvcc_QUUI)
-* Learn what does the ls command do
-* Learn what the ls command can do when combined with it's flags
+* Learn what does the `ls` command do
+* Learn what the `ls` command can do when combined with it's flags
 
 
 12. Learning The Terminal: The `cd` and `mv` commands
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/xzN-sY5oyFk/0.jpg)](https://www.youtube.com/watch?v=xzN-sY5oyFk)
-* Learn what can the cd & mv command do
+* Learn what can the `cd` & `mv` command do
 * Learn many features they entail when combined with their appropiate flags
 
 
@@ -127,9 +127,9 @@ Scroll below to view our "Learning GitHub/VIM/Terminal Series!"
 
 [![Alt text for your video](http://img.youtube.com/vi/XGfmOQMETbY/0.jpg)](https://www.youtube.com/watch?v=XGfmOQMETbY)
 * Learn what can scripting be useful for
-* Learn how to start a script
-* Learn how to end a script
-* Learn to view a script
+* Learn how to start a `script`
+* Learn how to end a `script`
+* Learn to view a `script`
 
 
 14. Helpful Hints: Spectacle App
