@@ -27,7 +27,13 @@ Welcome to our "Learning GitHub/VIM/Terminal Series!"
 [![Alt text for your video](http://img.youtube.com/vi/8vrVJT29K58/0.jpg)](https://www.youtube.com/watch?v=8vrVJT29K58)
 
 
-2. Learning GitHub: Branches
+3. Learning GitHub: Branches
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/aNWihbLj75Q/0.jpg)](https://www.youtube.com/watch?v=aNWihbLj75Q)
+
+
+4. Learning GitHub: Tags
+---
+
+[![Alt text for your video](http://img.youtube.com/vi/Qf9-iMzz8tU/0.jpg)](https://www.youtube.com/watch?v=Qf9-iMzz8tU)
