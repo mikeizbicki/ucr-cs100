@@ -110,6 +110,10 @@ Scroll below to view our "Learning GitHub/VIM/Terminal Series!"
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/XGfmOQMETbY/0.jpg)](https://www.youtube.com/watch?v=XGfmOQMETbY)
+* Learn what can scripting be useful for
+* Learn how to start a script
+* Learn how to end a script
+* Learn to view a script
 
 
 12. Helpful Hints: Spectacle App
