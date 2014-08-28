@@ -318,6 +318,8 @@ if(!getcwd(buf,1024))
 **declaraton:** `struct passwd *getpwuid(uid_t uid);`
 
 **returns:** If an error occurs `NULL` is returned, otherwise it returns a pointer to a `passwd` `struct`(seen below)
+
+[man page](http://linux.die.net/man/3/getpwuid)
  
 Notes: As you can probably see, `getpwuid` is a bit different from the other syscalls previously mentioned. It takes in the  user’s ID, which is in a numerical form. After that, it will return a pointer to a structure, which contains these fields:
 ```
@@ -349,6 +351,8 @@ if(!(pw = getpwuid(s.st_uid)))
 **declaraton:** `struct group *getgrgid(gid_t gid);`
 
 **returns:** If an error occurs `NULL` is returned, otherwise it returns a pointer to a `group struct`
+
+[man page](http://linux.die.net/man/3/getgrgid)
  
 Much like `getpwuid`, `getgrgid` also returns a pointer to a structure, which contains these fields:
 ```
