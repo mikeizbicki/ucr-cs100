@@ -1,6 +1,6 @@
 Learn To Use GitHub, vim, The Terminal, & More!
 ===
-: Have you never used a **Terminal** in your life? :
+Have you never used a **Terminal** in your life?  
 Are you struggling with **GitHub**?  
 Do you have no idea how to even use a **vim**?!  
 Do you wonder what a **vim** even means?
