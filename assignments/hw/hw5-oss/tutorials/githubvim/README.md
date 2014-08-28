@@ -15,7 +15,7 @@ Scroll below to view our "Learning GitHub/VIM/Terminal Series!"
 ---
 **Click The Images Below To Be Taken To YouTube To Watch**
 
-**Click [HERE](https://www.youtube.com/watch?v=V5eSFwYpufs&index=1&list=PLQ6W7BIxh4zvhBTcir1Flhf-nTfSxbeHPA) To Watch The Entire Playlist In Order**
+**Click [HERE](https://www.youtube.com/watch?v=V5eSFwYpufs&list=PLQ6W7BIxh4zvhBTcir1Flhf-nTfSxbeHP) To Watch The Entire Playlist In Order**
 
 
 1. Learning GitHub: Getting Started
