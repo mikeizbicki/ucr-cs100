@@ -7,7 +7,7 @@ Do you wonder what a **VIM** even means?
 
 Well lucky for you, our new series on YouTube was made specifically for **you**!
 
-Our names are Rashid, Kyler, and Shawn, Junior Computer Science Majors at the *University of California, Riverside*-and we present to you our YouTube mini-series on **"How To Use GitHub & VIM!""**  
+Our names are Rashid, Kyler, and Shawn, Junior Computer Science Majors at the *University of California, Riverside*-and we present to you our YouTube mini-series on **"How To Use GitHub/VIM/Terminal!""**  
 
 We were three student, lost, confused, and not knowing how to survive life in CS100, but we won't let that happen to you! That's why we've created this mini-series to help guide you through this process and help you achieve the greatness you possess within you. I'm not saying that these video tutorials will give you a 100% in the class, but we can GUARANTEE you'll have a head start in the class.
 
