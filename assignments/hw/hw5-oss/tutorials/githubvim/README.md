@@ -51,19 +51,25 @@ Welcome to our "Learning GitHub/VIM/Terminal Series!"
 [![Alt text for your video](http://img.youtube.com/vi/jQkyU6bgMIs/0.jpg)](https://www.youtube.com/watch?v=jQkyU6bgMIs)
 
 
-6. Learning VIM: Deletion
+7. Learning VIM: Deletion
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/qjJ3nIcExhE/0.jpg)](https://www.youtube.com/watch?v=qjJ3nIcExhE)
 
 
-6. Learning VIM: Selection, Copy & Paste
+8. Learning VIM: Selection, Copy & Paste
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/-DN_xww8jOM/0.jpg)](https://www.youtube.com/watch?v=-DN_xww8jOM)
 
 
-6. Learning VIM: Indentation
+9. Learning VIM: Indentation
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/UAcSoRLRLug/0.jpg)](https://www.youtube.com/watch?v=UAcSoRLRLug)
+
+
+10. Learning VIM: Appending & Pre-pending
+---
+
+[![Alt text for your video](http://img.youtube.com/vi/j9MueYcWJbg/0.jpg)](https://www.youtube.com/watch?v=j9MueYcWJbg)
