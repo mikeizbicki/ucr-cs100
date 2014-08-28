@@ -49,3 +49,11 @@ Welcome to our "Learning GitHub/VIM/Terminal Series!"
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/jQkyU6bgMIs/0.jpg)](https://www.youtube.com/watch?v=jQkyU6bgMIs)
+
+
+6. Learning VIM: Selection, Copy & Paste
+---
+
+[![Alt text for your video](http://img.youtube.com/vi/-DN_xww8jOM/0.jpg)](https://www.youtube.com/watch?v=-DN_xww8jOM)
+
+
