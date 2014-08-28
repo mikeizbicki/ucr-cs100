@@ -24,6 +24,7 @@ Welcome to our "Learning GitHub/VIM/Terminal Series!"
 * Learn to create your first repository  
 * Learn to clone your repository to your local machine  
 
+
 2. Learning GitHub: Creating a file and Pushing/Pulling with GitHub
 ---
 
