@@ -1,15 +1,14 @@
 Learn To Use GitHub, vim, The Terminal, & More!
 ===
-Have you never used a **Terminal** in your life?  
+: Have you never used a **Terminal** in your life? :
 Are you struggling with **GitHub**?  
 Do you have no idea how to even use a **vim**?!  
 Do you wonder what a **vim** even means?
 
-Well lucky for you, our new series on YouTube was made specifically for **you**!
-
-Our names are Rashid, Kyler, and Shawn, Junior Computer Science Majors at the *University of California, Riverside*-and we present to you our YouTube mini-series on **"How To Use GitHub/vim/Terminal!""**  
-
 We were three student, lost, confused, and not knowing how to survive life in CS100, but we won't let that happen to you! That's why we've created this mini-series to help guide you through this process and help you achieve the greatness you possess within you. I'm not saying that these video tutorials will give you a 100% in the class, but we can GUARANTEE you'll have a head start in the class.
+
+Our names are Rashid, Kyler, and Shawn, Junior Computer Science Majors at the *University of California, Riverside*-and our mission was to present a series of videos designed to help you learn the basics of the Terminal, `vim`, GitHub, and more! Hopefully you find our tutorials helpful in any of your future coding practices.
+
 
 Contributor List(Last Name Hidden For Privacy Purposes)
 ---
