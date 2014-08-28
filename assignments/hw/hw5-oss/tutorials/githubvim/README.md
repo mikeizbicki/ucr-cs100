@@ -20,9 +20,9 @@ Welcome to our "Learning GitHub/VIM/Terminal Series!"
 
 [![Alt text for your video](http://img.youtube.com/vi/Fv5Cy8i14ck/0.jpg)](https://www.youtube.com/watch?v=Fv5Cy8i14ck)
 
-* Learn to create an account on github.com
-* Learn to create your first repository
-* Learn to clone your repository to your local machine
+* Learn to create an account on github.com  
+* Learn to create your first repository  
+* Learn to clone your repository to your local machine  
 
 2. Learning GitHub: Creating a file and Pushing/Pulling with GitHub
 ---
