@@ -57,3 +57,7 @@ Welcome to our "Learning GitHub/VIM/Terminal Series!"
 [![Alt text for your video](http://img.youtube.com/vi/-DN_xww8jOM/0.jpg)](https://www.youtube.com/watch?v=-DN_xww8jOM)
 
 
+6. Learning VIM: Indentation
+---
+
+[![Alt text for your video](http://img.youtube.com/vi/UAcSoRLRLug/0.jpg)](https://www.youtube.com/watch?v=UAcSoRLRLug)
