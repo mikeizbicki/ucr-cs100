@@ -95,12 +95,15 @@ Scroll below to view our "Learning GitHub/VIM/Terminal Series!"
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/UAcSoRLRLug/0.jpg)](https://www.youtube.com/watch?v=UAcSoRLRLug)
+* Learn a simple trick that'll make formating your code much simpler and clear
 
 
 10. Learning VIM: Appending & Pre-pending
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/j9MueYcWJbg/0.jpg)](https://www.youtube.com/watch?v=j9MueYcWJbg)
+* Learn a few simple tricks to Append to a line of text
+* Learn a few simple tricks to Pre-Pend to a line of text
 
 
 11. Learning The Terminal: Scripting
