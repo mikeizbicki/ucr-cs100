@@ -114,6 +114,14 @@ Scroll below to view our "Learning GitHub/VIM/Terminal Series!"
 * Learn what the ls command can do when combined with it's flags
 
 
+11. Learning The Terminal: The `cd` and `mv` commands
+---
+
+[![Alt text for your video](http://img.youtube.com/vi/xzN-sY5oyFk/0.jpg)](https://www.youtube.com/watch?v=xzN-sY5oyFk)
+* Learn what can the cd & mv command do
+* Learn many features they entail when combined with their appropiate flags
+
+
 12. Learning The Terminal: Scripting
 ---
 
