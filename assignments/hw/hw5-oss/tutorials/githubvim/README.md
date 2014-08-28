@@ -48,6 +48,11 @@ Welcome to our "Learning GitHub/VIM/Terminal Series!"
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/Qf9-iMzz8tU/0.jpg)](https://www.youtube.com/watch?v=Qf9-iMzz8tU)
+* Learn the meaning of a tag
+* Learn to create a tag in your local repository
+* Learn to send the tag on your local repository to your repository on github
+* Learn to delete a tag on your local repository
+* Learn to delete the tag on your github repository within your terminal
 
 
 5. Learning GitHub: README.md & License Files
