@@ -57,7 +57,7 @@ Of course, with a child function, there has to be a parent function. In this par
 [man page](http://linux.die.net/man/3/perror)
 
 The glorious error checker! `perror` is used when an error occurs in a syscall, and techincally isn't a syscall - rather its used WITH every single syscall. The parameter of of `perror` `(const char *s)` is whatever c-string you wish to output when an error happens (examples below). `perror` outputs your custom c-string and then outputs information on the specific error that happened using information from `errno`. 
-    `perror` becomes very useful when you’re debugging your program. If an error happenes you’ll be able to ouput your own custom message, which can make the error much easier to find. `perror`s are extremely crucial while coding, and adding them after each syscall is considered proper coding etiquette - in fact, many instructors and professors may dock points for not having them (I was a "victim" of this my first assignment). 
+    `perror` becomes very useful when you’re debugging your program. If an error happenes you’ll be able to ouput your own custom message, which can make the error much easier to find. `perror` is extremely crucial while coding, and adding them after each syscall is considered proper coding etiquette - in fact, many instructors and professors may dock points for not having them (I was a "victim" of this my first assignment). 
 
 Now, we’ll add `perror` to the last example:
 ```
@@ -235,7 +235,7 @@ Here we can see both `dup` and `dup2` being used.
 
 This function is essential when implementing piping in a bash shell. Piping is moving the stdout of the left side of the pipe into the stdin of whatever program is on the right side of the pipe. For example, you have an executable “`names`” which outputs a list of names in a random order you can pipe this into “sort” which will sort it alphabetically. This command would look like: “`names | sort`”. The end result would be the contents of the name executable output to the screen, except sorted. 
    
-Now that we’ve gone over the basics of what piping is we can talk about how to use the syscall `pipe` to create this. Because `pipe` creates an imaginary file that you can read and write from you can use this to implement piping in whatever program you desire to do so in. You will take the stdout of the command on the left side of the pipe symbol (` | `) and write it to the pipe with `dup`. Then, later, you will read that data from the read end of the pipe.
+Now that we’ve gone over the basics of what piping is we can talk about how to use the syscall `pipe` to create this. Because `pipe` creates an imaginary file that you can read and write from you can use this to implement piping in whatever program you desire to do so in. You will take the stdout of the command on the left side of the pipe symbol and write it to the pipe with `dup`. Then, later, you will read that data from the read end of the pipe.
  
 Here’s an example of `pipe` in action:
 ```
