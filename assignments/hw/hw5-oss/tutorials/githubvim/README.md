@@ -13,6 +13,7 @@ We were three student, lost, confused, and not knowing how to survive life in CS
 
 Scroll below to view our "Learning GitHub/VIM/Terminal Series!"
 ---
+***Click The Images Below To Be Taken To YouTube To Watch***
 
 
 1. Learning GitHub: Getting Started
