@@ -1,10 +1,8 @@
 Learn To Use GitHub & VIM!
 ===
-Have you never used a **Terminal** in your life?
-
-Are you struggling with **GitHub**?
-
-Do you have no idea how to even use a **VIM**?!
+Have you never used a **Terminal** in your life? 
+Are you struggling with **GitHub**? 
+Do you have no idea how to even use a **VIM**?! 
 
 Well lucky for you, our new series on YouTube was made specifically for **you**!
 
