@@ -18,5 +18,7 @@ Welcome to our "Learning GitHub/VIM/Terminal Series!"
 Learning GitHub: Getting Started
 ---
 <p align="center">
+
 [![Alt text for your video](http://img.youtube.com/vi/Fv5Cy8i14ck/0.jpg)](https://www.youtube.com/watch?v=Fv5Cy8i14ck)
+
 </p>
