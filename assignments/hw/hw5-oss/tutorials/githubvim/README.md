@@ -120,3 +120,5 @@ Scroll below to view our "Learning GitHub/VIM/Terminal Series!"
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/-PWJe6vr0rk/0.jpg)](https://www.youtube.com/watch?v=-PWJe6vr0rk)
+* Get introduced to the Spectacle App
+* Learn how Spectacle can enhance your coding experience
