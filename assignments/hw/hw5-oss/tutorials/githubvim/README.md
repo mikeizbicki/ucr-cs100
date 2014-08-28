@@ -1,4 +1,4 @@
-Learn To Use GitHub, VIM, & The Terminal!
+Learn To Use GitHub, VIM, The Terminal, & More!
 ===
 Have you never used a **Terminal** in your life?  
 Are you struggling with **GitHub**?  
