@@ -94,7 +94,7 @@ else if(pid > 0) //parent function
 }
 ```
 
-Notes: Wait is commonly used along with the fork function (and is pretty much necessary). Wait is used in the parent function, and tells the parent process to wait for the child process to finish executing before moving on. It also prevents two processes from running at once. 
+Notes: Wait is commonly used along with the fork function (and is pretty much necessary). Wait is used in the parent function, and tells the parent process to wait for the child process to finish executing before moving on. It also prevents two processes from running at once. However, if you want a process to run in the background in your shell you don't want to wait.
 
 ##exec:
 
@@ -199,7 +199,7 @@ else if(pid > 0) //parent function
    if( -1 == wait(0)) //wait for the child process to finish executing
       perror(“There was an error with wait().);
 
-   //here you have to do another fork with a child process to execute the right side of the pipe command, as in the above example (“names | sort”) you would execute the sort command, we will leave this as an example for you to do.
+   //here you have to do another fork to execute the right side of the pipe command, as in the above example (“names | sort”) you would execute the sort command, we will leave this as an example for you to do.
 
 }
 if(-1 == dup2(savestdin,0))//restore stdin
@@ -216,7 +216,7 @@ Here we see the full use of pipe to implement piping in a shell. When we call pi
 
 **returns:** When successful, the function returns a pointer to a string containing the pathname of the current working directory. On error, it returns NULL.
 
-   As stated above, getcwd gets the c-string containing the current working directory. It inserts the c-string into buf to be used later. The parameter size is the length of the char* you pass in as the first parameters. For example, if you created char directory[250], you’d pass in (directory, 250).
+As stated above, getcwd gets the c-string containing the current working directory. It inserts the c-string into buf to be used later. The parameter size is the length of the char* you pass in as the first parameters. For example, if you created char directory[250], you’d pass in (directory, 250).
 
 Notes: This function is useful when implementing bash commands such as cd, and you need to display the current working directory the user is in. 
 
@@ -227,7 +227,7 @@ if(!getcwd(buf,1024))
    perror(“problem with getcwd.”);
 ```
 
-Later on, you can output buf if you want.
+buf now contains the path to the current directory you're in, you can output it before your command line prompt to simulate the real bash shell. Because cd is not a built-in command in a bash shell you will have to implement it with getcwd instead of using exec.
 
 ##getpwuid:
 **includes:** `#include <pwd.h>`
