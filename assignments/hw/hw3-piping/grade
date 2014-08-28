@@ -1,6 +1,25 @@
 0 / 100
 
-Did not compile
+-100 Did not compile:
+lus: warnings being treated as errors
+src/rshell.cpp: In function ¡Æint main()¡Ç:
+src/rshell.cpp:24: warning: comparison between signed and unsigned integer expressions
+src/rshell.cpp:25: warning: comparison between signed and unsigned integer expressions
+src/rshell.cpp:49: warning: comparison between signed and unsigned integer expressions
+src/rshell.cpp:55: warning: comparison between signed and unsigned integer expressions
+src/rshell.cpp:71: warning: comparison between signed and unsigned integer expressions
+src/rshell.cpp:163: warning: comparison between signed and unsigned integer expressions
+src/rshell.cpp:246: warning: comparison between signed and unsigned integer expressions
+src/rshell.cpp:271: warning: comparison between signed and unsigned integer expressions
+src/rshell.cpp:299: warning: value computed is not used
+src/rshell.cpp:317: warning: comparison between signed and unsigned integer expressions
+src/rshell.cpp: In function ¡Ævoid runparse(std::vector<std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::allocator<std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >&)¡Ç:
+src/rshell.cpp:360: warning: comparison between signed and unsigned integer expressions
+src/rshell.cpp:375: warning: comparison between signed and unsigned integer expressions
+src/rshell.cpp:406: warning: comparison between signed and unsigned integer expressions
+src/rshell.cpp:426: warning: comparison between signed and unsigned integer expressions
+src/rshell.cpp:486: warning: comparison between signed and unsigned integer expressions
+make: *** [rshell] Error 1
 
 -5 pts
 
