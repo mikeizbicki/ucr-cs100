@@ -72,6 +72,7 @@ Contributor List(Last Name Hidden For Privacy Purposes)
 ##### Review the GNU License file
 
 
+
 ##Learning `vim`
 
 ###Getting Started
@@ -110,6 +111,7 @@ Contributor List(Last Name Hidden For Privacy Purposes)
 ##### Learn a few simple tricks to Pre-Pend to a line of text
 
 
+
 ##Learning The Terminal
 
 ###The `ls` command
@@ -133,6 +135,7 @@ Contributor List(Last Name Hidden For Privacy Purposes)
 ##### Learn how to start a `script`
 ##### Learn how to end a `script`
 ##### Learn to view a `script`
+
 
 
 ##Helpful Hints
