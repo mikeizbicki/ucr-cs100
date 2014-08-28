@@ -26,7 +26,7 @@ Contributor List(Last Name Hidden For Privacy Purposes)
 **Click [HERE](https://www.youtube.com/watch?v=V5eSFwYpufs&list=PLQ6W7BIxh4zvhBTcir1Flhf-nTfSxbeHP) To Watch The Entire Playlist In Order**
 
 
-Learning GitHub: Getting Started
+##Learning GitHub: Getting Started
 --------
 
 [![Alt text for your video](http://img.youtube.com/vi/Fv5Cy8i14ck/0.jpg)](https://www.youtube.com/watch?v=Fv5Cy8i14ck)
@@ -35,7 +35,7 @@ Learning GitHub: Getting Started
 * Learn to clone your repository to your local machine  
 
 
-Learning GitHub: Creating a file and Pushing/Pulling with GitHub
+##Learning GitHub: Creating a file and Pushing/Pulling with GitHub
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/8vrVJT29K58/0.jpg)](https://www.youtube.com/watch?v=8vrVJT29K58)
@@ -44,7 +44,7 @@ Learning GitHub: Creating a file and Pushing/Pulling with GitHub
 * Learn to pull from your github account
 
 
-3. Learning GitHub: Branches
+##Learning GitHub: Branches
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/aNWihbLj75Q/0.jpg)](https://www.youtube.com/watch?v=aNWihbLj75Q)
