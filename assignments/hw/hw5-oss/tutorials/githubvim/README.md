@@ -79,7 +79,7 @@ Scroll below to view our "Learning GitHub/VIM/Terminal Series!"
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/qjJ3nIcExhE/0.jpg)](https://www.youtube.com/watch?v=qjJ3nIcExhE)
-* Learn the many wys to use deletion in VIM
+* Learn the many ways to use deletion in VIM
 * Learn secrets that'll enable you to effectively delete single to multiple items faster
 
 
@@ -87,7 +87,9 @@ Scroll below to view our "Learning GitHub/VIM/Terminal Series!"
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/-DN_xww8jOM/0.jpg)](https://www.youtube.com/watch?v=-DN_xww8jOM)
-
+* Learn the many ways to use v & shift-v to select text(s)
+* Learn the many ways to copy text
+* Learn the many ways to paste using p, P, and the dd buffer
 
 9. Learning VIM: Indentation
 ---
