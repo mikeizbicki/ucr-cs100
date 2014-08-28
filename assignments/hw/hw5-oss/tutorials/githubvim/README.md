@@ -26,7 +26,6 @@ Contributor List(Last Name Hidden For Privacy Purposes)
 
 
 ##Learning GitHub
----
 
 ###Getting Started
 
@@ -65,7 +64,6 @@ Contributor List(Last Name Hidden For Privacy Purposes)
 
 
 ###`README.md` & `License` Files
----
 
 [![Alt text for your video](http://img.youtube.com/vi/HZaB8uVMXAg/0.jpg)](https://www.youtube.com/watch?v=HZaB8uVMXAg)
 #### Learn the reason why we have a `README.md` & `License` file
@@ -75,10 +73,8 @@ Contributor List(Last Name Hidden For Privacy Purposes)
 
 
 ##Learning `vim`
----
 
 ###Getting Started
----
 
 [![Alt text for your video](http://img.youtube.com/vi/jQkyU6bgMIs/0.jpg)](https://www.youtube.com/watch?v=jQkyU6bgMIs)
 #### Learn what `vim` is
@@ -88,7 +84,6 @@ Contributor List(Last Name Hidden For Privacy Purposes)
 
 
 ###Deletion
----
 
 [![Alt text for your video](http://img.youtube.com/vi/qjJ3nIcExhE/0.jpg)](https://www.youtube.com/watch?v=qjJ3nIcExhE)
 #### Learn the many ways to use deletion in `VIM`
@@ -96,7 +91,6 @@ Contributor List(Last Name Hidden For Privacy Purposes)
 
 
 ###Selection, Copy & Paste
----
 
 [![Alt text for your video](http://img.youtube.com/vi/-DN_xww8jOM/0.jpg)](https://www.youtube.com/watch?v=-DN_xww8jOM)
 #### Learn the many ways to use `v` & `shift-v` to select text(s)
@@ -104,7 +98,6 @@ Contributor List(Last Name Hidden For Privacy Purposes)
 #### Learn the many ways to paste using `p`, `P`, and the `dd` buffer
 
 ###Indentation
----
 
 [![Alt text for your video](http://img.youtube.com/vi/UAcSoRLRLug/0.jpg)](https://www.youtube.com/watch?v=UAcSoRLRLug)
 #### Learn a simple trick that'll make formating your code much simpler and clear
@@ -118,7 +111,6 @@ Contributor List(Last Name Hidden For Privacy Purposes)
 
 
 ##Learning The Terminal
----
 
 ####The `ls` command
 
@@ -144,7 +136,6 @@ Contributor List(Last Name Hidden For Privacy Purposes)
 
 
 ##Helpful Hints
----
 
 ####Spectacle App
 
