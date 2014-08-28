@@ -74,7 +74,7 @@ else if(pid == 0)//when pid is 0 you are in the child process
 }
 //if pid is not 0 then we’re in the parent
 ```
-This example adds `perror` to the example we started in `fork`. The if statement basically says if there’s an error in the syscall, then output an error message and exit the program. As you can see, `perror`’s parameter is a c-string, in this case it’s, `There was an error with fork().` This message can be customized however you desire. You can output info about the function its in, the line its on - the choice is yours! But beware, with great power comes great responsibility! Outputting error messages that are irrelevant to your function/program are unlikely to be very helpful.
+This example adds `perror` to the example we started in `fork`. The if statement basically says if there’s an error in the syscall, then output an error message and exit the program. As you can see, the parameter for `perror` is a c-string, in this case it’s, `There was an error with fork().` This message can be customized however you desire. You can output info about the function its in, the line its on - the choice is yours! But beware, with great power comes great responsibility! Outputting error messages that are irrelevant to your function/program are unlikely to be very helpful.
 
 ##wait:
 
@@ -121,11 +121,11 @@ else if(pid > 0) //parent function
 
 Here is an example of the two most common ones: `int execv(const char *path, char *const argv[]);`  `int execvp(const char *file, char *const argv[]);`
 
-**returns:** `exec` only returns if there was an error, and in that particular case, it returns a `-1`.
+**returns:** `exec` only returns if there was an error, and in that particular case, it returns a -1.
 
 [man page](http://linux.die.net/man/3/exec)
 
-`exec` can be used to perform commands in the bash shell, such as `ls`, `cat`, and `echo`, they usually take in some form of converted user input. The two most commonly used ones are `execv` and `execvp`, but we encourage you to look up the other forms of `exec`! 
+`exec` can be used to perform commands in the bash shell, such as `ls` `cat` and `echo`, they usually take in some form of converted user input. The two most commonly used ones are `execv` and `execvp`, but we encourage you to look up the other forms of `exec`! 
 
 Now you may be wondering what the difference between the two of them is. `execv` requires that you append the path for the command to it, while `execvp` will automatically retrieve the path for you. Unless you are specifically required to use `execv` (e.g. your instructor wants you to use the path variable to find the particular command the user input), PLEASE use `execvp`. It will save you so much time, and will give you many more hours of much needed sleep.
 
@@ -233,7 +233,7 @@ Here we can see both `dup` and `dup2` being used.
    
 `pipe` essentially creates an imaginary file that you can write to and read from. The parameter is an int array with two elements, which are the file descriptors for the imaginary file. In the example bewlow, `fd[0]` is the read end of the pipe and `fd[1]` is the write end of the pipe. Let me be clear, however, that pipe ignores the input and only uses the write end as output to whatever it is piping to. 
 
-This function is essential when implementing piping in a bash shell. Piping is moving the stdout of the left side of the pipe into the stdin of whatever program is on the right side of the pipe. For example, you have an executable “`names`” which outputs a list of names in a random order you can pipe this into `sort` which will sort it alphabetically. This command would look like: “`names | sort`”. The end result would be the contents of the name executable output to the screen, except sorted. 
+This function is essential when implementing piping in a bash shell. Piping is moving the stdout of the left side of the pipe into the stdin of whatever program is on the right side of the pipe. For example, you have an executable `names` which outputs a list of names in a random order you can pipe this into `sort` which will sort it alphabetically. This command would look like: `names | sort`. The end result would be the contents of the name executable output to the screen, except sorted. 
    
 Now that we’ve gone over the basics of what piping is we can talk about how to use the syscall `pipe` to create this. Because `pipe` creates an imaginary file that you can read and write from you can use this to implement piping in whatever program you desire to do so in. You will take the stdout of the command on the left side of the pipe symbol and write it to the pipe with `dup`. Then, later, you will read that data from the read end of the pipe.
  
