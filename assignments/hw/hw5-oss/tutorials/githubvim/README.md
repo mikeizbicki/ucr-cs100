@@ -59,6 +59,10 @@ Welcome to our "Learning GitHub/VIM/Terminal Series!"
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/HZaB8uVMXAg/0.jpg)](https://www.youtube.com/watch?v=HZaB8uVMXAg)
+* Learn the reason why we have a README.md & License file
+* Learn what should be included within your README.md
+* Learn to format your README.md file
+* Review the GNU License file
 
 
 6. Learning VIM: Getting Started
