@@ -79,6 +79,8 @@ Welcome to our "Learning GitHub/VIM/Terminal Series!"
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/qjJ3nIcExhE/0.jpg)](https://www.youtube.com/watch?v=qjJ3nIcExhE)
+* Learn the many wys to use deletion in VIM
+* Learn secrets that'll enable you to effectively delete single to multiple items faster
 
 
 8. Learning VIM: Selection, Copy & Paste
