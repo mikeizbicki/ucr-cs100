@@ -19,7 +19,6 @@ Welcome to our "Learning GitHub/VIM/Terminal Series!"
 --------
 
 [![Alt text for your video](http://img.youtube.com/vi/Fv5Cy8i14ck/0.jpg)](https://www.youtube.com/watch?v=Fv5Cy8i14ck)
-
 * Learn to create an account on github.com  
 * Learn to create your first repository  
 * Learn to clone your repository to your local machine  
@@ -29,6 +28,9 @@ Welcome to our "Learning GitHub/VIM/Terminal Series!"
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/8vrVJT29K58/0.jpg)](https://www.youtube.com/watch?v=8vrVJT29K58)
+* Learn to create any file within your repository
+* Learn to push into your github account
+* Learn to pull from your github account
 
 
 3. Learning GitHub: Branches
