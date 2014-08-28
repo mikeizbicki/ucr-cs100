@@ -27,7 +27,6 @@ Contributor List(Last Name Hidden For Privacy Purposes)
 
 
 ##Learning GitHub: Getting Started
---------
 
 [![Alt text for your video](http://img.youtube.com/vi/Fv5Cy8i14ck/0.jpg)](https://www.youtube.com/watch?v=Fv5Cy8i14ck)
 * Learn to create an account on github.com  
@@ -36,7 +35,6 @@ Contributor List(Last Name Hidden For Privacy Purposes)
 
 
 ##Learning GitHub: Creating a file and Pushing/Pulling with GitHub
----
 
 [![Alt text for your video](http://img.youtube.com/vi/8vrVJT29K58/0.jpg)](https://www.youtube.com/watch?v=8vrVJT29K58)
 * Learn to create any file within your repository
@@ -45,7 +43,6 @@ Contributor List(Last Name Hidden For Privacy Purposes)
 
 
 ##Learning GitHub: Branches
----
 
 [![Alt text for your video](http://img.youtube.com/vi/aNWihbLj75Q/0.jpg)](https://www.youtube.com/watch?v=aNWihbLj75Q)
 * Learn the meaning behind branching
