@@ -13,7 +13,7 @@ Syscalls might seem confusing to use but we’ll try our best to explain some of
 
 **declaration:** `pid_t fork(void);`
 
-**returns:** fork returns the pid of the child process that it creates, if an error occurs -1 is returned.
+**returns:** `fork` returns the pid of the child process that it creates, if an error occurs -1 is returned.
 
 [man page](http://linux.die.net/man/2/fork)
 
@@ -23,7 +23,7 @@ This is perhaps one of the most important syscall of them all (one syscall to ru
 
 If you’re creating your own bash shell you will HAVE to use `fork`. You'll use the child process of the `fork` to execute all of your commands. Inside of the child process is where you’ll functions such as `exec`, which require two processes (more on this later).
 
-`Fork` is without a doubt one of the more complicated syscalls and is harder to understand; therefore, we highly encourage you read up on it from multiple sources, and really gain a good understanding of it.
+`fork` is without a doubt one of the more complicated syscalls and is harder to understand; therefore, we highly encourage you read up on it from multiple sources, and really gain a good understanding of it.
 
 Here is an example of `fork`:
 ```
@@ -42,7 +42,7 @@ else if(pid > 0) //parent function
 
 ```
 
-Here we’re setting `pid`, which is an `int` (which also works even though the declaration returns `pid_t`), to the pid of the child process when we’re in the parent, else we return 0 in the child. Everything that happens inside the if statement is everything the child process executes. This happens because `fork` returns 0 when it is the child process, and that’s how we know when to go in the if statement. You have to have the `exit()` statement when you’re done executing everything you want to in the child. If the exit statement isn't present, the child will become a zombie process - that is, it will never never exit, and continue to run in the background, taking up memory and hampering the program's performance - and we don't want that do we? 
+Here we’re setting `pid`, which is an `int` (which also works even though the declaration returns `pid_t`), to the pid of the child process when we’re in the parent, else we return `0` in the child. Everything that happens inside the if statement is everything the child process executes. This happens because `fork` returns 0 when it is the child process, and that’s how we know when to go in the if statement. You have to have the `exit()` statement when you’re done executing everything you want to in the child. If the exit statement isn't present, the child will become a zombie process - that is, it will never never exit, and continue to run in the background, taking up memory and hampering the program's performance - and we don't want that do we? 
 
 Of course, with a child function, there has to be a parent function. In this particular function, the parent function simply waits for the child process to finish running (because of the wait call, which will be explained later), and executes after the child procses is finished.
 
@@ -84,7 +84,7 @@ This example adds `perror` to the example we started in `fork`. The if statement
 **declaration:** `pid_t wait(int *status);`
         usually when using `wait`, it is used as such: `wait(0);`
 
-**returns:** When an error occurs -1 is returned otherwise it returns the pid of the child that was killed.
+**returns:** When an error occurs `-1` is returned otherwise it returns the pid of the child that was killed.
 
 [man page](http://linux.die.net/man/2/wait)
 
@@ -121,7 +121,7 @@ else if(pid > 0) //parent function
 
 Here is an example of the two most common ones: `int execv(const char *path, char *const argv[]);`  `int execvp(const char *file, char *const argv[]);`
 
-**returns:** `exec` only returns if there was an error, and in that particular case, it returns a -1.
+**returns:** `exec` only returns if there was an error, and in that particular case, it returns a `-1`.
 
 [man page](http://linux.die.net/man/3/exec)
 
@@ -231,7 +231,7 @@ Here we can see both `dup` and `dup2` being used.
 
 `pipe` is another syscall that is harder to understand, so PLEASE utilize outside resources if need be!
    
-`pipe` essentially creates an imaginary file that you can write to and read from. The parameter is an int array with two elements, which are the file descriptors for the imaginary file. In the example bewlow, `fd[0]` is the read end of the pipe and `fd[1]` is the write end of the pipe. 
+`pipe` essentially creates an imaginary file that you can write to and read from. The parameter is an int array with two elements, which are the file descriptors for the imaginary file. In the example bewlow, `fd[0]` is the read end of the pipe and `fd[1]` is the write end of the pipe. Let me be clear, however, that pipe ignores the input and only uses the write end as output to whatever it is piping to. 
 
 This function is essential when implementing piping in a bash shell. Piping is moving the stdout of the left side of the pipe into the stdin of whatever program is on the right side of the pipe. For example, you have an executable “`names`” which outputs a list of names in a random order you can pipe this into “sort” which will sort it alphabetically. This command would look like: “`names | sort`”. The end result would be the contents of the name executable output to the screen, except sorted. 
    
@@ -286,7 +286,7 @@ if(-1 == dup2(savestdin,0))//restore stdin
    perror("There is an error with dup2. ");
 ```
 
-Here we see the full use of the `pipe` syscall. When we call `pipe` we have our `int fd[2]` as the parameter, `pipe` populates this array with the file descriptors of the read and write end of the imaginary file that is created. Then we `fork` the process, and in the child we change the stdout of whatever you are running to the write end of the imaginary file. In our example of “`names|sort`” the output of our names executable will be the input of our file. Then we go to our parent function and set the stdin to the read end of the pipe. We do this because we want the thing we wrote to the imaginary file to be the input to the right side of the pipe. In our example “`names|sort`” we want the names output to be the input of the sort program. After this we have to immediately call another `fork` function to execute the right side of the pipe. For this we have to call a function that is similar to the `exec` example, we will leave this as a workable example for you.
+Here we see the full use of the `pipe` syscall. When we call `pipe` we have our `int fd[2]` as the parameter, `pipe` populates this array with the file descriptors of the read and write end of the imaginary file that is created. Then we `fork` the process, and in the child we change the stdout of whatever you are running to the write end of the imaginary file. In our example of “`names|sort`” the output of our names executable will be the input of our file. Then we go to our parent function and set the stdin to the read end of the `pipe`. We do this because we want the thing we wrote to the imaginary file to be the input to the right side of the pipe. In our example “`names|sort`” we want the names output to be the input of the sort program. After this we have to immediately call another `fork` function to execute the right side of the pipe. For this we have to call a function that is similar to the `exec` example, we will leave this as a workable example for you.
 
 ##getcwd:
 
@@ -294,7 +294,7 @@ Here we see the full use of the `pipe` syscall. When we call `pipe` we have our 
 
 **declaraton:** `char *getcwd(char *buf, size_t size);`
 
-**returns:** When successful, the function returns a pointer to a string containing the pathname of the current working directory. On error, it returns `NULL`.
+**returns:** When successful, the function returns a pointer to a `string` containing the pathname of the current working directory. On error, it returns `NULL`.
 
 [man page](http://linux.die.net/man/3/getcwd)
 
