@@ -29,9 +29,9 @@ Contributor List(Last Name Hidden For Privacy Purposes)
 ##Learning GitHub: Getting Started
 
 [![Alt text for your video](http://img.youtube.com/vi/Fv5Cy8i14ck/0.jpg)](https://www.youtube.com/watch?v=Fv5Cy8i14ck)
-#### * Learn to create an account on github.com  
-#### * Learn to create your first repository  
-#### * Learn to clone your repository to your local machine  
+#### Learn to create an account on github.com  
+#### Learn to create your first repository  
+#### Learn to clone your repository to your local machine  
 
 
 ##Learning GitHub: Creating a file and Pushing/Pulling with GitHub
@@ -45,25 +45,24 @@ Contributor List(Last Name Hidden For Privacy Purposes)
 ##Learning GitHub: Branches
 
 [![Alt text for your video](http://img.youtube.com/vi/aNWihbLj75Q/0.jpg)](https://www.youtube.com/watch?v=aNWihbLj75Q)
-* Learn the meaning behind branching
-* Learn to create a branch
-* Learn to switch between branches
-* Learn to merge one branch with another
-* Learn the basic use of version control
+#### Learn the meaning behind branching
+#### Learn to create a branch
+#### Learn to switch between branches
+#### Learn to merge one branch with another
+#### Learn the basic use of version control
 
 
-4. Learning GitHub: Tags
----
+##Learning GitHub: Tags
 
 [![Alt text for your video](http://img.youtube.com/vi/Qf9-iMzz8tU/0.jpg)](https://www.youtube.com/watch?v=Qf9-iMzz8tU)
-* Learn the meaning of a tag
-* Learn to create a tag in your local repository
-* Learn to send the tag on your local repository to your repository on github
-* Learn to delete a tag on your local repository
-* Learn to delete the tag on your github repository within your terminal
+#### Learn the meaning of a tag
+#### Learn to create a tag in your local repository
+#### Learn to send the tag on your local repository to your repository on github
+#### Learn to delete a tag on your local repository
+#### Learn to delete the tag on your github repository within your terminal
 
 
-5. Learning GitHub: `README.md` & `License` Files
+##Learning GitHub: `README.md` & `License` Files
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/HZaB8uVMXAg/0.jpg)](https://www.youtube.com/watch?v=HZaB8uVMXAg)
@@ -73,7 +72,7 @@ Contributor List(Last Name Hidden For Privacy Purposes)
 * Review the GNU License file
 
 
-6. Learning `VIM`: Getting Started
+##Learning `VIM`: Getting Started
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/jQkyU6bgMIs/0.jpg)](https://www.youtube.com/watch?v=jQkyU6bgMIs)
@@ -83,7 +82,7 @@ Contributor List(Last Name Hidden For Privacy Purposes)
 * Learn the basic uses of `VIM` (more detailed within our whole series of `VIM` videos below)
 
 
-7. Learning `VIM`: Deletion
+##Learning `VIM`: Deletion
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/qjJ3nIcExhE/0.jpg)](https://www.youtube.com/watch?v=qjJ3nIcExhE)
@@ -91,7 +90,7 @@ Contributor List(Last Name Hidden For Privacy Purposes)
 * Learn secrets that'll enable you to effectively delete single to multiple items faster
 
 
-8. Learning VIM: Selection, Copy & Paste
+##Learning VIM: Selection, Copy & Paste
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/-DN_xww8jOM/0.jpg)](https://www.youtube.com/watch?v=-DN_xww8jOM)
@@ -99,14 +98,14 @@ Contributor List(Last Name Hidden For Privacy Purposes)
 * Learn the many ways to copy text
 * Learn the many ways to paste using `p`, `P`, and the `dd` buffer
 
-9. Learning `VIM`: Indentation
+##Learning `VIM`: Indentation
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/UAcSoRLRLug/0.jpg)](https://www.youtube.com/watch?v=UAcSoRLRLug)
 * Learn a simple trick that'll make formating your code much simpler and clear
 
 
-10. Learning VIM: Appending & Pre-pending
+##Learning VIM: Appending & Pre-pending
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/j9MueYcWJbg/0.jpg)](https://www.youtube.com/watch?v=j9MueYcWJbg)
@@ -114,7 +113,7 @@ Contributor List(Last Name Hidden For Privacy Purposes)
 * Learn a few simple tricks to Pre-Pend to a line of text
 
 
-11. Learning The Terminal: The `ls` command
+##Learning The Terminal: The `ls` command
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/RMxvcc_QUUI/0.jpg)](https://www.youtube.com/watch?v=RMxvcc_QUUI)
@@ -122,7 +121,7 @@ Contributor List(Last Name Hidden For Privacy Purposes)
 * Learn what the `ls` command can do when combined with it's flags
 
 
-12. Learning The Terminal: The `cd` and `mv` commands
+##Learning The Terminal: The `cd` and `mv` commands
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/xzN-sY5oyFk/0.jpg)](https://www.youtube.com/watch?v=xzN-sY5oyFk)
@@ -130,7 +129,7 @@ Contributor List(Last Name Hidden For Privacy Purposes)
 * Learn many features they entail when combined with their appropiate flags
 
 
-13. Learning The Terminal: Scripting
+##Learning The Terminal: Scripting
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/XGfmOQMETbY/0.jpg)](https://www.youtube.com/watch?v=XGfmOQMETbY)
@@ -140,7 +139,7 @@ Contributor List(Last Name Hidden For Privacy Purposes)
 * Learn to view a `script`
 
 
-14. Helpful Hints: Spectacle App
+##Helpful Hints: Spectacle App
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/-PWJe6vr0rk/0.jpg)](https://www.youtube.com/watch?v=-PWJe6vr0rk)
