@@ -11,8 +11,8 @@ Our names are Rashid, Kyler, and Shawn, Junior Computer Science Majors at the *U
 
 We were three student, lost, confused, and not knowing how to survive life in CS100, but we won't let that happen to you! That's why we've created this mini-series to help guide you through this process and help you achieve the greatness you possess within you. I'm not saying that these video tutorials will give you a 100% in the class, but we can GUARANTEE you'll have a head start in the class.
 
-Welcome to our "Learning GitHub/VIM/Terminal Series!"
-===
+Scroll below to view our "Learning GitHub/VIM/Terminal Series!"
+---
 
 
 1. Learning GitHub: Getting Started
