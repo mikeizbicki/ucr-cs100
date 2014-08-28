@@ -69,6 +69,10 @@ Welcome to our "Learning GitHub/VIM/Terminal Series!"
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/jQkyU6bgMIs/0.jpg)](https://www.youtube.com/watch?v=jQkyU6bgMIs)
+* Learn what VIM is
+* Learn to open the VIM editor
+* Learn to edit a file with the VIM editor
+* Learn the basic uses of VIM (more detailed within our whole series of VIM videos below)
 
 
 7. Learning VIM: Deletion
