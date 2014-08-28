@@ -16,6 +16,8 @@ Syscalls might seem confusing to use but we’ll try our best to explain some of
 
 **returns:** fork returns the pid of the child process that it creates, if an error occurs -1 is returned.
 
+** [man page](http://linux.die.net/man/2/fork)**
+
 Fork creates a new process so you can have two things happening at once. To create this new process fork creates a copy of the process that was already running. This new process is called a child process. 
 
 If you’re creating your own bash shell you will need to use fork. When you create your own bash shell you will use the child process of the fork to execute all of your commands. Inside of the child process is where you’ll use exec.
@@ -42,6 +44,8 @@ Here we’re setting pid, which is an int (which also works even though the decl
 **declaration:** `void perror(const char *s);`
 
 **returns:** No return value.
+
+** [man page](http://linux.die.net/man/3/perror)**
 
 Perror is used when an error occurs in a syscall. The parameter of of perror (const char *s) is whatever c-string you wish to output when an error happens. Perror outputs your custom c-string and then it outputs information on the specific error that happened using information from errno. 
     Perror becomes very useful when you’re debugging your program. If something has gone wrong and you don’t know why, you should add perror statements after each syscall. If an error happened you’ll get your own custom message about it. Perrors are extremely crucial while coding, and adding them after each syscall is considered proper coding etiquette - in fact, many instructors and professors may dock points for not having them. 
@@ -72,6 +76,8 @@ This example adds perror to the example we started in fork. The if statement bas
         usually when using wait, it is used as such: `wait(0);`
 
 **returns:** When an error occurs -1 is returned otherwise it returns the pid of the child that was killed.
+
+** [man page](http://linux.die.net/man/2/wait)**
 
 examples: here is an example of wait with fork.
 ```
@@ -105,6 +111,8 @@ Notes: Wait is commonly used along with the fork function (and is pretty much ne
 Here is an example of the two most common ones: `int execv(const char *path, char *const argv[]);`  `int execvp(const char *file, char *const argv[]);`
 
 **returns:** exec only returns if there was an error, and in that particular case, it returns a -1.
+
+** [man page](http://linux.die.net/man/3/exec)**
 
 Exec can be used to perform commands in the bash shell, such as ls, cat, and echo, they usually take in some form of converted user input. The two most commonly used ones are execv and execvp. We encourage you to look up the other forms of exec. 
 Execv requires that you append the path for the command to it, while execvp will automatically retrieve the path for you. Unless you are specifically required to use execv (e.g. your instructor wants you to use the path variable to find the particular command the user input), PLEASE use execvp. It will save you so much time, and will give you many more hours of much needed sleep.
@@ -148,6 +156,8 @@ As we told you above, execvp finds the path for you. If you wanted to use execv 
                `int pipe2(int pipefd[2], int flags);`
 
 **returns:** When an error occurs -1 is returned, otherwise 0 is returned.
+
+** [man page](http://linux.die.net/man/2/pipe)**
 
 Pipe is another syscall that is harder to understand, please look up more information on the man page if you need it!
    
@@ -215,6 +225,8 @@ Here we see the full use of pipe to implement piping in a shell. When we call pi
 **declaraton:** `char *getcwd(char *buf, size_t size);`
 
 **returns:** When successful, the function returns a pointer to a string containing the pathname of the current working directory. On error, it returns NULL.
+
+** [man page](http://linux.die.net/man/3/getcwd)**
 
 As stated above, getcwd gets the c-string containing the current working directory. It inserts the c-string into buf to be used later. The parameter size is the length of the char* you pass in as the first parameters. For example, if you created char directory[250], you’d pass in (directory, 250).
 
