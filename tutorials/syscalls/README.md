@@ -306,4 +306,4 @@ if(!(gp = getgrgid(s.st_gid)))
 
 ##Conclusion:
 
-Thanks for reading our short tutorial on a couple of important syscalls! These only scratch the surface of the many syscalls that exist, and we encourage you to explore as many of them as you can. We hope that our explanations, as well as our coding examples can greatly help your understanding of some initially confusing syscalls. Be sure to refer to the man pages of each syscall for the most up-to-date informatioin!
+Thanks for reading our short tutorial on a couple of the important syscalls! These only scratch the surface of the many syscalls that exist, and we encourage you to explore as many of them as you can. We hope that our explanations, as well as our coding examples, can greatly help your understanding of some initially confusing syscalls. Be sure to refer to the man pages of each syscall for the most up-to-date informatioin!
