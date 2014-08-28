@@ -18,7 +18,7 @@ Contributor List(Last Name Hidden For Privacy Purposes)
 4. Shawn -------
 
 
-#Scroll below to view our "Learning GitHub/vim/Terminal Series!"
+##Scroll below to view our "Learning GitHub/vim/Terminal Series!"
 
 **Click The Images Below To Be Taken To YouTube To Watch**
 
