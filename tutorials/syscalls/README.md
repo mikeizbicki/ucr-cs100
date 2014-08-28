@@ -284,7 +284,7 @@ Here we see the full use of the `pipe` syscall. When we call `pipe` we have our 
 
 **declaraton:** `char *getcwd(char *buf, size_t size);`
 
-**returns:** When successful, the function returns a pointer to a string containing the pathname of the current working directory. On error, it returns NULL.
+**returns:** When successful, the function returns a pointer to a string containing the pathname of the current working directory. On error, it returns `NULL`.
 
 [man page](http://linux.die.net/man/3/getcwd)
 
@@ -340,7 +340,7 @@ if(!(pw = getpwuid(s.st_uid)))
 
 **declaraton:** `struct group *getgrgid(gid_t gid);`
 
-**returns:** If an error occurs NULL is returned, otherwise it returns a pointer to a `group struct`
+**returns:** If an error occurs `NULL` is returned, otherwise it returns a pointer to a `group struct`
  
 Much like `getpwuid`, `getgrgid` also returns a pointer to a structure, which contains these fields:
 ```
