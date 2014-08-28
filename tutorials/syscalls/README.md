@@ -186,7 +186,7 @@ else if(pid == 0)//when pid is 0 you are in the child process
    //write to the pipe
    if(-1 == dup2(fd[1],1))//make stdout the write end of the pipe 
       perror("There was an error with dup2. ");
-   if(-1 == close(fd[0])//close the read end of the pipe
+   if(-1 == close(fd[0])//close the read end of the pipe because we're not doing anything with it right now
       perror("There was an error with close. ");
 
    if(-1 == execvp(argv[0], argv)) 
@@ -204,7 +204,7 @@ else if(pid > 0) //parent function
       perror("There is an error with dup. ")
    if(-1 == dup2(fd[0],0))//make stdin the read end of the pipe 
       perror("There was an error with dup2. ");
-    if(-1 == close(fd[1])//close the write end of the pipe
+    if(-1 == close(fd[1])//close the write end of the pipe because we're not doing anything with it right now
       perror("There was an error with close. ");
    if( -1 == wait(0)) //wait for the child process to finish executing
       perror(“There was an error with wait().);
