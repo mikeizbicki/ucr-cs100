@@ -14,5 +14,6 @@ We were three student, lost, confused, and not knowing how to survive life in CS
 Welcome to our "Learning GitHub/VIM/Terminal Series!"
 ---
 
-[![Alt text for your video](http://img.youtube.com/vi/https://www.youtube.com/watch?v=Fv5Cy8i14ck/0.jpg)](https://www.youtube.com/watch?v=Fv5Cy8i14ck)))]]
+
+[![Alt text for your video](http://img.youtube.com/vi/T-D1KVIuvjA/0.jpg)](https://www.youtube.com/watch?v=Fv5Cy8i14ck)))]]
 
