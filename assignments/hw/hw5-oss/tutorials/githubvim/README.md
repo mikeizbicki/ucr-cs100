@@ -37,6 +37,11 @@ Welcome to our "Learning GitHub/VIM/Terminal Series!"
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/aNWihbLj75Q/0.jpg)](https://www.youtube.com/watch?v=aNWihbLj75Q)
+* Learn the meaning behind branching
+* Learn to create a branch
+* Learn to switch between branches
+* Learn to merge one branch with another
+* Learn the basic use of version control
 
 
 4. Learning GitHub: Tags
