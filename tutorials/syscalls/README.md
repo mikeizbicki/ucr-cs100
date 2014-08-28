@@ -1,5 +1,4 @@
 #Syscalls and How to Use Them
-###By: Katherine Gallaher and Daniel Ting
 
 Here, we will present a list of functions that will be useful when programming your own shell.  These functions are called system calls, they differ from regular functions because a syscall requests a specific service from the operating system’s kernel. 
 
