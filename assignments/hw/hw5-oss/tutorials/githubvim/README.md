@@ -51,6 +51,12 @@ Welcome to our "Learning GitHub/VIM/Terminal Series!"
 [![Alt text for your video](http://img.youtube.com/vi/jQkyU6bgMIs/0.jpg)](https://www.youtube.com/watch?v=jQkyU6bgMIs)
 
 
+6. Learning VIM: Deletion
+---
+
+[![Alt text for your video](http://img.youtube.com/vi/qjJ3nIcExhE/0.jpg)](https://www.youtube.com/watch?v=qjJ3nIcExhE)
+
+
 6. Learning VIM: Selection, Copy & Paste
 ---
 
