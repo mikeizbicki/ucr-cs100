@@ -79,3 +79,9 @@ Welcome to our "Learning GitHub/VIM/Terminal Series!"
 ---
 
 [![Alt text for your video](http://img.youtube.com/vi/XGfmOQMETbY/0.jpg)](https://www.youtube.com/watch?v=XGfmOQMETbY)
+
+
+12. Helpful Hints: Spectacle App
+---
+
+[![Alt text for your video](http://img.youtube.com/vi/-PWJe6vr0rk/0.jpg)](https://www.youtube.com/watch?v=-PWJe6vr0rk)
