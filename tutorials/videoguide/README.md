@@ -41,6 +41,8 @@ You've learn about `branch` but now we'll show you another feature of vim you mi
 ####Forking & Pull Requests
 [![Alt text for your video](http://img.youtube.com/vi/tskyUTaJdVI/0.jpg)](https://www.youtube.com/watch?v=tskyUTaJdVI)
 
+For myself, I've always wondered how people contributed to online projects. With GitHub, you can get a copy of someone's repository and modifying it to your liking or even contribute to it if you've found/fixed a bug. For pull requests, you'd only use it if you've found a bug and would like to submit the code you've changes in your copy of the original repository, to the original owner's copy. Although, pull requests are done online at github.com.
+
 
 
 ####`README.md` & `LICENSE` Files
