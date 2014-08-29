@@ -46,7 +46,7 @@ permission I went and tried out my idea. The process of committing with
 Mike's credentials was straight forward. First I changed the grade in
 file and then added the file with `git add grade`. The commit was made
 with `git commit --author="Mike Izbicki <mike@izbicki.me>" -m "Change
-grade".
+grade"`.
 
 ## Additional Information
 TODO: Add links relating to documentation pertaining to this bug. Also
