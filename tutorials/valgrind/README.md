@@ -96,7 +96,7 @@ How to fix memory leaks
 Fix all leaks and rerun
 -----------------------
 
- * If we take our old program and add a delete right under it, our problem should be fixed!
+ * If we take our old program and add a delete right under the new statement, our problem should be fixed!
 
 
 ```
