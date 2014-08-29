@@ -1,19 +1,10 @@
 Learn To Use GitHub, The Terminal, vim, & More!
 ===
-#####Have you never used a **Terminal** in your life?  
-#####Are you struggling with **GitHub**?  
-#####Do you have no idea how to even use a **vim**?!  
-#####Do you wonder what a **vim** even means?
+Learning to use github, vim, and the terminal can be very confusing and hard to learn when you are so used to writing code and saving it your own way. Thankfully, we've created a simple video guide to help you reach your potential in most areas of the terminal, github, and vim. 
 
-  
-
-#####We were three student, lost, confused, and not knowing how to survive life in CS100, but we won't let that happen to you! That's why we've created this mini-series to help guide you through this process and help you achieve the greatness you possess within you. I'm not saying that these video tutorials will give you a 100% in the class, but we can GUARANTEE you'll have a head start in the class.
-
-#####Our names are Rashid, Kyler, and Shawn, Junior Computer Science Majors at the *University of California, Riverside*-and our mission was to present a series of videos designed to help you learn the basics of the Terminal, `vim`, GitHub, and more! Hopefully you find our tutorials helpful in any of your future coding practices.
+Our names are Rashid, Kyler, and Sean, Junior Computer Science Majors at the *University of California, Riverside*. We took our CS100 class not knowing how to use or even get started with the terminal, github and vim. Rest asure, we didn't want to let anyone else feel unconfident about these three things. That's why we've put together a series of video guides to get you started in the right direction towards learning the basics of the terminal, github, and vim.
 
 
-
-##Scroll below to view our "Learning GitHub/vim/Terminal Series!"
 
 #####Click The Images Below To Be Taken To YouTube To Watch
 
@@ -21,7 +12,8 @@ Learn To Use GitHub, The Terminal, vim, & More!
 
 #####Clock [HERE](https://github.com/svill014/test) To Read Our Paper On *Helpful Commands for vim* (excerpt inserted above related videos below)
 
-##Learning GitHub
+Learning GitHub
+---
 
 ###Getting Started
 [![Alt text for your video](http://img.youtube.com/vi/Fv5Cy8i14ck/0.jpg)](https://www.youtube.com/watch?v=Fv5Cy8i14ck)
