@@ -22,6 +22,8 @@ In this video, we will show you step by step how to create your first account on
 ####Creating a file and Pushing/Pulling with GitHub
 [![Alt text for your video](http://img.youtube.com/vi/8vrVJT29K58/0.jpg)](https://www.youtube.com/watch?v=8vrVJT29K58)
 
+So now that you've been able to clone you directory from GitHub to your local machine, you may be asking yourself "How do I even make files and put it my GitHub?" There are a few ways to create a file. One way enables you to create the file automatically via the `touch <filename>` command. The `touch <filename>` command will create the file for you even if you specify an extention in the filename (eg: main.ccp will make a file called name in a .cpp format). The second option you could do is via the `vim <filename>` command, which will open up an editor named of a file named after the filename you inputted BUT it will not save the file for you once you create it. You could save the file once the editor opens up or after you edit the file by pressing `:w` (in the respective order).
+
 
 
 ####Branches
