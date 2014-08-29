@@ -1,0 +1,3778 @@
+    1  ls data/
+    2  ./hlearn-allknn -r data/dataset-10000x20.csv 
+    3  ./hlearn-allknn -r data/dataset-10000x20.csv +RTS -N4
+    4  cat testboth.sh 
+    5  ./testboth.sh data/dataset-10000x20.csv 
+    6  ls
+    7  cd ..
+    8  ls
+    9  ls runtimes/
+   10  cd ..
+   11  ls
+   12  cd ..
+   13  ls
+   14  git mv src/examples .
+   15  ls
+   16  git mv examples/hlearn-allknn/ .
+   17  ls
+   18  ls src
+   19  ls src/test
+   20  ls
+   21  ls src
+   22  git mv src/test .
+   23  ls
+   24  ls src
+   25  ls
+   26  ls src
+   27  ls
+   28  cp hlearn-allknn/ hlearn-allknn.old
+   29  cp hlearn-allknn/ hlearn-allknn.old -r
+   30  ls
+   31  ls hlearn-allknn.old/
+   32  ls
+   33  ls hlearn-allknn
+   34  mv hlearn-allknn hlearn-allknn.oldest
+   35  ls
+   36  mv hlearn-allknn.old hlearn-allknn
+   37  ls
+   38  cd hlearn-allknn
+   39  ls
+   40  cabal build 
+   41  ls
+   42  rm hlearn-*
+   43  ls
+   44  rm distances_*
+   45  ls
+   46  rm out.dat*
+   47  ls
+   48  rm cat
+   49  rm core
+   50  rm ghc-out 
+   51  rm KNN.prof-1000x*
+   52  ls
+   53  cat q_zz_eigenvalues
+   54  rm q_zz_eigenvalues*
+   55  ls
+   56  rm neighbors_*
+   57  ls
+   58  rm -log-
+   59  rm \-log\-
+   60  rm ./\-log\-
+   61  ls
+   62  rm results*
+   63  rm results-*
+   64  ls
+   65  ls results/
+   66  rm -r results
+   67  ls
+   68  cat make.sh
+   69  ls
+   70  rm make.sh*
+   71  ls
+   72  rm regtest 
+   73  rm res 
+   74  cat alltests.sh 
+   75  ls
+   76  rm allknn.Rout 
+   77  rm alltests.sh 
+   78  ls
+   79  rm Rout2 
+   80  rm Rtest 
+   81  ls
+   82  rm Setup.hs 
+   83  ls
+   84  rm test.*
+   85  ls
+   86  rm Criterion 
+   87  ls
+   88  ls tmp
+   89  vim runtest.sh 
+   90  cat runtest.sh 
+   91  cat testboth.sh 
+   92  ls
+   93  cat tests.sh 
+   94  ls
+   95  ls data/
+   96  ls
+   97  ls src
+   98  cd ..
+   99  ls
+  100  cd hlearn-allknn
+  101  ls
+  102  ls src/
+  103  cd src/
+  104  ls
+  105  rm *.hi
+  106  ls
+  107  rm *.o
+  108  ls
+  109  cat Criterion.hs 
+  110  ls
+  111  rm core 
+  112  ls
+  113  cat data
+  114  rm data
+  115  rm distances_hlearn.csv 
+  116  ls
+  117  rm neighbors_hlearn.csv 
+  118  ls
+  119  cat mkprof.sh 
+  120  ls
+  121  rm mkprof.sh 
+  122  ls
+  123  rm Criterion
+  124  rm hlearn-allknn
+  125  rm hlearn-allknn-prof
+  126  ls
+  127  cat time2sec.hs 
+  128  ls
+  129  mkdir nothaskell
+  130  ls
+  131  cat allknn.Rout 
+  132  ls
+  133  mv allknn.R* nothaskell/
+  134  ls
+  135  rm hlearn-allknn-prof.*
+  136  ls
+  137  cat Criterion.hs 
+  138  ls
+  139  git rm Criterion.hs
+  140  git rm Criterion.hs -f
+  141  ls
+  142  cat KDIsoTest.hs 
+  143  ls
+  144  git rm KDIsoTest.hs
+  145  git rm KDIsoTest.hs -f
+  146  ls
+  147  cat rtest.csv 
+  148  ls
+  149  rm rtest.csv 
+  150  ls
+  151  mv time2sec.hs nothaskell/
+  152  ls
+  153  cd ..
+  154  ls
+  155  ls bin
+  156  ls
+  157  rm -r bin
+  158  ls
+  159  cd ..
+  160  ls
+  161  git status
+  162  ls
+  163  ls datasets/
+  164  ls
+  165  ls deprecated/
+  166  ls
+  167  ls dist
+  168  ls
+  169  vim HLearn.cabal 
+  170  ls
+  171  ls hlearn-allknn
+  172  ls
+  173  cd hlearn-allknn
+  174  ls
+  175  ls src
+  176  ls
+  177  cd ..
+  178  ls
+  179  ls hlearn-allknn.oldest/
+  180  cp hlearn-allknn.oldest/hlearn-allknn.cabal hlearn-allknn
+  181  rm hlearn-allknn/hlearn-allknn.cabal 
+  182  vim HLearn.cabal 
+  183  ls
+  184  cabal build 
+  185  cabal configure 
+  186  cabal build 
+  187  vim HLearn.cabal 
+  188  cabal build 
+  189  cabal configure 
+  190  cabal build 
+  191  vim HLearn.cabal 
+  192  cabal build 
+  193  vim HLearn.cabal 
+  194  cabal build 
+  195  ls
+  196  ./dist/build/hlearn-allknn/hlearn-allknn
+  197  ls
+  198  cd hlearn-allknn
+  199  ls
+  200  cat testboth.sh 
+  201  ls
+  202  ln -s ../dist/build/hlearn-allknn/hlearn-allknn hlearn-allknn
+  203  ls
+  204  ls -l
+  205  ./runtest.sh data/dataset-10000x20.csv 
+  206  ls
+  207  cat testboth.sh 
+  208  vim testboth.sh 
+  209  ls
+  210  cat ./-log-data_dataset-10000x20.csv 
+  211  ls
+  212  rm ./-log-data_dataset-10000x20.csv 
+  213  ls
+  214  vim testboth.sh 
+  215  ls
+  216  cat runtest.sh 
+  217  ls
+  218  ./testboth.sh 
+  219  ls
+  220  ./testboth.sh data/dataset-10000x20.csv 
+  221  ls
+  222  vim testboth.sh 
+  223  ls
+  224  rm distances_*
+  225  rm neighbors_*
+  226  ls
+  227  ./test
+  228  ./testboth.sh 
+  229  ./testboth.sh data/dataset-10000x10.csv 
+  230  ./testboth.sh data/dataset-10000x20.csv 
+  231  ls
+  232  ./hlearn-allknn --help
+  233  vim testboth.sh 
+  234  ./testboth.sh data/dataset-10000x20.csv 
+  235  vim testboth.sh 
+  236  ./testboth.sh data/dataset-10000x20.csv 
+  237  ls
+  238  cd ..
+  239  ls
+  240  cabal build HLearn
+  241  ls
+  242  ls hlearn-allknn
+  243  git status
+  244  git add HLearn.cabal
+  245  git rm hlearn-allknn/Setup.hs
+  246  git rm hlearn-allknn/bin/KNN.hs
+  247  git rm hlearn-allknn/hlearn-allknn.cabal
+  248  git add hlearn-allknn
+  249  ls
+  250  git status
+  251  git rm hlearn-allknn/src/time2sec.hs
+  252  ls
+  253  git add src/
+  254  ls
+  255  git status
+  256  ls
+  257  git add hlearn-allknn/*.sh
+  258  vim .gitignore 
+  259  git add hlearn-allknn/*.sh
+  260  ls
+  261  git status
+  262  git add .gitignore
+  263  ls
+  264  git status
+  265  git commit -m "restructured things"
+  266  git push origin
+  267  ls
+  268  vim HLearn.cabal 
+  269  cd hlearn-allknn
+  270  ls
+  271  cd src/
+  272  ls
+  273  vim hlearn-allknn.hs 
+  274  ls
+  275  git mv Utils.hs Timing.hs
+  276  ls
+  277  vim hlearn-allknn.hs 
+  278  ls
+  279  cd ../..
+  280  cd src
+  281  cd ..
+  282  vim src/HLearn/DataStructures/CoverTree.hs
+  283  cd proj/ucr-cs100/scripts/
+  284  ls
+  285  ./findgrade.sh 
+  286  ls
+  287  cd ..
+  288  ls
+  289  scripts/findgrade.sh 
+  290  $0
+  291  cd
+  292  ls -a
+  293  mv .gnome2 .gnome2.old
+  294  exit
+  295  cd
+  296  ls -a
+  297  ls -a .local/
+  298  cat mizbi001@well.cs.ucr.edu/
+  299  cat mizbi001@well.cs.ucr.edu/doc/haskellmode.txt 
+  300  ls -a
+  301  cat .xsession-errors
+  302  tail -n 100 .xsession-errors
+  303  ls -l .xsession-errors
+  304  ls -a
+  305  cat .xsession
+  306  cat .xinitrc/.xsession 
+  307  ls
+  308  ls -a
+  309  ls .xmonad/xmonad.errors 
+  310  cat .xmonad/xmonad.errors 
+  311  ls -la .xmonad/
+  312  ls
+  313  ls -a
+  314  startx
+  315  mv .xmonad/ .xmonad.old
+  316  exit
+  317  firefox
+  318  firefox :0
+  319  firefox
+  320  firefox --help
+  321  firefox --display=0
+  322  firefox --display=1
+  323  firefox --display=:0
+  324  ifconfig
+  325  /sbin/ifconfig
+  326  exit
+  327  startx
+  328  ls
+  329  ls -a
+  330  mx .xsession .xsession.old
+  331  mv .xsession .xsession.old
+  332  mv .xinitrc/ .xinitrc.old
+  333  startx
+  334  mv .xsession.old .xsession
+  335  startx
+  336  ls
+  337  cat .xsession
+  338  mv .xsession .xsession.old
+  339  shutdown -r now
+  340  su
+  341  gnome-session
+  342  ck-launch-session dbus-launch gnome-session
+  343  mv .xsession .xsession.old
+  344  ls -a
+  345  ls .xinitrc.old/.xsession 
+  346  vim .xinitrc 
+  347  dmesg
+  348  tail /var/log/Xorg.0.log
+  349  startx
+  350  ls
+  351  vim .xinitrc
+  352  startx
+  353  cat .xinitrc
+  354  cat .xinitrc.old/.xsession 
+  355  vim .xinitrc
+  356  startx
+  357  startx
+  358  vim .xinitrc
+  359  startx
+  360  vim .xinitrc
+  361  startx
+  362  vim .xinitrc
+  363  startx
+  364  vim .xinitrc
+  365  startx
+  366  vim .xinitrc
+  367  startx
+  368  su
+  369  ping google.com
+  370  /sbin/ifconfig
+  371  vim /home/user/.local/
+  372  ls
+  373  mv .local/ .local.old
+  374  su
+  375  startx
+  376  vim .xsession
+  377  vim .xinitrc
+  378  startx
+  379  vim .xinitrc
+  380  startx
+  381  mv .xmonad.old/ .xmonad
+  382  startx
+  383  cabal install xmonad
+  384  cabal install xmonad-contrib
+  385  startx
+  386  cabal install xmonad-contrib --force-reinstalls 
+  387  vim .xmonad/xmonad.hs
+  388  cabal install xmonad
+  389  su
+  390  cd .xmonad/
+  391  ls -l
+  392  ./xmonad-x86_64-linux 
+  393  ls ~/.cabal/bin/
+  394  xmonad --help
+  395  xmonad --replace
+  396  /sbin/ifconfig
+  397  /sbin/ifconfig
+  398  ping google.com
+  399  cabal install xmonad
+  400  cabal install xmonad-contrib
+  401  links
+  402  apt-get install links
+  403  su
+  404  links google.com
+  405  links reddit.com/r/haskell
+  406  ls
+  407  ls img
+  408  ls img/me/
+  409  ls img/me/pumpkin/
+  410  ls proj
+  411  ls proj/BigO/
+  412  ls proj/bindings-sort/
+  413  ls proj/jalla/
+  414  cat proj/jalla/README 
+  415  less proj/jalla/README 
+  416  ls
+  417  ls blog
+  418  cat blog/verses.txt
+  419  ls
+  420  cat test.hs 
+  421  rm test.hs 
+  422  ls
+  423  ls mizbi001@well.cs.ucr.edu/
+  424  ls mizbi001@well.cs.ucr.edu/compiler/
+  425  ls mizbi001@well.cs.ucr.edu/compiler/ghc.vim 
+  426  ls mizbi001@well.cs.ucr.edu/compiler/ghc.vim  -l
+  427  vim mizbi001@well.cs.ucr.edu/compiler/ghc.vim
+  428  firefox
+  429  exit
+  430  firefox
+  431  firefox &
+  432  top
+  433  startx
+  434  vim .xinitrc
+  435  startx
+  436  vim .xinitrc
+  437  startx
+  438  startx
+  439  zcat
+  440  dmesg
+  441  mount /dev/sdb1 /mnt/hd
+  442  su
+  443  firefox
+  444  startx
+  445  firefox
+  446  exit
+  447  firefox
+  448  cat /var/log/Xorg.0.log
+  449  cat /var/log/gdm3/
+  450  su
+  451  startx
+  452  vim .xinitrc
+  453  startx
+  454  vim .xinitrc
+  455  startx
+  456  less /var/log/Xorg.1.log
+  457  less /var/log/Xorg.0.log
+  458  ls -a
+  459  cat .xsession.old 
+  460  mv .xinitrc .xinitrc.backup
+  461  mv .xsession.old .xsession
+  462  cat .xinitrc.old/.xsession 
+  463  mv .xinitrc.old/ .xinitrc
+  464  startx
+  465  ls -a
+  466  mv .xmonad.old/ .xmonad
+  467  ls
+  468  ls -a
+  469  cat .xinitrc
+  470  cat .xinitrc/.xsession 
+  471  cat .xsession
+  472  cat .xinitrc/.xsession 
+  473  trayer
+  474  mv .xinitrc .xinitrc.old
+  475  start
+  476  startx
+  477  vim .xmonad/xmonad.hs
+  478  startx
+  479  vim .xmonad/xmonad.hs
+  480  vim .xsession
+  481  startx
+  482  vim .xsession
+  483  startx
+  484  vim .xsession
+  485  startx
+  486  vim .xsession
+  487  startx
+  488  firefox
+  489  trayer
+  490  vim .xmonad/xmonad.hs
+  491  exit
+  492  startx
+  493  vim .xsession
+  494  startx
+  495  vim .xsession
+  496  startx
+  497  vim .xsession
+  498  startx
+  499  vim .xsession
+  500  startx
+  501  su
+  502  ghci
+  503  ssh mizbi001@well.cs.ucr.edu
+  504  ssh mizib001@well.cs.ucr.edu
+  505  ssh mizibi001@well.cs.ucr.edu
+  506  ssh mizbi001@well.cs.ucr.edu
+  507  cd proj/HLearn/
+  508  ls
+  509  git status
+  510  git add .
+  511  git commit -m "simplified validation code"
+  512  git push origin
+  513  ssh well.cs.ucr.edu
+  514  ssh mizbi001@well.cs.ucr.edu
+  515  ssh mizbi001
+  516  ssh mizbi001@well.cs.ucr.edu
+  517  ssh well.cs.ucr.edu
+  518  ssh mizbi001@well.cs.ucr.edu
+  519  ssh well.cs.ucr.edu
+  520  ssh mizbi001@well.cs.ucr.edu
+  521  cd proj/HLearn/
+  522  ls
+  523  cat tmp/mixture/wdbc\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ --monoidsplits\=2 
+  524  cat tmp/mixture/wpbc\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ --monoidsplits\=2 
+  525  cat tmp/mixture/wpbc\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ --monoidsplits\=10
+  526  cat tmp/mixture/wdbc\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ --monoidsplits\=2
+  527  cat tmp/mixture/wpbc\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ --monoidsplits\=10
+  528  cat tmp/mixture/wdbc\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ --monoidsplits\=2
+  529  cat tmp/mixture/wpbc\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ --monoidsplits\=10
+  530  cat tmp/mixture/wdbc\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ --monoidsplits\=2
+  531  cat tmp/mixture/wpbc\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ --monoidsplits\=10
+  532  cabal build 
+  533  cat tmp/mixture/wpbc\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ --monoidsplits\=10
+  534  cabal build 
+  535  cat tmp/mixture/wpbc\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ --monoidsplits\=10
+  536  git status
+  537  cat scripts/loadfile.sh 
+  538  rm scripts/loadfile.sh 
+  539  ls
+  540  git status
+  541  git add .
+  542  git status
+  543  git commit -m "added tests for mixtures of monoids"
+  544  git push origin
+  545  cat tmp/mixture/wpbc\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ --monoidsplits\=2
+  546  rm -r tmp
+  547  cat tmp/mixture/wpbc\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ --monoidsplits\=2\ --monoidtype\=MixtureAveTaylor 
+  548  cat tmp/mixture/wpbc\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ --monoidsplits\=2\ --monoidtype\=MixtureAveUpper 
+  549  cat tmp/mixture/wpbc\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ --monoidsplits\=2\ --monoidtype\=MixtureAveTaylor 
+  550  cat tmp/mixture/wpbc\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ --monoidsplits\=2\ --monoidtype\=MixtureUpperTaylor 
+  551  git status
+  552  git add scripts/linear.sh
+  553  git commit -m "bug fix"
+  554  git push origin
+  555  git add datasets/uci/
+  556  git add datasets/uci/*
+  557  git add datasets/uci/* -f
+  558  git commit -m "converted datasets into csv"
+  559  git push origin
+  560  git status
+  561  git add scripts/linear.sh
+  562  ls
+  563  cd tmp
+  564  ls
+  565  cd mix
+  566  cd mixture/
+  567  ls
+  568  vim /home/user/docs/phd/research/hlearn/homalgs/img/gnuplot-cv/cv.gnu
+  569  ls
+  570  vim haberman\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ --monoidsplits\=10\ --monoidtype\=MixtureAveTaylor 
+  571  ls
+  572  cd ..
+  573  ls
+  574  gnuplot mixture.gnu 
+  575  ls
+  576  okular mixture.ps
+  577  bg
+  578  gnuplot mixture.gnu 
+  579  pdflatex mixture.tex 
+  580  ls
+  581  cd proj/HLearn/
+  582  ls
+  583  mkdir hlearn-linear
+  584  ls
+  585  cp src/dev-test/logreg.hs hlearn-linear/
+  586  cd hlearn-linear/
+  587  ls
+  588  mkdir src
+  589  ls
+  590  mv logreg.hs src/hlearn-linear.hs
+  591  ls
+  592  ls ../hlearn-linear/
+  593  ls ../hlearn-allknn/
+  594  ls dist
+  595  ls
+  596  ls src
+  597  cd ..
+  598  cabal build 
+  599  cd hlearn-linear/
+  600  ls
+  601  ln -s ../dist/build/hlearn-linear/hlearn-linear ./hlearn-linear
+  602  ls
+  603  ./hlearn-linear 
+  604  cd ..
+  605  ls hlearn-allknn/src/
+  606  ls
+  607  cd hlearn-allknn/
+  608  ls
+  609  cd ..
+  610  ls
+  611  ls src
+  612  cat src/logreg-funny.hs 
+  613  ls
+  614  git rm src/logreg-funny.hs
+  615  ls
+  616  ls src
+  617  cat src/texput.log 
+  618  git rm src/texput.log
+  619  rm src/texput.log
+  620  ls
+  621  ls hlearn-allknn/
+  622  cd hlearn-allknn/
+  623  ls
+  624  rm distances_*
+  625  rm hlearn-allknn.prof 
+  626  rm neighbors_*
+  627  ls
+  628  git rm -r dist
+  629  rm -r dist
+  630  ls
+  631  cd ..
+  632  ls
+  633  mkdir scripts
+  634  git mv hlearn-allknn/*.sh scripts/
+  635  git rm -r hlearn-allknn/tmp/
+  636  ls hlearn-allknn/tmp/
+  637  mv hlearn-allknn/tmp/ scripts/
+  638  ls hlearn-allknn/
+  639  git mv hlearn-allknn/data/ datasets/random
+  640  ls
+  641  ls sr
+  642  ls src/
+  643  cd src/
+  644  rm test.png 
+  645  rm test.ps 
+  646  rm test.svg 
+  647  ls
+  648  mkdir exec
+  649  ls
+  650  cd ..
+  651  ls
+  652  git mv hlearn-allknn/src/* src/exec/
+  653  git mv hlearn-linear/src/* src/exec/
+  654  mv hlearn-linear/src/* src/exec/
+  655  ls
+  656  git rm -r hlearn-allknn/
+  657  rm -r hlearn-allknn/
+  658  rm -r hlearn-linear
+  659  ls
+  660  git rm -r deprecated/
+  661  ls
+  662  ls deprecated/
+  663  ls deprecated/HLearn-approximation/
+  664  ls
+  665  rm -r deprecated/
+  666  ls
+  667  cabal build 
+  668  cabal configure 
+  669  cabal build 
+  670  git status
+  671  git add .
+  672  git status
+  673  git commit -m "refactored source tree to work on logreg"
+  674  git push origin
+  675  ls
+  676  ls scripts/
+  677  cabal build 
+  678  cabal build hlearn-linear
+  679  ls
+  680  ln -s dist/build/hlearn-allknn/hlearn-allknn ./hlearn-allknn
+  681  ln -s dist/build/hlearn-allknn/hlearn-linear ./hlearn-linear
+  682  ls
+  683  ln -s dist/build/hlearn-liner/hlearn-linear ./hlearn-linear
+  684  ln -s dist/build/hlearn-linear/hlearn-linear ./hlearn-linear
+  685  ls
+  686  rm hlearn-linear 
+  687  ln -s dist/build/hlearn-linear/hlearn-linear ./hlearn-linear
+  688  ls
+  689  ./hlearn-linear 
+  690  ./hlearn-linear datasets/uci/wine.csv 
+  691  ./hlearn-linear -d datasets/uci/wine.csv 
+  692  cabal build 
+  693  ls
+  694  ./hlearn-linear datasets/uci/wine.csv --help
+  695  ./hlearn-linear -d datasets/uci/wine.csv --help
+  696  ./hlearn-linear -d datasets/uci/wine.csv
+  697  perf stat ./hlearn-linear -d datasets/uci/wine.csv
+  698  perf stat --detailed ./hlearn-linear -d datasets/uci/wine.csv
+  699  cabal build hlearn-linear
+  700  ls
+  701  ./hlearn-linear ./hlearn-linear --testtype=mono
+  702  ./hlearn-linear ./hlearn-linear --testtype mono
+  703  ./hlearn-linear ./hlearn-linear 
+  704  ./hlearn-linear ./hlearn-linear -d datasets/uci/sonar.csv 
+  705  ./hlearn-linear ./hlearn-linear 
+  706  ./hlearn-linear -d datasets/uci/sonar.csv 
+  707  ./hlearn-linear -d datasets/uci/sonar.csv --testype MonoidTest
+  708  ./hlearn-linear -d datasets/uci/sonar.csv --testtype MonoidTest
+  709  ghci
+  710  cabal build hlearn-linear
+  711  ./hlearn-allknn --help
+  712  ./hlearn-linear --help
+  713  cabal build hlearn-linear
+  714  ./hlearn-linear -d datasets/uci/sonar.csv --testtype MonoidTest
+  715  cabal build 
+  716  cabal build hlearn-linear 
+  717  ./hlearn-linear -d datasets/uci/sonar.csv
+  718  cabal build hlearn-linear 
+  719  ./hlearn-linear -d datasets/uci/sonar.csv
+  720  ./hlearn-linear -d datasets/uci/sonar.csv --help
+  721  ./hlearn-linear -d datasets/uci/sonar.csv -paramcvfolds=2
+  722  ./hlearn-linear -d datasets/uci/sonar.csv --paramcvfolds=2
+  723  ./hlearn-linear -d datasets/uci/sonar.csv --paramcvfolds=10
+  724  cabal build hlearn-linear 
+  725  ghci
+  726  cabal build hlearn-linear 
+  727  ./hlearn-linear -d datasets/uci/sonar.csv --paramcvfolds=10
+  728  ./hlearn-linear -d datasets/uci/sonar.csv --paramcvfolds=10 --help
+  729  cabal build hlearn-linear 
+  730  ./hlearn-linear -d datasets/uci/sonar.csv --paramcvfolds=2
+  731  ./hlearn-linear -d datasets/uci/sonar.csv --paramcvfolds=2 --monoidSplits=2
+  732  ./hlearn-linear -d datasets/uci/sonar.csv --paramcvfolds=2 --monoidsplits=2
+  733  ./hlearn-linear -d datasets/uci/sonar.csv --paramcvfolds=2 --monoidsplits=10
+  734  ./hlearn-linear -d datasets/uci/sonar.csv --paramcvfolds=2 --paramcvreps=1
+  735  ./hlearn-linear -d datasets/uci/wine.csv --paramcvfolds=2 --paramcvreps=1
+  736  cabal build hlearn-linear 
+  737  ghci
+  738  cabal build hlearn-linar
+  739  cabal build hlearn-linear
+  740  ls
+  741  ./hlearn-linear -d datasets/uci/wine.csv --paramcvfolds=2 --paramcvreps=1
+  742  ./hlearn-linear -d datasets/uci/wine.csv --paramcvfolds=2 --paramcvreps=1 --regtype=L2
+  743  ./hlearn-linear -d datasets/uci/wine.csv --paramcvfolds=2 --paramcvreps=1 --regtype=L2 --regamount=0.01
+  744  ./hlearn-linear -d datasets/uci/wine.csv --paramcvfolds=2 --paramcvreps=1 --regtype=L2 --regamount=0.001
+  745  ./hlearn-linear -d datasets/uci/wine.csv --paramcvfolds=2 --paramcvreps=1 --regtype=L1 --regamount=0.001
+  746  ./hlearn-linear -d datasets/uci/wine.csv --paramcvfolds=2 --paramcvreps=1 --regtype=L1 --regamount=0.01
+  747  ./hlearn-linear -d datasets/uci/wine.csv --paramcvfolds=2 --paramcvreps=1 --regtype=L1 --regamount=0.0001
+  748  ./hlearn-linear -d datasets/uci/wine.csv --paramcvfolds=2 --paramcvreps=1 --regtype=L1 --regamount=0.001
+  749  cabal build hlearn-linear
+  750  ./hlearn-linear -d datasets/uci/wine.csv --paramcvfolds=2 --paramcvreps=10 --regtype=L1 --regamount=0.001
+  751  ./hlearn-linear -d datasets/uci/wine.csv --cvfolds=2 --cvreps=10 --regtype=L1 --regamount=0.001
+  752  ./hlearn-linear -d datasets/uci/wine.csv --cvfolds=2 --cvreps=1 --regtype=L1 --regamount=0.001
+  753  ./hlearn-linear -d datasets/uci/wine.csv --cvfolds=2 --cvreps=10 --regtype=L1 --regamount=0.001
+  754  ./hlearn-linear -d datasets/uci/wine.csv --cvfolds=2 --cvreps=2 --regtype=L1 --regamount=0.001
+  755  perf stat ./hlearn-linear -d datasets/uci/wine.csv --cvfolds=2 --cvreps=2 --regtype=L1 --regamount=0.001
+  756  perf stat --detailed ./hlearn-linear -d datasets/uci/wine.csv --cvfolds=2 --cvreps=2 --regtype=L1 --regamount=0.001
+  757  git status
+  758  git add .
+  759  git commit -m "refactored hlearn-linear to have useful program flags"
+  760  git push origin
+  761  cabal build 
+  762  ls
+  763  perf stat --detailed ./hlearn-linear -d datasets/uci/wine.csv --cvfolds=2 --cvreps=2 --regtype=L1 --regamount=0.001 +RTS -p -s
+  764  cabal build 
+  765  perf stat --detailed ./hlearn-linear -d datasets/uci/wine.csv --cvfolds=2 --cvreps=2 --regtype=L1 --regamount=0.001 +RTS -p -s
+  766  perf stat --detailed ./hlearn-linear -d datasets/uci/wine.csv --cvfolds=2 --cvreps=100 --regtype=L1 --regamount=0.001 +RTS -p -s
+  767  perf stat --detailed ./hlearn-linear -d datasets/uci/wine.csv --cvfolds=10 --cvreps=3 --regtype=L1 --regamount=0.001 +RTS -p -s
+  768  perf stat --detailed ./hlearn-linear -d datasets/uci/wine.csv --cvfolds=2 --cvreps=3 --regtype=L1 --regamount=0.001 +RTS -p -s
+  769  perf stat --detailed ./hlearn-linear -d datasets/uci/wine.csv --cvfolds=2 --cvreps=3 --regtype=L1 --regamount=0.001
+  770  --detailed ./hlearn-linear -d datasets/uci/wine.csv --cvfolds=2 --cvreps=3 --regtype=L2 --regamount=0.001
+  771  ./hlearn-linear -d datasets/uci/wine.csv --cvfolds=2 --cvreps=3 --regtype=L2 --regamount=0.001
+  772  ./hlearn-linear -d datasets/uci/wine.csv --cvfolds=2 --cvreps=3 --regtype=ElasticNet --regamount=0.001
+  773  ./hlearn-linear -d datasets/uci/wine.csv --cvfolds=2 --cvreps=3 --regtype=ElasticNet --regamount=0.01
+  774  ./hlearn-linear -d datasets/uci/wine.csv --cvfolds=2 --cvreps=3 --regtype=L1 --regamount=0.01
+  775  ./hlearn-linear -d datasets/uci/wine.csv --cvfolds=2 --cvreps=3 --regtype=L1 --regamount=0.001
+  776  ./hlearn-linear -d datasets/uci/wine.csv --cvfolds=2 --cvreps=3 --regtype=L1 --regamount=0.0001
+  777  ./hlearn-linear -d datasets/uci/wine.csv --cvfolds=2 --cvreps=3 --regtype=L1 --regamount=0
+  778  ./hlearn-linear -d datasets/uci/wine.csv --cvfolds=2 --cvreps=1 --regtype=L1 --regamount=0
+  779  ./hlearn-linear -d datasets/uci/wine.csv --cvfolds=2 --cvreps=3 --regtype=L1 --regamount=0
+  780  ./hlearn-linear -d datasets/uci/wine.csv --cvfolds=2 --cvreps=1 --regtype=L1 --regamount=0
+  781  ./hlearn-linear -d datasets/uci/wine.csv --cvfolds=2 --cvreps=1 --regtype=L1 --regamount=0.001
+  782  ghci
+  783  cabal build 
+  784  ghci
+  785  cabal build 
+  786  ghci
+  787  cd src/
+  788  ghci
+  789  cd ..
+  790  cabal build 
+  791  git branch
+  792  git push origin antipolymorphism
+  793  git push origin adaptive
+  794  git branch
+  795  ls
+  796  ls scripts/
+  797  cd scripts/
+  798  ../dist/build/hlearn-linear/hlearn-linear
+  799  ../dist/build/hlearn-linear/hlearn-linear -d ../datasets/uci/wine.csv 
+  800  ../dist/build/hlearn-linear/hlearn-linear -d ../datasets/uci/wine.csv --help
+  801  ls
+  802  cd ..
+  803  ls
+  804  chmod u+x scripts/linear.sh 
+  805  scripts/linear.sh wine
+  806  dist/build/hlearn-linear/hlearn-linear -d datasets/uci/wine.csv 
+  807  scripts/linear.sh wine
+  808  cabal install hmatrix-0.16
+  809  cabal install hmatrix-0.16.0.4
+  810  cabal install
+  811  cabal install hmatrix-0.15.2
+  812  cabal install hmatrix-0.15.2.0
+  813  cabal configure 
+  814  cabal install
+  815  git status
+  816  git commit HLearn.cabal
+  817  git add HLearn.cabal
+  818  git add src/HLearn/Metrics/Lebesgue.hs
+  819  git status
+  820  git commit -m "fixed hmatrix dependency"
+  821  git push origin
+  822  vim HLearn.cabal 
+  823  git status
+  824  git fast-forward
+  825  git --help
+  826  git checkout master
+  827  git checkout antipolymorphism 
+  828  vim HLearn.cabal 
+  829  cabal install
+  830  cd ../hmatrix/
+  831  ls
+  832  vim hmatrix.cabal 
+  833  cabal install
+  834  cd ../HLearn/
+  835  vim HLearn.cabal 
+  836  git status
+  837  ls
+  838  scripts/linear.sh wine
+  839  cabal build 
+  840  ./scripts/linear.sh wine
+  841  cabal build 
+  842  ./scripts/linear.sh wine
+  843  ls datasets/uci/sonar.all-data 
+  844  head datasets/uci/sonar.all-data 
+  845  ./scripts/linear.sh sonar
+  846  ./scripts/linear.sh wine
+  847  ./scripts/linear.sh win
+  848  ./scripts/linear.sh qwe
+  849  ./scripts/linear.sh wine
+  850  ./scripts/linear.sh w
+  851  ./scripts/linear.sh ion
+  852  ls datasets/uci
+  853  ./scripts/linear.sh wdbc
+  854  ./scripts/linear.sh wpbc
+  855  ./scripts/linear.sh sonar
+  856  ./scripts/linear.sh pima
+  857  ./scripts/linear.sh magic
+  858  ls
+  859  ls datasets/uci/
+  860  ./scripts/linear.sh haberman
+  861  ls datasets/uci/
+  862  ./scripts/linear.sh haberman
+  863  ls datasets/uci/
+  864  head datasets/uci/lung-cancer.data
+  865  head datasets/uci/lung-cancer.names 
+  866  cat datasets/uci/lung-cancer.names 
+  867  ls
+  868  ls datasets/uci
+  869  ./scripts/linear.sh optdigits
+  870  ./scripts/linear.sh pendigits
+  871  ls datasets/uci
+  872  ./scripts/linear.sh winered
+  873  ./scripts/linear.sh winewhite
+  874  ./scripts/linear.sh wdbc
+  875  ./scripts/linear.sh wdbc q w e r
+  876  mkdir tmp/linear
+  877  ls
+  878  [ -ne "tmp" ]
+  879  [ -e "tmp" ]
+  880  [ ! -e "tmp" ]
+  881  echo $!
+  882  echo $@
+  883  echo $%
+  884  ./hlearn-linear --help
+  885  ./scripts/linear.sh wdbc --regtype=L2 --regamount=0.01
+  886  ls "tmp/linear/wdbc- "
+  887  ls "tmp/linear/wdbc-"
+  888  caat "tmp/linear/wdbc-"
+  889  cat "tmp/linear/wdbc-"
+  890  ./scripts/linear.sh wdbc --regtype=L2 --regamount=0.01
+  891  ./hlearn-linear --help
+  892  ./scripts/linear.sh wdbc --regtype=L2 --regamount=0.01
+  893  ls tmp/linear/
+  894  cat tmp/linear/wdbc\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=3\ --regtype\=L2\ --regamount\=0.01 
+  895  ./hlearn-linear --help
+  896  cabal build 
+  897  ./scripts/linear.sh wdbc --regtype=L2 --regamount=0.01
+  898  cat tmp/linear/wdbc\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=3\ --regtype\=L2\ --regamount\=0.01 
+  899  cat tmp/linear/wdbc\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=3\ --regtype\=L2\ --regamount\=0.02 
+  900  ./scripts/linear.sh wdbc --regtype=L2 --regamount=0.1
+  901  cat tmp/linear/wdbc\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=3\ --regtype\=L2\ --regamount\=0.01 
+  902  cat tmp/linear/wdbc\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=3\ --regtype\=L2\ --regamount\=0.1 
+  903  cabal builf hlearn-linear
+  904  cabal build hlearn-linear
+  905  ./scripts/linear.sh wdbc --regtype=L2 --regamount=0.1 --monoidtype=mappendmixture
+  906  ./scripts/linear.sh wdbc --regtype=L2 --regamount=0.1 --monoidtype=mappendaverage
+  907  cabal build 
+  908  ghci
+  909  cabal build 
+  910  ./scripts/linear.sh wdbc --regtype=L2 --regamount=0.1 --monoidtype=mappendaverage
+  911  ./scripts/linear.sh wdbc --regtype=L2 --regamount=0.1 --monoidtype=mappendasd
+  912  ./scripts/linear.sh wdbc --regtype=L2 --regamount=0.1 --monoidsplits=2 --monoidtype=mappendasd
+  913  cabal install
+  914  ghci
+  915  cd src/
+  916  ghci
+  917  rm ~/.ghc/x86_64-linux-7.8.2/package.conf.d/hmatrix-0.16.0.4-a6434e07bdad59fdb6ce2b9e8482d1d7.conf 
+  918  ghci
+  919  ghc-pkg
+  920  ghc-pkg list
+  921  ghc-pkg --help
+  922  ghc-pkg list
+  923  ghc-pkg unregister hmatrix-0.16.0.2
+  924  ghc-pkg recahce
+  925  ghc-pkg recache
+  926  su
+  927  ghc-pkg unregister hmatrix-0.16.0.2
+  928  ghc-pkg list | grep hmatrix
+  929  history | grep hmatrix
+  930  ghc-pkg unregister hmatrix-0.16.0.4
+  931  ghc-pkg recache /home/user/.ghc/x86_64-linux-7.8.2/package.conf.d/package.cache
+  932  ghc-pkg unregister hmatrix-0.16.0.4-a6434e07bdad59fdb6ce2b9e8482d1d7
+  933  ghc-pkg unregister a6434e07bdad59fdb6ce2b9e8482d1d7
+  934  ghci
+  935  ghc-pkg
+  936  ghc-pkg --help
+  937  ghc-pkg hide a6434e07bdad59fdb6ce2b9e8482d1d7
+  938  ghc-pkg hide hmatrix-0.16.0.4
+  939  ghc-pkg recache --user
+  940  ghc-pkg hide hmatrix-0.16.0.4
+  941  ghci
+  942  cd ..
+  943  cabal build 
+  944  ./hlearn-linear -d datasets/uci/wine.csv --monoidtype="Mappend"
+  945  cabal build 
+  946  ./hlearn-linear -d datasets/uci/wine.csv --monoidtype="Mappend"
+  947  ./hlearn-linear -d datasets/uci/wine.csv --monoidtype="MappendAverage"
+  948  cabal build 
+  949  ls
+  950  ./hlearn-linear -d datasets/uci/wine.csv --monoidtype="MappendAverage"
+  951  ./hlearn-linear -d datasets/uci/wine.csv --monoidtype="MappendAverag"
+  952  cabal build 
+  953  ./hlearn-linear -d datasets/uci/wine.csv --monoidtype="MappendAverag"
+  954  ./hlearn-linear -d datasets/uci/wine.csv --monoidtype="MappendAverage"
+  955  ./hlearn-linear -d datasets/uci/wine.csv --monoidtype="MappendMixture 0.5"
+  956  ./hlearn-linear -d datasets/uci/wine.csv --monoidtype="MappendMixture 1/2"
+  957  ./hlearn-linear -d datasets/uci/wine.csv --monoidtype="MappendMixture (1/2)"
+  958  ghci
+  959  ./hlearn-linear -d datasets/uci/wine.csv --monoidtype="MappendMixture (1%2)"
+  960  ./hlearn-linear -d datasets/uci/wine.csv --monoidtype="MappendMixture 1%2"
+  961  ./hlearn-linear -d datasets/uci/wine.csv --monoidtype="MappendMixture (1%2)"
+  962  ls
+  963  vim scripts/linear.sh 
+  964  1..10
+  965  1 2 3 4 .. 10
+  966  dirname "this/the"
+  967  ./scripts/linear.sh mixture wdbc
+  968  ls tmp
+  969  ./scripts/linear.sh mixture wdbc
+  970  ./scripts/linear.sh mixture pima
+  971  cat tmp/mixture/pima\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=1\  
+  972  ./scripts/linear.sh mixture pima --monoidsplits=10
+  973  cat tmp/mixture/pima\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=1\ --monoidsplits\=10 
+  974  ./scripts/linear.sh mixture pima --monoidsplits=10
+  975  cat tmp/mixture/pima\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=1\ --monoidsplits\=10 
+  976  ./scripts/linear.sh mixture pima --monoidsplits=10
+  977  cat tmp/mixture/pima\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=1\ --monoidsplits\=10 
+  978  ./scripts/linear.sh mixture pima --monoidsplits=2
+  979  cat tmp/mixture/pima\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ --monoidsplits\=2 
+  980  cabal build 
+  981  ./scripts/linear.sh mixture pima --monoidsplits=2
+  982  cabal build 
+  983  ./scripts/linear.sh mixture haberman --monoidsplits=2
+  984  ./scripts/linear.sh mixture wdbc --monoidsplits=2
+  985  fg
+  986  ./scripts/linear.sh mixture haberman --monoidsplits=10
+  987  ./scripts/linear.sh mixture ion --monoidsplits=10
+  988  ./scripts/linear.sh mixture ion --monoidsplits=10 --regtype=L2 --regamount=0.0001
+  989  ./scripts/linear.sh mixture ion --monoidsplits=10 --regtype=L1 --regamount=0.0001
+  990  fg
+  991  ./scripts/linear.sh numdp ion --regtype=L2 --regamount=0.0001
+  992  cd proj/HLearn/tmp/
+  993  gnuplot mixture.gnu 
+  994  pdflatex mixture.tex 
+  995  gnuplot mixture.gnu 
+  996  pdflatex mixture.tex 
+  997  gnuplot mixture.gnu 
+  998  cat mixture/ion\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ --monoidsplits\=2\ --monoidtype\=MixtureAveTaylor 
+  999  gnuplot mixture.gnu 
+ 1000  chmod u+x mixture.gnu 
+ 1001  chmod u-x mixture.gnu 
+ 1002  chmod u+x mixture.sh 
+ 1003  ./mixture.sh 
+ 1004  ls mixture
+ 1005  ./mixture.sh 
+ 1006  gnuplot mixture.gnu 
+ 1007  ./mixture.sh 
+ 1008  cat mixture.gnu | gnuplot
+ 1009  ./mixture.sh 
+ 1010  ls mixture
+ 1011  ./mixture.sh 
+ 1012  git remote show origin
+ 1013  cd ..
+ 1014  git pull origin tests
+ 1015  git checkout tests
+ 1016  ls
+ 1017  ls tmp/mixture
+ 1018  ./mixture.sh 
+ 1019  cd tmp/
+ 1020  ./mixture.sh 
+ 1021  cat "mixture/wpbd --paramseed=0 --cvfolds=2 --cvreps=10 --monoidsplits=2 --regtype=L2 --regamount=0.001 --monoidtype=MixtureAveTaylor"
+ 1022  ./mixture.sh 
+ 1023  ls "mixture/wpbd --paramseed=0 --cvfolds=2 --cvreps=10 --monoidsplits=10 --regtype=L2 --regamount=0.0001 --monoidtype=MixtureUpperTaylor"
+ 1024  ./mixture.sh 
+ 1025  ls mixture/ion\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ --monoidsplits\=10\ --regtype\=L1\ --regamount\=0.0001\ --monoidtype\=MixtureUpperTaylor 
+ 1026  ./mixture.sh 
+ 1027  head  "mixture/ion --paramseed=0 --cvfolds=2 --cvreps=10 --monoidsplits=10 --regtype=L1 --regamount=0.0001 --monoidtype=MixtureUpperTaylor"
+ 1028  ls -l "mixture/ion --paramseed=0 --cvfolds=2 --cvreps=10 --monoidsplits=10 --regtype=L1 --regamount=0.0001 --monoidtype=MixtureUpperTaylor"
+ 1029  ./mixture.sh 
+ 1030  cd proj/HLearn/
+ 1031  scripts/linear.sh numdp wine
+ 1032  scripts/linear.sh numdp wine --monoidtype=MonoidAverage
+ 1033  scripts/linear.sh numdp wine --monoidtype=MappendAverage
+ 1034  cat tmp/numdp/wine\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ --monoidtype\=MappendAverage 
+ 1035  scripts/linear.sh numdp wine
+ 1036  ls tmp/numdp/
+ 1037  cat tmp/numdp/wine\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ \ --monoidtype\=MappendTaylor 
+ 1038  cat tmp/numdp/wine\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ \ --monoidtype\=MappendAverage 
+ 1039  cabal build 
+ 1040  scripts/linear.sh numdp wine
+ 1041  cat tmp/numdp/wine\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ \ --monoidtype\=MappendAverage 
+ 1042  scripts/linear.sh numdp wine
+ 1043  cat tmp/numdp/wine\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ \ --monoidtype\=MappendAverage 
+ 1044  cabal build 
+ 1045  scripts/linear.sh numdp wine
+ 1046  cat tmp/numdp/wine\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ \ --monoidtype\=MappendAverage 
+ 1047  cat tmp/numdp/wine\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ \ --monoidtype\=MappendTaylor
+ 1048  cat tmp/numdp/wine\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ \ --monoidtype\=MappendUpperBound
+ 1049  rm -r tmp/numdp/
+ 1050  scripts/linear.sh numdp wine
+ 1051  cat tmp/numdp/wine\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ \ --monoidsplits\=1
+ 1052  cat tmp/numdp/wine\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ \ --monoidsplits\=2\ --monoidtype\=MappendAverage 
+ 1053  cat tmp/numdp/wine\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ \ --monoidsplits\=2\ --monoidtype\=MappendTaylor 
+ 1054  scripts/linear.sh numdp wine
+ 1055  cabal build 
+ 1056  scripts/linear.sh numdp wine
+ 1057  ls
+ 1058  ls tmp
+ 1059  rm -r tmp/numdp/
+ 1060  rm tmp/mixture.eps 
+ 1061  rm tmp/mixture.aux 
+ 1062  rm tmp/mixture-inc*
+ 1063  ls tmp
+ 1064  rm tmp/mixture.tex 
+ 1065  rm tmp/mixture.ps
+ 1066  rm tmp/mixture.log
+ 1067  ls
+ 1068  ls tmp
+ 1069  git add tmp/mixture.sh
+ 1070  git status
+ 1071  git add scripts/linear.sh
+ 1072  git add src/exec/hlearn-linear.hs
+ 1073  git branch
+ 1074  git commit -m "added numdp test"
+ 1075  git merge tests
+ 1076  git pull origin tests
+ 1077  git merge origin/tests
+ 1078  ls
+ 1079  git status
+ 1080  git push
+ 1081  git add scripts/linear.sh
+ 1082  git commit -m "bugfix"
+ 1083  git push origin
+ 1084  ls
+ 1085  cd tmp
+ 1086  ls
+ 1087  ./numdp.sh 
+ 1088  cat numdp/wine\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ --regtype\=L2\ --regamount\=0.0001\ --monoidsplits\=2\ --monoidtype\=MappendAverage 
+ 1089  ./numdp.sh 
+ 1090  vim numdp/wine\ --paramseed\=0\ --cvfolds\=2\ --cvreps\=10\ --regtype\=L2\ --regamount\=0.0001\ --monoidsplits\=2\ --monoidtype\=MappendAverage 
+ 1091  ./numdp.sh 
+ 1092  python
+ 1093  python --version
+ 1094  su
+ 1095  python
+ 1096  su
+ 1097  python
+ 1098  su
+ 1099  python
+ 1100  ls
+ 1101  cd proj/HLearn/
+ 1102  ls
+ 1103  mkdir benchmarks
+ 1104  cd benchmarks/
+ 1105  ls
+ 1106  mkdir logistic-regression
+ 1107  cd logistic-regression/
+ 1108  ls
+ 1109  vim logreg.py
+ 1110  ls
+ 1111  vim logreg.py 
+ 1112  chmod u+x logreg.py 
+ 1113  ./logreg.py 
+ 1114  vim logreg.py 
+ 1115  ./logreg.py 
+ 1116  vim logreg.py 
+ 1117  ./logreg.py 
+ 1118  ./logreg.py ../../datasets/uci/wine.csv 
+ 1119  ./logreg.py ../../datasets/uci/wine.csv 10
+ 1120  vim logreg.py 
+ 1121  ./logreg.py ../../datasets/uci/wine.csv 10
+ 1122  vim logreg.py 
+ 1123  ./logreg.py ../../datasets/uci/wine.csv 10
+ 1124  vim logreg.py 
+ 1125  ./logreg.py ../../datasets/uci/wine.csv 10
+ 1126  python
+ 1127  vim logreg.py 
+ 1128  ./logreg.py ../../datasets/uci/wine.csv 10
+ 1129  vim logreg.py 
+ 1130  ./logreg.py ../../datasets/uci/wine.csv 10
+ 1131  vim logreg.py 
+ 1132  ./logreg.py ../../datasets/uci/wine.csv 10
+ 1133  vim logreg.py 
+ 1134  ./logreg.py ../../datasets/uci/wine.csv 10
+ 1135  vim logreg.py 
+ 1136  ./logreg.py ../../datasets/uci/wine.csv 10
+ 1137  vim logreg.py 
+ 1138  ./logreg.py ../../datasets/uci/wine.csv 10
+ 1139  vim logreg.py 
+ 1140  ./logreg.py ../../datasets/uci/wine.csv 10
+ 1141  vim logreg.py 
+ 1142  ./logreg.py ../../datasets/uci/wine.csv 10
+ 1143  ls
+ 1144  vim logreg.py 
+ 1145  ./logreg.py ../../datasets/uci/wine.csv 10
+ 1146  ./logreg.py ../../datasets/uci/iris.data 10
+ 1147  ./logreg.py ../../datasets/uci/iris.csv 10
+ 1148  ./logreg.py ../../datasets/uci/haberman.data 10
+ 1149  vim logreg.py 
+ 1150  ./logreg.py ../../datasets/uci/haberman.data 10
+ 1151  vim logreg.py 
+ 1152  ./logreg.py ../../datasets/uci/haberman.data 10
+ 1153  vim logreg.py 
+ 1154  ./logreg.py ../../datasets/uci/haberman.data 10
+ 1155  vim logreg.py 
+ 1156  ./logreg.py ../../datasets/uci/haberman.data 10
+ 1157  vim logreg.py 
+ 1158  ./logreg.py ../../datasets/uci/haberman.data 10
+ 1159  vim logreg.py 
+ 1160  ./logreg.py ../../datasets/uci/haberman.data 10
+ 1161  vim logreg.py 
+ 1162  ./logreg.py ../../datasets/uci/haberman.data 10
+ 1163  vim logreg.py 
+ 1164  ./logreg.py ../../datasets/uci/haberman.data 0
+ 1165  vim logreg.py 
+ 1166  ./logreg.py ../../datasets/uci/haberman.data 0
+ 1167  ./logreg.py ../../datasets/uci/haberman.data 1
+ 1168  vim logreg.py 
+ 1169  ./logreg.py ../../datasets/uci/haberman.data 1
+ 1170  ./logreg.py ../../datasets/uci/haberman.data 0
+ 1171  ./logreg.py ../../datasets/uci/haberman.data 2
+ 1172  ./logreg.py ../../datasets/uci/haberman.data 0
+ 1173  vim logreg.py 
+ 1174  ./logreg.py ../../datasets/uci/haberman.data 0
+ 1175  vim logreg.py 
+ 1176  ./logreg.py ../../datasets/uci/haberman.data 0
+ 1177  vim logreg.py 
+ 1178  ./logreg.py ../../datasets/uci/haberman.data 0
+ 1179  ./logreg.py ../../datasets/uci/haberman.data 1
+ 1180  vim logreg.py 
+ 1181  ./logreg.py ../../datasets/uci/haberman.data 1
+ 1182  vim logreg.py 
+ 1183  ./logreg.py ../../datasets/uci/haberman.data 1
+ 1184  ./logreg.py ../../datasets/uci/haberman.data 0
+ 1185  vim logreg.py 
+ 1186  ./logreg.py ../../datasets/uci/haberman.data 0
+ 1187  ./logreg.py ../../datasets/uci/haberman.data 1
+ 1188  ./logreg.py ../../datasets/uci/haberman.data 2
+ 1189  ./logreg.py ../../datasets/uci/haberman.data 0
+ 1190  ./logreg.py ../../datasets/uci/haberman.data 3
+ 1191  vim logreg.py 
+ 1192  ./logreg.py ../../datasets/uci/haberman.data 3
+ 1193  ./logreg.py ../../datasets/uci/haberman.data 0
+ 1194  ./logreg.py ../../datasets/uci/haberman.data 3
+ 1195  ./logreg.py ../../datasets/uci/wine.csv 0
+ 1196  ./logreg.py ../../datasets/uci/wine.csv 11
+ 1197  ./logreg.py ../../datasets/uci/wine.csv 0
+ 1198  vim logreg.py 
+ 1199  ./logreg.py ../../datasets/uci/wine.csv 0
+ 1200  vim logreg.py 
+ 1201  ./logreg.py ../../datasets/uci/wine.csv 0
+ 1202  vim logreg.py 
+ 1203  ./logreg.py ../../datasets/uci/wine.csv 0
+ 1204  vim logreg.py 
+ 1205  ./logreg.py ../../datasets/uci/wine.csv 0
+ 1206  vim logreg.py 
+ 1207  ./logreg.py ../../datasets/uci/wine.csv 0
+ 1208  vim logreg.py 
+ 1209  ./logreg.py ../../datasets/uci/wine.csv 0
+ 1210  vim logreg.py 
+ 1211  ./logreg.py ../../datasets/uci/wine.csv 0
+ 1212  time ./logreg.py ../../datasets/uci/wine.csv 0
+ 1213  vim logreg.py 
+ 1214  time ./logreg.py ../../datasets/uci/wine.csv 0
+ 1215  vim logreg.py 
+ 1216  time ./logreg.py ../../datasets/uci/optdigits.test.data 0
+ 1217  time ./logreg.py ../../datasets/uci/optdigits.test.data 10
+ 1218  time ./logreg.py ../../datasets/uci/optdigits.test.data 16
+ 1219  ls
+ 1220  vim test.sh
+ 1221  time --help
+ 1222  man time
+ 1223  time -f "U" ./logreg.py 
+ 1224  time --format "U" ./logreg.py 
+ 1225  /bin/time --format "U" ./logreg.py 
+ 1226  which time
+ 1227  /usr/bin/time --format "U" ./logreg.py 
+ 1228  /usr/bin/time --format=U ./logreg.py 
+ 1229  /usr/bin/time --format=U ./logreg.py ../../datasets/uci/wine.csv 
+ 1230  /usr/bin/time --format=U ./logreg.py ../../datasets/uci/wine.csv 0
+ 1231  /usr/bin/time --format=%U ./logreg.py ../../datasets/uci/wine.csv 0
+ 1232  /usr/bin/time --format=%U ./logreg.py ../../datasets/uci/wine.csv 0 > /dev/null
+ 1233  vim test.ssh
+ 1234  vim test.sh
+ 1235  chmod u+x test.sh 
+ 1236  ./test.sh 
+ 1237  vim test.sh
+ 1238  ./test.sh 
+ 1239  vim test.sh
+ 1240  ./test.sh 
+ 1241  vim test.sh
+ 1242  ./test.sh 
+ 1243  vim test.sh
+ 1244  ./test.sh 
+ 1245  vim test.sh
+ 1246  /usr/bin/time --format ./logreg.py > /dev/null
+ 1247  /usr/bin/time --format ./logreg.py ../../datasets/uci/wine.csv 0 > /dev/null
+ 1248  /usr/bin/time --format="%U" ./logreg.py ../../datasets/uci/wine.csv 0 > /dev/null
+ 1249  /usr/bin/time --format="%U" ./logreg.py ../../datasets/uci/wine.csv 0 > /dev/null 2>&1
+ 1250  /usr/bin/time --format="%U" ./logreg.py ../../datasets/uci/wine.csv 0 > /dev/null 2>t
+ 1251  ls
+ 1252  rm t
+ 1253  vim test.sh
+ 1254  ./test.sh
+ 1255  vim test.sh
+ 1256  ./test.sh
+ 1257  vim test.sh
+ 1258  ./test.sh
+ 1259  vim test.sh
+ 1260  ./test.sh 
+ 1261  vim test.sh
+ 1262  /usr/bin/time
+ 1263  vim test.sh
+ 1264  ./test.sh 
+ 1265  vim test.sh
+ 1266  ./test.sh 
+ 1267  vim test.sh
+ 1268  ./test.sh 
+ 1269  vim test.sh
+ 1270  ./test.sh 
+ 1271  vim test.sh
+ 1272  ./test.sh 
+ 1273  vim test.sh
+ 1274  ./test.sh 
+ 1275  vim test.sh
+ 1276  ./test.sh 
+ 1277  vim test.sh
+ 1278  ./test.sh 
+ 1279  vim test.sh
+ 1280  ./test.sh 
+ 1281  vim test.sh
+ 1282  ./test.sh 
+ 1283  ../../hlearn-linear -d ../../datasets/uci/wine.csv 
+ 1284  ssh well.cs.ucr.edu
+ 1285  ssh mizbi001@well.cs.ucr.edu
+ 1286  ssh well.cs.ucr.edu
+ 1287  ssh mizbi001@well.cs.ucr.edu
+ 1288  ssh well.cs.ucr.edu
+ 1289  ssh mizbi001@well.cs.ucr.edu
+ 1290  ssh mizbi001@well.cs.ucr.du
+ 1291  ssh mizbi001@well.cs.ucr.edu
+ 1292  ssh mizbi001@bell.cs.ucr.edu
+ 1293  ssh mizbi001@well.cs.ucr.edu
+ 1294  ping well.cs.ucr.edu
+ 1295  ssh mizbi001@well.cs.ucr.edu
+ 1296  uptime
+ 1297  su
+ 1298  cd proj/octave/taylor/
+ 1299  octave
+ 1300  cd proj/HLearn/
+ 1301  cabal build 
+ 1302  cd proj/HLearn/
+ 1303  cabal build 
+ 1304  ls
+ 1305  ./hlearn-linear -d datasets/uci/wine.csv --nocv
+ 1306  cabal build 
+ 1307  ./hlearn-linear -d datasets/uci/wine.csv --nocv
+ 1308  cabal build 
+ 1309  ./hlearn-linear -d datasets/uci/wine.csv --nocv
+ 1310  time ./hlearn-linear -d datasets/uci/wine.csv --nocv
+ 1311  perf stat ./hlearn-linear -d datasets/uci/wine.csv --nocv
+ 1312  perf stat --detailed ./hlearn-linear -d datasets/uci/wine.csv --nocv
+ 1313  perf stat --detailed ./hlearn-linear -d datasets/uci/wine.csv --nocv 2>/dev/null
+ 1314  /usr/bin/time --format="%U" ./hlearn-linear -d datasets/uci/wine.csv --nocv 2>/dev/null
+ 1315  /usr/bin/time --format="%U" `./hlearn-linear -d datasets/uci/wine.csv --nocv 2>/dev/null`
+ 1316  /usr/bin/time --format="%U" "./hlearn-linear -d datasets/uci/wine.csv --nocv 2>/dev/null"
+ 1317  cabal build 
+ 1318  /usr/bin/time --format="%U" "./hlearn-linear -d datasets/uci/wine.csv --nocv 2>/dev/null"
+ 1319  /usr/bin/time --format="%U" ./hlearn-linear -d datasets/uci/wine.csv --nocv 2>/dev/null
+ 1320  /usr/bin/time --format="%U" ./hlearn-linear -d datasets/uci/wine.csv --nocv
+ 1321  /usr/bin/time --format="%U" ./hlearn-linear -d datasets/uci/pima.csv --nocv
+ 1322  /usr/bin/time --format="%U" ./hlearn-linear -d datasets/uci/isolet.csv --nocv
+ 1323  cabal build 
+ 1324  ls
+ 1325  git status
+ 1326  /usr/bin/time --format="%U" ./hlearn-linear -d datasets/uci/isolet.csv --nocv
+ 1327  /usr/bin/time --format="%U" ./hlearn-linear -d datasets/uci/wine.csv --nocv
+ 1328  cabal build 
+ 1329  /usr/bin/time --format="%U" ./hlearn-linear -d datasets/uci/wine.csv --nocv
+ 1330  /usr/bin/time --format="%U" ./hlearn-linear -d datasets/uci/wine.csv --nocv > /dev/null
+ 1331  cabal build 
+ 1332  /usr/bin/time --format="%U" ./hlearn-linear -d datasets/uci/wine.csv --nocv > /dev/null
+ 1333  cabal install
+ 1334  cabal install > /dev/null &
+ 1335  cd benchmarks/logistic-regression/
+ 1336  ls
+ 1337  cd ..
+ 1338  mv logistic-regression/ logit
+ 1339  ls
+ 1340  cd logit/
+ 1341  ls
+ 1342  mv logreg.py sklearn.py
+ 1343  ls
+ 1344  hlearn-allknn 
+ 1345  hlearn-linear 
+ 1346  vim test.sh 
+ 1347  cat test.sh | tail -n 1
+ 1348  fg
+ 1349  ./test.sh 
+ 1350  vim test.sh 
+ 1351  ./test.sh 
+ 1352  vim test.sh 
+ 1353  ./test.sh 
+ 1354  ls
+ 1355  mv sklearn.py logit.py
+ 1356  ls
+ 1357  mv logit.py logreg.py
+ 1358  ls
+ 1359  vim test.sh 
+ 1360  ./test.sh 
+ 1361  ./logreg.py ../../datasets/uci/wine.csv 
+ 1362  ./logreg.py ../../datasets/uci/wine.csv 0
+ 1363  ls
+ 1364  vim logreg.py 
+ 1365  python
+ 1366  ls
+ 1367  rm sklearn.pyc 
+ 1368  ls
+ 1369  ./test.sh 
+ 1370  vim test.sh 
+ 1371  ./test.sh 
+ 1372  vim test.sh 
+ 1373  ./test.sh 
+ 1374  vim test.sh 
+ 1375  ./test.sh 
+ 1376  vim logreg.py 
+ 1377  ./test.sh 
+ 1378  vim test.sh 
+ 1379  ./test.sh 
+ 1380  cd ../..
+ 1381  ls
+ 1382  git status
+ 1383  git add benchmarks/
+ 1384  git status
+ 1385  git add benchmarks/logit/logreg.py
+ 1386  git add benchmarks/logit/logreg.py -f
+ 1387  ls
+ 1388  vim .gitignore 
+ 1389  rm hlearn-linear.prof 
+ 1390  cat output 
+ 1391  rm output 
+ 1392  ls
+ 1393  git status
+ 1394  git mv benchmarks/logit/ benchmarks/logreg
+ 1395  ls src
+ 1396  ls scripts/
+ 1397  ls
+ 1398  mkdir benchmarks/allknn
+ 1399  git mv scripts/testboth.sh benchmarks/allknn/test.sh
+ 1400  git status
+ 1401  git commit -m "added benchmarks for logreg"
+ 1402  git push origin
+ 1403  cabal build hlearn-allknn
+ 1404  ln -s dist/build/hlearn-allknn/hlearn-allknn hlearn-allknn
+ 1405  ls
+ 1406  ./hlearn-allknn -r ../mlpack_benchmark/datasets/Twitter.csv 
+ 1407  ./hlearn-allknn -r ../mlpack_benchmark/datasets/tinyImages100k.csv +RTS -p -s
+ 1408  ./hlearn-allknn -r datasets/random/tinyImages5k.csv +RTS -p -s
+ 1409  ls
+ 1410  cabal build hlearn-allknn
+ 1411  ./hlearn-allknn -r datasets/random/tinyImages5k.csv +RTS -p -s
+ 1412  ./hlearn-allknn -r datasets/random/tinyImages10k.csv +RTS -p -s
+ 1413  cabal build hlearn-allknn
+ 1414  ./hlearn-allknn -r datasets/random/tinyImages5k.csv +RTS -p -s
+ 1415  ./hlearn-allknn -r datasets/random/tinyImages5k.csv --trainmonoid +RTS -p -s
+ 1416  ./hlearn-allknn -r datasets/random/tinyImages5k.csv --help +RTS -p -s
+ 1417  ./hlearn-allknn -r datasets/random/tinyImages5k.csv --train-monoid +RTS -p -s
+ 1418  ./hlearn-allknn -r datasets/random/tinyImages10k.csv --train-monoid +RTS -p -s
+ 1419  ./hlearn-allknn -r datasets/random/tinyImages10k.csv +RTS -p -s
+ 1420  cabal build hlearn-allknn
+ 1421  ./hlearn-allknn -r datasets/random/tinyImages10k.csv +RTS -p -s
+ 1422  ./hlearn-allknn -r datasets/random/tinyImages100k.csv +RTS -p -s
+ 1423  ./hlearn-allknn -r datasets/random/tinyImages100k.csv --train-monoid +RTS -p -s
+ 1424  cabal build 
+ 1425  ./hlearn-allknn -r datasets/random/tinyImages100k.csv --train-monoid +RTS -N4
+ 1426  ./hlearn-allknn -r datasets/random/tinyImages100k.csv +RTS -N4
+ 1427  ./hlearn-allknn -r datasets/random/tinyImages100k.csv --help +RTS -N4
+ 1428  ./hlearn-allknn -r datasets/random/tinyImages100k.csv --cache-dists --help +RTS -N4
+ 1429  ./hlearn-allknn -r datasets/random/tinyImages100k.csv --cache-dists +RTS -N4
+ 1430  ./hlearn-allknn -r datasets/random/tinyImages100k.csv --train-monoid --cache-dists +RTS -N4
+ 1431  ./hlearn-allknn -r datasets/random/tinyImages100k.csv --train-monoid +RTS -N4
+ 1432  cabal build 
+ 1433  ./hlearn-allknn -r datasets/random/tinyImages100k.csv --train-monoid --pca +RTS -N4
+ 1434  ./hlearn-allknn -r datasets/random/tinyImages100k.csv --train-monoid --pca --help +RTS -N4
+ 1435  ./hlearn-allknn -r datasets/random/tinyImages100k.csv --train-monoid --pca --cache-dists +RTS -N4
+ 1436  cabal build 
+ 1437  ./hlearn-allknn -r datasets/random/tinyImages100k.csv --train-monoid --pca --cache-dists +RTS -N4
+ 1438  cabal build 
+ 1439  ./hlearn-allknn -r datasets/random/tinyImages100k.csv --pca +RTS -N4
+ 1440  cabal build 
+ 1441  git status
+ 1442  git add .
+ 1443  git commit -m "fixed bug in covertree monoid"
+ 1444  git push origin
+ 1445  git status
+ 1446  ls
+ 1447  benchmarks/allknn/test.sh ../mlpack_benchmark/datasets/tinyImages100k.csv 
+ 1448  vim benchmarks/allknn/test.sh
+ 1449  benchmarks/allknn/test.sh ../mlpack_benchmark/datasets/tinyImages100k.csv 
+ 1450  cabal install
+ 1451  benchmarks/allknn/test.sh ../mlpack_benchmark/datasets/tinyImages100k.csv 
+ 1452  history | grep knn
+ 1453  fg
+ 1454  cd proj/HLearn/
+ 1455  ls
+ 1456  ls examples/
+ 1457  vim HLearn.cabal 
+ 1458  ls
+ 1459  vim src/exec/hlearn-allknn.hs 
+ 1460  cd src/exec/
+ 1461  ls
+ 1462  vim hlearn-linear.hs 
+ 1463  cd ../..
+ 1464  vim HLearn.cabal 
+ 1465  cabal update
+ 1466  cabal install cabal-install
+ 1467  ls
+ 1468  ls mizbi001@well.cs.ucr.edu/
+ 1469  pwd
+ 1470  ls
+ 1471  mv mizbi001@well.cs.ucr.edu/ tmp
+ 1472  ls
+ 1473  cd proj/octave/
+ 1474  ls
+ 1475  cd taylor/
+ 1476  ls
+ 1477  vim lowerbound.m 
+ 1478  ls
+ 1479  vim logreg_1dim.m 
+ 1480  cd ..
+ 1481  ls
+ 1482  cd cd taylor/
+ 1483  ls
+ 1484  cd taylor/
+ 1485  LS
+ 1486  ls
+ 1487  vim lowerbound.m 
+ 1488  cd proj/HLearn/tmp/
+ 1489  ./mixture.sh 
+ 1490  cd proj/subhask/
+ 1491  ls
+ 1492  vim src/SubHask/Category.hs 
+ 1493  vim src/SubHask/Algebra.hs 
+ 1494  vim /home/user/.vimrc 
+ 1495  gvim
+ 1496  git status
+ 1497  quit
+ 1498  exit
+ 1499  vim k
+ 1500  exit
+ 1501  cd proj/ucr-cs100/
+ 1502  ls
+ 1503  ./scripts/findgrade.sh 
+ 1504  ./scripts/findgrade.sh mikeizbicki
+ 1505  git log hw/hw0-vim/grade
+ 1506  git log hw/hw0-vim/grade --author
+ 1507  git log --author hw/hw0-vim/grade
+ 1508  git log --author=* hw/hw0-vim/grade
+ 1509  git log hw/hw0-vim/grade
+ 1510  ps -aux
+ 1511  ps -ef
+ 1512  ls lab/
+ 1513  ls
+ 1514  cd lab/
+ 1515  ls lab7-cstring/lab-stl/README.md 
+ 1516  vim lab7-cstring/lab-stl/README.md 
+ 1517  cd ..
+ 1518  ls
+ 1519  ./scripts/findgrade.sh mikeizbicki
+ 1520  git add .
+ 1521  git commit -m "grades"
+ 1522  git push origin
+ 1523  git mv GRADES GRADES.md
+ 1524  git commit -m ""
+ 1525  git push origin
+ 1526  vim GRADES.md 
+ 1527  ls
+ 1528  find studentinfo
+ 1529  find studentinfo/
+ 1530  find studentinfo/*
+ 1531  cd studentinfo/
+ 1532  ls
+ 1533  vim examplestudent
+ 1534  cd ..
+ 1535  chmod u+x scripts/allgrades.sh 
+ 1536  ./scripts/allgrades.sh 
+ 1537  ls
+ 1538  ls()
+ 1539  ls ()
+ 1540  ./scripts/allgrades.sh 
+ 1541  ls ()
+ 1542  ./scripts/allgrades.sh 
+ 1543  git clone https://github.com/examplestudent/ucr-cs100 ucr-cs100-examplestudent
+ 1544  ls
+ 1545  ./scripts/allgrades.sh 
+ 1546  git clone "https://github.com/mikeizbicki/ucr-cs100.git" "ucr-cs100-mikeizbicki"
+ 1547  ./scripts/allgrades.sh 
+ 1548  ls
+ 1549  rm -r ucr-cs100-mikeizbicki/
+ 1550  rm -r ucr-cs100-mikeizbicki/ -f
+ 1551  ./scripts/allgrades.sh 
+ 1552  git clone --help
+ 1553  ls
+ 1554  rm -rf ucr-cs100
+ 1555  ./scripts/allgrades.sh 
+ 1556  ls
+ 1557  rm -rf ucr-cs100-mikeizbicki/
+ 1558  git clone --help
+ 1559  ./scripts/allgrades.sh 
+ 1560  ls ./assignments/hw/hw1-rshell/grade 
+ 1561  ./scripts/allgrades.sh 
+ 1562  cat ./assignments/hw/hw1-rshell/grade 
+ 1563  ./scripts/allgrades.sh 
+ 1564  cat ./assignments/hw/hw1-rshell/grade 
+ 1565  cat ./assignments/hw/hw1-rshell/grade | awk '{print $1;}'
+ 1566  ./scripts/allgrades.sh 
+ 1567  find ./ucr-cs100-mikeizbicki/ -name grade
+ 1568  find ./ucr-cs100-mikeizbicki/ 
+ 1569  ./scripts/allgrades.sh 
+ 1570  ./scripts/calcgrade.sh mikeizbicki
+ 1571  git status
+ 1572  git add .
+ 1573  git commit -m "changes"
+ 1574  git push origin
+ 1575  ls
+ 1576  git rm ucr-cs100-examplestudent/ -r
+ 1577  git rm ucr-cs100-examplestudent/ -rf
+ 1578  rm ucr-cs100-examplestudent/ -rf
+ 1579  rm ucr-cs100-mikeizbicki/ -rf
+ 1580  ls
+ 1581  rm studentinfo/examplestudent 
+ 1582  ls
+ 1583  git status
+ 1584  git commit -m "fix"
+ 1585  git rm scripts/.findgrade.sh.swp
+ 1586  git rm studentinfo/examplestudent
+ 1587  git rm ucr-cs100
+ 1588  git rm ucr-cs100/examplestudent
+ 1589  git rm ucr-cs100-examplestudent
+ 1590  git rm ucr-cs100-mikeizbicki
+ 1591  git commit -m "fix"
+ 1592  git push origin
+ 1593  ./scripts/calcgrade.sh mikeizbicki
+ 1594  ls
+ 1595  vim README.md 
+ 1596  cd proj/
+ 1597  cd ../tmp/
+ 1598  ls
+ 1599  git clone ssh://github.com/examplestudent/ucr-cs100
+ 1600  git clone https://github.com/examplestudent/ucr-cs100
+ 1601  cd ucr-cs100/
+ 1602  ls
+ 1603  vim README.md 
+ 1604  git branch
+ 1605  git fetch origin init
+ 1606  git checkout init
+ 1607  ls
+ 1608  vim hw/hw0-vim/grade 
+ 1609  git add .
+ 1610  git status
+ 1611  git commit -m "hw 1"
+ 1612  git push origin
+ 1613  man script
+ 1614  ls
+ 1615  echo "hello class"
+ 1616  for f in *; do echo $f; done
+ 1617  ls
+ 1618  echo "this is the contents"
+ 1619  echo "this is the contents" > file
+ 1620  cat file
+ 1621  exit
+ 1622  git init
+ 1623  ls
+ 1624  ls -l
+ 1625  ls -a
+ 1626  cd gittest/
+ 1627  cd .
+ 1628  cd ..
+ 1629  ;s
+ 1630  ls
+ 1631  ls -a
+ 1632  cd gittest
+ 1633  clear
+ 1634  ls -a
+ 1635  touch main.cpp
+ 1636  cat main.cpp
+ 1637  ls
+ 1638  git add main.cpp
+ 1639  git commit 
+ 1640  git tag "mytag"
+ 1641  vim main.cpp 
+ 1642  cat main.cpp 
+ 1643  git add main.cpp
+ 1644  git commit
+ 1645  ls
+ 1646  cat main.cpp 
+ 1647  git checkout mytag
+ 1648  ls
+ 1649  cat main.cpp 
+ 1650  git checkout master
+ 1651  cat main.cpp
+ 1652  git blame main.cpp
+ 1653  exit
+ 1654  ls
+ 1655  man ls
+ 1656  script lecture1
+ 1657  vim lecture1 
+ 1658  cat lecture1 
+ 1659  man script
+ 1660  clear
+ 1661  mkdir gittest
+ 1662  cd gittest
+ 1663  script gittest
+ 1664  exit
+ 1665  cd gittest/
+ 1666  vim main.cpp 
+ 1667  g++ main.cpp 
+ 1668  ls
+ 1669  ./a.out 
+ 1670  cd proj/ucr-cs100/
+ 1671  git reset --soft heaD^
+ 1672  git reset --soft HEAD^
+ 1673  ls
+ 1674  git log
+ 1675  cd lecture/
+ 1676  ls
+ 1677  git submodule gittest/
+ 1678  cd ..
+ 1679  git submodule lecture/gittest/
+ 1680  git submodule add lecture/gittest/
+ 1681  git submodule add ./lecture/gittest/
+ 1682  git status
+ 1683  git checkout master
+ 1684  git pull
+ 1685  git status
+ 1686  ls lecture/gittest/
+ 1687  git add lecture/gittest/
+ 1688  git status
+ 1689  git add lecture/gittest/
+ 1690  git status
+ 1691  git branch
+ 1692  ls
+ 1693  ls lecture/
+ 1694  git add lecture/
+ 1695  ls
+ 1696  git statu
+ 1697  git status
+ 1698  ls
+ 1699  ls -a
+ 1700  ls
+ 1701  cd lecture/gittest/
+ 1702  ls
+ 1703  rm a.out 
+ 1704  ls -a
+ 1705  rm .git/ -r
+ 1706  rm .git/ -rf
+ 1707  ls
+ 1708  ls -a
+ 1709  cd ..
+ 1710  ls
+ 1711  cd ..
+ 1712  ls
+ 1713  git add .
+ 1714  git status
+ 1715  git commit -m "removed submodule"
+ 1716  git push origin
+ 1717  git rm lecture/gittest/.git
+ 1718  mv lecture/gittest/ lecture/gittest2
+ 1719  git rm lecture/gittest
+ 1720  mv lecture/gittest2/ lecture/gittest
+ 1721  git status
+ 1722  git add lecture/gittest/
+ 1723  ls
+ 1724  git status
+ 1725  git commit -m "first lecture"
+ 1726  git push origin
+ 1727  git rebase --interactive
+ 1728  git status
+ 1729  git rebase --interactive
+ 1730  git rebase master --interactive
+ 1731  git log
+ 1732  git rebase master --interactive HEAD~3
+ 1733  git rebase master --interactive HEAD~10
+ 1734  git rebase master --interactive HEAD~5
+ 1735  git squash
+ 1736  git rebase --interactive 
+ 1737  git rebase --interactive HEAD~5
+ 1738  cat README.md 
+ 1739  vim README.md 
+ 1740  git add README.md
+ 1741  git rebase continue
+ 1742  git rebase --continue
+ 1743  git log
+ 1744  git push origin
+ 1745  git pull
+ 1746  git push origin master
+ 1747  git branch
+ 1748  git merge master
+ 1749  git branch
+ 1750  git tag test
+ 1751  get checkout master
+ 1752  git checkout master
+ 1753  git merge test
+ 1754  git log
+ 1755  git rebase master --interactive HEAD~5
+ 1756  git rebase master --interactive
+ 1757  git rebase master --interactive HEAD~5
+ 1758  git rebase master --interactive HEAD~5 master
+ 1759  git rebase --interactive HEAD~5 master
+ 1760  git rebase master --interactive head
+ 1761  git rebase master --interactive HEAD
+ 1762  git rebase master --interactive HEAD~3
+ 1763  git rebase HEAD --interactive HEAD~3
+ 1764  git rebase -i master
+ 1765  git rebase -i master HEAD~3
+ 1766  git rebase -i origin/master
+ 1767  git rebase -i HEAD~5
+ 1768  git rebase -i HEAD~3
+ 1769  git rebase -i HEAD
+ 1770  git rebase --abort
+ 1771  git rebase -i HEAD~5
+ 1772  git rebase -i HEAD~3
+ 1773  vim README.md 
+ 1774  git rebase --continue 
+ 1775  git add README.md
+ 1776  git merge
+ 1777  git commit -m "merge
+ 1778  "
+ 1779  git rebase --continue 
+ 1780  git mergetool
+ 1781  git rebase --abort
+ 1782  git rebase -i master
+ 1783  git rebase -i HEAD~3
+ 1784  git rebase --abort
+ 1785  git rebase -i HEAD~1
+ 1786  vim README.md 
+ 1787  git add README.md
+ 1788  git commit -m "rebase"
+ 1789  git checkout master
+ 1790  git checkout master --force
+ 1791  git log
+ 1792  git rebase --continue
+ 1793  git rebase --abort
+ 1794  git pull origin master
+ 1795  git rebase -i HEAD~10
+ 1796  git rebase -i HEAD~5
+ 1797  git rebase -i HEAD~4
+ 1798  vim README.md 
+ 1799  git status
+ 1800  git add README.md
+ 1801  git status
+ 1802  git commit -m "merge"
+ 1803  git rebase --continue
+ 1804  git log
+ 1805  git push origin master
+ 1806  git pull
+ 1807  git push origin master
+ 1808  git log
+ 1809  git rebase -i HEAD~5
+ 1810  git rebase -i HEAD~4
+ 1811  ls
+ 1812  ls lecture/
+ 1813  ls lecture/gittest/ -la
+ 1814  git push origin master
+ 1815  git push origin master --force
+ 1816  cd proj/sandbox/ghc/
+ 1817  ls
+ 1818  ghci
+ 1819  cd proj/sandbox/
+ 1820  ls
+ 1821  mkdir ghc
+ 1822  cd ghc
+ 1823  vim ClosedTypeFamilyRecursion.hs
+ 1824  cd proj/ucr-cs100/
+ 1825  ls
+ 1826  git log --graph
+ 1827  git log --graph --pretty=format:'%Cred%h%Creset%n' --abbrev-commit --date=relative --branches --all
+ 1828  git log --graph --pretty=format:'%Cred%h%Creset%n'
+ 1829  ls
+ 1830  cd lecture/
+ 1831  ls
+ 1832  echo "hello"
+ 1833  exit
+ 1834  mkdir facebook
+ 1835  cd facebook/
+ 1836  git init
+ 1837  ls
+ 1838  ls -a
+ 1839  ls -l
+ 1840  ls -la
+ 1841  ls -l -a
+ 1842  ls -a -l
+ 1843  ls -al
+ 1844  clear
+ 1845  touch main.cpp
+ 1846  git add main.cpp
+ 1847  git commit
+ 1848  ls
+ 1849  vim main.cpp 
+ 1850  g++ main.cpp 
+ 1851  ./a.out 
+ 1852  ls
+ 1853  git add main.cpp
+ 1854  git commit -m "added code to main.cpp"
+ 1855  git log
+ 1856  git tag "simple"
+ 1857  clear
+ 1858  vim main.cpp 
+ 1859  g++ main.cpp 
+ 1860  ./a.out 
+ 1861  git add main.cpp
+ 1862  git commit -m "added random numbers"
+ 1863  ls
+ 1864  git log
+ 1865  clear
+ 1866  git checkout simple
+ 1867  cat main.cpp 
+ 1868  git log
+ 1869  git checkout e78bc601ff100d96ec2965b69f53c90f4f46b4a2
+ 1870  clear
+ 1871  git checkout master
+ 1872  git log
+ 1873  git checkout simple
+ 1874  clear
+ 1875  git branch feature
+ 1876  git branch
+ 1877  git checkout feature 
+ 1878  vim main.cpp 
+ 1879  g++ main.cpp 
+ 1880  ./a.out 
+ 1881  git add main.cpp
+ 1882  git commit -m "user input"
+ 1883  git log
+ 1884  clear
+ 1885  git checkout master
+ 1886  git log
+ 1887  cat main.cpp 
+ 1888  clear
+ 1889  ls
+ 1890  mkdir src
+ 1891  cp main.cpp src
+ 1892  ls
+ 1893  ls src
+ 1894  git checkout feature
+ 1895  ls
+ 1896  cat main.cpp 
+ 1897  cat src/main.cpp 
+ 1898  git checkout master
+ 1899  ls
+ 1900  clear
+ 1901  git status
+ 1902  git add src/main.cpp
+ 1903  git commit -m "added new main"
+ 1904  git status
+ 1905  git log
+ 1906  clear
+ 1907  git checkout feature
+ 1908  ls
+ 1909  git checkout master
+ 1910  git log
+ 1911  git checkout eff8b65b
+ 1912  clear
+ 1913  ls
+ 1914  git checkout master
+ 1915  ls
+ 1916  ls src/
+ 1917  ls
+ 1918  rm a.out 
+ 1919  ls
+ 1920  rm main.cpp 
+ 1921  ls
+ 1922  git status
+ 1923  git checkout feature
+ 1924  ls
+ 1925  git checkout master
+ 1926  ls
+ 1927  clear
+ 1928  ls
+ 1929  git rm main.cpp 
+ 1930  ls
+ 1931  git status
+ 1932  git commit -m "deleted"
+ 1933  ls
+ 1934  touch testfile
+ 1935  ls
+ 1936  mv testfile src/
+ 1937  ls
+ 1938  ls src/
+ 1939  rm src/testfile 
+ 1940  git mv src/main.cpp .
+ 1941  ls
+ 1942  ls src
+ 1943  git status
+ 1944  clear
+ 1945  git commit "moved file"
+ 1946  git commit -m "moved file"
+ 1947  ls
+ 1948  cd ..
+ 1949  ls
+ 1950  git clone https://github.com/mikeizbicki/ucr-cs100.git
+ 1951  ls
+ 1952  cd ucr-cs100/
+ 1953  clear
+ 1954  ls
+ 1955  cd lecture/
+ 1956  ls
+ 1957  vim lecture1 
+ 1958  cat lecture1 
+ 1959  git pull origin master
+ 1960  cd ..
+ 1961  ls
+ 1962  clear
+ 1963  head README.md 
+ 1964  vim README.md 
+ 1965  git status
+ 1966  git add README.md 
+ 1967  git commit -m "took away the in class edit"
+ 1968  git push origin master
+ 1969  exit
+ 1970  emacs
+ 1971  su
+ 1972  emacs
+ 1973  gvim
+ 1974  s
+ 1975  ls
+ 1976  cd proj/ucr-cs100/
+ 1977  ls
+ 1978  mkdir lecture
+ 1979  ls
+ 1980  cd lecture/
+ 1981  ls
+ 1982  mkdir git
+ 1983  ls
+ 1984  cd git
+ 1985  ls
+ 1986  git init
+ 1987  ls
+ 1988  touch k
+ 1989  git status
+ 1990  git add k
+ 1991  ls
+ 1992  git commit -m "k"
+ 1993  git tag "k"
+ 1994  git log
+ 1995  git rm k
+ 1996  git commit -m "no k"
+ 1997  ls
+ 1998  git checkout tags/k
+ 1999  ls
+ 2000  git checkout master
+ 2001  script lecture1
+ 2002  ls
+ 2003  cat lecture1 
+ 2004  clear
+ 2005  cat lecture1 
+ 2006  script test
+ 2007  cat test
+ 2008  man script
+ 2009  script --help
+ 2010  apropos script
+ 2011  ls
+ 2012  ls /usr/bin
+ 2013  cd ..
+ 2014  ls
+ 2015  rm -r git
+ 2016  rm -r git -f
+ 2017  git status
+ 2018  ls
+ 2019  cd ..
+ 2020  ls
+ 2021  cd lecture/
+ 2022  ls
+ 2023  clear
+ 2024  script test
+ 2025  cat test
+ 2026  vim test
+ 2027  ls
+ 2028  vim test
+ 2029  clear
+ 2030  script lecture2
+ 2031  ls
+ 2032  git add lecture2
+ 2033  git status
+ 2034  rm -r ucr-cs100/
+ 2035  rm -r ucr-cs100/ -f
+ 2036  ls
+ 2037  cd facebook/
+ 2038  ls
+ 2039  rm -rf .git/
+ 2040  cd ..
+ 2041  git status
+ 2042  git add test facebook/
+ 2043  git status
+ 2044  git commit -m "lecture 2 notes"
+ 2045  git push origin
+ 2046  git pull
+ 2047  git push origin
+ 2048  exit
+ 2049  cd proj
+ 2050  ls
+ 2051  tar -czf hmatrix/
+ 2052  tar -czf hmatrix hmatrix.tgz
+ 2053  tar -czf hmatrix.tgz hmatrix
+ 2054  echo $LOCALDIR
+ 2055  export
+ 2056  exit
+ 2057  cd proj/ucr-cs100/
+ 2058  ls
+ 2059  cd proj/ucr-cs100/
+ 2060  ls
+ 2061  ls scripts
+ 2062  vim scripts/allgrades.sh 
+ 2063  clear
+ 2064  ls
+ 2065  ls scripts/
+ 2066  ./scripts/calcgrade.sh 
+ 2067  ./scripts/calcgrade.sh examplestudent
+ 2068  clear
+ 2069  ls scripts/
+ 2070  ./scripts/allgrades.sh 
+ 2071  clear
+ 2072  export PS1="\$"
+ 2073  clear
+ 2074  ls
+ 2075  ls /usr/bin
+ 2076  clear
+ 2077  ls -l -a
+ 2078  clear
+ 2079  firefox
+ 2080  export PS1="\$"
+ 2081  clear
+ 2082  exit
+ 2083  touch "this has spaces"
+ 2084  ls
+ 2085  cat this has spaces
+ 2086  cat "this has spaces"
+ 2087  man ls
+ 2088  man getlogin_r
+ 2089  clear
+ 2090  vim main.cpp
+ 2091  g++ main.cpp 
+ 2092  ./a.out 
+ 2093  vim main.cpp
+ 2094  g++ main.cpp 
+ 2095  ./a.out 
+ 2096  vim main.cpp
+ 2097  g++ main.cpp 
+ 2098  ./a.out 
+ 2099  vim main.cpp
+ 2100  man write
+ 2101  vim main.cpp
+ 2102  g++ main.cpp 
+ 2103  ./a.out 
+ 2104  clear
+ 2105  vim main.cpp 
+ 2106  g++ main.cpp 
+ 2107  ./a.out 
+ 2108  vim main.cpp 
+ 2109  g++ main.cpp 
+ 2110  ./a.out 
+ 2111  ./a.out > stdout
+ 2112  vim main.cpp 
+ 2113  g++ main.cpp 
+ 2114  ./a.out > stdout
+ 2115  cat stdout 
+ 2116  vim main.cpp 
+ 2117  g++ main.cpp 
+ 2118  ./a.out > stdout
+ 2119  cat stdout 
+ 2120  ./a.out > stdout
+ 2121  cat stdout 
+ 2122  ./a.out >> stdout
+ 2123  cat stdout 
+ 2124  clear
+ 2125  vim main.cpp 
+ 2126  g++ main.cpp 
+ 2127  vim main.cpp 
+ 2128  g++ main.cpp 
+ 2129  ls
+ 2130  cat testfile 
+ 2131  echo "" > testfile 
+ 2132  cat testfile 
+ 2133  exit
+ 2134  ghci
+ 2135  gvim &
+ 2136  konqueror &
+ 2137  konqueror
+ 2138  gvim 
+ 2139  gedit
+ 2140  firefox
+ 2141  ls
+ 2142  gvim
+ 2143  top
+ 2144  top &
+ 2145  clear
+ 2146  ls
+ 2147  # ls
+ 2148  clean
+ 2149  clear
+ 2150  cd proj/ucr-cs100/lecture/
+ 2151  script lecture3
+ 2152  git status
+ 2153  git add lecture3
+ 2154  git add main.cpp
+ 2155  git add stdout
+ 2156  git add testfile
+ 2157  git commit -m lecture3
+ 2158  cd ..
+ 2159  ls
+ 2160  git status
+ 2161  git add scripts/
+ 2162  git status
+ 2163  rm ucr-cs100-* -rf
+ 2164  ls
+ 2165  git status
+ 2166  cd assignments/quiz/
+ 2167  ls
+ 2168  mkdir quiz1
+ 2169  mv quiz1-gitunix.* quiz1
+ 2170  ls
+ 2171  cd quiz1/
+ 2172  ls
+ 2173  vim grade
+ 2174  ls
+ 2175  cd ..
+ 2176  ls
+ 2177  cd ..
+ 2178  ls
+ 2179  cd ..
+ 2180  ls
+ 2181  git status
+ 2182  git add assignments/quiz/quiz1/quiz1-gitunix.tex
+ 2183  git add assignments/quiz/quiz1/grade
+ 2184  git add studyguide.md
+ 2185  ls
+ 2186  git status
+ 2187  vim .gitignore 
+ 2188  git status
+ 2189  git add .gitignore
+ 2190  ls
+ 2191  git status
+ 2192  vim assignments/hw/hw1-rshell/README.md 
+ 2193  vim assignments/hw/hw2-ls/README.md 
+ 2194  git status
+ 2195  git add assignments/
+ 2196  git status
+ 2197  git commit -m "administrative changes"
+ 2198  git push origin
+ 2199  git pull
+ 2200  git push origin
+ 2201  history | grep export
+ 2202  export PS1="\$"
+ 2203  clear
+ 2204  cd
+ 2205  cd proj/ucr-cs100/
+ 2206  ls
+ 2207  cd lecture/
+ 2208  ls
+ 2209  clear
+ 2210  pwd
+ 2211  clear
+ 2212  vim main.cpp 
+ 2213  clear
+ 2214  pwd
+ 2215  clear
+ 2216  ls
+ 2217  vim main.cpp 
+ 2218  vim fork.cpp
+ 2219  ./a.out 
+ 2220  export PS1="\$"
+ 2221  clear
+ 2222  ls
+ 2223  cd proj/ucr-cs100/
+ 2224  cd lecture/
+ 2225  ls
+ 2226  clear
+ 2227  pwd
+ 2228  clear
+ 2229  ls
+ 2230  script lecture4
+ 2231  ./a.out 
+ 2232  top
+ 2233  g++ fork.cpp 
+ 2234  ./a.out 
+ 2235  g++ fork.cpp 
+ 2236  ./a.out 
+ 2237  g++ fork.cpp 
+ 2238  ./a.out 
+ 2239  clear
+ 2240  g++ fork.cpp 
+ 2241  ./a.out 
+ 2242  ls
+ 2243  g++ fork.cpp 
+ 2244  ./a.out 
+ 2245  which ls
+ 2246  g++ fork.cpp 
+ 2247  ./a.out 
+ 2248  ls
+ 2249  /bin/ls
+ 2250  /bin/ls -l -a
+ 2251  g++ fork.cpp 
+ 2252  ./a.out 
+ 2253  g++ fork.cpp 
+ 2254  ./a.out 
+ 2255  g++ fork.cpp 
+ 2256  ./a.out 
+ 2257  g++ fork.cpp 
+ 2258  ./a.out 
+ 2259  g++ fork.cpp 
+ 2260  ./a.out 
+ 2261  g++ fork.cpp 
+ 2262  ./a.out 
+ 2263  g++ fork.cpp 
+ 2264  ./a.out 
+ 2265  g++ fork.cpp 
+ 2266  ./a.out 
+ 2267  g++ fork.cpp 
+ 2268  ./a.out 
+ 2269  exit
+ 2270  dirname /etc/acpi/asd
+ 2271  bash --version
+ 2272  $[ 1 + 2]
+ 2273  eval " 1 + 2"
+ 2274  cd proj/ucr-cs100
+ 2275  ls
+ 2276  cd ucr-cs100-willccoates/
+ 2277  git push
+ 2278  git status
+ 2279  git push
+ 2280  cd ..
+ 2281  vim scripts/config.sh 
+ 2282  ls
+ 2283  cd proj/ucr-cs100/ucr-cs100-willccoates/
+ 2284  ls
+ 2285  git push
+ 2286  echo $?
+ 2287  $?
+ 2288  cd ..
+ 2289  ls
+ 2290  ./scripts/gradeall.sh assignments/linux/
+ 2291  git status
+ 2292  ls
+ 2293  cp ../../.vimrc lecture/
+ 2294  git status
+ 2295  git add lecture/.vimrc
+ 2296  git commit -m "added my personal vimrc"
+ 2297  git push origin
+ 2298  git status
+ 2299  git add scripts
+ 2300  git status
+ 2301  git rm scripts/.config.sh.swo
+ 2302  git rm scripts/.config.sh.swo -f
+ 2303  git rm scripts/.gradeall.sh.swo
+ 2304  git rm scripts/.gradeall.sh.swo -f
+ 2305  git rm scripts/.gradeassignment.sh.swo -f
+ 2306  vim .gitignore 
+ 2307  git status
+ 2308  git add .gitignore
+ 2309  git commit -m "bug in grading scripts prevented properly uploading files"
+ 2310  su
+ 2311  su
+ 2312  history
+ 2313  clear
+ 2314  export PS1="\$"
+ 2315  clear
+ 2316  g++ fork.cpp 
+ 2317  /bin/ls
+ 2318  g++ fork.cpp 
+ 2319  ./a.out 
+ 2320  g++ fork.cpp 
+ 2321  ./a.out 
+ 2322  clear
+ 2323  ./a.out 
+ 2324  clear
+ 2325  g++ fork.cpp 
+ 2326  ./a.out 
+ 2327  clear
+ 2328  g++ fork.cpp 
+ 2329  ./a.out 
+ 2330  lear
+ 2331  clear
+ 2332  g++ execv.cpp 
+ 2333  ./a.out this is a test
+ 2334  ./a.out
+ 2335  g++ execv.cpp 
+ 2336  ./a.out this is a test
+ 2337  mv a.out execv
+ 2338  ./execv this is a test
+ 2339  g++ execv.cpp 
+ 2340  ./a.out 
+ 2341  ./a.out -a
+ 2342  clear
+ 2343  ls --help
+ 2344  clear
+ 2345  ./a.out -l -a -x -v 
+ 2346  ./a.out -l -a
+ 2347  clear
+ 2348  ./a.out -la
+ 2349  clear
+ 2350  g++ execv.cpp 
+ 2351  ./a.out 
+ 2352  g++ execv.cpp 
+ 2353  ./a.out 
+ 2354  g++ execv.cpp 
+ 2355  clear
+ 2356  ./a.out 
+ 2357  clear
+ 2358  g++ execv.cpp 
+ 2359  lear
+ 2360  clear
+ 2361  ./a.out 
+ 2362  clear
+ 2363  g++ execv.cpp 
+ 2364  ./a.out 
+ 2365  clear
+ 2366  g++ execv.cpp 
+ 2367  g++ execv.cpp -Wwrite-strings
+ 2368  g++ execv.cpp -no-Wwrite-strings
+ 2369  g++ execv.cpp
+ 2370  clear
+ 2371  g++ fork.cpp 
+ 2372  ./a.out 
+ 2373  clear
+ 2374  g++ fork.cpp 
+ 2375  ./a.out 
+ 2376  g++ fork.cpp 
+ 2377  ./a.out 
+ 2378  clear
+ 2379  g++ fork.cpp 
+ 2380  ./a.out 
+ 2381  g++ fork.cpp 
+ 2382  ./a.out 
+ 2383  clear
+ 2384  ls /dev
+ 2385  clear
+ 2386  cat /dev/random
+ 2387  cat /dev/random > rand
+ 2388  cat /dev/random > rand &
+ 2389  ls -l rand 
+ 2390  ps -ef
+ 2391  clear
+ 2392  ps -ef | grep cat
+ 2393  ls -l rand 
+ 2394  ps -ef | grep cat
+ 2395  kill 15512
+ 2396  ps -ef | grep cat
+ 2397  clear
+ 2398  cat rand
+ 2399  ls -l rand
+ 2400  chmod w+g rand 
+ 2401  chmod g+w rand 
+ 2402  ls -l rand
+ 2403  chmod g+rwx rand 
+ 2404  ls -l rand
+ 2405  ls /dev
+ 2406  ls
+ 2407  clear
+ 2408  su root
+ 2409  ls
+ 2410  whoami
+ 2411  shutdown --help
+ 2412  su root
+ 2413  exit
+ 2414  export PS1="\$ "
+ 2415  clear
+ 2416  cd proj/ucr-cs100/lecture/
+ 2417  clear
+ 2418  pwd
+ 2419  cd 
+ 2420  ls
+ 2421  ls -a
+ 2422  clear
+ 2423  cd ~
+ 2424  ls
+ 2425  cd
+ 2426  ls
+ 2427  cd ~/proj/ucr-cs100/lecture/
+ 2428  cd ..
+ 2429  ls
+ 2430  vim studyguide.md 
+ 2431  clear
+ 2432  cd lecture/
+ 2433  script lecture5
+ 2434  exit
+ 2435  history | grep export
+ 2436  export PS1="\$ "
+ 2437  clear
+ 2438  cd proj/ucr-cs100/lecture/
+ 2439  clear
+ 2440  pwd
+ 2441  ls
+ 2442  ls -a
+ 2443  clear
+ 2444  ls
+ 2445  vim fork.cpp 
+ 2446  vim execv.cpp
+ 2447  exit
+ 2448  ls /proc
+ 2449  ls /proc/1
+ 2450  ulimit
+ 2451  ulimit -a
+ 2452  cd proj/ucr-cs100
+ 2453  ./scripts/gradeassignment.sh katherinegallaher assignments/hw/hw0-vim
+ 2454  ./scripts/allgrades.sh 
+ 2455  g++ -strict
+ 2456  g++ --strict
+ 2457  g++ -pedantic
+ 2458  ./scripts/gradeassignment.sh aguerrero assignments/linux
+ 2459  history | grep export
+ 2460  export PS1="\$ "
+ 2461  clear
+ 2462  cd proj/ucr-cs100/lecture/
+ 2463  clear
+ 2464  echo test
+ 2465  echo test &
+ 2466  cat /dev/random
+ 2467  cat /dev/random > rand
+ 2468  cat /dev/random > rand &
+ 2469  ls -l rand
+ 2470  cat /dev/random > rand&
+ 2471  cat /dev/random > rand                                                                                                                                                                             &
+ 2472  cat /dev/random > rand                                                                                                                                                                             &                                                                                                             
+ 2473  clear
+ 2474  g++ stringtest.cpp 
+ 2475  clear
+ 2476  ./a.out 
+ 2477  clear
+ 2478  g++ stringtest.cpp 
+ 2479  ./a.out 
+ 2480  g++ stringtest.cpp 
+ 2481  ./a.out 
+ 2482  lear
+ 2483  clear
+ 2484  g++ -g --debug stringtest.cpp 
+ 2485  ./a.out 
+ 2486  gdb ./a.out 
+ 2487  g++ -g --debug stringtest.cpp 
+ 2488  gdb ./a.out 
+ 2489  clear
+ 2490  g++ -g --debug stringtest.cpp 
+ 2491  gdb ./a.out 
+ 2492  g++ -g --debug stringtest.cpp 
+ 2493  gdb ./a.out 
+ 2494  clear
+ 2495  g++ -g --debug stringtest.cpp 
+ 2496  gdb ./a.out 
+ 2497  clear
+ 2498  g++ -g --debug stringtest.cpp 
+ 2499  ./a.out 
+ 2500  g++ -g --debug stringtest.cpp 
+ 2501  ./a.out 
+ 2502  gdb ./a.out 
+ 2503  clear
+ 2504  make
+ 2505  make 
+ 2506  make target2
+ 2507  make 
+ 2508  make
+ 2509  exit
+ 2510  cd proj/HLearn/
+ 2511  cabal build 
+ 2512  cabal build hlearn-linear 
+ 2513  ls
+ 2514  ./hlearn-linear -d datasets/uci/wine.csv 
+ 2515  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2516  ./hlearn-linear -d datasets/uci/wine.csv 
+ 2517  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2518  top
+ 2519  cabal build 
+ 2520  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2521  ./hlearn-linear -d datasets/uci/wine.csv 
+ 2522  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2523  ./hlearn-linear -d datasets/uci/wine.csv | cat -b
+ 2524  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv | c
+ 2525  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2526  cabal build hlearn-linear && time ./hlearn-linear -d datasets/uci/wine.csv 
+ 2527  ./hlearn-linear -d datasets/uci/wine.csv
+ 2528  cabal build hlearn-linear && time ./hlearn-linear -d datasets/uci/wine.csv 
+ 2529  ./hlearn-linear -d datasets/uci/sonar.csv 
+ 2530  ./hlearn-linear -d datasets/uci/wine.csv
+ 2531  ./hlearn-linear -d datasets/uci/wine.csv --help
+ 2532  ./hlearn-linear -d datasets/uci/wine.csv --nocv
+ 2533  time ./hlearn-linear -d datasets/uci/wine.csv --nocv
+ 2534  time ./hlearn-linear -d datasets/uci/pima.csv --nocv
+ 2535  time ./hlearn-linear -d datasets/uci/pima-indians-diabetes.csv --nocv
+ 2536  ls
+ 2537  benchmarks/logreg/test.sh 
+ 2538  cd benchmarks/logreg/
+ 2539  ls
+ 2540  ./test.sh 
+ 2541  vim test.sh 
+ 2542  ./test.sh 
+ 2543  cat test.sh 
+ 2544  cd ../..
+ 2545  cabal install
+ 2546  cabal install hlearn-linear
+ 2547  cabal install
+ 2548  cd benchmarks/logreg/
+ 2549  ./test.sh 
+ 2550  cd ../..
+ 2551  ls
+ 2552  cabal build && ./hlearn-linear -d datasets/uci/wine.csv
+ 2553  cd ../..
+ 2554  cd proj/HLearn/
+ 2555  cabal build && ./hlearn-linear -d datasets/uci/wine.csv
+ 2556  [A
+ 2557  cabal build && ./hlearn-linear -d datasets/uci/wine.csv
+ 2558  ./hlearn-linear -d datasets/uci/wine.csv
+ 2559  cabal build 
+ 2560  ./hlearn-linear -d datasets/uci/wine.csv
+ 2561  cabal build && ./hlearn-linear -d datasets/uci/wine.csv
+ 2562  ./hlearn-linear -d datasets/uci/wine.csv
+ 2563  cat --help
+ 2564  gedit
+ 2565  ghci
+ 2566  su
+ 2567  ls#
+ 2568  ls #
+ 2569  ls #asdasdas
+ 2570  ls a#
+ 2571  echo hi
+ 2572  exit
+ 2573  export PS1="\$ "
+ 2574  cd proj/ucr-cs100/lecture/
+ 2575  clear
+ 2576  pwd
+ 2577  vim stringtest.cpp
+ 2578  ls
+ 2579  vim Makefile
+ 2580  ls
+ 2581  git status
+ 2582  git add Makefile
+ 2583  git add stringtest.cpp
+ 2584  git status
+ 2585  git commit -m "lecture 6"
+ 2586  git push origin
+ 2587  git pull
+ 2588  git push origin
+ 2589  clear
+ 2590  ls
+ 2591  ls -l
+ 2592  ls -a
+ 2593  ls -r
+ 2594  ls -R
+ 2595  clear
+ 2596  ls -a -l
+ 2597  ls -l -a
+ 2598  ls -la
+ 2599  ls -laR
+ 2600  ls -la -R
+ 2601  clear
+ 2602  pwd
+ 2603  clear
+ 2604  g++ bitwise.cpp 
+ 2605  ./a.out 
+ 2606  g++ bitwise.cpp 
+ 2607  ./a.out 
+ 2608  clear
+ 2609  g++ bitwise.cpp 
+ 2610  ./a.out 
+ 2611  g++ bitwise.cpp 
+ 2612  ./a.out 
+ 2613  g++ bitwise.cpp 
+ 2614  ./a.out l
+ 2615  ./a.out R
+ 2616  ./a.out a
+ 2617  ./a.out
+ 2618  clear
+ 2619  g++ bitwise.cpp 
+ 2620  ./a.out
+ 2621  g++ bitwise.cpp 
+ 2622  ./a.out
+ 2623  g++ bitwise.cpp 
+ 2624  ./a.out
+ 2625  g++ bitwise.cpp 
+ 2626  ./a.out
+ 2627  g++ bitwise.cpp 
+ 2628  ./a.out
+ 2629  clear
+ 2630  g++ bitwise.cpp 
+ 2631  ./a.out
+ 2632  g++ bitwise.cpp 
+ 2633  ./a.out
+ 2634  g++ bitwise.cpp 
+ 2635  ./a.out
+ 2636  g++ bitwise.cpp 
+ 2637  ./a.out
+ 2638  g++ bitwise.cpp 
+ 2639  ./a.out
+ 2640  clear
+ 2641  g++ bitwise.cpp 
+ 2642  ./a.out
+ 2643  g++ bitwise.cpp 
+ 2644  ./a.out
+ 2645  ls
+ 2646  cat test
+ 2647  clear
+ 2648  g++ bitwise.cpp 
+ 2649  ./a.out
+ 2650  g++ bitwise.cpp 
+ 2651  ./a.out
+ 2652  g++ bitwise.cpp 
+ 2653  ./a.out
+ 2654  g++ bitwise.cpp 
+ 2655  ./a.out
+ 2656  g++ bitwise.cpp 
+ 2657  clear
+ 2658  ./a.out
+ 2659  g++ bitwise.cpp 
+ 2660  ./a.out
+ 2661  g++ bitwise.cpp 
+ 2662  ./a.out
+ 2663  g++ bitwise.cpp 
+ 2664  ./a.out
+ 2665  g++ bitwise.cpp 
+ 2666  ./a.out
+ 2667  g++ bitwise.cpp 
+ 2668  ./a.out
+ 2669  g++ bitwise.cpp 
+ 2670  ./a.out
+ 2671  clear
+ 2672  g++ bitwise.cpp 
+ 2673  ./a.out
+ 2674  g++ bitwise.cpp 
+ 2675  ./a.out
+ 2676  g++ bitwise.cpp 
+ 2677  ./a.out
+ 2678  clear
+ 2679  cd ..
+ 2680  scripts/gradeassignment.sh DanTheTingler assignments/linux/
+ 2681  script lecture7
+ 2682  cat lecture7
+ 2683  exit
+ 2684  cd proj/ucr-cs100/lecture/
+ 2685  vim bitwise.cpp
+ 2686  cd ..
+ 2687  git status
+ 2688  git add assignments/quiz/quiz2
+ 2689  git add assignments/quiz/quiz3
+ 2690  git add lecture/bitwise.cpp
+ 2691  git status
+ 2692  git commit -m "lecture notes"
+ 2693  git push origin
+ 2694  exit
+ 2695  export PS1="\$ "
+ 2696  cd proj/ucr-cs100
+ 2697  ls
+ 2698  clear
+ 2699  cd lecture/
+ 2700  clear
+ 2701  ls
+ 2702  clear
+ 2703  script lecture8
+ 2704  top
+ 2705  ps -ef | grep random
+ 2706  kill 11865
+ 2707  kill 12175
+ 2708  kill 12235
+ 2709  kill 12238
+ 2710  kill 17403
+ 2711  ps -ef | grep random
+ 2712  ls
+ 2713  cd proj/HLearn/
+ 2714  ls
+ 2715  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2716  ./hlearn-linear -d datasets/uci/wine.csv --nocv
+ 2717  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2718  time ./hlearn-linear -d datasets/uci/wine.csv 
+ 2719  ghci
+ 2720  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2721  [A
+ 2722  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2723  [A
+ 2724  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2725  ghci
+ 2726  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2727  cabal build hlearn-linear && time ./hlearn-linear -d datasets/uci/wine.csv 
+ 2728  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2729  git status
+ 2730  git add .
+ 2731  git status
+ 2732  git commit -m "Revamped History monad to use pipes internally; significant speed and usability benefits"
+ 2733  git push origin
+ 2734  git pull
+ 2735  git branch
+ 2736  git status
+ 2737  git push 
+ 2738  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2739  [A
+ 2740  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2741  ls
+ 2742  cat optplot.dat 
+ 2743  ls
+ 2744  rm optplot.dat 
+ 2745  ghci
+ 2746  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2747  cat optplot.dat 
+ 2748  ls
+ 2749  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2750  cat optplot.dat 
+ 2751  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2752  cat optplot.dat 
+ 2753  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2754  cat optplot.dat 
+ 2755  rm optplot.dat 
+ 2756  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2757  cat optplot.dat 
+ 2758  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2759  cat optplot.dat 
+ 2760  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2761  cat optplot.dat 
+ 2762  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2763  cat optplot.dat 
+ 2764  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2765  cat optplot.dat 
+ 2766  rm optplot.dat 
+ 2767  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2768  cat optplot.dat 
+ 2769  ./hlearn-linear -d datasets/uci/wine.csv 
+ 2770  cat optplot.dat 
+ 2771  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2772  ls
+ 2773  killall hlearn-linear
+ 2774  killall -9 hlearn-linear
+ 2775  fg
+ 2776  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2777  ls
+ 2778  cd optplot.dat0000/
+ 2779  ls
+ 2780  cat func0.dat 
+ 2781  ls
+ 2782  cat opt.dat 
+ 2783  ls
+ 2784  cd .
+ 2785  cd ..
+ 2786  ls
+ 2787  ls tmp
+ 2788  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2789  ls
+ 2790  rm -r optplot.dat0000/
+ 2791  ls
+ 2792  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2793  [A
+ 2794  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2795  ls
+ 2796  cd optplot.dat.0001/
+ 2797  s
+ 2798  ls
+ 2799  cat func0.dat 
+ 2800  cd ..
+ 2801  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2802  cd optplot.dat.0002
+ 2803  s
+ 2804  ls
+ 2805  cat func0.dat 
+ 2806  ls
+ 2807  vim mkplots.gnu
+ 2808  gnuplot mkplots.gnu 
+ 2809  ls
+ 2810  gnuplot mkplots.gnu 
+ 2811  head opt.dat 
+ 2812  cd ..
+ 2813  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2814  ls
+ 2815  mv optplot.dat.0002/mkplots.gnu optplot.dat.0003/
+ 2816  cd optplot.dat.0003/
+ 2817  ls
+ 2818  gnuplot mkplots.gnu 
+ 2819  ls
+ 2820  cat func9.dat 
+ 2821  gnuplot mkplots.gnu 
+ 2822  ls
+ 2823  head opt.dat 
+ 2824  gnuplot mkplots.gnu 
+ 2825  ls
+ 2826  gnuplot mkplots.gnu 
+ 2827  head opt.dat 
+ 2828  head func0.dat 
+ 2829  tail func0.dat 
+ 2830  cat opt.dat 
+ 2831  cd ..
+ 2832  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2833  mv optplot.dat.0003/mkplots.gnu optplot.dat.0004/
+ 2834  ls
+ 2835  rm optplot.dat
+ 2836  cd optplot.dat.0004
+ 2837  ls
+ 2838  gnuplot mkplots.gnu 
+ 2839  cd ..
+ 2840  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2841  mv optplot.dat.0004/mkplots.gnu optplot.dat.0005/
+ 2842  cd optplot.dat.0005
+ 2843  gnuplot mkplots.gnu 
+ 2844  cd ..
+ 2845  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2846  mv optplot.dat.0005/mkplots.gnu optplot.dat.0006/
+ 2847  cd optplot.dat.0006
+ 2848  gnuplot mkplots.gnu 
+ 2849  cd ..
+ 2850  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2851  mv optplot.dat.0006/mkplots.gnu optplot.dat.0007/
+ 2852  cd optplot.dat.0007
+ 2853  gnuplot mkplots.gnu 
+ 2854  cd ..
+ 2855  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2856  mv optplot.dat.0007/mkplots.gnu optplot.dat.0008
+ 2857  cd optplot.dat.0008
+ 2858  gnuplot mkplots.gnu 
+ 2859  cd ..
+ 2860  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2861  ls
+ 2862  mv optplot.dat.0008/mkplots.gnu optplot.dat.0009/
+ 2863  cd optplot.dat.0009
+ 2864  gnuplot mkplots.gnu 
+ 2865  cd ..
+ 2866  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2867  mk optplot.dat.0009/mkplots.gnu optplot.dat.0010/
+ 2868  mv optplot.dat.0009/mkplots.gnu optplot.dat.0010/
+ 2869  cd optplot.dat.0010/
+ 2870  gnuplot mkplots.gnu 
+ 2871  ls
+ 2872  head func0.dat 
+ 2873  tail func0.dat 
+ 2874  ls
+ 2875  cat opt.dat 
+ 2876  cd ..
+ 2877  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2878  mk optplot.dat.0010/mkplots.gnu optplot.dat.0011/
+ 2879  mv optplot.dat.0010/mkplots.gnu optplot.dat.0011/
+ 2880  cd optplot.dat.0011
+ 2881  gnuplot mkplots.gnu 
+ 2882  cd ..
+ 2883  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2884  mk optplot.dat.0011/mkplots.gnu optplot.dat.0012
+ 2885  mv optplot.dat.0011/mkplots.gnu optplot.dat.0012
+ 2886  cd optplot.dat.0012/
+ 2887  gnuplot mkplots.gnu 
+ 2888  cd ..
+ 2889  cabal install cabal-install
+ 2890  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2891  mv optplot.dat.0012/mkplots.gnu optplot.dat.0013
+ 2892  cd optplot.dat.0013
+ 2893  gnuplot mkplots.gnu 
+ 2894  cd ..
+ 2895  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2896  mv optplot.dat.0013/mkplots.gnu optplot.dat.0014
+ 2897  cd optplot.dat.0014
+ 2898  gnuplot mkplots.gnu 
+ 2899  cd ..
+ 2900  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2901  ls
+ 2902  mv optplot.dat.0014/mkplots.gnu optplot.dat.0015
+ 2903  cd optplot.dat.0015
+ 2904  gnuplot mkplots.gnu 
+ 2905  cd ..
+ 2906  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2907  ls
+ 2908  cd optplot.dat.0016
+ 2909  ls
+ 2910  cp ../optplot.dat.0015/mkplots.gnu .
+ 2911  gnuplot mkplots.gnu 
+ 2912  head func-itr9-basis0.dat 
+ 2913  head func-itr0-basis0.dat 
+ 2914  cd ..
+ 2915  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2916  cd optplot.dat.0017/
+ 2917  cp ../optplot.dat.0016/mkplots.gnu .
+ 2918  gnuplot mkplots.gnu 
+ 2919  head func-itr0-basis0.dat 
+ 2920  head func-itr1-basis0.dat 
+ 2921  ls
+ 2922  gnuplot mkplots.gnu 
+ 2923  cd ..
+ 2924  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2925  cd optplot.dat.0018/
+ 2926  ls
+ 2927  gnuplot mkplots.gnu 
+ 2928  vim mkplots.gnu 
+ 2929  cd ..
+ 2930  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2931  ls
+ 2932  cd optplot.dat.0019
+ 2933  gnuplot mkplots.gnu 
+ 2934  vim mkplots.gnu 
+ 2935  cd ..
+ 2936  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2937  cd optplot.dat.0020
+ 2938  gnuplot mkplots.gnu 
+ 2939  vim mkplots.gnu 
+ 2940  gnuplot mkplots.gnu 
+ 2941  cd ..
+ 2942  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2943  cd optplot.dat.0021
+ 2944  gnuplot mkplots.gnu 
+ 2945  cd ..
+ 2946  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2947  cd optplot.dat.0022/
+ 2948  gnuplot mkplots.gnu 
+ 2949  cd ..
+ 2950  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2951  cd optplot.dat.0023/
+ 2952  gnuplot mkplots.gnu 
+ 2953  ~cd ..
+ 2954  cd ..
+ 2955  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2956  cd optplot.dat.0024
+ 2957  gnuplot mkplots.gnu 
+ 2958  cd ..
+ 2959  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2960  cd optplot.dat.0025/
+ 2961  gnuplot mkplots.gnu 
+ 2962  cd ..
+ 2963  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2964  cd optplot.dat.0026/
+ 2965  ls
+ 2966  gnuplot mkplots.gnu 
+ 2967  cd ..
+ 2968  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2969  cd optplot.dat.0027/
+ 2970  gnuplot mkplots.gnu 
+ 2971  cd ..
+ 2972  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2973  cd optplot.dat.0028/
+ 2974  gnuplot mkplots.gnu 
+ 2975  which gnuplot
+ 2976  chmod u+x mkplots.gnu 
+ 2977  ./mkplots.gnu 
+ 2978  cd ..
+ 2979  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2980  cd optplot.dat.0029/
+ 2981  gnuplot mkplots.gnu 
+ 2982  cd ..
+ 2983  cabal build hlearn-linear && ./hlearn-linear -d datasets/uci/wine.csv 
+ 2984  cd optplot.dat.0030/
+ 2985  gnuplot mkplots.gnu 
+ 2986  cd ..
+ 2987  ./hlearn-linear -d datasets/uci/pima-indians-diabetes.csv 
+ 2988  ./hlearn-linear -d datasets/uci/pima-indians-diabetes.csv -l 8
+ 2989  cd optplot.dat.0031/
+ 2990  gnuplot mkplots.gnu 
+ 2991  cd ..
+ 2992  ./hlearn-linear -d datasets/uci/sonar.csv 
+ 2993  ./hlearn-linear -d datasets/uci/sonar.csv -l 60
+ 2994  ls
+ 2995  cd optplot.dat.0032
+ 2996  gnuplot mkplots.gnu 
+ 2997  cd ..
+ 2998  ./hlearn-linear -d datasets/uci/sonar.csv -l 60 --help
+ 2999  ./hlearn-linear -d datasets/uci/sonar.csv -l 60 --nocv --regtype=L1 --regamount=1e-2
+ 3000  ./hlearn-linear -d datasets/uci/sonar.csv -l 60 --nocv --regtype=L1 --regamount=1e-4
+ 3001  ls
+ 3002  cd optplot.dat.0032
+ 3003  gnuplot mkplots.gnu 
+ 3004  cd ../optplot.dat.0033/
+ 3005  gnuplot mkplots.gnu 
+ 3006  ls
+ 3007  cd ../optplot.dat.0034
+ 3008  gnuplot mkplots.gnu 
+ 3009  cd ../..
+ 3010  ls
+ 3011  rm -r izbicki.me/
+ 3012  hakyll-init
+ 3013  uptime
+ 3014  cd proj/ucr-cs100
+ 3015  cat ./studentinfo/kryne001 
+ 3016  cd notes/
+ 3017  ls
+ 3018  vim sizes.cpp
+ 3019  g++ sizes.cpp 
+ 3020  ./a.out 
+ 3021  vim sizes.cpp
+ 3022  g++ sizes.cpp 
+ 3023  vim sizes.cpp
+ 3024  g++ sizes.cpp 
+ 3025  vim sizes.cpp
+ 3026  g++ sizes.cpp 
+ 3027  ./a.out 
+ 3028  vim sizes.cpp
+ 3029  ./a.out 
+ 3030  g++ sizes.cpp 
+ 3031  ./a.out 
+ 3032  vim sizes.cpp
+ 3033  g++ sizes.cpp 
+ 3034  ./a.out 
+ 3035  vim sizes.cpp
+ 3036  g++ sizes.cpp 
+ 3037  ./a.out 
+ 3038  vim sizes.cpp
+ 3039  g++ sizes.cpp 
+ 3040  vim sizes.cpp
+ 3041  g++ sizes.cpp 
+ 3042  ./a.out 
+ 3043  vim sizes.cpp
+ 3044  g++ sizes.cpp 
+ 3045  ./a.out 
+ 3046  vim sizes.cpp
+ 3047  g++ sizes.cpp 
+ 3048  vim sizes.cpp
+ 3049  g++ sizes.cpp 
+ 3050  ./a.out 
+ 3051  vim sizes.cpp
+ 3052  g++ sizes.cpp 
+ 3053  vim sizes.cpp
+ 3054  g++ sizes.cpp 
+ 3055  ./a.out 
+ 3056  vim sizes.cpp
+ 3057  g++ sizes.cpp 
+ 3058  ./a.out 
+ 3059  vim sizes.cpp
+ 3060  g++ sizes.cpp 
+ 3061  ./a.out 
+ 3062  vim sizes.cpp
+ 3063  g++ sizes.cpp 
+ 3064  ./a.out 
+ 3065  cd ../lecture/
+ 3066  git status
+ 3067  git add fork.cpp
+ 3068  git add execv.cpp
+ 3069  git add lecture5
+ 3070  git status
+ 3071  git commit -m "lecture notes"
+ 3072  git push origin
+ 3073  git pull
+ 3074  git push origin
+ 3075  cd..
+ 3076  cd ..
+ 3077  git checkout -b aguerrero-master master
+ 3078  git pull https://github.com/aguerrero/ucr-cs100.git master
+ 3079  vim assignments/quiz/quiz1/grade 
+ 3080  vim assignments/linux/grade 
+ 3081  vim assignments/hw/hw1-rshell/README.md 
+ 3082  git status
+ 3083  git add assignments/hw/hw1-rshell/README.md
+ 3084  git add assignments
+ 3085  git status
+ 3086  git commit -m "merged -pedantic"
+ 3087  git checkout master
+ 3088  git merge aguerro-master
+ 3089  git branch
+ 3090  git merge aguerrero-master
+ 3091  vim assignments/linux/grade 
+ 3092  git push origin
+ 3093  ./scripts/gradeassignment.sh aguerrero assignments/ec/ec-bounty
+ 3094  ls
+ 3095  cd assignments/quiz/
+ 3096  ls
+ 3097  mkdir quiz2
+ 3098  cd quiz2/
+ 3099  ls
+ 3100  vim README.md
+ 3101  vim grade
+ 3102  ls
+ 3103  cd ..
+ 3104  ls
+ 3105  mkdir quiz3
+ 3106  ls
+ 3107  cd quiz3/
+ 3108  ls
+ 3109  cp ../quiz1/quiz1-gitunix.tex .
+ 3110  ls
+ 3111  mv quiz1-gitunix.tex sizeof.tex
+ 3112  vim sizeof.tex 
+ 3113  ls
+ 3114  g++ sizeof.tex 
+ 3115  pdflatex sizeof.tex 
+ 3116  vim sizeof.tex 
+ 3117  cd ..
+ 3118  ls
+ 3119  mkdir quiz4
+ 3120  cd quiz4
+ 3121  ls
+ 3122  vim quiz.cpp
+ 3123  ls 
+ 3124  mv quiz.cpp ../../../notes/gdb.cpp
+ 3125  cd ../../../notes/
+ 3126  ls
+ 3127  g++ gdb.cpp 
+ 3128  ls
+ 3129  g++ gdb.cpp 
+ 3130  ./a.out 
+ 3131  vim gdb.cpp 
+ 3132  vim valgrind.cpp
+ 3133  cd ..
+ 3134  l
+ 3135  ls
+ 3136  cd notes
+ 3137  ls
+ 3138  vim valgrind.cpp 
+ 3139  cd ..
+ 3140  vim scripts/checkSystemCalls.sh
+ 3141  ls scripts/
+ 3142  chmod a+x scripts/checkSystemCalls.sh 
+ 3143  mv scripts/checkSystemCalls.sh checksyscalls.sh
+ 3144  ls
+ 3145  mv checksyscalls.sh scripts/
+ 3146  vim scripts/rmcomments.sh
+ 3147  chmod a+x scripts/rmcomments.sh 
+ 3148  vim scripts/checksyscalls.sh 
+ 3149  cd proj/ucr-cs100/notes/
+ 3150  ls
+ 3151  ./a.out 
+ 3152  g++ gdb.cpp 
+ 3153  ./a.out 
+ 3154  g++ gdb.cpp 
+ 3155  ./a.out 
+ 3156  g++ gdb.cpp 
+ 3157  ./a.out 
+ 3158  g++ gdb.cpp 
+ 3159  ./a.out 
+ 3160  g++ gdb.cpp 
+ 3161  ./a.out 
+ 3162  g++ gdb.cpp 
+ 3163  ./a.out 
+ 3164  g++ gdb.cpp 
+ 3165  ./a.out 
+ 3166  g++ gdb.cpp 
+ 3167  ./a.out 
+ 3168  g++ gdb.cpp 
+ 3169  ./a.out 
+ 3170  g++ gdb.cpp 
+ 3171  ./a.out 
+ 3172  g++ gdb.cpp 
+ 3173  ./a.out 
+ 3174  g++ gdb.cpp --debug
+ 3175  gdb
+ 3176  gdb a.out
+ 3177  g++ gdb.cpp --debug
+ 3178  gdb a.out
+ 3179  g++ valgrind.cpp 
+ 3180  gcc valgrind.cpp 
+ 3181  valgrind --tool=memcheck ./a.out 
+ 3182  gcc valgrind.cpp 
+ 3183  valgrind --tool=memcheck ./a.out 
+ 3184  gcc valgrind.cpp 
+ 3185  valgrind --tool=memcheck --leak-check=full ./a.out 
+ 3186  valgrind --tool=memcheck --leak-check=full -v ./a.out 
+ 3187  valgrind --tool=memcheck --leak-check=yes -v ./a.out 
+ 3188  gcc -g valgrind.cpp 
+ 3189  valgrind --tool=memcheck --leak-check=yes -v ./a.out 
+ 3190  gcc -g valgrind.cpp 
+ 3191  valgrind --tool=memcheck --leak-check=yes -v ./a.out 
+ 3192  grep --help
+ 3193  man grep
+ 3194  grep -o getlogin valgrind.cpp 
+ 3195  grep -o getlogin valgrind.cpp | wc -l
+ 3196  grep -o -e "{getlogin}" valgrind.cpp | wc -l
+ 3197  grep -o -e "{getlogin}" valgrind.cpp
+ 3198  grep -o -e "getlogin" valgrind.cpp
+ 3199  grep -o -e getlogin -e gethostname valgrind.cpp
+ 3200  grep -o -e getlogin -e gethostname valgrind.cpp | wc -l
+ 3201  grep -o -e getlogin -e gethostname valgrind.cpp valgrind.cpp | wc -l
+ 3202  ls
+ 3203  ../scripts/checksyscalls.sh valgrind.cpp 
+ 3204  echo $?
+ 3205  ../scripts/checksyscalls.sh valgrind.cpp 
+ 3206  echo $?
+ 3207  ../scripts/checksyscalls.sh valgrind.cpp 
+ 3208  echo $?
+ 3209  ../scripts/checksyscalls.sh valgrind.cpp 
+ 3210  ../scripts/checksyscalls.sh valgrind.cpp valgrind.cpp 
+ 3211  ../scripts/checksyscalls.sh *.cpp 
+ 3212  ls ../scripts/
+ 3213  ../scripts/rmcomments.sh 
+ 3214  ../scripts/checksyscalls.sh *.cpp 
+ 3215  ../scripts/checksyscalls.sh valgrind.cpp 
+ 3216  cat valgrind.cpp | sed s/\".*\"//g
+ 3217  cat valgrind.cpp | sed s/\".*?\"//g
+ 3218  cat valgrind.cpp | sed s/\".*\"//g
+ 3219  cat valgrind.cpp | sed s/\".*[^\"]\"//g
+ 3220  cat valgrind.cpp | sed s/\".*[^\\\\"]\"//g
+ 3221  cat valgrind.cpp | sed s/\".*[^\"]\"//g
+ 3222  sed s/[^\"]/a/g
+ 3223  cat valgrind.cpp | sed s/\"[^\"]*\"//g
+ 3224  ../scripts/checksyscalls.sh valgrind.cpp 
+ 3225  cd ..
+ 3226  ls
+ 3227  ls scripts
+ 3228  git add scripts/
+ 3229  git status
+ 3230  git commit -m "scripts for checking error handling"
+ 3231  git push origin
+ 3232  cd lecture/
+ 3233  ls
+ 3234  cd ../notes/
+ 3235  g++ valgrind.cpp 
+ 3236  ./a.out 
+ 3237  g++ valgrind.cpp 
+ 3238  ./a.out 
+ 3239  ls -l
+ 3240  g++ valgrind.cpp 
+ 3241  ./a.out 
+ 3242  g++ valgrind.cpp 
+ 3243  ./a.out 
+ 3244  cd proj/glowing-wookie/
+ 3245  git checkout -b holidaylvr-master master
+ 3246  git checkout holidaylvr-master master
+ 3247  git checkout holidaylvr-master
+ 3248  git pull https://github.com/holidaylvr/glowing-wookie.git master
+ 3249  git checkout master
+ 3250  git merge --no-ff holidaylvr-master
+ 3251  git push origin master
+ 3252  git status
+ 3253  git pull
+ 3254  vim src/Display.hs 
+ 3255  git status
+ 3256  vim src/Main.hs 
+ 3257  git add src/Display.hs
+ 3258  git add src/Main.hs
+ 3259  ls
+ 3260  vim .gitignore
+ 3261  git commit -m "merged"
+ 3262  ls
+ 3263  ls src/ -a
+ 3264  git rm src/.Main.hs.swo
+ 3265  git rm src/.Root.hs.swp
+ 3266  git rm src/.App.hs.swp
+ 3267  ls -a src/
+ 3268  git commit -m "removed vim files"
+ 3269  git push origin
+ 3270  ls
+ 3271  cd proj/izbicki.me/
+ 3272  ls
+ 3273  vim myexperimentsintruth.wordpress.2014-08-08\(1\).xml 
+ 3274  tail -s 3 -f /var/log/messages
+ 3275  su
+ 3276  export PS1="\$ "
+ 3277  cd proj/ucr-cs100
+ 3278  ls
+ 3279  cd lecture/
+ 3280  clear
+ 3281  vim valgrind.cpp
+ 3282  vim stat.cpp
+ 3283  ls -l
+ 3284  git status
+ 3285  git add lecture8
+ 3286  git add stat.cpp
+ 3287  git add valgrind.cpp
+ 3288  git commit -m "lecture notes"
+ 3289  git push origin
+ 3290  exit
+ 3291  ls -l
+ 3292  ls
+ 3293  man ls
+ 3294  info ls
+ 3295  si
+ 3296  su
+ 3297  mount
+ 3298  umount /dev/sdd1
+ 3299  clear
+ 3300  mount
+ 3301  umount /mnt/hd
+ 3302  mount /dev/sdc1 /mnt/hd
+ 3303  su
+ 3304  env
+ 3305  export
+ 3306  env --help
+ 3307  ls
+ 3308  cd proj/ucr-cs100/lecture/
+ 3309  ls
+ 3310  cat lecture8
+ 3311  ghci
+ 3312  cd proj/ucr-cs100
+ 3313  ls
+ 3314  vim studyguide.md 
+ 3315  vim assignments/quiz/quiz4/bitwise.tex 
+ 3316  cd assignments/quiz/quiz4
+ 3317  pdflatex bitwise.tex 
+ 3318  export PS1="\$ "
+ 3319  clear
+ 3320  g++ macroquiz.cpp 
+ 3321  ./a.out 
+ 3322  g++ macroquiz.cpp 
+ 3323  ./a.out 
+ 3324  g++ macroquiz.cpp 
+ 3325  ./a.out 
+ 3326  clear
+ 3327  g++ macroquiz.cpp 
+ 3328  ./a.out 
+ 3329  g++ macroquiz.cpp 
+ 3330  ./a.out 
+ 3331  g++ macroquiz.cpp 
+ 3332  ./a.out 
+ 3333  g++ macroquiz.cpp 
+ 3334  ./a.out 
+ 3335  g++ macroquiz.cpp 
+ 3336  clear
+ 3337  g++ macroquiz.cpp 
+ 3338  ./a.out 
+ 3339  g++ macroquiz.cpp 
+ 3340  ./a.out 
+ 3341  clear
+ 3342  g++ macroquiz.cpp 
+ 3343  ./a.out 
+ 3344  clear
+ 3345  g++ macroquiz.cpp 
+ 3346  ./a.out 
+ 3347  clear
+ 3348  g++ macroquiz.cpp 
+ 3349  clear
+ 3350  g++ macroquiz.cpp 
+ 3351  ./a.out 
+ 3352  g++ macroquiz.cpp 
+ 3353  ./a.out 
+ 3354  g++ macroquiz.cpp 
+ 3355  ./a.out 
+ 3356  g++ macroquiz.cpp 
+ 3357  ./a.out 
+ 3358  clear
+ 3359  g++ macroquiz.cpp 
+ 3360  ./a.out 
+ 3361  g++ macroquiz.cpp 
+ 3362  ./a.out 
+ 3363  g++ macroquiz.cpp 
+ 3364  ./a.out 
+ 3365  clear
+ 3366  g++ macroquiz.cpp 
+ 3367  ./a.out 
+ 3368  ls -l
+ 3369  whoami
+ 3370  clear
+ 3371  whoami --help
+ 3372  whoami -un
+ 3373  whoami -n
+ 3374  man whoami
+ 3375  clear
+ 3376  ls -l
+ 3377  id
+ 3378  clear
+ 3379  cl
+ 3380  ls
+ 3381  ls -l
+ 3382  clear
+ 3383  ls
+ 3384  cd ..
+ 3385  ls
+ 3386  pwd
+ 3387  git pull
+ 3388  ls
+ 3389  ls scripts/
+ 3390  clear
+ 3391  ls scripts/
+ 3392  ./scripts/calcgrade.sh mikeizbicki
+ 3393  cd assignments/lab/lab0
+ 3394  cd assignments/lab/lab0-vim/
+ 3395  vim grade 
+ 3396  clear
+ 3397  bit blame grade
+ 3398  git blame grade
+ 3399  exit
+ 3400  export PS1="\$ "
+ 3401  clear
+ 3402  g++ readwrite.cpp 
+ 3403  ./a.out 
+ 3404  g++ readwrite.cpp 
+ 3405  ./a.out 
+ 3406  g++ readwrite.cpp 
+ 3407  ./a.out 
+ 3408  g++ readwrite.cpp 
+ 3409  ./a.out 
+ 3410  cat test
+ 3411  rm test
+ 3412  ./a.out 
+ 3413  cat test
+ 3414  clear
+ 3415  g++ readwrite.cpp 
+ 3416  ./a.out 
+ 3417  cat doesnotexist
+ 3418  g++ readwrite.cpp 
+ 3419  ./a.out 
+ 3420  g++ readwrite.cpp 
+ 3421  ./a.out 
+ 3422  cat doesnotexist
+ 3423  g++ readwrite.cpp 
+ 3424  ./a.out 
+ 3425  g++ readwrite.cpp 
+ 3426  ./a.out 
+ 3427  g++ readwrite.cpp 
+ 3428  ./a.out 
+ 3429  g++ readwrite.cpp 
+ 3430  ./a.out 
+ 3431  clear
+ 3432  g++ readwrite.cpp 
+ 3433  ./a.out 
+ 3434  g++ readwrite.cpp 
+ 3435  ./a.out 
+ 3436  g++ readwrite.cpp 
+ 3437  ./a.out 
+ 3438  g++ readwrite.cpp 
+ 3439  ./a.out 
+ 3440  cat doesnotexist 
+ 3441  cat doesnotexist > out
+ 3442  cat out
+ 3443  g++ readwrite.cpp 
+ 3444  ./a.out 
+ 3445  ./a.out > out2
+ 3446  cat out2
+ 3447  clear
+ 3448  ./a.out 2> out2
+ 3449  g++ readwrite.cpp 
+ 3450  ./a.out 2> out2
+ 3451  cat out2
+ 3452  cat out | tee q 
+ 3453  history | grep export
+ 3454  grep export
+ 3455  clear
+ 3456  grep export
+ 3457  grep export > out
+ 3458  cat out
+ 3459  grep export > out
+ 3460  cat out
+ 3461  grep -e "export"
+ 3462  grep export
+ 3463  grep -e "^export"
+ 3464  grep -e "export$"
+ 3465  clear
+ 3466  grep -e "export$"
+ 3467  grep -e "^export$"
+ 3468  grep -e "^e..t$"
+ 3469  grep -e "."
+ 3470  clear
+ 3471  grep -e ".*@.*"
+ 3472  grep -e " .*@.* "
+ 3473  grep -e "a*b*cc "
+ 3474  grep -e "a*b*cc"
+ 3475  clear
+ 3476  # search our history for when we're using export and when we're using cat
+ 3477  export | cat
+ 3478  clear
+ 3479  history | grep cat | grep export
+ 3480  yes
+ 3481  clear
+ 3482  yes | grep y
+ 3483  clear
+ 3484  yes | grep y | grep cat
+ 3485  yes | grep cat | grep y
+ 3486  history | tail
+ 3487  history | head
+ 3488  export PS1="\$ "
+ 3489  clear
+ 3490  g++ readwrite.cpp 
+ 3491  ./a.out 
+ 3492  g++ readwrite.cpp 
+ 3493  ./a.out 
+ 3494  g++ readwrite.cpp 
+ 3495  ./a.out 
+ 3496  g++ readwrite.cpp 
+ 3497  ./a.out 
+ 3498  cat test
+ 3499  rm test
+ 3500  ./a.out 
+ 3501  cat test
+ 3502  clear
+ 3503  g++ readwrite.cpp 
+ 3504  ./a.out 
+ 3505  cat doesnotexist
+ 3506  g++ readwrite.cpp 
+ 3507  ./a.out 
+ 3508  g++ readwrite.cpp 
+ 3509  ./a.out 
+ 3510  cat doesnotexist
+ 3511  g++ readwrite.cpp 
+ 3512  ./a.out 
+ 3513  g++ readwrite.cpp 
+ 3514  ./a.out 
+ 3515  g++ readwrite.cpp 
+ 3516  ./a.out 
+ 3517  g++ readwrite.cpp 
+ 3518  ./a.out 
+ 3519  clear
+ 3520  g++ readwrite.cpp 
+ 3521  ./a.out 
+ 3522  g++ readwrite.cpp 
+ 3523  ./a.out 
+ 3524  g++ readwrite.cpp 
+ 3525  ./a.out 
+ 3526  g++ readwrite.cpp 
+ 3527  ./a.out 
+ 3528  cat doesnotexist 
+ 3529  cat doesnotexist > out
+ 3530  cat out
+ 3531  g++ readwrite.cpp 
+ 3532  ./a.out 
+ 3533  ./a.out > out2
+ 3534  cat out2
+ 3535  clear
+ 3536  ./a.out 2> out2
+ 3537  g++ readwrite.cpp 
+ 3538  ./a.out 2> out2
+ 3539  cat out2
+ 3540  cat out | tee q 
+ 3541  history | grep export
+ 3542  grep export
+ 3543  clear
+ 3544  grep export
+ 3545  grep export > out
+ 3546  cat out
+ 3547  grep export > out
+ 3548  cat out
+ 3549  grep -e "export"
+ 3550  grep export
+ 3551  grep -e "^export"
+ 3552  grep -e "export$"
+ 3553  clear
+ 3554  grep -e "export$"
+ 3555  grep -e "^export$"
+ 3556  grep -e "^e..t$"
+ 3557  grep -e "."
+ 3558  clear
+ 3559  grep -e ".*@.*"
+ 3560  grep -e " .*@.* "
+ 3561  grep -e "a*b*cc "
+ 3562  grep -e "a*b*cc"
+ 3563  clear
+ 3564  # search our history for when we're using export and when we're using cat
+ 3565  export | cat
+ 3566  clear
+ 3567  history | grep cat | grep export
+ 3568  yes
+ 3569  clear
+ 3570  yes | grep y
+ 3571  clear
+ 3572  yes | grep y | grep cat
+ 3573  yes | grep cat | grep y
+ 3574  history | tail
+ 3575  history | head
+ 3576  clear
+ 3577  history | grep export | grep cat
+ 3578  history | grep cat | grep export
+ 3579  history | grep export | tail
+ 3580  history | tail | grep export 
+ 3581  clear
+ 3582  history | head | grep export 
+ 3583  su
+ 3584  ghci
+ 3585  cd proj/ucr-cs100
+ 3586  git checkout -b katherinegallaher-master master
+ 3587  git pull https://github.com/katherinegallaher/ucr-cs100.git master
+ 3588  git reset
+ 3589  git branch
+ 3590  git checkout master
+ 3591  git cherry-pick 2fd1b65
+ 3592  git status
+ 3593  git reset
+ 3594  git status
+ 3595  git cherry-pick 2fd1b65
+ 3596  git cherry-pick 2fd1b65 --force
+ 3597  git stash
+ 3598  git cherry-pick 2fd1b65
+ 3599  git cherry-pick 639969d
+ 3600  git status
+ 3601  git push origin
+ 3602  git blame assignments/hw/hw3-piping/README.md
+ 3603  ./scripts/gradeassignment.sh assignments/ec/ec-bounty/ katherinegallaher
+ 3604  su
+ 3605  /usr/lib/cups/filter/foomatic-rip
+ 3606  /usr/lib/cups/filter/foomatic-rip --help
+ 3607  man foomatic-rip
+ 3608  ghci
+ 3609  cd docs/phd/research/math-politics/
+ 3610  ls
+ 3611  vim math-politics.tex
+ 3612  [ -e test ]
+ 3613  ls
+ 3614  [ -f 2014-08-06-150338_2390x768_scrot.png ]
+ 3615  ehco $?
+ 3616  [ -f 2014-08-06-150338_2390x768_scrot.png ]
+ 3617  echo $?
+ 3618  [ -f 2014-08-06-150338_2390x768_scrot.pn ]
+ 3619  echo $?
+ 3620  man [
+ 3621  eval 1 + 2
+ 3622  expr 1 + 2
+ 3623  expr 1 / 2
+ 3624  expr 1 /* 2
+ 3625  expr 1 2
+ 3626  clear
+ 3627  cat test | tail > qwerty
+ 3628  clear
+ 3629  g++ dup.cpp 
+ 3630  ./a.out 
+ 3631  cat test
+ 3632  rm test
+ 3633  ./a.out 
+ 3634  cat test
+ 3635  clear
+ 3636  g++ dup.cpp 
+ 3637  ./a.out 
+ 3638  cat test
+ 3639  g++ dup.cpp 
+ 3640  ./a.out 
+ 3641  cat test
+ 3642  clear
+ 3643  g++ dup.cpp 
+ 3644  ./a.out 
+ 3645  cat test
+ 3646  rm test
+ 3647  ./a.out 
+ 3648  cat test
+ 3649  g++ dup.cpp 
+ 3650  ./a.out 
+ 3651  rm test
+ 3652  ./a.out 
+ 3653  cat test
+ 3654  g++ dup.cpp 
+ 3655  ./a.out 
+ 3656  clear
+ 3657  g++ dup.cpp 
+ 3658  ./a.out 
+ 3659  g++ dup.cpp 
+ 3660  ./a.out 
+ 3661  g++ dup.cpp 
+ 3662  ./a.out 
+ 3663  g++ dup.cpp 
+ 3664  ./a.out 
+ 3665  g++ dup.cpp 
+ 3666  ./a.out 
+ 3667  rm test
+ 3668  g++ dup.cpp 
+ 3669  ./a.out 
+ 3670  cat test
+ 3671  ls -l test
+ 3672  chmod u+rr test
+ 3673  cat test
+ 3674  clear
+ 3675  g++ dup.cpp 
+ 3676  ./a.out 
+ 3677  rm test
+ 3678  ./a.out 
+ 3679  rm test; g++ dup.cpp; ./a.out
+ 3680  ls > results
+ 3681  rm test; g++ dup.cpp; ./a.out
+ 3682  cat test
+ 3683  clear
+ 3684  cat /dev/random
+ 3685  cat /dev/random > random &
+ 3686  gedit
+ 3687  gedit &
+ 3688  ls
+ 3689  clear
+ 3690  cat < test
+ 3691  cat <<< test
+ 3692  cat | cat| cat| cat| cat| tail 
+ 3693  rm test; g++ pipe.cpp; ./a.out
+ 3694  g++ pipe.cpp; ./a.out
+ 3695  clear
+ 3696  cat test | out
+ 3697  cat test | cat
+ 3698  history | tail
+ 3699  g++ pipe.cpp; ./a.out
+ 3700  clear
+ 3701  g++ pipe.cpp; ./a.out
+ 3702  clear
+ 3703  exit
+ 3704  history | grep export
+ 3705  export PS1="\$ "
+ 3706  clear
+ 3707  cat | cat | cat 
+ 3708  cat
+ 3709  fg
+ 3710  clear
+ 3711  g++ signal.cpp; ./a.out 
+ 3712  fg
+ 3713  g++ signal.cpp; ./a.out 
+ 3714  clar
+ 3715  clear
+ 3716  g++ signal.cpp; ./a.out 
+ 3717  clear
+ 3718  g++ signal.cpp; ./a.out 
+ 3719  clear
+ 3720  g++ signal.cpp; ./a.out 
+ 3721  lear
+ 3722  clear
+ 3723  ps -ef | grep a.out
+ 3724  killall a.out
+ 3725  clear
+ 3726  g++ return.cpp 
+ 3727  ./a.out 
+ 3728  g++ return.cpp; ./a.out
+ 3729  g++ return.cpp && ./a.out
+ 3730  g++ return.cpp; ./a.out
+ 3731  ./a.out && ./a.out 
+ 3732  ./a.out; ./a.out 
+ 3733  clear
+ 3734  g++ return.cpp; ./a.out
+ 3735  ./a.out && ./a.out 
+ 3736  ./a.out; ./a.out 
+ 3737  g++ return.cpp; ./a.out
+ 3738  ./a.out && ./a.out 
+ 3739  if ./a.out; then echo "hi"; echo "tst"; fi
+ 3740  ls -l bashtest.sh 
+ 3741  ./bashtest.sh
+ 3742  chmod u+x bashtest.sh 
+ 3743  ./bashtest.sh
+ 3744  clear
+ 3745  [ -f testfile.old ] && ./a.out 
+ 3746  [ -f testfile.oldjhjtruytru ] && ./a.out 
+ 3747  man [
+ 3748  [ 1 -gt 1 ] && ./a.out 
+ 3749  [ 1 -gt 2 ] && ./a.out 
+ 3750  [ 3 -gt 2 ] && ./a.out 
+ 3751  mkdir bin
+ 3752  [ -d bin ] && mkdir bin
+ 3753  [ ! -d bin ] && mkdir bin
+ 3754  rm -r
+ 3755  rm -r bin
+ 3756  [ ! -d bin ] && mkdir bin
+ 3757  ls bin
+ 3758  clear
+ 3759  1+2
+ 3760  ./bashtest.sh 
+ 3761  expr 1+ 2
+ 3762  expr 1 + 2
+ 3763  expr 1 / 2
+ 3764  echo $[ 1 + 2]
+ 3765  ./bashtest.sh 
+ 3766  clear
+ 3767  ./bashtest.sh 
+ 3768  clear
+ 3769  ./bashtest.sh 
+ 3770  clear
+ 3771  ./bashtest.sh 
+ 3772  clear
+ 3773  ./bashtest.sh -l -a
+ 3774  ./a.out 
+ 3775  ./a.out < testfile.old 
+ 3776  cat < testfile.old 
+ 3777  cat testfile.old 
+ 3778  history > out

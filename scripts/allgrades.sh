@@ -1,15 +1,14 @@
 #!/bin/bash
 
+#
+# This script displays the grades of all users enrolled in the class.
+#
+
 scriptdir=`dirname "$0"`
 source "$scriptdir/config.sh"
 
-###############################################################################
-
-function pad {
-    ret="${1:0:$2}                                                  "
-    ret="${ret:0:$2}"
-    echo "$ret"
-}
+#######################################
+# display
 
 echo "================================================================================"
 echo " name                 | cs account | github account   | points      | percent  "
@@ -23,12 +22,15 @@ for file in studentinfo/*; do
     
     totalgrade=`totalGrade "$githubaccount"`
     totaloutof=`totalOutOf "$githubaccount"`
+    rtotaloutof=`runningTotalOutOf "$githubaccount"`
+    rpercent=`bc <<< "scale=2; 100 * $totalgrade/$rtotaloutof"`
     percent=`bc <<< "scale=2; 100 * $totalgrade/$totaloutof"`
 
-    printf " $(pad "$csaccount" 20) |"
+    printf " $(pad "$name" 20) |"
     printf " $(pad "$csaccount" 10) |"
     printf " $(pad "$githubaccount" 16) |"
-    printf " %4s / %4s | $percent \n" $totalgrade $totaloutof
+    printf " %4s / %4s | $rpercent " $totalgrade $rtotaloutof
+    echo
 done
 
 echo "================================================================================"

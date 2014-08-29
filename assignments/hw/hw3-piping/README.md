@@ -2,9 +2,9 @@
 
 ### coding requirements
 
-Extend your `rshell` program so that it properly handles input redirection `<`, output redirection `>` and `>>`, and piping `|`.  This will require using the Unix functions `dup2` and `pipe`.
+Extend your `rshell` program so that it properly handles input redirection `<`, output redirection `>` and `>>`, and piping `|`.  This will require using the Unix functions `dup` and `pipe`.  You might find [this tutorial](http://www.eecis.udel.edu/~bmiller/cis459/2007s/readings/buff-overflow.html) on use these functions useful. Of course, you should also be consulting the man pages.
 
-For example, after this assignment, your program should be able to successfully handle the following command:
+As an example, after this assignment, your program should be able to successfully handle the following command:
 
 ```
 $ cat < existingInputFile | tr A-Z a-z | tee newOutputFile1 | tr a-z A-Z > newOutputFile2 &
@@ -14,14 +14,14 @@ $ cat < existingInputFile | tr A-Z a-z | tee newOutputFile1 | tr a-z A-Z > newOu
 
 ### submission instructions
 
-You will add this code to your `rshell` project on github.  Create a branch called `redirect` and do all of your work under this branch.  When finished, merge with the `master` branch and create a tag called `hw2`.
+You will add this code to your `rshell` project on github.  Create a branch called `redirect` and do all of your work under this branch.  When finished, merge with the `master` branch and create a tag called `hw3`.
 
 To download and grade your homework, the TA will run the following commands:
 
 ```
 $ git clone  http://github.com/yourusername/rshell.git
 $ cd rshell
-$ git checkout hw2
+$ git checkout hw3
 $ make
 $ bin/rshell
 ```
