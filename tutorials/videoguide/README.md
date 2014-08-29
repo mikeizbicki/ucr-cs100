@@ -1,4 +1,4 @@
-Learn To Use GitHub, The Terminal, vim, & More!
+Guide To Getting Started: The Terminal, GitHub, & VIM
 ===
 Learning to use github, vim, and the terminal can be very confusing and hard to learn when you are so used to writing code and saving it your own way. Thankfully, we've created a simple video guide to help you reach your potential in most areas of the terminal, github, and vim. 
 
