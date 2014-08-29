@@ -66,9 +66,11 @@ innocent ways to abuse this feature. Consider the average CS student
 that will be searching for job after graduation. Such a student may be
 building a portfolio to present to possible employers but may not have
 anything on GitHub that catches too much attention. One way to change
-that could be fake some commits from  some high profile programmers like
+that could be fake some commits from some high profile programmers like
 Linus Torvalds. Having some commits from Linus may get your project some
-attention.
+attention and make people assume you are a better programmer than you
+really are. After all if your project was bad there would be no way
+Linus would have looked at it and contributed in the first place.
 
 ## Additional Information
 TODO: Add links relating to documentation pertaining to this bug. Also
