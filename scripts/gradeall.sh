@@ -30,6 +30,6 @@ for student in studentinfo/*; do
     githubaccount=`tail -n 1 $student`
 
     downloadgrades "$githubaccount"
-    gradefile "$classname-$githubaccount/$assn/grade"
+    gradefile "$tmpdir/$classname-$githubaccount/$assn/grade"
     uploadgrades "$githubaccount"
 done    
