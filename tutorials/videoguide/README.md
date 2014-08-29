@@ -56,7 +56,7 @@ Learning GitHub
 - Learn the reason why we have a `README.md` & `LICENSE` file
 - Learn what should be included within your `README.md`
 - Learn to format your `README.md` file
-- Review the GNU `LICENSE` file
+- Review the GNU `LICENSE` file  
 [![Alt text for your video](http://img.youtube.com/vi/HZaB8uVMXAg/0.jpg)](https://www.youtube.com/watch?v=HZaB8uVMXAg)
 
 
