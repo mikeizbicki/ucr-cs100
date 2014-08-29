@@ -41,7 +41,8 @@ Learning GitHub
 
 
 
-###Learning `vim`
+Learning `vim`
+---
 Vim has so many commands that it can be intimidating for first time users.  They may feel that using a different, more familiar, editor would make coding more efficient. It may be difficult to remember what all of these new commands do, but these users may even begin to enjoy using it more than their previous editors if given enough time to practice with Vim.  I am not master at using Vim and am still learning new things about it.  Overtime, I learned a few tricks that helped me utilize Vim to make better code.
 
 
@@ -81,8 +82,8 @@ Cutting, copying, and pasting took a while to get used to when using Vim. Someti
 
 
 
-###Learning The Terminal
-
+Learning The Terminal
+---
 ####The `ls` command
 [![Alt text for your video](http://img.youtube.com/vi/RMxvcc_QUUI/0.jpg)](https://www.youtube.com/watch?v=RMxvcc_QUUI)_
 
@@ -109,7 +110,8 @@ Similar to using d to get rid of code, I learned a few ways to replace what was 
 
 
 
-###Helpful Hints
+Helpful Hints
+---
 It took me quite a while to completely understand the `%` command.  It is supposed to match the current parenthesis, or a character similar to parentheses, to the one that closes it but there were times when it just did not work.  When it works, it is very helpful for it helps users to see if something is outside of a loop or if a loop ends where it should, but I noticed that it sometimes would be buggy if there was some parenthesis in comments.  The `%` command does not differentiate between something a comment or normal code.  This led to some very confusing moments where it would seem that my code would work even if `%` told me that the parenthesis did not match up correctly.  Users should make sure to keep track of any parenthesis in comments if they decide to use the `%` command.
 
 Many of these commands are very helpful to speed up coding, but can still take quite a while if they are needed to be done multiple times.  This can be solved by simply typing the number of times a user wants the command to be done before the user types the command.  If I wanted to indent multiple lines three times, then I would do what I normally would do but type `3>` instead of just `>` by itself.  This may not seem like much, because highlighting it and using `>` three times will give the same result and may seem easier.  The reason why using a number is so useful is it would be quite time-consuming to highlight one 100 lines of code each time it is to be indented. This helps save time when doing that command a great number of times or over a large amount of code.
@@ -132,6 +134,7 @@ One of the first things I noticed about Vim that I initially disliked was that i
 
 
 
-###In Conclusion
+In Conclusion
+---
 Vim can seem frustrating at first and it may appear to be much more difficult to do what people are used to. Users may want to give up because they have to relearn commands that were once second nature with other editors.  It may take a while to relearn things such as `u` is now undo and `cntrl-R` is now redo, but it will be worth it in the end.  Vim has many tricks that can help speed up programming, even if new users do not learn it all right away.  The information can always be found if new users need a reminder on how to do something.  With time, the commands in Vim will start to become just as easy to use as the commands in any other editor.  If users stick to learning how to use Vim a little at a time, then they will begin to be surprised how they ever coded without it.
 
