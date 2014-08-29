@@ -46,7 +46,29 @@ permission I went and tried out my idea. The process of committing with
 Mike's credentials was straight forward. First I changed the grade in
 file and then added the file with `git add grade`. The commit was made
 with `git commit --author="Mike Izbicki <mike@izbicki.me>" -m "Change
-grade"`.
+grade"`. My concern about pushing with my Github credentials were not an
+issue and all signs pointed to Mike have made the commit himself. You
+may be wondering why git even allows this to happen in the first place
+and the answer is simple. The person pushing new commits to a repository
+may not be the person who made the changes. In a team environment many
+people may commit code changes but for whatever reason one person may be
+the only one responsible for pushing the code. So what happens to be a
+Git feature helped my get extra credit in class.
+
+## Using Git for Evil
+In the example above Mike happened to be a contributor to my repository
+but would the same method work for non contributors? It turns out it
+still works. If you look up the git log to this repository you'll see
+that 5 GitHub staff members have also contributed to this repository and
+made changes to the file `look_inside.txt`. While this case of
+committing commit fraud was rather innocent there are a few not so
+innocent ways to abuse this feature. Consider the average CS student
+that will be searching for job after graduation. Such a student may be
+building a portfolio to present to possible employers but may not have
+anything on GitHub that catches too much attention. One way to change
+that could be fake some commits from  some high profile programmers like
+Linus Torvalds. Having some commits from Linus may get your project some
+attention.
 
 ## Additional Information
 TODO: Add links relating to documentation pertaining to this bug. Also
