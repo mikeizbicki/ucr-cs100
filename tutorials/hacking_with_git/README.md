@@ -85,4 +85,4 @@ benefit from verifiable commits.
 
 # Additional Information
 More information on the use of git can be found be reading the
-documentation found [here](www.git-scm.com/documentation)
+documentation found at (www.git-scm.com/documentation).
