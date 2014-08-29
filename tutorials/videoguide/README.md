@@ -10,6 +10,7 @@ Click [HERE](https://www.youtube.com/watch?v=Fv5Cy8i14ck&list=PLQ6W7BIxh4zvbwT7c
 Clock [HERE](https://github.com/svill014/test) To Read Our Paper On *Helpful Commands for vim* (excerpt inserted above related videos below)
 
 ###Learning GitHub
+---
 
 ####Getting Started
 [![Alt text for your video](http://img.youtube.com/vi/Fv5Cy8i14ck/0.jpg)](https://www.youtube.com/watch?v=Fv5Cy8i14ck)
