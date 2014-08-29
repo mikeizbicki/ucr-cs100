@@ -35,6 +35,19 @@ is no way of telling if your name and email address are actually your
 name and email address. With this in mind, lets look at how I used this
 information to hack our grading system.
 
+## Changing My Grade
+After determining that there was no way git could tell if I was who my
+configurations said I was I was left with one last hurdle. When pushing
+to a GitHub repository using the https protocol you need to authenticate
+yourself using your login information. I wasn't too sure what would
+happen if I pushed a commit using a different email than the one used
+for my GitHub credentials but I told Mike of my idea and with his
+permission I went and tried out my idea. The process of committing with
+Mike's credentials was straight forward. First I changed the grade in
+file and then added the file with `git add grade`. The commit was made
+with `git commit --author="Mike Izbicki <mike@izbicki.me>" -m "Change
+grade".
+
 ## Additional Information
 TODO: Add links relating to documentation pertaining to this bug. Also
 add links relating to git and other bugs/features.
