@@ -148,6 +148,8 @@ One of the first things I noticed about Vim that I initially disliked was that i
 ####Modifying vim (.vimrc file)
 [![Alt text for your video](http://img.youtube.com/vi/fck6HFCUg2s/0.jpg)](https://www.youtube.com/watch?v=fck6HFCUg2s)
 
+Ever wondered how've we get our `vim` editor to work in the way we have it versus the default editor? `vim` has a file where you can setup it's defaults such as auto parentheses, auto-indent, and much more. By watching our video above, you can easily create new defaults for your vim editor that can cut time spent formating your text to spend more on coding.
+
 
 
 In Conclusion
