@@ -193,8 +193,10 @@ More complex example
 
 
  * As we can see the program runs normal, printing out "hello world" twice, but when we lok at the HEAP SUMMARY we see that there were 3 allocations and 1 free. This means that we have a memory leak again.
+ 
  * If we look back at our progam we can see that we used new but never called delete.
- * To fix our problem we ned to add in deletes for the VAR pointer and the PTR pointer like such:
+ 
+ * To fix our problem we need to add in some deletes for the VAR pointer and the PTR pointer like such:
 
 ```
     1 #include <iostream>
