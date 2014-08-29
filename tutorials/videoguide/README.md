@@ -35,6 +35,7 @@ We've all been in the position before. You've been coding up a program where mos
 ####Tags
 [![Alt text for your video](http://img.youtube.com/vi/Qf9-iMzz8tU/0.jpg)](https://www.youtube.com/watch?v=Qf9-iMzz8tU)
 
+You've learn about `branch` but now we'll show you another feature of vim you might recognize in the software world. Recall downloading programs where it shows the different version numbers (For example: 1.0, 1.1, 1.2, 2.1, 2.2.1)? Well, tags enable you to save these checkpoints in your gihub so that you can immediately go to and from different times of your work. You might also be thinking how different are tags from branches? Well, tags are a much more safer way of accessing different version of your work (just like a checkpoint in a mario game!). If you're still unsure of how different tags can be, watch the video above as we've demonstrated the uses.
 
 
 ####Forking & Pull Requests
