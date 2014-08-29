@@ -32,10 +32,8 @@ Learning GitHub
 - Learn the meaning behind branching
 - Learn to create a branch
 - Learn to switch between branches
-- Learn to merge one branch with another
-
+- Learn to merge one branch with another  
 [![Alt text for your video](http://img.youtube.com/vi/Xaw0JNYUj_U/0.jpg)](https://www.youtube.com/watch?v=Xaw0JNYUj_U)
-
 
 
 ####Tags
