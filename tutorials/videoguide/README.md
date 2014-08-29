@@ -28,6 +28,7 @@ So now that you've been able to clone you directory from GitHub to your local ma
 
 ####Branches
 [![Alt text for your video](http://img.youtube.com/vi/Xaw0JNYUj_U/0.jpg)](https://www.youtube.com/watch?v=Xaw0JNYUj_U)_
+
 We've all been in the position before. You've been coding up a program where most of it's files are ready to be published to the world while some may not. Thanks to GitHub, you are able to create branches off of your program that will anable you to work around your bugs and eventually merge the correct fixes to your main program. And since every repository has a branch named `master`, lets say your working on an app and theres one file in your app named count.cpp that doesn't count properly. Thankfully, you can create a `branch` named count and work on the count file and any other file without messing up your original code. This way you can mess around with any of your files till your count.cpp file works. After which, you can get back to your `master` branch and merge your two branches together. In the end, you completed your program, but safely worked out your bugs without messing up your whole program. In other terms, this is called version control.
 
 
