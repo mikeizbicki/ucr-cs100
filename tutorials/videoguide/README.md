@@ -39,7 +39,7 @@ Learn To Use GitHub, The Terminal, vim, & More!
 
 
 ###Branches
-[![Alt text for your video](http://img.youtube.com/vi/aNWihbLj75Q/0.jpg)](https://www.youtube.com/watch?v=aNWihbLj75Q)
+[![Alt text for your video](http://img.youtube.com/vi/Xaw0JNYUj_U/0.jpg)](https://www.youtube.com/watch?v=Xaw0JNYUj_U)
 ##### Learn the meaning behind branching
 ##### Learn to create a branch
 ##### Learn to switch between branches
