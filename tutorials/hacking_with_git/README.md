@@ -1,4 +1,4 @@
-# Falsifying Git Commits and Changing History
+# Faking Git Commits
 
 ## Description
 Git is a feature rich distributed version control system. The built in
@@ -55,7 +55,7 @@ people may commit code changes but for whatever reason one person may be
 the only one responsible for pushing the code. So what happens to be a
 Git feature helped my get extra credit in class.
 
-## Using Git for Evil
+## Using Git For Evil
 In the example above Mike happened to be a contributor to my repository
 but would the same method work for non contributors? It turns out it
 still works. If you look up the git log to this repository you'll see
@@ -72,6 +72,17 @@ attention and make people assume you are a better programmer than you
 really are. After all if your project was bad there would be no way
 Linus would have looked at it and contributed in the first place.
 
-## Additional Information
-TODO: Add links relating to documentation pertaining to this bug. Also
-add links relating to git and other bugs/features.
+## How to Avoid Fake Commits
+In the case of this class there are at least one way to keep fake
+commits from making it into the repository. The use of RSA signed
+commits would probably be the best way to make sure that a student can't
+make any commits without being discovered. This way all commits could be
+viewed by running `git log --show-signature` and any commit not signed
+would immediately be discovered. In the real world this would not help
+in the case of a person committing to their own repository in an attempt
+to bolster their list of contributors since they would receive no
+benefit from verifiable commits.
+
+# Additional Information
+More information on the use of git can be found be reading the
+documentation found [here](www.git-scm.com/documentation)
