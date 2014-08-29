@@ -1,1 +1,16 @@
-/ 100
+100 / 100
+
+-10  for not properly having the number of perror per syscall 
+	 number of syscalls... 6
+  	number of perror..... 4
+  	grade modifier....... -10
+
+
++20  extra credit 
+
+Testing:
+*# (comments) did not show test at begging of line, middle
+ -10 
+
+NOTE: Don't forget to show all the cases you test. For this assignment was a little lenient. In the future test more throughly. 
+
