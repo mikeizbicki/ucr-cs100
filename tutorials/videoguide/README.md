@@ -32,9 +32,9 @@ Learn To Use GitHub, The Terminal, vim, & More!
 
 ###Creating a file and Pushing/Pulling with GitHub
 [![Alt text for your video](http://img.youtube.com/vi/8vrVJT29K58/0.jpg)](https://www.youtube.com/watch?v=8vrVJT29K58)
-##### Learn to create any file within your repository
-##### Learn to push into your github account
-##### Learn to pull from your github account
+##### Learn to create any file within your repository using the `touch` or `vim` command
+##### Learn the steps to correctly push new changes into your github account
+##### Learn the steos to pull updates from your github account
 
 
 
@@ -44,7 +44,6 @@ Learn To Use GitHub, The Terminal, vim, & More!
 ##### Learn to create a branch
 ##### Learn to switch between branches
 ##### Learn to merge one branch with another
-##### Learn the basic use of version control
 
 
 
