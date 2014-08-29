@@ -12,30 +12,28 @@ Clock [HERE](https://github.com/svill014/test) To Read Our Paper On *Helpful Com
 Learning GitHub
 ---
                
-[![Alt text for your video](http://img.youtube.com/vi/Fv5Cy8i14ck/0.jpg)](https://www.youtube.com/watch?v=Fv5Cy8i14ck)
-
 ####Getting Started
 - Learn to create an account on github.com  
 - Learn to create your first repository  
 - Learn to clone your repository to your local machine  
+[![Alt text for your video](http://img.youtube.com/vi/Fv5Cy8i14ck/0.jpg)](https://www.youtube.com/watch?v=Fv5Cy8i14ck)
 
 
-
-[![Alt text for your video](http://img.youtube.com/vi/8vrVJT29K58/0.jpg)](https://www.youtube.com/watch?v=8vrVJT29K58)
 
 ####Creating a file and Pushing/Pulling with GitHub
 - Learn to create any file within your repository using the `touch` or `vim` command
 - Learn the steps to correctly push new changes into your github account
 - Learn the steos to pull updates from your github account
+[![Alt text for your video](http://img.youtube.com/vi/8vrVJT29K58/0.jpg)](https://www.youtube.com/watch?v=8vrVJT29K58)
 
 
 
-[![Alt text for your video](http://img.youtube.com/vi/Xaw0JNYUj_U/0.jpg)](https://www.youtube.com/watch?v=Xaw0JNYUj_U)
 ####Branches
 - Learn the meaning behind branching
 - Learn to create a branch
 - Learn to switch between branches
 - Learn to merge one branch with another
+[![Alt text for your video](http://img.youtube.com/vi/Xaw0JNYUj_U/0.jpg)](https://www.youtube.com/watch?v=Xaw0JNYUj_U)
 
 
 
@@ -52,6 +50,7 @@ Learning GitHub
 [![Alt text for your video](http://img.youtube.com/vi/tskyUTaJdVI/0.jpg)](https://www.youtube.com/watch?v=tskyUTaJdVI)
 ####Forking & Pull Requests
 - Learn to fork someone's elses repository to your repository as well as how to submit a pull request
+
 
 
 [![Alt text for your video](http://img.youtube.com/vi/HZaB8uVMXAg/0.jpg)](https://www.youtube.com/watch?v=HZaB8uVMXAg)
