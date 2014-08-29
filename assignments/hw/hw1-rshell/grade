@@ -1,1 +1,20 @@
-/ 100
+30 / 100
+
+
++20 extra credit
+-25 pts late submision
+-25 pts program not compiling on first try
+
+-30pts :
+	 number of syscalls... 7
+  	number of perror..... 1
+  	grade modifier....... -30
+
+-10 '&' not working 
+-10 some commands don't work 
+	+10 please fix this by the next rshell interation
+ 
+NOTE: Was generous on grading for the test cases. Next time be a little more thorough
+
+score was less than 
+
