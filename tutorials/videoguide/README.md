@@ -188,6 +188,6 @@ Learn To Use GitHub, The Terminal, vim, & More!
 #####Learn the secrets to modifying your vim editor to extract the most out of the vim secret commands
 
 
-
+---
 ####Vim can seem frustrating at first and it may appear to be much more difficult to do what people are used to. Users may want to give up because they have to relearn commands that were once second nature with other editors.  It may take a while to relearn things such as `u` is now undo and `cntrl-R` is now redo, but it will be worth it in the end.  Vim has many tricks that can help speed up programming, even if new users do not learn it all right away.  The information can always be found if new users need a reminder on how to do something.  With time, the commands in Vim will start to become just as easy to use as the commands in any other editor.  If users stick to learning how to use Vim a little at a time, then they will begin to be surprised how they ever coded without it.
 
