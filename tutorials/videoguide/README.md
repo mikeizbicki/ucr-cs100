@@ -72,7 +72,7 @@ Just like indenting, I thought that I could only delete one character at a time 
 ####Selection, Copy & Paste
 
 Cutting, copying, and pasting took a while to get used to when using Vim. Sometimes there was something I wanted in my code that was in the instructions for the assignment.  I knew that in order to paste I would use the `p` command, but I could not paste things from outside of Vim into it.  I solved this with one of the few times I could use my mouse in Vim.  If I had something copied outside of Vim, then to paste it into Vim I would right click and just click paste.  This would paste it wherever the cursor currently is.  This can also be used to copy from Vim.  If you right click to copy, then it will not affect what is copied by using the commands `y` to copy or the commands `d` or `x` to cut.  If those commands are used, the just clicking `p` will paste them.  There are other ways to store more than one thing while copying or cutting, but these two ways were the most helpful as I learned how to use Vim.
-[![Alt text for your video](http://img.youtube.com/vi/-DN_xww8jOM/0.jpg)](https://www.youtube.com/watch?v=-DN_xww8jOM)
+[![Alt text for your video](http://img.youtube.com/vi/-DN_xww8jOM/0.jpg)](https://www.youtube.com/watch?v=-DN_xww8jOM)_
 
 
 
@@ -84,7 +84,7 @@ Cutting, copying, and pasting took a while to get used to when using Vim. Someti
 ###Learning The Terminal
 
 ####The `ls` command
-[![Alt text for your video](http://img.youtube.com/vi/RMxvcc_QUUI/0.jpg)](https://www.youtube.com/watch?v=RMxvcc_QUUI)
+[![Alt text for your video](http://img.youtube.com/vi/RMxvcc_QUUI/0.jpg)](https://www.youtube.com/watch?v=RMxvcc_QUUI)_
 
 
 ####The `cd` and `mv` commands
@@ -94,12 +94,13 @@ Cutting, copying, and pasting took a while to get used to when using Vim. Someti
 
 ####Replacing
 Similar to using d to get rid of code, I learned a few ways to replace what was already typed. Lower case r can replace one letter while upper case R can replace one letter with many. Just type r or R and what you want to replace it with. Some commands allow the user to replace multiple characters with as many as the user wants to using the c command. A few of these that I found most helpful were cw to replace the rest of the current word, cb replaces the characters before the cursor on the current word, c$ replaces the rest of the current line, and c0 replaces the entire line before the cursor.
+
 [![Alt text for your video](http://img.youtube.com/vi/qLM7ej9Ures/0.jpg)](https://www.youtube.com/watch?v=qLM7ej9Ures)
 
 
 
 ####PERROR
-[![Alt text for your video](http://img.youtube.com/vi/qx4yQ7-im_c/0.jpg)](https://www.youtube.com/watch?v=qx4yQ7-im_c)
+[![Alt text for your video](http://img.youtube.com/vi/qx4yQ7-im_c/0.jpg)](https://www.youtube.com/watch?v=qx4yQ7-im_c)_
 
 
 
