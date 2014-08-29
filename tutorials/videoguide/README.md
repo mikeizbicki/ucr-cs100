@@ -49,17 +49,17 @@ Learning GitHub
 
 
 
-###Forking & Pull Requests
 [![Alt text for your video](http://img.youtube.com/vi/tskyUTaJdVI/0.jpg)](https://www.youtube.com/watch?v=tskyUTaJdVI)
-#####Learn to fork someone's elses repository to your repository as well as how to submit a pull request
+####Forking & Pull Requests
+- Learn to fork someone's elses repository to your repository as well as how to submit a pull request
 
 
-###`README.md` & `LICENSE` Files
 [![Alt text for your video](http://img.youtube.com/vi/HZaB8uVMXAg/0.jpg)](https://www.youtube.com/watch?v=HZaB8uVMXAg)
-##### Learn the reason why we have a `README.md` & `LICENSE` file
-##### Learn what should be included within your `README.md`
-##### Learn to format your `README.md` file
-##### Review the GNU `LICENSE` file
+####`README.md` & `LICENSE` Files
+- Learn the reason why we have a `README.md` & `LICENSE` file
+- Learn what should be included within your `README.md`
+- Learn to format your `README.md` file
+- Review the GNU `LICENSE` file
 
 
 
