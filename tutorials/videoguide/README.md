@@ -14,6 +14,7 @@ Learning GitHub
                
 ####Getting Started
 [![Alt text for your video](http://img.youtube.com/vi/Fv5Cy8i14ck/0.jpg)](https://www.youtube.com/watch?v=Fv5Cy8i14ck)
+In this video, we will show you step by step how to create your first account on GitHub. When I first made my account, I was unsure of what the exact steps were to correctly make my repository. On top of that, I had no idea how to even get something online (eg: github) and clone it to my local machine because this was all new methods for me. We made sure to show you the exact process on the web browser and terminal so you can safely and correctly get your first repository on your local machine.
 
 
 
