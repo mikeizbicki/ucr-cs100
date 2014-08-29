@@ -3,38 +3,35 @@ Learning to use github, vim, and the terminal can be very confusing and hard to 
 
 Our names are Rashid, Kyler, and Sean, Junior Computer Science Majors at the *University of California, Riverside*. We took our CS100 class not knowing how to use or even get started with the terminal, github and vim. Rest asure, we didn't want to let anyone else feel unconfident about these three things. That's why we've put together a series of video guides to get you started in the right direction towards learning the basics of the terminal, github, and vim.
 
+Click The Images Below To Be Taken To YouTube To Watch
 
+Click [HERE](https://www.youtube.com/watch?v=Fv5Cy8i14ck&list=PLQ6W7BIxh4zvbwT7cQJh8jSxsz47MP3Z5) To Watch The Entire Playlist In Order
 
-#####Click The Images Below To Be Taken To YouTube To Watch
+Clock [HERE](https://github.com/svill014/test) To Read Our Paper On *Helpful Commands for vim* (excerpt inserted above related videos below)
 
-#####Click [HERE](https://www.youtube.com/watch?v=Fv5Cy8i14ck&list=PLQ6W7BIxh4zvbwT7cQJh8jSxsz47MP3Z5) To Watch The Entire Playlist In Order
+###Learning GitHub
 
-#####Clock [HERE](https://github.com/svill014/test) To Read Our Paper On *Helpful Commands for vim* (excerpt inserted above related videos below)
-
-Learning GitHub
----
-
-###Getting Started
+####Getting Started
 [![Alt text for your video](http://img.youtube.com/vi/Fv5Cy8i14ck/0.jpg)](https://www.youtube.com/watch?v=Fv5Cy8i14ck)
-##### Learn to create an account on github.com  
-##### Learn to create your first repository  
-##### Learn to clone your repository to your local machine  
+- Learn to create an account on github.com  
+- Learn to create your first repository  
+- Learn to clone your repository to your local machine  
 
 
-###Creating a file and Pushing/Pulling with GitHub
+####Creating a file and Pushing/Pulling with GitHub
 [![Alt text for your video](http://img.youtube.com/vi/8vrVJT29K58/0.jpg)](https://www.youtube.com/watch?v=8vrVJT29K58)
-##### Learn to create any file within your repository using the `touch` or `vim` command
-##### Learn the steps to correctly push new changes into your github account
-##### Learn the steos to pull updates from your github account
+- Learn to create any file within your repository using the `touch` or `vim` command
+- Learn the steps to correctly push new changes into your github account
+- Learn the steos to pull updates from your github account
 
 
 
-###Branches
+####Branches
 [![Alt text for your video](http://img.youtube.com/vi/Xaw0JNYUj_U/0.jpg)](https://www.youtube.com/watch?v=Xaw0JNYUj_U)
-##### Learn the meaning behind branching
-##### Learn to create a branch
-##### Learn to switch between branches
-##### Learn to merge one branch with another
+- Learn the meaning behind branching
+- Learn to create a branch
+- Learn to switch between branches
+- Learn to merge one branch with another
 
 
 
