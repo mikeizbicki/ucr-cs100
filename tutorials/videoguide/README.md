@@ -71,22 +71,24 @@ One problem that I would occasionally get is I would do some sort of command by 
 
 
 ####Indentation
-At first it felt very time consuming to indent multiple lines. I would go to the beginning of each line and after using `i` and type tab.  With so many commands in Vim, I was surprised that there was no command to just indent a few lines.  I felt this way until I found about the `V` command.  `V` lets users highlight a line and pressing up or down can highlight as many lines as they desire.  All that was left to do was to type `>` after everything I wanted to indent was highlighted and it all would indented once to the right. Typing `<` would instead indent it to the left if I ever wanted to do that.  This greatly improved my usage of Vim for `V`, or `v` if users wanted to highlight characters instead of entire lines, was could be combined with many commands and not just indenting.
 [![Alt text for your video](http://img.youtube.com/vi/UAcSoRLRLug/0.jpg)](https://www.youtube.com/watch?v=UAcSoRLRLug)
+
+At first it felt very time consuming to indent multiple lines. I would go to the beginning of each line and after using `i` and type tab.  With so many commands in Vim, I was surprised that there was no command to just indent a few lines.  I felt this way until I found about the `V` command.  `V` lets users highlight a line and pressing up or down can highlight as many lines as they desire.  All that was left to do was to type `>` after everything I wanted to indent was highlighted and it all would indented once to the right. Typing `<` would instead indent it to the left if I ever wanted to do that.  This greatly improved my usage of Vim for `V`, or `v` if users wanted to highlight characters instead of entire lines, was could be combined with many commands and not just indenting.
 
 
 
 ####Deletion
+[![Alt text for your video](http://img.youtube.com/vi/qjJ3nIcExhE/0.jpg)](https://www.youtube.com/watch?v=qjJ3nIcExhE)
+
 Just like indenting, I thought that I could only delete one character at a time when I started using vim.  This would become bothersome if I wanted to fix a big part of my code that I knew needed to be deleted.  There are plenty of different ways that I learned to speed this up.  The most helpful ways were pressing `x` after highlighting what I wanted deleted, and using the `d` command.  `d` can be used with many different things after it. `dd` will delete the entire line. `d$` will delete the rest of the current line. `dw` will delete the rest of the current word.  These commands made writing code in Vim go by much faster.
 
-[![Alt text for your video](http://img.youtube.com/vi/qjJ3nIcExhE/0.jpg)](https://www.youtube.com/watch?v=qjJ3nIcExhE)
 
 
 
 ####Selection, Copy & Paste
+[![Alt text for your video](http://img.youtube.com/vi/-DN_xww8jOM/0.jpg)](https://www.youtube.com/watch?v=-DN_xww8jOM)_
 
 Cutting, copying, and pasting took a while to get used to when using Vim. Sometimes there was something I wanted in my code that was in the instructions for the assignment.  I knew that in order to paste I would use the `p` command, but I could not paste things from outside of Vim into it.  I solved this with one of the few times I could use my mouse in Vim.  If I had something copied outside of Vim, then to paste it into Vim I would right click and just click paste.  This would paste it wherever the cursor currently is.  This can also be used to copy from Vim.  If you right click to copy, then it will not affect what is copied by using the commands `y` to copy or the commands `d` or `x` to cut.  If those commands are used, the just clicking `p` will paste them.  There are other ways to store more than one thing while copying or cutting, but these two ways were the most helpful as I learned how to use Vim.
-[![Alt text for your video](http://img.youtube.com/vi/-DN_xww8jOM/0.jpg)](https://www.youtube.com/watch?v=-DN_xww8jOM)_
 
 
 
@@ -107,9 +109,9 @@ Learning The Terminal
 
 
 ####Replacing
-Similar to using d to get rid of code, I learned a few ways to replace what was already typed. Lower case r can replace one letter while upper case R can replace one letter with many. Just type r or R and what you want to replace it with. Some commands allow the user to replace multiple characters with as many as the user wants to using the c command. A few of these that I found most helpful were cw to replace the rest of the current word, cb replaces the characters before the cursor on the current word, c$ replaces the rest of the current line, and c0 replaces the entire line before the cursor.
-
 [![Alt text for your video](http://img.youtube.com/vi/qLM7ej9Ures/0.jpg)](https://www.youtube.com/watch?v=qLM7ej9Ures)
+
+Similar to using d to get rid of code, I learned a few ways to replace what was already typed. Lower case r can replace one letter while upper case R can replace one letter with many. Just type r or R and what you want to replace it with. Some commands allow the user to replace multiple characters with as many as the user wants to using the c command. A few of these that I found most helpful were cw to replace the rest of the current word, cb replaces the characters before the cursor on the current word, c$ replaces the rest of the current line, and c0 replaces the entire line before the cursor.
 
 
 
@@ -137,8 +139,9 @@ Many of these commands are very helpful to speed up coding, but can still take q
 
 
 ####Spectacle App
-One of the first things I noticed about Vim that I initially disliked was that it took over the terminal when I used it.  I thought that I would have to close Vim each time I wanted to test if my program could run correctly.  To get around this issue, I started using two terminals instead of just one while I was programming.  I would run Vim using the first terminal and would run the executable in the second.  It was as simple as using `:w` to save on Vim instead of using `:wq` to save and quit. I could now test my code without ever having to close Vim.
 [![Alt text for your video](http://img.youtube.com/vi/-PWJe6vr0rk/0.jpg)](https://www.youtube.com/watch?v=-PWJe6vr0rk)
+
+One of the first things I noticed about Vim that I initially disliked was that it took over the terminal when I used it.  I thought that I would have to close Vim each time I wanted to test if my program could run correctly.  To get around this issue, I started using two terminals instead of just one while I was programming.  I would run Vim using the first terminal and would run the executable in the second.  It was as simple as using `:w` to save on Vim instead of using `:wq` to save and quit. I could now test my code without ever having to close Vim.
 
 
 
