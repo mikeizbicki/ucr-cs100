@@ -37,28 +37,28 @@ Learning GitHub
 
 
 
-[![Alt text for your video](http://img.youtube.com/vi/Qf9-iMzz8tU/0.jpg)](https://www.youtube.com/watch?v=Qf9-iMzz8tU)
 ####Tags
 - Learn the meaning of a tag
 - Learn to create a tag in your local repository
 - Learn to send the tag on your local repository to your repository on github
 - Learn to delete a tag on your local repository
 - Learn to delete the tag on your github repository within your terminal
+[![Alt text for your video](http://img.youtube.com/vi/Qf9-iMzz8tU/0.jpg)](https://www.youtube.com/watch?v=Qf9-iMzz8tU)
 
 
 
-[![Alt text for your video](http://img.youtube.com/vi/tskyUTaJdVI/0.jpg)](https://www.youtube.com/watch?v=tskyUTaJdVI)
 ####Forking & Pull Requests
 - Learn to fork someone's elses repository to your repository as well as how to submit a pull request
+[![Alt text for your video](http://img.youtube.com/vi/tskyUTaJdVI/0.jpg)](https://www.youtube.com/watch?v=tskyUTaJdVI)
 
 
 
-[![Alt text for your video](http://img.youtube.com/vi/HZaB8uVMXAg/0.jpg)](https://www.youtube.com/watch?v=HZaB8uVMXAg)
 ####`README.md` & `LICENSE` Files
 - Learn the reason why we have a `README.md` & `LICENSE` file
 - Learn what should be included within your `README.md`
 - Learn to format your `README.md` file
 - Review the GNU `LICENSE` file
+[![Alt text for your video](http://img.youtube.com/vi/HZaB8uVMXAg/0.jpg)](https://www.youtube.com/watch?v=HZaB8uVMXAg)
 
 
 
