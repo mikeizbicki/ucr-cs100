@@ -4,7 +4,7 @@ Cheat Sheet
 
 #####SETUP GIT
 
-After installing Git, you can made modifications on it to customize the environment and identify yourself. You just need to made these changes once.
+After installing Git, you can made modifications to it to customize the environment and identify yourself. You just need to make these changes once.
 
 ```
 $ git config --global user.name [your username]
@@ -40,12 +40,12 @@ $ git config --help
 
 #####CREATE A NEW REPOSITORY
 
-You can have a Git project using two different ways: By creating a new repository in an existing local project or directory or by cloning an existing remote repository.
+You can create a Git project using two different methods: By creating a new repository in an existing local project or directory or by cloning an existing remote repository.
 
 ```
 $ git init
 ```
-With `git init`, you will create a new Git repository on the project that you are working on. This project can be a new one (that doesn’t have anything on it) or can be a project that already exists but you want to use version control on it. You should run this command on the folder of your project.
+With `git init`, you will create a new Git repository on the project that you are working on. This project can be a new one (that doesn’t have anything on it) or it can be a project that already exists but you want to use version control on it. You should run this command on the folder of your project.
 
 
 ```
@@ -61,36 +61,36 @@ After creating a new repository, you can start doing your project. To keep the r
 ```
 $ git status
 ```
-This command will list for you all the files that had been modified since the last time that you commit something. For example, you made some changes in a `main.cpp` file of your project. If you did not commit it yet, the `git status` command will list it for you so you know what to commit.
+This command will list for you all the files that were modified since the last time you commit something. For example, you made some changes in a `main.cpp` file of your project. If you have not committed yet, the command `git status` will show it for you.
 
 
 ```
 $ git add [file]
 ````
-With the `git add` command, you will make the file that you change (and was listed by git status) ready to be committed.
+With the `git add` command, the files that you changed will be ready to the commit.
 
 ```
 $ git rm [file]
 ```
-If you want to remove a file from your project, you also has to remove it from Git so you can commit your changes.
+If you want to remove a file from your project, you also have to remove it from Git so you can commit your changes.
 
 
 ```
 $ git diff
 ```
-`git diff` will compare what is in your working directory with what is in your staging area (the things that you modified but did not use the command `git add` yet). The result tells you the changes you’ve made that you haven’t yet staged.
+`git diff` will compare what is in your working directory with what is in your staging area (the things that you modified but did not use the command `git add` yet). The result tells you the changes you’ve made that you have not  staged.
 
 
 ```
 $ git commit -m [descriptive message]
 ```
-You will use this command to commit the changes that you made and staged. After using `git add on` the files that you wanted to add, you will use `git commit -m "..."` to commit it. The `-m` flag will set the commit message to what you write between quotes.
+You will use this command to commit the changes that you made and staged. After using `git add on` the files that you wanted to add, you will use `git commit -m "..."` to commit it. The `-m` flag will set the commit message.
 
 
 ```
 $ git commit
 ```
-If you want to use the command `git commit` without the `-m` flag, your editor of choice will be launched and you can type your commit message there. Your commit must have a message. If you don't enter it, the commit will be aborted.
+If you want to use the command `git commit` without the `-m` flag, the editor of your choice will be launched and you can type your commit message there. Your commit must have a message. If you don't do it, the commit will be aborted.
 
 
 ```
