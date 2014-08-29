@@ -12,8 +12,8 @@ Clock [HERE](https://github.com/svill014/test) To Read Our Paper On *Helpful Com
 Learning GitHub
 ---
 
-1. ####Getting Started
 [![Alt text for your video](http://img.youtube.com/vi/Fv5Cy8i14ck/0.jpg)](https://www.youtube.com/watch?v=Fv5Cy8i14ck)
+1. *Getting Started*
 - Learn to create an account on github.com  
 - Learn to create your first repository  
 - Learn to clone your repository to your local machine  
