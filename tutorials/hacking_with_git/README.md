@@ -32,7 +32,8 @@ address to use? It uses the name and email address in your
 `~/.gitconfig` file which the user gets to set. Since the user gets to
 set which email is in the file and no validation ever takes place, there
 is no way of telling if your name and email address are actually your
-name and email address.
+name and email address. With this in mind, lets look at how I used this
+information to hack our grading system.
 
 ## Additional Information
 TODO: Add links relating to documentation pertaining to this bug. Also
