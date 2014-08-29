@@ -20,16 +20,18 @@ Learning GitHub
 - Learn to clone your repository to your local machine  
 
 
-####Creating a file and Pushing/Pulling with GitHub
+
 [![Alt text for your video](http://img.youtube.com/vi/8vrVJT29K58/0.jpg)](https://www.youtube.com/watch?v=8vrVJT29K58)
+
+####Creating a file and Pushing/Pulling with GitHub
 - Learn to create any file within your repository using the `touch` or `vim` command
 - Learn the steps to correctly push new changes into your github account
 - Learn the steos to pull updates from your github account
 
 
 
-####Branches
 [![Alt text for your video](http://img.youtube.com/vi/Xaw0JNYUj_U/0.jpg)](https://www.youtube.com/watch?v=Xaw0JNYUj_U)
+####Branches
 - Learn the meaning behind branching
 - Learn to create a branch
 - Learn to switch between branches
@@ -37,13 +39,13 @@ Learning GitHub
 
 
 
-###Tags
 [![Alt text for your video](http://img.youtube.com/vi/Qf9-iMzz8tU/0.jpg)](https://www.youtube.com/watch?v=Qf9-iMzz8tU)
-##### Learn the meaning of a tag
-##### Learn to create a tag in your local repository
-##### Learn to send the tag on your local repository to your repository on github
-##### Learn to delete a tag on your local repository
-##### Learn to delete the tag on your github repository within your terminal
+####Tags
+- Learn the meaning of a tag
+- Learn to create a tag in your local repository
+- Learn to send the tag on your local repository to your repository on github
+- Learn to delete a tag on your local repository
+- Learn to delete the tag on your github repository within your terminal
 
 
 
