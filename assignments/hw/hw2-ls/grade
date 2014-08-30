@@ -1,2 +1,12 @@
-/ 100
+65 / 100
+
+
+-30 pts:
+	number of syscalls... 12
+	number of perror..... 6
+	grade modifier....... -30
+
+-5 pts -R can infinite loop.
+
+
 
