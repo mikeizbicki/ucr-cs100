@@ -48,7 +48,7 @@ For myself, I've always wondered how people contributed to online projects. With
 ####`README.md`
 [![Alt text for your video](http://img.youtube.com/vi/sg6KBi-TP7M/0.jpg)](https://www.youtube.com/watch?v=sg6KBi-TP7M)
 
-I recently learned what a `README.md` file was and boy-oh-boy, how do I even make one of these. A `README.md` allows you to explain your program and all its possibilities and defects. You can talk about the contributors, files included, what the program entitles the user to do, how to install it and much more! The easiest way I was told what a `README.md` file does is "it explains to someone else who has absolutely no idea what your program does or how to code, but it enables the user to understand the concepts and basic directions to execute your program."
+README.md files are going to be the main focus of documenting and explaining to anyone who comes across your document what it does. A `README.md` allows you to explain your program and all its possibilities and defects. You can talk about the contributors, files included, what the program entitles the user to do, how to install it and much more! The easiest way I was told what a `README.md` file does is "it explains to someone else who has absolutely no idea what your program does or how to code, but it enables the user to understand the concepts and basic directions to execute your program."
 
 Watch the video above and let us drive through both of these documents together to help you create a well organzied `README.md` file.
 
