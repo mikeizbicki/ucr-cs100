@@ -27,7 +27,7 @@ So now that you've been able to clone you directory from GitHub to your local ma
 
 
 ####Branches
-[![Alt text for your video](http://img.youtube.com/vi/Xaw0JNYUj_U/0.jpg)](https://www.youtube.com/watch?v=Xaw0JNYUj_U)_
+[![Alt text for your video](http://img.youtube.com/vi/Xaw0JNYUj_U/0.jpg)](https://www.youtube.com/watch?v=Xaw0JNYUj_U)
 
 We've all been in the position before. You've been coding up a program where most of it's files are ready to be published to the world while some may not. Thanks to GitHub, you are able to create branches off of your program that will anable you to work around your bugs and eventually merge the correct fixes to your main program. And since every repository has a branch named `master`, lets say your working on an app and theres one file in your app named count.cpp that doesn't count properly. Thankfully, you can create a `branch` named count and work on the count file and any other file without messing up your original code. This way you can mess around with any of your files till your count.cpp file works. After which, you can get back to your `master` branch and merge your two branches together. In the end, you completed your program, but safely worked out your bugs without messing up your whole program. In other terms, this is called version control.
 
@@ -87,7 +87,7 @@ Just like indenting, I thought that I could only delete one character at a time 
 
 
 ####Selection, Copy & Paste
-[![Alt text for your video](http://img.youtube.com/vi/-DN_xww8jOM/0.jpg)](https://www.youtube.com/watch?v=-DN_xww8jOM)_
+[![Alt text for your video](http://img.youtube.com/vi/-DN_xww8jOM/0.jpg)](https://www.youtube.com/watch?v=-DN_xww8jOM)
 
 Cutting, copying, and pasting took a while to get used to when using Vim. Sometimes there was something I wanted in my code that was in the instructions for the assignment.  I knew that in order to paste I would use the `p` command, but I could not paste things from outside of Vim into it.  I solved this with one of the few times I could use my mouse in Vim.  If I had something copied outside of Vim, then to paste it into Vim I would right click and just click paste.  This would paste it wherever the cursor currently is.  This can also be used to copy from Vim.  If you right click to copy, then it will not affect what is copied by using the commands `y` to copy or the commands `d` or `x` to cut.  If those commands are used, the just clicking `p` will paste them.  There are other ways to store more than one thing while copying or cutting, but these two ways were the most helpful as I learned how to use Vim.
 
@@ -140,7 +140,7 @@ Similar to using d to get rid of code, I learned a few ways to replace what was 
 
 
 ####PERROR
-[![Alt text for your video](http://img.youtube.com/vi/qx4yQ7-im_c/0.jpg)](https://www.youtube.com/watch?v=qx4yQ7-im_c)_
+[![Alt text for your video](http://img.youtube.com/vi/qx4yQ7-im_c/0.jpg)](https://www.youtube.com/watch?v=qx4yQ7-im_c)
 
 `perror(const char*);`
 
