@@ -140,6 +140,15 @@ The `mv` command will move an item within a certain directory to the directory p
 
 
 
+####Scripts
+[![Alt text for your video](http://img.youtube.com/vi/WKIbIO9ti38/0.jpg)](https://www.youtube.com/watch?v=WKIbIO9ti38)
+
+Have you ever wondered how you could possibly record data output from a program, or how you could record a list of commands within your terminal to share it with your colleague or professors in the future? With the `script` command, all of this is possible. By just typing `script file_name_here`, you can start a script. Also, you don't need to worry about making a file beforehand, because when you specify the filename, it will make once for you in that name. Once you've gotten your script started, anything and everything you do within that terminal window, will be recorded as text within the document. Then when you're done, type `exit` and your terminal will say your script session has ended and re-state the filename in which it recorded all your commands in. You can then share or upload your script to show the any bugs or amazing new programs you've gotten to make.
+
+
+
+Error Checking
+---
 ####PERROR
 [![Alt text for your video](http://img.youtube.com/vi/qx4yQ7-im_c/0.jpg)](https://www.youtube.com/watch?v=qx4yQ7-im_c)
 
@@ -148,13 +157,6 @@ The `mv` command will move an item within a certain directory to the directory p
 When programming for unix based operating systems (which is a primary component of CS100), system calls are a prominent component for code. When coding, error checking is always necessary. System calls make error checking very simple and very easy to implement with `perror` . Every unix system call returns an error value if the call fails. The `perror` function captures this error value (if returned) and prints to stdout an error message based on the system call and the type of error. It takes in one c-string argument, which is a message the user can pass in. 
 
 When using system calls, it is absolutely neccessary to implement `perror` with every system call. Any program is not complete without `perror` . Without it, bugs will be exponentially harder to find and fix and will significantly stifle programming speed. Also, if you're like me and essentially did not use any `perror` functions whatsoever, your grade will suffer. It's really simple to implement, essentially adding only a line or two per system call, but the benefits are enormous.
-
-
-####Scripts
-[![Alt text for your video](http://img.youtube.com/vi/WKIbIO9ti38/0.jpg)](https://www.youtube.com/watch?v=WKIbIO9ti38)
-
-Have you ever wondered how you could possibly record data output from a program, or how you could record a list of commands within your terminal to share it with your colleague or professors in the future? With the `script` command, all of this is possible. By just typing `script file_name_here`, you can start a script. Also, you don't need to worry about making a file beforehand, because when you specify the filename, it will make once for you in that name. Once you've gotten your script started, anything and everything you do within that terminal window, will be recorded as text within the document. Then when you're done, type `exit` and your terminal will say your script session has ended and re-state the filename in which it recorded all your commands in. You can then share or upload your script to show the any bugs or amazing new programs you've gotten to make.
-
 
 
 Helpful Hints
