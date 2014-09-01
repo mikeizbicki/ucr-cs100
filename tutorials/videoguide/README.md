@@ -196,45 +196,36 @@ Learning The Terminal
 The `ls` command is one of the most used commands in bash. 
 I would say that there isn't a time that I don't use `ls` when using the terminal. 
 Proper knowledge of the `ls` command and the useful flags for `ls` helps to streamline the programming process. 
-
 Passing in a directory name will display the contents of that directory. 
 It is also possible to pass in a path for a directory to display any directory, regardless of the directory the user is currently in.
-
 The basic `ls` command, when run, displays the contents within the current working directory.
-
 If the `-a` flag is passed in with `ls`, all items in the current working directory prepended with a `.` are also displayed, along with the rest of the items.
-
 Passing in the `-l` flag prints information for each item in the directory in a series of columns on a single line. 
 The first column displays the read, write, and executable permissions for the main user, the group the current user is in, and any user in that order. 
 The next column shows the owner of the item and the next column shows the group owner. 
 The fourth column displays the size, in bytes, of the item. 
 The fifth column displays the moment the item was created, and the last column displays the name of the item.
-
 If the `-R` flag is passed in, the command will display the contents of the current directory, and then recursively enter every directory within the current directory and display the contents of that directory, then keep going into every directory until there are no more directories in the current directory it is in.
-
 All these options are combinable for different uses. 
-For example, the user could use the `-l` and `-a` flags to display the information for the items prepended with a `.` , or use `-R` and `-l` together.
-
-
+For example, I could use the `-l` and `-a` flags to display the information for the items prepended with a `.` , or use `-R` and `-l` together.
 
 ####The `cd` and `mv` commands
 [![Alt text for your video](http://img.youtube.com/vi/xzN-sY5oyFk/0.jpg)](https://www.youtube.com/watch?v=xzN-sY5oyFk)
  
-
+`$ cd directory/path`
+`$ mv filename/directory_name destination`
 The `cd` and `mv` commands are crucial commands in order to actually use the terminal. 
-Without cd, a person would forever be stuck in their home directory. 
+Without cd, I would forever be stuck in their home directory. 
 The `mv` command is necessary for moving files from one section of the hard drive. 
 They're really simple commands, but without them, there'd be no way to orginize contents within a hard drive. 
-
 The `cd` command by itself will change the current working directory to the home directory. 
 If passed a directory name that is within the current working directory, the current working directory will be changed to the name of the passed in directory. 
 `cd` will also take a path as an argument. When a path is passed in, the current working directory will be changed to the directory specified by the path. 
 When `cd` is passed with `..`, the directory will go backwards, the directory that the current directory is in.
-
 The `mv` command will move an item within a certain directory to the directory passed in. 
-The structure of this command is `$ mv filename/directory_name destination` . 
-If the destination argument is not a path, the command will look for the destination in the current working directory. 
-The destination argument can be a path, so a user can move the item to any directory in the hard drive.
+ 
+ If the destination argument is not a path, the command will look for the destination in the current working directory. 
+ The destination argument can be a path, so I can move the item to any directory in the hard drive.''
 
 
 
@@ -256,24 +247,16 @@ You can then share or upload your script to show the any bugs or amazing new pro
 
 `$ ssh your_netID@bell.cs.ucr.edu`
 
-
 For the CS100 class, working within UCR's well server is crucial to succeed. 
 The version of linux that the school's well server uses is different than other linux builds. 
 Because of this, compilers will work differently in the well server than other local bash terminals, giving error messages after compilation on local bash terminals when compilation on the school servers will not, or compiling fine locally but failing to compile when compiled on the well server. 
 Therefore, it is necessary to `ssh` into the well server and compile and run any code before submission. 
-If it works on well, then it will work when it is graded. 
-It's not neccessary to write the code in the school's server, but I would recommend doing all writing in the well server so that it is faster to debug and test, as opposed to writing locally, copying the file, saving it to your personal server, then compiling. 
-I know for myself, when working on my first assignment for CS100, I wrote and compiled all my on my local machine and then submitted the final version without first checking if it compiled and ran on the school's server. 
-Sure enough, I received a zero for inability to compile. 
-From then on, I never wrote any code on my local terminal, doing all work on the school's server.
-I then checked my final version after modifying it to work on the school's server, and it didn't compile in my own bash terminal.
-
 To `ssh` into the server, write in the command line `ssh`, followed by your net ID, and append `@bell.cs.ucr.edu`. 
 You will be prompted for the password associated with the net ID (the password you use when signing into the lab computers), then placed in the home directory. 
 To exit out of the server, type into the command line `exit`. 
 You will exit the server and be placed back into your local bash. 
-Any change saved to the server will be saved, so if you exit and re-enter the server, the changes will remain.
-
+Any change saved to the server will be saved, so if you exit and re-enter the server, the changes will remain. 
+If it works on well, then it will work when it is graded. It's not neccessary to write the code in the school's server, but I would recommend doing all writing in the well server so that it is faster to debug and test, as opposed to writing locally, copying the file, saving it to your personal server, then compiling. I know for myself, when working on my first assignment for CS100, I wrote and compiled all my on my local machine and then submitted the final version without first checking if it compiled and ran on the school's server. Sure enough, I received a zero for inability to compile. From then on, I never wrote any code on my local terminal, doing all work on the school's server. I then checked my final version after modifying it to work on the school's server, and it didn't compile in my own bash terminal. After that, I realized there was no point in writing code on my local terminal, as it was easier to ssh into the school server and do all my work in there. It cloud-saves all your work, allowing you to access it almost anywhere. It's a really useful tool while still a student here at UCR.''''''')''
 
 
 Error Checking
