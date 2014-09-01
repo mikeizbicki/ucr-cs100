@@ -107,6 +107,13 @@ Similar to using `d` to get rid of code, I learned a few ways to replace what wa
 
 
 
+####Modifying `vim` (.vimrc file)
+[![Alt text for your video](http://img.youtube.com/vi/fck6HFCUg2s/0.jpg)](https://www.youtube.com/watch?v=fck6HFCUg2s)
+
+Ever wondered how've we get our `vim` editor to work in the way we have it versus the default editor? `vim` has a file where you can setup it's defaults such as auto parentheses, auto-indent, and much more. By watching our video above, you can easily create new defaults for your `vim` editor that can cut time spent formating your text to spend more on coding.
+
+
+
 Learning The Terminal
 ---
 ####The `ls` command
@@ -177,13 +184,6 @@ Helpful Hints
 [![Alt text for your video](http://img.youtube.com/vi/-PWJe6vr0rk/0.jpg)](https://www.youtube.com/watch?v=-PWJe6vr0rk)
 
 One of the first things I noticed about Vim that I initially disliked was that it took over the terminal when I used it.  I thought that I would have to close Vim each time I wanted to test if my program could run correctly.  To get around this issue, I started using two terminals instead of just one while I was programming.  I would run Vim using the first terminal and would run the executable in the second.  It was as simple as using `:w` to save on Vim instead of using `:wq` to save and quit. I could now test my code without ever having to close Vim.
-
-
-
-####Modifying `vim` (.vimrc file)
-[![Alt text for your video](http://img.youtube.com/vi/fck6HFCUg2s/0.jpg)](https://www.youtube.com/watch?v=fck6HFCUg2s)
-
-Ever wondered how've we get our `vim` editor to work in the way we have it versus the default editor? `vim` has a file where you can setup it's defaults such as auto parentheses, auto-indent, and much more. By watching our video above, you can easily create new defaults for your `vim` editor that can cut time spent formating your text to spend more on coding.
 
 
 
