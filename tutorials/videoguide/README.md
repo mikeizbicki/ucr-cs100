@@ -103,7 +103,7 @@ There are many ways to maneuver inside of `vim`. Some may just use the `h,j,k,l`
 ####Replacing
 [![Alt text for your video](http://img.youtube.com/vi/qLM7ej9Ures/0.jpg)](https://www.youtube.com/watch?v=qLM7ej9Ures)
 
-Similar to using d to get rid of code, I learned a few ways to replace what was already typed. Lower case r can replace one letter while upper case R can replace one letter with many. Just type r or R and what you want to replace it with. Some commands allow the user to replace multiple characters with as many as the user wants to using the c command. A few of these that I found most helpful were cw to replace the rest of the current word, cb replaces the characters before the cursor on the current word, c$ replaces the rest of the current line, and c0 replaces the entire line before the cursor.
+Similar to using `d` to get rid of code, I learned a few ways to replace what was already typed. Lower case `r` can replace one letter while upper case `R` can replace one letter with many. Just type `r` or `R` and what you want to replace it with. Some commands allow the user to replace multiple characters with as many as the user wants to using the `c` command. A few of these that I found most helpful were cw to replace the rest of the current word, `cb` replaces the characters before the cursor on the current word, `c$` replaces the rest of the current line, and `c0` replaces the entire line before the cursor.
 
 
 
