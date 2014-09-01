@@ -1,13 +1,13 @@
 ##Guide To Getting Started: The Terminal, GitHub, & VIM
-Learning to use github, vim, and the terminal can be very confusing and hard to learn when you are so used to writing code and saving it your own way. Thankfully, we've created a simple video guide to help you reach your potential in most areas of the terminal, github, and vim. 
+Learning to use github, `vim`, and the terminal can be very confusing and hard to learn when you are so used to writing code and saving it your own way. Thankfully, we've created a simple video guide to help you reach your potential in most areas of the terminal, github, and `vim`. 
 
-Our names are Rashid, Kyler, and Sean, Junior Computer Science Majors at the *University of California, Riverside*. We took our CS100 class not knowing how to use or even get started with the terminal, github and vim. Rest asure, we didn't want to let anyone else feel unconfident about these three things. That's why we've put together a series of video guides to get you started in the right direction towards learning the basics of the terminal, github, and vim.
+Our names are Rashid, Kyler, and Sean, Junior Computer Science Majors at the *University of California, Riverside*. We took our CS100 class not knowing how to use or even get started with the terminal, github and `vim`. Rest asure, we didn't want to let anyone else feel unconfident about these three things. That's why we've put together a series of video guides to get you started in the right direction towards learning the basics of the terminal, github, and `vim`.
 
 Click The Images Below To Be Taken To YouTube To Watch
 
 Click [HERE](https://www.youtube.com/watch?v=Fv5Cy8i14ck&list=PLQ6W7BIxh4zuHBegLOCUL11uUIsHcszzQ) To Watch The Entire Playlist In Order
 
-Clock [HERE](https://github.com/svill014/test) To Read Our Paper On *Helpful Commands for vim* (excerpt inserted above related videos below)
+Clock [HERE](https://github.com/svill014/test) To Read Our Paper On *Helpful Commands for `vim`* (excerpt inserted above related videos below)
 
 Learning GitHub
 ---
@@ -81,7 +81,7 @@ At first it felt very time consuming to indent multiple lines. I would go to the
 ####Deletion
 [![Alt text for your video](http://img.youtube.com/vi/qjJ3nIcExhE/0.jpg)](https://www.youtube.com/watch?v=qjJ3nIcExhE)
 
-Just like indenting, I thought that I could only delete one character at a time when I started using vim.  This would become bothersome if I wanted to fix a big part of my code that I knew needed to be deleted.  There are plenty of different ways that I learned to speed this up.  The most helpful ways were pressing `x` after highlighting what I wanted deleted, and using the `d` command.  `d` can be used with many different things after it. `dd` will delete the entire line. `d$` will delete the rest of the current line. `dw` will delete the rest of the current word.  These commands made writing code in Vim go by much faster.
+Just like indenting, I thought that I could only delete one character at a time when I started using `vim`.  This would become bothersome if I wanted to fix a big part of my code that I knew needed to be deleted.  There are plenty of different ways that I learned to speed this up.  The most helpful ways were pressing `x` after highlighting what I wanted deleted, and using the `d` command.  `d` can be used with many different things after it. `dd` will delete the entire line. `d$` will delete the rest of the current line. `dw` will delete the rest of the current word.  These commands made writing code in Vim go by much faster.
 
 
 
@@ -177,10 +177,10 @@ One of the first things I noticed about Vim that I initially disliked was that i
 
 
 
-####Modifying vim (.vimrc file)
+####Modifying `vim` (.vimrc file)
 [![Alt text for your video](http://img.youtube.com/vi/fck6HFCUg2s/0.jpg)](https://www.youtube.com/watch?v=fck6HFCUg2s)
 
-Ever wondered how've we get our `vim` editor to work in the way we have it versus the default editor? `vim` has a file where you can setup it's defaults such as auto parentheses, auto-indent, and much more. By watching our video above, you can easily create new defaults for your vim editor that can cut time spent formating your text to spend more on coding.
+Ever wondered how've we get our `vim` editor to work in the way we have it versus the default editor? `vim` has a file where you can setup it's defaults such as auto parentheses, auto-indent, and much more. By watching our video above, you can easily create new defaults for your `vim` editor that can cut time spent formating your text to spend more on coding.
 
 
 
