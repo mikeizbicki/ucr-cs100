@@ -147,6 +147,18 @@ Have you ever wondered how you could possibly record data output from a program,
 
 
 
+####How To SSH (into well server)
+[![Alt text for your video](http://img.youtube.com/vi/CLv1hpLw3is/0.jpg)](https://www.youtube.com/watch?v=CLv1hpLw3is)
+
+`$ ssh your_netID@bell.cs.ucr.edu`
+
+
+For the CS100 class, working within UCR's well server is crucial to succeed. The version of linux that the school's well server uses is different than other linux builds. Because of this, compilers will work differently in the well server than other local bash terminals, giving error messages after compilation on local bash terminals when compilation on the school servers will not, or compiling fine locally but failing to compile when compiled on the well server. Therefore, it is necessary to `ssh` into the well server and compile and run any code before submission. If it works on well, then it will work when it is graded. It's not neccessary to write the code in the school's server, but I would recommend doing all writing in the well server so that it is faster to debug and test, as opposed to writing locally, copying the file, saving it to your personal server, then compiling. I know for myself, when working on my first assignment for CS100, I wrote and compiled all my on my local machine and then submitted the final version without first checking if it compiled and ran on the school's server. Sure enough, I received a zero for inability to compile. From then on, I never wrote any code on my local terminal, doing all work on the school's server. I then checked my final version after modifying it to work on the school's server, and it didn't compile in my own bash terminal.
+
+To `ssh` into the server, write in the command line `ssh`, followed by your net ID, and append `@bell.cs.ucr.edu` . You will be prompted for the password associated with the net ID (the password you use when signing into the lab computers), then placed in the home directory. To exit out of the server, type into the command line `exit`. You will exit the server and be placed back into your local bash. Any change saved to the server will be saved, so if you exit and re-enter the server, the changes will remain.
+
+
+
 Error Checking
 ---
 ####PERROR
@@ -161,18 +173,6 @@ When using system calls, it is absolutely neccessary to implement `perror` with 
 
 Helpful Hints
 ---
-####How To SSH (into well server)
-[![Alt text for your video](http://img.youtube.com/vi/CLv1hpLw3is/0.jpg)](https://www.youtube.com/watch?v=CLv1hpLw3is)
-
-`$ ssh your_netID@bell.cs.ucr.edu`
-
-
-For the CS100 class, working within UCR's well server is crucial to succeed. The version of linux that the school's well server uses is different than other linux builds. Because of this, compilers will work differently in the well server than other local bash terminals, giving error messages after compilation on local bash terminals when compilation on the school servers will not, or compiling fine locally but failing to compile when compiled on the well server. Therefore, it is necessary to `ssh` into the well server and compile and run any code before submission. If it works on well, then it will work when it is graded. It's not neccessary to write the code in the school's server, but I would recommend doing all writing in the well server so that it is faster to debug and test, as opposed to writing locally, copying the file, saving it to your personal server, then compiling. I know for myself, when working on my first assignment for CS100, I wrote and compiled all my on my local machine and then submitted the final version without first checking if it compiled and ran on the school's server. Sure enough, I received a zero for inability to compile. From then on, I never wrote any code on my local terminal, doing all work on the school's server. I then checked my final version after modifying it to work on the school's server, and it didn't compile in my own bash terminal.
-
-To `ssh` into the server, write in the command line `ssh`, followed by your net ID, and append `@bell.cs.ucr.edu` . You will be prompted for the password associated with the net ID (the password you use when signing into the lab computers), then placed in the home directory. To exit out of the server, type into the command line `exit`. You will exit the server and be placed back into your local bash. Any change saved to the server will be saved, so if you exit and re-enter the server, the changes will remain.
-
-
-
 ####Spectacle App
 [![Alt text for your video](http://img.youtube.com/vi/-PWJe6vr0rk/0.jpg)](https://www.youtube.com/watch?v=-PWJe6vr0rk)
 
