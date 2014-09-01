@@ -99,6 +99,14 @@ Cutting, copying, and pasting took a while to get used to when using Vim. Someti
 There are many ways to maneuver inside of `vim`. Some may just use the `h,j,k,l`, `up, down, left, right arrow keys`, or the `w, e, b` keys to move. Luckily, `vim` has two special keys to get you edditing much easier. The two, which are my favorite features of `vim`, are the `shift-a` (takes you to the end of the line and into insert mode) and the `shift-i` (takes you to the beginning of the line and into insert mode) command.
 
 
+
+####Replacing
+[![Alt text for your video](http://img.youtube.com/vi/qLM7ej9Ures/0.jpg)](https://www.youtube.com/watch?v=qLM7ej9Ures)
+
+Similar to using d to get rid of code, I learned a few ways to replace what was already typed. Lower case r can replace one letter while upper case R can replace one letter with many. Just type r or R and what you want to replace it with. Some commands allow the user to replace multiple characters with as many as the user wants to using the c command. A few of these that I found most helpful were cw to replace the rest of the current word, cb replaces the characters before the cursor on the current word, c$ replaces the rest of the current line, and c0 replaces the entire line before the cursor.
+
+
+
 Learning The Terminal
 ---
 ####The `ls` command
@@ -129,13 +137,6 @@ The `cd` and `mv` commands are crucial commands in order to actually use the ter
 The `cd` command by itself will change the current working directory to the home directory. If passed a directory name that is within the current working directory, the current working directory will be changed to the name of the passed in directory. `cd` will also take a path as an argument. When a path is passed in, the current working directory will be changed to the directory specified by the path. When `cd` is passed with `..`, the directory will go backwards, the directory that the current directory is in.
 
 The `mv` command will move an item within a certain directory to the directory passed in. The structure of this command is `$ mv filename/directory_name destination` . If the destination argument is not a path, the command will look for the destination in the current working directory. The destination argument can be a path, so a user can move the item to any directory in the hard drive.
-
-
-
-####Replacing
-[![Alt text for your video](http://img.youtube.com/vi/qLM7ej9Ures/0.jpg)](https://www.youtube.com/watch?v=qLM7ej9Ures)
-
-Similar to using d to get rid of code, I learned a few ways to replace what was already typed. Lower case r can replace one letter while upper case R can replace one letter with many. Just type r or R and what you want to replace it with. Some commands allow the user to replace multiple characters with as many as the user wants to using the c command. A few of these that I found most helpful were cw to replace the rest of the current word, cb replaces the characters before the cursor on the current word, c$ replaces the rest of the current line, and c0 replaces the entire line before the cursor.
 
 
 
