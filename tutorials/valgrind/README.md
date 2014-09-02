@@ -13,7 +13,7 @@ Finding our problem
 -------------------
 
 
-let's start with a code example from the program test.cpp:
+let's start with a code example from the program example1.cpp:
 
 ```
     int main()
@@ -23,9 +23,9 @@ let's start with a code example from the program test.cpp:
     }
 ```
 
-In the code above, we can see on line number 3 that we have allocated some memory using the ```new``` operator.
+In the code above, we can see that we have allocated some memory using the ```new``` operator.
 
-When we run this program in Valgrind using the command:
+When we run this program in Valgrind using the commands:
 
 ```
     $ g++ example1.cpp
@@ -68,8 +68,8 @@ We can also look at the ```LEAK SUMMARY``` to see if we can recover any leaked m
 Looking at the line right below, we see that the 1,024 bytes lost are not recoverable.
 
 
-How to fix memory leaks
------------------------
+### How to fix memory leaks
+
 
 To obtain more information about where the memory leak may have occured you can type the command:
 
@@ -93,9 +93,9 @@ We can see that in the third line, valgrind says that the memory leak is cause B
 
 This information will help you find where your leaks are at in your program.
 
-    
-Fix all leaks and rerun
------------------------
+     
+### Fix all leaks and rerun
+
 
 If we take our old program example1.cpp, and add a ```delete``` right under the ```new``` statement, our problem should be fixed!
 
@@ -137,7 +137,7 @@ Now if we recompile and run valgrind with memcheck we get:
 
 If we look at the ```HEAP SUMMARY``` section, we can see that our change worked and that for 1 allocation we have 1 free.
 
-We just looked at a very simple example that only has 6 lines of code, of course there will be more complicated programs and now I will demonstrate valgrind and memcheck with more complex programs.
+We just looked at a very simple example that only has 6 lines of code, of course there will be more complicated programs and now I will demonstrate valgrind and memcheck with more complex program, example2.cpp.
 
 More complex example
 --------------------
@@ -170,7 +170,12 @@ More complex example
 ```
 
 
-If we have program like the one above, we can see that the program calls a function that  allocates some memory in the main and also in a function. now if we run this program in valgrind with memcheck we will the get the following message:
+If we have program like the one above, we can see that the program calls a function that allocates some memory in the main and also in a function. now if we run this program in valgrind with memcheck we will the get the following message:
+
+```
+    $ g++ example2.cpp
+    $ valgring --tool=memcheck ./a.out
+```
 
 ```
     memory error detector
@@ -198,11 +203,11 @@ If we have program like the one above, we can see that the program calls a funct
 ```
 
 
-As we can see the program runs normal, printing out "hello world" twice, but when we lok at the HEAP SUMMARY we see that there were 3 allocations and 1 free. This means that we have a memory leak again.
+As we can see the program runs normal, printing out "hello world" twice, but when we look at the ```HEAP SUMMARY``` we see that there were 3 allocations and 1 free. This means that we have a memory leak again.
  
-If we look back at our progam we can see that we used new but never called delete.
+If we look back at our program we can see that we used ```new``` but never called ```delete```.
  
-To fix our problem we need to add in some deletes for the VAR pointer and the PTR pointer like such:
+To fix our problem we need to add in some deletes for the ```VAR``` pointer and the ```PTR``` pointer like such:
 
 ```
     #include <iostream>
@@ -234,6 +239,11 @@ To fix our problem we need to add in some deletes for the VAR pointer and the PT
 And now when we put this through valgrind, we should not have any memory leaks.
 
 ```
+    $ g++ example2.cpp
+    $ valgring --tool=memcheck ./a.out
+```
+
+```
     ==3413== HEAP SUMMARY:
     ==3413==     in use at exit: 0 bytes in 0 blocks
     ==3413==   total heap usage: 3 allocs, 3 frees, 2,084 bytes allocated
@@ -243,6 +253,8 @@ And now when we put this through valgrind, we should not have any memory leaks.
     ==3413== For counts of detected and suppressed errors, rerun with: -v
     ==3413== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0))')
 ```
+
+Now that we made those changes, we can see that there were 3 allocations and 3 frees, which fixes our memory leak problem.
 
 There you have it! Now you can test your programs uing valgrind to catch the pesky memory leaks that are almost impossible to find with the naked eye.
 
