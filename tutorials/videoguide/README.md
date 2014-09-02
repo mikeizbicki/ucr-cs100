@@ -273,9 +273,9 @@ The `perror` function captures this error value (if returned) and prints to stdo
 It takes in one c-string argument, which is a message the user can pass in. 
 
 When using system calls, it is absolutely neccessary to implement `perror` with every system call. 
-Any program is not complete without `perror`. 
-Without it, bugs will be exponentially harder to find and fix and will significantly stifle programming speed. 
-Also, if you're like me and essentially did not use any `perror` functions whatsoever, your grade will suffer. 
+Any program is not complete without `perror`.
+Without it, bugs will be exponentially harder to find and fix and will significantly stifle programming speed.
+Also, if you're like me and essentially did not use any `perror` functions whatsoever, your grade will suffer.
 It's really simple to implement, essentially adding only a line or two per system call, but the benefits are enormous.
 
 
@@ -285,16 +285,16 @@ In conclusion to `vim`, there are many commands that are quite useful but untaug
 For example, the `%` command. 
 It took me quite a while to completely understand the `%` command but it became really useful as I mastered it. 
 It is supposed to match the current parenthesis, or a character similar to parentheses, to the one that closes it but there were times when it just did not work.  
-When it works, it is very helpful for it helps users to see if something is outside of a loop or if a loop ends where it should, but I noticed that it sometimes would be buggy if there was some parenthesis in comments.  
-The `%` command does not differentiate between something a comment or normal code.  
-This led to some very confusing moments where it would seem that my code would work even if `%` told me that the parenthesis did not match up correctly.  
+When it works, it is very helpful for it helps users to see if something is outside of a loop or if a loop ends where it should, but I noticed that it sometimes would be buggy if there was some parenthesis in comments.
+The `%` command does not differentiate between something a comment or normal code.
+This led to some very confusing moments where it would seem that my code would work even if `%` told me that the parenthesis did not match up correctly.
 Users should make sure to keep track of any parenthesis in comments if they decide to use the `%` command.
 
-Many of these commands are very helpful to speed up coding, but can still take quite a while if they are needed to be done multiple times.  
-This can be solved by simply typing the number of times a user wants the command to be done before the user types the command.  
-If I wanted to indent multiple lines three times, then I would do what I normally would do but type `3>` instead of just `>` by itself.  
-This may not seem like much, because highlighting it and using `>` three times will give the same result and may seem easier.  
-The reason why using a number is so useful is it would be quite time-consuming to highlight one 100 lines of code each time it is to be indented. 
+Many of these commands are very helpful to speed up coding, but can still take quite a while if they are needed to be done multiple times.
+This can be solved by simply typing the number of times a user wants the command to be done before the user types the command.
+If I wanted to indent multiple lines three times, then I would do what I normally would do but type `3>` instead of just `>` by itself.
+This may not seem like much, because highlighting it and using `>` three times will give the same result and may seem easier.
+The reason why using a number is so useful is it would be quite time-consuming to highlight one 100 lines of code each time it is to be indented.
 This helps save time when doing that command a great number of times or over a large amount of code.
 
 `vim` can seem frustrating at first and it may appear to be much more difficult to do what people are used to. 
