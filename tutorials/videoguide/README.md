@@ -210,8 +210,7 @@ For example, I could use the `-l` and `-a` flags to display the information for 
 ####The `cd` and `mv` commands
 [![Alt text for your video](http://img.youtube.com/vi/xzN-sY5oyFk/0.jpg)](https://www.youtube.com/watch?v=xzN-sY5oyFk)
  
-`$ cd directory/path`
-
+`$ cd directory/path`  
 `$ mv filename/directory_name destination`
 
 The `cd` and `mv` commands are crucial commands in order to actually use the terminal. 
