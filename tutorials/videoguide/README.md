@@ -1,4 +1,4 @@
-##Guide To Getting Started: The Terminal, GitHub, & `VIM`
+##Guide To Getting Started: The Terminal, GitHub, & `vim`
 Learning to use github, `vim`, and the terminal can be very confusing and hard to learn when you are so used to writing, compiling, saving and sharing your code in your own way. Thankfully, we've created a simple video guide to help you reach your potential in most areas of the terminal, github, and `vim` so you can manage your files, create new files, write code, compile it and share it via your profile on github.com. 
 
 Our names are Rashid, Kyler, and Sean, Junior Computer Science Majors at the *University of California, Riverside*. We took CS100 class not knowing how to use or even get started with these topics. Rest asure, we didn't want to let anyone else feel unconfident and pushed back because they weren't sure how to strongly use the termina, `vim` or github. That's why we've put together a series of video guides to get you started in the right direction towards learning the basics. We hope you enjoy our tutorial, and wish you the best in your coding. 
