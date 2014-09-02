@@ -284,7 +284,8 @@ It's really simple to implement, essentially adding only a line or two per syste
 In conclusion to `vim`, there are many commands that are quite useful but untaught. 
 For example, the `%` command. 
 It took me quite a while to completely understand the `%` command but it became really useful as I mastered it. 
-It is supposed to match the current parenthesis, or a character similar to parentheses, to the one that closes it but there were times when it just did not work.  
+It is supposed to match the current parenthesis, or a character similar to parentheses, to the one that closes it but there were times when it just did not work.
+
 When it works, it is very helpful for it helps users to see if something is outside of a loop or if a loop ends where it should, but I noticed that it sometimes would be buggy if there was some parenthesis in comments.
 The `%` command does not differentiate between something a comment or normal code.
 This led to some very confusing moments where it would seem that my code would work even if `%` told me that the parenthesis did not match up correctly.
@@ -297,12 +298,12 @@ This may not seem like much, because highlighting it and using `>` three times w
 The reason why using a number is so useful is it would be quite time-consuming to highlight one 100 lines of code each time it is to be indented.
 This helps save time when doing that command a great number of times or over a large amount of code.
 
-`vim` can seem frustrating at first and it may appear to be much more difficult to do what people are used to. 
-Users may want to give up because they have to relearn commands that were once second nature with other editors.  
-It may take a while to relearn things such as `u` is now undo and `cntrl-R` is now redo, but it will be worth it in the end.  
-`vim` has many tricks that can help speed up programming, even if new users do not learn it all right away.  
-The information can always be found if new users need a reminder on how to do something.  
-With time, the commands in `vim` will start to become just as easy to use as the commands in any other editor.  
+`vim` can seem frustrating at first and it may appear to be much more difficult to do what people are used to.
+Users may want to give up because they have to relearn commands that were once second nature with other editors.
+It may take a while to relearn things such as `u` is now undo and `cntrl-R` is now redo, but it will be worth it in the end.
+`vim` has many tricks that can help speed up programming, even if new users do not learn it all right away.
+The information can always be found if new users need a reminder on how to do something.
+With time, the commands in `vim` will start to become just as easy to use as the commands in any other editor.
 If users stick to learning how to use `vim` a little at a time, then they will begin to be surprised how they ever coded without it.
 
 
@@ -312,9 +313,9 @@ Extras
 ####Spectacle App: Using the terminal and `vim` in one screen
 [![Alt text for your video](http://img.youtube.com/vi/-PWJe6vr0rk/0.jpg)](https://www.youtube.com/watch?v=-PWJe6vr0rk)
 
-One of the first things I noticed about `vim` that I initially disliked was that it took over the terminal when I used it.  
-I thought that I would have to close `vim` each time I wanted to test if my program could run correctly.  
-To get around this issue, I started using two terminals instead of just one while I was programming.  
-I would run `vim` using the first terminal and would run the executable in the second.  
-It was as simple as using `:w` to save on `vim` instead of using `:wq` to save and quit. 
+One of the first things I noticed about `vim` that I initially disliked was that it took over the terminal when I used it.
+I thought that I would have to close `vim` each time I wanted to test if my program could run correctly.
+To get around this issue, I started using two terminals instead of just one while I was programming.
+I would run `vim` using the first terminal and would run the executable in the second.
+It was as simple as using `:w` to save on `vim` instead of using `:wq` to save and quit.
 I could now test my code without ever having to close `vim`.
