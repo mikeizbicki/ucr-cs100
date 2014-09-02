@@ -1,1 +1,9 @@
-/ 100
+45 / 120
+
+-5 pts:
+  number of syscalls... 4
+  number of perror..... 3
+  grade modifier....... -5
+
+-50 pts piping does not work
+
