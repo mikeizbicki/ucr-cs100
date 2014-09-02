@@ -81,31 +81,28 @@ Watch the video above and let us drive through both of these documents together 
 
 Learning `vim`
 ---
-`vim` has so many commands that it can be intimidating for first time users.  
-They may feel that using a different, more familiar, editor would make coding more efficient. 
-It may be difficult to remember what all of these new commands do, but these users may even begin to enjoy using it more than their previous editors if given enough time to practice with `vim`.
-I'm no master at using `vim` and am still learning new things about it. Overtime, I learned a few tricks that helped me use `vim` to make better code.
+`vim` has so many commands that it can be intimidating for first time users.
+They may feel that using a different, more familiar, editor would make coding more efficient.
+It may be difficult to remember what all of these new commands do, but these users may even begin to enjoy using it more than their previous editors if given enough time to practice with `vim`. I'm no master at using `vim` and am still learning new things about it. Overtime, I learned a few tricks that helped me use `vim` to make better code.
 
 
 
 ###Getting Started
 [![Alt text for your video](http://img.youtube.com/vi/jQkyU6bgMIs/0.jpg)](https://www.youtube.com/watch?v=jQkyU6bgMIs)
 
-It was difficult at first trying to transverse my code while using `vim`. I was so used to being able to use my mouse and simply click where I wanted to go. 
-I was now at the mercy of moving my cursor one line at a time to go anywhere until I learned more about the many helpful tools `vim` already had just for traveling through code.  
+It was difficult at first trying to transverse my code while using `vim`. I was so used to being able to use my mouse and simply click where I wanted to go.
+I was now at the mercy of moving my cursor one line at a time to go anywhere until I learned more about the many helpful tools `vim` already had just for traveling through code.
 Some are simple such as `gg` to go to the top of the code, `G` to go to the bottom of it, and `(any number)G` to go to the line number typed before the capital G.)
 
-Some ways of moving through the text are a little more complicated but easy once a user gets used to them.  
-Any line of text can be searched if something specific is being searched for the text’s line is unknown.  
-This is done by using the command `/` and then typing what the user wants to search.  
-This will highlight the searched text wherever it appears in the code and place the cursor in the first highlighted area that it can find after the cursor’s original position.  
-There are many ways to transverse these highlighted characters, but the one I found most helpful was typing `n` for it will take you to the next highlighted word no matter where you currently are.
+Some ways of moving through the text are a little more complicated but easy once a user gets used to them.
+Any line of text can be searched if something specific is being searched for the text’s line is unknown.
+This is done by using the command `/` and then typing what the user wants to search.
+This will highlight the searched text wherever it appears in the code and place the cursor in the first highlighted area that it can find after the cursor’s original position. There are many ways to transverse these highlighted characters, but the one I found most helpful was typing `n` for it will take you to the next highlighted word no matter where you currently are.
 
-One problem that I would occasionally get is I would do some sort of command by ident and highlight something that I did not want to highlight. 
-At first I did not even know that I could highlight things so I thought I messed something up and this would affect my code.  
-This is not the case. There are many different ways to highlight and this is exists to help with `vim`. 
+One problem that I would occasionally get is I would do some sort of command by ident and highlight something that I did not want to highlight.
+At first I did not even know that I could highlight things so I thought I messed something up and this would affect my code. This is not the case. There are many different ways to highlight and this is exists to help with `vim`.
 If this is done by accident then there are a few ways to get rid of the highlight. 
-Highlighting something else would get rid of this, but when I first started using `vim` I did not even know how to do that. 
+Highlighting something else would get rid of this, but when I first started using `vim` I did not even know how to do that.
 
 There is a command that will get rid of any highlights and return the text back to normal without highlighting anything else. Just type `:nohlsearch` and the highlight will go away.
 
@@ -114,13 +111,13 @@ There is a command that will get rid of any highlights and return the text back 
 ####Indentation
 [![Alt text for your video](http://img.youtube.com/vi/UAcSoRLRLug/0.jpg)](https://www.youtube.com/watch?v=UAcSoRLRLug)
 
-At first it felt very time consuming to indent multiple lines. 
-I would go to the beginning of each line and after using `i` and type tab.  
-With so many commands in `vim`, I was surprised that there was no command to just indent a few lines.  
-I felt this way until I found about the `V` command.  
-`V` lets users highlight a line and pressing up or down can highlight as many lines as they desire.  
-All that was left to do was to type `>` after everything I wanted to indent was highlighted and it all would indented once to the right. 
-Typing `<` would instead indent it to the left if I ever wanted to do that.  
+At first it felt very time consuming to indent multiple lines.
+I would go to the beginning of each line and after using `i` and type tab.
+With so many commands in `vim`, I was surprised that there was no command to just indent a few lines.
+I felt this way until I found about the `V` command.
+`V` lets users highlight a line and pressing up or down can highlight as many lines as they desire.
+All that was left to do was to type `>` after everything I wanted to indent was highlighted and it all would indented once to the right.
+Typing `<` would instead indent it to the left if I ever wanted to do that.
 This greatly improved my usage of `vim` for `V`, or `v` if users wanted to highlight characters instead of entire lines, was could be combined with many commands and not just indenting.
 
 
@@ -128,13 +125,13 @@ This greatly improved my usage of `vim` for `V`, or `v` if users wanted to highl
 ####Deletion
 [![Alt text for your video](http://img.youtube.com/vi/qjJ3nIcExhE/0.jpg)](https://www.youtube.com/watch?v=qjJ3nIcExhE)
 
-Just like indenting, I thought that I could only delete one character at a time when I started using `vim`.  
-This would become bothersome if I wanted to fix a big part of my code that I knew needed to be deleted.  
-There are plenty of different ways that I learned to speed this up.  
-The most helpful ways were pressing `x` after highlighting what I wanted deleted, and using the `d` command.  
-`d` can be used with many different things after it. `dd` will delete the entire line. 
-`d$` will delete the rest of the current line. 
-`dw` will delete the rest of the current word.  
+Just like indenting, I thought that I could only delete one character at a time when I started using `vim`.
+This would become bothersome if I wanted to fix a big part of my code that I knew needed to be deleted.
+There are plenty of different ways that I learned to speed this up.
+The most helpful ways were pressing `x` after highlighting what I wanted deleted, and using the `d` command.
+`d` can be used with many different things after it. `dd` will delete the entire line.
+`d$` will delete the rest of the current line.
+`dw` will delete the rest of the current word.
 These commands made writing code in `vim` go by much faster.
 
 
@@ -144,14 +141,14 @@ These commands made writing code in `vim` go by much faster.
 [![Alt text for your video](http://img.youtube.com/vi/-DN_xww8jOM/0.jpg)](https://www.youtube.com/watch?v=-DN_xww8jOM)
 
 Cutting, copying, and pasting took a while to get used to when using `vim`.
-Sometimes there was something I wanted in my code that was in the instructions for the assignment.  
+Sometimes there was something I wanted in my code that was in the instructions for the assignment.
 I knew that in order to paste I would use the `p` command, but I could not paste things from outside of `vim` into it.
-I solved this with one of the few times I could use my mouse in `vim`. 
-If I had something copied outside of `vim`, then to paste it into `vim` I would right click and just click paste.  
-This would paste it wherever the cursor currently is.  
-This can also be used to copy from `vim`. 
-If you right click to copy, then it will not affect what is copied by using the commands `y` to copy or the commands `d` or `x` to cut.  
-If those commands are used, the just clicking `p` will paste them.  
+I solved this with one of the few times I could use my mouse in `vim`.
+If I had something copied outside of `vim`, then to paste it into `vim` I would right click and just click paste.
+This would paste it wherever the cursor currently is.
+This can also be used to copy from `vim`.
+If you right click to copy, then it will not affect what is copied by using the commands `y` to copy or the commands `d` or `x` to cut.
+If those commands are used, the just clicking `p` will paste them.
 There are other ways to store more than one thing while copying or cutting, but these two ways were the most helpful as I learned how to use `vim`.
 
 
@@ -213,18 +210,18 @@ For example, I could use the `-l` and `-a` flags to display the information for 
 `$ cd directory/path`  
 `$ mv filename/directory_name destination`
 
-The `cd` and `mv` commands are crucial commands in order to actually use the terminal. 
-Without cd, I would forever be stuck in their home directory. 
-The `mv` command is necessary for moving files from one section of the hard drive. 
-They're really simple commands, but without them, there'd be no way to orginize contents within a hard drive. 
-The `cd` command by itself will change the current working directory to the home directory. 
-If passed a directory name that is within the current working directory, the current working directory will be changed to the name of the passed in directory. 
-`cd` will also take a path as an argument. When a path is passed in, the current working directory will be changed to the directory specified by the path. 
+The `cd` and `mv` commands are crucial commands in order to actually use the terminal.
+Without cd, I would forever be stuck in their home directory.
+The `mv` command is necessary for moving files from one section of the hard drive.
+They're really simple commands, but without them, there'd be no way to orginize contents within a hard drive.
+The `cd` command by itself will change the current working directory to the home directory.
+If passed a directory name that is within the current working directory, the current working directory will be changed to the name of the passed in directory.
+`cd` will also take a path as an argument. When a path is passed in, the current working directory will be changed to the directory specified by the path.
 When `cd` is passed with `..`, the directory will go backwards, the directory that the current directory is in.
-The `mv` command will move an item within a certain directory to the directory passed in. 
+The `mv` command will move an item within a certain directory to the directory passed in.
  
- If the destination argument is not a path, the command will look for the destination in the current working directory. 
- The destination argument can be a path, so I can move the item to any directory in the hard drive.''
+If the destination argument is not a path, the command will look for the destination in the current working directory.
+The destination argument can be a path, so I can move the item to any directory in the hard drive.
 
 
 
@@ -255,7 +252,7 @@ You will be prompted for the password associated with the net ID (the password y
 To exit out of the server, type into the command line `exit`. 
 You will exit the server and be placed back into your local bash. 
 Any change saved to the server will be saved, so if you exit and re-enter the server, the changes will remain. 
-If it works on well, then it will work when it is graded. It's not neccessary to write the code in the school's server, but I would recommend doing all writing in the well server so that it is faster to debug and test, as opposed to writing locally, copying the file, saving it to your personal server, then compiling. I know for myself, when working on my first assignment for CS100, I wrote and compiled all my on my local machine and then submitted the final version without first checking if it compiled and ran on the school's server. Sure enough, I received a zero for inability to compile. From then on, I never wrote any code on my local terminal, doing all work on the school's server. I then checked my final version after modifying it to work on the school's server, and it didn't compile in my own bash terminal. After that, I realized there was no point in writing code on my local terminal, as it was easier to ssh into the school server and do all my work in there. It cloud-saves all your work, allowing you to access it almost anywhere. It's a really useful tool while still a student here at UCR.''''''')''
+If it works on well, then it will work when it is graded. It's not neccessary to write the code in the school's server, but I would recommend doing all writing in the well server so that it is faster to debug and test, as opposed to writing locally, copying the file, saving it to your personal server, then compiling. I know for myself, when working on my first assignment for CS100, I wrote and compiled all my on my local machine and then submitted the final version without first checking if it compiled and ran on the school's server. Sure enough, I received a zero for inability to compile. From then on, I never wrote any code on my local terminal, doing all work on the school's server. I then checked my final version after modifying it to work on the school's server, and it didn't compile in my own bash terminal. After that, I realized there was no point in writing code on my local terminal, as it was easier to ssh into the school server and do all my work in there. It cloud-saves all your work, allowing you to access it almost anywhere. It's a really useful tool while still a student here at UCR.
 
 
 Error Checking
