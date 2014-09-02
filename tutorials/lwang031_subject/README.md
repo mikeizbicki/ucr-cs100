@@ -47,7 +47,7 @@ It need to be known that only single quotes can prevent every character from bei
 
 You see, when a filename contains whitespace, bash splits the name on that whitespace when you leave variables unquoted. Suppose you have a file named “spaced name.txt, you put it in a variable `filename= spaced name.txt`, and then you try to move it to “unspacedname.txt” by executing `mv $filename unspacedname.txt`. You’ll get the error “mv: target ’unspacedname.txt‘ is not a directory”. This is because mv gets executed like this: `mv spaced name.txt unspacedname.txt`. In other words, mv will try to move two files, “spaced name.txt” to “unspacedname.txt”, 
 and fail because moving multiple files to a single destination is only allowed when the destination is a directory. 
-Putting double quotes around “$filename” solves this issue.
+Putting double quotes around "$filename" solves this issue.
 
 So you see, quoting is a good habit to prevent your commands and scripts from doing unexpected things. Important message: you can’t quote variables using single quotes, because the dollar sign loses its special meaning between single quotes, and if you ever need to use a literal single quote in some command, you can do so by putting it between double quotes. 
 
@@ -83,9 +83,7 @@ replaced by a file. This file is a stream from which the output of the command i
     $ cat <(echo test)
 
 Now this does print "test"! Bash redirects the output of `echo test` to /dev/fd/<something>, gives the path of that
-file to cat, and cat reads the output of echo from that file. The shortened diff command above does the same (plus it's 
-much shorter), only for two slightly more complicated commands. This technique can be applied in any place where a 
-temporary file is needed, but it does have a limitation. The temporary file can only be read once before it 
+file to `cat`, and `cat` reads the output of `echo` from that file. The shortened `diff` command above does the same (plus it's much shorter), only for two slightly more complicated commands. This technique can be applied in any place where a temporary file is needed, but it does have a limitation. The temporary file can only be read once before it 
 disappears. 
 
 
@@ -131,8 +129,8 @@ For example:
     $ echo $((103%10)) # Outputs 3, which is the remainder of 103 divided by 10
     3
 
-`$((something))` also allows bitwise operations (what?!), it's actually a syntactic sugar over the `eval` command, and as such it interprets the "^" as a bitwise 
-operator. That’s why "**" means  “the power of”. The syntax also supports showing the decimal equivalent of a 
+`$((something))` also allows bitwise operations (what?!), it's actually a syntactic sugar over the `eval` command, and as such it interprets the `^` as a bitwise 
+operator. That’s why `**` means  “the power of”. The syntax also supports showing the decimal equivalent of a 
 hexadecimal or octal number. 
 Here’s an example:
 
