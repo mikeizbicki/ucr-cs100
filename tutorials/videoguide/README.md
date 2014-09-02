@@ -84,16 +84,14 @@ Learning `vim`
 `vim` has so many commands that it can be intimidating for first time users.  
 They may feel that using a different, more familiar, editor would make coding more efficient. 
 It may be difficult to remember what all of these new commands do, but these users may even begin to enjoy using it more than their previous editors if given enough time to practice with `vim`.
-I'm no master at using `vim` and am still learning new things about it.  
-Overtime, I learned a few tricks that helped me use `vim` to make better code.
+I'm no master at using `vim` and am still learning new things about it. Overtime, I learned a few tricks that helped me use `vim` to make better code.
 
 
 
 ###Getting Started
 [![Alt text for your video](http://img.youtube.com/vi/jQkyU6bgMIs/0.jpg)](https://www.youtube.com/watch?v=jQkyU6bgMIs)
 
-It was difficult at first trying to transverse my code while using `vim`.
-I was so used to being able to use my mouse and simply click where I wanted to go. 
+It was difficult at first trying to transverse my code while using `vim`. I was so used to being able to use my mouse and simply click where I wanted to go. 
 I was now at the mercy of moving my cursor one line at a time to go anywhere until I learned more about the many helpful tools `vim` already had just for traveling through code.  
 Some are simple such as `gg` to go to the top of the code, `G` to go to the bottom of it, and `(any number)G` to go to the line number typed before the capital G.)
 
@@ -108,6 +106,7 @@ At first I did not even know that I could highlight things so I thought I messed
 This is not the case. There are many different ways to highlight and this is exists to help with `vim`. 
 If this is done by accident then there are a few ways to get rid of the highlight. 
 Highlighting something else would get rid of this, but when I first started using `vim` I did not even know how to do that. 
+
 There is a command that will get rid of any highlights and return the text back to normal without highlighting anything else. Just type `:nohlsearch` and the highlight will go away.
 
 
