@@ -4,7 +4,7 @@ Cheat Sheet
 
 #####SETUP GIT
 
-After installing Git, you can made modifications to it to customize the environment and identify yourself. You just need to make these changes once.
+After installing Git, you can make modifications to customize the environment and identify yourself in it. You just need to make these changes once.
 
 ```
 $ git config --global user.name [your username]
