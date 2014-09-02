@@ -1,7 +1,7 @@
 ##Guide To Getting Started: The Terminal, GitHub, & `VIM`
-Learning to use github, `vim`, and the terminal can be very confusing and hard to learn when you are so used to writing code and saving it your own way. Thankfully, we've created a simple video guide to help you reach your potential in most areas of the terminal, github, and `vim`. 
+Learning to use github, `vim`, and the terminal can be very confusing and hard to learn when you are so used to writing, compiling, saving and sharing your code in your own way. Thankfully, we've created a simple video guide to help you reach your potential in most areas of the terminal, github, and `vim` so you can manage your files, create new files, write code, compile it and share it via your profile on github.com. 
 
-Our names are Rashid, Kyler, and Sean, Junior Computer Science Majors at the *University of California, Riverside*. We took our CS100 class not knowing how to use or even get started with the terminal, github and `vim`. Rest asure, we didn't want to let anyone else feel unconfident about these three things. That's why we've put together a series of video guides to get you started in the right direction towards learning the basics of the terminal, github, and `vim`.
+Our names are Rashid, Kyler, and Sean, Junior Computer Science Majors at the *University of California, Riverside*. We took CS100 class not knowing how to use or even get started with these topics. Rest asure, we didn't want to let anyone else feel unconfident and pushed back because they weren't sure how to strongly use the termina, `vim` or github. That's why we've put together a series of video guides to get you started in the right direction towards learning the basics. We hope you enjoy our tutorial, and wish you the best in your coding. 
 
 Click The Images Below To Be Taken To YouTube To Watch
 
@@ -178,7 +178,7 @@ A few of these that I found most helpful were cw to replace the rest of the curr
 
 
 
-####Modifying `vim` (.vimrc file)
+####Modifying your `vim` editor (.vimrc file)
 [![Alt text for your video](http://img.youtube.com/vi/fck6HFCUg2s/0.jpg)](https://www.youtube.com/watch?v=fck6HFCUg2s)
 
 Ever wondered how've we get our `vim` editor to work in the way we have it versus the default editor? 
