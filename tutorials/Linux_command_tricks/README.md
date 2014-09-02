@@ -97,14 +97,14 @@ Do you know that moment when you’re typing a long command.
 
     $ cd 1/2/3/4/5/6/7....(# represents super long names "1 = safjslfjsaflfj") 
 and then suddenly realize you need to execute something else 
-first (Oh, what's the next path...). Everyone hate this! Fortunately, there's a way to fix it. Ensure cursor is at the end of your current command shortcut: "Ctrl+E", press "Ctrl+U" to get a clean line,
+first (Oh, what's the next path...). Everyone hate this! Fortunately, there's a way to fix it. Ensure cursor is at the end of your current command shortcut: `Ctrl+E`, press `Ctrl+U` to get a clean line,
 
     $ ^E (copy the current command)
     $ ^U (clear the current command)
     $ ls (check the direc you want)
     $ ^Y (paste the older command)
     $ cd 1/2/3/4/5/6/7..... (Yeah, the command is back)
-type the other command you need to execute first, execute it, then press "Ctrl+Y" and amazing! Your long command is back on the line. No mouse needed for copying, just quick hotkeys.
+type the other command you need to execute first, execute it, then press `Ctrl+Y` and amazing! Your long command is back on the line. No mouse needed for copying, just quick hotkeys.
 Great tricks!!
 
 
