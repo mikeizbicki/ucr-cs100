@@ -7,7 +7,7 @@ General
 
 Valgrind is a linux tool that helps you deal with debugging memory management issues. 
 
-Valgrind used along side with Memcheck will display how many allocations you have done, how many deallocations and how many bytes were allocated and deallocated.
+Valgrind has a function called Memcheck will display how many allocations you have done, how many deallocations and how many bytes were allocated and deallocated.
 
 Finding our problem
 -------------------
@@ -89,7 +89,7 @@ Between the ```HEAP SUMMARY``` and ```LEAK SUMMARY``` we will get the message:
     ==4102==    by 0x40071E: main (in /home/william/cs100/hw5/a.out)
 ```
 
-We can see that in the third line, valgrind says that the memory leak is cause BY the function main and in the second line, valgrind says the leak is cause AT ```new[]```.
+We can see that in the third line, Valgrind says that the memory leak is cause BY the function main and in the second line, Valgrind says the leak is cause AT ```new[]```.
 
 This information will help you find where your leaks are at in your program.
 
@@ -110,7 +110,7 @@ If we take our old program example1.cpp, and add a ```delete``` right under the 
 ```
 
 
-Now if we recompile and run valgrind with memcheck we get:
+Now if we recompile and run Valgrind with Memcheck we get:
 
 ```
     $ g++ example1.cpp
@@ -137,7 +137,7 @@ Now if we recompile and run valgrind with memcheck we get:
 
 If we look at the ```HEAP SUMMARY``` section, we can see that our change worked and that for 1 allocation we have 1 free.
 
-We just looked at a very simple example that only has 6 lines of code, of course there will be more complicated programs and now I will demonstrate valgrind and memcheck with more complex program, example2.cpp.
+We just looked at a very simple example that only has 6 lines of code, of course there will be more complicated programs and now I will demonstrate Valgrind and Memcheck with more complex program, example2.cpp.
 
 More complex example
 --------------------
@@ -170,7 +170,7 @@ More complex example
 ```
 
 
-If we have program like the one above, we can see that the program calls a function that allocates some memory in the main and also in a function. now if we run this program in valgrind with memcheck we will the get the following message:
+If we have program like the one above, we can see that the program calls a function that allocates some memory in the main and also in a function. now if we run this program in Valgrind with Memcheck we will the get the following message:
 
 ```
     $ g++ example2.cpp
@@ -236,7 +236,7 @@ To fix our problem we need to add in some deletes for the ```VAR``` pointer and 
 ```
 
 
-And now when we put this through valgrind, we should not have any memory leaks.
+And now when we put this through Valgrind, we should not have any memory leaks.
 
 ```
     $ g++ example2.cpp
@@ -256,6 +256,106 @@ And now when we put this through valgrind, we should not have any memory leaks.
 
 Now that we made those changes, we can see that there were 3 allocations and 3 frees, which fixes our memory leak problem.
 
-There you have it! Now you can test your programs uing valgrind to catch the pesky memory leaks that are almost impossible to find with the naked eye.
+One last example
+----------------
+
+There is another function of Valgrind using Memcheck that will help you check to make sure that you allocated memory before you attempt to use it.
+
+If we take our example2.cpp code and modify it slightly on the first line in ```main```:
+
+```
+    #include <iostream>
+    #include <cstring>
+ 
+    using namespace std;
+
+    void doSomething(char *ptr)
+    {
+        char *var2 = new char[1024]; // create a new char*
+        strcpy(var2,ptr); // copy old char* into new char*
+        cout << var2 << endl; // output new char*
+        delete [] var2;
+    }
+    
+    int main()
+    {   
+        char *var;       //= new char[1024]; //create char*
+        string str = "hello world"; //create string to go into char*
+        strcpy(var,str.c_str()); //copy string into char*
+        cout << var << endl; // output char*
+        doSomething(var); // call function with char*
+        delete [] var;
+        return 0; 
+    } 
+```
+When we compile and run this program through Valgrind using Memcheck, we get:
+
+```
+    $ g++ example2.cpp
+    $ valgrind --tool=memcheck ./a.out
+```
+
+```
+    ==4942== Memcheck, a memory error detector
+    ==4942== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+    ==4942== Using Valgrind-3.10.0.SVN and LibVEX; rerun with -h for copyright info
+    ==4942== Command: ./a.out
+    ==4942== 
+    ==4942== Use of uninitialised value of size 8
+    ==4942==    at 0x4C2E1E0: strcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+    ==4942==    by 0x400C4D: main (in /home/william/ucr-cs100/tutorials/valgrind/a.out)
+    ==4942== 
+    ==4942== 
+    ==4942== Process terminating with default action of signal 11 (SIGSEGV)
+    ==4942==  Bad permissions for mapped region at address 0x400AC0
+    ==4942==    at 0x4C2E1E0: strcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+    ==4942==    by 0x400C4D: main (in /home/william/ucr-cs100/tutorials/valgrind/a.out)
+    ==4942== 
+    ==4942== HEAP SUMMARY:
+    ==4942==     in use at exit: 36 bytes in 1 blocks
+    ==4942==   total heap usage: 1 allocs, 0 frees, 36 bytes allocated
+    ==4942== 
+    ==4942== LEAK SUMMARY:
+    ==4942==    definitely lost: 0 bytes in 0 blocks
+    ==4942==    indirectly lost: 0 bytes in 0 blocks
+    ==4942==      possibly lost: 36 bytes in 1 blocks
+    ==4942==    still reachable: 0 bytes in 0 blocks
+    ==4942==         suppressed: 0 bytes in 0 blocks
+    ==4942== Rerun with --leak-check=full to see details of leaked memory
+    ==4942== 
+    ==4942== For counts of detected and suppressed errors, rerun with: -v
+    ==4942== Use --track-origins=yes to see where uninitialised values come from
+    ==4942== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+    Segmentation fault (core dumped)
+```
+
+We can see right under ```Command:``` that we have the statement ```Use of uninitialised value of size 8```, this statement implies that we tried to use memory that we have not allocated which would cause a segmentation fault. This segmentation fault is shown at the end of the output.
+
+We also see that below the line ```Process terminating with default action of signal 11(SIGSEGV)``` we get the message ```Bad permissions for mapped region at address 0x400AC0```. The ```Bad permission``` statement also states that we have not allocated the memory that we want to access.
+
+We can see that Valgrind and Memcheck are trying to help us find our issue by giving us the message ```Use --track-origins=yes to see where uninitialised values come from```. So lets give this a try ourselves:
+
+Let's run the command:
+
+```
+    $ valgrind --tool=memcheck --track-origins=yes ./a.out
+```
+
+We get the following output that is different from before:
+
+```
+    ==5278== Use of uninitialised value of size 8
+    ==5278==    at 0x4C2E1E0: strcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+    ==5278==    by 0x400C4D: main (in /home/william/ucr-cs100/tutorials/valgrind/a.out)
+    ==5278==  Uninitialised value was created by a stack allocation
+    ==5278==    at 0x400BFA: main (in /home/william/ucr-cs100/tutorials/valgrind/a.out)
+```
+
+The extra two lines added from before tell you what function the uninitialised value was created in, in this case ```main```.
+
+This feature of Valgrind and Memcheck can help tremendously in debugging your programs and save you tons of time.
+
+
+There you have it! Now you can test your programs uing Valgrind to catch the pesky memory leaks that are almost impossible to find with the naked eye.
 
 Happy programming!!!
