@@ -98,7 +98,7 @@ If you check your files now they will be in the state they were when you made th
 ##Git Pull and Git Push
 Now that you have your repository its time to learn about pushing and pulling. `Git push` and `git pull` are important concepts when it comes to using GitHub. You can almost think of them vaguely along the lines of downloading and uploading, respectively. When you "push" your work up into GitHub you're putting it onto the remote and syncing it with the work that you have on your local laptop, desktop, etc.
 
-
+![alt text](http://i.imgur.com/KrZw56F.png)
 
 ###Git Push
 The command `git push` wraps a big part of what we're trying to do. Once you've got all your files nicely added and commited, you're ready to push the files onto GitHub. Imagine GitHub as a big cloud of information and code called the **remote**, and you're literally "pushing" your work into this cloud from your local computer. Of course, you have to specify where you're trying to push. Once you input the command you'll be prompted to type in your username and password for your GitHub account. Afterwards you should see a some status messages show up. If you see unhappy messages then worry not, there's plenty to ways to fix your errors.
@@ -163,7 +163,11 @@ int main()
 Here theres a discrepancy. Whats important is that the code in between the <<<<<<< and the >>>>>>> is not consistent, and its your job to fix it. Code above the ======= only belongs in the master branch version while code below the ======= only belongs in "branch1." What you have to do is include the code from each branch that you want.
 
 ##Some Extra Review
-Between branches, merges and commits, a lot of people get confused and loose track of what's actually happening. In the series of pictures below, we'll demonstrate what's exactly in each step.
+Has your brain exploded from the amount of info yet?
+
+![alt text](http://media.tumblr.com/tumblr_makdk3SJlE1qaecih.gif)
+
+Between branches, merges and commits, a lot of people get confused and lose track of what's actually happening. We're gonna ease off of gas pedal for a bit and with the series of pictures below, we'll slowly go over what's happening in each step.
 
 1) In the first picture we have the master branch and two commits. The master branch is currently pointing to the second commit.
 ![alt text](http://i.imgur.com/LmdvsQ0.png)
@@ -189,6 +193,8 @@ $ git commit -m "C3"
 ```
 We will have switched over to to the B1 branch and be on the commit that it currently points to.
 ![alt text](http://i.imgur.com/BhvYLLg.png?1)
+
+**Note:** Master is still on the C2 commit.
 
 ##Git Status
 Got everything so far? So many new concepts can be a bit overwhelming and so a useful fucntion that you can use is the `git status` command. This command will pull up a handy menu of things for you can keep track of like this:
