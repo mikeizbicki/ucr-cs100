@@ -7,7 +7,8 @@ data and files onto the internet and does so through the use of various `git` co
 
 ##Useful Commands
 Now before we dive into using GitHub, there are a few commands that will prove useful throughout the learning proccess:
-1. `ls` - a quick command that allows you to see the files and directories that are in your current working directory. Inputting it will yield something similar to this:
+
+`ls` - a quick command that allows you to see the files and directories that are in your current working directory. Inputting it will yield something similar to this:
 ```
 derp@well $ ls
 Avngrs/    CS14/       Downloads/        Music/     selfies/
@@ -18,7 +19,7 @@ CS12/     DBRainbow/  lols/             rawr/
   * `-a` - appending this flag after the `ls` command will show the hidden files that start with a `.` such as `.gitconfig`
   *  `-l` - will allow you to see additonal information about each file.
 
-1. `cd` - your go to command to navigate through directories. Inputting only `cd` will take you to your default home directory.
+`cd` - your go to command to navigate through directories. Inputting only `cd` will take you to your default home directory.
   * `cd x` will take you into a directory named x, but only if directory x is in your current directory.
   * `cd ..` - appending two periods after the cd command will exit a directory by one level.
 
@@ -27,13 +28,14 @@ CS12/     DBRainbow/  lols/             rawr/
 $ cd a/b/c
 ```
 You would be able to directly `cd` into directory c without having to go into a, then into b, then into c. It's magical!
-3.  `touch` - this command will create simply create a file.
-    ```
+
+`touch` - this command will create simply create a file.
+```
 $ touch boat
 ```
 Creates a file named "boat"
 
-4. `mkdir` - is the same as `touch` but creates a directory instead.
+`mkdir` - is the same as `touch` but creates a directory instead.
 
 
 ##Creating a Repository
