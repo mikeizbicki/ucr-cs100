@@ -18,7 +18,7 @@ CS12/     DBRainbow/  lols/             rawr/
   * `-a` - appending this flag after the `ls` command will show the hidden files that start with a `.` such as `.gitconfig`
   *  `-l` - will allow you to see additonal information about each file.
 
-1. `cd` - your go to command to navigate through directories. Inputting only `cd` will take you to your default home directory.
+2. `cd` - your go to command to navigate through directories. Inputting only `cd` will take you to your default home directory.
   * `cd x` will take you into a directory named x, but only if directory x is in your current directory.
   * `cd ..` - appending two periods after the cd command will exit a directory by one level.
 
