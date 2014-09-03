@@ -3,7 +3,10 @@
 This tutorial will teach you to master GitHub. Let's jump into it!
 
 Now what's this GitHub thing you ask? Well its a wonderful tool for programmers. It allows you to back up your code,
-data and files onto the internet and does so through the use of various `git` commands. You can keep track of changes that are made to files and work, and its something that you'll definitely be using in the future for work involving code, programs, and team contribution.
+data and files onto the internet and does so through the use of various `git` commands. You can keep track of changes that are made to files and work, and it's something that you'll definitely be using in the future for work involving code, programs, large team projects and, eventually, world domination.
+
+![alt text](http://i.imgur.com/pEQS9kn.gif)
+
 
 ##Useful Commands
 Now before we dive into using GitHub, there are a few commands that will prove useful throughout the learning proccess:
@@ -183,7 +186,7 @@ Pretty useful, huh. It tells you your current branch, and what will or won't be 
 
 
 ##Forking!
-What's forking, you ask? Well it's not food related that's for sure! (insert awkward laughter) Forking is when you, in a sense, copy someone else's repository. This is useful for quickly hitting your stride if you're trying to contribute to a repository that already has work in it. Forking will allow you to have your own version of the repository. You'll then be able to edit it as you please and update it however you want.
+What's forking, you ask? Well it's not food related that's for sure! (insert forced laughter) Forking is when you, in a sense, copy someone else's repository. This is useful for quickly hitting your stride if you're trying to contribute to a repository that already has work in it. Forking will allow you to have your own version of the repository. You'll then be able to edit it as you please and update it however you want.
 
 ##Pull Requests
 Ask and thou shalt recieve! Well not always, actually. Pull requests are a handy way of asking the original owner to merge your proposed changes. After you've made your changes to a repository that you've forked or pulled you have to commit the changes and then push it back onto GitHub. After that, a pull request is actually done online through GitHub instead of through the terminal. Go to the designated repository and click on the gray `pull request` button and it will take you to the pull request screen.  Some days the owner my decide that your pull request shall not pass, so make sure you give a good description and title for what you're trying to contribute!
