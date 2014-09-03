@@ -2,15 +2,15 @@
 Valgrind Tutorial
 =================
 
-General
--------
+What is Valgrind?
+-----------------
 
 Valgrind is a linux tool that helps you deal with debugging memory management issues. 
 
-Valgrind has a function called Memcheck will display how many allocations you have done, how many deallocations and how many bytes were allocated and deallocated.
+Valgrind has a function called Memcheck that will display the number of allocations and deallocations in bytes.
 
-Finding our problem
--------------------
+Checking for problems
+---------------------
 
 
 let's start with a code example from the program example1.cpp:
@@ -25,11 +25,11 @@ let's start with a code example from the program example1.cpp:
 
 In the code above, we can see that we have allocated some memory using the ```new``` operator.
 
-When we run this program in Valgrind using the commands:
+You can run this program in Valgrind using the commands:
 
 ```
     $ g++ example1.cpp
-    $ valgring --tool=memcheck ./a.out
+    $ valgrind --tool=memcheck ./a.out
 ```
    
     
@@ -59,9 +59,9 @@ We get the following output:
 ```
 
 
-If we look at the line under ```HEAP SUMMARY```, we can see that there were still 1,024 bytes still in use when the program exited. 
+If we look at the line under ```HEAP SUMMARY```, we can see that there were still 1,024 bytes still in use when the program exited. These 1024 bytes come from when we allocated the memory for our ```char *```.
 
-Also at the next line, we can see that there was 1 allocation and 0 deallocation, which implies a memory leak.
+Also at the next line, we can see that there was 1 allocation and 0 deallocation. This 1 allocation comes from calling the ```new``` function and the 0 deallocations comes from not calling the ```delete``` function. This implies that there is a memory leak in our program.
 
 We can also look at the ```LEAK SUMMARY``` to see if we can recover any leaked memory.
 
@@ -74,7 +74,7 @@ Looking at the line right below, we see that the 1,024 bytes lost are not recove
 To obtain more information about where the memory leak may have occured you can type the command:
 
 ```
-    $ valgring --tool=memcheck --leak-check=full ./a.out
+    $ valgrind --tool=memcheck --leak-check=full ./a.out
 ```
 
 
@@ -90,6 +90,7 @@ Between the ```HEAP SUMMARY``` and ```LEAK SUMMARY``` we will get the message:
 ```
 
 We can see that in the third line, Valgrind says that the memory leak is cause BY the function main and in the second line, Valgrind says the leak is cause AT ```new[]```.
+We can also see that all the memory that was not deallocated was definitely lost, meaning we can not retrieve this memory.
 
 This information will help you find where your leaks are at in your program.
 
@@ -98,6 +99,8 @@ This information will help you find where your leaks are at in your program.
 
 
 If we take our old program example1.cpp, and add a ```delete``` right under the ```new``` statement, our problem should be fixed!
+
+This is an important problem to fix because if you never free up your memory when you run programs, it could cause you to run out of memory for your computer. This is not a very good situation to be in.
 
 
 ```
@@ -114,7 +117,7 @@ Now if we recompile and run Valgrind with Memcheck we get:
 
 ```
     $ g++ example1.cpp
-    $ valgring --tool=memcheck ./a.out
+    $ valgrind --tool=memcheck ./a.out
 ```
 
 
@@ -139,8 +142,8 @@ If we look at the ```HEAP SUMMARY``` section, we can see that our change worked 
 
 We just looked at a very simple example that only has 6 lines of code, of course there will be more complicated programs and now I will demonstrate Valgrind and Memcheck with more complex program, example2.cpp.
 
-More complex example
---------------------
+Using Valgrind on a more difficult example
+------------------------------------------
 
 
 ```
@@ -169,13 +172,22 @@ More complex example
     }  
 ```
 
+This program listed above just creates a character string or cstring and copies the string "hello world" into it. Then the program outputs the cstring. Then it passes this cstring into a function which declares another cstring and copies the first cstring into the second one. Then the function prints out the cstring. The following is what is supposed to be output by this program
 
-If we have program like the one above, we can see that the program calls a function that allocates some memory in the main and also in a function. now if we run this program in Valgrind with Memcheck we will the get the following message:
+```
+    hello world
+    hello world
+```
+
+In our program above, we call the ```new``` operator twice and never call the ```delete``` operator. We call the first ```new``` operator in our ```main``` function and the second ```new``` in our function ```doSomething```. 
+
+Now lets run our program with Valgrind and Memcheck:
 
 ```
     $ g++ example2.cpp
-    $ valgring --tool=memcheck ./a.out
+    $ valgrind --tool=memcheck ./a.out
 ```
+We will get the following message:
 
 ```
     memory error detector
@@ -203,9 +215,11 @@ If we have program like the one above, we can see that the program calls a funct
 ```
 
 
-As we can see the program runs normal, printing out "hello world" twice, but when we look at the ```HEAP SUMMARY``` we see that there were 3 allocations and 1 free. This means that we have a memory leak again.
+As we can see the program runs normal, printing out "hello world" twice under the ```Command: ./a.out``` line, but when we look at the ```HEAP SUMMARY``` we see that there were 3 allocations and 1 free. This means that we have a memory leak again.
  
 If we look back at our program we can see that we used ```new``` but never called ```delete```.
+
+As stated above ```Delete``` is neccesary to free up memory so that you do run into memory issues later on.
  
 To fix our problem we need to add in some deletes for the ```VAR``` pointer and the ```PTR``` pointer like such:
 
@@ -240,7 +254,7 @@ And now when we put this through Valgrind, we should not have any memory leaks.
 
 ```
     $ g++ example2.cpp
-    $ valgring --tool=memcheck ./a.out
+    $ valgrind --tool=memcheck ./a.out
 ```
 
 ```
@@ -259,7 +273,7 @@ Now that we made those changes, we can see that there were 3 allocations and 3 f
 One last example
 ----------------
 
-There is another function of Valgrind using Memcheck that will help you check to make sure that you allocated memory before you attempt to use it.
+While Valgrind can check if you have deallocated memory, it can also check if you have allocated it in the first place.
 
 If we take our example2.cpp code and modify it slightly on the first line in ```main```:
 
@@ -288,6 +302,8 @@ If we take our example2.cpp code and modify it slightly on the first line in ```
         return 0; 
     } 
 ```
+I modified the ```char *var = new char[1024]``` to ```char *var``` in order to induce the problem of not allocating memory before using that memory.
+
 When we compile and run this program through Valgrind using Memcheck, we get:
 
 ```
@@ -353,9 +369,14 @@ We get the following output that is different from before:
 
 The extra two lines added from before tell you what function the uninitialised value was created in, in this case ```main```.
 
+
 This feature of Valgrind and Memcheck can help tremendously in debugging your programs and save you tons of time.
 
+Conclusion
+----------
 
-There you have it! Now you can test your programs uing Valgrind to catch the pesky memory leaks that are almost impossible to find with the naked eye.
+Valgrind has a lot of functionality that can drastically decrease your debugging time and let you focus on being a better programmer. 
+
+Now you can test your programs uing Valgrind to catch the pesky memory leaks that are almost impossible to find with the naked eye.
 
 Happy programming!!!
