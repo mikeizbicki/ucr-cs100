@@ -23,7 +23,7 @@ CS12/     DBRainbow/  lols/             rawr/
   *  `-l` - will allow you to see additonal information about each file.
 
 `cd` - your go to command to navigate through directories. Inputting only `cd` will take you to your default home directory.
-  * `cd x` will take you into a directory named x, but only if directory x is in your current directory.
+  * `cd x` - will take you into a directory named x, but only if directory x is in your current directory.
   * `cd ..` - appending two periods after the cd command will exit a directory by one level.
 
   A cool thing you can do with the `cd` command is append directory names with the `/` character to cd through multiple levels! In your terminal if you were to run the command
@@ -108,8 +108,8 @@ Everything up-to-date
 ```
 That simply means that the everything currently on your GitHub is already in sync with your local machine. 
 
-
-
+###Git Pull
+The command `git pull` can be explained rather intuitively. In the case that your work on GitHub has been edited and doesn't match the work on your local computer, you can use `git pull` in order to literally "pull" the work from the interwebs onto your computer. This is useful if, for example, multipl people have contributed and made changes your repository online. `Git pull` would allow you to sync those changes onto your local machine. It should be noted, however, that ue of this command will automatically result in a merge attempt of the work you pulled into the branch and directory that you're currently on, so make sure you commit and save your changes before pulling!
 
 
 ##Branching
@@ -162,6 +162,34 @@ int main()
 ```
 Here theres a discrepancy. Whats important is that the code in between the <<<<<<< and the >>>>>>> is not consistent, and its your job to fix it. Code above the ======= only belongs in the master branch version while code below the ======= only belongs in "branch1." What you have to do is include the code from each branch that you want.
 
+##Some Extra Review
+Between branches, merges and commits, a lot of people get confused and loose track of what's actually happening. In the series of pictures below, we'll demonstrate what's exactly in each step.
+
+1) In the first picture we have the master branch and two commits. The master branch is currently pointing to the second commit.
+![alt text](http://i.imgur.com/LmdvsQ0.png)
+
+2) After we run the command:
+```
+$ git branch B1
+```
+The new branch B1 will also be pointing at the second commit. Our tree will look like this:
+
+![alt text](http://i.imgur.com/PCtiC9w.png?1)
+
+**Note:** Keep in mind that creating a new branch does not mean that we're currently on it! So running `git branch` would yield:
+```
+  B1
+* master
+```
+
+3) Now if we run
+```
+$ git checkout B1
+$ git commit -m "C3"
+```
+We will have switched over to to the B1 branch and be on the commit that it currently points to.
+![alt text](http://i.imgur.com/BhvYLLg.png?1)
+
 ##Git Status
 Got everything so far? So many new concepts can be a bit overwhelming and so a useful fucntion that you can use is the `git status` command. This command will pull up a handy menu of things for you can keep track of like this:
 ```
@@ -184,6 +212,10 @@ no changes added to commit (use "git add" and/or "git commit -a")
 ```
 Pretty useful, huh. It tells you your current branch, and what will or won't be commited when you run `git commit`. Instructions are also provided to tell you what you can do to commit a file that isn't going to be commited.
 
+##STOP! Screenshot Time!
+![alt text](http://i.imgur.com/E5b0AW4.png)
+
+Now with everything we've learned so far its nice to get a visual on things. With a quick glance we can see that lots of information is readily available when you go onto your repository on GitHub. You can see all of your filenames, latest commits, and comments. The points of interests that we will be takin a look at in the next few sessions is the the **fork** circled in green in the top right corner and **pull request** red circle on the bottom left. Additionally you can see your if you have any **pull requests** on the middle blue circle.
 
 ##Forking!
 What's forking, you ask? Well it's not food related that's for sure! (insert forced laughter) Forking is when you, in a sense, copy someone else's repository. This is useful for quickly hitting your stride if you're trying to contribute to a repository that already has work in it. Forking will allow you to have your own version of the repository. You'll then be able to edit it as you please and update it however you want.
