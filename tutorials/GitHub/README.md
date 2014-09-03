@@ -13,7 +13,7 @@ Now before we dive into using GitHub, there are a few commands that will prove u
 derp@well $ ls
 Avngrs/    CS14/       Downloads/        Music/     selfies/
 CS_GO/    cs61/       Firefox.png*      Nyan_Cat/   untitled.cpp
-CS1000/   Desktop/    Izbicki_is_cool   Public/     Videos/
+CS1000/   Desktop/    IZBICKI_IS_COOL   Public/     Videos/
 CS12/     DBRainbow/  lols/             rawr/
 ```
   * `-a` - appending this flag after the `ls` command will show the hidden files that start with a `.` such as `.gitconfig`
@@ -97,7 +97,7 @@ Now that you have your repository its time to learn about pushing and pulling. `
 
 
 
-##Git Push
+###Git Push
 The command `git push` wraps a big part of what we're trying to do. Once you've got all your files nicely added and commited, you're ready to push the files onto GitHub. Imagine GitHub as a big cloud of information and code called the **remote**, and you're literally "pushing" your work into this cloud from your local computer. Of course, you have to specify where you're trying to push. Once you input the command you'll be prompted to type in your username and password for your GitHub account. Afterwards you should see a some status messages show up. If you see unhappy messages then worry not, there's plenty to ways to fix your errors.
 Sometimes you may get the message:
 ```
@@ -124,6 +124,11 @@ $ git checkout test
 $ git branch
 ```
 The asterisk moved! Can you figure out what happened? It turns out that you created a new branch called "test" and switched over to it! `Git branch` on its own allows you to see all your branches, but when you append a name after the command, it will create a new branch with that name. `Git checkout` allows you to pretty much "checkout" and switch over to the branch specified. You're free to multiple branches to suit your needs, but just make sure to keep track of them and take note of which one you're working on!
+
+![alt text](https://33.media.tumblr.com/1d609787b9e59efa4fc471d5ca69c876/tumblr_nabbpryYSd1qz8vumo10_400.gif)
+
+Hurray for branches!
+
 
 ##Merging and Conflicts
 Once you're done working on your different branches, its time to merge them by checking out the master branch and then using `git merge` like so:
@@ -181,10 +186,14 @@ Pretty useful, huh. It tells you your current branch, and what will or won't be 
 What's forking, you ask? Well it's not food related that's for sure! (insert awkward laughter) Forking is when you, in a sense, copy someone else's repository. This is useful for quickly hitting your stride if you're trying to contribute to a repository that already has work in it. Forking will allow you to have your own version of the repository. You'll then be able to edit it as you please and update it however you want.
 
 ##Pull Requests
-Ask and thou shalt recieve! Well not always, actually. Pull requests are a handy way of asking the original owner to merge your proposed changes. After you've made your changes to a repository that you've forked or pulled, you have to issue a pull request to the original owner. Some days the owner my decide that your pull request shall not pass, so make sure you give a good description of what you're trying to contribute!
+Ask and thou shalt recieve! Well not always, actually. Pull requests are a handy way of asking the original owner to merge your proposed changes. After you've made your changes to a repository that you've forked or pulled you have to commit the changes and then push it back onto GitHub. After that, a pull request is actually done online through GitHub instead of through the terminal. Go to the designated repository and click on the gray `pull request` button and it will take you to the pull request screen.  Some days the owner my decide that your pull request shall not pass, so make sure you give a good description and title for what you're trying to contribute!
 
-##Basic Gist of Keeping Track of Everything
-Now with everything going on heres a quick reminder of how to keep track of everything that is going on. `Git status` will, as mentioned above, will allow you to see all files that will not be commited (unless you readd them!). `Git log` will let you see all of the commits that you've made and `Git branch` allows you to see all of the branches that you've made (use `checkout` in order to switch to the branch that you want). Using these commands regularly will make life a lot easier, so make good use of them!
+##Successfully Multitasking
+Now with everything you've learned it might be a difficult to keep track of everything that's going on...
+
+![alt text](http://media.tumblr.com/tumblr_mdtc3fSzpf1r64pad.gif)
+
+but don't worry, heres a quick reminder of how to keep track of everything that's going on. `Git status` will, as mentioned above, allow you to see all files that will/won't be commited. `Git log` will let you see all of the commits that you've made and `Git branch` allows you to see all your branches and which one you're currently on. Using these commands regularly will make life a lot easier, so make good use of them!
 
 ##Well that's it!
 This marks the end of this tutorial for GitHub. Now that you've learned the ways and have become a GitHub master, go forth and unleash its full potential! In the words of famous rapper Lil' Jon "GIT OUTTA YOUR MIND!"
