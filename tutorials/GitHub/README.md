@@ -27,7 +27,6 @@ CS12/     DBRainbow/  lols/             rawr/
 $ cd a/b/c
 ```
 You would be able to directly `cd` into directory c without having to go into a, then into b, then into c. It's magical!
-
 3.  `touch` - this command will create simply create a file.
     ```
 $ touch boat
