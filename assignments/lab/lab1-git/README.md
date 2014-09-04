@@ -1,10 +1,10 @@
-# using git and github
+# Using Git and GitHub
 
 We will not be using ilearn in this class.  Instead, we will be using a version control system called `git`.  Version control systems are widely used in industry and in open source projects.  They are the tool that lets many programmers work together on large, complex software.  I don't know what programming language you will use at your future job (it may not even exist yet!), but I guarantee you will be using version control.
 
 In this lab, you will first learn the basics of how to use `git` and github.  Then, we will discuss how to use these tools to access your grades and submit assignments.
 
-### creating your first repo (and some basic unix commands)
+### Creating Your First Repo (and some basic unix commands)
 
 Open a terminal, and `cd` into the directory you will be doing your cs100 work in.  Then create a folder named `firstrepo` and `cd` into it:
 
@@ -90,7 +90,7 @@ $ git add main.cpp
 $ git commit -m "added the first code"
 ```
 
-**IMPORTANT:**  Notice that we only added the `main.cpp` file to our repo, and did not add `a.out`.  Never add executable or object files to your git repo!  Only add source files!  Tracking executables uses LOTS of disk space, and makes the repo cluttered and hard to read.  If we ever see these files in your git repos, your grade on the assignment will be docked 20%.
+**IMPORTANT:**  Notice that we only added the `main.cpp` file to our repo, and did not add `a.out`.  Never add executable or object files to your git repo!  Only add source files!  Tracking executables uses LOTS of disk space, and makes the repo cluttered and hard to read.  If we ever see these files in your git repos, your grade on the assignment WILL be docked 20%.
 
 Let's make one more commit so we'll have something to play with.  Run the command:
 
@@ -188,7 +188,9 @@ $ git branch
 
 This should list just a single branch called "master."  This branch was created for you automatically when you ran the `git init` command.  
 
-One way to think of branches is as a nice label for your commit hashes.  Your "master" branch currently points to your commit with the message "modified the README."  That's why when we ran `git checkout master` above, it restored our project to the state of that commit.  We could also have used `git checkout [hash]`, if you replaced `[hash]` with the appropriate hash value.  But that's much less convenient.  When you use `git checkout` in the future, you will usually be using it on branch names.
+One way to think of branches is as a nice label for your commit hashes.  Your "master" branch currently points to your commit with the message "modified the README."  That's why when we ran `git checkout master` above, it restored our project to the state of that commit.  We could also have used `git checkout [hash]`, if you replaced `[hash]` with the appropriate hash value.  But that's much less convenient.  When you use `git checkout` in the future, you will usually be using it on branch names. Currently, this is what your repository tree looks like:
+
+![alt text](http://i.imgur.com/z6ws7KO.png)
 
 Every time we add a new feature to a project, we create a branch for that feature.  Let's create a branch called `userinput` in our project by:
 
@@ -204,6 +206,8 @@ $ git branch
 
 You should see two branches now.  There should be an asterisk next to the master branch.  This tells us that master is the currently active branch, and if we commit any new changes, they will be added to the master branch.  (That is, `master` will change to point to whatever your new commit is.)
 
+![alt text](http://i.imgur.com/f9nd06x.png)
+
 Switch to our new branch using the command:
 
 ```
@@ -216,9 +220,11 @@ Now run:
 $ git branch
 ```
 
-and verify that the asterisk is next to the `userinput` branch.
+and verify that the asterisk is next to the `userinput` branch. Since the only thing you did was switch branches, the repo tree almost looks like the same.
 
-Let's modify our `main.cpp` file so that it asks the user their name before saying hello:
+![alt text](http://i.imgur.com/HAhNMXx.png)
+
+Now let's modify our `main.cpp` file so that it asks the user their name before saying hello:
 
 ```
 #include <iostream>
@@ -242,7 +248,9 @@ $ git add main.cpp
 $ git commit -m "added user input"
 ```
 
-Before this commit, the `userinput` and `master` branches were pointing to the same commit.  When you run this command, the `userinput` branch gets updated to point to this new commit.
+Before this commit, the `userinput` and `master` branches were pointing to the same commit.  When you run this command, the `userinput` branch gets updated to point to this new commit. Now your tree looks like this:
+
+![alt text](http://i.imgur.com/OAx5Fik.png)
 
 Let's verify that our changes affected only the userinput branch and not the master branch.  First, checkout the master branch, then cat the `main.cpp` file, then return to the user input branch.
 
@@ -267,6 +275,10 @@ $ git add README
 $ git commit -m "updated README"
 ```
 
+Since this commit was made on the userinput branch, it now points to a new commit and your tree should look like this:
+
+![alt text](http://i.imgur.com/AkTcGly.png)
+
 The way branches are used out in the real world depends on the company you work for and the product you're building.  A typical software engineer might make anywhere from one new branch per week to 5 or more new branches per day.  
 
 ### fixing a bug
@@ -288,7 +300,10 @@ $ git branch bugfix
 $ git checkout bugfix
 ```
 
-If you run `git branch` now, there should be three branches listed and the asterisk should be next to `bugfix`.
+If you run `git branch` now, there should be three branches listed and the asterisk should be next to `bugfix`. Since you switched over to `master` before creating a new branch, the new branch will point to the same commit that `master` did:
+
+![alt text](http://i.imgur.com/K8Gvuua.png)
+
 
 Now we're ready to edit the code.  Update the `main` function to return 0, then commit your changes:
 
