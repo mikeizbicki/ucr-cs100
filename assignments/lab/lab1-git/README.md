@@ -153,7 +153,7 @@ With your "my first commit" commit, you were on the master branch by default.
 
 After your second commit, another link was created from the master branch.
 
-<p align= center">
+<p align="center">
   <img src="http://i.imgur.com/j3RjG0O.png?"/>
 </p>
 
@@ -213,7 +213,7 @@ This should list just a single branch called "master."  This branch was created 
 
 One way to think of branches is as a nice label for your commit hashes.  Your "master" branch currently points to your commit with the message "modified the README."  That's why when we ran `git checkout master` above, it restored our project to the state of that commit.  We could also have used `git checkout [hash]`, if you replaced `[hash]` with the appropriate hash value.  But that's much less convenient.  When you use `git checkout` in the future, you will usually be using it on branch names. Currently, this is what your repository tree looks like:
 
-<p align= center">
+<p align="center">
   <img src="http://i.imgur.com/j3RjG0O.png?"/>
 </p>
 
@@ -231,7 +231,7 @@ $ git branch
 
 You should see two branches now.  There should be an asterisk next to the master branch.  This tells us that master is the currently active branch, and if we commit any new changes, they will be added to the master branch.  (That is, `master` will change to point to whatever your new commit is.)
 
-<p align= center">
+<p align="center">
   <img src="http://i.imgur.com/UbnHTcX.png?"/>
 </p>
 
@@ -249,7 +249,7 @@ $ git branch
 
 and verify that the asterisk is next to the `userinput` branch. Since the only thing you did was switch branches, the repo tree almost looks like the same.
 
-<p align= center">
+<p align="center">
   <img src="http://i.imgur.com/YhWgrus.png?"/>
 </p>
 
@@ -279,7 +279,7 @@ $ git commit -m "added user input"
 
 Before this commit, the `userinput` and `master` branches were pointing to the same commit.  When you run this command, the `userinput` branch gets updated to point to this new commit. Now your tree looks like this:
 
-<p align= center">
+<p align="center">
   <img src="http://i.imgur.com/Ma98PXZ.png?"/>
 </p>
 
@@ -308,7 +308,7 @@ $ git commit -m "updated README"
 
 Since this commit was made on the userinput branch, it now points to a new commit and your tree should look like this:
 
-<p align= center">
+<p align="center">
   <img src="http://i.imgur.com/WvtjqbX.png?"/>
 </p>
 
@@ -336,7 +336,7 @@ $ git checkout bugfix
 If you run `git branch` now, there should be three branches listed and the asterisk should be next to `bugfix`. Since you switched over to `master` before creating a new branch, the new branch will point to the same commit that `master` did:
 
 ![alt text](http://i.imgur.com/ZD4PyTW.png)
-<p align= center">
+<p align="center">
   <img src="http://i.imgur.com/ZD4PyTW.png?"/>
 </p>
 
@@ -350,7 +350,7 @@ $ git commit -m "fixed the return 1 bug"
 Since you made the commit on the `bugfix` branch, your tree splits off in another direction and now looks like this:
 
 ![alt text](http://i.imgur.com/FyUIsUM.png)
-<p align= center">
+<p align="center">
   <img src="http://i.imgur.com/FyUIsUM.png?"/>
 </p>
 
@@ -375,7 +375,7 @@ $ git merge bugfix
 This automatically updates the modified files. Your tree will now look like this:
 
 ![alt text](http://i.imgur.com/0ILn6bI.png)
-<p align= center">
+<p align="center">
   <img src="http://i.imgur.com/0ILn6bI.png?"/>
 </p>
 
@@ -459,7 +459,7 @@ $ git commit -m "solved merge conflict between userinput and bugfix branches"
 This is now what your final repo tree looks like:
 
 ![alt text](http://i.imgur.com/2sGtx1T.png)
-<p align= center">
+<p align="center">
   <img src="http://i.imgur.com/2sGtx1T.png?"/>
 </p>
 
@@ -479,7 +479,7 @@ If you do not already have a github account, you will need to create one.  Go to
 Return to http://github.com/mikeizbicki/ucr-cs100. Here's a quick screenshot of what you're going to be looking at:
 
 ![alt text](http://i.imgur.com/zjzrl1Z.png?1)
-<p align= center">
+<p align="center">
   <img src="http://i.imgur.com/zjzrl1Z.png?1?"/>
 </p>
 
@@ -502,7 +502,7 @@ https://github.com/examplestudent/ucr-cs100
 You'll be seeing something similar to this. Its similar to the repository you visited earlier but theres a few key things you should notice, mainly the `pull request` button (top brown circle) that you'll be using in a few moments and the `settings` button (circled in purple).
 
 ![alt text](http://i.imgur.com/DGSoEvk.png)
-<p align= center">
+<p align="center">
   <img src="http://i.imgur.com/DGSoEvk.png?"/>
 </p>
 
@@ -511,14 +511,14 @@ Click the button on the right hand side labeled `settings`.
 Click the button on the left hand side labeled `collaborators` (circled in yellow).
 
 ![alt text](http://i.imgur.com/qSKBWrI.png)
-<p align= center">
+<p align="center">
   <img src="http://i.imgur.com/qSKBWrI.png?"/>
 </p>
 
 This should bring up a menu that lets you add collaborators.  Everyone you add here has full write access to the repo.  Add all of the course instructors as collaborators.  Our github accounts are: `MikeIzbicki` and `bmars003`. If you've done it correctly it should look similar to this:
 
 ![alt text](http://i.imgur.com/fn9Wa0m.png?1)
-<p align= center">
+<p align="center">
   <img src="http://i.imgur.com/fn9Wa0m.png?1?"/>
 </p>
 
@@ -563,7 +563,7 @@ This "pushes" all the changes you've made back up to github.
 Now you need to issue a "pull request" to this repository.  This is done through the github web server and not through the command line.  Visit your forked project's webpage at: http://www.github.com/yourusername/ucr-cs100.  There is a dull gray button labeled "pull request."  Pressing this button will send you to a form where you fill out a message describing what you've changed in the code.  You merge message should be "enrolling in cs100". With everything that's going on, here's a little diagram to help you understand what you actually did:
 
 ![alt text](http://i.imgur.com/5WZ7ydl.png)
-<p align= center">
+<p align="center">
   <img src="http://i.imgur.com/5WZ7ydl.png?"/>
 </p>
 
