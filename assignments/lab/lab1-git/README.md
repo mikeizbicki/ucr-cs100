@@ -141,7 +141,13 @@ So what's been happening with all these commits? Here's a step by step breakdown
 
 **NOTE:** The branches (which we will learn about in the next section) are colored blue in sharp boxes while the commits are denoted by the round purple boxes. The current branch or commit you are currently checked out on is denoted with an asterisk.
 
-<center>! [alt text] (http://i.imgur.com/3X5sdo2.png)</center>
+[alt text](http://i.imgur.com/3X5sdo2.png)</center>
+
+<p align="center">
+  <img src="http://i.imgur.com/3X5sdo2.png?"/>
+</p>
+
+<div style="text-align:center"><img src ="http://i.imgur.com/3X5sdo2.png" /></div>
 
 With your "my first commit" commit, you were on the master branch by default.
 
@@ -432,7 +438,6 @@ $ git commit -m "solved merge conflict between userinput and bugfix branches"
 This is now what your final repo tree looks like:
 
 ![alt text](http://i.imgur.com/2sGtx1T.png)
-
 Aftef working on both adding user input and fixing our bug, we have now synced our branches together.
 
 As you can see, resolving merge conflicts is a tedious process.  Most projects try to avoid merge conflicts as much as possible.  A simple strategy for doing this is using many small source files rather than a few large files.  Of course, in most projects merge conflicts will be inevitable.  That's just the reality of working on large projects with many team members.
