@@ -432,6 +432,7 @@ $ git commit -m "solved merge conflict between userinput and bugfix branches"
 This is now what your final repo tree looks like:
 
 ![alt text](http://i.imgur.com/2sGtx1T.png)
+
 Aftef working on both adding user input and fixing our bug, we have now synced our branches together.
 
 As you can see, resolving merge conflicts is a tedious process.  Most projects try to avoid merge conflicts as much as possible.  A simple strategy for doing this is using many small source files rather than a few large files.  Of course, in most projects merge conflicts will be inevitable.  That's just the reality of working on large projects with many team members.
