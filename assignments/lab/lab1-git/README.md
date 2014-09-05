@@ -137,6 +137,23 @@ $ git log
 
 This gives us a history of all our commits.  For each commit, there are four pieces of information.  The first is the commit identifier.  This is a long hexadecimal sequence, for example: `093d5fa3c60ce204b6ddba86d4f9c355b4856f10`.  (Technically, this is a [SHA1 hash of your commit](https://en.wikipedia.org/wiki/SHA1).  This hash is "cryptographically secure", meaning that it is practically guaranteed to be unique.  Take cs165 to find out more!)  Next is the author of the commit, the date of the commit, and the commit message.
 
+So what's been happening with all these commits? Here's a step by step breakdown of what your repo tree looks like.
+
+**NOTE:** The branches (which we will learn about in the next section) are colored blue in sharp boxes while the commits are denoted by the round purple boxes. The current branch or commit you are currently checked out on is denoted with an asterisk.
+
+<center>![alt text](http://i.imgur.com/3X5sdo2.png)</center>
+
+With your "my first commit" commit, you were on the master branch by default.
+
+<center>![alt text](http://i.imgur.com/aCBmCkN.png)</center>
+
+After your second commit, another link was created from the master branch.
+
+<center>![alt text](http://i.imgur.com/j3RjG0O.png)</center>
+
+The same thing happens when you make another commit.
+
+
 Sometimes, we want to look at what the state of our repo was in a previous commit.  There are many reasons this is useful.  For example, maybe your latest changes broke some functionality and you want to see what working code looked like.  Or, maybe a user of your code reported a bug, but they're using an old version of the software; we need to look at the old version of the code to reproduce the bug.
 
 We can inspect the previous state of our code using the `git checkout` command.  This command takes as a parameter the hash of the commit we want to inspect.  For me, the hash of "my first commit" is `a20aef2096d98ab53d1495f823409e2cc8cd54b9`.  So to inspect that commit, I would run:
@@ -422,7 +439,7 @@ If you do not already have a github account, you will need to create one.  Go to
 
 Return to http://github.com/mikeizbicki/ucr-cs100. Here's a quick screenshot of what you're going to be looking at:
 
-![alt text](http://i.imgur.com/zjzrl1Z.png) 
+![alt text](http://i.imgur.com/zjzrl1Z.png?1)
 
 At the top of the page there is a button labeled `Watch` (top left in red).  Click this button to become a follower of the repository.  Anytime we update the course with new information or announcements, you will be notified by email.
 
@@ -473,7 +490,11 @@ This will create a folder in your current working directory called `ucr-cs100`. 
 
 Now you're ready to start editing the repo.  
 
-Create a file in the `studentinfo` directory with the same name as your **CS account** and no file extension.  Edit this file so that the first line is your first and last name, and the second line is your github account name.  The automated grading system will be using this file to get your account information, so it is important that you get the format correct!  I've created an example with my info in the `mizbi001` file.
+Create a file in the `studentinfo` directory with the same name as your **CS account** and no file extension.  Edit this file so that the first line is your first and last name, and the second line is your github account name.  The automated grading system will be using this file to get your account information, so it is important that you get the format correct!  I've created an example with my info in the `mizbi001` file which will look like this:
+```
+Mike Izbicki
+mizbi001
+```
 
 Add and commit your changes like normal.  You may want to review the commands from the previous sections.
 
