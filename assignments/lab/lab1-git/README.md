@@ -155,7 +155,7 @@ After your second commit, another link was created from the master branch.
 
 <p align= center">
   <img src="http://i.imgur.com/j3RjG0O.png?"/>
-</p
+</p>
 
 The same thing happens when you make another commit.
 
@@ -213,7 +213,9 @@ This should list just a single branch called "master."  This branch was created 
 
 One way to think of branches is as a nice label for your commit hashes.  Your "master" branch currently points to your commit with the message "modified the README."  That's why when we ran `git checkout master` above, it restored our project to the state of that commit.  We could also have used `git checkout [hash]`, if you replaced `[hash]` with the appropriate hash value.  But that's much less convenient.  When you use `git checkout` in the future, you will usually be using it on branch names. Currently, this is what your repository tree looks like:
 
-![alt text](http://i.imgur.com/j3RjG0O.png)
+<p align= center">
+  <img src="http://i.imgur.com/j3RjG0O.png?"/>
+</p>
 
 Every time we add a new feature to a project, we create a branch for that feature.  Let's create a branch called `userinput` in our project by:
 
@@ -229,7 +231,9 @@ $ git branch
 
 You should see two branches now.  There should be an asterisk next to the master branch.  This tells us that master is the currently active branch, and if we commit any new changes, they will be added to the master branch.  (That is, `master` will change to point to whatever your new commit is.)
 
-![alt text](http://i.imgur.com/UbnHTcX.png)
+<p align= center">
+  <img src="http://i.imgur.com/UbnHTcX.png?"/>
+</p>
 
 Switch to our new branch using the command:
 
@@ -245,7 +249,9 @@ $ git branch
 
 and verify that the asterisk is next to the `userinput` branch. Since the only thing you did was switch branches, the repo tree almost looks like the same.
 
-![alt text](http://i.imgur.com/YhWgrus.png)
+<p align= center">
+  <img src="http://i.imgur.com/YhWgrus.png?"/>
+</p>
 
 Now let's modify our `main.cpp` file so that it asks the user their name before saying hello:
 
@@ -273,7 +279,9 @@ $ git commit -m "added user input"
 
 Before this commit, the `userinput` and `master` branches were pointing to the same commit.  When you run this command, the `userinput` branch gets updated to point to this new commit. Now your tree looks like this:
 
-![alt text](http://i.imgur.com/Ma98PXZ.png)
+<p align= center">
+  <img src="http://i.imgur.com/Ma98PXZ.png?"/>
+</p>
 
 Let's verify that our changes affected only the userinput branch and not the master branch.  First, checkout the master branch, then cat the `main.cpp` file, then return to the user input branch.
 
@@ -300,7 +308,9 @@ $ git commit -m "updated README"
 
 Since this commit was made on the userinput branch, it now points to a new commit and your tree should look like this:
 
-![alt text](http://i.imgur.com/WvtjqbX.png)
+<p align= center">
+  <img src="http://i.imgur.com/WvtjqbX.png?"/>
+</p>
 
 The way branches are used out in the real world depends on the company you work for and the product you're building.  A typical software engineer might make anywhere from one new branch per week to 5 or more new branches per day.  
 
@@ -326,6 +336,9 @@ $ git checkout bugfix
 If you run `git branch` now, there should be three branches listed and the asterisk should be next to `bugfix`. Since you switched over to `master` before creating a new branch, the new branch will point to the same commit that `master` did:
 
 ![alt text](http://i.imgur.com/ZD4PyTW.png)
+<p align= center">
+  <img src="http://i.imgur.com/ZD4PyTW.png?"/>
+</p>
 
 
 Now we're ready to edit the code.  Update the `main` function to return 0, then commit your changes:
@@ -335,7 +348,11 @@ $ git add main.cpp
 $ git commit -m "fixed the return 1 bug"
 ```
 Since you made the commit on the `bugfix` branch, your tree splits off in another direction and now looks like this:
+
 ![alt text](http://i.imgur.com/FyUIsUM.png)
+<p align= center">
+  <img src="http://i.imgur.com/FyUIsUM.png?"/>
+</p>
 
 ### Merging Branches
 
@@ -358,6 +375,10 @@ $ git merge bugfix
 This automatically updates the modified files. Your tree will now look like this:
 
 ![alt text](http://i.imgur.com/0ILn6bI.png)
+<p align= center">
+  <img src="http://i.imgur.com/0ILn6bI.png?"/>
+</p>
+
 After the merge, the `master` and `bugfix` branches now essentially point to the same thing, and the `master` branch that you are on will contain the fixed code.
 
 Using branches like this to patch bugs is an extremely common usage pattern.  Whether you're developing open source software or working on facebook's user interface, this is the same basic procedure you will follow. 
@@ -438,7 +459,11 @@ $ git commit -m "solved merge conflict between userinput and bugfix branches"
 This is now what your final repo tree looks like:
 
 ![alt text](http://i.imgur.com/2sGtx1T.png)
-Aftef working on both adding user input and fixing our bug, we have now synced our branches together.
+<p align= center">
+  <img src="http://i.imgur.com/2sGtx1T.png?"/>
+</p>
+
+After working on both adding user input and fixing our bug, we have now synced our branches together.
 
 As you can see, resolving merge conflicts is a tedious process.  Most projects try to avoid merge conflicts as much as possible.  A simple strategy for doing this is using many small source files rather than a few large files.  Of course, in most projects merge conflicts will be inevitable.  That's just the reality of working on large projects with many team members.
 
@@ -454,6 +479,9 @@ If you do not already have a github account, you will need to create one.  Go to
 Return to http://github.com/mikeizbicki/ucr-cs100. Here's a quick screenshot of what you're going to be looking at:
 
 ![alt text](http://i.imgur.com/zjzrl1Z.png?1)
+<p align= center">
+  <img src="http://i.imgur.com/zjzrl1Z.png?1?"/>
+</p>
 
 At the top of the page there is a button labeled `Watch` (top left in red).  Click this button to become a follower of the repository.  Anytime we update the course with new information or announcements, you will be notified by email.
 
@@ -474,15 +502,25 @@ https://github.com/examplestudent/ucr-cs100
 You'll be seeing something similar to this. Its similar to the repository you visited earlier but theres a few key things you should notice, mainly the `pull request` button (top brown circle) that you'll be using in a few moments and the `settings` button (circled in purple).
 
 ![alt text](http://i.imgur.com/DGSoEvk.png)
+<p align= center">
+  <img src="http://i.imgur.com/DGSoEvk.png?"/>
+</p>
+
 Click the button on the right hand side labeled `settings`.
 
 Click the button on the left hand side labeled `collaborators` (circled in yellow).
 
 ![alt text](http://i.imgur.com/qSKBWrI.png)
+<p align= center">
+  <img src="http://i.imgur.com/qSKBWrI.png?"/>
+</p>
 
 This should bring up a menu that lets you add collaborators.  Everyone you add here has full write access to the repo.  Add all of the course instructors as collaborators.  Our github accounts are: `MikeIzbicki` and `bmars003`. If you've done it correctly it should look similar to this:
 
 ![alt text](http://i.imgur.com/fn9Wa0m.png?1)
+<p align= center">
+  <img src="http://i.imgur.com/fn9Wa0m.png?1?"/>
+</p>
 
 **IMPORTANT:** The file `GRADES.md` in this repo contains detailed information about how your grades will be stored in this repo.  Finish completing this lab, then go back and read this file.
 
@@ -525,6 +563,9 @@ This "pushes" all the changes you've made back up to github.
 Now you need to issue a "pull request" to this repository.  This is done through the github web server and not through the command line.  Visit your forked project's webpage at: http://www.github.com/yourusername/ucr-cs100.  There is a dull gray button labeled "pull request."  Pressing this button will send you to a form where you fill out a message describing what you've changed in the code.  You merge message should be "enrolling in cs100". With everything that's going on, here's a little diagram to help you understand what you actually did:
 
 ![alt text](http://i.imgur.com/5WZ7ydl.png)
+<p align= center">
+  <img src="http://i.imgur.com/5WZ7ydl.png?"/>
+</p>
 
 1) Since you couldnt change the original repository directly, you had to fork it and create your own version on GitHub.
 
