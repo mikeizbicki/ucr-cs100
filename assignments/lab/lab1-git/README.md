@@ -335,7 +335,6 @@ $ git checkout bugfix
 
 If you run `git branch` now, there should be three branches listed and the asterisk should be next to `bugfix`. Since you switched over to `master` before creating a new branch, the new branch will point to the same commit that `master` did:
 
-![alt text](http://i.imgur.com/ZD4PyTW.png)
 <p align="center">
   <img src="http://i.imgur.com/ZD4PyTW.png?"/>
 </p>
@@ -349,7 +348,7 @@ $ git commit -m "fixed the return 1 bug"
 ```
 Since you made the commit on the `bugfix` branch, your tree splits off in another direction and now looks like this:
 
-![alt text](http://i.imgur.com/FyUIsUM.png)
+
 <p align="center">
   <img src="http://i.imgur.com/FyUIsUM.png?"/>
 </p>
@@ -374,7 +373,6 @@ $ git merge bugfix
 
 This automatically updates the modified files. Your tree will now look like this:
 
-![alt text](http://i.imgur.com/0ILn6bI.png)
 <p align="center">
   <img src="http://i.imgur.com/0ILn6bI.png?"/>
 </p>
@@ -458,7 +456,6 @@ $ git commit -m "solved merge conflict between userinput and bugfix branches"
 
 This is now what your final repo tree looks like:
 
-![alt text](http://i.imgur.com/2sGtx1T.png)
 <p align="center">
   <img src="http://i.imgur.com/2sGtx1T.png?"/>
 </p>
@@ -478,7 +475,6 @@ If you do not already have a github account, you will need to create one.  Go to
 
 Return to http://github.com/mikeizbicki/ucr-cs100. Here's a quick screenshot of what you're going to be looking at:
 
-![alt text](http://i.imgur.com/zjzrl1Z.png?1)
 <p align="center">
   <img src="http://i.imgur.com/zjzrl1Z.png?1?"/>
 </p>
@@ -501,7 +497,6 @@ https://github.com/examplestudent/ucr-cs100
 
 You'll be seeing something similar to this. Its similar to the repository you visited earlier but theres a few key things you should notice, mainly the `pull request` button (top brown circle) that you'll be using in a few moments and the `settings` button (circled in purple).
 
-![alt text](http://i.imgur.com/DGSoEvk.png)
 <p align="center">
   <img src="http://i.imgur.com/DGSoEvk.png?"/>
 </p>
@@ -510,14 +505,12 @@ Click the button on the right hand side labeled `settings`.
 
 Click the button on the left hand side labeled `collaborators` (circled in yellow).
 
-![alt text](http://i.imgur.com/qSKBWrI.png)
 <p align="center">
   <img src="http://i.imgur.com/qSKBWrI.png?"/>
 </p>
 
 This should bring up a menu that lets you add collaborators.  Everyone you add here has full write access to the repo.  Add all of the course instructors as collaborators.  Our github accounts are: `MikeIzbicki` and `bmars003`. If you've done it correctly it should look similar to this:
 
-![alt text](http://i.imgur.com/fn9Wa0m.png?1)
 <p align="center">
   <img src="http://i.imgur.com/fn9Wa0m.png?1?"/>
 </p>
@@ -562,7 +555,6 @@ This "pushes" all the changes you've made back up to github.
 
 Now you need to issue a "pull request" to this repository.  This is done through the github web server and not through the command line.  Visit your forked project's webpage at: http://www.github.com/yourusername/ucr-cs100.  There is a dull gray button labeled "pull request."  Pressing this button will send you to a form where you fill out a message describing what you've changed in the code.  You merge message should be "enrolling in cs100". With everything that's going on, here's a little diagram to help you understand what you actually did:
 
-![alt text](http://i.imgur.com/5WZ7ydl.png)
 <p align="center">
   <img src="http://i.imgur.com/5WZ7ydl.png?"/>
 </p>
