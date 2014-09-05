@@ -141,7 +141,7 @@ So what's been happening with all these commits? Here's a step by step breakdown
 
 **NOTE:** The branches (which we will learn about in the next section) are colored blue in sharp boxes while the commits are denoted by the round purple boxes. The current branch or commit you are currently checked out on is denoted with an asterisk.
 
-<center>![alt text](http://i.imgur.com/3X5sdo2.png)</center>
+<center>! [alt text] (http://i.imgur.com/3X5sdo2.png)</center>
 
 With your "my first commit" commit, you were on the master branch by default.
 
@@ -207,7 +207,7 @@ This should list just a single branch called "master."  This branch was created 
 
 One way to think of branches is as a nice label for your commit hashes.  Your "master" branch currently points to your commit with the message "modified the README."  That's why when we ran `git checkout master` above, it restored our project to the state of that commit.  We could also have used `git checkout [hash]`, if you replaced `[hash]` with the appropriate hash value.  But that's much less convenient.  When you use `git checkout` in the future, you will usually be using it on branch names. Currently, this is what your repository tree looks like:
 
-![alt text](http://i.imgur.com/z6ws7KO.png)
+![alt text](http://i.imgur.com/j3RjG0O.png)
 
 Every time we add a new feature to a project, we create a branch for that feature.  Let's create a branch called `userinput` in our project by:
 
@@ -223,7 +223,7 @@ $ git branch
 
 You should see two branches now.  There should be an asterisk next to the master branch.  This tells us that master is the currently active branch, and if we commit any new changes, they will be added to the master branch.  (That is, `master` will change to point to whatever your new commit is.)
 
-![alt text](http://i.imgur.com/f9nd06x.png)
+![alt text](http://i.imgur.com/UbnHTcX.png)
 
 Switch to our new branch using the command:
 
@@ -239,7 +239,7 @@ $ git branch
 
 and verify that the asterisk is next to the `userinput` branch. Since the only thing you did was switch branches, the repo tree almost looks like the same.
 
-![alt text](http://i.imgur.com/HAhNMXx.png)
+![alt text](http://i.imgur.com/YhWgrus.png)
 
 Now let's modify our `main.cpp` file so that it asks the user their name before saying hello:
 
@@ -267,7 +267,7 @@ $ git commit -m "added user input"
 
 Before this commit, the `userinput` and `master` branches were pointing to the same commit.  When you run this command, the `userinput` branch gets updated to point to this new commit. Now your tree looks like this:
 
-![alt text](http://i.imgur.com/OAx5Fik.png)
+![alt text](http://i.imgur.com/Ma98PXZ.png)
 
 Let's verify that our changes affected only the userinput branch and not the master branch.  First, checkout the master branch, then cat the `main.cpp` file, then return to the user input branch.
 
@@ -294,7 +294,7 @@ $ git commit -m "updated README"
 
 Since this commit was made on the userinput branch, it now points to a new commit and your tree should look like this:
 
-![alt text](http://i.imgur.com/AkTcGly.png)
+![alt text](http://i.imgur.com/WvtjqbX.png)
 
 The way branches are used out in the real world depends on the company you work for and the product you're building.  A typical software engineer might make anywhere from one new branch per week to 5 or more new branches per day.  
 
@@ -319,7 +319,7 @@ $ git checkout bugfix
 
 If you run `git branch` now, there should be three branches listed and the asterisk should be next to `bugfix`. Since you switched over to `master` before creating a new branch, the new branch will point to the same commit that `master` did:
 
-![alt text](http://i.imgur.com/K8Gvuua.png)
+![alt text](http://i.imgur.com/ZD4PyTW.png)
 
 
 Now we're ready to edit the code.  Update the `main` function to return 0, then commit your changes:
@@ -329,7 +329,7 @@ $ git add main.cpp
 $ git commit -m "fixed the return 1 bug"
 ```
 Since you made the commit on the `bugfix` branch, your tree splits off in another direction and now looks like this:
-![alt text](http://i.imgur.com/yALwdqX.png)
+![alt text](http://i.imgur.com/FyUIsUM.png)
 
 ### Merging Branches
 
