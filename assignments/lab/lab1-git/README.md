@@ -141,21 +141,21 @@ So what's been happening with all these commits? Here's a step by step breakdown
 
 **NOTE:** The branches (which we will learn about in the next section) are colored blue in sharp boxes while the commits are denoted by the round purple boxes. The current branch or commit you are currently checked out on is denoted with an asterisk.
 
-[alt text](http://i.imgur.com/3X5sdo2.png)</center>
-
 <p align="center">
   <img src="http://i.imgur.com/3X5sdo2.png?"/>
 </p>
 
-<div style="text-align:center"><img src ="http://i.imgur.com/3X5sdo2.png" /></div>
-
 With your "my first commit" commit, you were on the master branch by default.
 
-<center>![alt text](http://i.imgur.com/aCBmCkN.png)</center>
+<p align="center">
+  <img src="http://i.imgur.com/aCBmCkN.png?"/>
+</p>
 
 After your second commit, another link was created from the master branch.
 
-<center>![alt text](http://i.imgur.com/j3RjG0O.png)</center>
+<p align= center">
+  <img src="http://i.imgur.com/j3RjG0O.png?"/>
+</p
 
 The same thing happens when you make another commit.
 
