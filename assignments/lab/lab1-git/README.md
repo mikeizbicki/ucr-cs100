@@ -2,7 +2,7 @@
 
 We will not be using ilearn in this class.  Instead, we will be using a version control system called `git`.  Version control systems are widely used in industry and in open source projects.  They are the tool that lets many programmers work together on large, complex software.  I don't know what programming language you will use at your future job (it may not even exist yet!), but I guarantee you will be using version control.
 
-In this lab, you will first learn the basics of how to use `git` and github.  Then, we will discuss how to use these tools to access your grades and submit assignments.
+In this lab, you will first learn the basics of how to use `git` and GitHub.  Then, we will discuss how to use these tools to access your grades and submit assignments.
 
 ### Creating Your First Repo (and some basic unix commands)
 
@@ -349,7 +349,10 @@ Then run the command:
 $ git merge bugfix
 ```
 
-This automatically updates the modified files.
+This automatically updates the modified files. Your tree will now look like this:
+
+![alt text](http://i.imgur.com/0ILn6bI.png)
+After the merge, the `master` and `bugfix` branches now essentially point to the same thing, and the `master` branch that you are on will contain the fixed code.
 
 Using branches like this to patch bugs is an extremely common usage pattern.  Whether you're developing open source software or working on facebook's user interface, this is the same basic procedure you will follow. 
 
@@ -425,6 +428,11 @@ Once we have resolved this merge conflict, we can finalize our merge.  We first 
 $ git add main.cpp
 $ git commit -m "solved merge conflict between userinput and bugfix branches"
 ```
+
+This is now what your final repo tree looks like:
+
+![alt text](http://i.imgur.com/2sGtx1T.png)
+Aftef working on both adding user input and fixing our bug, we have now synced our branches together.
 
 As you can see, resolving merge conflicts is a tedious process.  Most projects try to avoid merge conflicts as much as possible.  A simple strategy for doing this is using many small source files rather than a few large files.  Of course, in most projects merge conflicts will be inevitable.  That's just the reality of working on large projects with many team members.
 
@@ -525,7 +533,7 @@ Once you issue your pull request, the TA will review your contribution and add i
 
 You will use git extensively in this class to submit your assignments and receive feedback.  See the file called `GRADES.md` in the root folder of this project for detailed instructions.
 
-## references
+## References
 
 We've only scratched the surface of what the git command has to offer.  You should be able to get by in this course using just these commands.  But if your looking for more info, here's some good links:
 
@@ -537,6 +545,6 @@ This is a full book on how to use git effectively.  It also has videos of progra
 
 http://www.git-scm.com/doc
 
-## deliverables
+## Deliverables
 
 Tell the TA once you have issued your pull request.
