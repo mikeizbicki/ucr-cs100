@@ -411,7 +411,7 @@ $ git commit -m "solved merge conflict between userinput and bugfix branches"
 
 As you can see, resolving merge conflicts is a tedious process.  Most projects try to avoid merge conflicts as much as possible.  A simple strategy for doing this is using many small source files rather than a few large files.  Of course, in most projects merge conflicts will be inevitable.  That's just the reality of working on large projects with many team members.
 
-## enrolling in this course
+## Enrolling in This Course
 
 We will not be using ilearn in this course.  We will be using git and github to manage everything.  This will give you practice working with open source software.  To enroll in this course, you will follow the same steps that you would do to contribute to an open source project.
 
@@ -440,9 +440,14 @@ By default, you are the only person with write access to your new repository.  Y
 https://github.com/examplestudent/ucr-cs100
 ```
 
+You'll be seeing something similar to this. Its similar to the repository you visited earlier but theres a few key things you should notice, mainly the `pull request` button (top brown circle) that you'll be using in a few moments and the `settings` button (circled in purple).
+
+![alt text](http://i.imgur.com/DGSoEvk.png)
 Click the button on the right hand side labeled `settings`.
 
-Click the button on the left hand side labeled `collaborators`.
+Click the button on the left hand side labeled `collaborators` (circled in yellow).
+
+![alt text](http://i.imgur.com/qSKBWrI.png)
 
 This should bring up a menu that lets you add collaborators.  Everyone you add here has full write access to the repo.  Add all of the course instructors as collaborators.  Our github accounts are: `MikeIzbicki` and `bmars003`.
 
