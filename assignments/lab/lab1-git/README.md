@@ -466,7 +466,9 @@ Click the button on the left hand side labeled `collaborators` (circled in yello
 
 ![alt text](http://i.imgur.com/qSKBWrI.png)
 
-This should bring up a menu that lets you add collaborators.  Everyone you add here has full write access to the repo.  Add all of the course instructors as collaborators.  Our github accounts are: `MikeIzbicki` and `bmars003`.
+This should bring up a menu that lets you add collaborators.  Everyone you add here has full write access to the repo.  Add all of the course instructors as collaborators.  Our github accounts are: `MikeIzbicki` and `bmars003`. If you've done it correctly it should look similar to this:
+
+![alt text](http://i.imgur.com/fn9Wa0m.png?1)
 
 **IMPORTANT:** The file `GRADES.md` in this repo contains detailed information about how your grades will be stored in this repo.  Finish completing this lab, then go back and read this file.
 
@@ -506,7 +508,18 @@ git push origin master
 
 This "pushes" all the changes you've made back up to github.
 
-Now you need to issue a "pull request" to this repository.  This is done through the github web server and not through the command line.  Visit your forked project's webpage at: http://www.github.com/yourusername/ucr-cs100.  There is a dull gray button labeled "pull request."  Pressing this button will send you to a form where you fill out a message describing what you've changed in the code.  You merge message should be "enrolling in cs100".
+Now you need to issue a "pull request" to this repository.  This is done through the github web server and not through the command line.  Visit your forked project's webpage at: http://www.github.com/yourusername/ucr-cs100.  There is a dull gray button labeled "pull request."  Pressing this button will send you to a form where you fill out a message describing what you've changed in the code.  You merge message should be "enrolling in cs100". With everything that's going on, here's a little diagram to help you understand what you actually did:
+
+![alt text](http://i.imgur.com/5WZ7ydl.png)
+
+1) Since you couldnt change the original repository directly, you had to fork it and create your own version on GitHub.
+
+2) After that you cloned the repository from GitHub onto your local machine so that you could make your changes.
+
+3) After you finished making your changes and committed them, you pushed it back onto your forked repo on GitHub.
+
+4) Lastly, you sent a pull request so that your changes could be reviewed and integrated into the original repo.
+
 
 Once you issue your pull request, the TA will review your contribution and add it to the repository.  Congratulations!  You've just made your first contribution to open source software and are officially enrolled in the class!
 
