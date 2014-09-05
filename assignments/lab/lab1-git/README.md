@@ -123,7 +123,7 @@ $ git add README
 $ git commit -m "modified the README"
 ```
 
-### traveling through time
+### Traveling Through Time
 
 Okay!  
 
@@ -176,7 +176,7 @@ $ cat README
 $ ls -l
 ```
 
-### git repos are trees
+### Git Repos Are Trees
 
 Another important use of version control systems is working with multiple versions of the same project at once.  This is VERY useful.  Also, you'll be required to do this in future homework assignments (and all throughout your illustrious careers), so pay attention!
 
@@ -281,7 +281,7 @@ Since this commit was made on the userinput branch, it now points to a new commi
 
 The way branches are used out in the real world depends on the company you work for and the product you're building.  A typical software engineer might make anywhere from one new branch per week to 5 or more new branches per day.  
 
-### fixing a bug
+### Fixing a Bug
 
 Wait!
 
@@ -311,8 +311,10 @@ Now we're ready to edit the code.  Update the `main` function to return 0, then 
 $ git add main.cpp
 $ git commit -m "fixed the return 1 bug"
 ```
+Since you made the commit on the `bugfix` branch, your tree splits off in another direction and now looks like this:
+![alt text](http://i.imgur.com/yALwdqX.png)
 
-### merging branches
+### Merging Branches
 
 We want our users to get access to the fixed software, so we have to add our `bugfix` code into the `master` branch.  This process is called "merging."
 
@@ -336,7 +338,7 @@ Using branches like this to patch bugs is an extremely common usage pattern.  Wh
 
 With real bugs on more complicated software, bug fixes won't be quite this easy.  They might require editing several different files and many commits.  It might take us weeks just to find out what's even causing the bug!  By putting our changes in a separate branch, we make it easy to have someone fixing the bug while someone else is adding new features.
 
-### merge conflicts
+### Merge Conflicts
 
 Our `userinput` feature is also ready now.  We've tested it and are sure it's working correctly.  It's time to merge this feature with the `master` branch.  Run the commands: 
 
@@ -413,17 +415,22 @@ As you can see, resolving merge conflicts is a tedious process.  Most projects t
 
 We will not be using ilearn in this course.  We will be using git and github to manage everything.  This will give you practice working with open source software.  To enroll in this course, you will follow the same steps that you would do to contribute to an open source project.
 
-### subscribing to the course
+### Subscribing to the Course
 
-If you do not already have a github account, you will need to create one.  Go to http://www.github.com and register an account.  Your github account does NOT need to be the same as your cs account.  For example, my account is just my full name `mikeizbicki`.  Feel free to get creative and pick something fun.  If you already have a github account, you do not need to register a new one.
+If you do not already have a github account, you will need to create one.  Go to http://www.github.com and register an account.  Your github account does NOT need to be the same as your cs account.  For example, my account is just my full name `mikeizbicki`.  Feel free to get creative and pick something fun. If you already have a github account, you do not need to register a new one.
 
-Return to http://github.com/mikeizbicki/ucr-cs100.  At the top of the page there is a button labeled `follow`.  Click this button to become a follower of the repository.  Anytime we update the course with new information or announcements, you will be notified by email.
 
-Return to http://github.com/mikeizbicki/ucr-cs100.  On the right hand side of the page is a button labeled `issues`.  Click this button.  At the top of the page is a button labeled `new issue`.  Whenever you have a question with the course, you should NOT email the instructors directly.  Instead, you should submit an issue here.  This will notify following the project (both instructors and students) about your question, and anyone can answer it.  We will be using this system for communicating instead of piazza.
+Return to http://github.com/mikeizbicki/ucr-cs100. Here's a quick screenshot of what you're going to be looking at:
 
-### forking your repo
+![alt text](http://i.imgur.com/zjzrl1Z.png) 
 
-Return to http://github.com/mikeizbicki/ucr-cs100.  In the top right corner of the page is a button labeled `fork`.  Click this button to create a new version of this repository in your github account.  This is where all your grade information will be stored.
+At the top of the page there is a button labeled `Watch` (top left in red).  Click this button to become a follower of the repository.  Anytime we update the course with new information or announcements, you will be notified by email.
+
+Return to http://github.com/mikeizbicki/ucr-cs100.  On the right hand side of the page is a button labeled `issues` (bottom right green).  Click this button.  At the top of the page will be a green button labeled `new issue`.  Whenever you have a question with the course, you should NOT email the instructors directly.  Instead, you should submit an issue here.  This will notify following the project (both instructors and students) about your question, and anyone can answer it.  We will be using this system for communicating instead of piazza.
+
+### Forking Your Repo
+
+Return to http://github.com/mikeizbicki/ucr-cs100.  In the top right corner of the page is a button labeled `fork` (top right blue).  Click this button to create a new version of this repository in your github account.  This is where all your grade information will be stored.
 
 By default, you are the only person with write access to your new repository.  You must give all the instructors write access so we can update your grades.  Visit the page:
 
@@ -441,7 +448,7 @@ This should bring up a menu that lets you add collaborators.  Everyone you add h
 
 **IMPORTANT:** The file `GRADES.md` in this repo contains detailed information about how your grades will be stored in this repo.  Finish completing this lab, then go back and read this file.
 
-### add your information to the course page
+### Add Your Info to the Course Page
 
 To finalize your enrollment in this class, you will change this repo to include your student information.
 
