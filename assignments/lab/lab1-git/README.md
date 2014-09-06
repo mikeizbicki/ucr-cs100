@@ -476,16 +476,26 @@ If you do not already have a github account, you will need to create one.  Go to
 Return to http://github.com/mikeizbicki/ucr-cs100. Here's a quick screenshot of what you're going to be looking at:
 
 <p align="center">
-  <img src="http://i.imgur.com/zjzrl1Z.png?1?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/watch.png?raw=true"/>
 </p>
 
-At the top of the page there is a button labeled `Watch` (top left in red).  Click this button to become a follower of the repository.  Anytime we update the course with new information or announcements, you will be notified by email.
+At the top of the page there is a button labeled `Watch`.  Click this button to become a follower of the repository.  Anytime we update the course with new information or announcements, you will be notified by email.
 
-Return to http://github.com/mikeizbicki/ucr-cs100.  On the right hand side of the page is a button labeled `issues` (bottom right green).  Click this button.  At the top of the page will be a green button labeled `new issue`.  Whenever you have a question with the course, you should NOT email the instructors directly.  Instead, you should submit an issue here.  This will notify following the project (both instructors and students) about your question, and anyone can answer it.  We will be using this system for communicating instead of piazza.
+Return to http://github.com/mikeizbicki/ucr-cs100.  On the right hand side of the page is a button labeled `issues`.
+
+<p align="center">
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/issues.png?raw=true"/>
+</p>
+
+Click this button.  At the top of the page will be a green button labeled `new issue`.  Whenever you have a question with the course, you should NOT email the instructors directly.  Instead, you should submit an issue here.  This will notify following the project (both instructors and students) about your question, and anyone can answer it.  We will be using this system for communicating instead of piazza.
 
 ### Forking Your Repo
 
-Return to http://github.com/mikeizbicki/ucr-cs100.  In the top right corner of the page is a button labeled `fork` (top right blue).  Click this button to create a new version of this repository in your github account.  This is where all your grade information will be stored.
+Return to http://github.com/mikeizbicki/ucr-cs100.  In the top right corner of the page is a button labeled `fork`.  Click this button to create a new version of this repository in your github account.  This is where all your grade information will be stored.
+
+<p align="center">
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/fork.png?raw=true"/>
+</p>
 
 By default, you are the only person with write access to your new repository.  You must give all the instructors write access so we can update your grades.  Visit the page:
 
@@ -495,10 +505,8 @@ By default, you are the only person with write access to your new repository.  Y
 https://github.com/examplestudent/ucr-cs100
 ```
 
-You'll be seeing something similar to this. Its similar to the repository you visited earlier but theres a few key things you should notice, mainly the `pull request` button (top brown circle) that you'll be using in a few moments and the `settings` button (circled in purple).
-
 <p align="center">
-  <img src="http://i.imgur.com/DGSoEvk.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/settings.png?raw=true"/>
 </p>
 
 Click the button on the right hand side labeled `settings`.
@@ -506,14 +514,10 @@ Click the button on the right hand side labeled `settings`.
 Click the button on the left hand side labeled `collaborators` (circled in yellow).
 
 <p align="center">
-  <img src="http://i.imgur.com/qSKBWrI.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/collaborators.png?raw=true"/>
 </p>
 
-This should bring up a menu that lets you add collaborators.  Everyone you add here has full write access to the repo.  Add all of the course instructors as collaborators.  Our github accounts are: `MikeIzbicki` and `bmars003`. If you've done it correctly it should look similar to this:
-
-<p align="center">
-  <img src="http://i.imgur.com/fn9Wa0m.png?1?"/>
-</p>
+This should bring up a menu that lets you add collaborators.  Everyone you add here has full write access to the repo.  Add all of the course instructors as collaborators.  Our github accounts are: `MikeIzbicki` and `bmars003`. 
 
 **IMPORTANT:** The file `GRADES.md` in this repo contains detailed information about how your grades will be stored in this repo.  Finish completing this lab, then go back and read this file.
 
@@ -556,7 +560,7 @@ This "pushes" all the changes you've made back up to github.
 Now you need to issue a "pull request" to this repository.  This is done through the github web server and not through the command line.  Visit your forked project's webpage at: http://www.github.com/yourusername/ucr-cs100.  There is a dull gray button labeled "pull request."  Pressing this button will send you to a form where you fill out a message describing what you've changed in the code.  You merge message should be "enrolling in cs100". With everything that's going on, here's a little diagram to help you understand what you actually did:
 
 <p align="center">
-  <img src="http://i.imgur.com/5WZ7ydl.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/summary.png?raw=true"/>
 </p>
 
 1) Since you couldnt change the original repository directly, you had to fork it and create your own version on GitHub.
