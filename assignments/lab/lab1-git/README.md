@@ -402,13 +402,31 @@ We will not be using ilearn in this course.  We will be using git and github to 
 
 If you do not already have a github account, you will need to create one.  Go to http://www.github.com and register an account.  Your github account does NOT need to be the same as your cs account.  For example, my account is just my full name `mikeizbicki`.  Feel free to get creative and pick something fun.  If you already have a github account, you do not need to register a new one.
 
-Return to http://github.com/mikeizbicki/ucr-cs100.  At the top of the page there is a button labeled `follow`.  Click this button to become a follower of the repository.  Anytime we update the course with new information or announcements, you will be notified by email.
+Return to http://github.com/mikeizbicki/ucr-cs100. At the top of the page there is a button labeled `Watch`:
 
-Return to http://github.com/mikeizbicki/ucr-cs100.  On the right hand side of the page is a button labeled `issues`.  Click this button.  At the top of the page is a button labeled `new issue`.  Whenever you have a question with the course, you should NOT email the instructors directly.  Instead, you should submit an issue here.  This will notify following the project (both instructors and students) about your question, and anyone can answer it.  We will be using this system for communicating instead of piazza.
+<p align="center">
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/watch.png?raw=true"/>
+</p>
+
+Click this button to become a follower of the repository. Anytime we update the course with new information or announcements, you will be notified by email.
+
+Return to http://github.com/mikeizbicki/ucr-cs100.  On the right hand side of the page is a button labeled `issues`:
+
+<p align="center">
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/issues.png?raw=true"/>
+</p>
+
+Click this button.  At the top of the page will be a green button labeled `new issue`.  Whenever you have a question with the course, you should NOT email the instructors directly.  Instead, you should submit an issue here.  This will notify following the project (both instructors and students) about your question, and anyone can answer it.  We will be using this system for communicating instead of piazza.
 
 ### forking your repo
 
-Return to http://github.com/mikeizbicki/ucr-cs100.  In the top right corner of the page is a button labeled `fork`.  Click this button to create a new version of this repository in your github account.  This is where all your grade information will be stored.
+Return to http://github.com/mikeizbicki/ucr-cs100.  In the top right corner of the page is a button labeled `fork`:  
+
+<p align="center">
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/fork.png?raw=true"/>
+</p>
+
+Click this button to create a new version of this repository in your own GitHub account.  This is where all your grade information will be stored.  (Keep reading for details!)
 
 By default, you are the only person with write access to your new repository.  You must give all the instructors write access so we can update your grades.  Visit the page:
 
@@ -423,6 +441,14 @@ Click the button on the right hand side labeled `settings`.
 Click the button on the left hand side labeled `collaborators`.
 
 This should bring up a menu that lets you add collaborators.  Everyone you add here has full write access to the repo.  Add all of the course instructors as collaborators.  Our github accounts are: `MikeIzbicki` and `bmars003`.
+
+Click the button on the left hand side labeled `collaborators`:
+
+<p align="center">
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/collaborators.png?raw=true"/>
+</p>
+
+This should bring up a menu that lets you add collaborators.  Everyone you add here has full write access to the repo.  Add all of the course instructors as collaborators.  Our GitHub accounts are: `MikeIzbicki` and `bmars003`. 
 
 **IMPORTANT:** The file `GRADES.md` in this repo contains detailed information about how your grades will be stored in this repo.  Finish completing this lab, then go back and read this file.
 
