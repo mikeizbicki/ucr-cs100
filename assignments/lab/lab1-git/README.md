@@ -514,7 +514,7 @@ https://github.com/examplestudent/ucr-cs100
 ---
 Click the button on the right hand side labeled `settings`.
 
-Click the button on the left hand side labeled `collaborators` (circled in yellow).
+Click the button on the left hand side labeled `collaborators`.
 
 ---
 <p align="center">
