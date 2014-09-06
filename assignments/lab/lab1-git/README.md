@@ -474,6 +474,7 @@ If you do not already have a github account, you will need to create one.  Go to
 
 
 Return to http://github.com/mikeizbicki/ucr-cs100. Here's a quick screenshot of what you're going to be looking at:
+
 ---
 <p align="center">
   <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/watch.png?raw=true"/>
@@ -482,6 +483,7 @@ Return to http://github.com/mikeizbicki/ucr-cs100. Here's a quick screenshot of 
 At the top of the page there is a button labeled `Watch`.  Click this button to become a follower of the repository.  Anytime we update the course with new information or announcements, you will be notified by email.
 
 Return to http://github.com/mikeizbicki/ucr-cs100.  On the right hand side of the page is a button labeled `issues`.
+
 ---
 <p align="center">
   <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/issues.png?raw=true"/>
@@ -492,6 +494,7 @@ Click this button.  At the top of the page will be a green button labeled `new i
 ### Forking Your Repo
 
 Return to http://github.com/mikeizbicki/ucr-cs100.  In the top right corner of the page is a button labeled `fork`.  Click this button to create a new version of this repository in your github account.  This is where all your grade information will be stored.
+
 ---
 <p align="center">
   <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/fork.png?raw=true"/>
@@ -512,6 +515,7 @@ https://github.com/examplestudent/ucr-cs100
 Click the button on the right hand side labeled `settings`.
 
 Click the button on the left hand side labeled `collaborators` (circled in yellow).
+
 ---
 <p align="center">
   <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/collaborators.png?raw=true"/>
