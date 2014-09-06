@@ -9,26 +9,57 @@
 
 # the github project name
 classname="ucr-cs100"
+
+# tmp folder for all student repos
 tmpdir="gradetmp"
+
+
+#######################################
+# misc display functions
+
+# pad the input $1 with extra spaces so that is has exactly length $2
+function pad {
+    ret="${1:0:$2}                                                  "
+    ret="${ret:0:$2}"
+    echo "$ret"
+}
+
+# add the padding to the left
+function padPercent {
+    if [ ${#1} = 5 ]; then
+        printf " "
+    elif [ "$1" = 0 ]; then
+        printf "  0.0"
+    fi
+    printf "$1"
+}
 
 #######################################
 # download/edit grades
 
-function downloadgrades {
-    local user=$1
-    clonedir="$tmpdir/$classname-$user"
-    if [ ! -d "$clonedir" ]; then
-        giturl="https://github.com/$user/$classname.git"
-        git clone --quiet "$giturl" "$clonedir" 
-    else
-        cd "$clonedir"
-        git pull origin --quiet > /dev/null
-        cd ../..
+function downloadAllProjects {
+    local proj="$1"
+    echo "downloading repos..."
+    accountlist=""
+    for file in studentinfo/*; do
+        githubaccount=`tail -n 1 $file`
+        accountlist="$accountlist $githubaccount"
+    done
+        
+    if ! (echo "$accountlist" | xargs -n 1 -P 4 "$scriptdir/downloadproject.sh" "$proj"); then
+        echo "ERROR: some repos failed to download; sometimes we exceed github's connection limits due to parallel downloading; trying again might work?"
+        exit 1
     fi
+    echo "done"
+}
 
-    #cd $clonedir
-    #git checkout --quiet init
-    #cd ..
+function downloadAllGrades {
+    downloadAllProjects "$classname"
+}
+
+function downloadgrades {
+    "$scriptdir/downloadproject.sh" "$classname" "$1"
+    #downloadproject "$1" "$classname"
 }
 
 function uploadgrades {
@@ -70,17 +101,8 @@ function gradefile {
 
     vim "$file"
 
-    # add spaces around the / in the grade file
-
     # delete all the comments from the file
     sed -i "/^\#/d" "$file" 
-
-    #tmpfile="${file}.tmp"
-    #sed -i "/^\#/d" "$file" > "$tmpfile"
-    #rm "$file"
-    #mv "$tmpfile" "$file"
-    # FIXME: the above implementation is unsafe whenever the tmpfile already exists
-    # sed can't write to it's own output, though
 }
 
 #######################################
@@ -103,9 +125,14 @@ function getOutOf {
     fi
 }
 
+# calculates the total points for user $1 in directory $2
 function totalGrade {
     local totalgrade=0
-    for f in `find "./$tmpdir/$classname-$1" -name grade`; do
+    local assn="$2"
+    if [ -z "$assn" ]; then
+        assn="."
+    fi
+    for f in `find "./$tmpdir/$classname-$1/$assn" -name grade`; do
         if isGraded "$f"; then
             local grade=$(getGrade "$f")
             totalgrade=$[$totalgrade+$grade]
@@ -114,9 +141,14 @@ function totalGrade {
     echo $totalgrade
 }
 
+# calculates the total possible points for user $1 in directory $2 on submitted assignments only
 function runningTotalOutOf {
     totaloutof=0
-    for f in `find "./$tmpdir/$classname-$1/" -name grade`; do
+    local assn="$2"
+    if [ -z "$assn" ]; then
+        assn="."
+    fi
+    for f in `find "./$tmpdir/$classname-$1/$assn" -name grade`; do
         if isGraded "$f"; then
             local outof=$(getOutOf "$f")
             totaloutof=$[$totaloutof+$outof]
@@ -125,9 +157,14 @@ function runningTotalOutOf {
     echo "$totaloutof"
 }
 
+# calculates the total possible points for user $1 in directory $2 on all assignments 
+# this function is used for calculating the final grade
 function totalOutOf {
     totaloutof=0
-    for f in `find "./$tmpdir/$classname-$1/" -name grade`; do
+    if [ -z "$assn" ]; then
+        assn="."
+    fi
+    for f in `find "./$tmpdir/$classname-$1/$assn" -name grade`; do
         local outof=$(getOutOf "$f")
         totaloutof=$[$totaloutof+$outof]
     done
@@ -135,11 +172,65 @@ function totalOutOf {
 }
 
 #######################################
-# misc functions
+# displaying grades
 
-# pad the input $1 with extra zeros so that is has exactly length $2
-function pad {
-    ret="${1:0:$2}                                                  "
-    ret="${ret:0:$2}"
-    echo "$ret"
+function colorPercent {
+    local per="$1"
+    if [[ -z $1 ]]; then
+        resetColor
+    elif ((`bc <<< "$per>90"`)); then
+        printf "\x1b[32m"
+    elif ((`bc <<< "$per>80"`)); then
+        printf "\x1b[36m"
+    elif ((`bc <<< "$per>70"`)); then
+        printf "\x1b[33m"
+    else
+        printf "\x1b[31m"
+    fi
 }
+
+function resetColor {
+    printf "\x1b[0m"
+}
+
+function dispPercent {
+    local per="$1"
+    colorPercent "$per"
+    printf "$(padPercent $per)"
+    resetColor
+}
+
+function percentToLetter {
+    per="$1"
+    colorPercent "$1"
+    if ((`bc <<< "$per>97"`)); then
+        printf "A+"
+    elif ((`bc <<< "$per>93"`)); then
+        printf "A "
+    elif ((`bc <<< "$per>90"`)); then
+        printf "A-"
+    elif ((`bc <<< "$per>87"`)); then
+        printf "B+"
+    elif ((`bc <<< "$per>83"`)); then
+        printf "B "
+    elif ((`bc <<< "$per>80"`)); then
+        printf "B-"
+    elif ((`bc <<< "$per>77"`)); then
+        printf "C+"
+    elif ((`bc <<< "$per>73"`)); then
+        printf "C "
+    elif ((`bc <<< "$per>70"`)); then
+        printf "C-"
+    elif ((`bc <<< "$per>67"`)); then
+        printf "D+"
+    elif ((`bc <<< "$per>63"`)); then
+        printf "D "
+    elif ((`bc <<< "$per>60"`)); then
+        printf "D-"
+    else
+        printf "F "
+    fi
+    resetColor
+}
+
+

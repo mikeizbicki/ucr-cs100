@@ -12,9 +12,8 @@ source "$scriptdir/config.sh"
 # check for valid command line params
 
 user="$1"
-if [ -z $user ]
-then
-    echo "no user name given"
+if [ -z $user ]; then 
+    echo "no github account given"
     exit
 fi
 
@@ -47,13 +46,35 @@ for f in `find "./$tmpdir/$classname-$user" -name grade | sort`; do
         grade=$(getGrade "$f")
     fi
     outof=$(getOutOf "$f")
-    printf "    %3s / %3s    |  $assn\n" "$grade" "$outof"
+
+    if [ ! $grade = "---" ]; then 
+        cmd="scale=2; 100*$grade/$outof"
+        assnPercent=$(bc <<< "$cmd" 2> /dev/null)
+        colorPercent "$assnPercent"
+        printf "    %3s / %3s    " "$grade" "$outof"
+        resetColor
+        printf "|"
+        colorPercent "$assnPercent"
+        printf "  $assn\n" 
+        resetColor
+    else
+        printf "    %3s / %3s    " "$grade" "$outof"
+        printf "|"
+        printf "  $assn\n" 
+    fi
 done
 
 echo "==========================================="
 echo
 
-printf "running total = %4s / %4s = %1.2f\n" $totalgrade $runningtotaloutof $runningpercent
-printf "overall total = %4s / %4s = %1.2f\n" $totalgrade $totaloutof $percent
+printf "running total = %4s / %4s = " $totalgrade $runningtotaloutof 
+dispPercent "$runningpercent"
+printf "  "
+percentToLetter "$runningpercent"
+echo
+printf "overall total = %4s / %4s = " $totalgrade $totaloutof 
+dispPercent "$percent"
+printf "  "
+percentToLetter "$percent"
 echo
 echo
