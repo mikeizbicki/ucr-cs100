@@ -142,19 +142,19 @@ So what's been happening with all these commits? Here's a step by step breakdown
 **NOTE:** The branches (which we will learn about in the next section) are colored blue in sharp boxes while the commits are denoted by the round purple boxes. The current branch or commit you are currently checked out on is denoted with an asterisk.
 
 <p align="center">
-  <img src="http://i.imgur.com/3X5sdo2.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/1.png?raw=true"/>
 </p>
 
 With your "my first commit" commit, you were on the master branch by default.
 
 <p align="center">
-  <img src="http://i.imgur.com/aCBmCkN.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/2.png?raw=true"/>
 </p>
 
 After your second commit, another link was created from the master branch.
 
 <p align="center">
-  <img src="http://i.imgur.com/j3RjG0O.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/3.png?raw=true"/>
 </p>
 
 The same thing happens when you make another commit.
@@ -214,7 +214,7 @@ This should list just a single branch called "master."  This branch was created 
 One way to think of branches is as a nice label for your commit hashes.  Your "master" branch currently points to your commit with the message "modified the README."  That's why when we ran `git checkout master` above, it restored our project to the state of that commit.  We could also have used `git checkout [hash]`, if you replaced `[hash]` with the appropriate hash value.  But that's much less convenient.  When you use `git checkout` in the future, you will usually be using it on branch names. Currently, this is what your repository tree looks like:
 
 <p align="center">
-  <img src="http://i.imgur.com/j3RjG0O.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/3.png?raw=true"/>
 </p>
 
 Every time we add a new feature to a project, we create a branch for that feature.  Let's create a branch called `userinput` in our project by:
@@ -232,7 +232,7 @@ $ git branch
 You should see two branches now.  There should be an asterisk next to the master branch.  This tells us that master is the currently active branch, and if we commit any new changes, they will be added to the master branch.  (That is, `master` will change to point to whatever your new commit is.)
 
 <p align="center">
-  <img src="http://i.imgur.com/UbnHTcX.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/4.png?raw=true"/>
 </p>
 
 Switch to our new branch using the command:
@@ -250,7 +250,7 @@ $ git branch
 and verify that the asterisk is next to the `userinput` branch. Since the only thing you did was switch branches, the repo tree almost looks like the same.
 
 <p align="center">
-  <img src="http://i.imgur.com/YhWgrus.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/5.png?raw=true"/>
 </p>
 
 Now let's modify our `main.cpp` file so that it asks the user their name before saying hello:
@@ -280,7 +280,7 @@ $ git commit -m "added user input"
 Before this commit, the `userinput` and `master` branches were pointing to the same commit.  When you run this command, the `userinput` branch gets updated to point to this new commit. Now your tree looks like this:
 
 <p align="center">
-  <img src="http://i.imgur.com/Ma98PXZ.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/6.png?raw=true"/>
 </p>
 
 Let's verify that our changes affected only the userinput branch and not the master branch.  First, checkout the master branch, then cat the `main.cpp` file, then return to the user input branch.
@@ -309,7 +309,7 @@ $ git commit -m "updated README"
 Since this commit was made on the userinput branch, it now points to a new commit and your tree should look like this:
 
 <p align="center">
-  <img src="http://i.imgur.com/WvtjqbX.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/7.png?raw=true"/>
 </p>
 
 The way branches are used out in the real world depends on the company you work for and the product you're building.  A typical software engineer might make anywhere from one new branch per week to 5 or more new branches per day.  
@@ -336,7 +336,7 @@ $ git checkout bugfix
 If you run `git branch` now, there should be three branches listed and the asterisk should be next to `bugfix`. Since you switched over to `master` before creating a new branch, the new branch will point to the same commit that `master` did:
 
 <p align="center">
-  <img src="http://i.imgur.com/ZD4PyTW.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/8.png?raw=true"/>
 </p>
 
 
@@ -350,7 +350,7 @@ Since you made the commit on the `bugfix` branch, your tree splits off in anothe
 
 
 <p align="center">
-  <img src="http://i.imgur.com/FyUIsUM.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/9.png?raw=true"/>
 </p>
 
 ### Merging Branches
@@ -374,7 +374,7 @@ $ git merge bugfix
 This automatically updates the modified files. Your tree will now look like this:
 
 <p align="center">
-  <img src="http://i.imgur.com/0ILn6bI.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/10.png?raw=true"/>
 </p>
 
 After the merge, the `master` and `bugfix` branches now essentially point to the same thing, and the `master` branch that you are on will contain the fixed code.
@@ -457,7 +457,7 @@ $ git commit -m "solved merge conflict between userinput and bugfix branches"
 This is now what your final repo tree looks like:
 
 <p align="center">
-  <img src="http://i.imgur.com/2sGtx1T.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/11.png?raw=true"/>
 </p>
 
 After working on both adding user input and fixing our bug, we have now synced our branches together.
@@ -476,16 +476,26 @@ If you do not already have a github account, you will need to create one.  Go to
 Return to http://github.com/mikeizbicki/ucr-cs100. Here's a quick screenshot of what you're going to be looking at:
 
 <p align="center">
-  <img src="http://i.imgur.com/zjzrl1Z.png?1?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/watch.png?raw=true"/>
 </p>
 
-At the top of the page there is a button labeled `Watch` (top left in red).  Click this button to become a follower of the repository.  Anytime we update the course with new information or announcements, you will be notified by email.
+At the top of the page there is a button labeled `Watch`.  Click this button to become a follower of the repository.  Anytime we update the course with new information or announcements, you will be notified by email.
 
-Return to http://github.com/mikeizbicki/ucr-cs100.  On the right hand side of the page is a button labeled `issues` (bottom right green).  Click this button.  At the top of the page will be a green button labeled `new issue`.  Whenever you have a question with the course, you should NOT email the instructors directly.  Instead, you should submit an issue here.  This will notify following the project (both instructors and students) about your question, and anyone can answer it.  We will be using this system for communicating instead of piazza.
+Return to http://github.com/mikeizbicki/ucr-cs100.  On the right hand side of the page is a button labeled `issues`.
+
+<p align="center">
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/issues.png?raw=true"/>
+</p>
+
+Click this button.  At the top of the page will be a green button labeled `new issue`.  Whenever you have a question with the course, you should NOT email the instructors directly.  Instead, you should submit an issue here.  This will notify following the project (both instructors and students) about your question, and anyone can answer it.  We will be using this system for communicating instead of piazza.
 
 ### Forking Your Repo
 
-Return to http://github.com/mikeizbicki/ucr-cs100.  In the top right corner of the page is a button labeled `fork` (top right blue).  Click this button to create a new version of this repository in your github account.  This is where all your grade information will be stored.
+Return to http://github.com/mikeizbicki/ucr-cs100.  In the top right corner of the page is a button labeled `fork`.  Click this button to create a new version of this repository in your github account.  This is where all your grade information will be stored.
+
+<p align="center">
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/fork.png?raw=true"/>
+</p>
 
 By default, you are the only person with write access to your new repository.  You must give all the instructors write access so we can update your grades.  Visit the page:
 
@@ -495,10 +505,8 @@ By default, you are the only person with write access to your new repository.  Y
 https://github.com/examplestudent/ucr-cs100
 ```
 
-You'll be seeing something similar to this. Its similar to the repository you visited earlier but theres a few key things you should notice, mainly the `pull request` button (top brown circle) that you'll be using in a few moments and the `settings` button (circled in purple).
-
 <p align="center">
-  <img src="http://i.imgur.com/DGSoEvk.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/settings.png?raw=true"/>
 </p>
 
 Click the button on the right hand side labeled `settings`.
@@ -506,14 +514,10 @@ Click the button on the right hand side labeled `settings`.
 Click the button on the left hand side labeled `collaborators` (circled in yellow).
 
 <p align="center">
-  <img src="http://i.imgur.com/qSKBWrI.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/collaborators.png?raw=true"/>
 </p>
 
-This should bring up a menu that lets you add collaborators.  Everyone you add here has full write access to the repo.  Add all of the course instructors as collaborators.  Our github accounts are: `MikeIzbicki` and `bmars003`. If you've done it correctly it should look similar to this:
-
-<p align="center">
-  <img src="http://i.imgur.com/fn9Wa0m.png?1?"/>
-</p>
+This should bring up a menu that lets you add collaborators.  Everyone you add here has full write access to the repo.  Add all of the course instructors as collaborators.  Our github accounts are: `MikeIzbicki` and `bmars003`. 
 
 **IMPORTANT:** The file `GRADES.md` in this repo contains detailed information about how your grades will be stored in this repo.  Finish completing this lab, then go back and read this file.
 
@@ -556,7 +560,7 @@ This "pushes" all the changes you've made back up to github.
 Now you need to issue a "pull request" to this repository.  This is done through the github web server and not through the command line.  Visit your forked project's webpage at: http://www.github.com/yourusername/ucr-cs100.  There is a dull gray button labeled "pull request."  Pressing this button will send you to a form where you fill out a message describing what you've changed in the code.  You merge message should be "enrolling in cs100". With everything that's going on, here's a little diagram to help you understand what you actually did:
 
 <p align="center">
-  <img src="http://i.imgur.com/5WZ7ydl.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/summary.png?raw=true"/>
 </p>
 
 1) Since you couldnt change the original repository directly, you had to fork it and create your own version on GitHub.
