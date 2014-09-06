@@ -142,7 +142,7 @@ So what's been happening with all these commits? Here's a step by step breakdown
 **NOTE:** The branches (which we will learn about in the next section) are colored blue in sharp boxes while the commits are denoted by the round purple boxes. The current branch or commit you are currently checked out on is denoted with an asterisk.
 
 <p align="center">
-  <img src="http://i.imgur.com/3X5sdo2.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/1.png?raw=true"/>
 </p>
 
 With your "my first commit" commit, you were on the master branch by default.
