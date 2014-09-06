@@ -148,13 +148,13 @@ So what's been happening with all these commits? Here's a step by step breakdown
 With your "my first commit" commit, you were on the master branch by default.
 
 <p align="center">
-  <img src="http://i.imgur.com/aCBmCkN.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/2.png?raw=true"/>
 </p>
 
 After your second commit, another link was created from the master branch.
 
 <p align="center">
-  <img src="http://i.imgur.com/j3RjG0O.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/3.png?raw=true"/>
 </p>
 
 The same thing happens when you make another commit.
@@ -214,7 +214,7 @@ This should list just a single branch called "master."  This branch was created 
 One way to think of branches is as a nice label for your commit hashes.  Your "master" branch currently points to your commit with the message "modified the README."  That's why when we ran `git checkout master` above, it restored our project to the state of that commit.  We could also have used `git checkout [hash]`, if you replaced `[hash]` with the appropriate hash value.  But that's much less convenient.  When you use `git checkout` in the future, you will usually be using it on branch names. Currently, this is what your repository tree looks like:
 
 <p align="center">
-  <img src="http://i.imgur.com/j3RjG0O.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/4.png?raw=true"/>
 </p>
 
 Every time we add a new feature to a project, we create a branch for that feature.  Let's create a branch called `userinput` in our project by:
@@ -232,7 +232,7 @@ $ git branch
 You should see two branches now.  There should be an asterisk next to the master branch.  This tells us that master is the currently active branch, and if we commit any new changes, they will be added to the master branch.  (That is, `master` will change to point to whatever your new commit is.)
 
 <p align="center">
-  <img src="http://i.imgur.com/UbnHTcX.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/5.png?raw=true"/>
 </p>
 
 Switch to our new branch using the command:
@@ -250,7 +250,7 @@ $ git branch
 and verify that the asterisk is next to the `userinput` branch. Since the only thing you did was switch branches, the repo tree almost looks like the same.
 
 <p align="center">
-  <img src="http://i.imgur.com/YhWgrus.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/6.png?raw=true"/>
 </p>
 
 Now let's modify our `main.cpp` file so that it asks the user their name before saying hello:
@@ -280,7 +280,7 @@ $ git commit -m "added user input"
 Before this commit, the `userinput` and `master` branches were pointing to the same commit.  When you run this command, the `userinput` branch gets updated to point to this new commit. Now your tree looks like this:
 
 <p align="center">
-  <img src="http://i.imgur.com/Ma98PXZ.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/7.png?raw=true"/>
 </p>
 
 Let's verify that our changes affected only the userinput branch and not the master branch.  First, checkout the master branch, then cat the `main.cpp` file, then return to the user input branch.
@@ -309,7 +309,7 @@ $ git commit -m "updated README"
 Since this commit was made on the userinput branch, it now points to a new commit and your tree should look like this:
 
 <p align="center">
-  <img src="http://i.imgur.com/WvtjqbX.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/8.png?raw=true"/>
 </p>
 
 The way branches are used out in the real world depends on the company you work for and the product you're building.  A typical software engineer might make anywhere from one new branch per week to 5 or more new branches per day.  
@@ -350,7 +350,7 @@ Since you made the commit on the `bugfix` branch, your tree splits off in anothe
 
 
 <p align="center">
-  <img src="http://i.imgur.com/FyUIsUM.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/9.png?raw=true"/>
 </p>
 
 ### Merging Branches
@@ -374,7 +374,7 @@ $ git merge bugfix
 This automatically updates the modified files. Your tree will now look like this:
 
 <p align="center">
-  <img src="http://i.imgur.com/0ILn6bI.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/10.png?raw=true"/>
 </p>
 
 After the merge, the `master` and `bugfix` branches now essentially point to the same thing, and the `master` branch that you are on will contain the fixed code.
@@ -457,7 +457,7 @@ $ git commit -m "solved merge conflict between userinput and bugfix branches"
 This is now what your final repo tree looks like:
 
 <p align="center">
-  <img src="http://i.imgur.com/2sGtx1T.png?"/>
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/11.png?raw=true"/>
 </p>
 
 After working on both adding user input and fixing our bug, we have now synced our branches together.
