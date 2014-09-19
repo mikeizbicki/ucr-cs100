@@ -190,6 +190,14 @@ This should list just a single branch called "master."  This branch was created 
 
 One way to think of branches is as a nice label for your commit hashes.  Your "master" branch currently points to your commit with the message "modified the README."  That's why when we ran `git checkout master` above, it restored our project to the state of that commit.  We could also have used `git checkout [hash]`, if you replaced `[hash]` with the appropriate hash value.  But that's much less convenient.  When you use `git checkout` in the future, you will usually be using it on branch names.
 
+From now on, we'll be drawing pictures of our git repos so you can visualize what's going on.
+Currently, our repo looks like:
+
+<p align=center>
+<img src="images/3.png?raw=true">
+</p>
+The purple boxes represent all the commits we've done, and the blue box represents a branch.
+
 Every time we add a new feature to a project, we create a branch for that feature.  Let's create a branch called `userinput` in our project by:
 
 ```
@@ -204,6 +212,12 @@ $ git branch
 
 You should see two branches now.  There should be an asterisk next to the master branch.  This tells us that master is the currently active branch, and if we commit any new changes, they will be added to the master branch.  (That is, `master` will change to point to whatever your new commit is.)
 
+Our repo tree now looks like:
+
+<p align=center>
+<img src="images/4.png/raw=true">
+</p>
+
 Switch to our new branch using the command:
 
 ```
@@ -217,6 +231,12 @@ $ git branch
 ```
 
 and verify that the asterisk is next to the `userinput` branch.
+Since the only thing you did was switch branches, the repo tree looks almost the same.
+The only difference is the asterisk has moved.
+
+<p align=center>
+<img src="images/5.png?raw=true">
+</p>
 
 Let's modify our `main.cpp` file so that it asks the user their name before saying hello:
 
@@ -243,6 +263,11 @@ $ git commit -m "added user input"
 ```
 
 Before this commit, the `userinput` and `master` branches were pointing to the same commit.  When you run this command, the `userinput` branch gets updated to point to this new commit.
+Now your tree looks like:
+
+<p align=center>
+<img src="6.png?align=true">
+</p>
 
 Let's verify that our changes affected only the userinput branch and not the master branch.  First, checkout the master branch, then cat the `main.cpp` file, then return to the user input branch.
 
@@ -267,6 +292,12 @@ $ git add README
 $ git commit -m "updated README"
 ```
 
+Your repo tree now looks like:
+
+<p align=center>
+<img src="images/7.png?raw=true">
+</p>
+
 The way branches are used out in the real world depends on the company you work for and the product you're building.  A typical software engineer might make anywhere from one new branch per week to 5 or more new branches per day.  
 
 ### fixing a bug
@@ -288,7 +319,12 @@ $ git branch bugfix
 $ git checkout bugfix
 ```
 
-If you run `git branch` now, there should be three branches listed and the asterisk should be next to `bugfix`.
+Here's the tree.
+Notice that the `bugfix` branch starts where the `master` branch was because we switched to `master` before creating `bugfix`.
+
+<p align=center>
+<img src="images/8.png?raw=true">
+</p>
 
 Now we're ready to edit the code.  Update the `main` function to return 0, then commit your changes:
 
@@ -296,6 +332,12 @@ Now we're ready to edit the code.  Update the `main` function to return 0, then 
 $ git add main.cpp
 $ git commit -m "fixed the return 1 bug"
 ```
+
+Since you made the commit on the `bugfix` branch, your tree splits off in another direction and now looks like this:
+
+<p align=center>
+<img src="images/9.png?raw=true">
+</p>
 
 ### merging branches
 
@@ -316,6 +358,12 @@ $ git merge bugfix
 ```
 
 This automatically updates the modified files.
+
+Your tree will now look like this:
+
+<p align=center>
+<img src="images/10.png?raw=true">
+</p>
 
 Using branches like this to patch bugs is an extremely common usage pattern.  Whether you're developing open source software or working on facebook's user interface, this is the same basic procedure you will follow. 
 
@@ -392,7 +440,28 @@ $ git add main.cpp
 $ git commit -m "solved merge conflict between userinput and bugfix branches"
 ```
 
+And your tree looks like:
+
+<p align=center>
+<img src="images/11.png?raw=true"
+</p>
+
 As you can see, resolving merge conflicts is a tedious process.  Most projects try to avoid merge conflicts as much as possible.  A simple strategy for doing this is using many small source files rather than a few large files.  Of course, in most projects merge conflicts will be inevitable.  That's just the reality of working on large projects with many team members.
+
+### exercise
+
+Given the same repo above, draw the tree that results after running the following commands.
+You will have to submit this to the TA before the end of lab.
+
+```
+$ git branch -d userinput
+$ git branch -d bugfix
+$ echo "everything is awesome" > README.md
+$ git add README.md
+$ git commit -m "changed the README"
+```
+
+You should check the [git cheatsheet](git-cheatsheet.md) to figure out what the `git branch -d` command does.
 
 ## enrolling in this course
 
