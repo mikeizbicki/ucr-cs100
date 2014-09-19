@@ -4,7 +4,7 @@
 
 You will make three modifications to your `rshell` project.
 
-1. Your shell must be able to find commands (e.g. `ls` and `tee`) by searching for them using the user's current `PATH` environment variable.  Previously, you were required to only look in the directory `/usr/bin` for these commands, but now you must search many directories.  There are versions of the `exec` function that will perform this search for you automatically (e.g. `execp`), but you are not allowed to use them.  You must use the `getenv` function to get the current `PATH`, then manually search these directories for the command.
+1. Your shell must be able to find commands (e.g. `ls` and `tee`) by searching for them using the user's current `PATH` environment variable.  Previously, you were required to only look in the directory `/usr/bin` for these commands, but now you must search many directories.  There are versions of the `exec` function that will perform this search for you automatically (e.g. `execvp`), but you are not allowed to use them.  You must use the `getenv` function to get the current `PATH`, then manually search these directories for the command.
 
 2. The shell should not exit when the user types `^C`.  Instead, the current foreground job should interrupt.
 
@@ -32,13 +32,18 @@ There are no changes to your project structure.
 
 ### testing
 
+Again, the tests you choose will be the most important part of your grade.  
+
 ### collaboration policy
 
 You MAY NOT look at the source code of any other student.
 
 You MAY discuss with other students in general terms how to use the unix functions.
 
-You SHOULD talk to other students about test cases.  You are allowed to freely share ideas in this regard.
+You are ENCOURAGED to talk with other students about test cases.
+You are allowed to freely share ideas in this regard.
+
+You are ENCOURAGED to look at [bash's source code](https://www.gnu.org/software/bash/) for inspiration.
 
 ### grading
 
@@ -50,4 +55,5 @@ You SHOULD talk to other students about test cases.  You are allowed to freely s
 
 #### extra credit
 
-You can earn up to 25 points of extra credit by catching the `^Z` signal to pause the foreground process.  You must also implement the `fg` and `bg` commands.
+You can earn up to 20 points of extra credit by catching the `^Z` signal to pause the foreground process.
+You must also implement the `fg` and `bg` commands.

@@ -2,7 +2,9 @@
 
 ### coding requirements
 
-Write a C++ program that implements a subset of the GNU `ls` command.  In particular, you must support: the `-a`, `-l` and `-R` optional flags; and the ability to pass in zero, one, or many files.  Notice that the GNU `ls` command handles files and folders differently, and you must reproduce this functionality exactly.  You will use the functions `readdir` and `stat`, which are provided by Unix operating systems.  For details on the use of these functions, visit their man pages.
+Write a C++ program that implements a subset of the GNU `ls` command.  In particular, you must support: the `-a`, `-l` and `-R` optional flags; and the ability to pass in zero, one, or many files.  Notice that the GNU `ls` command handles files and folders differently, and you must reproduce this functionality exactly.  For a refresher on how to use the `ls` command effectively, you can watch [this video tutorial](https://izbicki.me/blog/videoguide-for-github-vim-bash.html#ls).
+
+To implement `ls`, you must use the `readdir` and `stat` syscalls.  For details on the use of these functions, visit their man pages.
 
 To get you started, the file `ls.cpp` contains code that reads the files in the current working directory.  
 
@@ -42,7 +44,10 @@ You MAY NOT look at the source code of any other student.
 
 You MAY discuss with other students in general terms how to use the unix functions.
 
-You SHOULD talk to other students about test cases.  You are allowed to freely share ideas in this regard.
+You are ENCOURAGED to talk with other students about test cases.
+You are allowed to freely share ideas in this regard.
+
+You are ENCOURAGED to look at [GNU ls's source code](https://www.gnu.org/software/coreutils/) for inspiration.
 
 ### grading
 
@@ -56,4 +61,8 @@ You SHOULD talk to other students about test cases.  You are allowed to freely s
 
 #### extra credit
 
-The GNU `ls` utility displays different types of files in different colors/fonts using [ANSI escape codes](https://en.wikipedia.org/wiki/ANSI_escape_code).  You will receive up to 25 points extra credit if your `ls` command has this ability.  In particular, you should print directories in blue; executables in green; and hidden files (with the `-a` flag only) with a gray background.  These effects should be combinable.  So if you have a hidden directory, it should be displayed as blue text on top of a gray background.
+The GNU `ls` utility displays different types of files in different colors/fonts using [ANSI escape codes](https://en.wikipedia.org/wiki/ANSI_escape_code).
+You will receive up to 15 points extra credit if your `ls` command has this ability.
+In particular, you should print directories in blue; executables in green; and hidden files (with the `-a` flag only) with a gray background.
+These effects should be combinable.
+So if you have a hidden directory, it should be displayed as blue text on top of a gray background.

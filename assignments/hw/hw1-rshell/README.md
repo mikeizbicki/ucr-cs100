@@ -6,21 +6,42 @@ Write a command shell called `rshell`.  Your shell will perform the following st
 
 1. Print a command prompt (e.g. `$`)
 
-2. Read in a command on one line.  Commands will have the form: `commandName [ argumentList ] [ & ]`, where `commandName` is an executable program in the `PATH` and `argumentList` is a list of zero or more words.
+2. Read in a command on one line.  
+Commands will have the form: 
+```
+cmd         = executable [ argumentList ] [ connecter cmd ]
+connecter   = || or && or ;
+```
+where `executable` is an executable program in the `PATH` and `argumentList` is a list of zero or more words.
+The connector is an optional way you can run multiple commands at once.
+If a command is followed by `;`, then the next command is always executed;
+if a command is followed by `&&`, then the next command is executed only if the first one succeeds;
+if a command is followed by `||`, then the next command is executed only if the first one fails.
+For example:
+```
+$ ls -a
+$ echo hello
+$ mkdir test
+```
+is equivalent to:
+```
+$ ls -a; echo hello; mkdir test
+```
+There should be no limit to the number of commands that can be chained together using these operators.
 
-3. Execute the command.  This will require using the system functions `fork`, `execvp`, and `wait`.
+3. Execute the command.
+This will require using the syscalls `fork`, `execvp`, and `wait`.
+(You can find a tutorial on using these systemcalls (written by previous cs100 students) in the [syscalls-tutorial.md](syscalls-tutorial.md) file located in this same directory.)
 
-4. If the command was followed by the `&` character, do not wait for the command to finish; immediately return to step 1.  Otherwise, wait until the command finishes before returning to step 1.
+4. You must have a special built in command of `exit` which exits your shell.
 
-5. You must have a special built in command of `exit` which exits your shell.
+5. Anything that appears after a `#` character should be considered a comment.
+For example, in the command `ls -lR /`, you would execute the program `/bin/ls` passing into it the parameters `-lR` and `/`.  
+But in the command `ls # -lR /`, you would execute `/bin/ls`, but you would not pass any parameters because they appear in the comment section.
 
-6. Anything that appears after a `#` character should be considered a comment.
+**IMPORTANT:** Most bash commands are actually executables located in `/bin`.  But some commands are special and are built in to bash.  The `cd` command is the most common example.  So while the `ls` command should "just work" for you, the `cd` command won't.  You'll be adding this feature in a later homework.
 
-For example, in the command `ls -lR /`, you would execute the program `/usr/bin/ls` passing into it the parameters `-lR` and `/`.  But in the command `ls # -lR /`, you would execute `/usr/bin/ls`, but you would not pass any parameters because they appear in the comment section.
-
-**IMPORTANT:** Most bash commands are actually executables located in `/usr/bin`.  But some commands are special and are built in to bash.  The `cd` command is the most common example.  So while the `ls` command should "just work" for you, the `cd` command won't.  You'll be adding this feature in a later homework.
-
-**HINT:** Pay careful attention to how you parse the command string the user enters.  There are many ways to mess this up and introduce bugs into your program.  You will be adding more parsing features in future assignments, so it will make your life much easier if you do it right the first time!
+**HINT:** Pay careful attention to how you parse the command string the user enters.  There are many ways to mess this up and introduce bugs into your program.  You will be adding more parsing features in future assignments, so it will make your life much easier if you do it right the first time!  I recommend using either the `strtok` function from the C standard libraries or the `Tokenizer` class provide in the [boost library]"(http://www.boost.org/doc/libs/1_36_0/libs/tokenizer/tokenizer.htm).  Students often don't do this section of the assignment well and end up having to redo all of assignment one in order to complete the future assignments.
 
 ### submission instructions
 
@@ -36,7 +57,13 @@ $ make
 $ bin/rshell
 ```
 
-You should ssh into `well.cs.ucr.edu` and run the above commands to verify that you've submitted your code successfully.  To ensure that your `hw1` tag is getting pushed to github correctly, you may have to run the command: `git push origin hw1` instead of just `git push`.  
+You should ssh into `well.cs.ucr.edu` and run the above commands to verify that you've submitted your code successfully.
+If you forget how to use git, two students from previous cs100 courses (Rashid Goshtasbi and Kyler Rynear) made [video tutorials on the git commands needed to submit your assignments](https://izbicki.me/blog/videoguide-for-github-vim-bash.html#tags) via github.
+
+**Do not wait to upload your assignment to github until the project due date.**
+You should be committing and uploading your assignment continuously.
+If you wait until the last day and can't figure out how to use git properly, then you will get a zero on the assignment.
+NO EXCEPTIONS.
 
 ### project structure
 
@@ -50,17 +77,29 @@ You must NOT have a directory called `bin` in the project; however, when the pro
 
 You must have a `LICENSE` file in your project.  You may select any open source license.  I recommend either GPL or BSD3.
 
-You must have a `README` file.  Calling the file `README.md` is also acceptable if you want to use markdown syntax.  This file should briefly summarize your project.  In particular, it must include a list of known bugs.  If you do not have any known bugs, then you probably have not sufficiently tested your code.  See the testing section below for more details.
+You must have a `README` file.  Calling the file `README.md` is also acceptable if you want to use markdown syntax.  This file should briefly summarize your project.  In particular, it must include a list of known bugs.  If you do not have any known bugs, then you probably have not sufficiently tested your code.  See the testing section below for more details.  I recommend watching [this video tutorial](https://izbicki.me/blog/videoguide-for-github-vim-bash.html#readme) on creating a good `README` file.
 
-You must have a directory called `tests`.  The directory will contain a file called `exec.script` that contains all of the test cases you tried.  You will generate the file using the `script` command, and it must be succinct (i.e. it cannot have unnecessary commands in it).  You should use comments in your script to document what you are testing.
+You must have a directory called `tests`.  The directory will contain a file called `exec.script` that contains all of the test cases you tried.  You will generate the file using the `script` command, and it must be succinct (i.e. it cannot have unnecessary commands in it).  You should use comments in your script to document what you are testing with each test case.  [This video tutorial](https://izbicki.me/blog/videoguide-for-github-vim-bash.html#script) explains how to use the `script` command.
+
+When you run `rschell` from within `script`, you must run it using the `valgrind` debugging tool.  See the [valgrind-tutorial](valgrind-tutorial) folder in this directory for a tutorial on how to find memory leaks using valgrind.
+
+### coding conventions
+
+Your code must not generate any warnings on compilation.
+
+Your code must pass the `cppchecker` linting tool with no warnings.
+
+Your final executable must have no memory leaks.
+
+Every time you run a syscall, you must check for an error condition.
+If an error occurs, then call `perror`.
+For examples on when, how, and why to use `perror`, see [this video tutorial](https://izbicki.me/blog/videoguide-for-github-vim-bash.html#perror).
 
 ### testing
 
 Proper testing is the most important part of developing software.  It therefore will have a very large impact on your grade. 
 
 It is not enough to simply show that your program works in some cases.  You must show that it works in every possible edge case.  **That means you must try to write test cases that will break your program!**  
-
-The code you are writing is complex, and complex programs always have bugs.  That's okay!  You can still get a 100% on this assignment if your program doesn't work for all edge cases.  But you must explicitly document the cases where it does and does not work. 
 
 **IMPORTANT:** If you do not include a particular test case that we think is important, then we will assume your program fails that test.  It doesn't matter if your program actually passes the test or not.  If you didn't test that case and document it, then your program fails!
 
@@ -72,28 +111,104 @@ You MAY NOT look at the source code of any other student.
 
 You MAY discuss with other students in general terms how to use the unix functions.
 
-You SHOULD talk to other students about test cases.  You are allowed to freely share ideas in this regard.
+You are ENCOURAGED to talk with other students about test cases.
+You are allowed to freely share ideas in this regard.
+
+You are ENCOURAGED to look at [bash's source code](https://www.gnu.org/software/bash/) for inspiration.
 
 ### grading
 
-20 points for setting up the project correctly
+30 points for executing commands 
 
-20 points for executing commands
+30 points for executing multiple commands on a single line with `;`, `&&`, and `||`
 
-20 points for properly handling commands with and without `&`
-
-20 points for the exit command
+20 points for the `exit` command
 
 20 points for comments
 
-**IMPORTANT:** Your test cases are not explicitly listed in the grading schedule above, but they are included implicitly in each category.  For example, if you get the background processes working correctly (`&`), but do not test and document that feature, then you will get zero credit in that category.
+<!--
+
+test cases for part 1 (each worth 5 pts):
+
+* run any command with no params
+
+* run any command with a small number of params
+
+* run any command with a large (>10) number of params
+
+* run both a command in `/bin` and a command in the current directory; for example, run rshell from within rshell
+
+* if command doesn't exist, must print appropriate error message
+
+* verify their parsing works by trying to add lots of spaces between parameters, e.g. `     ls      -a -l        -R`
+
+test cases for part 2: (total 35 points, so possibility of extra credit)
+
+* simple example showing two commands connected with each operator; they must show both the case where the first command succeds and the case where the first command fails. (15 pts)
+
+* an example showing lots of commands chained together (5 pts)
+
+* two examples mixing and matching different operators in one command (10pts)
+
+* parsing example showing that the operators can be right next to each command or they can have spaces separating them; e.g. `ls -l||cat        ; rm -rf *` (5pts)
+
+test cases for part 3: (5 pts each)
+
+* exit all by itself
+
+* exit with parameters passed to it (I don't care if it exits or prints an error)
+
+* exit as a parameter to something else shouldn't exit, e.g. `ls -l exit`
+
+* exit in a chain of commands should exit, e.g. `ls -l; exit`
+
+test cases for part 4:
+
+* comment within a command: `ls -l # this is a comment` (10 pts)
+
+* comment on a line by itself (5 pts)
+
+* comment where `#` touches something else: `ls -l# this is a comment here` (5 pts)
+
+other deductions:
+
+* if they have any binary files in their project, they get -20 points
+
+* if the LICENSE file is missing -5 pts
+
+* if the README is not relatively nice, they get -10 points
+
+* for every syscall that is not error checked they get -5 pts (grading script checks this automatically)
+
+* for every warning during compilation they get -5 pts
+
+* for every memory leak reported by valgrind -5 pts up to -20 points; if valgrind wasn't run then -20 points
+
+* for every error reported by cppchecker, -5 points
+
+extra credit:
+
+* if all of their prompts have the information, then +10pts
+
+* if they provide extra test cases that are particularly nice, they can get up to +10 points
+
+-->
+
+**IMPORTANT:** 
+Your project structure is not explicitly listed in the grading schedule above, but if you do not format your project correctly, you will lose points.
+
+**IMPORTANT:** 
+Your test cases are also not explicitly listed above, but they are included implicitly in each category.
+For example, if you get comments working correctly, but do not test and document that feature, then you will get zero credit for comments.
 
 #### extra credit
 
-Many shells display extra information in the prompt besides just a simple `$`.  For example, it is common to display the currently logged in user, and the hostname of the machine the user is logged into.  My username is `mizbi001`, and if I'm logged into the machine `alpha023`, then my prompt would look like:
-
+Many shells display extra information in the prompt besides just a simple `$`.
+For example, it is common to display the currently logged in user, and the hostname of the machine the user is logged into.
+My username is `mizbi001`, and if I'm logged into the machine `alpha023`, then my prompt would look like:
 ```
 mizbi001@alpha023$
 ```
-
-You can get up to 20 points of extra credit if your prompt prints this extra information.  You will need to lookup the functions `getlogin_r` and `gethostname`.  You must not hard code the username/hostname!
+You can get up to 10 points of extra credit if your prompt prints this extra information.
+You will need to lookup the functions `getlogin` and `gethostname`.
+You must not hard code the username or hostname!

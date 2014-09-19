@@ -2,7 +2,10 @@
 
 ### coding requirements
 
-Extend your `rshell` program so that it properly handles input redirection `<`, output redirection `>` and `>>`, and piping `|`.  This will require using the Unix functions `dup` and `pipe`.  You might find [this tutorial](http://www.eecis.udel.edu/~bmiller/cis459/2007s/readings/buff-overflow.html) on use these functions useful. Of course, you should also be consulting the man pages.
+Extend your `rshell` program so that it properly handles input redirection `<`, output redirection `>` and `>>`, and piping `|`.  
+This will require using the Unix functions `dup` and `pipe`.  
+The [syscalls tutorial from hw1](../hw1-rshell/syscalls-tutorial.md) also covers these functions.
+Of course, you should also be consulting the man pages.
 
 As an example, after this assignment, your program should be able to successfully handle the following command:
 
@@ -11,6 +14,9 @@ $ cat < existingInputFile | tr A-Z a-z | tee newOutputFile1 | tr a-z A-Z > newOu
 ```
 
 **IMPORTANT:** This is a necessary but not sufficient test case.  You must come up with others on your own.
+
+Bash has an extensive syntax for redirection, and you are not required to implement all of it.
+But if you're curious, see the [linux documentation project's bash io-redirection tutorial](http://www.tldp.org/LDP/abs/html/io-redirection.html) for details.
 
 ### submission instructions
 
@@ -46,7 +52,10 @@ You MAY NOT look at the source code of any other student.
 
 You MAY discuss with other students in general terms how to use the unix functions.
 
-You SHOULD talk to other students about test cases.  You are allowed to freely share ideas in this regard.
+You are ENCOURAGED to talk with other students about test cases.
+You are allowed to freely share ideas in this regard.
+
+You are ENCOURAGED to look at [bash's source code](https://www.gnu.org/software/bash/) for inspiration.
 
 ### grading
 
@@ -56,7 +65,7 @@ You SHOULD talk to other students about test cases.  You are allowed to freely s
 
 50 points for piping `|`
 
-#### extra credit
+#### extra credit 1
 
 The bash shell has an additional form of input redirection that let's you redirect from a string instead of a file.  For example, these two commands will give us the same output:
 
@@ -65,6 +74,14 @@ $ echo extra credit rocks | cat
 $ cat <<< "extra credit rocks"
 ```
 
-You can receive up to 25 points extra credit for implementing this functionality.
+You can receive up to 20 points extra credit for implementing this functionality.
 
-Bash has an extensive syntax for redirection that let's you specify which file descriptors to redirect from and to.  You can receive up 50 points extra credit (in addition to the 25 points above) for fully implementing this syntax.  See the linux documentation project's bash io-redirection tutorial for details on the syntax: http://www.tldp.org/LDP/abs/html/io-redirection.html
+#### extra credit 2
+
+The bash shell let's you perform output redirection on whatever file descriptors you want by placing a number before the `>` command.
+For example,
+```
+$ g++ main.cpp 2> errors
+```
+will direct stderr (which is where g++ prints error messages) to the file errors.
+If you implement this syntax for any file descriptor and both `>` and `>>`, you will get up to 20 points extra credit.
