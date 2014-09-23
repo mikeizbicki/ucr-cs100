@@ -13,6 +13,8 @@ classname="ucr-cs100"
 # tmp folder for all student repos
 tmpdir="gradetmp"
 
+# folder containing instructor pgp keys
+instructorinfo="instructorinfo"
 
 #######################################
 # misc display functions
@@ -69,7 +71,7 @@ function uploadgrades {
     for f in `find . -name grade`; do
         git add $f
     done
-    git commit -m "graded assignment using automatic scripts"
+    git commit -S -m "graded assignment using automatic scripts"
 
     echo "changes committed... uploading to github"
     git push origin
