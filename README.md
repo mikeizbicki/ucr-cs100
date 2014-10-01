@@ -18,7 +18,7 @@ It means:
 
 Hacking is a mindset.
 I can't force it on you---it's up to you to embrace it.
-For example, we'll be discussing many new tools in this course: a version control system called `git`, an editor called `vim`, a debugging tool called `gdb`, and we'll be going into quite a bit more depth on how to use `bash` and the `Linux` operating system.
+For example, we'll be discussing many new tools in this course: a version control system called `git`, an editor called `vim`, debugging tools called `gdb`, `valgrind`, and `cppcheck`, and we'll be going into quite a bit more depth on how to use the `bash` shell and the `Linux` operating system.
 All of these tools are very weird.
 Using them will make you uncomfortable.
 At first.
@@ -81,7 +81,7 @@ week | date | assignments | topics
 0 | Oct02 | | introduction; using vim
 1 | Oct07 | | version control with git
 1 | Oct09 | [all about unix](http://www.catb.org/esr/writings/taoup/html/context.html)] and [about common software licenses](http://www.catb.org/esr/writings/taoup/html/ch16s07.html) | version control with git
-2 | Oct14 | quiz | syscalls: managing processes (`fork`,`wait`,`exec`)
+2 | Oct14 | quiz | syscalls: managing processes (`fork`,`wait`,`exec`,`perror`)
 2 | Oct16 | [reading about documentation](http://www.catb.org/esr/writings/taoup/html/ch18s02.html) and [part II](http://www.catb.org/esr/writings/taoup/html/ch18s06.html) | syscalls: managing files (`open`,`close`,`read`,`write`)
 3 | Oct21 | hw1 | debugging tools (`gdb`)
 3 | Oct23 | | debugging tools (`valgrind`,`cppcheck`)

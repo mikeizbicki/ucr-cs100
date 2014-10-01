@@ -19,7 +19,7 @@ A good topic would be to provide similar video tutorials for another aspect of t
 A good topic would be to extend this tutorial to cover more of valgrind's features.
 A similar tutorial for `gdb` or `cppchecker` (or another tool) would also be nice.
 
-* [Daniel Ting and Katherine Gallaher's](../../../tutorials/syscalls).
+* [Daniel Ting and Katherine Gallaher's syscall tutorial](../../../tutorials/syscalls).
 A good topic would be to extend this tutorial to cover more syscalls.
 If you choose a topic like this, make sure it stays nice and cohesive and is not just a list of examples.
 
