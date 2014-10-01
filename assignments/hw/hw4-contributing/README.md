@@ -15,11 +15,11 @@ Here are some past assignments and some suggestions for extending their work:
 * [Rashid Goshtasbi and Kyler Rynear's video tutorials](https://izbicki.me/blog/videoguide-for-github-vim-bash.html).
 A good topic would be to provide similar video tutorials for another aspect of this class.
 
-* [William Coates's valgrind tutorial](../hw1-rshell/valgrind-tutorial).
+* [William Coates's valgrind tutorial](../../../tutorials/valgrind-tutorial).
 A good topic would be to extend this tutorial to cover more of valgrind's features.
 A similar tutorial for `gdb` or `cppchecker` (or another tool) would also be nice.
 
-* [Daniel Ting and Katherine Gallaher's](../hw1-rshell/syscalls-tutorial).
+* [Daniel Ting and Katherine Gallaher's](../../../syscalls).
 A good topic would be to extend this tutorial to cover more syscalls.
 If you choose a topic like this, make sure it stays nice and cohesive and is not just a list of examples.
 
@@ -59,7 +59,7 @@ Your writeup must be FUN and ENGAGING.
 Informal writing is encouraged.
 Imagine your favorite internet blog post and write like that.
 
-In particular, don't write long, drawn-out sentences that use sophisticated verbage because no one wants to read that, especially not cs100 students or random programmers on the internet be kind to us oh and use proper punctuation because reading this sentence totally sucks.  
+In particular, don't write long, drawn-out sentences that use sophisticated verbage because no one wants to read that, especially not cs100 students or random programmers on the internet be kind to us oh and use proper punctuation because reading this sentence totally sucks.
 Also, spll chck ur writing and dnt use txt spk b/c I hate tht 5|-|!7.
 
 I highly recommend you visit UCR's writing center.

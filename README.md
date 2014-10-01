@@ -96,7 +96,7 @@ week | date | assignments | topics
 8 | Nov27 | | THANKSGIVING
 9 | Dec02 | hw4 | syscalls: pthreads
 9 | Dec04 | [flaws with unix](http://www.catb.org/esr/writings/taoup/html/ch20s03.html) | syscalls: sockets
-10 | Dec11 | quiz | case study: hacking the email system
+10 | Dec11 | quiz | case study: hacking the email system and the [ioccc.org](http://ioccc.org)
 10 | Dec13 | hw5 | case study: stuxnet and heartbleed
 
 ### grades
