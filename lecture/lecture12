@@ -1,705 +1,0 @@
-Script started on Thu 14 Aug 2014 02:30:59 PM PDT
-]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ exitclearg++ pipe.cppp; ./a.out[A]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ [6Pclear
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pexit[Kexport [K[K[K[K[K[K[K[18P(reverse-i-search)`':[Ce': exit[1@x[C[C[Cp': expr 1 2o': history | head | grep expoort [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr': history | head | grep exp[1@o[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct': history | head | grep ex[1@p[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ': history | head | grep e[1@x[A]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ history | he[11@ad | grep e[C[C[C[C[C[C^C
-]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ history | g rep export
- 2055  export
- 2072  export PS1="\$"
- 2080  export PS1="\$"
- 2201  history | grep export
- 2202  export PS1="\$"
- 2220  export PS1="\$"
- 2314  export PS1="\$"
- 2414  export PS1="\$ "
- 2435  history | grep export
- 2436  export PS1="\$ "
- 2459  history | grep export
- 2460  export PS1="\$ "
- 2573  export PS1="\$ "
- 2695  export PS1="\$ "
- 3276  export PS1="\$ "
- 3305  export
- 3318  export PS1="\$ "
- 3400  export PS1="\$ "
- 3453  history | grep export
- 3454  grep export
- 3456  grep export
- 3457  grep export > out
- 3459  grep export > out
- 3461  grep -e "export"
- 3462  grep export
- 3463  grep -e "^export"
- 3464  grep -e "export$"
- 3466  grep -e "export$"
- 3467  grep -e "^export$"
- 3476  # search our history for when we're using export and when we're using cat
- 3477  export | cat
- 3479  history | grep cat | grep export
- 3488  export PS1="\$ "
- 3541  history | grep export
- 3542  grep export
- 3544  grep export
- 3545  grep export > out
- 3547  grep export > out
- 3549  grep -e "export"
- 3550  grep export
- 3551  grep -e "^export"
- 3552  grep -e "export$"
- 3554  grep -e "export$"
- 3555  grep -e "^export$"
- 3564  # search our history for when we're using export and when we're using cat
- 3565  export | cat
- 3567  history | grep cat | grep export
- 3577  history | grep export | grep cat
- 3578  history | grep cat | grep export
- 3579  history | grep export | tail
- 3580  history | tail | grep export 
- 3582  history | head | grep export 
- 3704  history | grep export
-]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ export PS1= "\$ "
-$ clear
-[H[2J$ [K$ cat | cat | cat 
-^C
-$ cat
-^Z
-[1]+  Stopped                 cat
-$ fg
-cat
-qwe\ 
-qwe
-
-
-qwe
-qwe
-adsad
-adsad
-^C
-$ clear
-[H[2J$ g++ signal.cpp [K; ./a.out 
-signal.cpp:3:21: fatal error: signals.h: No such file or directory
-compilation terminated.
-what'll happen?!
-$ g++ signal.cpp; ./a.out 
-^C
-$ g++ signal.cpp; ./a.out 
-^Z
-[1]+  Stopped                 ./a.out
-$ fg\[K
-./a.out
-^C
-$ [K$ [K$ fgg++ signal.cpp; ./a.out 
-did something
-^Cdid something
-^Cdid something
-^Cdid something
-^Cdid something
-^Cdid something
-^Cdid something
-^[^Cdid something
-^Z
-[1]+  Stopped                 ./a.out
-$ clar
-bash: clar: command not found
-$ clear
-[H[2J$ clear[1Par[C[Cg++ signal.cpp; ./a.out 
-signal.cpp:14:9: error: ‘int32’ does not name a type
-signal.cpp: In function ‘int main()’:
-signal.cpp:18:5: error: ‘int32’ was not declared in this scope
-signal.cpp:18:11: error: expected ‘;’ before ‘x’
-signal.cpp:19:5: error: ‘x’ was not declared in this scope
-did something
-^Cdid something
-^Z
-[2]+  Stopped                 ./a.out
-$ g++ signal.cpp; ./a.out [C[Cclear[K[C[Cg++ signal.cpp; ./a.out 
-x=5
-$ g++ signal.cpp; ./a.out 
-x=7
-$ g++ signal.cpp; ./a.out 
-did something
-$ g++ signal.cpp; ./a.out ^C
-$ g++ signal.cpp; ./a.out 
-signal.cpp: In function ‘void foo(funcptr)’:
-signal.cpp:17:7: error: too few arguments to function
-did something
-$ clear
-[H[2J$ clear[C[Cg++ signal.cpp; ./a.out 
-did something with 1
-did something with 2
-did something with 3
-$ [B^C
-$ g++ signal.cpp; ./a.out 
-$ g++ signal.cpp; ./a.out 
-$ g++ signal.cpp; ./a.out 
-^Cdid something with 2
-^Cdid something with 2
-^Cdid something with 2
-^Cdid something with 2
-^Cdid something with 2
-^Cdid something with 2
-^Z
-[3]+  Stopped                 ./a.out
-$ g++ signal.cpp; ./a.out 
-^Cdid something with 2
-^Cdid something with 2
-^Cdid something with 2
-^Z
-[4]+  Stopped                 ./a.out
-$ g++ signal.cpp; ./a.out 
-^Cdid something with 2
-^Z
-[5]+  Stopped                 ./a.out
-$ clear
-[H[2J$ clear[C[Cg++ signal.cpp; ./a.out 
-signal.cpp: In function ‘int main()’:
-signal.cpp:26:20: error: invalid conversion from ‘void (*)(int)’ to ‘funcptr {aka void (*)(int, char)}’ [-fpermissive]
-signal.cpp:17:6: error:   initializing argument 1 of ‘void foo(funcptr)’ [-fpermissive]
-^Cdid something with 2
-^Z
-[6]+  Stopped                 ./a.out
-$ g++ signal.cpp; ./a.out 
-did something with 1
-did something with 2
-did something with 3
-$ g++ signal.cpp; ./a.out 
-signal.cpp: In function ‘int main()’:
-signal.cpp:29:30: error: invalid conversion from ‘void (*)(int, char)’ to ‘__sighandler_t {aka void (*)(int)}’ [-fpermissive]
-In file included from signal.cpp:3:0:
-/usr/include/signal.h:101:23: error:   initializing argument 2 of ‘void (* signal(int, __sighandler_t))(int)’ [-fpermissive]
-did something with 1
-did something with 2
-did something with 3
-$ lear
-bash: lear: command not found
-$ lear[C[C[Kclear
-[H[2J$ ps -ef | grep a.out
-user       514 27756  1 14:54 pts/8    00:00:20 ./a.out
-user      3629 27756 31 15:08 pts/8    00:01:26 ./a.out
-user      4007 27756  7 15:09 pts/8    00:00:13 ./a.out
-user      4130 27756  4 15:09 pts/8    00:00:07 ./a.out
-user      4137 27756 13 15:10 pts/8    00:00:20 ./a.out
-user      4688 27756  0 15:12 pts/8    00:00:00 grep a.out
-user     15807 13774  0 13:20 pts/7    00:00:19 ./a.out
-user     32327 27756 13 14:51 pts/8    00:02:47 ./a.out
-$ kill [Kall a.out
-$ clear
-[H[2J$ g++ return.cpp 
-$ ./a.out 
-$ ./a.out [C[C[7@g++ return.cpp[C[K; ./a.out
-$ g++ return.cpp; ./a.out[1P ./a.out[C ./a.out& ./a.out& ./a.out[C[C[C[C[C
-hello!
-$ g++ return.cpp && ./a.out
-hello!
-$ g++ return.cpp && ./a.out
-return.cpp: In function ‘int main()’:
-return.cpp:7:5: error: expected ‘;’ before ‘return’
-$ g++ return.cpp && ./a.out[1P ./a.out[1P ./a.out[1P./a.out; ./a.out
-return.cpp: In function ‘int main()’:
-return.cpp:7:5: error: expected ‘;’ before ‘return’
-hello!
-$ ./seriouslydoesn\'texist [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ka.out && ./a.out 
-hello!
-hello!
-$ ./a.out && ./a.out [C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1@;
-hello!
-hello!
-$ clear
-[H[2J$ clear[C[C./a.out; ./a.out [2@ &&[C[C[C[C[C[C[C[C[C[C[Cg++ return.cpp; ./a.out
-hello!
-$ g++ return.cpp; ./a.out[C[Cclear[K[C[C./a.out; ./a.out [2@ &&[C[C[C[C[C[C[C[C[C
-hello!
-$ ./a.out && ./a.out [1P[1P[1P[1@;
-hello!
-hello!
-$ ./a.out; ./a.out [2@ &&[C[C[C[C[C[C[C[C[C[C[Cg++ return.cpp; ./a.out
-hello!
-$ g++ return.cpp; ./a.out[C[C[6P./a.out; ./a.out [2@ &&[C[C[C[C[C[C[C[C[C
-hello!
-hello!
-$ if ./a.out then; [K[K; then[C[C[C[C[C echo "hi"; echo "ts t"[K[A$ if ./a.out; then echo "hi"; echo "tst" [K[A$ if ./a.out; then echo "hi"; echo "tst"[K$ if ./a.out; then echo "hi"; echo "tst"[K$ if ./a.out; then echo "hi"; echo "tst"[K$ if ./a.out; then echo "hi"; echo "tst"[K$ if ./a.out; then echo "hi"; echo "tst"[K$ if ./a.out; then echo "hi"; echo "tst"l [K[K; fi
-hello!
-hi
-tst
-$ [K$ [K$ [K$ [K$ [K$ [K$ if ./a.out; then echo "hi"; echo "tst";; fi[A[K
-[K[A[C[Cls -l bashtest.sh 
--rw-r--r-- 1 user user 63 Aug 14 15:20 bashtest.sh
-$ ./bashtest.sh
-bash: ./bashtest.sh: Permission denied
-$ chod[K[K,pd u+x nas[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[1P[1P[1@m[1@o[C[C[C[C[C[Cbashtest.sh 
-$ chmod u+x bashtest.sh [C[C[9P./bashtest.sh
-hello!
-hi
-test
-$ clear
-[H[2J$ [ -f te
-testfile.old  texput.log
-$ [ -f testfile.old ] && ./a.out 
-hello!
-$ [ -f testfile.old ] && ./a.out [C[1@j[1@h[1@j[1@t[1@r[1@uy ] && ./a.out  [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct ] && ./a.out  [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr ] && ./a.out [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cu ] && ./a.out [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
-
-$ [ [K[Kman [ [K[Ktest [K[K[K[K[K[
-[?1049h[?1h=TEST(1)      User Commands     TEST(1)[m
-[m
-[1mNAME[0m[m
-       test  -  check  file  types and[m
-       compare values[m
-[m
-[1mSYNOPSIS[0m[m
-       [1mtest[0m [4mEXPRESSION[24m[m
-       [1mtest[0m[m
-[m
-       [1m[[0m [4mEXPRESSION[24m ][m
-       [1m[[0m ][m
-       [1m[[0m [4mOPTION[24m[m
-[m
-[1mDESCRIPTION[0m[m
-       Exit with the status determined[m
-       by EXPRESSION.[m
-[m
-       [1m--help[0m display  this  help  and[m
-              exit[m
-[m
-       [1m--version[0m[m
-              output version  informa‐[m
-              tion and exit[m
-[m
-       An  omitted EXPRESSION defaults[m
-       to false.   Otherwise,  EXPRES‐[m
-       SION  is true or false and sets[m
-[7mline 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       exit status.  It is one of:[m
-[7mline 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mline 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ( EXPRESSION )[m
-[7mline 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              EXPRESSION is true[m
-[7mline 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mline 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ! EXPRESSION[m
-[7mline 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              EXPRESSION is false[m
-[7mine 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mine 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       EXPRESSION1 [1m-a[0m EXPRESSION2[m
-[7mine 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              both   EXPRESSION1   and[m
-[7mine 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              EXPRESSION2 are true[m
-[7mine 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mine 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       EXPRESSION1 [1m-o[0m EXPRESSION2[m
-[7mine 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              either   EXPRESSION1  or[m
-[7mine 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              EXPRESSION2 is true[m
-[7mine 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mine 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-n[0m STRING[m
-[7mine 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the length of STRING  is[m
-[7mine 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              nonzero[m
-[7mine 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mine 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       STRING equivalent to [1m-n[0m STRING[m
-[7mine 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mine 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-z[0m STRING[m
-[7mine 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the  length of STRING is[m
-[7mine 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              zero[m
-[7mine 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mine 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       STRING1 = STRING2[m
-[7mine 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the strings are equal[m
-[7mine 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mine 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       STRING1 != STRING2[m
-[7mine 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the  strings   are   not[m
-[7mine 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              equal[m
-[7mine 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mine 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       INTEGER1 [1m-eq[0m INTEGER2[m
-[7mine 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              INTEGER1   is  equal  to[m
-[7mine 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              INTEGER2[m
-[7mine 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mine 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       INTEGER1 [1m-ge[0m INTEGER2[m
-[7mine 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              INTEGER1 is greater than[m
-[7mine 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              or equal to INTEGER2[m
-[7mine 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mine 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       INTEGER1 [1m-gt[0m INTEGER2[m
-[7mine 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              INTEGER1 is greater than[m
-[7mine 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              INTEGER2[m
-[7mine 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mine 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       INTEGER1 [1m-le[0m INTEGER2[m
-[7mine 49 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              INTEGER1 is less than or[m
-[7mine 50 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              equal to INTEGER2[m
-[7mine 51 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mine 52 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       INTEGER1 [1m-lt[0m INTEGER2[m
-[7mine 53 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              INTEGER1  is  less  than[m
-[7mine 54 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              INTEGER2[m
-[7mine 55 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mine 56 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       INTEGER1 [1m-ne[0m INTEGER2[m
-[7mine 57 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ man [[C[C[ -f testfile.oldjhjtruytru ] && ./a.ouut [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ] && ./a.out[1P [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ] && ./a.out [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ] && ./a.out  [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@1[C[1@ [1@-[1@g[1@t[C[1@ [1@1
-$ [ 1 -gt 1 ] && ./a.out [1P[1@2
-$ [ 1 -gt 2 ] && ./a.out [1P[1@3
-hello!
-$ mkdir bin
-$ mkdir bin
-mkdir: cannot create directory `bin': File exists
-$ mkdir bin[C[C[1@[[1@][1@ [1@&[1@&[1@ [1@ [1@-[1@d[1@ [1@b[1@i[1@n[1@ 
-mkdir: cannot create directory `bin': File exists
-$ [ -d bin ] && mkdir bin[C[C[C[C[C[C[C[1@![1@ 
-$ [ ! -d bin ] && mkdir bin[C[C[Krm -r
-rm: missing operand
-Try `rm --help' for more information.
-$ rm -r bin
-$ rm -r bin[K[C[C[ ! -d bin ] && mkdir bin
-$ ls bin
-$ clear
-[H[2J$ 1+2
-bash: 1+2: command not found
-$ ./bashtest.sh 
-1+2
-$ expr 1+ 2
-expr: syntax error
-$ expr 1+ 2[1@ 
-3
-$ expr 1 + 2[1P 2/ 2
-0
-$ echo $[] ]1] ]+] ]2]
-3
-$ ./bashtest.sh 
-test
-1+2
-$ ./bashtest.sh 
-$var
-1+2
-$ ./bashtest.sh 
-test
-1+2
-$ ./bashtest.sh 
-hello!
-1+2
-$ ./bashtest.sh 
-hello! hello! hello! hello!
-1+2
-$ clear
-[H[2J$ clear[C[C./bashtest.sh 
-hello! hello! hello! hello!
-1+2
-$ ./bashtest.sh 
-hello! hello! hello! hello!
-1+2
-$ ./bashtest.sh 
-./a.out ./a.out ./a.out ./a.out
-1+2
-$ ./bashtest.sh 
-hello! hello! hello! hello!
-1+2
-$ ./bashtest.sh 
-./bashtest.sh: line 3: var: command not found
-   
-1+2
-$ ./bashtest.sh 
-this is a test
-$ ./bashtest.sh 
-this
-is
-a
-test
-$ clear
-[H[2J$ clear[C[C./bashtest.sh 
-this is a test
-$ ./bashtest.sh 
-a.out
-bashtest.sh
-bin
-bitwise.cpp
-doesnotexist
-dup.cpp
-execv
-execv.cpp
-facebook
-fork.cpp
-gittest
-lecture
-lecture1
-lecture10
-lecture12
-lecture2
-lecture3
-lecture4
-lecture4b
-lecture5
-lecture8
-lecture9
-macroquiz.cpp
-main.c
-main.cpp
-Makefile
-out
-out2
-output
-pipe.cpp
-q
-qwerty
-rand
-random
-readwrite.cpp
-results
-return.cpp
-seriouslydoesn'texist
-signal.cpp
-stat.cpp
-stdin
-stdout
-stringtest.cpp
-testfile.old
-texput.log
-this has spaces
-valgrind.cpp
-$ clear
-[H[2J$ clear[C[C./bashtest.sh 
-a.out	       main.cpp
-bashtest.sh    Makefile
-bin	       out
-bitwise.cpp    out2
-doesnotexist   output
-dup.cpp        pipe.cpp
-execv	       q
-execv.cpp      qwerty
-facebook       rand
-fork.cpp       random
-gittest        readwrite.cpp
-lecture        results
-lecture1       return.cpp
-lecture10      seriouslydoesn'texist
-lecture12      signal.cpp
-lecture2       stat.cpp
-lecture3       stdin
-lecture4       stdout
-lecture4b      stringtest.cpp
-lecture5       testfile.old
-lecture8       texput.log
-lecture9       this has spaces
-macroquiz.cpp  valgrind.cpp
-main.c
-$ clear
-[H[2J$ clear[C[C./bashtest.sh -l -a
-a.out	       main.cpp
-bashtest.sh    Makefile
-bin	       out
-bitwise.cpp    out2
-doesnotexist   output
-dup.cpp        pipe.cpp
-execv	       q
-execv.cpp      qwerty
-facebook       rand
-fork.cpp       random
-gittest        readwrite.cpp
-lecture        results
-lecture1       return.cpp
-lecture10      seriouslydoesn'texist
-lecture12      signal.cpp
-lecture2       stat.cpp
-lecture3       stdin
-lecture4       stdout
-lecture4b      stringtest.cpp
-lecture5       testfile.old
-lecture8       texput.log
-lecture9       this has spaces
-macroquiz.cpp  valgrind.cpp
-main.c
-$ ./bashtest.sh -l -a
-total 26888
-drwxr-xr-x 5 user user     4096 Aug 14 15:43 .
-drwxr-xr-x 9 user user     4096 Aug 13 10:46 ..
--rwxr-xr-x 1 user user     8587 Aug 14 15:18 a.out
--rwxr--r-- 1 user user      201 Aug 14 15:43 bashtest.sh
--rw------- 1 user user    12288 Aug 14 15:43 .bashtest.sh.swp
-drwxr-xr-x 2 user user     4096 Aug 14 15:26 bin
--rw-r--r-- 1 user user     1542 Aug  6 15:53 bitwise.cpp
--rwxr-x--- 1 user user        5 Aug 12 14:56 doesnotexist
--rw-r--r-- 1 user user      778 Aug 13 15:06 dup.cpp
--rwxr-xr-x 1 user user     8767 Aug  4 14:56 execv
--rw-r--r-- 1 user user      704 Aug  4 15:27 execv.cpp
-drwxr-xr-x 3 user user     4096 Jul 29 15:47 facebook
--rw-r--r-- 1 user user      422 Aug  4 15:32 fork.cpp
-drwxr-xr-x 2 user user     4096 Jul 28 17:15 gittest
--rw-r--r-- 1 user user  3313664 Aug 12 15:50 lecture
--rw-r--r-- 1 user user      641 Jul 28 17:15 lecture1
--rw-r--r-- 1 user user     7251 Aug 14 14:30 lecture10
--rw-r--r-- 1 user user    16384 Aug 14 15:25 lecture12
--rw-r--r-- 1 user user    81137 Jul 29 15:47 lecture2
--rw-r--r-- 1 user user    90739 Jul 30 16:36 lecture3
--rw-r--r-- 1 user user  6762496 Jul 31 15:18 lecture4
--rw-r--r-- 1 user user 16579853 Jul 31 16:07 lecture4b
--rw-r--r-- 1 user user   124180 Aug  4 15:50 lecture5
--rw-r--r-- 1 user user   122880 Aug  7 15:17 lecture8
--rw-r--r-- 1 user user    24460 Aug 12 14:32 lecture9
--rw-r--r-- 1 user user      856 Aug 11 15:02 macroquiz.cpp
--rw-r--r-- 1 user user      164 Jul 31 14:34 main.c
--rw-r--r-- 1 user user      518 Jul 31 15:13 main.cpp
--rw-r--r-- 1 user user      151 Aug 14 15:29 Makefile
--rw-r--r-- 1 user user       12 Aug 12 15:11 out
--rw-r--r-- 1 user user        5 Aug 12 15:02 out2
--rw-r--r-- 1 user user        0 Jul 31 14:50 output
--rw-r--r-- 1 user user      757 Aug 14 14:30 pipe.cpp
--rw-r--r-- 1 user user        5 Aug 12 15:03 q
--rw-r--r-- 1 user user      299 Aug 13 14:39 qwerty
--rw-rwxr-- 1 user user     6374 Aug  5 17:21 rand
--rw-r--r-- 1 user user   193873 Aug 14 15:43 random
--rw-r--r-- 1 user user      443 Aug 12 15:02 readwrite.cpp
--rw-r--r-- 1 user user      380 Aug 13 15:04 results
--rw-r--r-- 1 user user      147 Aug 14 15:18 return.cpp
--rw------- 1 user user    12288 Aug 14 15:18 .return.cpp.swp
--rwx--x--- 1 user user        0 Aug 12 14:56 seriouslydoesn'texist
--rw-r--r-- 1 user user      462 Aug 14 15:10 signal.cpp
--rw-r--r-- 1 user user      596 Aug  7 15:14 stat.cpp
-lrwxrwxrwx 1 user user        6 Aug  7 15:18 stdin -> stdout
--rw-r--r-- 1 user user       72 Aug 13 09:55 stdout
--rw-r--r-- 1 user user      652 Aug  5 15:31 stringtest.cpp
--rw-r--r-- 1 user user        8 Jul 31 14:42 testfile.old
--rw-r--r-- 1 user user      724 Aug 11 15:02 texput.log
--rw-r--r-- 1 user user        0 Jul 30 15:24 this has spaces
--rw-r--r-- 1 user user      214 Aug  7 14:49 valgrind.cpp
--rw-r--r-- 1 user user      822 Aug  4 10:16 .vimrc
-$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ ./bashtest.sh -l -a
-total 26896
-drwxr-xr-x 5 user user     4096 Aug 14 15:43 .
-drwxr-xr-x 9 user user     4096 Aug 13 10:46 ..
--rwxr-xr-x 1 user user     8587 Aug 14 15:18 a.out
--rwxr--r-- 1 user user      201 Aug 14 15:43 bashtest.sh
--rw------- 1 user user    12288 Aug 14 15:43 .bashtest.sh.swp
-drwxr-xr-x 2 user user     4096 Aug 14 15:26 bin
--rw-r--r-- 1 user user     1542 Aug  6 15:53 bitwise.cpp
--rwxr-x--- 1 user user        5 Aug 12 14:56 doesnotexist
--rw-r--r-- 1 user user      778 Aug 13 15:06 dup.cpp
--rwxr-xr-x 1 user user     8767 Aug  4 14:56 execv
--rw-r--r-- 1 user user      704 Aug  4 15:27 execv.cpp
-drwxr-xr-x 3 user user     4096 Jul 29 15:47 facebook
--rw-r--r-- 1 user user      422 Aug  4 15:32 fork.cpp
-drwxr-xr-x 2 user user     4096 Jul 28 17:15 gittest
--rw-r--r-- 1 user user  3313664 Aug 12 15:50 lecture
--rw-r--r-- 1 user user      641 Jul 28 17:15 lecture1
--rw-r--r-- 1 user user     7251 Aug 14 14:30 lecture10
--rw-r--r-- 1 user user    20480 Aug 14 15:43 lecture12
--rw-r--r-- 1 user user    81137 Jul 29 15:47 lecture2
--rw-r--r-- 1 user user    90739 Jul 30 16:36 lecture3
--rw-r--r-- 1 user user  6762496 Jul 31 15:18 lecture4
--rw-r--r-- 1 user user 16579853 Jul 31 16:07 lecture4b
--rw-r--r-- 1 user user   124180 Aug  4 15:50 lecture5
--rw-r--r-- 1 user user   122880 Aug  7 15:17 lecture8
--rw-r--r-- 1 user user    24460 Aug 12 14:32 lecture9
--rw-r--r-- 1 user user      856 Aug 11 15:02 macroquiz.cpp
--rw-r--r-- 1 user user      164 Jul 31 14:34 main.c
--rw-r--r-- 1 user user      518 Jul 31 15:13 main.cpp
--rw-r--r-- 1 user user      151 Aug 14 15:29 Makefile
--rw-r--r-- 1 user user       12 Aug 12 15:11 out
--rw-r--r-- 1 user user        5 Aug 12 15:02 out2
--rw-r--r-- 1 user user        0 Jul 31 14:50 output
--rw-r--r-- 1 user user      757 Aug 14 14:30 pipe.cpp
--rw-r--r-- 1 user user        5 Aug 12 15:03 q
--rw-r--r-- 1 user user      299 Aug 13 14:39 qwerty
--rw-rwxr-- 1 user user     6374 Aug  5 17:21 rand
--rw-r--r-- 1 user user   193937 Aug 14 15:43 random
--rw-r--r-- 1 user user      443 Aug 12 15:02 readwrite.cpp
--rw-r--r-- 1 user user      380 Aug 13 15:04 results
--rw-r--r-- 1 user user      147 Aug 14 15:18 return.cpp
--rw------- 1 user user    12288 Aug 14 15:18 .return.cpp.swp
--rwx--x--- 1 user user        0 Aug 12 14:56 seriouslydoesn'texist
--rw-r--r-- 1 user user      462 Aug 14 15:10 signal.cpp
--rw-r--r-- 1 user user      596 Aug  7 15:14 stat.cpp
-lrwxrwxrwx 1 user user        6 Aug  7 15:18 stdin -> stdout
--rw-r--r-- 1 user user       72 Aug 13 09:55 stdout
--rw-r--r-- 1 user user      652 Aug  5 15:31 stringtest.cpp
--rw-r--r-- 1 user user        8 Jul 31 14:42 testfile.old
--rw-r--r-- 1 user user      724 Aug 11 15:02 texput.log
--rw-r--r-- 1 user user        0 Jul 30 15:24 this has spaces
--rw-r--r-- 1 user user      214 Aug  7 14:49 valgrind.cpp
--rw-r--r-- 1 user user      822 Aug  4 10:16 .vimrc
-$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ ./a.out 
-hello!
-$ ./a.out < testfile.old 
-hello!
-$ cat < testfile.old 
-goodbye
-$ cat teS[Kstfile.old 
-goodbye
-$ gre[K[K[Khistory > out
-$ greo [K[Kp export <out out
- 2055  export
- 2072  export PS1="\$"
- 2080  export PS1="\$"
- 2201  history | grep export
- 2202  export PS1="\$"
- 2220  export PS1="\$"
- 2314  export PS1="\$"
- 2414  export PS1="\$ "
- 2435  history | grep export
- 2436  export PS1="\$ "
- 2459  history | grep export
- 2460  export PS1="\$ "
- 2573  export PS1="\$ "
- 2695  export PS1="\$ "
- 3276  export PS1="\$ "
- 3305  export
- 3318  export PS1="\$ "
- 3400  export PS1="\$ "
- 3453  history | grep export
- 3454  grep export
- 3456  grep export
- 3457  grep export > out
- 3459  grep export > out
- 3461  grep -e "export"
- 3462  grep export
- 3463  grep -e "^export"
- 3464  grep -e "export$"
- 3466  grep -e "export$"
- 3467  grep -e "^export$"
- 3476  # search our history for when we're using export and when we're using cat
- 3477  export | cat
- 3479  history | grep cat | grep export
- 3488  export PS1="\$ "
- 3541  history | grep export
- 3542  grep export
- 3544  grep export
- 3545  grep export > out
- 3547  grep export > out
- 3549  grep -e "export"
- 3550  grep export
- 3551  grep -e "^export"
- 3552  grep -e "export$"
- 3554  grep -e "export$"
- 3555  grep -e "^export$"
- 3564  # search our history for when we're using export and when we're using cat
- 3565  export | cat
- 3567  history | grep cat | grep export
- 3577  history | grep export | grep cat
- 3578  history | grep cat | grep export
- 3579  history | grep export | tail
- 3580  history | tail | grep export 
- 3582  history | head | grep export 
- 3704  history | grep export
- 3705  export PS1="\$ "
-$ grep test  <<< "the"
-$ grep test  <<< "the" "t"e"s"t"
-the test
-$ exit
-exit
-There are stopped jobs.
-$ ps -ef | grep a.out
-user       514 27756  0 14:54 pts/8    00:00:20 ./a.out
-user      3629 27756  3 15:08 pts/8    00:01:26 ./a.out
-user      4007 27756  0 15:09 pts/8    00:00:13 ./a.out
-user      4130 27756  0 15:09 pts/8    00:00:07 ./a.out
-user      4137 27756  0 15:10 pts/8    00:00:20 ./a.out
-user     13286 27756  0 15:51 pts/8    00:00:00 grep a.out
-user     15807 13774  0 13:20 pts/7    00:00:19 ./a.out
-user     32327 27756  4 14:51 pts/8    00:02:47 ./a.out
-$ killall a.out
-$ fg
-./a.out
-Terminated
-$ fg
-./a.out
-Terminated
-$ fg
-./a.out
-Terminated
-$ fg
-./a.out
-Terminated
-$ fg
-./a.out
-Terminated
-$ fg
-./a.out
-Terminated
-$ fg
-bash: fg: current: no such job
-$ exit
-exit
-
-Script done on Thu 14 Aug 2014 03:51:12 PM PDT

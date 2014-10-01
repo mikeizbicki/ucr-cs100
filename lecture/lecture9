@@ -1,682 +1,0 @@
-Script started on Mon 11 Aug 2014 02:32:29 PM PDT
-]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ export PS1="\$ "
-$ clear
-[H[2J$ [K$ g++ ;[K
-a.out               .macroquiz.cpp.swp
-bitwise.cpp         main.c
-execv               main.cpp
-execv.cpp           Makefile
-facebook/           output
-fork.cpp            rand
-gittest/            stat.cpp
-lecture1            stdin
-lecture2            stdout
-lecture3            stringtest.cpp
-lecture4            test
-lecture4b           testfile.old
-lecture5            this has spaces
-lecture8            valgrind.cpp
-lecture9            .vimrc
-macroquiz.cpp       
-$ g++ si[K[Ki[Kmi[K[K[C[C[C[C[C[Cmacroquiz.cpp 
-$ ./a.out 
-char: 1
-$ ./a.out [C[C[10@g++ macroquiz.cpp[C
-$ g++ macroquiz.cpp [C[C[10P./a.out[C
-char: 1
-$ ./a.out [C[C[10@g++ macroquiz.cpp[C
-macroquiz.cpp: In function ‘int main()’:
-macroquiz.cpp:8:5: error: expected primary-expression before ‘char’
-macroquiz.cpp:8:5: error: expected ‘;’ before ‘char’
-macroquiz.cpp:9:13: error: expected primary-expression before ‘char’
-macroquiz.cpp:9:13: error: expected ‘;’ before ‘char’
-$ g++ macroquiz.cpp 
-$ [Ag++ macroquiz.cpp 
-$ g++ macroquiz.cpp [C[C[10P./a.out[C
-char1
-char: 1
-$ clear
-[H[2J$ clear[C[C./a.out [C[C[10@g++ macroquiz.cpp[C
-$ g++ macroquiz.cpp [C[Cclear[K[C[C./a.out 
-char: 1
-char: 1
-$ ./a.out [C[C[10@g++ macroquiz.cpp[C
-$ g++ macroquiz.cpp [C[C[10P./a.out[C
-char: 1
-char*: 8
-char**: 8
-char: 1
-$ ./a.out [C[C[10@g++ macroquiz.cpp[C
-macroquiz.cpp: In function ‘int main()’:
-macroquiz.cpp:9:5: error: ‘X’ was not declared in this scope
-macroquiz.cpp:9:5: error: expected primary-expression before ‘)’ token
-macroquiz.cpp:9:5: error: expected primary-expression before ‘)’ token
-$ g++ macroquiz.cpp 
-$ g++ macroquiz.cpp [C[C[10P./a.out[C
-char: 1
-char*: 8
-char**: 8
-char: 1
-$ ./a.out [C[C[10@g++ macroquiz.cpp[C[C[C[10P./a.out[C[C[C[10@g++ macroquiz.cpp[C[C[C[10P./a.out[C[C[C[10@g++ macroquiz.cpp[C
-$ g++ macroquiz.cpp [C[C[10P./a.out[C
-char: 1
-char*: 8
-char**: 8
-unsigned char: 1
-unsigned char*: 8
-unsigned char**: 8
-char: 1
-$ ./a.out [C[C[10@g++ macroquiz.cpp[C
-macroquiz.cpp:6:5: error: ‘cout’ does not name a type
-macroquiz.cpp:7:5: error: ‘cout’ does not name a type
-macroquiz.cpp:8:5: error: ‘cout’ does not name a type
-$ g++ macroquiz.cpp [C[C[Kclae[K[Kear
-[H[2J$ clear[C[Cg++ macroquiz.cpp 
-$ g++ macroquiz.cpp [C[Cclear[K[C[Cg++ macroquiz.cpp [C[C[10P./a.out[C
-char: 1
-char*: 8
-char**: 8
-unsigned char: 1
-unsigned char*: 8
-unsigned char**: 8
-char: 1
-$ ./a.out [C[C[10@g++ macroquiz.cpp[C
-$ g++ macroquiz.cpp [C[C[10P./a.out[C
-char: 1
-char*: 8
-char**: 8
-
-unsigned char: 1
-unsigned char*: 8
-unsigned char**: 8
-
-short: 2
-short*: 8
-short**: 8
-
-unsigned short: 2
-unsigned short*: 8
-unsigned short**: 8
-
-int: 4
-int*: 8
-int**: 8
-
-unsigned int: 4
-unsigned int*: 8
-unsigned int**: 8
-
-long: 8
-long*: 8
-long**: 8
-
-unsigned long: 8
-unsigned long*: 8
-unsigned long**: 8
-
-long long: 8
-long long*: 8
-long long**: 8
-
-unsigned long long: 8
-unsigned long long*: 8
-unsigned long long**: 8
-
-char: 1
-$ clear
-[H[2J$ clear[C[C./a.out [C[C[10@g++ macroquiz.cpp[C
-macroquiz.cpp: In function ‘int main()’:
-macroquiz.cpp:23:5: error: ‘signed’ or ‘unsigned’ invalid for ‘type name’
-macroquiz.cpp:23:5: error: ‘signed’ or ‘unsigned’ invalid for ‘type name’
-macroquiz.cpp:23:5: error: ‘signed’ or ‘unsigned’ invalid for ‘type name’
-macroquiz.cpp:24:5: error: ‘signed’ or ‘unsigned’ invalid for ‘type name’
-macroquiz.cpp:24:5: error: ‘signed’ or ‘unsigned’ invalid for ‘type name’
-macroquiz.cpp:24:5: error: ‘signed’ or ‘unsigned’ invalid for ‘type name’
-$ g++ macroquiz.cpp 
-$ g++ macroquiz.cpp [C[Cclear[K[C[C./a.out 
-char: 1
-char*: 8
-char**: 8
-
-unsigned char: 1
-unsigned char*: 8
-unsigned char**: 8
-
-short: 2
-short*: 8
-short**: 8
-
-unsigned short: 2
-unsigned short*: 8
-unsigned short**: 8
-
-int: 4
-int*: 8
-int**: 8
-
-unsigned int: 4
-unsigned int*: 8
-unsigned int**: 8
-
-long: 8
-long*: 8
-long**: 8
-
-unsigned long: 8
-unsigned long*: 8
-unsigned long**: 8
-
-long long: 8
-long long*: 8
-long long**: 8
-
-unsigned long long: 8
-unsigned long long*: 8
-unsigned long long**: 8
-
-float: 4
-float*: 8
-float**: 8
-
-double: 8
-double*: 8
-double**: 8
-
-char: 1
-$ clear
-[H[2J$ clear[C[C./a.out [C[C[10@g++ macroquiz.cpp[C
-$ g++ macroquiz.cpp [C[Cclear[K[C[C./a.out 
-char: 1
-char*: 8
-char**: 8
-char[10]: 10
-char[100]: 100
-
-unsigned char: 1
-unsigned char*: 8
-unsigned char**: 8
-unsigned char[10]: 10
-unsigned char[100]: 100
-
-short: 2
-short*: 8
-short**: 8
-short[10]: 20
-short[100]: 200
-
-unsigned short: 2
-unsigned short*: 8
-unsigned short**: 8
-unsigned short[10]: 20
-unsigned short[100]: 200
-
-int: 4
-int*: 8
-int**: 8
-int[10]: 40
-int[100]: 400
-
-unsigned int: 4
-unsigned int*: 8
-unsigned int**: 8
-unsigned int[10]: 40
-unsigned int[100]: 400
-
-long: 8
-long*: 8
-long**: 8
-long[10]: 80
-long[100]: 800
-
-unsigned long: 8
-unsigned long*: 8
-unsigned long**: 8
-unsigned long[10]: 80
-unsigned long[100]: 800
-
-long long: 8
-long long*: 8
-long long**: 8
-long long[10]: 80
-long long[100]: 800
-
-unsigned long long: 8
-unsigned long long*: 8
-unsigned long long**: 8
-unsigned long long[10]: 80
-unsigned long long[100]: 800
-
-float: 4
-float*: 8
-float**: 8
-float[10]: 40
-float[100]: 400
-
-double: 8
-double*: 8
-double**: 8
-double[10]: 80
-double[100]: 800
-
-char: 1
-$ w==[K[K[Kclear
-[H[2J$ clear[C[C./a.out [C[C[10@g++ macroquiz.cpp[C
-macroquiz.cpp: In function ‘int main()’:
-macroquiz.cpp:17:5: error: invalid application of ‘sizeof’ to incomplete type ‘char []’
-macroquiz.cpp:17:5: error: invalid application of ‘sizeof’ to incomplete type ‘unsigned char []’
-macroquiz.cpp:18:5: error: invalid application of ‘sizeof’ to incomplete type ‘short int []’
-macroquiz.cpp:18:5: error: invalid application of ‘sizeof’ to incomplete type ‘short unsigned int []’
-macroquiz.cpp:19:5: error: invalid application of ‘sizeof’ to incomplete type ‘int []’
-macroquiz.cpp:19:5: error: invalid application of ‘sizeof’ to incomplete type ‘unsigned int []’
-macroquiz.cpp:20:5: error: invalid application of ‘sizeof’ to incomplete type ‘long int []’
-macroquiz.cpp:20:5: error: invalid application of ‘sizeof’ to incomplete type ‘long unsigned int []’
-macroquiz.cpp:21:5: error: invalid application of ‘sizeof’ to incomplete type ‘long long int []’
-macroquiz.cpp:21:5: error: invalid application of ‘sizeof’ to incomplete type ‘long long unsigned int []’
-macroquiz.cpp:23:5: error: invalid application of ‘sizeof’ to incomplete type ‘float []’
-macroquiz.cpp:24:5: error: invalid application of ‘sizeof’ to incomplete type ‘double []’
-$ g++ macroquiz.cpp [C[Cclear[K
-[H[2J$ g++ macroquiz.cpp 
-macroquiz.cpp:14:21: error: expected ‘;’ after struct definition
-$ g++ macroquiz.cpp 
-$ g++ macroquiz.cpp [C[Cclear[K[C[Cg++ macroquiz.cpp [C[Cclear[K[C[C./a.out 
-s1: 1
-s1*: 8
-
-char: 1
-$ ./a.out [C[C[10@g++ macroquiz.cpp[C
-$ g++ macroquiz.cpp [C[C[10P./a.out[C
-s1: 1
-s1*: 8
-
-char: 1
-$ ./a.out [C[C[10@g++ macroquiz.cpp[C
-$ g++ macroquiz.cpp [C[C[10P./a.out[C
-s1: 1
-s1*: 8
-
-s2: 2
-s2*: 8
-
-char: 1
-$ ./a.out [C[C[10@g++ macroquiz.cpp[C
-$ g++ macroquiz.cpp [C[C[10P./a.out[C
-s1: 1
-s1*: 8
-
-s2: 2
-s2*: 8
-
-s3: 8
-s3*: 8
-
-char: 1
-$ clear
-[H[2J$ clear[C[C./a.out [C[C[10@g++ macroquiz.cpp[C
-$ g++ macroquiz.cpp [C[Cclear[K[C[C./a.out 
-s1: 1
-s1*: 8
-
-s2: 2
-s2*: 8
-
-s3: 8
-s3*: 8
-
-s4: 12
-s4*: 8
-
-char: 1
-$ ./a.out [C[C[10@g++ macroquiz.cpp[C
-$ ./a.out 
-s1: 1
-s1*: 8
-
-s2: 2
-s2*: 8
-
-s3: 8
-s3*: 8
-
-s4: 24
-s4*: 8
-
-char: 1
-$ ./a.out [C[C[10@g++ macroquiz.cpp[C
-$ g++ macroquiz.cpp [C[C[10P./a.out[C[C[C[10@g++ macroquiz.cpp[C[C[C[10P./a.out[C
-s1: 1
-s1*: 8
-
-s2: 2
-s2*: 8
-
-s3: 8
-s3*: 8
-
-s4: 8
-s4*: 8
-
-char: 1
-$ clear
-[H[2J$ clear[C[C./a.out [C[C[10@g++ macroquiz.cpp[C
-$ g++ macroquiz.cpp [C[Cclear[K[C[C./a.out 
-s1: 1
-s1*: 8
-
-s2: 2
-s2*: 8
-
-s3: 8
-s3*: 8
-
-s4: 12
-s4*: 8
-
-s5: 8
-s5*: 8
-
-char: 1
-$ ls -l
-total 23328
--rwxr-xr-x 1 user user     9867 Aug 11 15:02 [0m[01;32ma.out[0m
--rw-r--r-- 1 user user     1542 Aug  6 15:53 bitwise.cpp
--rwxr-xr-x 1 user user     8767 Aug  4 14:56 [01;32mexecv[0m
--rw-r--r-- 1 user user      704 Aug  4 15:27 execv.cpp
-drwxr-xr-x 3 user user     4096 Jul 29 15:47 [01;34mfacebook[0m
--rw-r--r-- 1 user user      422 Aug  4 15:32 fork.cpp
-drwxr-xr-x 2 user user     4096 Jul 28 17:15 [01;34mgittest[0m
--rw-r--r-- 1 user user      641 Jul 28 17:15 lecture1
--rw-r--r-- 1 user user    81137 Jul 29 15:47 lecture2
--rw-r--r-- 1 user user    90739 Jul 30 16:36 lecture3
--rw-r--r-- 1 user user  6762496 Jul 31 15:18 lecture4
--rw-r--r-- 1 user user 16579853 Jul 31 16:07 lecture4b
--rw-r--r-- 1 user user   124180 Aug  4 15:50 lecture5
--rw-r--r-- 1 user user   122880 Aug  7 15:17 lecture8
--rw-r--r-- 1 user user     8192 Aug 11 15:00 lecture9
--rw-r--r-- 1 user user      856 Aug 11 15:02 macroquiz.cpp
--rw-r--r-- 1 user user      164 Jul 31 14:34 main.c
--rw-r--r-- 1 user user      518 Jul 31 15:13 main.cpp
--rw-r--r-- 1 user user       96 Aug  5 15:48 Makefile
--rw-r--r-- 1 user user        0 Jul 31 14:50 output
--rw-rwxr-- 1 user user     6374 Aug  5 17:21 [01;32mrand[0m
--rw-r--r-- 1 user user      596 Aug  7 15:14 stat.cpp
-lrwxrwxrwx 1 user user        6 Aug  7 15:18 [01;36mstdin[0m -> stdout
--rw-r--r-- 1 user user       20 Aug  7 15:22 stdout
--rw-r--r-- 1 user user      652 Aug  5 15:31 stringtest.cpp
--rw-r--r-- 1 user user      299 Jul 29 14:32 test
--rw-r--r-- 1 user user        8 Jul 31 14:42 testfile.old
--rw-r--r-- 1 user user      724 Aug 11 15:02 texput.log
--rw-r--r-- 1 user user        0 Jul 30 15:24 this has spaces
--rw-r--r-- 1 user user      214 Aug  7 14:49 valgrind.cpp
-$ whoami
-user
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ whoami[K[K[K[K[K[Kclear
-[H[2J$ whoami --help
-Usage: whoami [OPTION]...
-Print the user name associated with the current effective user ID.
-Same as id -un.
-
-      --help     display this help and exit
-      --version  output version information and exit
-
-Report whoami bugs to bug-coreutils@gnu.org
-GNU coreutils home page: <http://www.gnu.org/software/coreutils/>
-General help using GNU software: <http://www.gnu.org/gethelp/>
-For complete documentation, run: info coreutils 'whoami invocation'
-$ whoami --help[C[C[8Pclear[C[Cwhoami --help[K[K[K[K[Kun
-whoami: invalid option -- 'u'
-Try `whoami --help' for more information.
-$ whoami -un[1Pn
-whoami: invalid option -- 'n'
-Try `whoami --help' for more information.
-$ man whoami
-[?1049h[?1h=WHOAMI(1)           User Commands           WHOAMI(1)[m
-[m
-[1mNAME[0m[m
-       whoami - print effective userid[m
-[m
-[1mSYNOPSIS[0m[m
-       [1mwhoami[0m [[4mOPTION[24m]...[m
-[m
-[1mDESCRIPTION[0m[m
-       Print  the  user name associated with the cur‐[m
-       rent effective user ID.  Same as id [1m-un[0m.[m
-[m
-       [1m--help[0m display this help and exit[m
-[m
-       [1m--version[0m[m
-              output version information and exit[m
-[m
-[1mAUTHOR[0m[m
-       Written by Richard Mlynarik.[m
-[m
-[1mREPORTING[0m [1mBUGS[0m[m
-       Report whoami bugs to bug-coreutils@gnu.org[m
-       GNU        coreutils        home         page:[m
-       <http://www.gnu.org/software/coreutils/>[m
-       General     help     using    GNU    software:[m
-       <http://www.gnu.org/gethelp/>[m
-       Report    whoami    translation    bugs     to[m
-       <http://translationproject.org/team/>[m
-[m
-[1mCOPYRIGHT[0m[m
-       Copyright  ©  2011  Free  Software Foundation,[m
-       Inc.  License GPLv3+: GNU  GPL  version  3  or[m
-       later <http://gnu.org/licenses/gpl.html>.[m
-       This  is free software: you are free to change[m
-       and redistribute it.  There is NO WARRANTY, to[m
-       the extent permitted by law.[m
-[m
-[1mSEE[0m [1mALSO[0m[m
-       The  full  documentation  for  [1mwhoami[0m is main‐[m
-[7mpage whoami(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ clear
-[H[2J$ ls -l
-total 23332
--rwxr-xr-x 1 user user     9867 Aug 11 15:02 [0m[01;32ma.out[0m
--rw-r--r-- 1 user user     1542 Aug  6 15:53 bitwise.cpp
--rwxr-xr-x 1 user user     8767 Aug  4 14:56 [01;32mexecv[0m
--rw-r--r-- 1 user user      704 Aug  4 15:27 execv.cpp
-drwxr-xr-x 3 user user     4096 Jul 29 15:47 [01;34mfacebook[0m
--rw-r--r-- 1 user user      422 Aug  4 15:32 fork.cpp
-drwxr-xr-x 2 user user     4096 Jul 28 17:15 [01;34mgittest[0m
--rw-r--r-- 1 user user      641 Jul 28 17:15 lecture1
--rw-r--r-- 1 user user    81137 Jul 29 15:47 lecture2
--rw-r--r-- 1 user user    90739 Jul 30 16:36 lecture3
--rw-r--r-- 1 user user  6762496 Jul 31 15:18 lecture4
--rw-r--r-- 1 user user 16579853 Jul 31 16:07 lecture4b
--rw-r--r-- 1 user user   124180 Aug  4 15:50 lecture5
--rw-r--r-- 1 user user   122880 Aug  7 15:17 lecture8
--rw-r--r-- 1 user user    12288 Aug 11 15:12 lecture9
--rw-r--r-- 1 user user      856 Aug 11 15:02 macroquiz.cpp
--rw-r--r-- 1 user user      164 Jul 31 14:34 main.c
--rw-r--r-- 1 user user      518 Jul 31 15:13 main.cpp
--rw-r--r-- 1 user user       96 Aug  5 15:48 Makefile
--rw-r--r-- 1 user user        0 Jul 31 14:50 output
--rw-rwxr-- 1 user user     6374 Aug  5 17:21 [01;32mrand[0m
--rw-r--r-- 1 user user      596 Aug  7 15:14 stat.cpp
-lrwxrwxrwx 1 user user        6 Aug  7 15:18 [01;36mstdin[0m -> stdout
--rw-r--r-- 1 user user       20 Aug  7 15:22 stdout
--rw-r--r-- 1 user user      652 Aug  5 15:31 stringtest.cpp
--rw-r--r-- 1 user user      299 Jul 29 14:32 test
--rw-r--r-- 1 user user        8 Jul 31 14:42 testfile.old
--rw-r--r-- 1 user user      724 Aug 11 15:02 texput.log
--rw-r--r-- 1 user user        0 Jul 30 15:24 this has spaces
--rw-r--r-- 1 user user      214 Aug  7 14:49 valgrind.cpp
-$ id
-uid=1000(user) gid=1000(user) groups=1000(user),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),105(scanner),110(bluetooth),112(netdev)
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ clear
-[H[2J$ cl
-bash: cl: command not found
-$ ls
-[0m[01;32ma.out[0m        lecture2       main.c    stringtest.cpp
-bitwise.cpp  lecture3       main.cpp  test
-[01;32mexecv[0m        lecture4       Makefile  testfile.old
-execv.cpp    lecture4b      output    texput.log
-[01;34mfacebook[0m     lecture5       [01;32mrand[0m      this has spaces
-fork.cpp     lecture8       stat.cpp  valgrind.cpp
-[01;34mgittest[0m      lecture9       [01;36mstdin[0m
-lecture1     macroquiz.cpp  stdout
-$ ls -l
-total 23332
--rwxr-xr-x 1 user user     9867 Aug 11 15:02 [0m[01;32ma.out[0m
--rw-r--r-- 1 user user     1542 Aug  6 15:53 bitwise.cpp
--rwxr-xr-x 1 user user     8767 Aug  4 14:56 [01;32mexecv[0m
--rw-r--r-- 1 user user      704 Aug  4 15:27 execv.cpp
-drwxr-xr-x 3 user user     4096 Jul 29 15:47 [01;34mfacebook[0m
--rw-r--r-- 1 user user      422 Aug  4 15:32 fork.cpp
-drwxr-xr-x 2 user user     4096 Jul 28 17:15 [01;34mgittest[0m
--rw-r--r-- 1 user user      641 Jul 28 17:15 lecture1
--rw-r--r-- 1 user user    81137 Jul 29 15:47 lecture2
--rw-r--r-- 1 user user    90739 Jul 30 16:36 lecture3
--rw-r--r-- 1 user user  6762496 Jul 31 15:18 lecture4
--rw-r--r-- 1 user user 16579853 Jul 31 16:07 lecture4b
--rw-r--r-- 1 user user   124180 Aug  4 15:50 lecture5
--rw-r--r-- 1 user user   122880 Aug  7 15:17 lecture8
--rw-r--r-- 1 user user    12288 Aug 11 15:12 lecture9
--rw-r--r-- 1 user user      856 Aug 11 15:02 macroquiz.cpp
--rw-r--r-- 1 user user      164 Jul 31 14:34 main.c
--rw-r--r-- 1 user user      518 Jul 31 15:13 main.cpp
--rw-r--r-- 1 user user       96 Aug  5 15:48 Makefile
--rw-r--r-- 1 user user        0 Jul 31 14:50 output
--rw-rwxr-- 1 user user     6374 Aug  5 17:21 [01;32mrand[0m
--rw-r--r-- 1 user user      596 Aug  7 15:14 stat.cpp
-lrwxrwxrwx 1 user user        6 Aug  7 15:18 [01;36mstdin[0m -> stdout
--rw-r--r-- 1 user user       20 Aug  7 15:22 stdout
--rw-r--r-- 1 user user      652 Aug  5 15:31 stringtest.cpp
--rw-r--r-- 1 user user      299 Jul 29 14:32 test
--rw-r--r-- 1 user user        8 Jul 31 14:42 testfile.old
--rw-r--r-- 1 user user      724 Aug 11 15:02 texput.log
--rw-r--r-- 1 user user        0 Jul 30 15:24 this has spaces
--rw-r--r-- 1 user user      214 Aug  7 14:49 valgrind.cpp
-$ clear
-[H[2J$ ls
-[0m[01;32ma.out[0m        lecture2       main.c    stringtest.cpp
-bitwise.cpp  lecture3       main.cpp  test
-[01;32mexecv[0m        lecture4       Makefile  testfile.old
-execv.cpp    lecture4b      output    texput.log
-[01;34mfacebook[0m     lecture5       [01;32mrand[0m      this has spaces
-fork.cpp     lecture8       stat.cpp  valgrind.cpp
-[01;34mgittest[0m      lecture9       [01;36mstdin[0m
-lecture1     macroquiz.cpp  stdout
-$ cd ..
-$ ls
-[0m[01;34massignments[0m          [01;34mucr-cs100-bmars003[0m
-GRADES.md            [01;34mucr-cs100-brunnaam[0m
-[01;34mlecture[0m              [01;34mucr-cs100-DanTheTingler[0m
-lecture7             [01;34mucr-cs100-katherinegallaher[0m
-LICENSE              [01;34mucr-cs100-kle016[0m
-[01;34mnotes[0m                [01;34mucr-cs100-kryne001[0m
-README.md            [01;34mucr-cs100-lwang031[0m
-[01;34mscripts[0m              [01;34mucr-cs100-rgosh001[0m
-[01;34mstudentinfo[0m          [01;34mucr-cs100-svill014[0m
-studyguide.md        [01;34mucr-cs100-thekevinlemon2[0m
-[01;34mucr-cs100-aguerrero[0m  [01;34mucr-cs100-willccoates[0m
-$ pwd
-/home/user/proj/ucr-cs100
-$ git pull
-remote: Counting objects: 6, done.[K
-remote: Compressing objects:  50% (1/2)   [Kremote: Compressing objects: 100% (2/2)   [Kremote: Compressing objects: 100% (2/2), done.[K
-remote: Total 6 (delta 4), reused 6 (delta 4)[K
-Unpacking objects:  16% (1/6)   Unpacking objects:  33% (2/6)   Unpacking objects:  50% (3/6)   Unpacking objects:  66% (4/6)   Unpacking objects:  83% (5/6)   Unpacking objects: 100% (6/6)   Unpacking objects: 100% (6/6), done.
-From https://github.com/mikeizbicki/ucr-cs100
-   604812f..385e2f7  master     -> origin/master
-Updating 604812f..385e2f7
-Fast-forward
- assignments/hw/hw1-rshell/README.md |    2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-$ ls
-[0m[01;34massignments[0m          [01;34mucr-cs100-bmars003[0m
-GRADES.md            [01;34mucr-cs100-brunnaam[0m
-[01;34mlecture[0m              [01;34mucr-cs100-DanTheTingler[0m
-lecture7             [01;34mucr-cs100-katherinegallaher[0m
-LICENSE              [01;34mucr-cs100-kle016[0m
-[01;34mnotes[0m                [01;34mucr-cs100-kryne001[0m
-README.md            [01;34mucr-cs100-lwang031[0m
-[01;34mscripts[0m              [01;34mucr-cs100-rgosh001[0m
-[01;34mstudentinfo[0m          [01;34mucr-cs100-svill014[0m
-studyguide.md        [01;34mucr-cs100-thekevinlemon2[0m
-[01;34mucr-cs100-aguerrero[0m  [01;34mucr-cs100-willccoates[0m
-$ ls scripts/
-[0m[01;32mallgrades.sh[0m      config.sh           [01;32mrmcomments.sh[0m
-[01;32mcalcgrade.sh[0m      [01;32mgradeall.sh[0m
-[01;32mchecksyscalls.sh[0m  [01;32mgradeassignment.sh[0m
-$ cler[Kar
-[H[2J$ clear[C[Cls scripts/
-[0m[01;32mallgrades.sh[0m      config.sh           [01;32mrmcomments.sh[0m
-[01;32mcalcgrade.sh[0m      [01;32mgradeall.sh[0m
-[01;32mchecksyscalls.sh[0m  [01;32mgradeassignment.sh[0m
-$ ./cal[K[K[K[Ka[K/a[Kscripts/calcgrade.sh mikeizbicki
-finding grade for github account mikeizbicki
-
-===========================================
-    grade        |  assignment
-===========================================
-    --- /   0    |  ec-bounty
-    --- /   0    |  ec-online
-    --- /   0    |  ec-reading
-    --- /   0    |  hw0-vim
-    --- / 100    |  hw1-rshell
-    --- / 100    |  hw2-ls
-    --- / 100    |  hw3-piping
-    --- / 100    |  hw4-signals
-    --- / 100    |  hw5-oss
-     10 /  10    |  lab0-vim
-    --- /  10    |  lab1-git
-    --- /  10    |  lab2-fork
-    --- /  10    |  lab3-debugging1
-    --- /  10    |  lab4-debugging2
-    --- /  10    |  lab5-cp
-    --- /  10    |  lab6-signal
-    --- /  10    |  lab7-cstring
-    --- /  10    |  lab8-spam
-    --- /  10    |  lab9-rm
-    --- /  25    |  linux
-    --- /  10    |  quiz1
-    --- /  20    |  quiz2
-===========================================
-
-running total =   10 /   10 = 100.00
-overall total =   10 /  655 = 1.52
-
-
-$ cd assignments/lab/lab0
-bash: cd: assignments/lab/lab0: No such file or directory
-$ cd assignments/lab/lab0-vim/
-$ vim grade 
-[?1049h[?1h=[1;40r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[40;1H"grade" 1L, 8C[>c[1;1H[33m  1 [m10 / 10
-[1m[34m~                                                      [3;1H~                                                      [4;1H~                                                      [5;1H~                                                      [6;1H~                                                      [7;1H~                                                      [8;1H~                                                      [9;1H~                                                      [10;1H~                                                      [11;1H~                                                      [12;1H~                                                      [13;1H~                                                      [14;1H~                                                      [15;1H~                                                      [16;1H~                                                      [17;1H~                                                      [18;1H~                                                      [19;1H~                                                      [20;1H~                                                      [21;1H~                                                      [22;1H~                                                      [23;1H~                                                      [24;1H~                                                      [25;1H~                                                      [26;1H~                                                      [27;1H~                                                      [28;1H~                                                      [29;1H~                                                      [30;1H~                                                      [31;1H~                                                      [32;1H~                                                      [33;1H~                                                      [34;1H~                                                      [35;1H~                                                      [36;1H~                                                      [37;1H~                                                      [38;1H~                                                      [39;1H~                                                      [m[40;38H1,1[11CAll]2;grade (~/proj/ucr-cs...nts/lab/lab0-vim) - VIM]1;grade[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[40;1H[K[40;1H:[?12l[?25hq[?25l[?12l[?25h[?25l]2;user@userland: ~/proj/ucr-cs100/lecture]1;user@userland: ~/proj/ucr-cs100/lecture[40;1H[K[40;1H[?1l>[?12l[?25h[?1049l$ big[K[K[Kclear
-[H[2J$ bit blame grade
-bash: bit: command not found
-$ bit blame grade[C[C[1P[1@g
-[?1h=91fa9a80 (Mike Izbicki 2014-07-30 13:42:52 -0700 1) 10 [m
-[7m(END)[27m[K[K[?1l>$ [K$ exit
-exit
-
-Script done on Tue 12 Aug 2014 02:32:48 PM PDT

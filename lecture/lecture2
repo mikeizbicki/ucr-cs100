@@ -1,629 +1,0 @@
-Script started on Tue 29 Jul 2014 02:39:22 PM PDT
-]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ mkdir facevii[K[K[Kbook
-]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ cd facebook/
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git init
-Initialized empty Git repository in /home/user/proj/ucr-cs100/lecture/facebook/.git/
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls -a
-[0m[01;34m.[0m  [01;34m..[0m  [01;34m.git[0m
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls --[Kl
-total 0
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls -la
-total 12
-drwxr-xr-x 3 user user 4096 Jul 29 14:40 [0m[01;34m.[0m
-drwxr-xr-x 4 user user 4096 Jul 29 14:40 [01;34m..[0m
-drwxr-xr-x 7 user user 4096 Jul 29 14:40 [01;34m.git[0m
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls -la a-a
-total 12
-drwxr-xr-x 3 user user 4096 Jul 29 14:40 [0m[01;34m.[0m
-drwxr-xr-x 4 user user 4096 Jul 29 14:40 [01;34m..[0m
-drwxr-xr-x 7 user user 4096 Jul 29 14:40 [01;34m.git[0m
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls -l -a[K[K[K[Ka -l
-total 12
-drwxr-xr-x 3 user user 4096 Jul 29 14:40 [0m[01;34m.[0m
-drwxr-xr-x 4 user user 4096 Jul 29 14:40 [01;34m..[0m
-drwxr-xr-x 7 user user 4096 Jul 29 14:40 [01;34m.git[0m
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls -a -l[K[K[Kl
-total 12
-drwxr-xr-x 3 user user 4096 Jul 29 14:40 [0m[01;34m.[0m
-drwxr-xr-x 4 user user 4096 Jul 29 14:40 [01;34m..[0m
-drwxr-xr-x 7 user user 4096 Jul 29 14:40 [01;34m.git[0m
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ clear
-[H[2J]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ touch main.cpp
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git add main.cpp
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git commit
-[?1049h[?1h=[1;35r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[35;1H".git/COMMIT_EDITMSG" 12L, 279C[>c[1;1H[33m  1 
-  2 [m[34m# Please enter the commit message for your changes. Lines starting[m
-[33m  3 [m[34m# with '#' will be ignored, and an empty message aborts the commit.[m
-[33m  4 [m[34m# On branch [m[35mmaster[m
-[33m  5 [m[34m#[m
-[33m  6 [m[34m# Initial commit[m
-[33m  7 [m[34m#[m
-[33m  8 [m[34m# [m[35mChanges to be committed:[m
-[33m  9 [m[34m#   (use "git rm --cached <file>..." to unstage)[m
-[33m 10 [m[34m#[m
-[33m 11 [m[34m#   [m[32mnew file[m[34m: [m[31m  main.cpp[m
-[33m 12 [m[34m#[m
-[1m[34m~                                                                                          [14;1H~                                                                                          [15;1H~                                                                                          [16;1H~                                                                                          [17;1H~                                                                                          [18;1H~                                                                                          [19;1H~                                                                                          [20;1H~                                                                                          [21;1H~                                                                                          [22;1H~                                                                                          [23;1H~                                                                                          [24;1H~                                                                                          [25;1H~                                                                                          [26;1H~                                                                                          [27;1H~                                                                                          [28;1H~                                                                                          [29;1H~                                                                                          [30;1H~                                                                                          [31;1H~                                                                                          [32;1H~                                                                                          [33;1H~                                                                                          [34;1H~                                                                                          [m[35;74H1,0-1[9CAll]2;COMMIT_EDITMSG (~/proj/ucr-cs100/lecture/facebook/.git) - VIM]1;COMMIT_EDITMSG[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[35;1H[1m-- INSERT --[m[35;13H[K[35;74H1,1[11CAll[1;5H[?12l[?25h[?25l[33m s[m[35;76H2]2;COMMIT_EDITMSG + (~/proj/ucr-cs100/lecture/facebook/.git) - VIM]1;COMMIT_EDITMSG[1;6H[?12l[?25h[?25l[33mst[m[35;76H3[1;7H[?12l[?25h[?25l[33mta[m[35;76H4[1;8H[?12l[?25h[?25l[33mar[m[35;76H5[1;9H[?12l[?25h[?25l[33mrt[m[35;76H6[1;10H[?12l[?25h[?25l[33mti[m[35;76H7[1;11H[?12l[?25h[?25l[33min[m[35;76H8[1;12H[?12l[?25h[?25l[33mng[m[35;76H9[1;13H[?12l[?25h[?25l[1;5H[33m[44mstarting[m[33m [m[35;76H10[1;14H[?12l[?25h[?25l[33m t[m[35;77H1[1;15H[?12l[?25h[?25l[33mth[m[35;77H2[1;16H[?12l[?25h[?25l[33mhe[m[35;77H3[1;17H[?12l[?25h[?25l[33m [m[35;77H4[1;18H[?12l[?25h[?25l[33m f[m[35;77H5[1;19H[?12l[?25h[?25l[33mfa[m[35;77H6[1;20H[?12l[?25h[?25l[33mac[m[35;77H7[1;21H[?12l[?25h[?25l[33mce[m[35;77H8[1;22H[?12l[?25h[?25l[33meb[m[35;77H9[1;23H[?12l[?25h[?25l[33mbo[m[35;76H20[1;24H[?12l[?25h[?25l[33moo[m[35;77H1[1;25H[?12l[?25h[?25l[33mok[m[35;77H2[1;26H[?12l[?25h[?25l[1;18H[33m[41mfacebook[m[33m [m[35;77H3[1;27H[?12l[?25h[?25l[33m p[m[35;77H4[1;28H[?12l[?25h[?25l[33mpr[m[35;77H5[1;29H[?12l[?25h[?25l[33mro[m[35;77H6[1;30H[?12l[?25h[?25l[33moj[m[35;77H7[1;31H[?12l[?25h[?25l[33mje[m[35;77H8[1;32H[?12l[?25h[?25l[33mec[m[35;77H9[1;33H[?12l[?25h[?25l[33mct[m[35;76H30[1;34H[?12l[?25h[?25l[2;5H[K[3;6H[34m Please enter the commit message for your changes. Lines starting[m[3;71H[K[4;6H[34m with '#' will be ignored, and an empty message aborts the commit.[5;6H On branch [m[35mmaster[m[6;6H[K[7;6H[34m Initial commit[m[8;6H[K[9;6H[34m [m[35mChanges to be committed:[m[9;31H[K[10;6H[34m   (use "git rm --cached <file>..." to unstage)[m[11;6H[K[12;6H[34m   [m[32mnew file[m[34m: [m[31m  main.cpp[m
-[33m 13 [m[34m#[m[13;6H[K[35;74H2,1 [2;5H[?12l[?25h[35;1H[K[2;5H[?25l[35;74H2,0-1[9CAll[2;5H[?12l[?25h[?25l[35;74H[K[35;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l".git/COMMIT_EDITMSG" 13L, 309C written]2;user@userland: ~/proj/ucr-cs100/lecture/facebook]1;user@userland: ~/proj/ucr-cs100/lecture/facebook
-[?1l>[?12l[?25h[?1049l[master (root-commit) e78bc60] starting the facebook project
- 0 files changed
- create mode 100644 main.cpp
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls
-main.cpp
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ vim main.cpp 
-[?1049h[?1h=[1;35r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[35;1H"main.cpp" 0L, 0C[>c[1;1H[33m  1 [m
-[1m[34m~                                                                                          [3;1H~                                                                                          [4;1H~                                                                                          [5;1H~                                                                                          [6;1H~                                                                                          [7;1H~                                                                                          [8;1H~                                                                                          [9;1H~                                                                                          [10;1H~                                                                                          [11;1H~                                                                                          [12;1H~                                                                                          [13;1H~                                                                                          [14;1H~                                                                                          [15;1H~                                                                                          [16;1H~                                                                                          [17;1H~                                                                                          [18;1H~                                                                                          [19;1H~                                                                                          [20;1H~                                                                                          [21;1H~                                                                                          [22;1H~                                                                                          [23;1H~                                                                                          [24;1H~                                                                                          [25;1H~                                                                                          [26;1H~                                                                                          [27;1H~                                                                                          [28;1H~                                                                                          [29;1H~                                                                                          [30;1H~                                                                                          [31;1H~                                                                                          [32;1H~                                                                                          [33;1H~                                                                                          [34;1H~                                                                                          [m[35;74H0,0-1[9CAll]2;main.cpp (~/proj/ucr-cs100/lecture/facebook) - VIM]1;main.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[35;1H[1m-- INSERT --[m[35;13H[K[35;74H0,1[11CAll[1;5H[?12l[?25h[?25l[33m [m#[35;74H1,2]2;main.cpp + (~/proj/ucr-cs100/lecture/facebook) - VIM]1;main.cpp[1;6H[?12l[?25h[?25l#i[35;76H3[1;7H[?12l[?25h[?25lin[35;76H4[1;8H[?12l[?25h[?25lnc[35;76H5[1;9H[?12l[?25h[?25lcl[35;76H6[1;10H[?12l[?25h[?25llu[35;76H7[1;11H[?12l[?25h[?25lud[35;76H8[1;12H[?12l[?25h[?25lde[35;76H9[1;13H[?12l[?25h[?25l[35;76H10[1;14H[?12l[?25h[?25l[1;5H[35m#include <[m[35;77H1[1;15H[?12l[?25h[?25l[35m<[mi[35;77H2[1;16H[?12l[?25h[?25lio[35;77H3[1;17H[?12l[?25h[?25los[35;77H4[1;18H[?12l[?25h[?25lst[35;77H5[1;19H[?12l[?25h[?25ltr[35;77H6[1;20H[?12l[?25h[?25lre[35;77H7[1;21H[?12l[?25h[?25lea[35;77H8[1;22H[?12l[?25h[?25lam[35;77H9[1;23H[?12l[?25h[?25l[1;14H[31m<iostream>[m[35;76H20[1;24H[?12l[?25h[?25l
-[33m  2 [m[2;5H[K[35;74H2,1 [2;5H[?12l[?25h[?25l
-[33m  3 [m[3;5H[K[35;74H3[3;5H[?12l[?25h[?25l[33m [mu[35;76H2[3;6H[?12l[?25h[?25lus[35;76H3[3;7H[?12l[?25h[?25lsi[35;76H4[3;8H[?12l[?25h[?25lin[35;76H5[3;9H[?12l[?25h[?25l[33musing[m[35;76H6[3;10H[?12l[?25h[?25l[35;76H7[3;11H[?12l[?25h[?25l n[35;76H8[3;12H[?12l[?25h[?25lna[35;76H9[3;13H[?12l[?25h[?25lam[35;76H10[3;14H[?12l[?25h[?25lme[35;77H1[3;15H[?12l[?25h[?25les[35;77H2[3;16H[?12l[?25h[?25lsp[35;77H3[3;17H[?12l[?25h[?25lpa[35;77H4[3;18H[?12l[?25h[?25lac[35;77H5[3;19H[?12l[?25h[?25l[3;11H[32mnamespace[m[35;77H6[3;20H[?12l[?25h[?25l[35;77H7[3;21H[?12l[?25h[?25l s[35;77H8[3;22H[?12l[?25h[?25lst[35;77H9[3;23H[?12l[?25h[?25ltd[35;76H20[3;24H[?12l[?25h[?25ld;[35;77H1[3;25H[?12l[?25h[?25l
-[33m  4 [m[4;5H[K[35;74H4,1 [4;5H[?12l[?25h[?25l
-[33m  5 [m[5;5H[K[35;74H5[5;5H[?12l[?25h[?25l[33m [mi[35;76H2[5;6H[?12l[?25h[?25lin[35;76H3[5;7H[?12l[?25h[?25l[32mint[m[35;76H4[5;8H[?12l[?25h[?25l[35;76H5[5;9H[?12l[?25h[?25l m[35;76H6[5;10H[?12l[?25h[?25lma[35;76H7[5;11H[?12l[?25h[?25lai[35;76H8[5;12H[?12l[?25h[?25lin[35;76H9[5;13H[?12l[?25h[?25ln([35;74H[K[35;74H5,10[10CAll[5;14H[?12l[?25h[?25l()[46m()[m[35;74H[K[35;74H5,11[10CAll[5;15H[?12l[?25h[?25l
-[33m  6 [m[6;5H[K[5;13H()[35;74H6,1 [6;5H[?12l[?25h[?25l[33m [m{[35;74H[K[35;74H6,2[11CAll[6;6H[?12l[?25h[?25l
-[33m  7 [m    [7;9H[K[35;74H7,5[7;9H[?12l[?25h[?25l {[35;74H[K[35;74H7,6[11CAll[7;10H[?12l[?25h[?25l[7;9H[K[35;76H5[7;9H[?12l[?25h[?25l }[6;5H[46m{[7;9H}[m[35;74H[K[35;74H7,6[11CAll[7;10H[?12l[?25h[?25l[7;9H[K[6;5H{[35;76H5[7;9H[?12l[?25h[?25l[35;76H4[7;8H[?12l[?25h[?25l[35;76H3[7;7H[?12l[?25h[?25l[35;76H2[7;6H[?12l[?25h[?25l[35;76H1[7;5H[?12l[?25h[?25l[33m [m}[6;5H[46m{[7;5H}[m[35;74H[K[35;74H7,2[11CAll[7;6H[?12l[?25h[?25l[35;74H[K[35;74H6,2[11CAll[6;6H[?12l[?25h[?25l[7;4H[33m [m[46m [m
-[33m  8 [m}[8;6H[K[6;5H{[7;5H [35;74H7,5[7;9H[?12l[?25h[?25l c[35;76H6[7;10H[?12l[?25h[?25lco[35;76H7[7;11H[?12l[?25h[?25lou[35;76H8[7;12H[?12l[?25h[?25lut[35;76H9[7;13H[?12l[?25h[?25l[35;76H10[7;14H[?12l[?25h[?25l <[35;77H1[7;15H[?12l[?25h[?25l<<[35;77H2[7;16H[?12l[?25h[?25l[35;77H3[7;17H[?12l[?25h[?25l [31m"[m[35;77H4[7;18H[?12l[?25h[?25l[31m"s[m[35;77H5[7;19H[?12l[?25h[?25l[31msu[m[35;77H6[7;20H[?12l[?25h[?25l[31mup[m[35;77H7[7;21H[?12l[?25h[?25l[31mpe[m[35;77H8[7;22H[?12l[?25h[?25l[31mer[m[35;77H9[7;23H[?12l[?25h[?25l[31m [m[35;76H20[7;24H[?12l[?25h[?25l[31m s[m[35;77H1[7;25H[?12l[?25h[?25l[31msi[m[35;77H2[7;26H[?12l[?25h[?25l[31mim[m[35;77H3[7;27H[?12l[?25h[?25l[31mmp[m[35;77H4[7;28H[?12l[?25h[?25l[31mpl[m[35;77H5[7;29H[?12l[?25h[?25l[31mle[m[35;77H6[7;30H[?12l[?25h[?25l[31me"[m[35;77H7[7;31H[?12l[?25h[?25l[35;77H8[7;32H[?12l[?25h[?25l <[35;77H9[7;33H[?12l[?25h[?25l<<[35;76H30[7;34H[?12l[?25h[?25l[35;77H1[7;35H[?12l[?25h[?25l e[35;77H2[7;36H[?12l[?25h[?25len[35;77H3[7;37H[?12l[?25h[?25lnd[35;77H4[7;38H[?12l[?25h[?25ldl[35;77H5[7;39H[?12l[?25h[?25ll;[35;77H6[7;40H[?12l[?25h[?25l[8;4H[33m [m 
-[33m  9 [m}[9;6H[K[35;74H8,5 [8;9H[?12l[?25h[?25l r[35;76H6[8;10H[?12l[?25h[?25lre[35;76H7[8;11H[?12l[?25h[?25let[35;76H8[8;12H[?12l[?25h[?25ltu[35;76H9[8;13H[?12l[?25h[?25lur[35;76H10[8;14H[?12l[?25h[?25l[33mreturn[m[35;77H1[8;15H[?12l[?25h[?25l[35;77H2[8;16H[?12l[?25h[?25l [31m0[m[35;77H3[8;17H[?12l[?25h[?25l[31m0[m;[35;77H4[8;18H[?12l[?25h[35;1H[K[8;17H[?25l[35;74H8,13[10CAll[8;17H[?12l[?25h[?25l[35;74H[K[35;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"main.cpp" 9L, 108C written]2;user@userland: ~/proj/ucr-cs100/lecture/facebook]1;user@userland: ~/proj/ucr-cs100/lecture/facebook
-[?1l>[?12l[?25h[?1049l]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ g++ main.cpp 
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ./a.out 
-super simple
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls
-[0m[01;32ma.out[0m  main.cpp
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git add main.cpp
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git commit -m ""a"d"d"e"d" "c"o"d"e" "t"o" "m"a"i"n"."c"p"p"
-[master 36b5481] added code to main.cpp
- 1 file changed, 9 insertions(+)
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git log
-[?1h=commit 36b548171a5bd87654128b55fccaadef4df16616[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Tue Jul 29 14:48:48 2014 -0700[m
-[m
-    added code to main.cpp[m
-[m
-commit e78bc601ff100d96ec2965b69f53c90f4f46b4a2[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Tue Jul 29 14:44:17 2014 -0700[m
-[m
-    starting the facebook project[m
-[K[?1l>]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git tag "simple"
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ clear
-[H[2J]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ vim main.cpp 
-[?1049h[?1h=[1;35r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[35;1H"main.cpp" 9L, 108C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
-[33m  2 
-  3 using[m [32mnamespace[m std;
-[33m  4 
-  5 [m[32mint[m main()
-[33m  6 [m{
-[33m  7 [m    cout << [31m"super simple"[m << endl;
-[33m  8 [m    [33mreturn[m [31m0[m;
-[33m  9 [m}
-[1m[34m~                                                                                          [11;1H~                                                                                          [12;1H~                                                                                          [13;1H~                                                                                          [14;1H~                                                                                          [15;1H~                                                                                          [16;1H~                                                                                          [17;1H~                                                                                          [18;1H~                                                                                          [19;1H~                                                                                          [20;1H~                                                                                          [21;1H~                                                                                          [22;1H~                                                                                          [23;1H~                                                                                          [24;1H~                                                                                          [25;1H~                                                                                          [26;1H~                                                                                          [27;1H~                                                                                          [28;1H~                                                                                          [29;1H~                                                                                          [30;1H~                                                                                          [31;1H~                                                                                          [32;1H~                                                                                          [33;1H~                                                                                          [34;1H~                                                                                          [m[35;74H1,1[11CAll]2;main.cpp (~/proj/ucr-cs100/lecture/facebook) - VIM]1;main.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[35;74H2,0-1[2;5H[?12l[?25h[?25l[35;1H[1m-- INSERT --[m[35;13H[K[35;74H2,1[11CTop[3;5H[K[4;4H[33m using[m [32mnamespace[m std;[5;5H[K[6;4H[33m [m[32mint[m main()[7;4H[33m [m{[7;9H[K[8;8H cout << [31m"super simple"[m << endl;[9;4H[33m [m    [33mreturn[m [31m0[m;
-[33m 10 [m}[10;6H[K]2;main.cpp + (~/proj/ucr-cs100/lecture/facebook) - VIM]1;main.cpp[2;5H[?12l[?25h[?25l[35;74H3[13CAll[3;5H[?12l[?25h[?25l[35;74H4[4;5H[?12l[?25h[?25l[35;74H5[5;5H[?12l[?25h[?25l[35;74H6[6;5H[?12l[?25h[?25l[7;5H[46m{[10;5H}[m[35;74H7[7;5H[?12l[?25h[?25l[35;74H[K[35;74H7,2[11CAll[7;6H[?12l[?25h[?25l[8;9H[K[9;8H cout << [31m"super simple"[m << endl;[10;4H[33m [m[46m [m   [33mreturn[m [31m0[m;
-[33m 11 [m}[11;6H[K[7;5H{[10;5H [35;74H8,5[8;9H[?12l[?25h[?25l s[35;76H6[8;10H[?12l[?25h[?25lsr[35;76H7[8;11H[?12l[?25h[?25lra[35;76H8[8;12H[?12l[?25h[?25lan[35;76H9[8;13H[?12l[?25h[?25lnd[35;76H10[8;14H[?12l[?25h[?25ld([35;74H[K[35;74H8,11[10CAll[8;15H[?12l[?25h[?25l([31m0[m[35;77H2[8;16H[?12l[?25h[?25l[31m0[m)[46m([1C)[m[35;74H[K[35;74H8,13[10CAll[8;17H[?12l[?25h[?25l[46m)[m;([1C)[35;77H4[8;18H[?12l[?25h[?25l[9;9H[K[10;8H cout << [31m"super simple"[m << endl;[11;4H[33m [m    [33mreturn[m [31m0[m;
-[33m 12 [m}[12;6H[K[35;74H9,5 [9;9H[?12l[?25h[?25l[35;74H10,5[10;9H[?12l[?25h[?25l[35;77H36[10;40H[?12l[?25h[?25l[11;9H[K[12;4H[33m [m    [33mreturn[m [31m0[m;
-[33m 13 [m}[13;6H[K[35;75H1,5 [11;9H[?12l[?25h[?25l c[35;77H6[11;10H[?12l[?25h[?25lco[35;77H7[11;11H[?12l[?25h[?25lou[35;77H8[11;12H[?12l[?25h[?25lut[35;77H9[11;13H[?12l[?25h[?25l[35;77H10[11;14H[?12l[?25h[?25l <[35;78H1[11;15H[?12l[?25h[?25l<<[35;78H2[11;16H[?12l[?25h[?25l[35;78H3[11;17H[?12l[?25h[?25l [31m"[m[35;78H4[11;18H[?12l[?25h[35;1H[K[11;17H[?25l[35;74H11,13[9CAll[11;17H[?12l[?25h[?25l[35;75H0[10;17H[?12l[?25h[?25l[35;74H9,0-1[9;5H[?12l[?25h[?25l[35;74H8,13 [8;17H[?12l[?25h[?25l[7;5H[46m{[13;5H}[m[35;74H7,1 [7;5H[?12l[?25h[?25l{[13;5H}[35;74H8,13[8;17H[?12l[?25h[?25l[46m([1C)[m[35;77H2[8;16H[?12l[?25h[?25l([1C)[35;77H1[8;15H[?12l[?25h[?25l[35;74H9,0-1[9;5H[?12l[?25h[?25l[35;74H10,1[10;15H[?12l[?25h[?25l[35;75H1[11;15H[?12l[?25h[?25l[35;75H2[12;15H[?12l[?25h[?25l[35;75H1[11;15H[?12l[?25h[?25l[35;78H3[11;17H[?12l[?25h[?25l[35;1H[1m-- INSERT --[m[35;74H[K[35;74H11,14[9CAll[11;18H[?12l[?25h[?25l[31m"r[m[35;78H5[11;19H[?12l[?25h[?25l[31mra[m[35;78H6[11;20H[?12l[?25h[?25l[31man[m[35;78H7[11;21H[?12l[?25h[?25l[31mnd[m[35;78H8[11;22H[?12l[?25h[?25l[31mdo[m[35;78H9[11;23H[?12l[?25h[?25l[31mom[m[35;77H20[11;24H[?12l[?25h[?25l[31mm:[m[35;78H1[11;25H[?12l[?25h[?25l[31m [m[35;78H2[11;26H[?12l[?25h[?25l[31m "[m[35;78H3[11;27H[?12l[?25h[?25l[35;78H4[11;28H[?12l[?25h[?25l <[35;78H5[11;29H[?12l[?25h[?25l<<[35;78H6[11;30H[?12l[?25h[?25l[35;78H7[11;31H[?12l[?25h[?25l r[35;78H8[11;32H[?12l[?25h[?25lra[35;78H9[11;33H[?12l[?25h[?25lan[35;77H30[11;34H[?12l[?25h[?25lnd[35;78H1[11;35H[?12l[?25h[?25ld([35;74H[K[35;74H11,32[9CAll[11;36H[?12l[?25h[?25l()[46m()[m[35;74H[K[35;74H11,33[9CAll[11;37H[?12l[?25h[?25l()[35;78H4[11;38H[?12l[?25h[?25l[46m()[m[35;74H[K[35;74H11,33[9CAll[11;37H[?12l[?25h[?25l[35;78H2[11;36H[?12l[?25h[?25l[35;74H[K[35;74H11,33[9CAll[11;37H[?12l[?25h[?25l[35;78H2[11;36H[?12l[?25h[?25l[35;74H[K[35;74H11,33[9CAll[11;37H[?12l[?25h[?25l()[35;78H4[11;38H[?12l[?25h[?25l[46m()[m[35;74H[K[35;74H11,33[9CAll[11;37H[?12l[?25h[?25l[46m)[m%()[35;78H4[11;38H[?12l[?25h[?25l%[31m1[m[35;78H5[11;39H[?12l[?25h[?25l[31m10[m[35;78H6[11;40H[?12l[?25h[?25l[31m00[m[35;78H7[11;41H[?12l[?25h[?25l[35;78H8[11;42H[?12l[?25h[?25l <[35;78H9[11;43H[?12l[?25h[?25l<<[35;77H40[11;44H[?12l[?25h[?25l[35;78H1[11;45H[?12l[?25h[?25l e[35;78H2[11;46H[?12l[?25h[?25len[35;78H3[11;47H[?12l[?25h[?25lnd[35;78H4[11;48H[?12l[?25h[?25ldl[35;78H5[11;49H[?12l[?25h[?25ll;[35;78H6[11;50H[?12l[?25h[?25l[35;75H0,3[10;40H[?12l[?25h[?25l[35;74H9,1  [9;5H[?12l[?25h[?25l[35;74H8,14[8;18H[?12l[?25h[?25l[7;5H[46m{[13;5H}[m[35;74H[K[35;74H7,2[11CAll[7;6H[?12l[?25h[?25l[6;13H[46m()[m[7;5H{[13;5H}[35;74H[K[35;74H6,11[10CAll[6;15H[?12l[?25h[?25l()[35;74H5,1 [5;5H[?12l[?25h[?25l[35;74H4,21[4;25H[?12l[?25h[?25l[35;74H3,1 [3;5H[?12l[?25h[?25l[35;74H2[2;5H[?12l[?25h[35;1H[K[2;5H[?25l[35;74H2,0-1[9CAll[2;5H[?12l[?25h[?25l[35;1H[1m-- INSERT --[m[35;74H[K[35;74H2,1[11CAll[2;5H[?12l[?25h[?25l[33m [m#[35;76H2[2;6H[?12l[?25h[?25l#i[35;76H3[2;7H[?12l[?25h[?25lin[35;76H4[2;8H[?12l[?25h[?25lnc[35;76H5[2;9H[?12l[?25h[?25lcl[35;76H6[2;10H[?12l[?25h[?25llu[35;76H7[2;11H[?12l[?25h[?25lud[35;76H8[2;12H[?12l[?25h[?25lde[35;76H9[2;13H[?12l[?25h[?25l[35;76H10[2;14H[?12l[?25h[?25l[2;5H[35m#include <[m[35;77H1[2;15H[?12l[?25h[?25l[35m<[ms[35;77H2[2;16H[?12l[?25h[?25lst[35;77H3[2;17H[?12l[?25h[?25ltd[35;77H4[2;18H[?12l[?25h[?25ldl[35;77H5[2;19H[?12l[?25h[?25lli[35;77H6[2;20H[?12l[?25h[?25lib[35;77H7[2;21H[?12l[?25h[?25lb.[35;77H8[2;22H[?12l[?25h[?25l.h[35;77H9[2;23H[?12l[?25h[?25l[2;14H[31m<stdlib.h>[m[35;76H20[2;24H[?12l[?25h[35;1H[K[2;23H[?25l[35;74H2,19[10CAll[2;23H[?12l[?25h[?25l[35;74H[K[35;1H:[?12l[?25hw[?25l[?12l[?25h[?25l"main.cpp" 13L, 190C written[45C2,19[10CAll]2;main.cpp (~/proj/ucr-cs100/lecture/facebook) - VIM]1;main.cpp[35;74H[K[35;74H2,19[10CAll[2;23H[?12l[?25h[?25l[35;74H3,0-1[3;5H[?12l[?25h[?25l[35;1H[K[35;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"main.cpp" 13L, 190C written]2;user@userland: ~/proj/ucr-cs100/lecture/facebook]1;user@userland: ~/proj/ucr-cs100/lecture/facebook
-[?1l>[?12l[?25h[?1049l]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ g++ main.cpp 
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ./a.out 
-super simple
-random: 83
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ./a.out 
-super simple
-random: 83
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git add main.cpp
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git commit -n[Km "added random numbers"
-[master eff8b65] added random numbers
- 1 file changed, 4 insertions(+)
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls
-[0m[01;32ma.out[0m  main.cpp
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git log
-[?1h=commit eff8b65b723140a2c6cd4066d21e6dde5fa09fc6[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Tue Jul 29 14:58:35 2014 -0700[m
-[m
-    added random numbers[m
-[m
-commit 36b548171a5bd87654128b55fccaadef4df16616[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Tue Jul 29 14:48:48 2014 -0700[m
-[m
-    added code to main.cpp[m
-[m
-commit e78bc601ff100d96ec2965b69f53c90f4f46b4a2[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Tue Jul 29 14:44:17 2014 -0700[m
-[m
-    starting the facebook project[m
-[K[?1l>]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ clear
-[H[2J]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git checkout simple
-Note: checking out 'simple'.
-
-You are in 'detached HEAD' state. You can look around, make experimental
-changes and commit them, and you can discard any commits you make in this
-state without impacting any branches by performing another checkout.
-
-If you want to create a new branch to retain commits you create, you may
-do so (now or later) by using -b with the checkout command again. Example:
-
-  git checkout -b new_branch_name
-
-HEAD is now at 36b5481... added code to main.cpp
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ cat main.cpp 
-#include <iostream>
-
-using namespace std;
-
-int main()
-{
-    cout << "super simple" << endl;
-    return 0;
-}
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git log
-[?1h=commit 36b548171a5bd87654128b55fccaadef4df16616[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Tue Jul 29 14:48:48 2014 -0700[m
-[m
-    added code to main.cpp[m
-[m
-commit e78bc601ff100d96ec2965b69f53c90f4f46b4a2[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Tue Jul 29 14:44:17 2014 -0700[m
-[m
-    starting the facebook project[m
-[K[?1l>]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git checkout e78bc601ff100d96ec2965b69f53c 90f4f46b4a2
-Previous HEAD position was 36b5481... added code to main.cpp
-HEAD is now at e78bc60... starting the facebook project
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ c[Kgut [K[K[K[Kclear
-[H[2J]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git checkout master
-Previous HEAD position was e78bc60... starting the facebook project
-Switched to branch 'master'
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ gitlog tlog[1Ptlog[C log
-[?1h=commit eff8b65b723140a2c6cd4066d21e6dde5fa09fc6[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Tue Jul 29 14:58:35 2014 -0700[m
-[m
-    added random numbers[m
-[m
-commit 36b548171a5bd87654128b55fccaadef4df16616[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Tue Jul 29 14:48:48 2014 -0700[m
-[m
-    added code to main.cpp[m
-[m
-commit e78bc601ff100d96ec2965b69f53c90f4f46b4a2[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Tue Jul 29 14:44:17 2014 -0700[m
-[m
-    starting the facebook project[m
-[K[?1l>]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git checkout simple
-Note: checking out 'simple'.
-
-You are in 'detached HEAD' state. You can look around, make experimental
-changes and commit them, and you can discard any commits you make in this
-state without impacting any branches by performing another checkout.
-
-If you want to create a new branch to retain commits you create, you may
-do so (now or later) by using -b with the checkout command again. Example:
-
-  git checkout -b new_branch_name
-
-HEAD is now at 36b5481... added code to main.cpp
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ clear
-[H[2J]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git branch feature
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git branch
-* (no branch)
-  feature
-  master
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git checkout feature 
-Switched to branch 'feature'
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ vim main.cpp 
-[?1049h[?1h=[1;35r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[35;1H"main.cpp" 9L, 108C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
-[33m  2 
-  3 using[m [32mnamespace[m std;
-[33m  4 
-  5 [m[32mint[m main()
-[33m  6 [m{
-[33m  7 [m    cout << [31m"super simple"[m << endl;
-[33m  8 [m    [33mreturn[m [31m0[m;
-[33m  9 [m}
-[1m[34m~                                                                                          [11;1H~                                                                                          [12;1H~                                                                                          [13;1H~                                                                                          [14;1H~                                                                                          [15;1H~                                                                                          [16;1H~                                                                                          [17;1H~                                                                                          [18;1H~                                                                                          [19;1H~                                                                                          [20;1H~                                                                                          [21;1H~                                                                                          [22;1H~                                                                                          [23;1H~                                                                                          [24;1H~                                                                                          [25;1H~                                                                                          [26;1H~                                                                                          [27;1H~                                                                                          [28;1H~                                                                                          [29;1H~                                                                                          [30;1H~                                                                                          [31;1H~                                                                                          [32;1H~                                                                                          [33;1H~                                                                                          [34;1H~                                                                                          [m[35;74H1,1[11CAll]2;main.cpp (~/proj/ucr-cs100/lecture/facebook) - VIM]1;main.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[35;74H2,0-1[2;5H[?12l[?25h[?25l[35;74H3,1  [3;5H[?12l[?25h[?25l[35;74H4,0-1[4;5H[?12l[?25h[?25l[35;74H5,1  [5;5H[?12l[?25h[?25l[6;5H[46m{[9;5H}[m[35;74H6[6;5H[?12l[?25h[?25l{[9;5H}[35;74H7[7;5H[?12l[?25h[?25l[6;5H[46m{[9;5H}[m[35;74H6[6;5H[?12l[?25h[?25l[35;1H[1m-- INSERT --[m[35;13H[K[35;74H7,5[11CTop[7;9H[K[8;8H cout << [31m"super simple"[m << endl;[9;4H[33m [m[46m [m   [33mreturn[m [31m0[m;
-[33m 10 [m}[10;6H[K[6;5H{[9;5H ]2;main.cpp + (~/proj/ucr-cs100/lecture/facebook) - VIM]1;main.cpp[7;9H[?12l[?25h[?25l c[35;76H6[11CAll[7;10H[?12l[?25h[?25lci[35;76H7[7;11H[?12l[?25h[?25lin[35;76H8[7;12H[?12l[?25h[?25l[35;76H9[7;13H[?12l[?25h[?25l >[35;76H10[7;14H[?12l[?25h[?25l>>[35;77H1[7;15H[?12l[?25h[?25l[35;77H2[7;16H[?12l[?25h[?25l[6;5H[46m{[10;5H}[m[35;74H[K[35;74H6,2[11CAll[6;6H[?12l[?25h[?25l[7;9H[K[8;9Hcin >> [8;17H[K[9;8H cout << [31m"super simple"[m << endl;[10;4H[33m [m[46m [m   [33mreturn[m [31m0[m;
-[33m 11 [m}[11;6H[K[6;5H{[10;5H [35;74H7,5[7;9H[?12l[?25h[?25l s[35;76H6[7;10H[?12l[?25h[?25lst[35;76H7[7;11H[?12l[?25h[?25ltr[35;76H8[7;12H[?12l[?25h[?25lri[35;76H9[7;13H[?12l[?25h[?25lin[35;76H10[7;14H[?12l[?25h[?25lng[35;77H1[7;15H[?12l[?25h[?25l[35;77H2[7;16H[?12l[?25h[?25l i[35;77H3[7;17H[?12l[?25h[?25lin[35;77H4[7;18H[?12l[?25h[?25lnp[35;77H5[7;19H[?12l[?25h[?25lpu[35;77H6[7;20H[?12l[?25h[?25lut[35;77H7[7;21H[?12l[?25h[?25lt;[35;77H8[7;22H[?12l[?25h[?25l[35;74H8,12[8;16H[?12l[?25h[?25l i[35;77H3[8;17H[?12l[?25h[?25lin[35;77H4[8;18H[?12l[?25h[?25lnp[35;77H5[8;19H[?12l[?25h[?25lpu[35;77H6[8;20H[?12l[?25h[?25lut[35;77H7[8;21H[?12l[?25h[?25lt;[35;77H8[8;22H[?12l[?25h[?25l[35;74H9[9;22H[?12l[?25h[?25l[35;77H9[9;23H[?12l[?25h[?25l[35;76H20[9;24H[?12l[?25h[?25l[35;77H1[9;25H[?12l[?25h[?25l[35;77H2[9;26H[?12l[?25h[?25l[35;77H3[9;27H[?12l[?25h[?25l[35;77H4[9;28H[?12l[?25h[?25l[35;77H5[9;29H[?12l[?25h[?25l[35;77H6[9;30H[?12l[?25h[?25l[31ml"[m << endl;[9;39H[K[35;77H5[9;29H[?12l[?25h[?25l[31mp"[m << endl;[9;38H[K[35;77H4[9;28H[?12l[?25h[?25l[31mm"[m << endl;[9;37H[K[35;77H3[9;27H[?12l[?25h[?25l[31mi"[m << endl;[9;36H[K[35;77H2[9;26H[?12l[?25h[?25l[31ms"[m << endl;[9;35H[K[35;77H1[9;25H[?12l[?25h[?25l[31m "[m << endl;[9;34H[K[35;77H0[9;24H[?12l[?25h[?25l[31mr"[m << endl;[9;33H[K[35;76H19[9;23H[?12l[?25h[?25l[31me"[m << endl;[9;32H[K[35;77H8[9;22H[?12l[?25h[?25l[31mp"[m << endl;[9;31H[K[35;77H7[9;21H[?12l[?25h[?25l[31mu"[m << endl;[9;30H[K[35;77H6[9;20H[?12l[?25h[?25l[31ms"[m << endl;[9;29H[K[35;77H5[9;19H[?12l[?25h[?25l[31m""[m << endl;[9;28H[K[35;77H4[9;18H[?12l[?25h[?25l[31m"y"[m << endl;[35;77H5[9;19H[?12l[?25h[?25l[31myo"[m << endl;[35;77H6[9;20H[?12l[?25h[?25l[31mou"[m << endl;[35;77H7[9;21H[?12l[?25h[?25l[31mu "[m << endl;[35;77H8[9;22H[?12l[?25h[?25l[31m e"[m << endl;[35;77H9[9;23H[?12l[?25h[?25l[31men"[m << endl;[35;76H20[9;24H[?12l[?25h[?25l[31mne"[m << endl;[35;77H1[9;25H[?12l[?25h[?25l[31met"[m << endl;[35;77H2[9;26H[?12l[?25h[?25l[31mte"[m << endl;[35;77H3[9;27H[?12l[?25h[?25l[31mt"[m << endl;[9;36H[K[35;77H2[9;26H[?12l[?25h[?25l[31me"[m << endl;[9;35H[K[35;77H1[9;25H[?12l[?25h[?25l[31mn"[m << endl;[9;34H[K[35;77H0[9;24H[?12l[?25h[?25l[31mnt"[m << endl;[35;77H1[9;25H[?12l[?25h[?25l[31mte"[m << endl;[35;77H2[9;26H[?12l[?25h[?25l[31mer"[m << endl;[35;77H3[9;27H[?12l[?25h[?25l[31mre"[m << endl;[35;77H4[9;28H[?12l[?25h[?25l[31med"[m << endl;[35;77H5[9;29H[?12l[?25h[?25l[31md:"[m << endl;[35;77H6[9;30H[?12l[?25h[?25l[31m: "[m << endl;[35;77H7[9;31H[?12l[?25h[?25l[35;77H8[9;32H[?12l[?25h[?25l  << endl;[35;77H9[9;33H[?12l[?25h[?25l < << endl;[35;76H30[9;34H[?12l[?25h[?25l<< << endl;[35;77H1[9;35H[?12l[?25h[?25l  << endl;[35;77H2[9;36H[?12l[?25h[?25l i << endl;[35;77H3[9;37H[?12l[?25h[?25lin << endl;[35;77H4[9;38H[?12l[?25h[?25lnp << endl;[35;77H5[9;39H[?12l[?25h[?25lpu << endl;[35;77H6[9;40H[?12l[?25h[?25lut << endl;[35;77H7[9;41H[?12l[?25h[35;1H[K[9;40H[?25l[35;74H9,36[10CAll[9;40H[?12l[?25h[?25l[35;74H[K[35;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"main.cpp" 11L, 154C written]2;user@userland: ~/proj/ucr-cs100/lecture/facebook]1;user@userland: ~/proj/ucr-cs100/lecture/facebook
-[?1l>[?12l[?25h[?1049l]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ g++ main.cpp 
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ a[K./a.out 
-test
-you entered: test
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ giad[K[Kt add main.cpp
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git commit -m "feat[K[K[K[Kuser input [K"
-[feature 6e29f63] user input
- 1 file changed, 3 insertions(+), 1 deletion(-)
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git log
-[?1h=commit 6e29f6349afa53d7edbd2114ac97e080c27158a5[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Tue Jul 29 15:09:53 2014 -0700[m
-[m
-    user input[m
-[m
-commit 36b548171a5bd87654128b55fccaadef4df16616[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Tue Jul 29 14:48:48 2014 -0700[m
-[m
-    added code to main.cpp[m
-[m
-commit e78bc601ff100d96ec2965b69f53c90f4f46b4a2[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Tue Jul 29 14:44:17 2014 -0700[m
-[m
-    starting the facebook project[m
-[K[?1l>]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git [K[K[K[Kclear
-[H[2J]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git checkout master
-Switched to branch 'master'
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git log
-[?1h=commit eff8b65b723140a2c6cd4066d21e6dde5fa09fc6[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Tue Jul 29 14:58:35 2014 -0700[m
-[m
-    added random numbers[m
-[m
-commit 36b548171a5bd87654128b55fccaadef4df16616[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Tue Jul 29 14:48:48 2014 -0700[m
-[m
-    added code to main.cpp[m
-[m
-commit e78bc601ff100d96ec2965b69f53c90f4f46b4a2[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Tue Jul 29 14:44:17 2014 -0700[m
-[m
-    starting the facebook project[m
-[K[?1l>]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ cat main.cpp 
-#include <iostream>
-#include <stdlib.h>
-
-using namespace std;
-
-int main()
-{
-    srand(0);
-
-    cout << "super simple" << endl;
-    cout << "random: " << rand()%100 << endl; 
-    return 0;
-}
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ clear
-[H[2J]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls
-[0m[01;32ma.out[0m  main.cpp
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ mkdir src
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ cp main.cpp src
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls
-[0m[01;32ma.out[0m  main.cpp  [01;34msrc[0m
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls src
-main.cpp
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ tmp[K[K[Kusr[K[K[Kgit checkout fearu[K[Kture
-Switched to branch 'feature'
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls
-[0m[01;32ma.out[0m  main.cpp  [01;34msrc[0m
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ cat main.cpp 
-#include <iostream>
-
-using namespace std;
-
-int main()
-{
-    string input;
-    cin >> input;
-    cout << "you entered: " << input << endl;
-    return 0;
-}
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ cat src/main.cpp 
-#include <iostream>
-#include <stdlib.h>
-
-using namespace std;
-
-int main()
-{
-    srand(0);
-
-    cout << "super simple" << endl;
-    cout << "random: " << rand()%100 << endl; 
-    return 0;
-}
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ./a.out [K[K[K[K[K[K[K[Kgit checkout master
-Switched to branch 'master'
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls
-[0m[01;32ma.out[0m  main.cpp  [01;34msrc[0m
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git [K[K[K[Kclear
-[H[2J]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git status
-# On branch master
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	a.out
-#	src/
-nothing added to commit but untracked files present (use "git add" to track)
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git add src/main.cpp
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git commit -m "added new main"
-[master e98bac4] added new main
- 1 file changed, 13 insertions(+)
- create mode 100644 src/main.cpp
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git checkout [K[K[K[K[K[K[K[K[K[K[K[K[Kgit status
-# On branch master
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	a.out
-nothing added to commit but untracked files present (use "git add" to track)
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git check[K[K[K[K[Klog
-[?1h=commit e98bac474133e458cce1ff82eb57a068df0b8801[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Tue Jul 29 15:17:07 2014 -0700[m
-[m
-    added new main[m
-[m
-commit eff8b65b723140a2c6cd4066d21e6dde5fa09fc6[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Tue Jul 29 14:58:35 2014 -0700[m
-[m
-    added random numbers[m
-[m
-commit 36b548171a5bd87654128b55fccaadef4df16616[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Tue Jul 29 14:48:48 2014 -0700[m
-[m
-    added code to main.cpp[m
-[m
-commit e78bc601ff100d96ec2965b69f53c90f4f46b4a2[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Tue Jul 29 14:44:17 2014 -0700[m
-[m
-    starting the facebook project[m
-[K[?1l>]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ clear
-[H[2J]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git checkout feature
-Switched to branch 'feature'
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls
-[0m[01;32ma.out[0m  main.cpp
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git checkout master
-Switched to branch 'master'
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git log
-[?1h=commit e98bac474133e458cce1ff82eb57a068df0b8801[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Tue Jul 29 15:17:07 2014 -0700[m
-[m
-    added new main[m
-[m
-commit eff8b65b723140a2c6cd4066d21e6dde5fa09fc6[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Tue Jul 29 14:58:35 2014 -0700[m
-[m
-    added random numbers[m
-[m
-commit 36b548171a5bd87654128b55fccaadef4df16616[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Tue Jul 29 14:48:48 2014 -0700[m
-[m
-    added code to main.cpp[m
-[m
-commit e78bc601ff100d96ec2965b69f53c90f4f46b4a2[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Tue Jul 29 14:44:17 2014 -0700[m
-[m
-    starting the facebook project[m
-[K[?1l>]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git checkout eff8b65b723140a2c6cd4066d21e6 dde5fa09fc6[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
-Note: checking out 'eff8b65b'.
-
-You are in 'detached HEAD' state. You can look around, make experimental
-changes and commit them, and you can discard any commits you make in this
-state without impacting any branches by performing another checkout.
-
-If you want to create a new branch to retain commits you create, you may
-do so (now or later) by using -b with the checkout command again. Example:
-
-  git checkout -b new_branch_name
-
-HEAD is now at eff8b65... added random numbers
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls[K[Kclear
-[H[2J]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls
-[0m[01;32ma.out[0m  main.cpp
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git checkout master
-Previous HEAD position was eff8b65... added random numbers
-Switched to branch 'master'
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls
-[0m[01;32ma.out[0m  main.cpp  [01;34msrc[0m
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ src [K[K[K[Kls src/
-main.cpp
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls
-[0m[01;32ma.out[0m  main.cpp  [01;34msrc[0m
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ rm a.out 
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls
-main.cpp  [0m[01;34msrc[0m
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ rm main.cpp 
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls
-[0m[01;34msrc[0m
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git status
-# On branch master
-# Changes not staged for commit:
-#   (use "git add/rm <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	deleted:    main.cpp
-#
-no changes added to commit (use "git add" and/or "git commit -a")
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git checji[K[K[Kkou[K[K[Kckout feature
-Switched to branch 'feature'
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls
-main.cpp
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git checkout master
-Switched to branch 'master'
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls
-main.cpp  [0m[01;34msrc[0m
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ clear
-[H[2J]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls
-main.cpp  [0m[01;34msrc[0m
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ rm main.cpp [1@g[1@i[1@t[1@ 
-rm 'main.cpp'
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls
-[0m[01;34msrc[0m
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git status
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#	deleted:    main.cpp
-#
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git commit -m "deleted"
-[master 5de347f] deleted
- 1 file changed, 13 deletions(-)
- delete mode 100644 main.cpp
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls
-[0m[01;34msrc[0m
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git rm[K[K[K[K[K[Kmv[K[Ktouch testfile
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls
-[0m[01;34msrc[0m  testfile
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ mv testfile src/
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls
-[0m[01;34msrc[0m
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls src/
-main.cpp  testfile
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ rm t[Ksrc/testfile 
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git mv src/main.cpp .
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls
-main.cpp  [0m[01;34msrc[0m
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls src
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ gi [Kt status
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#	renamed:    src/main.cpp -> main.cpp
-#
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git [K[K[K[Kclear
-[H[2J]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git commit "moved file"
-error: pathspec 'moved file' did not match any file(s) known to git.
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ git commit "moved file"[C[1P[1P[C[1P[1P[1P[1P[1@c[1@o[1@m[1@m[1@i[1@t[C[1@ [1@-[1@m
-[master 28b6530] moved file
- 1 file changed, 0 insertions(+), 0 deletions(-)
- rename src/main.cpp => main.cpp (100%)
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ ls
-main.cpp  [0m[01;34msrc[0m
-]0;user@userland: ~/proj/ucr-cs100/lecture/facebookuser@userland:~/proj/ucr-cs100/lecture/facebook$ cd ..
-]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ ls
-[0m[01;34mfacebook[0m  [01;34mgittest[0m  lecture1  lecture2  test
-]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ git clone https://github.com/mikeizbicki/ucr-cs100. git
-Cloning into 'ucr-cs100'...
-remote: Counting objects: 97, done.[K
-remote: Compressing objects:   1% (1/78)   [Kremote: Compressing objects:   2% (2/78)   [Kremote: Compressing objects:   3% (3/78)   [Kremote: Compressing objects:   5% (4/78)   [Kremote: Compressing objects:   6% (5/78)   [Kremote: Compressing objects:   7% (6/78)   [Kremote: Compressing objects:   8% (7/78)   [Kremote: Compressing objects:  10% (8/78)   [Kremote: Compressing objects:  11% (9/78)   [Kremote: Compressing objects:  12% (10/78)   [Kremote: Compressing objects:  14% (11/78)   [Kremote: Compressing objects:  15% (12/78)   [Kremote: Compressing objects:  16% (13/78)   [Kremote: Compressing objects:  17% (14/78)   [Kremote: Compressing objects:  19% (15/78)   [Kremote: Compressing objects:  20% (16/78)   [Kremote: Compressing objects:  21% (17/78)   [Kremote: Compressing objects:  23% (18/78)   [Kremote: Compressing objects:  24% (19/78)   [Kremote: Compressing objects:  25% (20/78)   [Kremote: Compressing objects:  26% (21/78)   [Kremote: Compressing objects:  28% (22/78)   [Kremote: Compressing objects:  29% (23/78)   [Kremote: Compressing objects:  30% (24/78)   [Kremote: Compressing objects:  32% (25/78)   [Kremote: Compressing objects:  33% (26/78)   [Kremote: Compressing objects:  34% (27/78)   [Kremote: Compressing objects:  35% (28/78)   [Kremote: Compressing objects:  37% (29/78)   [Kremote: Compressing objects:  38% (30/78)   [Kremote: Compressing objects:  39% (31/78)   [Kremote: Compressing objects:  41% (32/78)   [Kremote: Compressing objects:  42% (33/78)   [Kremote: Compressing objects:  43% (34/78)   [Kremote: Compressing objects:  44% (35/78)   [Kremote: Compressing objects:  46% (36/78)   [Kremote: Compressing objects:  47% (37/78)   [Kremote: Compressing objects:  48% (38/78)   [Kremote: Compressing objects:  50% (39/78)   [Kremote: Compressing objects:  51% (40/78)   [Kremote: Compressing objects:  52% (41/78)   [Kremote: Compressing objects:  53% (42/78)   [Kremote: Compressing objects:  55% (43/78)   [Kremote: Compressing objects:  56% (44/78)   [Kremote: Compressing objects:  57% (45/78)   [Kremote: Compressing objects:  58% (46/78)   [Kremote: Compressing objects:  60% (47/78)   [Kremote: Compressing objects:  61% (48/78)   [Kremote: Compressing objects:  62% (49/78)   [Kremote: Compressing objects:  64% (50/78)   [Kremote: Compressing objects:  65% (51/78)   [Kremote: Compressing objects:  66% (52/78)   [Kremote: Compressing objects:  67% (53/78)   [Kremote: Compressing objects:  69% (54/78)   [Kremote: Compressing objects:  70% (55/78)   [Kremote: Compressing objects:  71% (56/78)   [Kremote: Compressing objects:  73% (57/78)   [Kremote: Compressing objects:  74% (58/78)   [Kremote: Compressing objects:  75% (59/78)   [Kremote: Compressing objects:  76% (60/78)   [Kremote: Compressing objects:  78% (61/78)   [Kremote: Compressing objects:  79% (62/78)   [Kremote: Compressing objects:  80% (63/78)   [Kremote: Compressing objects:  82% (64/78)   [Kremote: Compressing objects:  83% (65/78)   [Kremote: Compressing objects:  84% (66/78)   [Kremote: Compressing objects:  85% (67/78)   [Kremote: Compressing objects:  87% (68/78)   [Kremote: Compressing objects:  88% (69/78)   [Kremote: Compressing objects:  89% (70/78)   [Kremote: Compressing objects:  91% (71/78)   [Kremote: Compressing objects:  92% (72/78)   [Kremote: Compressing objects:  93% (73/78)   [Kremote: Compressing objects:  94% (74/78)   [Kremote: Compressing objects:  96% (75/78)   [Kremote: Compressing objects:  97% (76/78)   [Kremote: Compressing objects:  98% (77/78)   [Kremote: Compressing objects: 100% (78/78)   [Kremote: Compressing objects: 100% (78/78), done.[K
-Unpacking objects:   1% (1/97)   Unpacking objects:   2% (2/97)   Unpacking objects:   3% (3/97)   Unpacking objects:   4% (4/97)   Unpacking objects:   5% (5/97)   Unpacking objects:   6% (6/97)   Unpacking objects:   7% (7/97)   Unpacking objects:   8% (8/97)   Unpacking objects:   9% (9/97)   Unpacking objects:  10% (10/97)   Unpacking objects:  11% (11/97)   Unpacking objects:  12% (12/97)   Unpacking objects:  13% (13/97)   Unpacking objects:  14% (14/97)   Unpacking objects:  15% (15/97)   Unpacking objects:  16% (16/97)   Unpacking objects:  17% (17/97)   Unpacking objects:  18% (18/97)   Unpacking objects:  19% (19/97)   Unpacking objects:  20% (20/97)   Unpacking objects:  21% (21/97)   Unpacking objects:  22% (22/97)   Unpacking objects:  23% (23/97)   Unpacking objects:  24% (24/97)   Unpacking objects:  25% (25/97)   Unpacking objects:  26% (26/97)   Unpacking objects:  27% (27/97)   Unpacking objects:  28% (28/97)   Unpacking objects:  29% (29/97)   Unpacking objects:  30% (30/97)   Unpacking objects:  31% (31/97)   Unpacking objects:  32% (32/97)   Unpacking objects:  34% (33/97)   Unpacking objects:  35% (34/97)   Unpacking objects:  36% (35/97)   Unpacking objects:  37% (36/97)   Unpacking objects:  38% (37/97)   Unpacking objects:  39% (38/97)   Unpacking objects:  40% (39/97)   Unpacking objects:  41% (40/97)   Unpacking objects:  42% (41/97)   Unpacking objects:  43% (42/97)   Unpacking objects:  44% (43/97)   Unpacking objects:  45% (44/97)   Unpacking objects:  46% (45/97)   Unpacking objects:  47% (46/97)   remote: Total 97 (delta 9), reused 83 (delta 7)[K
-Unpacking objects:  48% (47/97)   Unpacking objects:  49% (48/97)   Unpacking objects:  50% (49/97)   Unpacking objects:  51% (50/97)   Unpacking objects:  52% (51/97)   Unpacking objects:  53% (52/97)   Unpacking objects:  54% (53/97)   Unpacking objects:  55% (54/97)   Unpacking objects:  56% (55/97)   Unpacking objects:  57% (56/97)   Unpacking objects:  58% (57/97)   Unpacking objects:  59% (58/97)   Unpacking objects:  60% (59/97)   Unpacking objects:  61% (60/97)   Unpacking objects:  62% (61/97)   Unpacking objects:  63% (62/97)   Unpacking objects:  64% (63/97)   Unpacking objects:  65% (64/97)   Unpacking objects:  67% (65/97)   Unpacking objects:  68% (66/97)   Unpacking objects:  69% (67/97)   Unpacking objects:  70% (68/97)   Unpacking objects:  71% (69/97)   Unpacking objects:  72% (70/97)   Unpacking objects:  73% (71/97)   Unpacking objects:  74% (72/97)   Unpacking objects:  75% (73/97)   Unpacking objects:  76% (74/97)   Unpacking objects:  77% (75/97)   Unpacking objects:  78% (76/97)   Unpacking objects:  79% (77/97)   Unpacking objects:  80% (78/97)   Unpacking objects:  81% (79/97)   Unpacking objects:  82% (80/97)   Unpacking objects:  83% (81/97)   Unpacking objects:  84% (82/97)   Unpacking objects:  85% (83/97)   Unpacking objects:  86% (84/97)   Unpacking objects:  87% (85/97)   Unpacking objects:  88% (86/97)   Unpacking objects:  89% (87/97)   Unpacking objects:  90% (88/97)   Unpacking objects:  91% (89/97)   Unpacking objects:  92% (90/97)   Unpacking objects:  93% (91/97)   Unpacking objects:  94% (92/97)   Unpacking objects:  95% (93/97)   Unpacking objects:  96% (94/97)   Unpacking objects:  97% (95/97)   Unpacking objects:  98% (96/97)   Unpacking objects: 100% (97/97)   Unpacking objects: 100% (97/97), done.
-]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ ls
-[0m[01;34mfacebook[0m  [01;34mgittest[0m  lecture1  lecture2  test  [01;34mucr-cs100[0m
-]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ cd ucr-cs100/
-]0;user@userland: ~/proj/ucr-cs100/lecture/ucr-cs100user@userland:~/proj/ucr-cs100/lecture/ucr-cs100$ clear
-[H[2J]0;user@userland: ~/proj/ucr-cs100/lecture/ucr-cs100user@userland:~/proj/ucr-cs100/lecture/ucr-cs100$ ls
-[0m[01;34massignments[0m  GRADES.md  [01;34mlecture[0m  LICENSE  README.md  [01;34mscripts[0m  [01;34mstudentinfo[0m
-]0;user@userland: ~/proj/ucr-cs100/lecture/ucr-cs100user@userland:~/proj/ucr-cs100/lecture/ucr-cs100$ cd lecture/
-]0;user@userland: ~/proj/ucr-cs100/lecture/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture/ucr-cs100/lecture$ ls
-[0m[01;34mgittest[0m  lecture1
-]0;user@userland: ~/proj/ucr-cs100/lecture/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture/ucr-cs100/lecture$ vim lecture1 
-[?1049h[?1h=[1;35r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[35;1H"lecture1" 12L, 641C[>c[1;1H[33m  1 [mScript started on Mon 28 Jul 2014 03:19:08 PM PDT
-[33m  2 [m[34m^[[m]0;user@[41muserland[m: ~[34m^G[muser@[41muserland[m:~$ [41mlx[m[34m^H^[[m[Ks[34m^M[m
-[33m  3 [m[34m^[[m[0[41mm[m[34m^[[m[01;34[41mmblog[m[34m^[[m[0[41mm[m  [34m^[[m[01;36[41mmdocs[m[34m^[[m[0[41mm[m  [34m^[[m[01;34[41mmdownload[m[34m^[[m[0[41mm[m  [34m^[[m[01;34[41mmDropbox[m[34m^[[[m[4;1H[33m    [m[0[41mm[m  [34m^[[m[01;34[41mmimg[m[34m^[[m[0[41mm[m  [41mlecture1[m  [34m^[[m[01;34[41mmpapers[m[34m^[[m[0[41mm[m  [34m^[[m[01;34[41mmproj[m[34m^[[m[0[41mm[m  [34m^[[m[01;34[41mmtmm[m[5;1H[33m    [m[41mp[m[34m^[[m[0[41mm[m[34m^M[m
-[33m  4 [m[34m^[[m]0;user@[41muserland[m: ~[34m^G[muser@[41muserland[m:~$ ct [34m^H^[[m[K[34m^H^[[m[K[34m^H^[[m[Kat[34m^H^[[m[K[34m^H^[[m[K[34m^G^G[mcat [34m^H^[[[m[7;1H[33m    [m[K[34m^H^[[m[K[34m^H^[[m[K[34m^H^[[m[K[34m^G[mecho "this is the contents"[34m^M[m
-[33m  5 [mthis is the contents[34m^M[m
-[33m  6 [m[34m^[[m]0;user@[41muserland[m: ~[34m^G[muser@[41muserland[m:~$ echo "this is the contents" > file[34m^M[m
-[33m  7 [m[34m^[[m]0;user@[41muserland[m: ~[34m^G[muser@[41muserland[m:~$ cat file[34m^M[m
-[33m  8 [mthis is the contents[34m^M[m
-[33m  9 [m[34m^[[m]0;user@[41muserland[m: ~[34m^G[muser@[41muserland[m:~$ exit[34m^M[m
-[33m 10 [mexit[34m^M[m
-[33m 11 
- 12 [mScript done on Mon 28 Jul 2014 03:20:36 PM PDT
-[1m[34m~                                                                                          [17;1H~                                                                                          [18;1H~                                                                                          [19;1H~                                                                                          [20;1H~                                                                                          [21;1H~                                                                                          [22;1H~                                                                                          [23;1H~                                                                                          [24;1H~                                                                                          [25;1H~                                                                                          [26;1H~                                                                                          [27;1H~                                                                                          [28;1H~                                                                                          [29;1H~                                                                                          [30;1H~                                                                                          [31;1H~                                                                                          [32;1H~                                                                                          [33;1H~                                                                                          [34;1H~                                                                                          [m[35;74H1,1[11CAll]2;lecture1 (~/proj/ucr-cs100/lecture/ucr-cs100/lecture) - VIM]1;lecture1[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[35;1H[K[35;1H:[?12l[?25hq[?25l[?12l[?25h[?25l]2;user@userland: ~/proj/ucr-cs100/lecture/ucr-cs100/lecture]1;user@userland: ~/proj/ucr-cs100/lecture/ucr-cs100/lecture[35;1H[K[35;1H[?1l>[?12l[?25h[?1049l]0;user@userland: ~/proj/ucr-cs100/lecture/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture/ucr-cs100/lecture$ cat lecture1 
-Script started on Mon 28 Jul 2014 03:19:08 PM PDT
-]0;user@userland: ~user@userland:~$ lx[Ks
-[0m[01;34mblog[0m  [01;36mdocs[0m  [01;34mdownload[0m  [01;34mDropbox[0m  [01;34mimg[0m  lecture1  [01;34mpapers[0m  [01;34mproj[0m  [01;34mtmp[0m
-]0;user@userland: ~user@userland:~$ ct [K[K[Kat[K[Kcat [K[K[K[Kecho "this is the contents"
-this is the contents
-]0;user@userland: ~user@userland:~$ echo "this is the contents" > file
-]0;user@userland: ~user@userland:~$ cat file
-this is the contents
-]0;user@userland: ~user@userland:~$ exit
-exit
-
-Script done on Mon 28 Jul 2014 03:20:36 PM PDT
-]0;user@userland: ~/proj/ucr-cs100/lecture/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture/ucr-cs100/lecture$ git pull origin master
-remote: Counting objects: 3, done.[K
-remote: Compressing objects: 100% (1/1)   [Kremote: Compressing objects: 100% (1/1), done.[K
-remote: Total 3 (delta 2), reused 3 (delta 2)[K
-Unpacking objects:  33% (1/3)   Unpacking objects:  66% (2/3)   Unpacking objects: 100% (3/3)   Unpacking objects: 100% (3/3), done.
-From https://github.com/mikeizbicki/ucr-cs100
- * branch            master     -> FETCH_HEAD
-Updating 1672bc4..815da8c
-Fast-forward
- README.md |    2 ++
- 1 file changed, 2 insertions(+)
-]0;user@userland: ~/proj/ucr-cs100/lecture/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture/ucr-cs100/lecture$ cd ..
-]0;user@userland: ~/proj/ucr-cs100/lecture/ucr-cs100user@userland:~/proj/ucr-cs100/lecture/ucr-cs100$ ls
-[0m[01;34massignments[0m  GRADES.md  [01;34mlecture[0m  LICENSE  README.md  [01;34mscripts[0m  [01;34mstudentinfo[0m
-]0;user@userland: ~/proj/ucr-cs100/lecture/ucr-cs100user@userland:~/proj/ucr-cs100/lecture/ucr-cs100$ clear
-[H[2J]0;user@userland: ~/proj/ucr-cs100/lecture/ucr-cs100user@userland:~/proj/ucr-cs100/lecture/ucr-cs100$ cat[K[K[Khead README.md 
-This is an in class edit.
-
-# cs100 - software construction
-
-This is a course on [how to be a hacker](http://www.catb.org/esr/faqs/hacker-howto.html).  Being a hacker [means a lot of things](http://www.catb.org/jargon/html/H/hacker.html).  It means:
-
-1. wanting to know *how* and *why* computers work
-
-2. being efficient / never repeating yourself
-
-]0;user@userland: ~/proj/ucr-cs100/lecture/ucr-cs100user@userland:~/proj/ucr-cs100/lecture/ucr-cs100$ vim README.md 
-[?1049h[?1h=[1;35r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[35;1H"README.md" 73L, 4314C[>c[1;1H[33m  1 [mThis is an in class edit.
-[33m  2 
-  3 [m[35m# [m[35m[41mcs100[m[35m - software construction[m
-[33m  4 
-  5 [mThis is a course on [[4m[35mhow to be a hacker[m]([31mhttp://www.catb.org/esr/faqs/hacker-howto.htmll[m[6;1H[33m    [m).  Being a hacker [[4m[35mmeans a lot of things[m]([31mhttp://www.catb.org/jargon/html/H/hacker.htmm[m[7;1H[33m    [m[31ml[m).  It means:
-[33m  6 
-  7 1.[m wanting to know [7m*how*[m and [7m*why*[m computers work
-[33m  8 
-  9 2.[m being efficient / never repeating yourself
-[33m 10 
- 11 3.[m using and contributing to open source software
-[33m 12 
- 13 4.[m understanding the edge cases of your software
-[33m 14 
- 15 5.[m using tools in creative and unexpected ways
-[33m 16 
- 17 6.[m (occasionally) we combine all these together and break stuff
-[33m 18 
- 19 [mHacking is a mindset.  I can't force it on you---it's up to you to embrace it.  For exaa[22;1H[33m    [mmple, we'll be discussing many new tools in this course: a version control system callee[23;1H[33m    [md [35m`[mgit[35m`[m, an editor called [35m`[m[45mvim[m[35m`[m, a debugging tool called [35m`[m[41mgdb[m[35m`[m, and we'll be going intoo[24;1H[33m    [m quite a bit more depth on how to use [35m`[mbash[35m`[m and the [35m`[mLinux[35m`[m operating system.  All of  [25;1H[33m    [mthese tools are very weird.  Using them will make you uncomfortable.  At first.  But thh[26;1H[33m    [mese tools are powerful.  Mastering these tools will make you a [7m*much*[m more efficient prr[27;1H[33m    [mogrammer.  Once you've mastered them, you'll never go back.
-[33m 20 
- 21 [mYour main goal in this course is to build your own [41munix[m shell.  This is the biggest proo[30;1H[33m    [mject you've undertaken so far.  You'll be developing it as an open source project and ww[31;1H[33m    [mill be forced to collaborate with each other at various points.
-[33m 22 
- 23 [mBy the end of the course, you should be comfortable running your own open source projecc[34;1H[33m    [mt and contributing to other people's open source code.[35;74H1,1[11CTop]2;README.md (~/proj/ucr-cs100/lecture/ucr-cs100) - VIM]1;README.md[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[35;74H2,0-1[2;5H[?12l[?25h[?25l[35;74H1,1  [1;5H[?12l[?25h[?25l[1;5H[K[2;4H[33m [m[35m# [m[35m[41mcs100[m[35m - software construction[m[3;5H[K[4;4H[33m [mThis is a course on [[4m[35mhow to be a hacker[m]([31mhttp://www.catb.org/esr/faqs/hacker-howto.htmll[m[5;1H[33m    [m).  Being a hacker [[4m[35mmeans a lot of things[m]([31mhttp://www.catb.org/jargon/html/H/hacker.htmm[m[6;1H[33m    [m[31ml[m).  It means:[6;19H[K[7;2H[33m 5[m[7;5H[K[8;4H[33m 1.[m wanting to know [7m*how*[m and [7m*why*[m computers work[9;5H[K[10;4H[33m 2.[m being efficient / never repeating yourself[11;5H[K[12;4H[33m 3.[m using and contributing to open source software[13;5H[K[14;4H[33m 4.[m understanding the edge cases of your software[15;5H[K[16;4H[33m 5.[m using tools in creative and unexpected ways[17;5H[K[18;4H[33m 6.[m (occasionally) we combine all these together and break stuff[19;5H[K[20;4H[33m [mHacking is a mindset.  I can't force it on you---it's up to you to embrace it.  For exaa[21;1H[33m    [mmple, we'll be discussing many new tools in this course: a version control system callee[22;1H[33m    [md [35m`[mgit[35m`[m, an editor called [35m`[m[45mvim[m[35m`[m, a debugging tool called [35m`[m[41mgdb[m[35m`[m, and we'll be going intoo[23;1H[33m    [m quite a bit more depth on how to use [35m`[mbash[35m`[m and the [35m`[mLinux[35m`[m operating system.  All of  [24;1H[33m    [mthese tools are very weird.  Using them will make you uncomfortable.  At first.  But thh[25;1H[33m    [mese tools are powerful.  Mastering these tools will make you a [7m*much*[m more efficient prr[26;1H[33m    [mogrammer.  Once you've mastered them, you'll never go back.[26;64H[K[27;1H[33m 19[m[27;5H[K[28;4H[33m [mYour main goal in this course is to build your own [41munix[m shell.  This is the biggest proo[29;1H[33m    [mject you've undertaken so far.  You'll be developing it as an open source project and ww[30;1H[33m    [mill be forced to collaborate with each other at various points.[30;68H[K[31;1H[33m 21[m[31;5H[K[32;4H[33m [mBy the end of the course, you should be comfortable running your own open source projecc[33;1H[33m    [mt and contributing to other people's open source code.[33;59H[K[34;1H[33m 23[m[34;5H[K]2;README.md + (~/proj/ucr-cs100/lecture/ucr-cs100) - VIM]1;README.md[35;76H0-1[1;5H[?12l[?25h[?25l[33m [m[35m# [m[35m[41mcs100[m[35m - software construction[m[2;5H[K[3;4H[33m [mThis is a course on [[4m[35mhow to be a hacker[m]([31mhttp://www.catb.org/esr/faqs/hacker-howto.htmll[m[4;1H[33m    [m).  Being a hacker [[4m[35mmeans a lot of things[m]([31mhttp://www.catb.org/jargon/html/H/hacker.htmm[m[5;1H[33m    [m[31ml[m).  It means:[5;19H[K[6;2H[33m 4[m[6;5H[K[7;4H[33m 1.[m wanting to know [7m*how*[m and [7m*why*[m computers work[8;5H[K[9;4H[33m 2.[m being efficient / never repeating yourself[10;5H[K[11;4H[33m 3.[m using and contributing to open source software[12;5H[K[13;4H[33m 4.[m understanding the edge cases of your software[14;5H[K[15;4H[33m 5.[m using tools in creative and unexpected ways[16;5H[K[17;4H[33m 6.[m (occasionally) we combine all these together and break stuff[18;5H[K[19;4H[33m [mHacking is a mindset.  I can't force it on you---it's up to you to embrace it.  For exaa[20;1H[33m    [mmple, we'll be discussing many new tools in this course: a version control system callee[21;1H[33m    [md [35m`[mgit[35m`[m, an editor called [35m`[m[45mvim[m[35m`[m, a debugging tool called [35m`[m[41mgdb[m[35m`[m, and we'll be going intoo[22;1H[33m    [m quite a bit more depth on how to use [35m`[mbash[35m`[m and the [35m`[mLinux[35m`[m operating system.  All of  [23;1H[33m    [mthese tools are very weird.  Using them will make you uncomfortable.  At first.  But thh[24;1H[33m    [mese tools are powerful.  Mastering these tools will make you a [7m*much*[m more efficient prr[25;1H[33m    [mogrammer.  Once you've mastered them, you'll never go back.[25;64H[K[26;1H[33m 18[m[26;5H[K[27;4H[33m [mYour main goal in this course is to build your own [41munix[m shell.  This is the biggest proo[28;1H[33m    [mject you've undertaken so far.  You'll be developing it as an open source project and ww[29;1H[33m    [mill be forced to collaborate with each other at various points.[29;68H[K[30;1H[33m 20[m[30;5H[K[31;4H[33m [mBy the end of the course, you should be comfortable running your own open source projecc[32;1H[33m    [mt and contributing to other people's open source code.[32;59H[K[33;1H[33m 22[m[33;5H[K[34;4H[33m [m[35m### instructors[m[35;76H1  [1;5H[?12l[?25h[?25l[35;1H[K[35;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"README.md" 71L, 4287C written]2;user@userland: ~/proj/ucr-cs100/lecture/ucr-cs100]1;user@userland: ~/proj/ucr-cs100/lecture/ucr-cs100
-[?1l>[?12l[?25h[?1049l]0;user@userland: ~/proj/ucr-cs100/lecture/ucr-cs100user@userland:~/proj/ucr-cs100/lecture/ucr-cs100$ git status
-# On branch master
-# Your branch is ahead of 'origin/master' by 1 commit.
-#
-# Changes not staged for commit:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	modified:   README.md
-#
-no changes added to commit (use "git add" and/or "git commit -a")
-]0;user@userland: ~/proj/ucr-cs100/lecture/ucr-cs100user@userland:~/proj/ucr-cs100/lecture/ucr-cs100$ git add README.md 
-]0;user@userland: ~/proj/ucr-cs100/lecture/ucr-cs100user@userland:~/proj/ucr-cs100/lecture/ucr-cs100$ git commit -m "took away the in class edi t"
-[master 7059a15] took away the in class edit
- 1 file changed, 2 deletions(-)
-]0;user@userland: ~/proj/ucr-cs100/lecture/ucr-cs100user@userland:~/proj/ucr-cs100/lecture/ucr-cs100$ git pis[K[Kush origin master
-Username for 'https://github.com': miek  keizbicki
-Password for 'https://mikeizbicki@github.com': 
-Counting objects: 5, done.
-Delta compression using up to 4 threads.
-Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
-Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 293 bytes, done.
-Total 3 (delta 2), reused 0 (delta 0)
-To https://github.com/mikeizbicki/ucr-cs100.git
-   815da8c..7059a15  master -> master
-]0;user@userland: ~/proj/ucr-cs100/lecture/ucr-cs100user@userland:~/proj/ucr-cs100/lecture/ucr-cs100$ exit
-exit
-
-Script done on Tue 29 Jul 2014 03:47:04 PM PDT

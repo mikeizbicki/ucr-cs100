@@ -1,219 +1,0 @@
-Script started on Wed 13 Aug 2014 02:35:44 PM PDT
-]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$$  export PS1="\$ "
-$ clear
-[H[2J$ cat te[Ke
-test          texput.log
-testfile.old  
-$ cat te
-test          texput.log
-testfile.old  
-$ cat test | tail > qwerty
-$ clear
-[H[2J$ g+ [C[C[C[K+ dup.cpp 
-dup.cpp: In function â€˜int main()â€™:
-dup.cpp:11:15: warning: deprecated conversion from string constant to â€˜char*â€™ [-Wwrite-strings]
-dup.cpp:12:28: error: â€˜strlenâ€™ was not declared in this scope
-$ g++ dup.cpp 
-dup.cpp: In function â€˜int main()â€™:
-dup.cpp:12:15: warning: deprecated conversion from string constant to â€˜char*â€™ [-Wwrite-strings]
-$ g++ dup.cpp 
-$ ./a.out 
-$ cat test
-Script started on Tue 29 Jul 2014 02:32:02 PM PDT
-]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ echo "hello"
-hello
-]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ exit
-exit
-
-Script done on Tue 29 Jul 2014 02:32:14 PM PDT
-$ rm test
-$ rm test[C[C[1@cat[C[C[C[C[C[C[C./a.out 
-$ cat test
-$ ck[Klear
-[H[2J$ clearat test[C[C./a.out [C[Ccat test[C[C[C[3Plearat test[C[C./a.out [C[C[1Prm test[C[C[1@cat[C[C[C[C[C[C[C./a.out [C[C[4@g++ dup.cpp[C
-dup.cpp: In function â€˜int main()â€™:
-dup.cpp:12:29: error: â€˜perrorâ€™ was not declared in this scope
-dup.cpp:13:15: error: â€˜exitâ€™ was not declared in this scope
-$ g++ dup.cpp 
-dup.cpp: In function â€˜int main()â€™:
-dup.cpp:15:15: error: â€˜exitâ€™ was not declared in this scope
-$ g++ dup.cpp 
-$ ./a.out 
-$ cat test
-$ cat test[C[C./a.out [C[C[4@g++ dup.cpp[C
-$ g++ dup.cpp [C[C[4Pcat test[C[C./a.out 
-$ ./a.out [C[C[4@g++ dup.cpp[C[C[C[4Pcat test[C[C./a.out [C[Ccat test
-hello world!
-$ clear
-[H[2J$ g++ dup.cpp 
-$ ./a.out 
-$ cat test
-hello world!
-$ rm test
-$ rm test[C[C[1@cat[C[C[C[C[C[C[C./a.out 
-$ ./a.out [C[C[1Prm test[C[C[1@cat[C[C[C[C[C
-hello world!
-$ cat test[C[C./a.out [C[C[1Prm test[C[C[1@cat[C[C[C[C[C[C[C./a.out [C[C[4@g++ dup.cpp[C
-$ g++ dup.cpp [C[C[4Pcat test[C[C./a.out 
-open failed: Permission denied
-$ rm test
-rm: remove write-protected regular file `test'? y
-$ rm test[C[C./a.out 
-$ cat test
-cat: test: Permission denied
-$ cat test[C[C./a.out [C[C[1Prm test[C[C./a.out [C[C[4@g++ dup.cpp[C
-$ g++ dup.cpp [C[C[4Pcat test[C[C./a.out 
-open failed: Permission denied
-$ clear
-[H[2J$ clear[C[C./a.out [C[C[4@g++ dup.cpp[C
-$ g++ dup.cpp [C[C[7Pclear[C[C./a.out 
-$ ./a.out [C[C[4@g++ dup.cpp[C
-$ g++ dup.cpp [C[C[4P./a.out[C
-does this work?
-$ ./a.out [C[C[4@g++ dup.cpp[C
-$ g++ dup.cpp [C[C[4P./a.out[C
-$ ./a.out [C[C[4@g++ dup.cpp[C
-$ g++ dup.cpp [C[C[4P./a.out[C
-write failed: Bad file descriptor
-$ ./a.out [C[C[4@g++ dup.cpp[C
-$ g++ dup.cpp [C[C[4P./a.out[C
-write failed: Bad file descriptor
-$ rm test
-$ rm test[C[C./a.out [C[C[4@g++ dup.cpp[C
-$ g++ dup.cpp [C[C[5Prm test[C[C./a.out 
-$ cat test
-cat: test: Permission denied
-$ ls -l test
-----r-x--T 1 user user 29 Aug 13 14:52 [0m[01;32mtest[0m
-$ chmod a[Ku+rr tet[Kst
-$ chmod u+rr test[C[C[5Pls -l[C[C[C[C[C[C[C[2Pcat[C[C[C[C[C
-hello world!
-does this work?
-$ clear
-[H[2J$ clearat test[C[C[C[7@hmod u+rr[C[C[C[C[C[C[C[5Pls -l[C[C[C[C[C[C[C[2Pcat[C[C[C[C[C[C[C./a.out [C[C[4@g++ dup.cpp[C
-$ g++ dup.cpp [C[C[7Pclearat test[C[C[C[7@hmod u+rr[C[C[C[C[C[C[C[5Pls -l[C[C[C[C[C[C[C[2Pcat[C[C[C[C[C[C[C./a.out [C[C[4@g++ dup.cpp[C[C[C[4P./a.out[C
-open failed: Permission denied
-$ rm test
-rm: remove write-protected regular file `test'? y
-$ rm test[C[C./a.out [C[C[4@g++ dup.cpp[C[C[C[4P./a.out[C
-fd:  
-fd2: 
-$ rm test; g++ dup.cpp [K; ./a.out
-fd:  3
-fd2: 1
-$ rm test; g++ dup.cpp; ./a.out
-fd:  3
-fd2: 1
-is this the screen?
-$ ls > results
-$ ls > results[C[Crm test; g++ dup.cpp; ./a.out
-$ cat test
-is this a file????
-$ clear
-[H[2J$ cat /dev/random
-Øê±k² L]ÞÖÀ7‰ÇÓ.«íÂ>KEK²n;Ú9ú/SSLô±LÏÕaßç¶UòÍ¼ò0‘ƒ®þò³]š`þ^uFw'5D13FÜc©›sýLàQ—UAB“’ô–IàtÚ•F–B-CGR…ÎóÆZèªî&àÚÆ´[^C
-$ cat /dev/random[C[C[Clear[Kat /dev/random > random &
-[1] 11338
-$ gedit
-
-
-
-$ 
-$ 
-$ 
-$ gedit &
-[2] 11513
-$ [K$ ls
-[0m[01;32ma.out[0m          main.cpp
-bitwise.cpp    Makefile
-[01;32mdoesnotexist[0m   out
-dup.cpp        out2
-[01;32mexecv[0m          output
-execv.cpp      q
-[01;34mfacebook[0m       qwerty
-fork.cpp       [01;32mrand[0m
-[01;34mgittest[0m        random
-lecture        readwrite.cpp
-lecture1       results
-lecture10      [01;32mseriouslydoesn'texist[0m
-lecture2       stat.cpp
-lecture3       [01;36mstdin[0m
-lecture4       stdout
-lecture4b      stringtest.cpp
-lecture5       [01;32mtest[0m
-lecture8       testfile.old
-lecture9       texput.log
-macroquiz.cpp  this has spaces
-main.c         valgrind.cpp
-$ [K$ clear
-[H[2J[2]+  Done                    gedit
-$ cat test >> test.out[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K< test
-is this a file????
-$ cat < test< test< test< test[1P test
-test
-$ cat <<< test[K[K[K[K[K[K[K[K| cat| cat| cat| cat| tail 
-^C
-$ cat | cat| cat| cat| cat| tail [C[C[C[C[C[C<<< test[K[2P test[C[C[C[5Plear[C[C[3Plsgedit &[K[C[Ccat /dev/random > random &[K[C[C[Clear[Kat test[C[Crm test; g++ dup.cpp; ./a.out[C[C[17Pls > results[C[Crm test; g++ dup.cpp; ./a.out[C[1@\[1P[1P[1P[1P[1@p[1@i[1@p[1@e
-rm: remove write-protected regular file `test'? y
-fd[0] = 3
-fd[1] = 4
-$ rm test; g++ pipe.cpp; ./a.out
-rm: cannot remove `test': No such file or directory
-fd[0] = 3
-fd[1] = 4
-
-^C
-$ rm test; g++ pipe.cpp; ./a.out[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1P
-fd[0] = 3
-fd[1] = 4
-^C
-$ g++ pipe.cpp; ./a.out
-fd[0] = 3
-fd[1] = 4
-buf=test
-$ clear
-[H[2J$ cat test | out
-bash: out: command not found
-cat: test: No such file or directory
-$ cat test | out[K[K[Kcat
-cat: test: No such file or directory
-$ history | tail
- 3667  clear
- 3668  cat < test
- 3669  cat <<< test
- 3670  cat | cat| cat| cat| cat| tail 
- 3671  rm test; g++ pipe.cpp; ./a.out
- 3672  g++ pipe.cpp; ./a.out
- 3673  clear
- 3674  cat test | out
- 3675  cat test | cat
- 3676  history | tail
-$  b[Khistory | tail[C[Ccat test | catout[C[C[Clear[K[C[Cg++ pipe.cpp; ./a.out
-buf=test
-$ [A[K[Kg++ pipe.cpp; ./a.out
-buf=test
-
-$ g++ pipe.cpp; ./a.out
-buf=test
-what'll happen?!
-
-what'll happen?!
-$ clear
-[H[2J$ clear[C[Cg++ pipe.cpp; ./a.out
-what'll happen?!
-what'll happen?!
-$ g++ pipe.cpp; ./a.out
-what'll happen?!
-what'll happen?!
-$ g++ pipe.cpp; ./a.out
-buf=test
-what'll happen?!
-
-what'll happen?!
-$ g++ pipe.cpp; ./a.out
-what'll happen?!
-$ [K$ clear
-[H[2J$ exit
-exit
-
-Script done on Thu 14 Aug 2014 02:30:52 PM PDT
