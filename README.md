@@ -49,20 +49,10 @@ This is a system similar to the piazza system you may already be familiar with, 
 
 The course textbook is *The Art of Unix Programming* by Eric Steven Raymond (more commonly known as esr).
 You can download it for free at [esr's website](http://www.catb.org/esr/writings/taoup/html).
+All required reading is listed in the "assignments" category of the outline below.
+It includes reading from the textbook and outside sources.
 
-Other required readings:
-
-* [Paul Graham on what to get out of college](http://www.paulgraham.com/college.html)
-
-* [Paul Graham on how to be a good hacker](http://www.paulgraham.com/gh.html)
-
-* [Jeff Atwood on how to become a better programmer](http://blog.codinghorror.com/how-to-become-a-better-programmer-by-not-programming/)
-
-* [Patrick McKenzie on salary negotiation for programmers](http://www.kalzumeus.com/2012/01/23/salary-negotiation/)
-
-* [Ian Malpass's advice to future software engineers](https://medium.com/@indec/advice-to-future-software-engineers-64a29669d179)
-
-You can get extra credit for reading any of the following and discussing it with me in office hours:
+You can also get extra credit for reading any of the following and discussing it with me in office hours:
 
 * Elizer Yudowski's [Harry Potter and the Methods of Rationality](http://hpmor.org) (free online)
 
@@ -70,25 +60,21 @@ You can get extra credit for reading any of the following and discussing it with
 
 * Jessica Livingston's *Founders at Work* (a copy is in the ACM room)
 
-### course schedule
-
-This schedule is only a rough outline, and will probably change a lot.
-If there's something you want to learn not on the schedule, let me know!
-We have a lot of flexibility in this course to learn fun things.
+### course outline
 
 week | date | assignments | topics
 --- | --- | --- | ---
 0 | Oct02 | | introduction; using vim
-1 | Oct07 | | version control with git
-1 | Oct09 | [all about unix](http://www.catb.org/esr/writings/taoup/html/context.html) and [about common software licenses](http://www.catb.org/esr/writings/taoup/html/ch16s07.html) | version control with git
+1 | Oct07 | Paul Graham on [what to do in college](http://www.paulgraham.com/college.html) and [Ian Malpass's advice to future software engineers](https://medium.com/@indec/advice-to-future-software-engineers-64a29669d179)| version control with git
+1 | Oct09 | esr's [all about unix](http://www.catb.org/esr/writings/taoup/html/context.html) and [about common software licenses](http://www.catb.org/esr/writings/taoup/html/ch16s07.html) | version control with git
 2 | Oct14 | quiz | syscalls: managing processes (`fork`,`wait`,`exec`,`perror`)
-2 | Oct16 | [reading about documentation](http://www.catb.org/esr/writings/taoup/html/ch18s02.html) and [part II](http://www.catb.org/esr/writings/taoup/html/ch18s06.html) | syscalls: managing files (`open`,`close`,`read`,`write`)
+2 | Oct16 | esr's thoughts on [unix documentation](http://www.catb.org/esr/writings/taoup/html/ch18s02.html) and [part II](http://www.catb.org/esr/writings/taoup/html/ch18s06.html) | syscalls: managing files (`open`,`close`,`read`,`write`)
 3 | Oct21 | hw1 | debugging tools (`gdb`)
-3 | Oct23 | | debugging tools (`valgrind`,`cppcheck`)
+3 | Oct23 | [Paul Graham on how to be a good hacker](http://www.paulgraham.com/gh.html) and [Jeff Atwood on how to become a better programmer](http://blog.codinghorror.com/how-to-become-a-better-programmer-by-not-programming/) | debugging tools (`valgrind`,`cppcheck`)
 4 | Oct28 | quiz | syscalls: managing directories (`readdir`,`stat`)
-4 | Oct30 | | shell scripting: io redirection/piping
+4 | Oct30 | Ycombinator's [startup ideas we'd like to fund](http://old.ycombinator.com/ideas.html) and Paul Graham's [start up funding](http://paulgraham.com/startupfunding.html) | shell scripting: io redirection/piping
 5 | Nov04 | hw2 | shell scripting: io redirection/piping
-5 | Nov06 | | syscalls: io redirection/piping (`pipe`,`dup`)
+5 | Nov06 | [Patrick McKenzie on salary negotiation for programmers](http://www.kalzumeus.com/2012/01/23/salary-negotiation/) | syscalls: io redirection/piping (`pipe`,`dup`)
 6 | Nov11 | quiz | shell scripting: control flow with `if` and `for`
 6 | Nov13 | [reading about make](http://www.catb.org/esr/writings/taoup/html/ch15s04.html) | shell scripting: detailed makefiles
 7 | Nov18 | hw3 | syscalls: signal handling (`signal`,`sigaction`)
@@ -99,6 +85,10 @@ week | date | assignments | topics
 9 | Dec04 | [flaws with unix](http://www.catb.org/esr/writings/taoup/html/ch20s03.html) | syscalls: sockets
 10 | Dec11 | quiz | case study: hacking the email system and the [ioccc.org](http://ioccc.org)
 10 | Dec13 | hw5 | case study: stuxnet and heartbleed
+
+This schedule is only a rough outline, and will probably change a lot.
+If there's something you want to learn not on the schedule, let me know!
+We have a lot of flexibility in this course to learn fun things.
 
 ### grades
 
