@@ -34,9 +34,10 @@ By the end of the course, you should be comfortable running your own open source
 
 ### instructors
 
-lecturer: Mike Izbicki (office hours Thursday 3:30-5:00 PM, WCH110)
-
-teaching assistant: Taeyoung Kim (office hours Tuesday 3:30-5:00 PM, WCH110)
+position | name | office hours
+--- | --- | ---
+lecturer | Mike Izbicki |  Thursday 3:30-5:00 PM, WCH110
+teaching assistant | Taeyoung Kim | Tuesday 3:30-5:00 PM, WCH110
 
 **IMPORTANT:**
 If you want to contact the instructors about the course, you should NOT do it via email.
