@@ -77,25 +77,25 @@ We have a lot of flexibility in this course to learn fun things.
 
 week | date | assignments | topics
 --- | --- | --- | ---
-0 | Oct2 | | introduction; using vim
-1 | Oct7 | | version control with git
-1 | Oct9 | [all about unix](http://www.catb.org/esr/writings/taoup/html/context.html)] and [about common software licenses](http://www.catb.org/esr/writings/taoup/html/ch16s07.html) | version control with git
+0 | Oct02 | | introduction; using vim
+1 | Oct07 | | version control with git
+1 | Oct09 | [all about unix](http://www.catb.org/esr/writings/taoup/html/context.html)] and [about common software licenses](http://www.catb.org/esr/writings/taoup/html/ch16s07.html) | version control with git
 2 | Oct14 | quiz | syscalls: managing processes (`fork`,`wait`,`exec`)
 2 | Oct16 | [reading about documentation](http://www.catb.org/esr/writings/taoup/html/ch18s02.html) and [part II](http://www.catb.org/esr/writings/taoup/html/ch18s06.html) | syscalls: managing files (`open`,`close`,`read`,`write`)
 3 | Oct21 | hw1 | debugging tools (`gdb`)
 3 | Oct23 | | debugging tools (`valgrind`,`cppcheck`)
 4 | Oct28 | quiz | syscalls: managing directories (`readdir`,`stat`)
 4 | Oct30 | | shell scripting: io redirection/piping
-5 | Nov4 | hw2 | shell scripting: io redirection/piping
-5 | Nov6 | | syscalls: io redirection/piping (`pipe`,`dup`)
+5 | Nov04 | hw2 | shell scripting: io redirection/piping
+5 | Nov06 | | syscalls: io redirection/piping (`pipe`,`dup`)
 6 | Nov11 | quiz | shell scripting: control flow with `if` and `for`
 6 | Nov13 | [reading about make](http://www.catb.org/esr/writings/taoup/html/ch15s04.html) | shell scripting: detailed makefiles
 7 | Nov18 | hw3 | syscalls: signal handling (`signal`,`sigaction`)
 7 | Nov20 | [Master Foo](http://www.catb.org/esr/writings/taoup/html/unix_koans.html) | shell scripting: environment variables (`export`,`PATH`,`HOME`,`EDITOR`)
 8 | Nov25 | quiz | syscalls: environment variables (`getenv`,`setenv`)
 8 | Nov27 | | THANKSGIVING
-9 | Dec2 | hw4 | syscalls: pthreads
-9 | Dec4 | [flaws with unix](http://www.catb.org/esr/writings/taoup/html/ch20s03.html) | syscalls: sockets
+9 | Dec02 | hw4 | syscalls: pthreads
+9 | Dec04 | [flaws with unix](http://www.catb.org/esr/writings/taoup/html/ch20s03.html) | syscalls: sockets
 10 | Dec11 | quiz | case study: hacking the email system
 10 | Dec13 | hw5 | case study: stuxnet and heartbleed
 
