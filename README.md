@@ -51,14 +51,7 @@ The course textbook is *The Art of Unix Programming* by Eric Steven Raymond (mor
 You can download it for free at [esr's website](http://www.catb.org/esr/writings/taoup/html).
 All required reading is listed in the "assignments" category of the outline below.
 It includes reading from the textbook and outside sources.
-
-You can also get extra credit for reading any of the following and discussing it with me in office hours:
-
-* Elizer Yudowski's [Harry Potter and the Methods of Rationality](http://hpmor.org) (free online)
-
-* Peter Seibel's *Coders at Work* (a copy is in the ACM room)
-
-* Jessica Livingston's *Founders at Work* (a copy is in the ACM room)
+You can also get extra credit for reading [certain books I've selected](assignments/ec/ec-reading) about computer programming.
 
 ### course outline
 
