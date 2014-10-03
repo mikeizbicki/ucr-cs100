@@ -292,7 +292,7 @@ Here we see the full use of the `pipe` syscall. When we call `pipe` we have our 
 
 **includes:** `#include <unistd.h>`
 
-**declaraton:** `char *getcwd(char *buf, size_t size);`
+**declaration:** `char *getcwd(char *buf, size_t size);`
 
 **returns:** When successful, the function returns a pointer to a `string` containing the pathname of the current working directory. On error, it returns `NULL`.
 
