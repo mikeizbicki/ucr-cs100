@@ -78,7 +78,7 @@ To obtain more information about where the memory leak may have occured you can 
 ```
 
 
-The extra flag in this call will print out information about what function could be causing the leak and which function call is creating the possiblity of the leak.
+The extra flag in this call will print out information about what function could be causing the leak and which function call is creating the possibility of the leak.
 
 Between the ```HEAP SUMMARY``` and ```LEAK SUMMARY``` we will get the message:
 
