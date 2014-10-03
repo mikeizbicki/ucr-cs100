@@ -16,7 +16,7 @@ The `find` command is used to fetch the positions of  files you want on a Unix o
     find where-to-look criteria what-to-do
 All arguments to find are optional, and there are defaults for all parts.
 
-    $ find #will display the pathnames of all files in the current directory and all subdirectorie
+    $ find #will display the pathnames of all files in the current directory and all subdirectories
     $ find . -print
     $ find -print
     $ find .

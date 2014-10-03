@@ -20,7 +20,7 @@ In order to determine which method is fastest, you'll need to test them on a lar
 
 **IMPORTANT:** If the file you are copying to already exists, your program must print an error.  The built-in `cp` will check to see if the second file is a directory.  If it is, then `cp` will copy the file into the directory.  You do NOT have to implement this feature.
 
-**IMOPRTANT:** The built-in `cp` program can support copying entire directories using the `-r` flag.  You do not need to implement this feature.  You should simply print an error message if the first argument is a directory.
+**IMPORTANT:** The built-in `cp` program can support copying entire directories using the `-r` flag.  You do not need to implement this feature.  You should simply print an error message if the first argument is a directory.
 
 ### deliverables
 
