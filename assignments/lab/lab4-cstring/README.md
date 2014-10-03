@@ -1,4 +1,4 @@
-﻿# cstring functions
+# cstring functions
 
 You should complete this lab using pair programming with a new partner.
 
@@ -19,7 +19,7 @@ You must write each function from scratch.  You CANNOT use the functions provide
 
 You will need to look up the man pages for each of these functions to make sure they work just like the versions in the library.  
 
-**IMPRTANT:** You should be implementing the cstring versions, NOT the string versions (i.e. the parameters should be `char*` and not `std::string`).  Your function signatures should be exactly the same as the standard cstring versions.  You should not implement your own string class.
+**IMPORTANT:** You should be implementing the cstring versions, NOT the string versions (i.e. the parameters should be `char*` and not `std::string`).  Your function signatures should be exactly the same as the standard cstring versions.  You should not implement your own string class.
 
 **IMPORTANT:** None of these functions allocate memory.  They assume the user calling them has already allocated the correct amount of memory.  If you are using the `new` or `malloc` in any of these functions
 
