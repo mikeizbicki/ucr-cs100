@@ -44,7 +44,7 @@ else if(pid > 0) //parent function
 
 Here we’re setting `pid`, which is an `int`, which also works even though the declaration returns `pid_t`, to the pid of the child process when we’re in the parent, else we return 0 in the child. Everything that happens inside the if statement is everything the child process executes. This happens because `fork` returns 0 when it is the child process, and that’s how we know when to go in the if statement. You have to have the `exit()` statement when you’re done executing everything you want to in the child. If the exit statement isn't present, the child will become a zombie process - that is, it will never never exit, and continue to run in the background, taking up memory and hampering the program's performance - and we don't want that do we? 
 
-Of course, with a child function, there has to be a parent function. In this particular function, the parent function simply waits for the child process to finish running (because of the wait call, which will be explained later), and executes after the child procses is finished.
+Of course, with a child function, there has to be a parent function. In this particular function, the parent function simply waits for the child process to finish running (because of the wait call, which will be explained later), and executes after the child processes is finished.
 
 ##perror:
 
@@ -57,7 +57,7 @@ Of course, with a child function, there has to be a parent function. In this par
 [man page](http://linux.die.net/man/3/perror)
 
 The glorious error checker! `perror` is used when an error occurs in a syscall, and techincally isn't a syscall - rather its used WITH every single syscall. The parameter of of `perror` which is a `const char *s` is whatever c-string you wish to output when an error happens (examples below). `perror` outputs your custom c-string and then outputs information on the specific error that happened using information from `errno`. 
-    `perror` becomes very useful when you’re debugging your program. If an error happenes you’ll be able to ouput your own custom message, which can make the error much easier to find. `perror` is extremely crucial while coding, and adding them after each syscall is considered proper coding etiquette - in fact, many instructors and professors may dock points for not having them (I was a "victim" of this my first assignment). 
+    `perror` becomes very useful when you’re debugging your program. If an error happens you’ll be able to ouput your own custom message, which can make the error much easier to find. `perror` is extremely crucial while coding, and adding them after each syscall is considered proper coding etiquette - in fact, many instructors and professors may dock points for not having them (I was a "victim" of this my first assignment). 
 
 Now, we’ll add `perror` to the last example:
 ```
@@ -175,7 +175,7 @@ As we told you above, `execvp` finds the path for you. If you wanted to use `exe
 
 [man page](http://linux.die.net/man/2/dup)
 
-We all know about the default file descriptors 0, 1 and 2 with 0 meaning stdin, 1 meaning stdout and 2 meaing stderr. `dup(int oldfd)` can be used to copy the file descriptor given for `oldfd`, for example we can do `int fd = dup(1)` which copies stdout to `fd`. `dup` chooses our new file descriptor by choosing the lowest number of the unused descriptors, so if we only have 0, 1 and 2 as our file descriptors(only the default ones) it will choose 3 as our new one. So, in this `dup` example our new `fd` can be used interchangeably with stdout. 
+We all know about the default file descriptors 0, 1 and 2 with 0 meaning stdin, 1 meaning stdout and 2 meaning stderr. `dup(int oldfd)` can be used to copy the file descriptor given for `oldfd`, for example we can do `int fd = dup(1)` which copies stdout to `fd`. `dup` chooses our new file descriptor by choosing the lowest number of the unused descriptors, so if we only have 0, 1 and 2 as our file descriptors(only the default ones) it will choose 3 as our new one. So, in this `dup` example our new `fd` can be used interchangeably with stdout. 
 
 Now say, for example, we wanted to redirect the stdout to the screen into a file. We could use `dup2` (we could also use `dup` but I think `dup2` is a simpler way). The way `dup2` works is it takes two parameters `int oldfd` and `int newfd`, `oldfd` is the file descriptor you want to change to what the `newfd`. Let's take our redirect example, we want to take stdout which is 1 and instead of linking it to 1 we want to link it to whatever file descriptor belongs to the file we want to redirect to. For this redirection we would do something like: `dup2(fd,1)` (where `fd` is the file descriptor for the file we want to write to). `dup2` also closes `newfd` after the call. Therefore, after this call stdout is now closed and instead it is rerouted to the file.
 
@@ -292,7 +292,7 @@ Here we see the full use of the `pipe` syscall. When we call `pipe` we have our 
 
 **includes:** `#include <unistd.h>`
 
-**declaraton:** `char *getcwd(char *buf, size_t size);`
+**declaration:** `char *getcwd(char *buf, size_t size);`
 
 **returns:** When successful, the function returns a pointer to a `string` containing the pathname of the current working directory. On error, it returns `NULL`.
 
