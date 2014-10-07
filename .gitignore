@@ -5,7 +5,7 @@ gradetmp/
 *.swp
 *.swo
 
-# tex fils
+# tex files
 *.aux
 *.pdf
 *.ps
