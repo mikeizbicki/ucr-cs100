@@ -4,6 +4,8 @@
 # This script contains common configuration settings and functions.
 #
 
+set -a
+
 #######################################
 # configuration
 
@@ -13,8 +15,24 @@ classname="ucr-cs100"
 # tmp folder for all student repos
 tmpdir="gradetmp"
 
+# branch of student git repository that stores the grades
+gradesbranch="grades"
+
 # folder containing instructor pgp keys
-instructorinfo="instructorinfo"
+instructorinfo="people/instructors"
+
+# folder containing student information
+studentinfo="people/students"
+
+#######################################
+# let us quit the shell even if we're in a subshell
+
+trap "exit 1" TERM
+export TOP_PID=$$
+
+function failScript {
+    kill -s TERM $TOP_PID
+}
 
 #######################################
 # misc display functions
@@ -30,51 +48,129 @@ function pad {
 function padPercent {
     if [ ${#1} = 5 ]; then
         printf " "
+    elif [ ${#1} = 4 ]; then
+        printf "  "
     elif [ "$1" = 0 ]; then
         printf "  0.0"
     fi
     printf "$1"
 }
 
+function error {
+    echo "ERROR: $@" >&2
+    failScript
+}
+
+#######################################
+# get student info
+
+# $1 = the student's csaccount (which is the name of file containing their info)
+# $2 = the attribute you want about the student
+function getStudentInfo {
+    if [ ! -e "$studentinfo/$1" ]; then
+        error "student $1 does not exist"
+    fi
+    if [ -z "$2" ]; then
+        error "attribute not given"
+    fi
+
+    # FIXME: this matches any attribute that contains $2 rather than equals $2
+    ret=$(awk -F "=" "/^$2/ {print \$2}" "$studentinfo/$1" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+    if [ -z "$ret" ]; then
+        error "student $1 does not have attribute $2 in their studentinfo file"
+    fi
+    echo "$ret"
+}
+
+function getStudentList {
+    for file in $studentinfo/*; do
+        basename "$file"
+    done
+}
+
 #######################################
 # download/edit grades
-
-function downloadAllProjects {
-    local proj="$1"
-    echo "downloading repos..."
-    accountlist=""
-    for file in studentinfo/*; do
-        githubaccount=`tail -n 1 $file`
-        accountlist="$accountlist $githubaccount"
-    done
-        
-    if ! (echo "$accountlist" | xargs -n 1 -P 4 "$scriptdir/downloadproject.sh" "$proj"); then
-        echo "ERROR: some repos failed to download; sometimes we exceed github's connection limits due to parallel downloading; trying again might work?"
-        exit 1
-    fi
-    echo "done"
-}
 
 function downloadAllGrades {
     downloadAllProjects "$classname"
 }
 
-function downloadgrades {
-    "$scriptdir/downloadproject.sh" "$classname" "$1"
-    #downloadproject "$1" "$classname"
+# $1 = csaccount of student to download grades for
+function downloadGrades {
+    giturl="$(getStudentInfo $1 giturl)"
+    clonedir="$tmpdir/$classname-$1"
+    downloadRepo "$clonedir" "$giturl" "$gradesbranch"
 }
 
-function uploadgrades {
-    local user=$1
-    clonedir="$tmpdir/$classname-$user"
+# $1 = the name of the repo on github that has the students' projects
+function downloadAllProjects {
+    echo "downloading repos..."
+    accountlist=""
+    for student in $(getStudentList); do
+        githubaccount=$(getStudentInfo $student github)
+        accountlist="$accountlist $githubaccount"
+    done
+
+    # NOTE: this weird xargs command runs all of the downloadProject functions in parallel
+    if ! (echo "$accountlist" | xargs -n 1 -P 4 bash -c "downloadProject $1 \$1" -- ); then
+        echo "ERROR: some repos failed to download;"
+        echo "sometimes we exceed github's connection limits due to parallel downloading;"
+        echo "trying again might work?"
+        echo
+        exit 1
+    fi
+    echo "done"
+}
+
+# $1 = project name
+# $2 = github account of user
+function downloadProject {
+    downloadRepo "$tmpdir/$1-$2" "https://github.com/$2/$1.git"
+}
+
+# $1 = the directory to place the repo
+# $2 = the repo's url (not necessarily on github)
+# $3 = [optional] branch to enter in the repo
+function downloadRepo {
+    local clonedir="$1"
+    local giturl="$2"
+    local branch="$3"
+
+    local dir=$(pwd)
+
+    # download repo
+    if [ ! -d "$clonedir" ]; then
+        echo "  running git clone on [$giturl]"
+        git clone --quiet "$giturl" "$clonedir"
+    else
+        echo "  running git pull in [$clonedir]"
+        cd "$clonedir"
+        git pull origin --quiet > /dev/null 2> /dev/null
+        cd "$dir"
+    fi
+
+    # switch branch
     cd "$clonedir"
-    for f in `find . -name grade`; do
-        git add $f
+    if git show-ref --verify --quiet "refs/heads/$branch"; then
+        git checkout $branch --quiet
+    else
+        git checkout -b $branch --quiet
+    fi
+    cd "$dir"
+}
+
+# $1 = the cs account of the student to upload grades
+function uploadgrades {
+    clonedir="$tmpdir/$classname-$1"
+    cd "$clonedir"
+    for file in `find . -name grade`; do
+        git add $file
     done
     git commit -S -m "graded assignment using automatic scripts"
 
     echo "changes committed... uploading to github"
-    git push origin
+    git push origin "$gradesbranch"
+    # FIXME: we should be reporting an error if git fails... but how?
     #if [ $? ]; then
         #echo "upload successful :)"
     #else
@@ -83,6 +179,7 @@ function uploadgrades {
     cd ../..
 }
 
+# $1 = the path of the grade file to edit
 function gradefile {
     file="$1"
 
@@ -104,7 +201,7 @@ function gradefile {
     vim "$file"
 
     # delete all the comments from the file
-    sed -i "/^\#/d" "$file" 
+    sed -i "/^\#/d" "$file"
 }
 
 #######################################
@@ -159,7 +256,7 @@ function runningTotalOutOf {
     echo "$totaloutof"
 }
 
-# calculates the total possible points for user $1 in directory $2 on all assignments 
+# calculates the total possible points for user $1 in directory $2 on all assignments
 # this function is used for calculating the final grade
 function totalOutOf {
     totaloutof=0

@@ -12,7 +12,7 @@ source "$scriptdir/config.sh"
 # check for valid command line params
 
 user="$1"
-if [ -z $user ]; then 
+if [ -z $user ]; then
     echo "no github account given"
     exit
 fi
@@ -21,7 +21,7 @@ fi
 # calculate stats
 
 echo "finding grade for github account $user"
-downloadgrades "$user"
+downloadGrades "$user"
 
 totalgrade=$(totalGrade "$user")
 runningtotaloutof=$(runningTotalOutOf "$user")
@@ -34,20 +34,24 @@ percent=`bc <<< "scale=2; 100 * $totalgrade/$totaloutof"`
 # display everything
 
 echo
-echo "==========================================="
-echo "    grade        |  assignment"
-echo "==========================================="
+echo "==============================================================================="
+echo "    grade        |  assignment                     |  grader"
+echo "==============================================================================="
 
-for f in `find "./$tmpdir/$classname-$user" -name grade | sort`; do
+cd "./$tmpdir/$classname-$user"
+for f in `find . -name grade | sort`; do
     dir=`dirname $f`
-    assn=`basename $dir`
+    assn=$(pad "$(basename $dir)" 30)
+    grader=$(git log -n 1 --pretty=format:"%aN" "$f")
+    signature=$(git log -n 1 --pretty=format:"%G?" "$f")
+
     grade="---"
     if isGraded "$f"; then
         grade=$(getGrade "$f")
     fi
     outof=$(getOutOf "$f")
 
-    if [ ! $grade = "---" ]; then 
+    if [ ! $grade = "---" ]; then
         cmd="scale=2; 100*$grade/$outof"
         assnPercent=$(bc <<< "$cmd" 2> /dev/null)
         colorPercent "$assnPercent"
@@ -55,24 +59,32 @@ for f in `find "./$tmpdir/$classname-$user" -name grade | sort`; do
         resetColor
         printf "|"
         colorPercent "$assnPercent"
-        printf "  $assn\n" 
+        printf "  $assn"
         resetColor
+        printf " | $grader "
+        if [ "$signature" = "G" ]; then
+            printf "[signed]"
+        else
+            printf "[bad signature]"
+        fi
+        echo
     else
         printf "    %3s / %3s    " "$grade" "$outof"
         printf "|"
-        printf "  $assn\n" 
+        printf "  $assn |"
+        printf "\n"
     fi
 done
 
-echo "==========================================="
+echo "==============================================================================="
 echo
 
-printf "running total = %4s / %4s = " $totalgrade $runningtotaloutof 
+printf "running total = %4s / %4s = " $totalgrade $runningtotaloutof
 dispPercent "$runningpercent"
 printf "  "
 percentToLetter "$runningpercent"
 echo
-printf "overall total = %4s / %4s = " $totalgrade $totaloutof 
+printf "overall total = %4s / %4s = " $totalgrade $totaloutof
 dispPercent "$percent"
 printf "  "
 percentToLetter "$percent"
