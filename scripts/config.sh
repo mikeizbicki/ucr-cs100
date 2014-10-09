@@ -92,7 +92,7 @@ function getStudentList {
 # download/edit grades
 
 function downloadAllGrades {
-    downloadAllProjects "$classname"
+    downloadAllProjects "$classname" "$gradesbranch"
 }
 
 # $1 = csaccount of student to download grades for
@@ -103,6 +103,7 @@ function downloadGrades {
 }
 
 # $1 = the name of the repo on github that has the students' projects
+# $2 = [optional] branch of project to enter
 function downloadAllProjects {
     echo "downloading repos..."
     accountlist=""
@@ -112,7 +113,7 @@ function downloadAllProjects {
     done
 
     # NOTE: this weird xargs command runs all of the downloadProject functions in parallel
-    if ! (echo "$accountlist" | xargs -n 1 -P 4 bash -c "downloadProject $1 \$1" -- ); then
+    if ! (echo "$accountlist" | xargs -n 1 -P 4 bash -c "downloadProject $1 \$1 $2" -- ); then
         echo "ERROR: some repos failed to download;"
         echo "sometimes we exceed github's connection limits due to parallel downloading;"
         echo "trying again might work?"
@@ -124,8 +125,9 @@ function downloadAllProjects {
 
 # $1 = project name
 # $2 = github account of user
+# $3 = [optional] branch of project to enter
 function downloadProject {
-    downloadRepo "$tmpdir/$1-$2" "https://github.com/$2/$1.git"
+    downloadRepo "$tmpdir/$1-$2" "https://github.com/$2/$1.git" "$3"
 }
 
 # $1 = the directory to place the repo
@@ -150,13 +152,15 @@ function downloadRepo {
     fi
 
     # switch branch
-    cd "$clonedir"
-    if git show-ref --verify --quiet "refs/heads/$branch"; then
-        git checkout $branch --quiet
-    else
-        git checkout -b $branch --quiet
+    if [ ! -z "$branch" ]; then
+        cd "$clonedir"
+        if git show-ref --verify --quiet "refs/heads/$branch"; then
+            git checkout "$branch" --quiet
+        else
+            git checkout -b "$branch" --quiet
+        fi
+        cd "$dir"
     fi
-    cd "$dir"
 }
 
 # $1 = the cs account of the student to upload grades
