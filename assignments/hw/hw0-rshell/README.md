@@ -52,7 +52,7 @@ To download and grade your homework, the TA will run the following commands:
 ```
 $ git clone  http://github.com/yourusername/rshell.git
 $ cd rshell
-$ git checkout hw1
+$ git checkout hw0
 $ make
 $ bin/rshell
 ```

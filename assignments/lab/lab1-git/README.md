@@ -509,7 +509,7 @@ Click the button on the right hand side labeled `settings`.
 
 Click the button on the left hand side labeled `collaborators`.
 
-This should bring up a menu that lets you add collaborators.  Everyone you add here has full write access to the repo.  Add all of the course instructors as collaborators.  Our github accounts are: `MikeIzbicki` and `bmars003`.
+This should bring up a menu that lets you add collaborators.  Everyone you add here has full write access to the repo.  Add all of the course instructors as collaborators.  Our github accounts are: `MikeIzbicki` and `tkimva`.
 
 Click the button on the left hand side labeled `collaborators`:
 
@@ -517,7 +517,7 @@ Click the button on the left hand side labeled `collaborators`:
   <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/collaborators.png?raw=true"/>
 </p>
 
-This should bring up a menu that lets you add collaborators.  Everyone you add here has full write access to the repo.  Add all of the course instructors as collaborators.  Our GitHub accounts are: `MikeIzbicki` and `bmars003`. 
+This should bring up a menu that lets you add collaborators.  Everyone you add here has full write access to the repo.  Add all of the course instructors as collaborators.  Our GitHub accounts are: `MikeIzbicki` and `tkimva`. 
 
 **IMPORTANT:** The file `GRADES.md` in this repo contains detailed information about how your grades will be stored in this repo.  Finish completing this lab, then go back and read this file.
 

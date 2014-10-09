@@ -1,4 +1,4 @@
-# cs100 - software construction
+## cs100 - open source software construction
 
 This is a course on [how to be a hacker](http://www.catb.org/esr/faqs/hacker-howto.html).
 Being a hacker [means a lot of things](http://www.catb.org/jargon/html/H/hacker.html).
@@ -37,7 +37,7 @@ By the end of the course, you should be comfortable running your own open source
 position | name | office hours
 --- | --- | ---
 lecturer | Mike Izbicki |  Thursday 3:30-5:00 PM, WCH110
-teaching assistant | Taeyoung Kim | Tuesday 3:30-5:00 PM, WCH110
+teaching assistant | Taeyoung Kim | Tuesday 3:40-5:00 PM, WCH110
 
 **IMPORTANT:**
 If you want to contact the instructors about the course, you should NOT do it via email.
@@ -51,14 +51,7 @@ The course textbook is *The Art of Unix Programming* by Eric Steven Raymond (mor
 You can download it for free at [esr's website](http://www.catb.org/esr/writings/taoup/html).
 All required reading is listed in the "assignments" category of the outline below.
 It includes reading from the textbook and outside sources.
-
-You can also get extra credit for reading any of the following and discussing it with me in office hours:
-
-* Elizer Yudowski's [Harry Potter and the Methods of Rationality](http://hpmor.org) (free online)
-
-* Peter Seibel's *Coders at Work* (a copy is in the ACM room)
-
-* Jessica Livingston's *Founders at Work* (a copy is in the ACM room)
+You can also get extra credit for reading [certain books I've selected](assignments/ec/ec-reading) about computer programming.
 
 ### course outline
 
@@ -69,22 +62,22 @@ week | date | assignments | topics
 1 | Oct09 | esr's [all about unix](http://www.catb.org/esr/writings/taoup/html/context.html) and [about common software licenses](http://www.catb.org/esr/writings/taoup/html/ch16s07.html) | version control with git
 2 | Oct14 | quiz | syscalls: managing processes (`fork`,`wait`,`exec`,`perror`)
 2 | Oct16 | esr's thoughts on [unix documentation](http://www.catb.org/esr/writings/taoup/html/ch18s02.html) and [part II](http://www.catb.org/esr/writings/taoup/html/ch18s06.html) | syscalls: managing files (`open`,`close`,`read`,`write`)
-3 | Oct21 | hw1 | debugging tools (`gdb`)
+3 | Oct21 | hw0 | debugging tools (`gdb`)
 3 | Oct23 | Paul Graham [on how to be a good hacker](http://www.paulgraham.com/gh.html) and Jeff Atwood on [how to become a better programmer](http://blog.codinghorror.com/how-to-become-a-better-programmer-by-not-programming/) | debugging tools (`valgrind`,`cppcheck`)
 4 | Oct28 | quiz | syscalls: managing directories (`readdir`,`stat`)
 4 | Oct30 | Ycombinator's [startup ideas we'd like to fund](http://old.ycombinator.com/ideas.html) and Paul Graham's [start up funding](http://paulgraham.com/startupfunding.html) | shell scripting: io redirection/piping
-5 | Nov04 | hw2 | shell scripting: io redirection/piping
+5 | Nov04 | hw1 | shell scripting: io redirection/piping
 5 | Nov06 | Patrick McKenzie [on salary negotiation for programmers](http://www.kalzumeus.com/2012/01/23/salary-negotiation/) | syscalls: io redirection/piping (`pipe`,`dup`)
 6 | Nov11 | quiz | shell scripting: control flow with `if` and `for`
 6 | Nov13 | esr's thoughts on [using make](http://www.catb.org/esr/writings/taoup/html/ch15s04.html) | shell scripting: detailed makefiles
-7 | Nov18 | hw3 | syscalls: signal handling (`signal`,`sigaction`)
+7 | Nov18 | hw2 | syscalls: signal handling (`signal`,`sigaction`)
 7 | Nov20 | esr's classic [Master Foo](http://www.catb.org/esr/writings/taoup/html/unix_koans.html) | shell scripting: environment variables (`export`,`PATH`,`HOME`,`EDITOR`)
 8 | Nov25 | quiz | syscalls: environment variables (`getenv`,`setenv`)
 8 | Nov27 | | THANKSGIVING
-9 | Dec02 | hw4 | syscalls: pthreads
+9 | Dec02 | hw3 | syscalls: pthreads
 9 | Dec04 | esr's thoughts on [flaws with unix](http://www.catb.org/esr/writings/taoup/html/ch20s03.html) | syscalls: sockets
 10 | Dec11 | quiz | case study: hacking the email system and the [ioccc.org](http://ioccc.org)
-10 | Dec13 | hw5 | case study: stuxnet and heartbleed
+10 | Dec13 | hw4 | case study: stuxnet and heartbleed
 
 This schedule is only a rough outline, and will probably change a lot.
 If there's something you want to learn not on the schedule, let me know!
