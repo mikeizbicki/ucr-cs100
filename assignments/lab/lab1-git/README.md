@@ -548,7 +548,7 @@ Add and commit your changes like normal.  You may want to review the commands fr
 We have two more steps to get your changes added into the original repository.  First, we have to update your forked repository on the github servers.  Run the command:
 
 ```
-git push origin master
+git push origin ucr-cs100
 ```
 
 This "pushes" all the changes you've made back up to github.
