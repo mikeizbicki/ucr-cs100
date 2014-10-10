@@ -20,7 +20,7 @@ But if you're curious, see the [linux documentation project's bash io-redirectio
 
 ### submission instructions
 
-You will add this code to your `rshell` project on github.  Create a branch called `redirect` and do all of your work under this branch.  When finished, merge with the `master` branch and create a tag called `hw3`.
+You will add this code to your `rshell` project on github.  Create a branch called `redirect` and do all of your work under this branch.  When finished, merge with the `master` branch and create a tag called `hw2`.
 
 To download and grade your homework, the TA will run the following commands:
 

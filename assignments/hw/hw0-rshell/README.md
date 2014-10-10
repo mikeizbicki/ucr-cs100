@@ -45,7 +45,7 @@ But in the command `ls # -lR /`, you would execute `/bin/ls`, but you would not 
 
 ### submission instructions
 
-Create a new project on github called `rshell`.  Create a branch called `exec`.  Do all of your work under this branch.  When finished, merge the `exec` branch into the `master` branch, and create a tag called `hw1`.
+Create a new project on github called `rshell`.  Create a branch called `exec`.  Do all of your work under this branch.  When finished, merge the `exec` branch into the `master` branch, and create a tag called `hw0`.
 
 To download and grade your homework, the TA will run the following commands:
 
