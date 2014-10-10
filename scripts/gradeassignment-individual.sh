@@ -27,10 +27,10 @@ fi
 #######################################
 # grade assignment
 
-downloadgrades $user
+downloadGrades $user
 
 file="$tmpdir/$classname-$user/$assn/grade"
 
 gradefile "$file"
 
-uploadgrades $user
+uploadGrades $user

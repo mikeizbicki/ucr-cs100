@@ -106,11 +106,13 @@ function downloadGrades {
 # $2 = [optional] branch of project to enter
 function downloadAllProjects {
     echo "downloading repos..."
-    accountlist=""
-    for student in $(getStudentList); do
-        githubaccount=$(getStudentInfo $student github)
-        accountlist="$accountlist $githubaccount"
-    done
+    #accountlist=""
+    #for student in $(getStudentList); do
+        #githubaccount=$(getStudentInfo $student github)
+        #accountlist="$accountlist $student"
+        #accountlist="$accountlist $githubaccount"
+    #done
+    accountlist=$(getStudentList)
 
     # NOTE: this weird xargs command runs all of the downloadProject functions in parallel
     if ! (echo "$accountlist" | xargs -n 1 -P 4 bash -c "downloadProject $1 \$1 $2" -- ); then
@@ -124,10 +126,11 @@ function downloadAllProjects {
 }
 
 # $1 = project name
-# $2 = github account of user
+# $2 = csaccount of user
 # $3 = [optional] branch of project to enter
 function downloadProject {
-    downloadRepo "$tmpdir/$1-$2" "https://github.com/$2/$1.git" "$3"
+    github=$(getStudentInfo $2 github)
+    downloadRepo "$tmpdir/$1-$2" "https://github.com/$github/$1.git" "$3"
 }
 
 # $1 = the directory to place the repo
@@ -164,8 +167,23 @@ function downloadRepo {
     fi
 }
 
+function uploadAllGrades {
+    echo "uploading repos..."
+    #accountlist=""
+    #for student in $(getStudentList); do
+        #accountlist="$accountlist $student"
+    #done
+    accountlist=$(getStudentList)
+
+    # NOTE: this weird xargs command runs all of the downloadProject functions in parallel
+    if ! (echo "$accountlist" | xargs -n 1 -P 4 bash -c "uploadGrades \$1" -- ); then
+        error "ERROR: some repos failed to upload; sometimes we exceed github's connection limits due to parallel uploading; trying again might work?"
+    fi
+    echo "done"
+}
+
 # $1 = the cs account of the student to upload grades
-function uploadgrades {
+function uploadGrades {
     clonedir="$tmpdir/$classname-$1"
     cd "$clonedir"
     for file in `find . -name grade`; do
@@ -184,11 +202,47 @@ function uploadgrades {
     cd ../..
 }
 
+# $1 = the csaccount of the student
+# $2 = the assignment to grade
+function gradeAssignment {
+    local csaccount="$1"
+    local assn="$2"
+    local name=$(getStudentInfo "$csaccount" name)
+    local githubaccount=$(getStudentInfo "$csaccount" "github")
+
+    local file="$tmpdir/$classname-$csaccount/$assn/grade"
+
+    mkdir -p `dirname $1`
+
+    local csaccount
+
+    # let the grader know who they're grading
+    echo "#####################################" >> "$file"
+    echo "#" >> "$file"
+    echo "# $file" >> "$file"
+    echo "#" >> "$file"
+    echo "# name      = $name" >> "$file"
+    echo "# csaccount = $csaccount" >> "$file"
+    echo "# github    = $githubaccount" >> "$file"
+    echo "#" >> "$file"
+    echo "# any line that begins with a # is a comment and won't be written to the file" >> "$file"
+    echo "#" >> "$file"
+    echo "#####################################" >> "$file"
+
+    vim "$file"
+
+    # delete all the comments from the file
+    sed -i "/^\#/d" "$file"
+}
+
 # $1 = the path of the grade file to edit
+# $2 = the csaccount of the person
 function gradefile {
     file="$1"
 
     mkdir -p `dirname $1`
+
+    local csaccount
 
     # let the grader know who they're grading
     echo "#####################################" >> "$file"

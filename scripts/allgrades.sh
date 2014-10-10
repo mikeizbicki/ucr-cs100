@@ -26,9 +26,9 @@ for csaccount in $(getStudentList); do
     #name=`head -n 1 $file`
     #githubaccount=`tail -n 1 $file`
    #
-    totalgrade=`totalGrade "$githubaccount" "$assn"`
-    totaloutof=`totalOutOf "$githubaccount" "$assn"`
-    rtotaloutof=`runningTotalOutOf "$githubaccount" "$assn"`
+    totalgrade=`totalGrade "$csaccount" "$assn"`
+    totaloutof=`totalOutOf "$csaccount" "$assn"`
+    rtotaloutof=`runningTotalOutOf "$csaccount" "$assn"`
     rpercent=`bc <<< "scale=2; 100 * $totalgrade/$rtotaloutof"`
     percent=`bc <<< "scale=2; 100 * $totalgrade/$totaloutof"`
 
