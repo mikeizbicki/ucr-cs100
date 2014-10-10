@@ -539,8 +539,6 @@ git clone https://github.com/examplestudent/ucr-cs100.git
 
 This will create a folder in your current working directory called `ucr-cs100`.  This folder contains the contents of the repo you just cloned.
 
-Now you're ready to start editing the repo.
-
 In the directory `people/students`, there is a file called `example001` that contains the following information:
 
 ```
@@ -577,6 +575,11 @@ If you don't have one, you must go to http://news.ycombinator.com and create one
 
 Add and commit your new file like normal.
 You may want to review the commands from the previous sections.
+
+**IMPORTANT:**
+I will be using the usernames for the social networking account to do research into the relationship between social network usage and academic performance.
+You are not required to participate, but you still MUST provide valid social network logins above.
+In order to opt out, you should create new accounts at each of the sites, provide those usernames, and then never user those accounts again.
 
 We have two more steps to get your changes added into the original repository.
 First, we have to update your forked repository on the github servers.
