@@ -36,12 +36,12 @@ This will require using the syscalls `fork`, `execvp`, and `wait`.
 4. You must have a special built in command of `exit` which exits your shell.
 
 5. Anything that appears after a `#` character should be considered a comment.
-For example, in the command `ls -lR /`, you would execute the program `/bin/ls` passing into it the parameters `-lR` and `/`.  
+For example, in the command `ls -lR /`, you would execute the program `/bin/ls` passing into it the parameters `-lR` and `/`.
 But in the command `ls # -lR /`, you would execute `/bin/ls`, but you would not pass any parameters because they appear in the comment section.
 
 **IMPORTANT:** Most bash commands are actually executables located in `/bin`.  But some commands are special and are built in to bash.  The `cd` command is the most common example.  So while the `ls` command should "just work" for you, the `cd` command won't.  You'll be adding this feature in a later homework.
 
-**HINT:** Pay careful attention to how you parse the command string the user enters.  There are many ways to mess this up and introduce bugs into your program.  You will be adding more parsing features in future assignments, so it will make your life much easier if you do it right the first time!  I recommend using either the `strtok` function from the C standard libraries or the `Tokenizer` class provide in the [boost library]"(http://www.boost.org/doc/libs/1_36_0/libs/tokenizer/tokenizer.htm).  Students often don't do this section of the assignment well and end up having to redo all of assignment one in order to complete the future assignments.
+**HINT:** Pay careful attention to how you parse the command string the user enters.  There are many ways to mess this up and introduce bugs into your program.  You will be adding more parsing features in future assignments, so it will make your life much easier if you do it right the first time!  I recommend using either the `strtok` function from the C standard libraries or the `Tokenizer` class provide in the [boost library](http://www.boost.org/doc/libs/1_36_0/libs/tokenizer/tokenizer.htm).  Students often don't do this section of the assignment well and end up having to redo all of assignment one in order to complete the future assignments.
 
 ### submission instructions
 
