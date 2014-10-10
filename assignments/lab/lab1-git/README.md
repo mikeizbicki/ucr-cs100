@@ -591,7 +591,16 @@ git push origin master
 
 This "pushes" all the changes you've made back up to github.
 
-Now you need to issue a "pull request" to this repository.  This is done through the github web server and not through the command line.  Visit your forked project's webpage at: http://www.github.com/yourusername/ucr-cs100.  There is a dull gray button labeled "pull request."  Pressing this button will send you to a form where you fill out a message describing what you've changed in the code.  You merge message should be "enrolling in cs100".
+Now you need to issue a "pull request" to this repository.
+This is done through the github web server and not through the command line.
+Visit your forked project's webpage at: http://www.github.com/yourusername/ucr-cs100.
+There is a dull gray button labeled `pull request`:
+
+<p align="center">
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/pull_request.png?raw=true"/>
+</p>
+
+Pressing this button will send you to a form where you fill out a message describing what you've changed in the code.  You merge message should be "enrolling in cs100".
 
 Once you issue your pull request, the TA will review your contribution and add it to the repository.  Congratulations!  You've just made your first contribution to open source software and are officially enrolled in the class!
 
