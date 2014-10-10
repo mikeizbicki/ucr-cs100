@@ -12,7 +12,7 @@ You will make three modifications to your `rshell` project.
 
 ### submission instructions
 
-You will add this code to your `rshell` project on github.  You may use any number of branches/commits you find convenient.  When finished, merge with the `master` branch and create a tag called `hw4`.
+You will add this code to your `rshell` project on github.  You may use any number of branches/commits you find convenient.  When finished, merge with the `master` branch and create a tag called `hw3`.
 
 To download and grade your homework, the TA will run the following commands:
 
