@@ -607,3 +607,5 @@ http://www.git-scm.com/doc
 ## deliverables
 
 Tell the TA once you have issued your pull request.
+
+You must get your drawing of your final git repository checked off by the TA.
