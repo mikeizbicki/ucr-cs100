@@ -125,7 +125,7 @@ $ git commit -m "modified the README"
 
 ### traveling through time
 
-Okay!  
+Okay!
 
 Now we're ready to take advantage of git's power.
 
@@ -186,7 +186,7 @@ Every version of our repo is called a "branch."  A project can have many branche
 $ git branch
 ```
 
-This should list just a single branch called "master."  This branch was created for you automatically when you ran the `git init` command.  
+This should list just a single branch called "master."  This branch was created for you automatically when you ran the `git init` command.
 
 One way to think of branches is as a nice label for your commit hashes.  Your "master" branch currently points to your commit with the message "modified the README."  That's why when we ran `git checkout master` above, it restored our project to the state of that commit.  We could also have used `git checkout [hash]`, if you replaced `[hash]` with the appropriate hash value.  But that's much less convenient.  When you use `git checkout` in the future, you will usually be using it on branch names.
 
@@ -298,13 +298,13 @@ Your repo tree now looks like:
 <img src="images/7.png?raw=true">
 </p>
 
-The way branches are used out in the real world depends on the company you work for and the product you're building.  A typical software engineer might make anywhere from one new branch per week to 5 or more new branches per day.  
+The way branches are used out in the real world depends on the company you work for and the product you're building.  A typical software engineer might make anywhere from one new branch per week to 5 or more new branches per day.
 
 ### fixing a bug
 
 Wait!
 
-While we were working on our `userinput` branch, someone reported a bug in our `master` branch.  In particular, the main function in our master branch returns 1, but a successful program should return 0.  In UNIX, any return value other than 0 indicates that some sort of error occurred.  
+While we were working on our `userinput` branch, someone reported a bug in our `master` branch.  In particular, the main function in our master branch returns 1, but a successful program should return 0.  In UNIX, any return value other than 0 indicates that some sort of error occurred.
 
 To fix this bug, we first checkout our master branch:
 
@@ -365,20 +365,20 @@ Your tree will now look like this:
 <img src="images/10.png?raw=true">
 </p>
 
-Using branches like this to patch bugs is an extremely common usage pattern.  Whether you're developing open source software or working on facebook's user interface, this is the same basic procedure you will follow. 
+Using branches like this to patch bugs is an extremely common usage pattern.  Whether you're developing open source software or working on facebook's user interface, this is the same basic procedure you will follow.
 
 With real bugs on more complicated software, bug fixes won't be quite this easy.  They might require editing several different files and many commits.  It might take us weeks just to find out what's even causing the bug!  By putting our changes in a separate branch, we make it easy to have someone fixing the bug while someone else is adding new features.
 
 ### merge conflicts
 
-Our `userinput` feature is also ready now.  We've tested it and are sure it's working correctly.  It's time to merge this feature with the `master` branch.  Run the commands: 
+Our `userinput` feature is also ready now.  We've tested it and are sure it's working correctly.  It's time to merge this feature with the `master` branch.  Run the commands:
 
 ```
 $ git checkout master
 $ git merge userinput
 ```
 
-Ouch!  
+Ouch!
 
 We get an error message saying:
 
@@ -489,7 +489,7 @@ Click this button.  At the top of the page will be a green button labeled `new i
 
 ### forking your repo
 
-Return to http://github.com/mikeizbicki/ucr-cs100.  In the top right corner of the page is a button labeled `fork`:  
+Return to http://github.com/mikeizbicki/ucr-cs100.  In the top right corner of the page is a button labeled `fork`:
 
 <p align="center">
   <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/fork.png?raw=true"/>
@@ -505,11 +505,11 @@ By default, you are the only person with write access to your new repository.  Y
 https://github.com/examplestudent/ucr-cs100
 ```
 
-Click the button on the right hand side labeled `settings`.
+Click the button on the right hand side labeled `settings`:
 
-Click the button on the left hand side labeled `collaborators`.
-
-This should bring up a menu that lets you add collaborators.  Everyone you add here has full write access to the repo.  Add all of the course instructors as collaborators.  Our github accounts are: `MikeIzbicki` and `tkimva`.
+<p align="center">
+  <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/settings.png?raw=true"/>
+</p>
 
 Click the button on the left hand side labeled `collaborators`:
 
@@ -517,9 +517,9 @@ Click the button on the left hand side labeled `collaborators`:
   <img src="https://github.com/thekevinlemon2/ucr-cs100/blob/master/assignments/lab/lab1-git/images/collaborators.png?raw=true"/>
 </p>
 
-This should bring up a menu that lets you add collaborators.  Everyone you add here has full write access to the repo.  Add all of the course instructors as collaborators.  Our GitHub accounts are: `MikeIzbicki` and `tkimva`. 
+This should bring up a menu that lets you add collaborators.  Everyone you add here has full write access to the repo.  Add all of the course instructors as collaborators.  Our GitHub accounts are: `MikeIzbicki` and `tkimva`.
 
-**IMPORTANT:** The file `GRADES.md` in this repo contains detailed information about how your grades will be stored in this repo.  Finish completing this lab, then go back and read this file.
+**IMPORTANT:** The file <a href="../../../GRADES.md">GRADES.md</a> in this repo contains detailed information about how your grades will be stored in this repo.  Finish completing this lab, then go back and read this file.
 
 ### add your information to the course page
 
@@ -535,17 +535,52 @@ You've already forked the repository, so we can skip that step.  In order to mod
 
 ```
 git clone https://github.com/examplestudent/ucr-cs100.git
-```  
+```
 
 This will create a folder in your current working directory called `ucr-cs100`.  This folder contains the contents of the repo you just cloned.
 
-Now you're ready to start editing the repo.  
+Now you're ready to start editing the repo.
 
-Create a file in the `studentinfo` directory with the same name as your **CS account** and no file extension.  Edit this file so that the first line is your first and last name, and the second line is your github account name.  The automated grading system will be using this file to get your account information, so it is important that you get the format correct!  I've created an example with my info in the `mizbi001` file.
+In the directory `people/students`, there is a file called `example001` that contains the following information:
 
-Add and commit your changes like normal.  You may want to review the commands from the previous sections.
+```
+name = Mike Izbicki
+giturl = http://github.com/examplestudent/ucr-cs100.git
 
-We have two more steps to get your changes added into the original repository.  First, we have to update your forked repository on the github servers.  Run the command:
+github = examplestudent
+stackoverflow = mikeizbicki
+slashdot = jackpirate
+reddit = PokerPirate
+hackernews = jackpirate
+```
+
+You need to create a file in the `people/students` directory that has the same name as your **CS account** and no file extension.
+You need to add into the file all the information contained in the `example001` file.
+
+* The `name` field should be your full name.
+
+* The `giturl` field is the url that we should use to clone your forked repo.
+
+* The `github` field is the name of your github account.
+
+* The `stackoverflow` field is the name of your stackoverflow account.
+If you don't have one, you must go to http://stackoverflow.com and create one before continuing.
+
+* The `slashdot` field is the name of your slashdot account.
+If you don't have one, you must go to http://slashdot.org and create one before continuing.
+
+* The `reddit` field is the name of your reddit account.
+If you don't have one, you must go to http://reddit.com and create one before continuing.
+
+* The `hackernews` field is the name of your hackernews account.
+If you don't have one, you must go to http://news.ycombinator.com and create one before continuing.
+
+Add and commit your new file like normal.
+You may want to review the commands from the previous sections.
+
+We have two more steps to get your changes added into the original repository.
+First, we have to update your forked repository on the github servers.
+Run the command:
 
 ```
 git push origin master
@@ -556,8 +591,6 @@ This "pushes" all the changes you've made back up to github.
 Now you need to issue a "pull request" to this repository.  This is done through the github web server and not through the command line.  Visit your forked project's webpage at: http://www.github.com/yourusername/ucr-cs100.  There is a dull gray button labeled "pull request."  Pressing this button will send you to a form where you fill out a message describing what you've changed in the code.  You merge message should be "enrolling in cs100".
 
 Once you issue your pull request, the TA will review your contribution and add it to the repository.  Congratulations!  You've just made your first contribution to open source software and are officially enrolled in the class!
-
-You will use git extensively in this class to submit your assignments and receive feedback.  See the file called `GRADES.md` in the root folder of this project for detailed instructions.
 
 ## references
 
