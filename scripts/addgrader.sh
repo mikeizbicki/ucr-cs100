@@ -26,7 +26,7 @@ fi
 
 echo "generating gpg key; this may take a while..."
 
-gpg --batch --gen-key <<EOF 
+gpg --batch --gen-key <<EOF
     Key-Type: RSA
     Key-Length: 4096
     Name-Real: $name
@@ -40,10 +40,10 @@ git config user.signingkey "$key"
 
 #######################################
 
-echo "
+echo ""
 output="$instructorinfo/$email"
 echo "exporting new key to $output"
-gpg --output "$output --export "$email"
+gpg --output "$output" --export "$email"
 echo "adding key to class repository"
 git add "$output"
 git commit -m "added instructor $name <$email> to class"
