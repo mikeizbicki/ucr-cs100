@@ -43,7 +43,7 @@ teaching assistant | Taeyoung Kim | Tuesday 3:40-5:00 PM, WCH110
 If you want to contact the instructors about the course, you should NOT do it via email.
 Instead, you should report an issue via github.
 We will talk about how to do this in class.
-This is a system similar to the piazza system you may already be familiar with, but it more popular for open source software development.
+This is a system similar to the piazza system you may already be familiar with, but it is more popular for open source software development.
 
 ### text book
 
