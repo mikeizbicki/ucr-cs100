@@ -67,7 +67,7 @@ Every commit needs a "commit message" that describes what changes we made in the
 Let's add some actual code to our project.  Create a file `main.cpp` with the following code:
 
 ```
-#include <iostream.h>
+#include <iostream>
 
 int main()
 {
@@ -429,7 +429,7 @@ int main()
     std::cin >> name;
     std::cout << "Hello " << name << "!" << std::endl;
 
-    return 1;
+    return 0;
 }
 ```
 
