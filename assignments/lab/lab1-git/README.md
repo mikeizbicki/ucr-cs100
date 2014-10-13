@@ -456,8 +456,8 @@ You will have to submit this to the TA before the end of lab.
 ```
 $ git branch -d userinput
 $ git branch -d bugfix
-$ echo "everything is awesome" > README.md
-$ git add README.md
+$ echo "everything is awesome" > README
+$ git add README
 $ git commit -m "changed the README"
 ```
 
