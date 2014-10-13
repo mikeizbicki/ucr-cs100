@@ -215,7 +215,7 @@ You should see two branches now.  There should be an asterisk next to the master
 Our repo tree now looks like:
 
 <p align=center>
-<img src="images/4.png/raw=true">
+<img src="images/4.png?raw=true">
 </p>
 
 Switch to our new branch using the command:
