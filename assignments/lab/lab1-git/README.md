@@ -266,7 +266,7 @@ Before this commit, the `userinput` and `master` branches were pointing to the s
 Now your tree looks like:
 
 <p align=center>
-<img src="6.png?align=true">
+<img src="images/6.png?align=true">
 </p>
 
 Let's verify that our changes affected only the userinput branch and not the master branch.  First, checkout the master branch, then cat the `main.cpp` file, then return to the user input branch.
