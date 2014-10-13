@@ -437,7 +437,7 @@ Once we have resolved this merge conflict, we can finalize our merge.  We first 
 
 ```
 $ git add main.cpp
-$ git commit -m "solved merge conflict between userinput and bugfix branches"
+$ git commit -m "solved merge conflict between userinput and master branches"
 ```
 
 And your tree looks like:
