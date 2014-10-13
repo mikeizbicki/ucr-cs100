@@ -10,7 +10,7 @@ To get you started, the file `ls.cpp` contains code that reads the files in the 
 
 ### submission instructions
 
-You will add this code to your `rshell` project on github.  Create a branch called `ls` and do all of your work under this branch.  When finished, merge with the `master` branch and create a tag called `hw2`.
+You will add this code to your `rshell` project on github.  Create a branch called `ls` and do all of your work under this branch.  When finished, merge with the `master` branch and create a tag called `hw1`.
 
 To download and grade your homework, the TA will run the following commands:
 
