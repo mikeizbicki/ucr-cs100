@@ -30,8 +30,9 @@ $ ls -a; echo hello; mkdir test
 There should be no limit to the number of commands that can be chained together using these operators.
 
 3. Execute the command.
-This will require using the syscalls `fork`, `execvp`, and `wait`.
-(You can find a tutorial on using these systemcalls (written by previous cs100 students) in the [syscalls-tutorial.md](../../../tutorials/syscalls/README.md) file located in this same directory.)
+This will require using the syscalls `fork`, `execvp`, and `waitpid`.
+You should refere to the man pages for detailed instructions on how to use these functions.
+There is also a [nice tutorial](../../../tutorials/syscalls/README.md) prepared by previous cs100 students.
 
 4. You must have a special built in command of `exit` which exits your shell.
 
