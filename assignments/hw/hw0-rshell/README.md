@@ -6,7 +6,7 @@ Write a command shell called `rshell`.  Your shell will perform the following st
 
 1. Print a command prompt (e.g. `$`)
 
-2. Read in a command on one line.  
+2. Read in a command on one line.
 Commands will have the form: 
 ```
 cmd         = executable [ argumentList ] [ connecter cmd ]
