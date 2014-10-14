@@ -215,7 +215,7 @@ You should see two branches now.  There should be an asterisk next to the master
 Our repo tree now looks like:
 
 <p align=center>
-<img src="images/4.png/raw=true">
+<img src="images/4.png?raw=true">
 </p>
 
 Switch to our new branch using the command:
@@ -249,7 +249,7 @@ int main()
     std::string name;
     std::cout << "What is your name?" << std::endl;
     std::cin >> name;
-    std:::cout << "Hello " << name << "!" << std::endl;
+    std::cout << "Hello " << name << "!" << std::endl;
 
     return 1;
 }
@@ -266,7 +266,7 @@ Before this commit, the `userinput` and `master` branches were pointing to the s
 Now your tree looks like:
 
 <p align=center>
-<img src="6.png?align=true">
+<img src="images/6.png?align=true">
 </p>
 
 Let's verify that our changes affected only the userinput branch and not the master branch.  First, checkout the master branch, then cat the `main.cpp` file, then return to the user input branch.
@@ -390,7 +390,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 This error is called a "merge conflict" and is one of the hardest concepts for new git users to understand.  Why did this happen?
 
-In our `bugfix` branch above, git automatically merged the `main.cpp` file for us.  It could do this because the `main.cpp` file in the `master` branch did not change after we created the `bugfix` branch.  Unfortunately, after we merged the `bugfix` branch into master, this changed the `main.cpp` file.  Now when git tries to merge our changes from the `userinput` branch, it doesn't know which parts to keep from `uesrinput`, and which parts to keep from `bugfix`.  We have to tell git how to do this manually.
+In our `bugfix` branch above, git automatically merged the `main.cpp` file for us.  It could do this because the `main.cpp` file in the `master` branch did not change after we created the `bugfix` branch.  Unfortunately, after we merged the `bugfix` branch into master, this changed the `main.cpp` file.  Now when git tries to merge our changes from the `userinput` branch, it doesn't know which parts to keep from `userinput`, and which parts to keep from `bugfix`.  We have to tell git how to do this manually.
 
 If you inspect the contents of the `main.cpp` file, you'll see something like:
 
@@ -437,7 +437,7 @@ Once we have resolved this merge conflict, we can finalize our merge.  We first 
 
 ```
 $ git add main.cpp
-$ git commit -m "solved merge conflict between userinput and bugfix branches"
+$ git commit -m "solved merge conflict between userinput and master branches"
 ```
 
 And your tree looks like:
@@ -456,8 +456,8 @@ You will have to submit this to the TA before the end of lab.
 ```
 $ git branch -d userinput
 $ git branch -d bugfix
-$ echo "everything is awesome" > README.md
-$ git add README.md
+$ echo "everything is awesome" > README
+$ git add README
 $ git commit -m "changed the README"
 ```
 

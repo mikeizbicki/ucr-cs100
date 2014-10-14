@@ -21,7 +21,7 @@ This is perhaps one of the most important syscall of them all (one syscall to ru
 
 `fork` creates a new process so you can have two things happening at once (multitasking, huzzah!). To create this new process, `fork` creates a copy of the process that was already running. This new process is called a child process, while the older process is called the parent process. 
 
-If you’re creating your own bash shell you will HAVE to use `fork`. You'll use the child process of the `fork` to execute all of your commands. Inside of the child process is where you’ll functions such as `exec`, which require two processes (more on this later).
+If you’re creating your own bash shell you will HAVE to use `fork`. You'll use the child process of the `fork` to execute all of your commands. Inside of the child process is where you’ll use functions such as `exec`, which require two processes (more on this later).
 
 `fork` is without a doubt one of the more complicated syscalls and is harder to understand; therefore, we highly encourage you read up on it from multiple sources, and really gain a good understanding of it.
 
