@@ -30,9 +30,14 @@ $ ls -a; echo hello; mkdir test
 There should be no limit to the number of commands that can be chained together using these operators.
 
 3. Execute the command.
+<<<<<<< HEAD
 This will require using the syscalls `fork`, `execvp`, and `waitpid`.
 You should refere to the man pages for detailed instructions on how to use these functions.
 There is also a [nice tutorial](../../../tutorials/syscalls/README.md) prepared by previous cs100 students.
+=======
+This will require using the syscalls `fork`, `execvp`, and `wait`.
+(You can find a tutorial on using these systemcalls (written by previous cs100 students) in the [syscalls-tutorial.md](https://github.com/mikeizbicki/ucr-cs100/blob/cs100-2014fall/tutorials/syscalls/README.md) file located in [tutorials] (https://github.com/mikeizbicki/ucr-cs100/tree/cs100-2014fall/tutorials))
+>>>>>>> c23d6093161beeeda9c5a78e1adea2d6e8d7c811
 
 4. You must have a special built in command of `exit` which exits your shell.
 
@@ -82,8 +87,12 @@ You must have a `README` file.  Calling the file `README.md` is also acceptable 
 
 You must have a directory called `tests`.  The directory will contain a file called `exec.script` that contains all of the test cases you tried.  You will generate the file using the `script` command, and it must be succinct (i.e. it cannot have unnecessary commands in it).  You should use comments in your script to document what you are testing with each test case.  [This video tutorial](https://izbicki.me/blog/videoguide-for-github-vim-bash.html#script) explains how to use the `script` command.
 
+<<<<<<< HEAD
 <!--When you run `rschell` from within `script`, you must run it using the `valgrind` debugging tool.  See the [valgrind-tutorial](valgrind-tutorial) folder in this directory for a tutorial on how to find memory leaks using valgrind.
 -->
+=======
+When you run `rschell` from within `script`, you must run it using the `valgrind` debugging tool.  See the [valgrind-tutorial](https://github.com/mikeizbicki/ucr-cs100/tree/cs100-2014fall/tutorials/valgrind) folder for a tutorial on how to find memory leaks using valgrind.
+>>>>>>> c23d6093161beeeda9c5a78e1adea2d6e8d7c811
 
 ### coding conventions
 
