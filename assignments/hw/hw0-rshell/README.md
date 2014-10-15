@@ -6,7 +6,7 @@ Write a command shell called `rshell`.  Your shell will perform the following st
 
 1. Print a command prompt (e.g. `$`)
 
-2. Read in a command on one line.  
+2. Read in a command on one line.
 Commands will have the form: 
 ```
 cmd         = executable [ argumentList ] [ connecter cmd ]
@@ -30,8 +30,9 @@ $ ls -a; echo hello; mkdir test
 There should be no limit to the number of commands that can be chained together using these operators.
 
 3. Execute the command.
-This will require using the syscalls `fork`, `execvp`, and `wait`.
-(You can find a tutorial on using these systemcalls (written by previous cs100 students) in the [syscalls-tutorial.md](syscalls-tutorial.md) file located in this same directory.)
+This will require using the syscalls `fork`, `execvp`, and `waitpid`.
+You should refere to the man pages for detailed instructions on how to use these functions.
+There is also a [nice tutorial](../../../tutorials/syscalls/README.md) prepared by previous cs100 students.
 
 4. You must have a special built in command of `exit` which exits your shell.
 
@@ -57,7 +58,7 @@ $ make
 $ bin/rshell
 ```
 
-You should ssh into `well.cs.ucr.edu` and run the above commands to verify that you've submitted your code successfully.
+You should ssh into `hammer.cs.ucr.edu` and run the above commands to verify that you've submitted your code successfully.
 If you forget how to use git, two students from previous cs100 courses (Rashid Goshtasbi and Kyler Rynear) made [video tutorials on the git commands needed to submit your assignments](https://izbicki.me/blog/videoguide-for-github-vim-bash.html#tags) via github.
 
 **Do not wait to upload your assignment to github until the project due date.**
@@ -81,13 +82,14 @@ You must have a `README` file.  Calling the file `README.md` is also acceptable 
 
 You must have a directory called `tests`.  The directory will contain a file called `exec.script` that contains all of the test cases you tried.  You will generate the file using the `script` command, and it must be succinct (i.e. it cannot have unnecessary commands in it).  You should use comments in your script to document what you are testing with each test case.  [This video tutorial](https://izbicki.me/blog/videoguide-for-github-vim-bash.html#script) explains how to use the `script` command.
 
-When you run `rschell` from within `script`, you must run it using the `valgrind` debugging tool.  See the [valgrind-tutorial](valgrind-tutorial) folder in this directory for a tutorial on how to find memory leaks using valgrind.
+<!--When you run `rschell` from within `script`, you must run it using the `valgrind` debugging tool.  See the [valgrind-tutorial](valgrind-tutorial) folder in this directory for a tutorial on how to find memory leaks using valgrind.
+-->
 
 ### coding conventions
 
 Your code must not generate any warnings on compilation.
 
-Your code must pass the `cppchecker` linting tool with no warnings.
+<!--Your code must pass the `cppchecker` linting tool with no warnings.-->
 
 Your final executable must have no memory leaks.
 
