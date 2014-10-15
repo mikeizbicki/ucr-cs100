@@ -4,10 +4,11 @@
 # This script contains common configuration settings and functions.
 #
 
+# export all variables to subshells
 set -a
 
 #######################################
-# configuration
+# configuration (can be modified)
 
 # the github project name
 classname="ucr-cs100"
@@ -25,14 +26,21 @@ instructorinfo="people/instructors"
 studentinfo="people/students"
 
 #######################################
-# let us quit the shell even if we're in a subshell
+# initialization (do not modify!)
 
+# let us quit the shell even if we're in a subshell
 trap "exit 1" TERM
 export TOP_PID=$$
 
 function failScript {
     kill -s TERM $TOP_PID
 }
+
+# cd to the repo's root folder by backtracking until we find the LICENSE file
+# this let's the scripts be run from any folder in the repo
+while [ ! -e "LICENSE" ]; do
+    cd ..
+done
 
 #######################################
 # misc display functions
@@ -105,17 +113,16 @@ function downloadGrades {
 # $1 = the name of the repo on github that has the students' projects
 # $2 = [optional] branch of project to enter
 function downloadAllProjects {
+
+    # tells git to keep the username and password in memory for the next 15 minutes
+    git config credential.helper cache
+
     echo "downloading repos..."
-    #accountlist=""
-    #for student in $(getStudentList); do
-        #githubaccount=$(getStudentInfo $student github)
-        #accountlist="$accountlist $student"
-        #accountlist="$accountlist $githubaccount"
-    #done
     accountlist=$(getStudentList)
 
-    # NOTE: this weird xargs command runs all of the downloadProject functions in parallel
-    if ! (echo "$accountlist" | xargs -n 1 -P 4 bash -c "downloadProject $1 \$1 $2" -- ); then
+    # this weird xargs command runs all of the downloadProject functions in parallel
+    if ! (echo "$accountlist" | xargs -n 1 -P 50 bash -c "downloadProject $1 \$1 $2" -- ); then
+    #if ! (echo "$accountlist" | xargs -n 1 -P 4 bash -c "downloadProject $1 \$1 $2" -- ); then
         echo "ERROR: some repos failed to download;"
         echo "sometimes we exceed github's connection limits due to parallel downloading;"
         echo "trying again might work?"
@@ -146,11 +153,15 @@ function downloadRepo {
     # download repo
     if [ ! -d "$clonedir" ]; then
         echo "  running git clone on [$giturl]"
-        git clone --quiet "$giturl" "$clonedir"
+        #if [ -z "$branch" ]; then
+            git clone --quiet "$giturl" "$clonedir"
+        #else
+            #git clone -b "$branch" --quiet "$giturl" "$clonedir"
+        #fi
     else
         echo "  running git pull in [$clonedir]"
         cd "$clonedir"
-        git pull origin --quiet > /dev/null 2> /dev/null
+        git pull origin $branch --quiet > /dev/null 2> /dev/null
         cd "$dir"
     fi
 
@@ -168,14 +179,13 @@ function downloadRepo {
 }
 
 function uploadAllGrades {
+    # tells git to keep the username and password in memory for the next 15 minutes
+    git config credential.helper cache
+
     echo "uploading repos..."
-    #accountlist=""
-    #for student in $(getStudentList); do
-        #accountlist="$accountlist $student"
-    #done
     accountlist=$(getStudentList)
 
-    # NOTE: this weird xargs command runs all of the downloadProject functions in parallel
+    # this weird xargs command runs all of the downloadProject functions in parallel
     if ! (echo "$accountlist" | xargs -n 1 -P 4 bash -c "uploadGrades \$1" -- ); then
         error "ERROR: some repos failed to upload; sometimes we exceed github's connection limits due to parallel uploading; trying again might work?"
     fi
@@ -214,36 +224,6 @@ function gradeAssignment {
 
     mkdir -p `dirname $1`
 
-    local csaccount
-
-    # let the grader know who they're grading
-    echo "#####################################" >> "$file"
-    echo "#" >> "$file"
-    echo "# $file" >> "$file"
-    echo "#" >> "$file"
-    echo "# name      = $name" >> "$file"
-    echo "# csaccount = $csaccount" >> "$file"
-    echo "# github    = $githubaccount" >> "$file"
-    echo "#" >> "$file"
-    echo "# any line that begins with a # is a comment and won't be written to the file" >> "$file"
-    echo "#" >> "$file"
-    echo "#####################################" >> "$file"
-
-    vim "$file"
-
-    # delete all the comments from the file
-    sed -i "/^\#/d" "$file"
-}
-
-# $1 = the path of the grade file to edit
-# $2 = the csaccount of the person
-function gradefile {
-    file="$1"
-
-    mkdir -p `dirname $1`
-
-    local csaccount
-
     # let the grader know who they're grading
     echo "#####################################" >> "$file"
     echo "#" >> "$file"
@@ -266,15 +246,18 @@ function gradefile {
 #######################################
 # parsing grades
 
+# $1 = the grade file
 function isGraded {
     # is the first word in the file $1 is "/", then it is not graded
     return `! grep '^[[:blank:]]*/' -q "$1"`
 }
 
+# $1 = the grade file
 function getGrade {
     head -n 1 "$1" | sed 's/\// /' | awk '{print $1;}'
 }
 
+# $1 = the grade file
 function getOutOf {
     if isGraded $1; then
         head -n 1 "$1" | sed 's/\// /' | awk '{print $2;}'
@@ -332,6 +315,7 @@ function totalOutOf {
 #######################################
 # displaying grades
 
+# $1 = percent
 function colorPercent {
     local per="$1"
     if [[ -z $1 ]]; then
@@ -351,6 +335,7 @@ function resetColor {
     printf "\x1b[0m"
 }
 
+# $1 = percent
 function dispPercent {
     local per="$1"
     colorPercent "$per"
@@ -358,6 +343,7 @@ function dispPercent {
     resetColor
 }
 
+# $1 = percent
 function percentToLetter {
     per="$1"
     colorPercent "$1"
