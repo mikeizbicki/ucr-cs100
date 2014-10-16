@@ -13,7 +13,7 @@ cmd         = executable [ argumentList ] [ connecter cmd ]
 connecter   = || or && or ;
 ```
 where `executable` is an executable program in the `PATH` and `argumentList` is a list of zero or more words.
-The connector is an optional way you can run multiple commands at once.
+The connecter is an optional way you can run multiple commands at once.
 If a command is followed by `;`, then the next command is always executed;
 if a command is followed by `&&`, then the next command is executed only if the first one succeeds;
 if a command is followed by `||`, then the next command is executed only if the first one fails.
