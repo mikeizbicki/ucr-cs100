@@ -2,7 +2,7 @@
 
 Here, we will present a list of functions that will be useful when programming your own shell.  These functions are called system calls, and they differ from regular functions because a syscall requests a specific service from the operating system’s kernel. 
 
-What’s really cool about syscalls are its error checking capabilities. Each syscall has access to a universal variable `errno`, `include <errno.h>` is required to use this variable, that it set to indicate what error has occured. The return value of each syscall can be furthered combined with other functions to make error checking much easier, which can save many headaches in the long run.
+What’s really cool about syscalls are its error checking capabilities. Each syscall has access to a universal variable `errno`, `include <errno.h>` is required to use this variable, that is set to indicate what error has occured. The return value of each syscall can be furthered combined with other functions to make error checking much easier, which can save many headaches in the long run.
 
 Syscalls might seem confusing to use but we’ll try our best to explain some of them in this list! If you want any more information we've included a link to the man page for each syscall.
 
