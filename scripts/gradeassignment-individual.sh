@@ -29,8 +29,6 @@ fi
 
 downloadGrades $user
 
-file="$tmpdir/$classname-$user/$assn/grade"
-
-gradefile "$file"
+gradeAssignment "$user" "$assn"
 
 uploadGrades $user

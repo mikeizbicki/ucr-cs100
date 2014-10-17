@@ -22,10 +22,7 @@ percentlist=""
 for csaccount in $(getStudentList); do
     name=$(getStudentInfo $csaccount name)
     githubaccount=$(getStudentInfo $csaccount github)
-    #csaccount=`basename $file`
-    #name=`head -n 1 $file`
-    #githubaccount=`tail -n 1 $file`
-   #
+
     totalgrade=`totalGrade "$csaccount" "$assn"`
     totaloutof=`totalOutOf "$csaccount" "$assn"`
     rtotaloutof=`runningTotalOutOf "$csaccount" "$assn"`

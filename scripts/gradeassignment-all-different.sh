@@ -21,9 +21,6 @@ fi
 #######################################
 # grade assignment
 
-# tells git to keep the username and password in memory for the next 15 minutes
-git config credential.helper cache
-
 downloadAllGrades
 
 for file in $studentinfo/*; do
@@ -31,4 +28,4 @@ for file in $studentinfo/*; do
     gradeAssignment "$csaccount" "$assn"
 done
 
-#uploadAllGrades
+uploadAllGrades
