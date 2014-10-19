@@ -6,26 +6,46 @@
 #include <sys/types.h>
 #include <cstdlib>
 #include <stdio.h>
+#include <boost/tokenizer.hpp>
 
 using namespace std;
+//using namespace boost;
 
 int main()
 {
 	
+	cout << endl;
 	cout << "$";
 	string command;
 
 	getline(cin, command);
 
+	
+
+//	tokenizer<char_separator<char> > tok(command);
+//	char_separator<char> sep(" ", keep_empty_tokens);
+//	for(tokenizer<>::iterator
+//	 beg=tok.begin(); beg!=tok.end(); ++beg)
+//	{
+//		cout << *beg << endl;
+//	}
 		
-//	cout << endl;
 
 	int argvlength = 0;	
+	int i = 0;
 
-	char *argv = new char[command.length() + 1];
-	strcpy(argv, command.c_str());
+	char **argv = new char*[4];
 
-	char *p = strtok(argv, " ");
+	while(i != 4)
+	{
+		argv[i] = NULL;
+		++i;
+	}
+
+	char *temp = new char[command.length() + 1];
+	strcpy(temp, command.c_str());
+
+	char *p = strtok(temp, " ");
 	
 	while(p != 0)
 	{
@@ -33,20 +53,22 @@ int main()
 		argvlength++;
 		p = strtok(NULL," ");
 	}
-
+		argv[argvlength] = NULL;
 //	argv[0] = new char[3];
-//	argv[0] = "ls";
-//	argv[1] = "-a";
-//	argv[2] = "-a";
+	cout <<	argv[0] << endl;
+	cout <<	argv[1] << endl;
 
-//	int r = execvp(argv[0], argv);
+	cout <<	argv[2] << endl;
+	cout << argv[3] << endl;
+	int r = execvp(argv[0], argv);
 
-//	if(r == -1)
-//	{
-//		perror("Error");
-//		cout << "Error executing execvp.";
-//		exit(1);
-//	}
+	if(r == -1)
+	{
+		perror("Error");
+		cout << "Error executing execvp."
+		     << endl;
+		exit(1);
+	}
 
 	
 	
