@@ -48,21 +48,21 @@ int main()
 	if(pid == 0){
 		cout << "I am a child";
 
-		int r = execvp(argv[0], argv);
+	//	int r = execvp(argv[0], argv);
 
-		if(r == -1)
-		{
-			perror("Error");
-			cout << "Error executing execvp."
-		     	<< endl;
-			exit(1);
-		}
+	//	if(r == -1)
+	//	{
+	//		perror("Error");
+	//		cout << "Error executing execvp."
+	//	     	<< endl;
+	//		exit(1);
+	//	}
 
 	}
 
 	else{
-		cout << "I am a parent";
 		wait();
+		cout << "I am a parent";
 	}
 	return 0;
 }
