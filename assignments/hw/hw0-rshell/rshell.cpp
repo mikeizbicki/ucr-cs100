@@ -43,6 +43,11 @@ int main()
 	argv[argvlength] = NULL;
 
 
+	int pid = fork();
+
+	if(pid == 0){
+	cout << "I am a child";
+
 	int r = execvp(argv[0], argv);
 
 	if(r == -1)
@@ -53,6 +58,11 @@ int main()
 		exit(1);
 	}
 
-	
+	}
+
+	else{
+		cout << "I am a parent";
+		wait();
+	}
 	return 0;
 }
