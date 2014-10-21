@@ -231,7 +231,7 @@ Here we can see both `dup` and `dup2` being used.
 
 `pipe` is another syscall that is harder to understand, so PLEASE utilize outside resources if need be!
    
-`pipe` essentially creates an imaginary file that you can write to and read from. The parameter is an int array with two elements, which are the file descriptors for the imaginary file. In the example bewlow, `fd[0]` is the read end of the pipe and `fd[1]` is the write end of the pipe. Let me be clear, however, that pipe ignores the input and only uses the write end as output to whatever it is piping to. 
+`pipe` essentially creates an imaginary file that you can write to and read from. The parameter is an int array with two elements, which are the file descriptors for the imaginary file. In the example below, `fd[0]` is the read end of the pipe and `fd[1]` is the write end of the pipe. Let me be clear, however, that pipe ignores the input and only uses the write end as output to whatever it is piping to. 
 
 This function is essential when implementing piping in a bash shell. Piping is moving the stdout of the left side of the pipe into the stdin of whatever program is on the right side of the pipe. For example, you have an executable `names` which outputs a list of names in a random order you can pipe this into `sort` which will sort it alphabetically. This command would look like: `names | sort`. The end result would be the contents of the name executable output to the screen, except sorted. 
    
