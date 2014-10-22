@@ -1,0 +1,616 @@
+Script started on Tue 21 Oct 2014 05:07:26 PM PDT
+bash: .profile: No such file or directory
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ PS1="$ "
+$ clear
+[H[2J$ pwd
+/home/user/proj/ucr-cs100/lecture
+$ [K$ [K$ [K$ [K$ pwd
+/home/user/proj/ucr-cs100/lecture
+$ g++ gdb.cpp 
+gdb.cpp: In function ‘int main()’:
+gdb.cpp:6:15: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+$ ./a.out 
+$ ./a.out [C[C[4@g++ gdb.cpp[C
+gdb.cpp: In function ‘int main()’:
+gdb.cpp:6:15: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+$ g++ gdb.cpp [C[C[4P./a.out[C
+Segmentation fault
+$ ./a.out [C[C[4@g++ gdb.cpp[C
+$ g++ gdb.cpp [C[C[4P./a.out[C
+$ ./a.out [C[C[4@g++ gdb.cpp[C
+$ g++ gdb.cpp [C[C[4P./a.out[C
+Segmentation fault
+$ ./a.out [C[C[4@g++ gdb.cpp[C[C[C[4P./a.out[C[C[C[4@g++ gdb.cpp[C
+$ g++ gdb.cpp [C[C[4P./a.out[C
+Segmentation fault
+$ clear
+[H[2J$ clear[C[C./a.out [C[C[4@g++ gdb.cpp[C
+gdb.cpp: In function ‘int main()’:
+gdb.cpp:11:5: error: expected ‘;’ before ‘cout’
+$ g++ gdb.cpp 
+$ g++ gdb.cpp [C[C[7Pclear[C[C./a.out 
+Segmentation fault
+$ ./a.out [C[C[4@g++ gdb.cpp[C
+$ g++ gdb.cpp [C[C[4P./a.out[C
+hi!Segmentation fault
+$ ./a.out [C[C[4@g++ gdb.cpp[C
+$ g++ gdb.cpp [C[C[4P./a.out[C
+hi!
+Segmentation fault
+$ ./a.out [C[C[4@g++ gdb.cpp[C
+$ g++ gdb.cpp [C[C[4P./a.out[C
+hi!
+Segmentation fault
+$ ./a.out [C[C[4@g++ gdb.cpp[C
+$ g++ gdb.cpp [C[C[4P./a.out[C
+hi!Segmentation fault
+$ clear
+[H[2J$ clear[C[C./a.out [C[C[4@g++ gdb.cpp[C-g 
+$ gdb ./a.out 
+GNU gdb (GDB) 7.4.1-debian
+Copyright (C) 2012 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from /home/user/proj/ucr-cs100/lecture/a.out...done.
+(gdb) run
+Starting program: /home/user/proj/ucr-cs100/lecture/a.out 
+hi!
+Program received signal SIGSEGV, Segmentation fault.
+0x0000000000400927 in main ()
+    at gdb.cpp:12
+12	    cout << *i << endl;
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 7718] will be killed.
+
+Quit anyway? (y or n) y
+$ clear
+[H[2J$ clear[C[Cgdb ./a.out [C[C[C[3@++ gdb.cpp -g[C[K[K[K[K
+$ g++ gdb.cpp[C[C[6Pclear[C[Cgdb ./a.out [C[C[C[3@++ gdb.cpp -g[C[C[C[C[3Pdb ./a.out[C
+GNU gdb (GDB) 7.4.1-debian
+Copyright (C) 2012 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from /home/user/proj/ucr-cs100/lecture/a.out...(no debugging symbols found)...done.
+(gdb) run
+Starting program: /home/user/proj/ucr-cs100/lecture/a.out 
+hi!
+Program received signal SIGSEGV, Segmentation fault.
+0x0000000000400927 in main ()
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 8534] will be killed.
+
+Quit anyway? (y or n) y
+$ clear
+[H[2J$ clear[C[Cgdb ./a.out [C[C[C[1P++ gdb.cppn-g
+g++: error: gdb.cppn-g: No such file or directory
+g++: fatal error: no input files
+compilation terminated.
+$ g++ gdb.cppn-g[1P-g -g
+$ g++ gdb.cpp -gn-g[C[C[9Pclear[C[Cgdb ./a.out 
+GNU gdb (GDB) 7.4.1-debian
+Copyright (C) 2012 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from /home/user/proj/ucr-cs100/lecture/a.out...done.
+(gdb) run
+Starting program: /home/user/proj/ucr-cs100/lecture/a.out 
+hi!
+Program received signal SIGSEGV, Segmentation fault.
+0x0000000000400927 in main ()
+    at gdb.cpp:12
+12	    cout << *i << endl;
+(gdb) list
+7	    //str[6]=0;
+8	    char *test=0;
+9	    int *i=0;
+10	    cerr << "hi!";// << endl;
+11	    //cout.flush();
+12	    cout << *i << endl;
+13	    return 0;
+14	}
+(gdb) list 5
+1	#include <iostream>
+2	using namespace std;
+3	
+4	int main()
+5	{
+6	    //char *str="hello world!";
+7	    //str[6]=0;
+8	    char *test=0;
+9	    int *i=0;
+10	    cerr << "hi!";// << endl;
+(gdb) list main
+1	#include <iostream>
+2	using namespace std;
+3	
+4	int main()
+5	{
+6	    //char *str="hello world!";
+7	    //str[6]=0;
+8	    char *test=0;
+9	    int *i=0;
+10	    cerr << "hi!";// << endl;
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 8897] will be killed.
+
+Quit anyway? (y or n) y
+$ clear
+[H[2J$ clear[C[Cgdb ./a.out [C[C[C++ gdb.cpp -g
+$ g++ gdb.cpp -g[C[C[9Pclear[C[Cgdb ./a.out [C[C[C++ gdb.cpp -g[C[C[C[2Pdb ./a.out [C[C[7Pclear[C[Cg++ gdb.cpp -g[C[C[K./a.out 
+hi!Segmentation fault
+$ ./a.out [C[C[Kg++ fib.cpp 
+$ ./a.out 
+fib(3)=3
+$ ./a.out [C[C[4@g++ fib.cpp[C[C[C[4P./a.out[C[C[Cg++ gdb.cpp -g[C[C[6P./a.out [C[C[4@g++ fib.cpp[C[C[C[4P./a.out[C[C[C[Kgdb a.out 
+GNU gdb (GDB) 7.4.1-debian
+Copyright (C) 2012 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from /home/user/proj/ucr-cs100/lecture/a.out...(no debugging symbols found)...done.
+(gdb) clear
+No source file specified.
+(gdb) :c
+Undefined command: "".  Try "help".
+(gdb) breakpoint 13
+Undefined command: "breakpoint".  Try "help".
+(gdb) breakpoint 13[1P 13[1P 13[1P 13[1P 13[1P 13
+No symbol table is loaded.  Use the "file" command.
+(gdb) quit()
+A syntax error in expression, near `)'.
+(gdb) quit()[K[K
+$ gdb a.out [C[C[2P./[C[C[C[C[C[C[C[C[2@gdb [C[C[C[C[C[C[1@.[1@/
+GNU gdb (GDB) 7.4.1-debian
+Copyright (C) 2012 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from /home/user/proj/ucr-cs100/lecture/a.out...(no debugging symbols found)...done.
+(gdb) r
+Starting program: /home/user/proj/ucr-cs100/lecture/a.out 
+fib(3)=3
+[Inferior 1 (process 10715) exited normally]
+(gdb) b 13
+Breakpoint 1 at 0x7ffff72d1c30: file ../sysdeps/unix/sysv/linux/x86_64/init-first.c, line 13.
+(gdb) b 13r 13e 13a 13k 13
+Note: breakpoint 1 also set at pc 0x7ffff72d1c30.
+Breakpoint 2 at 0x7ffff72d1c30: file ../sysdeps/unix/sysv/linux/x86_64/init-first.c, line 13.
+(gdb) break 13[1P 13[1P 13[1P 13[1P 13e 13a 13k 13[1P 13[1P 13[1P 13r 13e 13a 13k 13p 13o 13i 13n 13t 13[1P 13[1P 13[1P 13[1P 13[1P 13[1P 13[1P 13[1P 13[1P 13[1P 13b 13[C[C[C[K[K[K[Krun[K[K
+Starting program: /home/user/proj/ucr-cs100/lecture/a.out 
+
+Breakpoint 1, _init (argc=1, 
+    argv=0x7fffffffe3d8, 
+    envp=0x7fffffffe3e8)
+    at ../sysdeps/unix/sysv/linux/x86_64/../init-first.c:86
+86	../sysdeps/unix/sysv/linux/x86_64/../init-first.c: No such file or directory.
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 11054] will be killed.
+
+Quit anyway? (y or n) y
+$ clear
+[H[2J$ clear[C[C[Kg++ fib.cpp -g
+$ gdb ./a.out 
+GNU gdb (GDB) 7.4.1-debian
+Copyright (C) 2012 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from /home/user/proj/ucr-cs100/lecture/a.out...done.
+(gdb) b 13
+Breakpoint 1 at 0x40091c: file fib.cpp, line 13.
+(gdb) r
+Starting program: /home/user/proj/ucr-cs100/lecture/a.out 
+
+Breakpoint 1, main () at fib.cpp:13
+13	    cout << "fib(3)="
+(gdb) list
+8	    return fib(n-1)+fib(n-2);
+9	}
+10	
+11	int main()
+12	{
+13	    cout << "fib(3)="
+14	         << fib(3)
+15	         << endl;
+16	    return 0;
+17	}
+(gdb) next
+14	         << fib(3)
+(gdb) next
+15	         << endl;
+(gdb) n
+fib(3)=3
+16	    return 0;
+(gdb) n
+17	}
+(gdb) n
+__libc_start_main (main=<optimized out>, 
+    argc=<optimized out>, 
+    ubp_av=<optimized out>, 
+    init=<optimized out>, 
+    fini=<optimized out>, 
+    rtld_fini=<optimized out>, 
+    stack_end=0x7fffffffe3c8)
+    at libc-start.c:276
+276	libc-start.c: No such file or directory.
+(gdb) r
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+
+Starting program: /home/user/proj/ucr-cs100/lecture/a.out 
+
+Breakpoint 1, main () at fib.cpp:13
+13	    cout << "fib(3)="
+(gdb) step
+14	         << fib(3)
+(gdb) step
+15	         << endl;
+(gdb) step
+fib(3)=3
+16	    return 0;
+(gdb) b fib
+Breakpoint 2 at 0x4008c8: file fib.cpp, line 6.
+(gdb) r
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+
+Starting program: /home/user/proj/ucr-cs100/lecture/a.out 
+
+Breakpoint 2, fib (n=3) at fib.cpp:6
+6	    if (n==0) return 1;
+(gdb) bt[Kacktrace
+#0  fib (n=3) at fib.cpp:6
+#1  0x000000000040091a in main ()
+    at fib.cpp:14
+(gdb) s
+7	    if (n==1) return 1;
+(gdb) s[Ks
+8	    return fib(n-1)+fib(n-2);
+(gdb) continue
+Continuing.
+
+Breakpoint 2, fib (n=2) at fib.cpp:6
+6	    if (n==0) return 1;
+(gdb) bt
+#0  fib (n=2) at fib.cpp:6
+#1  0x00000000004008ef in fib (n=3)
+    at fib.cpp:8
+#2  0x000000000040091a in main ()
+    at fib.cpp:14
+(gdb) c
+Continuing.
+
+Breakpoint 2, fib (n=1) at fib.cpp:6
+6	    if (n==0) return 1;
+(gdb) cbt
+#0  fib (n=1) at fib.cpp:6
+#1  0x00000000004008ef in fib (n=2)
+    at fib.cpp:8
+#2  0x00000000004008ef in fib (n=3)
+    at fib.cpp:8
+#3  0x000000000040091a in main ()
+    at fib.cpp:14
+(gdb) c
+Continuing.
+
+Breakpoint 2, fib (n=0) at fib.cpp:6
+6	    if (n==0) return 1;
+(gdb) cbt
+#0  fib (n=0) at fib.cpp:6
+#1  0x00000000004008fe in fib (n=2)
+    at fib.cpp:8
+#2  0x00000000004008ef in fib (n=3)
+    at fib.cpp:8
+#3  0x000000000040091a in main ()
+    at fib.cpp:14
+(gdb) print n
+$1 = 0
+(gdb) delete breakpoint
+Delete all breakpoints? (y or n) y
+(gdb) delete breakpoint[C[C[C[C[C[C[10Pprint ndelete breakpoint[C[C[C[C[C[C[Kc
+Continuing.
+fib(3)=3
+[Inferior 1 (process 12524) exited normally]
+(gdb) [K(gdb) [K(gdb) clear
+No breakpoint at this line.
+(gdb) quit
+$ clear
+[H[2J$ ls /proc
+[0m[01;34m1[0m      [01;34m26[0m     [01;34m3450[0m  [01;34m8955[0m
+[01;34m12076[0m  [01;34m26504[0m  [01;34m3462[0m  [01;34m8993[0m
+[01;34m125[0m    [01;34m26836[0m  [01;34m3468[0m  [01;34m9345[0m
+[01;34m12714[0m  [01;34m26858[0m  [01;34m3483[0m  [01;34m9796[0m
+[01;34m139[0m    [01;34m26862[0m  [01;34m3486[0m  [01;34macpi[0m
+[01;34m13981[0m  [01;34m26863[0m  [01;34m3493[0m  [01;34masound[0m
+[01;34m14088[0m  [01;34m26918[0m  [01;34m3515[0m  buddyinfo
+[01;34m14424[0m  [01;34m27[0m     [01;34m3519[0m  [01;34mbus[0m
+[01;34m14756[0m  [01;34m2716[0m   [01;34m3541[0m  cgroups
+[01;34m14869[0m  [01;34m27215[0m  [01;34m3542[0m  cmdline
+[01;34m1503[0m   [01;34m27216[0m  [01;34m3543[0m  consoles
+[01;34m1504[0m   [01;34m27217[0m  [01;34m3549[0m  cpuinfo
+[01;34m1506[0m   [01;34m2743[0m   [01;34m3552[0m  crypto
+[01;34m15453[0m  [01;34m2752[0m   [01;34m3559[0m  devices
+[01;34m16216[0m  [01;34m2780[0m   [01;34m3561[0m  diskstats
+[01;34m16443[0m  [01;34m2794[0m   [01;34m3565[0m  dma
+[01;34m16889[0m  [01;34m28[0m     [01;34m3567[0m  [01;34mdri[0m
+[01;34m17225[0m  [01;34m2846[0m   [01;34m3569[0m  [01;34mdriver[0m
+[01;34m17560[0m  [01;34m2865[0m   [01;34m3571[0m  execdomains
+[01;34m1886[0m   [01;34m2892[0m   [01;34m3573[0m  fb
+[01;34m1919[0m   [01;34m28951[0m  [01;34m3575[0m  filesystems
+[01;34m192[0m    [01;34m2898[0m   [01;34m3577[0m  [01;34mfs[0m
+[01;34m1924[0m   [01;34m29[0m     [01;34m3597[0m  interrupts
+[01;34m1926[0m   [01;34m2923[0m   [01;34m3600[0m  iomem
+[01;34m193[0m    [01;34m2926[0m   [01;34m3608[0m  ioports
+[01;34m1933[0m   [01;34m2936[0m   [01;34m3613[0m  [01;34mirq[0m
+[01;34m194[0m    [01;34m29581[0m  [01;34m382[0m   kallsyms
+[01;34m195[0m    [01;34m2959[0m   [01;34m4127[0m  kcore
+[01;34m196[0m    [01;34m2980[0m   [01;34m4143[0m  keys
+[01;34m197[0m    [01;34m2996[0m   [01;34m4144[0m  key-users
+[01;34m2[0m      [01;34m3[0m      [01;34m4146[0m  kmsg
+[01;34m21[0m     [01;34m30[0m     [01;34m4162[0m  kpagecount
+[01;34m22[0m     [01;34m3012[0m   [01;34m4664[0m  kpageflags
+[01;34m2225[0m   [01;34m3029[0m   [01;34m4815[0m  loadavg
+[01;34m22875[0m  [01;34m3041[0m   [01;34m4830[0m  locks
+[01;34m23[0m     [01;34m3046[0m   [01;34m530[0m   meminfo
+[01;34m23209[0m  [01;34m3072[0m   [01;34m548[0m   misc
+[01;34m2368[0m   [01;34m3073[0m   [01;34m586[0m   modules
+[01;34m237[0m    [01;34m3074[0m   [01;34m6[0m     [01;36mmounts[0m
+[01;34m238[0m    [01;34m3075[0m   [01;34m6121[0m  mtrr
+[01;34m24[0m     [01;34m3076[0m   [01;34m675[0m   [01;36mnet[0m
+[01;34m2438[0m   [01;34m3077[0m   [01;34m690[0m   pagetypeinfo
+[01;34m24732[0m  [01;34m3078[0m   [01;34m691[0m   partitions
+[01;34m25[0m     [01;34m3094[0m   [01;34m7[0m     sched_debug
+[01;34m2521[0m   [01;34m3098[0m   [01;34m7777[0m  [01;36mself[0m
+[01;34m25660[0m  [01;34m31[0m     [01;34m7778[0m  slabinfo
+[01;34m25662[0m  [01;34m3183[0m   [01;34m7780[0m  softirqs
+[01;34m25663[0m  [01;34m32[0m     [01;34m7787[0m  stat
+[01;34m25664[0m  [01;34m32700[0m  [01;34m7791[0m  swaps
+[01;34m25666[0m  [01;34m33[0m     [01;34m7826[0m  [01;34msys[0m
+[01;34m25667[0m  [01;34m3334[0m   [01;34m8029[0m  sysrq-trigger
+[01;34m25668[0m  [01;34m3362[0m   [01;34m8030[0m  [01;34msysvipc[0m
+[01;34m25670[0m  [01;34m3364[0m   [01;34m8032[0m  timer_list
+[01;34m25671[0m  [01;34m3382[0m   [01;34m8844[0m  timer_stats
+[01;34m25677[0m  [01;34m3384[0m   [01;34m8847[0m  [01;34mtty[0m
+[01;34m25679[0m  [01;34m34[0m     [01;34m8849[0m  uptime
+[01;34m25696[0m  [01;34m3400[0m   [01;34m8853[0m  version
+[01;34m25697[0m  [01;34m3440[0m   [01;34m8887[0m  vmallocinfo
+[01;34m2577[0m   [01;34m3443[0m   [01;34m8888[0m  vmstat
+[01;34m2586[0m   [01;34m3444[0m   [01;34m8890[0m  zoneinfo
+$ ls /proc/uptime
+/proc/uptime
+$ ls /proc/uptime[C[C[1P[1P /proc/uptime[C[Cc /proc/uptime[C[C[Ca /proc/uptime[C[C[C[Ct /proc/uptime[C[C[C[C[C
+549818.42 1115072.97
+$ cat /proc/uptime
+549826.39 1115103.84
+$ cat /proc/uptime
+549827.15 1115106.87
+$ cat /proc/uptime
+549827.83 1115109.56
+$ cat /proc/uptime
+549828.46 1115112.03
+$ cat /proc/uptime
+549829.02 1115114.25
+$ cat /proc/uptime
+549829.62 1115116.59
+$ cat /proc/uptime
+549830.21 1115118.92
+$ uptime
+ 18:03:28 up 6 days,  8:44,  9 users,  load average: 0.16, 0.13, 0.13
+$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ cd [K[Klear
+[H[2J$ cd /prioc[K[K[Koc
+$ ls
+[0m[01;34m1[0m      [01;34m1926[0m   [01;34m25663[0m  [01;34m2743[0m   [01;34m3072[0m   [01;34m3450[0m  [01;34m3608[0m  [01;34m7791[0m       crypto       misc
+[01;34m12076[0m  [01;34m193[0m    [01;34m25664[0m  [01;34m2752[0m   [01;34m3073[0m   [01;34m3462[0m  [01;34m3613[0m  [01;34m7826[0m       devices      modules
+[01;34m125[0m    [01;34m1933[0m   [01;34m25666[0m  [01;34m2780[0m   [01;34m3074[0m   [01;34m3468[0m  [01;34m382[0m   [01;34m8029[0m       diskstats    [01;36mmounts[0m
+[01;34m12714[0m  [01;34m194[0m    [01;34m25667[0m  [01;34m2794[0m   [01;34m3075[0m   [01;34m3483[0m  [01;34m4127[0m  [01;34m8030[0m       dma          mtrr
+[01;34m139[0m    [01;34m195[0m    [01;34m25668[0m  [01;34m28[0m     [01;34m3076[0m   [01;34m3486[0m  [01;34m4143[0m  [01;34m8032[0m       [01;34mdri[0m          [01;36mnet[0m
+[01;34m13981[0m  [01;34m196[0m    [01;34m25670[0m  [01;34m2846[0m   [01;34m3077[0m   [01;34m3493[0m  [01;34m4144[0m  [01;34m8844[0m       [01;34mdriver[0m       pagetypeinfo
+[01;34m14088[0m  [01;34m197[0m    [01;34m25671[0m  [01;34m2865[0m   [01;34m3078[0m   [01;34m3515[0m  [01;34m4146[0m  [01;34m8847[0m       execdomains  partitions
+[01;34m14424[0m  [01;34m2[0m      [01;34m25677[0m  [01;34m2892[0m   [01;34m3094[0m   [01;34m3519[0m  [01;34m4162[0m  [01;34m8849[0m       fb           sched_debug
+[01;34m14756[0m  [01;34m21[0m     [01;34m25696[0m  [01;34m28951[0m  [01;34m3098[0m   [01;34m3541[0m  [01;34m4664[0m  [01;34m8853[0m       filesystems  [01;36mself[0m
+[01;34m14869[0m  [01;34m22[0m     [01;34m25697[0m  [01;34m2898[0m   [01;34m31[0m     [01;34m3542[0m  [01;34m4815[0m  [01;34m8887[0m       [01;34mfs[0m           slabinfo
+[01;34m1503[0m   [01;34m2225[0m   [01;34m2577[0m   [01;34m29[0m     [01;34m3183[0m   [01;34m3543[0m  [01;34m4830[0m  [01;34m8888[0m       interrupts   softirqs
+[01;34m1504[0m   [01;34m22875[0m  [01;34m2586[0m   [01;34m2923[0m   [01;34m32[0m     [01;34m3549[0m  [01;34m530[0m   [01;34m8890[0m       iomem        stat
+[01;34m1506[0m   [01;34m23[0m     [01;34m26[0m     [01;34m2926[0m   [01;34m32700[0m  [01;34m3552[0m  [01;34m548[0m   [01;34m8955[0m       ioports      swaps
+[01;34m15453[0m  [01;34m23209[0m  [01;34m26504[0m  [01;34m2936[0m   [01;34m33[0m     [01;34m3559[0m  [01;34m586[0m   [01;34m8993[0m       [01;34mirq[0m          [01;34msys[0m
+[01;34m16216[0m  [01;34m2368[0m   [01;34m26836[0m  [01;34m29581[0m  [01;34m3334[0m   [01;34m3561[0m  [01;34m6[0m     [01;34m9345[0m       kallsyms     sysrq-trigger
+[01;34m16443[0m  [01;34m237[0m    [01;34m26858[0m  [01;34m2959[0m   [01;34m3362[0m   [01;34m3565[0m  [01;34m6121[0m  [01;34m9796[0m       kcore        [01;34msysvipc[0m
+[01;34m16889[0m  [01;34m238[0m    [01;34m26862[0m  [01;34m2980[0m   [01;34m3364[0m   [01;34m3567[0m  [01;34m675[0m   [01;34macpi[0m       keys         timer_list
+[01;34m17225[0m  [01;34m24[0m     [01;34m26863[0m  [01;34m2996[0m   [01;34m3382[0m   [01;34m3569[0m  [01;34m690[0m   [01;34masound[0m     key-users    timer_stats
+[01;34m17672[0m  [01;34m2438[0m   [01;34m26918[0m  [01;34m3[0m      [01;34m3384[0m   [01;34m3571[0m  [01;34m691[0m   buddyinfo  kmsg         [01;34mtty[0m
+[01;34m18134[0m  [01;34m24732[0m  [01;34m27[0m     [01;34m30[0m     [01;34m34[0m     [01;34m3573[0m  [01;34m7[0m     [01;34mbus[0m        kpagecount   uptime
+[01;34m1886[0m   [01;34m25[0m     [01;34m2716[0m   [01;34m3012[0m   [01;34m3400[0m   [01;34m3575[0m  [01;34m7777[0m  cgroups    kpageflags   version
+[01;34m1919[0m   [01;34m2521[0m   [01;34m27215[0m  [01;34m3029[0m   [01;34m3440[0m   [01;34m3577[0m  [01;34m7778[0m  cmdline    loadavg      vmallocinfo
+[01;34m192[0m    [01;34m25660[0m  [01;34m27216[0m  [01;34m3041[0m   [01;34m3443[0m   [01;34m3597[0m  [01;34m7780[0m  consoles   locks        vmstat
+[01;34m1924[0m   [01;34m25662[0m  [01;34m27217[0m  [01;34m3046[0m   [01;34m3444[0m   [01;34m3600[0m  [01;34m7787[0m  cpuinfo    meminfo      zoneinfo
+$ vim cpuinfo 
+[?1049h[?1h=[1;26r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[26;1H"cpuinfo" [readonly] 104L, 3373C[>c[1;1H[33m  1 [mprocessor   : 0
+[33m  2 [mvendor_id   : GenuineIntel
+[33m  3 [mcpu family  : 6
+[33m  4 [mmodel       : 37
+[33m  5 [mmodel name  : Intel(R) Core(TM) i3 CPU       M 370  @ 2.40GHz
+[33m  6 [mstepping    : 5
+[33m  7 [mmicrocode   : 0x2
+[33m  8 [mcpu MHz     : 1333.000
+[33m  9 [mcache size  : 3072 KB
+[33m 10 [mphysical id : 0
+[33m 11 [msiblings    : 4
+[33m 12 [mcore id     : 0
+[33m 13 [mcpu cores   : 2
+[33m 14 [mapicid      : 0
+[33m 15 [minitial apicid  : 0
+[33m 16 [mfpu     : yes
+[33m 17 [mfpu_exception   : yes
+[33m 18 [mcpuid level : 11
+[33m 19 [mwp      : yes
+[33m 20 [mflags       : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pp[21;1H[33m    [mse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constann[22;1H[33m    [mt_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni dtt[23;1H[33m    [mes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 popcnt laa[24;1H[33m    [mhf_lm arat dtherm tpr_shadow vnmi flexpriority ept vpid
+[33m 21 [mbogomips    : 4788.70[26;68H1,1[11CTop]2;cpuinfo = (/proc) - VIM]1;cpuinfo[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[27m[m[H[2J[1;1H[33m 84 [mstepping    : 5
+[33m 85 [mmicrocode   : 0x2
+[33m 86 [mcpu MHz     : 933.000
+[33m 87 [mcache size  : 3072 KB
+[33m 88 [mphysical id : 0
+[33m 89 [msiblings    : 4
+[33m 90 [mcore id     : 2
+[33m 91 [mcpu cores   : 2
+[33m 92 [mapicid      : 5
+[33m 93 [minitial apicid  : 5
+[33m 94 [mfpu     : yes
+[33m 95 [mfpu_exception   : yes
+[33m 96 [mcpuid level : 11
+[33m 97 [mwp      : yes
+[33m 98 [mflags       : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pp[16;1H[33m    [mse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constann[17;1H[33m    [mt_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni dtt[18;1H[33m    [mes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 popcnt laa[19;1H[33m    [mhf_lm arat dtherm tpr_shadow vnmi flexpriority ept vpid
+[33m 99 [mbogomips    : 4787.90
+[33m100 [mclflush size    : 64
+[33m101 [mcache_alignment : 64
+[33m102 [maddress sizes   : 36 bits physical, 48 bits virtual
+[33m103 [mpower management:
+[33m104 [m[26;68H104,0-1[7CBot[25;5H[?12l[?25h[?25l[26;70H3,1  [24;5H[?12l[?25h[?25l[26;70H2[23;5H[?12l[?25h[?25l[26;70H1[22;5H[?12l[?25h[?25l[26;70H0[21;5H[?12l[?25h[?25l[26;68H99,1 [20;5H[?12l[?25h[?25l[26;69H8[15;5H[?12l[?25h[?25l[26;69H7[14;5H[?12l[?25h[?25l[26;69H6[13;5H[?12l[?25h[?25l[26;69H5[12;5H[?12l[?25h[?25l[26;69H4[11;5H[?12l[?25h[?25l[26;69H3[10;5H[?12l[?25h[?25l[26;69H2[9;5H[?12l[?25h[?25l[26;69H1[8;5H[?12l[?25h[?25l[26;69H0[7;5H[?12l[?25h[?25l[26;68H89[6;5H[?12l[?25h[?25l[26;69H8[5;5H[?12l[?25h[?25l[26;69H7[4;5H[?12l[?25h[?25l[26;69H6[3;5H[?12l[?25h[?25l[26;69H5[2;5H[?12l[?25h[?25l[26;69H4[1;5H[?12l[?25h[?25l[1;25r[1;1H[L[1;26r[1;1H[33m 83 [mmodel name  : Intel(R) Core(TM) i3 CPU       M 370  @ 2.40GHz[26;68H[K[26;68H83,1[10C98%[1;5H[?12l[?25h[?25l[1;25r[1;1H[L[1;26r[1;1H[33m 82 [mmodel       : 37[26;68H[K[26;68H82,1[10C97%[1;5H[?12l[?25h[?25l[1;25r[1;1H[L[1;26r[1;1H[33m 81 [mcpu family  : 6[26;68H[K[26;68H81,1[10C96%[1;5H[?12l[?25h[?25l[1;25r[1;1H[L[1;26r[1;1H[33m 80 [mvendor_id   : GenuineIntel[26;68H[K[26;68H80,1[10C95%[1;5H[?12l[?25h[?25l[1;25r[1;1H[L[1;26r[1;1H[33m 79 [mprocessor   : 3[26;68H[K[26;68H79,1[10C93%[1;5H[?12l[?25h[?25l[1;25r[1;1H[L[1;26r[1;1H[33m 78 [m[26;68H[K[26;68H78,0-1[8C92%[1;5H[?12l[?25h[?25l[26;69H9,1  [2;5H[?12l[?25h[?25l[26;72H3-15[2;19H[?12l[?25h[?25l[26;68H[K[26;1H:[?12l[?25hq[?25l[?12l[?25h[?25l]2;user@userland: ~/proj/ucr-cs100/lecture]1;user@userland: ~/proj/ucr-cs100/lecture[26;1H[K[26;1H[?1l>[?12l[?25h[?1049l$ cd /proc/seld[Kf
+$ pwd
+/proc/self
+$ ls -l ../[K[K[K/proc/seld
+ls: cannot access /proc/seld: No such file or directory
+$ ls -l /proc/seldf[1Pf
+lrwxrwxrwx 1 root root 64 Oct 15 09:08 [0m[01;36m/proc/self[0m -> [01;34m18706[0m
+$ clear
+[H[2J$ ls
+[0m[01;34mattr[0m        comm             [01;34mfd[0m        mem         numa_maps      [01;36mroot[0m       statm
+autogroup   coredump_filter  [01;34mfdinfo[0m    mountinfo   oom_adj        sched      status
+auxv        cpuset           io        mounts      oom_score      sessionid  syscall
+cgroup      [01;36mcwd[0m              limits    mountstats  oom_score_adj  smaps      [01;34mtask[0m
+clear_refs  environ          loginuid  [01;34mnet[0m         pagemap        stack      wchan
+cmdline     [01;36mexe[0m              maps      [01;34mns[0m          personality    stat
+$ cat stack 
+[<ffffffff8107116d>] arch_local_irq_save+0x11/0x17
+[<ffffffff810497c1>] do_wait+0x19b/0x20f
+[<ffffffff8104a90a>] sys_wait4+0x98/0xb5
+[<ffffffff810fbc8a>] fput+0x17a/0x1a1
+[<ffffffff81048983>] child_wait_callback+0x0/0x43
+[<ffffffff81355452>] system_call_fastpath+0x16/0x1b
+[<ffffffffffffffff>] 0xffffffffffffffff
+$ cd fd
+$ ls
+[0m[01;36m0[0m  [01;36m1[0m  [01;36m2[0m  [01;36m255[0m
+$ cd ~/proj/ucr-cs100/lecture/
+$ clear
+[H[2J$ ls
+[0m[01;32ma.out[0m      exec.cpp  fib.cpp   lecture1b  lecture4b  Makefile  [01;34mtmp[0m
+[01;34mbin[0m        exit.cpp  gdb.cpp   lecture2   lecture5   [01;34mrshell[0m    typescript
+exec2.cpp  fail.cpp  lecture1  lecture4   lecture6   testfile
+$ ls > out
+$ cat out
+a.out
+bin
+exec2.cpp
+exec.cpp
+exit.cpp
+fail.cpp
+fib.cpp
+gdb.cpp
+lecture1
+lecture1b
+lecture2
+lecture4
+lecture4b
+lecture5
+lecture6
+Makefile
+out
+rshell
+testfile
+tmp
+typescript
+$ clear
+[H[2J$ clearat out[C[C[1@ls >[C[C[C[C[1@2[C[C[C[C[C[C
+[0m[01;32ma.out[0m      exec.cpp  fib.cpp   lecture1b  lecture4b  Makefile  testfile
+[01;34mbin[0m        exit.cpp  gdb.cpp   lecture2   lecture5   out       [01;34mtmp[0m
+exec2.cpp  fail.cpp  lecture1  lecture4   lecture6   [01;34mrshell[0m    typescript
+$ cat out
+$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ ls
+[0m[01;32ma.out[0m      exec.cpp  fib.cpp   lecture1b  lecture4b  Makefile  testfile
+[01;34mbin[0m        exit.cpp  gdb.cpp   lecture2   lecture5   out       [01;34mtmp[0m
+exec2.cpp  fail.cpp  lecture1  lecture4   lecture6   [01;34mrshell[0m    typescript
+$ g++ [K$ g++ [K$ g++ [K$ g++ [K$ g++ [K$ g++ [K$ g++ [K$ g++ [K$ g++ [K$ g++ [K$ g++ [K$ g++ [K$ g++ [K$ g++ [K$ g++ [K$ g++ [K$ g++ [K$ g++ [K$ g++ [K$ g++ [K$ g++ [K$ g++ [K$ g++ h[K$ g++ h[K$ g++ h[K$ g++ h[K$ g++ h[Kgdb.cpp 
+$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$  [K[A$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ g++ gdb.cpp 
+gdb.cpp: In function ‘int main()’:
+gdb.cpp:6:15: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+$ g++ gdb.cpp > out
+gdb.cpp: In function ‘int main()’:
+gdb.cpp:6:15: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+$ cat out
+$ cat out[C[C[10@g++ gdb.cpp >[C[C[C[C[C[C[C[C[1@2
+$ g++ gdb.cpp 2> out[C[C[11Pcat[C[C[C[C
+gdb.cpp: In function ‘int main()’:
+gdb.cpp:6:15: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ clear
+[H[2J$ g++ filemanip.cpp 
+$ ./a.out 
+^C
+$ ./a.out [C[C[10@g++ filemanip.cpp[C
+filemanip.cpp: In function ‘int main()’:
+filemanip.cpp:9:19: error: ‘perror’ was not declared in this scope
+$ :4[K[Kg++ filemanip.cpp 
+filemanip.cpp: In function ‘int main()’:
+filemanip.cpp:10:19: error: ‘perror’ was not declared in this scope
+$ g++ filemanip.cpp 
+$ ./a.out 
+open: Success
+$ ./a.out <[K> out
+open: Success
+$ ./a.out > out[C[C[C[C[1@2
+$ cat out
+open: Success
+$ cat out[C[C[7@./a.out 2>[C[C[C[C[1P[C[C[1@1[C[C[K$ ./a.out 1> out^C
+$ which true
+/bin/true
+$ la
+bash: la: command not found
+$ ls
+[0m[01;32ma.out[0m          gdb.cpp    Makefile
+[01;34mbin[0m            lecture1   out
+exec2.cpp      lecture1b  [01;34mrshell[0m
+exec.cpp       lecture2   testfile
+exit.cpp       lecture4   [01;34mtmp[0m
+fail.cpp       lecture4b  typescript
+fib.cpp        lecture5
+filemanip.cpp  lecture6
+$ ls t[KA
+ls: cannot access A: No such file or directory
+$ gg[K[K[K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ exit
+exit
+
+Script done on Tue 21 Oct 2014 06:38:41 PM PDT
