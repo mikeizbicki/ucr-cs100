@@ -2,7 +2,7 @@
 
 Here, we will present a list of functions that will be useful when programming your own shell.  These functions are called system calls, and they differ from regular functions because a syscall requests a specific service from the operating system’s kernel. 
 
-What’s really cool about syscalls are its error checking capabilities. Each syscall has access to a universal variable `errno`, `include <errno.h>` is required to use this variable, that it set to indicate what error has occured. The return value of each syscall can be furthered combined with other functions to make error checking much easier, which can save many headaches in the long run.
+What’s really cool about syscalls are its error checking capabilities. Each syscall has access to a universal variable `errno`, `include <errno.h>` is required to use this variable, that is set to indicate what error has occured. The return value of each syscall can be furthered combined with other functions to make error checking much easier, which can save many headaches in the long run.
 
 Syscalls might seem confusing to use but we’ll try our best to explain some of them in this list! If you want any more information we've included a link to the man page for each syscall.
 
@@ -231,7 +231,7 @@ Here we can see both `dup` and `dup2` being used.
 
 `pipe` is another syscall that is harder to understand, so PLEASE utilize outside resources if need be!
    
-`pipe` essentially creates an imaginary file that you can write to and read from. The parameter is an int array with two elements, which are the file descriptors for the imaginary file. In the example bewlow, `fd[0]` is the read end of the pipe and `fd[1]` is the write end of the pipe. Let me be clear, however, that pipe ignores the input and only uses the write end as output to whatever it is piping to. 
+`pipe` essentially creates an imaginary file that you can write to and read from. The parameter is an int array with two elements, which are the file descriptors for the imaginary file. In the example below, `fd[0]` is the read end of the pipe and `fd[1]` is the write end of the pipe. Let me be clear, however, that pipe ignores the input and only uses the write end as output to whatever it is piping to. 
 
 This function is essential when implementing piping in a bash shell. Piping is moving the stdout of the left side of the pipe into the stdin of whatever program is on the right side of the pipe. For example, you have an executable `names` which outputs a list of names in a random order you can pipe this into `sort` which will sort it alphabetically. This command would look like: `names | sort`. The end result would be the contents of the name executable output to the screen, except sorted. 
    

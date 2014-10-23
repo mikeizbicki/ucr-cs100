@@ -13,7 +13,7 @@ cmd         = executable [ argumentList ] [ connecter cmd ]
 connecter   = || or && or ;
 ```
 where `executable` is an executable program in the `PATH` and `argumentList` is a list of zero or more words.
-The connector is an optional way you can run multiple commands at once.
+The connecter is an optional way you can run multiple commands at once.
 If a command is followed by `;`, then the next command is always executed;
 if a command is followed by `&&`, then the next command is executed only if the first one succeeds;
 if a command is followed by `||`, then the next command is executed only if the first one fails.
@@ -31,7 +31,7 @@ There should be no limit to the number of commands that can be chained together 
 
 3. Execute the command.
 This will require using the syscalls `fork`, `execvp`, and `waitpid`.
-You should refere to the man pages for detailed instructions on how to use these functions.
+You should refer to the man pages for detailed instructions on how to use these functions.
 There is also a [nice tutorial](../../../tutorials/syscalls/README.md) prepared by previous cs100 students.
 
 4. You must have a special built in command of `exit` which exits your shell.
@@ -72,7 +72,7 @@ NO EXCEPTIONS.
 
 You must have a directory called `src` which contains all the source code files for the project.
 
-You must have a `Makefile` in the root directory.  In the `Makefile` you will have two targets.  The first target is called `all` and the second target is called `rshell`.  Both of these targets will compile compile your program using `g++` with the flags: `-Wall -Werror -ansi -pedantic`.
+You must have a `Makefile` in the root directory.  In the `Makefile` you will have two targets.  The first target is called `all` and the second target is called `rshell`.  Both of these targets will compile your program using `g++` with the flags: `-Wall -Werror -ansi -pedantic`.
 
 You must NOT have a directory called `bin` in the project; however, when the project is built, this directory must be created and all executable files placed here.
 
