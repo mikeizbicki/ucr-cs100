@@ -1,7 +1,7 @@
 ## a local Linux installation
 
 Install Linux on your personal desktop/laptop computer.
-I personally use the [Debian](http://www.debian.org/) and [Slackware](http://slackware.org) distributions, but you're free to choose whatever distribution you like.
+I personally use the [Debian](http://www.debian.org/) and [Slackware](http://slackware.com) distributions, but you're free to choose whatever distribution you like.
 The lab machines use [CentOS](http://www.centos.org).
 
 There are two ways you can install Linux.
