@@ -4,7 +4,7 @@ You should complete this lab using pair programming with a new partner.
 
 ### coding instructions
 
-In this lab, we're going to learn to send spam emails.  It turns out that with the [Simple Mail Transfer Protocol (SMTP)](http://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol), you don't need to know someone's password to send email from their account!  Anyone can send emails from anyone elsse's account!
+In this lab, we're going to learn to send spam emails.  It turns out that with the [Simple Mail Transfer Protocol (SMTP)](http://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol), you don't need to know someone's password to send email from their account!  Anyone can send emails from anyone else's account!
 
 First, you're going to practice sending these emails.  Then, you're going to write a bash script to automate the process.
 
