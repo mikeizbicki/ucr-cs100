@@ -14,5 +14,5 @@ Implement your own version of the `mv` command.  Given the command:
 mv file1 file2
 ```
 
-If `file2` does not exist, then you should rename `file1` to `file1`.  Otherwise, if `file2` is a directory, you should move `file1` into `file2`.  If `file2` is not a directory, you should print an error message.
+If `file2` does not exist, then you should rename `file1` to `file2`.  Otherwise, if `file2` is a directory, you should move `file1` into `file2`.  If `file2` is not a directory, you should print an error message.
 
