@@ -46,7 +46,7 @@ If the assignment has not yet been graded, then the contents of the file will co
 You can use the `scripts/calcgrade.sh` script to calculate your whole grade for the course.
 This script automatically downloads the latest version of your repo, inspects the grade you received on each assignment, and calculates your current and final grades for the course.
 
-The `calcgrade.sh` script expects a single argument that corresponds to the github account of the grade you want to check.
+The `calcgrade.sh` script expects a single argument that corresponds to the UCR netid/CS account of the grade you want to check.
 For example, if you want to find the grade of the `examplestudent` account, you would run:
 
 ```
@@ -57,7 +57,7 @@ and the output looks something like:
 
 ```
 finding grade for github account examplestudent
-repository exists... fetching origin
+repository exists... fetching ORIGIN
 
 ===========================================
     grade        |  assignment
