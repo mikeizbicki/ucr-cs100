@@ -42,6 +42,29 @@ while [ ! -e "LICENSE" ]; do
     cd ..
 done
 
+##########################################
+#checks if keys are installed
+checkKeys()
+{
+    local TMPFILE="REMOVE_ME.tmp"
+    for INST in people/instructors/*;do
+        local STR=${INST##*/}
+        if [[ $STR == *@* ]];then
+            gpg --list-keys $STR  > $TMPFILE 2> $TMPFILE
+            if [ ! $? -eq 0 ] ;then
+                colorPercent "50"
+                echo "Instructor keys were not installed! Installing..."
+                resetColor
+                scripts/./install-instructor-keys.sh
+                colorPercent 100
+                echo "------Done installing keys------"
+                resetColor
+            fi
+        fi
+    done
+    rm $TMPFILE
+}
+
 #######################################
 # misc display functions
 
