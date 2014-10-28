@@ -185,7 +185,7 @@ function uploadAllGrades {
     echo "uploading repos..."
     accountlist=$(getStudentList)
 
-    # this weird xargs command runs all of the downloadProject functions in parallel
+    # this weird xargs command runs all of the uploadGrades functions in parallel
     if ! (echo "$accountlist" | xargs -n 1 -P 4 bash -c "uploadGrades \$1" -- ); then
         error "ERROR: some repos failed to upload; sometimes we exceed github's connection limits due to parallel uploading; trying again might work?"
     fi
