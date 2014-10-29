@@ -377,4 +377,56 @@ function percentToLetter {
     resetColor
 }
 
+#######################################
+#print color text functions
 
+# $1 = text
+function printRed {
+    printf "\x1B[31m"
+    printf "$1"
+    resetColor
+}
+
+# $1 = text
+function printGreen {
+    printf "\x1b[32m"
+    printf "$1"
+    resetColor
+}
+
+# $1 = text
+function printCyn {
+    printf "\x1b[36m"
+    printf "$1"
+    resetColor
+}
+
+# $1 = text
+function printYel {
+    printf "\x1b[33m"
+    printf "$1"
+    resetColor
+}
+
+##########################################
+#checks if keys are installed
+checkKeys()
+{
+    which gpg > /dev/null 2> /dev/null
+    if [ ! $? -eq 0 ];then
+        echo You need to install gpg
+        echo https://www.gnupg.org/download/
+        exit 1
+    fi
+    for INST in people/instructors/*;do
+        local STR=${INST##*/}
+        if [[ $STR == *@* ]];then
+            gpg --list-keys $STR  > /dev/null 2> /dev/null
+            if [ ! $? -eq 0 ] ;then
+                printRed "\nInstructor keys were not installed! Installing...\n\n"
+                scripts/./install-instructor-keys.sh
+                printGreen "\nDone installing keys\n\n"
+            fi
+        fi
+    done
+}

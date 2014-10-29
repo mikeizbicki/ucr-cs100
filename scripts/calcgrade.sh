@@ -18,6 +18,10 @@ if [ -z $user ]; then
 fi
 
 #######################################
+#check if user has installed keys
+checkKeys
+
+#######################################
 # calculate stats
 
 echo "finding grade for github account $user"
