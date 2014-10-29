@@ -1,0 +1,1761 @@
+Script started on Tue 28 Oct 2014 05:06:34 PM PDT
+bash: .profile: No such file or directory
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ [18P(reverse-i-search)`':[CP': PS1="$ "[1@S[C[C[C]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ PS1="$ "
+$ clear
+[H[2J$ [K$ [K$ [K$ [K$ [K$ [K$ ls
+[0m[01;32ma.out[0m          lecture1   Makefile
+[01;34mbin[0m            lecture1b  open.cpp
+exec2.cpp      lecture2   out
+exec.cpp       lecture4   quizres.cpp
+exit.cpp       lecture4b  [01;34mrshell[0m
+fail.cpp       lecture5   [01;32mtest[0m
+fib.cpp        lecture6   testfile
+filemanip.cpp  lecture7   [01;34mtmp[0m
+gdb.cpp        lecture8   typescript
+$ pwd
+/home/user/proj/ucr-cs100/lecture
+$ ls -l
+total 468
+-rwxr-xr-x 1 user user  10250 Oct 23 18:26 [0m[01;32ma.out[0m
+drwxr-xr-x 2 user user   4096 Oct 16 18:18 [01;34mbin[0m
+-rw-r--r-- 1 user user    368 Oct 16 18:03 exec2.cpp
+-rw-r--r-- 1 user user    624 Oct 15 09:19 exec.cpp
+-rw-r--r-- 1 user user     29 Oct 15 09:19 exit.cpp
+-rw-r--r-- 1 user user     29 Oct 15 09:19 fail.cpp
+-rw-r--r-- 1 user user    228 Oct 21 17:43 fib.cpp
+-rw-r--r-- 1 user user    260 Oct 21 18:26 filemanip.cpp
+-rw-r--r-- 1 user user    221 Oct 21 18:10 gdb.cpp
+-rw-r--r-- 1 user user    952 Oct  9 23:15 lecture1
+-rw-r--r-- 1 user user  55139 Oct  9 23:15 lecture1b
+-rw-r--r-- 1 user user  34066 Oct  9 23:18 lecture2
+-rw-r--r-- 1 user user 102961 Oct 15 09:19 lecture4
+-rw-r--r-- 1 user user   8192 Oct 15 09:19 lecture4b
+-rw-r--r-- 1 user user  44221 Oct 16 18:28 lecture5
+-rw-r--r-- 1 user user  30563 Oct 21 18:38 lecture6
+-rw-r--r-- 1 user user  94840 Oct 23 23:46 lecture7
+-rw-r--r-- 1 user user      0 Oct 28 17:06 lecture8
+-rw-r--r-- 1 user user    110 Oct 16 18:22 Makefile
+-rw-r--r-- 1 user user    581 Oct 23 18:26 open.cpp
+-rw-r--r-- 1 user user     14 Oct 21 18:27 out
+-rw-r--r-- 1 user user    730 Oct 23 17:55 quizres.cpp
+drwxr-xr-x 3 user user   4096 Oct  9 18:11 [01;34mrshell[0m
+-rwxrw-rw- 1 user user   1024 Oct 23 18:26 [01;32mtest[0m
+-rw-r--r-- 1 user user      0 Oct  9 23:18 testfile
+drwxr-xr-x 2 user user   4096 Oct 14 17:12 [01;34mtmp[0m
+-rw-r--r-- 1 user user    471 Oct 16 12:41 typescript
+$ g[K$ g[K$ g[K$ g[K$ g[K$ g[K$ g[K$ g[K$ g[Kls -l
+total 468
+-rwxr-xr-x 1 user user  10250 Oct 23 18:26 [0m[01;32ma.out[0m
+drwxr-xr-x 2 user user   4096 Oct 16 18:18 [01;34mbin[0m
+-rw-r--r-- 1 user user    368 Oct 16 18:03 exec2.cpp
+-rw-r--r-- 1 user user    624 Oct 15 09:19 exec.cpp
+-rw-r--r-- 1 user user     29 Oct 15 09:19 exit.cpp
+-rw-r--r-- 1 user user     29 Oct 15 09:19 fail.cpp
+-rw-r--r-- 1 user user    228 Oct 21 17:43 fib.cpp
+-rw-r--r-- 1 user user    260 Oct 21 18:26 filemanip.cpp
+-rw-r--r-- 1 user user    221 Oct 21 18:10 gdb.cpp
+-rw-r--r-- 1 user user    952 Oct  9 23:15 lecture1
+-rw-r--r-- 1 user user  55139 Oct  9 23:15 lecture1b
+-rw-r--r-- 1 user user  34066 Oct  9 23:18 lecture2
+-rw-r--r-- 1 user user 102961 Oct 15 09:19 lecture4
+-rw-r--r-- 1 user user   8192 Oct 15 09:19 lecture4b
+-rw-r--r-- 1 user user  44221 Oct 16 18:28 lecture5
+-rw-r--r-- 1 user user  30563 Oct 21 18:38 lecture6
+-rw-r--r-- 1 user user  94840 Oct 23 23:46 lecture7
+-rw-r--r-- 1 user user      0 Oct 28 17:06 lecture8
+-rw-r--r-- 1 user user    110 Oct 16 18:22 Makefile
+-rw-r--r-- 1 user user    581 Oct 23 18:26 open.cpp
+-rw-r--r-- 1 user user     14 Oct 21 18:27 out
+-rw-r--r-- 1 user user    730 Oct 23 17:55 quizres.cpp
+drwxr-xr-x 3 user user   4096 Oct  9 18:11 [01;34mrshell[0m
+-rwxrw-rw- 1 user user   1024 Oct 23 18:26 [01;32mtest[0m
+-rw-r--r-- 1 user user      0 Oct  9 23:18 testfile
+drwxr-xr-x 2 user user   4096 Oct 14 17:12 [01;34mtmp[0m
+-rw-r--r-- 1 user user    471 Oct 16 12:41 typescript
+$ ls -R
+.:
+[0m[01;32ma.out[0m      fib.cpp        lecture4   Makefile     testfile
+[01;34mbin[0m        filemanip.cpp  lecture4b  open.cpp     [01;34mtmp[0m
+exec2.cpp  gdb.cpp        lecture5   out          typescript
+exec.cpp   lecture1       lecture6   quizres.cpp
+exit.cpp   lecture1b      lecture7   [01;34mrshell[0m
+fail.cpp   lecture2       lecture8   [01;32mtest[0m
+
+./bin:
+
+./rshell:
+LICENSE  Makefile  README.md
+
+./tmp:
+$ ls -Ra
+.:
+[0m[01;34m.[0m          .exec.cpp.swp  lecture1   lecture6  quizres.cpp
+[01;34m..[0m         exit.cpp       lecture1b  lecture7  [01;34mrshell[0m
+[01;32ma.out[0m      fail.cpp       lecture2   lecture8  [01;32mtest[0m
+[01;34mbin[0m        fib.cpp        lecture4   Makefile  testfile
+exec2.cpp  filemanip.cpp  lecture4b  open.cpp  [01;34mtmp[0m
+exec.cpp   gdb.cpp        lecture5   out       typescript
+
+./bin:
+[01;34m.[0m  [01;34m..[0m
+
+./rshell:
+[01;34m.[0m  [01;34m..[0m  [01;34m.git[0m  LICENSE  Makefile  README.md
+
+./rshell/.git:
+[01;34m.[0m   [01;34mbranches[0m        config       HEAD   index  [01;34mlogs[0m     [01;34mrefs[0m
+[01;34m..[0m  COMMIT_EDITMSG  description  [01;34mhooks[0m  [01;34minfo[0m   [01;34mobjects[0m
+
+./rshell/.git/branches:
+[01;34m.[0m  [01;34m..[0m
+
+./rshell/.git/hooks:
+[01;34m.[0m                      [01;32mpre-applypatch.sample[0m
+[01;34m..[0m                     [01;32mpre-commit.sample[0m
+[01;32mapplypatch-msg.sample[0m  [01;32mprepare-commit-msg.sample[0m
+[01;32mcommit-msg.sample[0m      [01;32mpre-rebase.sample[0m
+[01;32mpost-update.sample[0m     [01;32mupdate.sample[0m
+
+./rshell/.git/info:
+[01;34m.[0m  [01;34m..[0m  exclude
+
+./rshell/.git/logs:
+[01;34m.[0m  [01;34m..[0m  HEAD  [01;34mrefs[0m
+
+./rshell/.git/logs/refs:
+[01;34m.[0m  [01;34m..[0m  [01;34mheads[0m  [01;34mremotes[0m
+
+./rshell/.git/logs/refs/heads:
+[01;34m.[0m  [01;34m..[0m  master
+
+./rshell/.git/logs/refs/remotes:
+[01;34m.[0m  [01;34m..[0m  [01;34morigin[0m
+
+./rshell/.git/logs/refs/remotes/origin:
+[01;34m.[0m  [01;34m..[0m  master
+
+./rshell/.git/objects:
+[01;34m.[0m  [01;34m..[0m  [01;34m0c[0m  [01;34m0d[0m  [01;34me6[0m  [01;34minfo[0m  [01;34mpack[0m
+
+./rshell/.git/objects/0c:
+[01;34m.[0m  [01;34m..[0m  2cccedd5279bd323acf5c8555b2297ef6230f9
+
+./rshell/.git/objects/0d:
+[01;34m.[0m  [01;34m..[0m  3aae9e7d250d735656f3c611298b05b70d808f
+
+./rshell/.git/objects/e6:
+[01;34m.[0m  [01;34m..[0m  9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+
+./rshell/.git/objects/info:
+[01;34m.[0m  [01;34m..[0m
+
+./rshell/.git/objects/pack:
+[01;34m.[0m  [01;34m..[0m
+
+./rshell/.git/refs:
+[01;34m.[0m  [01;34m..[0m  [01;34mheads[0m  [01;34mremotes[0m  [01;34mtags[0m
+
+./rshell/.git/refs/heads:
+[01;34m.[0m  [01;34m..[0m  master
+
+./rshell/.git/refs/remotes:
+[01;34m.[0m  [01;34m..[0m  [01;34morigin[0m
+
+./rshell/.git/refs/remotes/origin:
+[01;34m.[0m  [01;34m..[0m  master
+
+./rshell/.git/refs/tags:
+[01;34m.[0m  [01;34m..[0m
+
+./tmp:
+[01;34m.[0m  [01;34m..[0m
+$ clear
+[H[2J$ 
+$ clear[C[Cls -Ra a-a[1Pa[1Pa[1Pa[CR[K -R[1PR[1PR[C asd[K[K[K[Ka-aRs-aRd-aR -aR -aR[1P-aR[1P-aR[1P-aR[1P-aR[1P-aR^C
+$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ g++ stat.cpp 
+$ mN[Kan stat
+[?1049h[?1h=STAT(1)        User Commands       STAT(1)[m
+[m
+[1mNAME[0m[m
+       stat  - display file or file system[m
+       status[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mstat[0m [[4mOPTION[24m]... [4mFILE[24m...[m
+[m
+[1mDESCRIPTION[0m[m
+       Display file or file system status.[m
+[m
+       [1m-L[0m, [1m--dereference[0m[m
+              follow links[m
+[m
+       [1m-f[0m, [1m--file-system[0m[m
+              display file  system  status[m
+              instead of file status[m
+[m
+       [1m-c[0m  [1m--format[0m=[4mFORMAT[24m[m
+              use   the  specified  FORMAT[m
+              instead of the default; out‐[m
+              put a newline after each use[m
+              of FORMAT[m
+[m
+[7m(1) line 1 (press h for help or q to quit)[27m[K[K [K::[Kqq[K[?1l>[?1049l$ 
+$ man stat2stat stat
+[?1049h[?1h=STAT(2)  Linux Programmer's Manual STAT(2)[m
+[m
+[1mNAME[0m[m
+       stat,  fstat, lstat - get file sta‐[m
+       tus[m
+[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<sys/types.h>[0m[m
+       [1m#include[0m [1m<sys/stat.h>[0m[m
+       [1m#include[0m [1m<unistd.h>[0m[m
+[m
+       [1mint[0m [1mstat(const[0m [1mchar[0m  [1m*[0m[4mpath[24m[1m,[0m  [1mstruct[0m[m
+       [1mstat[0m [1m*[0m[4mbuf[24m[1m);[0m[m
+       [1mint[0m   [1mfstat(int[0m   [4mfd[24m[1m,[0m  [1mstruct[0m  [1mstat[0m[m
+       [1m*[0m[4mbuf[24m[1m);[0m[m
+       [1mint[0m [1mlstat(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m  [1mstruct[0m[m
+       [1mstat[0m [1m*[0m[4mbuf[24m[1m);[0m[m
+[m
+   Feature  Test  Macro  Requirements  for[m
+   glibc (see [1mfeature_test_macros[0m(7)):[m
+[m
+       [1mlstat[0m():[m
+           _BSD_SOURCE ||[m
+           _XOPEN_SOURCE >= 500 ||[m
+           _XOPEN_SOURCE && _XOPEN_SOURCE_EX[m [7m(2) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[KTENDED[m
+[7m(2) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           || /* Since glibc 2.10: */[m
+[7m(2) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           _POSIX_C_SOURCE >= 200112L[m
+[7m(2) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m(2) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mDESCRIPTION[0m[m
+[7m(2) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       These functions return  information[m
+[7m(2) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       about  a  file.  No permissions are[m
+[7m2) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       required on the file itself, but—in[m
+[7m2) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the  case  of  [1mstat[0m() and [1mlstat[0m() —[m
+[7m2) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       execute  (search)   permission   is[m
+[7m2) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       required  on all of the directories[m
+[7m2) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       in [4mpath[24m that lead to the file.[m
+[7m2) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m2) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mstat[0m() stats the file pointed to by[m
+[7m2) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mpath[24m and fills in [4mbuf[24m.[m
+[7m2) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m2) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mlstat[0m()  is  identical  to  [1mstat[0m(),[m
+[7m2) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       except that if [4mpath[24m is  a  symbolic[m
+[7m2) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       link, then the link itself is stat-[m
+[7m2) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ed, not the file that it refers to.[m
+[7m2) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m2) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mfstat[0m()  is  identical  to  [1mstat[0m(),[m
+[7m2) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       except  that the file to be stat-ed[m
+[7m2) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       is specified by the file descriptor[m
+[7m2) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mfd[24m.[m
+[7m2) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m2) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       All  of these system calls return a[m
+[7m2) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mstat[24m structure, which contains  the[m
+[7m2) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       following fields:[m
+[7m2) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m2) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           struct stat {[m
+[7m2) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               dev_t     st_dev;     /* ID o[m [7m2) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[Kf device containing file */[m
+[7m2) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               ino_t     st_ino;     /* inod[m [7m2) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[Ke number */[m
+[7m2) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               mode_t    st_mode;    /* prot[m [7m2) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[Kection */[m
+[7m2) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               nlink_t   st_nlink;   /* numb[m [7m2) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[Ker of hard links */[m
+[7m2) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               uid_t     st_uid;     /* user[m [7m2) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K ID of owner */[m
+[7m2) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               gid_t     st_gid;     /* grou[m [7m2) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[Kp ID of owner */[m
+[7m2) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               dev_t     st_rdev;    /* devi[m [7m2) line 46 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ man 2 stat
+[?1049h[?1h=STAT(2)                 Linux Programmer's Manual                STAT(2)[m
+[m
+[1mNAME[0m[m
+       stat, fstat, lstat - get file status[m
+[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<sys/types.h>[0m[m
+       [1m#include[0m [1m<sys/stat.h>[0m[m
+       [1m#include[0m [1m<unistd.h>[0m[m
+[m
+       [1mint[0m [1mstat(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mstruct[0m [1mstat[0m [1m*[0m[4mbuf[24m[1m);[0m[m
+       [1mint[0m [1mfstat(int[0m [4mfd[24m[1m,[0m [1mstruct[0m [1mstat[0m [1m*[0m[4mbuf[24m[1m);[0m[m
+       [1mint[0m [1mlstat(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mstruct[0m [1mstat[0m [1m*[0m[4mbuf[24m[1m);[0m[m
+[m
+   Feature    Test    Macro    Requirements    for   glibc   (see   [1mfea‐[0m[m
+   [1mture_test_macros[0m(7)):[m
+[m
+       [1mlstat[0m():[m
+           _BSD_SOURCE || _XOPEN_SOURCE >= 500 ||[m
+           _XOPEN_SOURCE && _XOPEN_SOURCE_EXTENDED[m
+           || /* Since glibc 2.10: */ _POSIX_C_SOURCE >= 200112L[m
+[m
+[1mDESCRIPTION[0m[m
+       These  functions return information about a file.  No permissions[m
+       are required on the file itself, but—in the case  of  [1mstat[0m()  and[m
+[7m Manual page stat(2) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[K[[[K66[K~~[K       [1mlstat[0m()  —  execute (search) permission is required on all of the[m
+       directories in [4mpath[24m that lead to the file.[m
+[m
+       [1mstat[0m() stats the file pointed to by [4mpath[24m and fills in [4mbuf[24m.[m
+[m
+       [1mlstat[0m() is identical to [1mstat[0m(), except that if [4mpath[24m is a symbolic[m
+       link,  then  the  link  itself  is  stat-ed, not the file that it[m
+       refers to.[m
+[m
+       [1mfstat[0m() is identical to [1mstat[0m(), except that the file to be  stat-[m
+       ed is specified by the file descriptor [4mfd[24m.[m
+[m
+       All of these system calls return a [4mstat[24m structure, which contains[m
+       the following fields:[m
+[m
+           struct stat {[m
+               dev_t     st_dev;     /* ID of device containing file */[m
+               ino_t     st_ino;     /* inode number */[m
+               mode_t    st_mode;    /* protection */[m
+               nlink_t   st_nlink;   /* number of hard links */[m
+               uid_t     st_uid;     /* user ID of owner */[m
+               gid_t     st_gid;     /* group ID of owner */[m
+               dev_t     st_rdev;    /* device ID (if special file) */[m
+               off_t     st_size;    /* total size, in bytes */[m
+               blksize_t st_blksize; /* blocksize for file system I/O */[m
+[7m Manual page stat(2) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[K[[[K66[K~~[K               blkcnt_t  st_blocks;  /* number of 512B blocks allocated */[m
+               time_t    st_atime;   /* time of last access */[m
+               time_t    st_mtime;   /* time of last modification */[m
+               time_t    st_ctime;   /* time of last status change */[m
+           };[m
+[m
+       The [4mst_dev[24m field describes the device on which this file resides.[m
+       (The  [1mmajor[0m(3) and [1mminor[0m(3) macros may be useful to decompose the[m
+       device ID in this field.)[m
+[m
+       The [4mst_rdev[24m field describes the device  that  this  file  (inode)[m
+       represents.[m
+[m
+       The  [4mst_size[24m field gives the size of the file (if it is a regular[m
+       file or a symbolic link) in bytes.  The size of a  symbolic  link[m
+       is  the length of the pathname it contains, without a terminating[m
+       null byte.[m
+[m
+       The [4mst_blocks[24m field indicates the number of blocks  allocated  to[m
+       the  file, 512-byte units.  (This may be smaller than [4mst_size[24m/512[m
+       when the file has holes.)[m
+[m
+       The [4mst_blksize[24m field gives the "preferred"  blocksize  for  effi‐[m
+       cient  file system I/O.  (Writing to a file in smaller chunks may[m
+       cause an inefficient read-modify-rewrite.)[m
+[7m Manual page stat(2) line 53 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM               blksize_t st_blksize; /* blocksize for file system I/O */[m
+[26;1H[K[7m Manual page stat(2) line 52 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM               off_t     st_size;    /* total size, in bytes */[m
+[26;1H[K[7m Manual page stat(2) line 51 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM               dev_t     st_rdev;    /* device ID (if special file) */[m
+[26;1H[K[7m Manual page stat(2) line 50 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM               gid_t     st_gid;     /* group ID of owner */[m
+[26;1H[K[7m Manual page stat(2) line 49 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM               uid_t     st_uid;     /* user ID of owner */[m
+[26;1H[K[7m Manual page stat(2) line 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM               nlink_t   st_nlink;   /* number of hard links */[m
+[26;1H[K[7m Manual page stat(2) line 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM               mode_t    st_mode;    /* protection */[m
+[26;1H[K[7m Manual page stat(2) line 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM               ino_t     st_ino;     /* inode number */[m
+[26;1H[K[7m Manual page stat(2) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM               dev_t     st_dev;     /* ID of device containing file */[m
+[26;1H[K[7m Manual page stat(2) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM           struct stat {[m
+[26;1H[K[7m Manual page stat(2) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[26;1H[K[7m Manual page stat(2) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       the following fields:[m
+[26;1H[K[7m Manual page stat(2) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       All of these system calls return a [4mstat[24m structure, which contains[m
+[26;1H[K[7m Manual page stat(2) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[26;1H[K[7m Manual page stat(2) line 39 (press h for help or q to quit)[27m[K[H[2J[H[m
+       All of these system calls return a [4mstat[24m structure, which contains[m
+       the following fields:[m
+[m
+           struct stat {[m
+               dev_t     st_dev;     /* ID of device containing file */[m
+               ino_t     st_ino;     /* inode number */[m
+               mode_t    st_mode;    /* protection */[m
+               nlink_t   st_nlink;   /* number of hard links */[m
+               uid_t     st_uid;     /* user ID of owner */[m
+               gid_t     st_gid;     /* group ID of owner */[m
+               dev_t     st_rdev;    /* device ID (if special file) */[m
+               off_t     st_size;    /* total size, in bytes */[m
+               blksize_t st_blksize; /* blocksize for file system I/O */[m
+               blkcnt_t  st_blocks;  /* number of 512B blocks allocated [m */[m
+               time_t    st_atime;   /* time of last access */[m
+               time_t    st_mtime;   /* time of last modification */[m
+               time_t    st_ctime;   /* time of last status change */[m
+           };[m
+[m
+       The [4mst_dev[24m field describes the device on which this file resides.[m
+       (The  [1mmajor[0m(3) and [1mminor[0m(3) macros may be useful to decompose the[m
+       device ID in this field.)[m
+[m
+[7m Manual page stat(2) line 39 (press h for help or q to quit)[27m[K[H[2J[H[m
+       All of these system calls return a [4mstat[24m structure, which conta[m ins[m
+       the following fields:[m
+[m
+           struct stat {[m
+               dev_t     st_dev;     /* ID of device containing file [m */[m
+               ino_t     st_ino;     /* inode number */[m
+               mode_t    st_mode;    /* protection */[m
+               nlink_t   st_nlink;   /* number of hard links */[m
+               uid_t     st_uid;     /* user ID of owner */[m
+               gid_t     st_gid;     /* group ID of owner */[m
+               dev_t     st_rdev;    /* device ID (if special file) *[m /[m
+               off_t     st_size;    /* total size, in bytes */[m
+               blksize_t st_blksize; /* blocksize for file system I/O[m  */[m
+               blkcnt_t  st_blocks;  /* number of 512B blocks allocat[m ed */[m
+               time_t    st_atime;   /* time of last access */[m
+               time_t    st_mtime;   /* time of last modification */[m
+               time_t    st_ctime;   /* time of last status change */[m
+           };[m
+[m
+[7m Manual page stat(2) line 39 (press h for help or q to quit)[27m[K[H[2J[H[m
+       All of these system calls return a [4mstat[24m structure, which con[m tains[m
+       the following fields:[m
+[m
+           struct stat {[m
+               dev_t     st_dev;     /* ID of device containing fil[m e */[m
+               ino_t     st_ino;     /* inode number */[m
+               mode_t    st_mode;    /* protection */[m
+               nlink_t   st_nlink;   /* number of hard links */[m
+               uid_t     st_uid;     /* user ID of owner */[m
+               gid_t     st_gid;     /* group ID of owner */[m
+               dev_t     st_rdev;    /* device ID (if special file)[m  */[m
+               off_t     st_size;    /* total size, in bytes */[m
+               blksize_t st_blksize; /* blocksize for file system I[m /O */[m
+               blkcnt_t  st_blocks;  /* number of 512B blocks alloc[m ated */[m
+               time_t    st_atime;   /* time of last access */[m
+               time_t    st_mtime;   /* time of last modification *[m /[m
+               time_t    st_ctime;   /* time of last status change [m */[m
+[7m Manual page stat(2) line 39 (press h for help or q to quit)[27m[K[H[2J[H[m
+       All of these system calls return a [4mstat[24m structure, which [m contains[m
+       the following fields:[m
+[m
+           struct stat {[m
+               dev_t     st_dev;     /* ID of device containing [m file */[m
+               ino_t     st_ino;     /* inode number */[m
+               mode_t    st_mode;    /* protection */[m
+               nlink_t   st_nlink;   /* number of hard links */[m
+               uid_t     st_uid;     /* user ID of owner */[m
+               gid_t     st_gid;     /* group ID of owner */[m
+               dev_t     st_rdev;    /* device ID (if special fi[m le) */[m
+               off_t     st_size;    /* total size, in bytes */[m
+               blksize_t st_blksize; /* blocksize for file syste[m m I/O */[m
+               blkcnt_t  st_blocks;  /* number of 512B blocks al[m located */[m
+               time_t    st_atime;   /* time of last access */[m
+               time_t    st_mtime;   /* time of last modificatio[m n */[m
+               time_t    st_ctime;   /* time of last status chan[m ge */[m
+[7m Manual page stat(2) line 39 (press h for help or q to quit)[27m[K[H[2J[H[m
+       All of these system calls return a [4mstat[24m structure, whic[m h contains[m
+       the following fields:[m
+[m
+           struct stat {[m
+               dev_t     st_dev;     /* ID of device containin[m g file */[m
+               ino_t     st_ino;     /* inode number */[m
+               mode_t    st_mode;    /* protection */[m
+               nlink_t   st_nlink;   /* number of hard links *[m /[m
+               uid_t     st_uid;     /* user ID of owner */[m
+               gid_t     st_gid;     /* group ID of owner */[m
+               dev_t     st_rdev;    /* device ID (if special [m file) */[m
+               off_t     st_size;    /* total size, in bytes *[m /[m
+               blksize_t st_blksize; /* blocksize for file sys[m tem I/O */[m
+               blkcnt_t  st_blocks;  /* number of 512B blocks [m allocated */[m
+               time_t    st_atime;   /* time of last access */[m
+               time_t    st_mtime;   /* time of last modificat[m ion */[m
+[7m Manual page stat(2) line 39 (press h for help or q to quit)[27m[K[H[2J[H[m
+       All of these system calls return a [4mstat[24m structure, w[m hich contains[m
+       the following fields:[m
+[m
+           struct stat {[m
+               dev_t     st_dev;     /* ID of device contai[m ning file */[m
+               ino_t     st_ino;     /* inode number */[m
+               mode_t    st_mode;    /* protection */[m
+               nlink_t   st_nlink;   /* number of hard link[m s */[m
+               uid_t     st_uid;     /* user ID of owner */[m
+               gid_t     st_gid;     /* group ID of owner *[m /[m
+               dev_t     st_rdev;    /* device ID (if speci[m al file) */[m
+               off_t     st_size;    /* total size, in byte[m s */[m
+               blksize_t st_blksize; /* blocksize for file [m system I/O */[m
+               blkcnt_t  st_blocks;  /* number of 512B bloc[m ks allocated */[m
+               time_t    st_atime;   /* time of last access[m  */[m
+[7mnual page stat(2) line 39 (press h for help or q to quit)[27m[K[H[2J[H[m
+       All of these system calls return a [4mstat[24m structure[m , which contains[m
+       the following fields:[m
+[m
+           struct stat {[m
+               dev_t     st_dev;     /* ID of device con[m taining file */[m
+               ino_t     st_ino;     /* inode number */[m
+               mode_t    st_mode;    /* protection */[m
+               nlink_t   st_nlink;   /* number of hard l[m inks */[m
+               uid_t     st_uid;     /* user ID of owner[m  */[m
+               gid_t     st_gid;     /* group ID of owne[m r */[m
+               dev_t     st_rdev;    /* device ID (if sp[m ecial file) */[m
+               off_t     st_size;    /* total size, in b[m ytes */[m
+               blksize_t st_blksize; /* blocksize for fi[m le system I/O */[m
+               blkcnt_t  st_blocks;  /* number of 512B b[m locks allocated */[m
+               time_t    st_atime;   /* time of last acc[m [7ml page stat(2) line 39 (press h for help or q to quit)[27m[K[H[2J[H[m
+       All of these system calls return a [4mstat[24m structu[m re, which contains[m
+       the following fields:[m
+[m
+           struct stat {[m
+               dev_t     st_dev;     /* ID of device c[m ontaining file */[m
+               ino_t     st_ino;     /* inode number *[m /[m
+               mode_t    st_mode;    /* protection */[m
+               nlink_t   st_nlink;   /* number of hard[m  links */[m
+               uid_t     st_uid;     /* user ID of own[m er */[m
+               gid_t     st_gid;     /* group ID of ow[m ner */[m
+               dev_t     st_rdev;    /* device ID (if [m special file) */[m
+               off_t     st_size;    /* total size, in[m  bytes */[m
+               blksize_t st_blksize; /* blocksize for [m file system I/O */[m
+               blkcnt_t  st_blocks;  /* number of 512B[m  blocks allocated */[m
+[7mpage stat(2) line 39 (press h for help or q to quit)[27m[K[H[2J[H[m
+       All of these system calls return a [4mstat[24m stru[m cture, which contains[m
+       the following fields:[m
+[m
+           struct stat {[m
+               dev_t     st_dev;     /* ID of devic[m e containing file */[m
+               ino_t     st_ino;     /* inode numbe[m r */[m
+               mode_t    st_mode;    /* protection [m */[m
+               nlink_t   st_nlink;   /* number of h[m ard links */[m
+               uid_t     st_uid;     /* user ID of [m owner */[m
+               gid_t     st_gid;     /* group ID of[m  owner */[m
+               dev_t     st_rdev;    /* device ID ([m if special file) */[m
+               off_t     st_size;    /* total size,[m  in bytes */[m
+               blksize_t st_blksize; /* blocksize f[m or file system I/O */[m
+               blkcnt_t  st_blocks;  /* number of 5[m [7me stat(2) line 39 (press h for help or q to quit)[27m[K[H[2J[H[m
+       All of these system calls return a [4mstat[24m st[m ructure, which contains[m
+       the following fields:[m
+[m
+           struct stat {[m
+               dev_t     st_dev;     /* ID of dev[m ice containing file */[m
+               ino_t     st_ino;     /* inode num[m ber */[m
+               mode_t    st_mode;    /* protectio[m n */[m
+               nlink_t   st_nlink;   /* number of[m  hard links */[m
+               uid_t     st_uid;     /* user ID o[m f owner */[m
+               gid_t     st_gid;     /* group ID [m of owner */[m
+               dev_t     st_rdev;    /* device ID[m  (if special file) */[m
+               off_t     st_size;    /* total siz[m e, in bytes */[m
+               blksize_t st_blksize; /* blocksize[m  for file system I/O */[m
+               blkcnt_t  st_blocks;  /* number of[m [7mstat(2) line 39 (press h for help or q to quit)[27m[K[H[2J[H[m
+       All of these system calls return a [4mstat[24m[m  structure, which contains[m
+       the following fields:[m
+[m
+           struct stat {[m
+               dev_t     st_dev;     /* ID of [m device containing file */[m
+               ino_t     st_ino;     /* inode [m number */[m
+               mode_t    st_mode;    /* protec[m tion */[m
+               nlink_t   st_nlink;   /* number[m  of hard links */[m
+               uid_t     st_uid;     /* user I[m D of owner */[m
+               gid_t     st_gid;     /* group [m ID of owner */[m
+               dev_t     st_rdev;    /* device[m  ID (if special file) */[m
+               off_t     st_size;    /* total [m size, in bytes */[m
+               blksize_t st_blksize; /* blocks[m ize for file system I/O */[m
+               blkcnt_t  st_blocks;  /* number[m [7mt(2) line 39 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ man 2 stat[2Pstat[C[Cg++ stat.cpp [C[C[8Pclear[C[Cg++ stat.cpp \
+> ^C
+$ g++ stat.cpp \
+> ^C
+$ g++ stat.cpp \[K
+stat.cpp: In function ‘int main()’:
+stat.cpp:9:10: error: expected ‘;’ before ‘statbuf’
+stat.cpp:10:18: error: ‘statbuf’ was not declared in this scope
+$ g++ stat.cpp 
+$ ./a.out 
+$ [K$ [K$ ./a.out [C[C[5@g++ stat.cpp[C
+$ g++ stat.cpp [C[C[5P./a.out[C
+size: 1024
+$ ls -l test
+-rwxrw-rw- 1 user user 1024 Oct 23 18:26 [0m[01;32mtest[0m
+$ ls -l test[K[K[K[Kbin
+total 0
+$ ls -l bin[K[K[K[K
+total 508
+-rwxr-xr-x 1 user user  10208 Oct 28 17:33 [0m[01;32ma.out[0m
+drwxr-xr-x 2 user user   4096 Oct 16 18:18 [01;34mbin[0m
+-rw-r--r-- 1 user user    368 Oct 16 18:03 exec2.cpp
+-rw-r--r-- 1 user user    624 Oct 15 09:19 exec.cpp
+-rw-r--r-- 1 user user     29 Oct 15 09:19 exit.cpp
+-rw-r--r-- 1 user user     29 Oct 15 09:19 fail.cpp
+-rw-r--r-- 1 user user    228 Oct 21 17:43 fib.cpp
+-rw-r--r-- 1 user user    260 Oct 21 18:26 filemanip.cpp
+-rw-r--r-- 1 user user    221 Oct 21 18:10 gdb.cpp
+-rw-r--r-- 1 user user    952 Oct  9 23:15 lecture1
+-rw-r--r-- 1 user user  55139 Oct  9 23:15 lecture1b
+-rw-r--r-- 1 user user  34066 Oct  9 23:18 lecture2
+-rw-r--r-- 1 user user 102961 Oct 15 09:19 lecture4
+-rw-r--r-- 1 user user   8192 Oct 15 09:19 lecture4b
+-rw-r--r-- 1 user user  44221 Oct 16 18:28 lecture5
+-rw-r--r-- 1 user user  30563 Oct 21 18:38 lecture6
+-rw-r--r-- 1 user user  94840 Oct 23 23:46 lecture7
+-rw-r--r-- 1 user user  32768 Oct 28 17:31 lecture8
+-rw-r--r-- 1 user user    110 Oct 16 18:22 Makefile
+-rw-r--r-- 1 user user    581 Oct 23 18:26 open.cpp
+-rw-r--r-- 1 user user     14 Oct 21 18:27 out
+-rw-r--r-- 1 user user    730 Oct 23 17:55 quizres.cpp
+drwxr-xr-x 3 user user   4096 Oct  9 18:11 [01;34mrshell[0m
+-rw-r--r-- 1 user user    255 Oct 28 17:33 stat.cpp
+-rwxrw-rw- 1 user user   1024 Oct 23 18:26 [01;32mtest[0m
+-rw-r--r-- 1 user user      0 Oct  9 23:18 testfile
+drwxr-xr-x 2 user user   4096 Oct 14 17:12 [01;34mtmp[0m
+-rw-r--r-- 1 user user    471 Oct 16 12:41 typescript
+$ [K$ [K$ [K$ [K$ ls -l
+total 508
+-rwxr-xr-x 1 user user  10208 Oct 28 17:33 [0m[01;32ma.out[0m
+drwxr-xr-x 2 user user   4096 Oct 16 18:18 [01;34mbin[0m
+-rw-r--r-- 1 user user    368 Oct 16 18:03 exec2.cpp
+-rw-r--r-- 1 user user    624 Oct 15 09:19 exec.cpp
+-rw-r--r-- 1 user user     29 Oct 15 09:19 exit.cpp
+-rw-r--r-- 1 user user     29 Oct 15 09:19 fail.cpp
+-rw-r--r-- 1 user user    228 Oct 21 17:43 fib.cpp
+-rw-r--r-- 1 user user    260 Oct 21 18:26 filemanip.cpp
+-rw-r--r-- 1 user user    221 Oct 21 18:10 gdb.cpp
+-rw-r--r-- 1 user user    952 Oct  9 23:15 lecture1
+-rw-r--r-- 1 user user  55139 Oct  9 23:15 lecture1b
+-rw-r--r-- 1 user user  34066 Oct  9 23:18 lecture2
+-rw-r--r-- 1 user user 102961 Oct 15 09:19 lecture4
+-rw-r--r-- 1 user user   8192 Oct 15 09:19 lecture4b
+-rw-r--r-- 1 user user  44221 Oct 16 18:28 lecture5
+-rw-r--r-- 1 user user  30563 Oct 21 18:38 lecture6
+-rw-r--r-- 1 user user  94840 Oct 23 23:46 lecture7
+-rw-r--r-- 1 user user  32768 Oct 28 17:31 lecture8
+-rw-r--r-- 1 user user    110 Oct 16 18:22 Makefile
+-rw-r--r-- 1 user user    581 Oct 23 18:26 open.cpp
+-rw-r--r-- 1 user user     14 Oct 21 18:27 out
+-rw-r--r-- 1 user user    730 Oct 23 17:55 quizres.cpp
+drwxr-xr-x 3 user user   4096 Oct  9 18:11 [01;34mrshell[0m
+-rw-r--r-- 1 user user    255 Oct 28 17:33 stat.cpp
+-rwxrw-rw- 1 user user   1024 Oct 23 18:26 [01;32mtest[0m
+-rw-r--r-- 1 user user      0 Oct  9 23:18 testfile
+drwxr-xr-x 2 user user   4096 Oct 14 17:12 [01;34mtmp[0m
+-rw-r--r-- 1 user user    471 Oct 16 12:41 typescript
+$ ln [K[K[Kclear
+[H[2J$ ln -s [K thisisalink test
+ln: failed to create symbolic link `test': File exists
+$ ln -s thisisalink test[K[K[K[K[K[C[C[C[C[C[C[C[C[Cthisisalink[C[C[C[C[C[C[C[C[Cethisisalinksthisisalink[Cthisisalink thisisalink
+$ ls -l thisisalink 
+lrwxrwxrwx 1 user user 4 Oct 28 17:36 [0m[01;36mthisisalink[0m -> [01;32mtest[0m
+$ echo t > test
+$ cat thisisalink 
+t
+$ echo "hello" > thisisalink 
+$ echo "hello" > thisisalink [C[C[11Pcat[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pecho t > test[C[Ccat thisisalink [C[C[11@echo "hello" >[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kcat test
+hello
+$ ls /proc
+[0m[01;34m1[0m      [01;34m23116[0m  [01;34m2923[0m   [01;34m3462[0m  [01;34m6121[0m         fb
+[01;34m1132[0m   [01;34m23118[0m  [01;34m2926[0m   [01;34m3468[0m  [01;34m675[0m          filesystems
+[01;34m125[0m    [01;34m23119[0m  [01;34m2936[0m   [01;34m3483[0m  [01;34m690[0m          [01;34mfs[0m
+[01;34m12714[0m  [01;34m23127[0m  [01;34m29581[0m  [01;34m3486[0m  [01;34m691[0m          interrupts
+[01;34m139[0m    [01;34m23142[0m  [01;34m2959[0m   [01;34m3493[0m  [01;34m7[0m            iomem
+[01;34m1503[0m   [01;34m23143[0m  [01;34m2980[0m   [01;34m3515[0m  [01;34m7101[0m         ioports
+[01;34m1504[0m   [01;34m23230[0m  [01;34m2996[0m   [01;34m3519[0m  [01;34m7718[0m         [01;34mirq[0m
+[01;34m1506[0m   [01;34m2368[0m   [01;34m3[0m      [01;34m3541[0m  [01;34m7719[0m         kallsyms
+[01;34m15453[0m  [01;34m237[0m    [01;34m30[0m     [01;34m3542[0m  [01;34m7721[0m         kcore
+[01;34m15667[0m  [01;34m238[0m    [01;34m3012[0m   [01;34m3543[0m  [01;34m7777[0m         keys
+[01;34m15668[0m  [01;34m24[0m     [01;34m3029[0m   [01;34m3549[0m  [01;34m7778[0m         key-users
+[01;34m15676[0m  [01;34m24179[0m  [01;34m3041[0m   [01;34m3552[0m  [01;34m7780[0m         kmsg
+[01;34m16206[0m  [01;34m2423[0m   [01;34m3046[0m   [01;34m3559[0m  [01;34m7787[0m         kpagecount
+[01;34m16776[0m  [01;34m2438[0m   [01;34m3072[0m   [01;34m3561[0m  [01;34m7791[0m         kpageflags
+[01;34m1886[0m   [01;34m2464[0m   [01;34m3073[0m   [01;34m3565[0m  [01;34m7826[0m         loadavg
+[01;34m1919[0m   [01;34m24771[0m  [01;34m3074[0m   [01;34m3567[0m  [01;34m784[0m          locks
+[01;34m192[0m    [01;34m24776[0m  [01;34m3075[0m   [01;34m3569[0m  [01;34m8844[0m         meminfo
+[01;34m1924[0m   [01;34m24777[0m  [01;34m3076[0m   [01;34m3571[0m  [01;34m8847[0m         misc
+[01;34m1926[0m   [01;34m24825[0m  [01;34m3077[0m   [01;34m3573[0m  [01;34m8849[0m         modules
+[01;34m193[0m    [01;34m24988[0m  [01;34m3078[0m   [01;34m3575[0m  [01;34m8853[0m         [01;36mmounts[0m
+[01;34m1933[0m   [01;34m24989[0m  [01;34m3094[0m   [01;34m3577[0m  [01;34m8874[0m         mtrr
+[01;34m194[0m    [01;34m24990[0m  [01;34m3098[0m   [01;34m3597[0m  [01;34m8887[0m         [01;36mnet[0m
+[01;34m195[0m    [01;34m25[0m     [01;34m31[0m     [01;34m3600[0m  [01;34m8888[0m         pagetypeinfo
+[01;34m196[0m    [01;34m2521[0m   [01;34m31379[0m  [01;34m3608[0m  [01;34m8890[0m         partitions
+[01;34m197[0m    [01;34m2586[0m   [01;34m31380[0m  [01;34m3613[0m  [01;34m8955[0m         sched_debug
+[01;34m2[0m      [01;34m26[0m     [01;34m31382[0m  [01;34m382[0m   [01;34m8993[0m         [01;36mself[0m
+[01;34m2066[0m   [01;34m27[0m     [01;34m3183[0m   [01;34m4143[0m  [01;34m9345[0m         slabinfo
+[01;34m21[0m     [01;34m2716[0m   [01;34m32[0m     [01;34m4144[0m  [01;34macpi[0m         softirqs
+[01;34m21316[0m  [01;34m27397[0m  [01;34m32461[0m  [01;34m4146[0m  [01;34masound[0m       stat
+[01;34m22[0m     [01;34m27398[0m  [01;34m33[0m     [01;34m4162[0m  buddyinfo    swaps
+[01;34m22094[0m  [01;34m27400[0m  [01;34m331[0m    [01;34m4432[0m  [01;34mbus[0m          [01;34msys[0m
+[01;34m2225[0m   [01;34m2743[0m   [01;34m3334[0m   [01;34m4664[0m  cgroups      sysrq-trigger
+[01;34m22875[0m  [01;34m2752[0m   [01;34m3362[0m   [01;34m4779[0m  cmdline      [01;34msysvipc[0m
+[01;34m23[0m     [01;34m27753[0m  [01;34m3364[0m   [01;34m4815[0m  consoles     timer_list
+[01;34m23101[0m  [01;34m2780[0m   [01;34m3382[0m   [01;34m4830[0m  cpuinfo      timer_stats
+[01;34m23108[0m  [01;34m2794[0m   [01;34m3384[0m   [01;34m4923[0m  crypto       [01;34mtty[0m
+[01;34m23110[0m  [01;34m28[0m     [01;34m34[0m     [01;34m5281[0m  devices      uptime
+[01;34m23111[0m  [01;34m2846[0m   [01;34m3400[0m   [01;34m530[0m   diskstats    version
+[01;34m23112[0m  [01;34m2865[0m   [01;34m3440[0m   [01;34m548[0m   dma          vmallocinfo
+[01;34m23113[0m  [01;34m2892[0m   [01;34m3443[0m   [01;34m5739[0m  [01;34mdri[0m          vmstat
+[01;34m23114[0m  [01;34m2898[0m   [01;34m3444[0m   [01;34m586[0m   [01;34mdriver[0m       zoneinfo
+[01;34m23115[0m  [01;34m29[0m     [01;34m3450[0m   [01;34m6[0m     execdomains
+$ ls /proc -l /proc/self
+lrwxrwxrwx   1 root root 64 Oct 27 21:31 [0m[01;36m/proc/self[0m -> [01;34m5963[0m
+
+/proc:
+total 0
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m1[0m
+dr-xr-xr-x  8 root        root                      0 Oct 28 17:27 [01;34m1132[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m125[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m12714[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m139[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m1503[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m1504[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m1506[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m15453[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m15667[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m15668[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m15676[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m16206[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m16776[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m1886[0m
+dr-xr-xr-x  8 statd       nogroup                   0 Oct 27 21:31 [01;34m1919[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m192[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m1924[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m1926[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m193[0m
+dr-xr-xr-x  8 root        root                      0 Oct 15 09:08 [01;34m1933[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m194[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m195[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m196[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m197[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m2[0m
+dr-xr-xr-x  8 root        root                      0 Oct 28 17:29 [01;34m2066[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m21[0m
+dr-xr-xr-x  8 user        user                      0 Oct 28 12:36 [01;34m21316[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m22[0m
+dr-xr-xr-x  8 user        user                      0 Oct 28 15:14 [01;34m22094[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m2225[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m22875[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m23[0m
+dr-xr-xr-x  8 root        root                      0 Oct 28 17:03 [01;34m23101[0m
+dr-xr-xr-x  8 root        root                      0 Oct 28 17:03 [01;34m23108[0m
+dr-xr-xr-x  8 root        root                      0 Oct 28 17:03 [01;34m23110[0m
+dr-xr-xr-x  8 root        root                      0 Oct 28 17:03 [01;34m23111[0m
+dr-xr-xr-x  8 root        root                      0 Oct 28 17:03 [01;34m23112[0m
+dr-xr-xr-x  8 root        root                      0 Oct 28 17:03 [01;34m23113[0m
+dr-xr-xr-x  8 root        root                      0 Oct 28 17:03 [01;34m23114[0m
+dr-xr-xr-x  8 root        root                      0 Oct 28 17:03 [01;34m23115[0m
+dr-xr-xr-x  8 root        root                      0 Oct 28 17:03 [01;34m23116[0m
+dr-xr-xr-x  8 root        root                      0 Oct 28 17:03 [01;34m23118[0m
+dr-xr-xr-x  8 root        root                      0 Oct 28 17:03 [01;34m23119[0m
+dr-xr-xr-x  8 root        root                      0 Oct 28 17:03 [01;34m23127[0m
+dr-xr-xr-x  8 root        root                      0 Oct 28 17:03 [01;34m23142[0m
+dr-xr-xr-x  8 root        root                      0 Oct 28 17:03 [01;34m23143[0m
+dr-xr-xr-x  8 root        root                      0 Oct 28 17:03 [01;34m23230[0m
+dr-xr-xr-x  8 daemon      daemon                    0 Oct 27 21:31 [01;34m2368[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m237[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m238[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m24[0m
+dr-xr-xr-x  8 root        root                      0 Oct 28 17:04 [01;34m24179[0m
+dr-xr-xr-x  8 root        root                      0 Oct 28 17:30 [01;34m2423[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m2438[0m
+dr-xr-xr-x  8 root        root                      0 Oct 28 17:30 [01;34m2464[0m
+dr-xr-xr-x  8 user        user                      0 Oct 28 17:06 [01;34m24771[0m
+dr-xr-xr-x  8 user        utmp                      0 Oct 28 17:06 [01;34m24776[0m
+dr-xr-xr-x  8 user        user                      0 Oct 28 17:06 [01;34m24777[0m
+dr-xr-xr-x  8 user        user                      0 Oct 28 17:06 [01;34m24825[0m
+dr-xr-xr-x  8 user        user                      0 Oct 28 17:06 [01;34m24988[0m
+dr-xr-xr-x  8 user        user                      0 Oct 28 17:06 [01;34m24989[0m
+dr-xr-xr-x  8 user        user                      0 Oct 28 17:06 [01;34m24990[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m25[0m
+dr-xr-xr-x  8 debian-tor  debian-tor                0 Oct 27 21:31 [01;34m2521[0m
+dr-xr-xr-x  8 messagebus  messagebus                0 Oct 27 21:31 [01;34m2586[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m26[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m27[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m2716[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m27397[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m27398[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m27400[0m
+dr-xr-xr-x  8 avahi       avahi                     0 Oct 27 21:31 [01;34m2743[0m
+dr-xr-xr-x  8 avahi       avahi                     0 Oct 27 21:31 [01;34m2752[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m27753[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m2780[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m2794[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m28[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m2846[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m2865[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m2892[0m
+dr-xr-xr-x  8 Debian-exim Debian-exim               0 Oct 27 21:31 [01;34m2898[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m29[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m2923[0m
+dr-xr-xr-x  8 colord      colord                    0 Oct 15 09:08 [01;34m2926[0m
+dr-xr-xr-x  8 colord      colord                    0 Oct 27 21:31 [01;34m2936[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m29581[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m2959[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m2980[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m2996[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m3[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m30[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m3012[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m3029[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m3041[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m3046[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m3072[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m3073[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m3074[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m3075[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m3076[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m3077[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m3078[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m3094[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m3098[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m31[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m31379[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m31380[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m31382[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m3183[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m32[0m
+dr-xr-xr-x  8 root        root                      0 Oct 28 17:24 [01;34m32461[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m33[0m
+dr-xr-xr-x  8 root        root                      0 Oct 28 17:25 [01;34m331[0m
+dr-xr-xr-x  8 rtkit       rtkit                     0 Oct 27 21:31 [01;34m3334[0m
+dr-xr-xr-x  8 root        user                      0 Oct 27 21:31 [01;34m3362[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m3364[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m3382[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m3384[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m34[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m3400[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m3440[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m3443[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m3444[0m
+dr-xr-xr-x  8 user        user                      0 Oct 15 09:08 [01;34m3450[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m3462[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m3468[0m
+dr-xr-xr-x  8 user        user                      0 Oct 15 09:08 [01;34m3483[0m
+dr-xr-xr-x  8 root        root                      0 Oct 15 09:08 [01;34m3486[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m3493[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m3515[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m3519[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m3541[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m3542[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m3543[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m3549[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m3552[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m3559[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m3561[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m3565[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m3567[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m3569[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m3571[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m3573[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m3575[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m3577[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m3597[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m3600[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m3608[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m3613[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m382[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m4143[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m4144[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m4146[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m4162[0m
+dr-xr-xr-x  8 root        root                      0 Oct 28 17:35 [01;34m4432[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m4664[0m
+dr-xr-xr-x  8 root        root                      0 Oct 28 17:35 [01;34m4779[0m
+dr-xr-xr-x  8 user        user                      0 Oct 15 09:09 [01;34m4815[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m4830[0m
+dr-xr-xr-x  8 root        root                      0 Oct 28 17:36 [01;34m4923[0m
+dr-xr-xr-x  8 root        root                      0 Oct 28 17:37 [01;34m5281[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m530[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m548[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m586[0m
+dr-xr-xr-x  8 user        user                      0 Oct 28 17:38 [01;34m5963[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m6[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m6121[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m675[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m690[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m691[0m
+dr-xr-xr-x  8 root        root                      0 Oct 27 21:31 [01;34m7[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m7101[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m7718[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m7719[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m7721[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m7777[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m7778[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m7780[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m7787[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m7791[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m7826[0m
+dr-xr-xr-x  8 user        user                      0 Oct 28 17:26 [01;34m784[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m8844[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m8847[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m8849[0m
+dr-xr-xr-x  8 user        user                      0 Oct 15 14:25 [01;34m8853[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m8874[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m8887[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m8888[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m8890[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m8955[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m8993[0m
+dr-xr-xr-x  8 user        user                      0 Oct 27 21:31 [01;34m9345[0m
+dr-xr-xr-x  4 root        root                      0 Oct 28 17:38 [01;34macpi[0m
+dr-xr-xr-x  5 root        root                      0 Oct 28 17:38 [01;34masound[0m
+-r--r--r--  1 root        root                      0 Oct 28 17:38 buddyinfo
+dr-xr-xr-x  5 root        root                      0 Oct 28 17:38 [01;34mbus[0m
+-r--r--r--  1 root        root                      0 Oct 28 17:38 cgroups
+-r--r--r--  1 root        root                      0 Oct 28 17:38 cmdline
+-r--r--r--  1 root        root                      0 Oct 28 17:38 consoles
+-r--r--r--  1 root        root                      0 Oct 28 17:38 cpuinfo
+-r--r--r--  1 root        root                      0 Oct 28 17:38 crypto
+-r--r--r--  1 root        root                      0 Oct 28 17:38 devices
+-r--r--r--  1 root        root                      0 Oct 28 17:38 diskstats
+-r--r--r--  1 root        root                      0 Oct 28 17:38 dma
+dr-xr-xr-x  3 root        root                      0 Oct 28 17:38 [01;34mdri[0m
+dr-xr-xr-x  2 root        root                      0 Oct 28 17:38 [01;34mdriver[0m
+-r--r--r--  1 root        root                      0 Oct 28 17:38 execdomains
+-r--r--r--  1 root        root                      0 Oct 28 17:38 fb
+-r--r--r--  1 root        root                      0 Oct 28 17:38 filesystems
+dr-xr-xr-x  8 root        root                      0 Oct 28 17:38 [01;34mfs[0m
+-r--r--r--  1 root        root                      0 Oct 28 17:38 interrupts
+-r--r--r--  1 root        root                      0 Oct 28 17:38 iomem
+-r--r--r--  1 root        root                      0 Oct 28 17:38 ioports
+dr-xr-xr-x 25 root        root                      0 Oct 28 17:38 [01;34mirq[0m
+-r--r--r--  1 root        root                      0 Oct 28 17:38 kallsyms
+-r--------  1 root        root        140737486262272 Oct 28 17:38 kcore
+-r--r--r--  1 root        root                      0 Oct 28 17:38 keys
+-r--r--r--  1 root        root                      0 Oct 28 17:38 key-users
+-r--------  1 root        root                      0 Oct 15 09:08 kmsg
+-r--------  1 root        root                      0 Oct 28 17:38 kpagecount
+-r--------  1 root        root                      0 Oct 28 17:38 kpageflags
+-r--r--r--  1 root        root                      0 Oct 28 17:38 loadavg
+-r--r--r--  1 root        root                      0 Oct 28 17:38 locks
+-r--r--r--  1 root        root                      0 Oct 28 17:38 meminfo
+-r--r--r--  1 root        root                      0 Oct 28 17:38 misc
+-r--r--r--  1 root        root                      0 Oct 28 17:38 modules
+lrwxrwxrwx  1 root        root                     11 Oct 28 17:38 [01;36mmounts[0m -> self/mounts
+-rw-r--r--  1 root        root                      0 Oct 15 09:08 mtrr
+lrwxrwxrwx  1 root        root                      8 Oct 28 17:38 [01;36mnet[0m -> [01;34mself/net[0m
+-r--r--r--  1 root        root                      0 Oct 28 17:38 pagetypeinfo
+-r--r--r--  1 root        root                      0 Oct 28 17:38 partitions
+-r--r--r--  1 root        root                      0 Oct 28 17:38 sched_debug
+lrwxrwxrwx  1 root        root                     64 Oct 27 21:31 [01;36mself[0m -> [01;34m5963[0m
+-rw-------  1 root        root                      0 Oct 28 17:38 slabinfo
+-r--r--r--  1 root        root                      0 Oct 28 17:38 softirqs
+-r--r--r--  1 root        root                      0 Oct 28 17:38 stat
+-r--r--r--  1 root        root                      0 Oct 28 17:38 swaps
+dr-xr-xr-x  1 root        root                      0 Oct 15 09:08 [01;34msys[0m
+--w-------  1 root        root                      0 Oct 28 17:38 sysrq-trigger
+dr-xr-xr-x  2 root        root                      0 Oct 28 17:38 [01;34msysvipc[0m
+-r--r--r--  1 root        root                      0 Oct 28 17:38 timer_list
+-rw-r--r--  1 root        root                      0 Oct 28 17:38 timer_stats
+dr-xr-xr-x  4 root        root                      0 Oct 28 17:38 [01;34mtty[0m
+-r--r--r--  1 root        root                      0 Oct 28 17:38 uptime
+-r--r--r--  1 root        root                      0 Oct 28 17:38 version
+-r--------  1 root        root                      0 Oct 28 17:38 vmallocinfo
+-r--r--r--  1 root        root                      0 Oct 28 17:38 vmstat
+-r--r--r--  1 root        root                      0 Oct 28 17:38 zoneinfo
+$ ls /proc -l /proc/self[K[K[K[K[K | self
+bash: self: command not found
+$ ls /proc -l /proc | selfgselfrselfeselfpself self
+lrwxrwxrwx  1 root        root                     11 Oct 28 17:38 mounts -> self/mounts
+lrwxrwxrwx  1 root        root                      8 Oct 28 17:38 net -> self/net
+lrwxrwxrwx  1 root        root                     64 Oct 27 21:31 self -> 5968
+lrwxrwxrwx  1 root        root                     11 Oct 28 17:38 mounts -> self/mounts
+lrwxrwxrwx  1 root        root                      8 Oct 28 17:38 net -> self/net
+lrwxrwxrwx  1 root        root                     64 Oct 27 21:31 self -> 5968
+$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ ls /proc -l /proc | grep self
+lrwxrwxrwx  1 root        root                     11 Oct 28 17:38 mounts -> self/mounts
+lrwxrwxrwx  1 root        root                      8 Oct 28 17:38 net -> self/net
+lrwxrwxrwx  1 root        root                     64 Oct 27 21:31 self -> 6080
+lrwxrwxrwx  1 root        root                     11 Oct 28 17:38 mounts -> self/mounts
+lrwxrwxrwx  1 root        root                      8 Oct 28 17:38 net -> self/net
+lrwxrwxrwx  1 root        root                     64 Oct 27 21:31 self -> 6080
+$ clear
+[H[2J$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ ls
+[0m[01;32ma.out[0m          lecture1b  out
+[01;34mbin[0m            lecture2   quizres.cpp
+exec2.cpp      lecture4   [01;34mrshell[0m
+exec.cpp       lecture4b  stat.cpp
+exit.cpp       lecture5   [01;32mtest[0m
+fail.cpp       lecture6   testfile
+fib.cpp        lecture7   [01;36mthisisalink[0m
+filemanip.cpp  lecture8   [01;34mtmp[0m
+gdb.cpp        Makefile   typescript
+lecture1       open.cpp
+$ rm test
+$ ls
+[0m[01;32ma.out[0m          lecture1b  out
+[01;34mbin[0m            lecture2   quizres.cpp
+exec2.cpp      lecture4   [01;34mrshell[0m
+exec.cpp       lecture4b  stat.cpp
+exit.cpp       lecture5   testfile
+fail.cpp       lecture6   [40;31;01mthisisalink[0m
+fib.cpp        lecture7   [01;34mtmp[0m
+filemanip.cpp  lecture8   typescript
+gdb.cpp        Makefile
+lecture1       open.cpp
+$ cat thisisalink 
+cat: thisisalink: No such file or directory
+$ clear
+[H[2J$ ls -l test^C
+$ cat[K[K[Kecho h > test
+$ echo h > test[C[C[8Pclearat thisisalink [C[C[Clear[K[C[Cecho h > test[C[C[Kls -l test
+-rw-r--r-- 1 user user 2 Oct 28 17:40 test
+$ ls -l a.out 
+-rwxr-xr-x 1 user user 10208 Oct 28 17:33 [0m[01;32ma.out[0m
+$ [K$ [K$ ls -l a.out [2Ptest[C[C[3@echo h >[C[C[C[C[C[C[C[8Pclearat thisisalink [C[C[Clear[K^C
+$ g++ stat.cpp 
+$ ./a.out 
+size: 2
+$ ./a.out ls- [K[K[K[K^C
+$ ls test
+test
+$ ls test[C[C./a.out [C[C[5@g++ stat.cpp[C
+$ g++ stat.cpp [C[C[6Pls test[C[C./a.out 
+size: 4096
+directory
+$ ./a.out [C[C[5@g++ stat.cpp[C
+stat.cpp: In function ‘int main()’:
+stat.cpp:9:20: error: invalid operands of types ‘int’ and ‘<unresolved overloaded function type>’ to binary ‘operator<<’
+$ g++ stat.cpp 
+$ g++ stat.cpp [C[C[5P./a.out[C
+6
+$ ./a.out [C[C[5@g++ stat.cpp[C
+$ g++ stat.cpp [C[C[5P./a.out[C[C[C[5@g++ stat.cpp[C
+$ g++ stat.cpp [C[C[5P./a.out[C
+4
+$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ mn[Kan stat
+[?1049h[?1h=STAT(1)                 User Commands                STAT(1)[m
+[m
+[1mNAME[0m[m
+       stat - display file or file system status[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mstat[0m [[4mOPTION[24m]... [4mFILE[24m...[m
+[m
+[1mDESCRIPTION[0m[m
+       Display file or file system status.[m
+[m
+       [1m-L[0m, [1m--dereference[0m[m
+              follow links[m
+[m
+       [1m-f[0m, [1m--file-system[0m[m
+              display  file  system  status  instead of file[m
+              status[m
+[m
+       [1m-c[0m  [1m--format[0m=[4mFORMAT[24m[m
+              use  the  specified  FORMAT  instead  of   the[m
+              default;  output  a  newline after each use of[m
+              FORMAT[m
+[m
+       [1m--printf[0m=[4mFORMAT[24m[m
+              like   [1m--format[0m,   but   interpret   backslash[m
+[7m Manual page stat(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              escapes,  and do not output a mandatory trail‐[m
+[7m Manual page stat(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ing newline.  If you want a  newline,  include[m
+[7m Manual page stat(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              \n in FORMAT[m
+[7m Manual page stat(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-t[0m, [1m--terse[0m[m
+[7m Manual page stat(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              print the information in terse form[m
+[7m Manual page stat(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--help[0m display this help and exit[m
+[7m Manual page stat(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--version[0m[m
+[7m Manual page stat(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              output version information and exit[m
+[7m Manual page stat(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The   valid   format  sequences  for  files  (without[m
+[7m Manual page stat(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m--file-system[0m):[m
+[7m Manual page stat(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       %a     Access rights in octal[m
+[7m Manual page stat(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       %A     Access rights in human readable form[m
+[7m Manual page stat(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       %b     Number of blocks allocated (see %B)[m
+[7m Manual page stat(1) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       %B     The size in bytes of each block reported by %b[m
+[7m Manual page stat(1) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       %C     SELinux security context string[m
+[7m Manual page stat(1) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       %d     Device number in decimal[m
+[7m Manual page stat(1) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       %D     Device number in hex[m
+[7m Manual page stat(1) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       %f     Raw mode in hex[m
+[7m Manual page stat(1) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       %F     File type[m
+[7m Manual page stat(1) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       %g     Group ID of owner[m
+[7m Manual page stat(1) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       %G     Group name of owner[m
+[7m Manual page stat(1) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       %h     Number of hard links[m
+[7m Manual page stat(1) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       %i     Inode number[m
+[7m Manual page stat(1) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       %m     Mount point[m
+[7m Manual page stat(1) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       %n     File name[m
+[7m Manual page stat(1) line 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       %N     Quoted file name with dereference if  symbolic[m
+[7m Manual page stat(1) line 49 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              link[m
+[7m Manual page stat(1) line 50 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 51 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       %o     I/O block size[m
+[7m Manual page stat(1) line 52 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 53 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       %s     Total size, in bytes[m
+[7m Manual page stat(1) line 54 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 55 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       %t     Major device type in hex[m
+[7m Manual page stat(1) line 56 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 57 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       %T     Minor device type in hex[m
+[7m Manual page stat(1) line 58 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 59 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       %u     User ID of owner[m
+[7m Manual page stat(1) line 60 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 61 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       %U     User name of owner[m
+[7m Manual page stat(1) line 62 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 63 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       %w     Time  of  file  birth,  human-readable;  -  if[m
+[7m Manual page stat(1) line 64 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              unknown[m
+[7m Manual page stat(1) line 65 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 66 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       %W     Time of file birth, seconds since Epoch; 0  if[m
+[7m Manual page stat(1) line 67 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              unknown[m
+[7m Manual page stat(1) line 68 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 69 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       %x     Time of last access, human-readable[m
+[7m Manual page stat(1) line 70 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 71 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       %X     Time of last access, seconds since Epoch[m
+[7m Manual page stat(1) line 72 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 73 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       %y     Time of last modification, human-readable[m
+[7m Manual page stat(1) line 74 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page stat(1) line 75 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ man stat2stat stat
+[?1049h[?1h=STAT(2)           Linux Programmer's Manual          STAT(2)[m
+[m
+[1mNAME[0m[m
+       stat, fstat, lstat - get file status[m
+[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<sys/types.h>[0m[m
+       [1m#include[0m [1m<sys/stat.h>[0m[m
+       [1m#include[0m [1m<unistd.h>[0m[m
+[m
+       [1mint[0m [1mstat(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mstruct[0m [1mstat[0m [1m*[0m[4mbuf[24m[1m);[0m[m
+       [1mint[0m [1mfstat(int[0m [4mfd[24m[1m,[0m [1mstruct[0m [1mstat[0m [1m*[0m[4mbuf[24m[1m);[0m[m
+       [1mint[0m [1mlstat(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mstruct[0m [1mstat[0m [1m*[0m[4mbuf[24m[1m);[0m[m
+[m
+   Feature  Test  Macro  Requirements  for  glibc  (see [1mfea‐[0m[m
+   [1mture_test_macros[0m(7)):[m
+[m
+       [1mlstat[0m():[m
+           _BSD_SOURCE || _XOPEN_SOURCE >= 500 ||[m
+           _XOPEN_SOURCE && _XOPEN_SOURCE_EXTENDED[m
+           || /* Since glibc 2.10: */[m
+           _POSIX_C_SOURCE >= 200112L[m
+[m
+[1mDESCRIPTION[0m[m
+       These functions return information about a file.   No[m
+[7m Manual page stat(2) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       permissions  are  required on the file itself, but—in[m
+[7m Manual page stat(2) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[K[[[K66[K~~[K       the case of [1mstat[0m() and  [1mlstat[0m()  —  execute  (search)[m
+       permission  is  required on all of the directories in[m
+       [4mpath[24m that lead to the file.[m
+[m
+       [1mstat[0m() stats the file pointed to by [4mpath[24m and fills in[m
+       [4mbuf[24m.[m
+[m
+       [1mlstat[0m()  is  identical to [1mstat[0m(), except that if [4mpath[24m[m
+       is a symbolic link, then the link itself is  stat-ed,[m
+       not the file that it refers to.[m
+[m
+       [1mfstat[0m()  is identical to [1mstat[0m(), except that the file[m
+       to be stat-ed is specified by the file descriptor [4mfd[24m.[m
+[m
+       All of these system calls return  a  [4mstat[24m  structure,[m
+       which contains the following fields:[m
+[m
+           struct stat {[m
+               dev_t     st_dev;     /* ID of device containin[m g file */[m
+               ino_t     st_ino;     /* inode number */[m
+               mode_t    st_mode;    /* protection */[m
+               nlink_t   st_nlink;   /* number of hard links *[m /[m
+               uid_t     st_uid;     /* user ID of owner */[m
+[7m Manual page stat(2) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[K[[[K66[K~~[K               gid_t     st_gid;     /* group ID of owner */[m
+               dev_t     st_rdev;    /* device ID (if special [m file) */[m
+               off_t     st_size;    /* total size, in bytes *[m /[m
+               blksize_t st_blksize; /* blocksize for file sys[m tem I/O */[m
+               blkcnt_t  st_blocks;  /* number of 512B blocks [m allocated */[m
+               time_t    st_atime;   /* time of last access */[m
+               time_t    st_mtime;   /* time of last modificat[m ion */[m
+               time_t    st_ctime;   /* time of last status ch[m ange */[m
+           };[m
+[m
+       The  [4mst_dev[24m  field describes the device on which this[m
+       file resides.  (The [1mmajor[0m(3) and [1mminor[0m(3) macros  may[m
+       be useful to decompose the device ID in this field.)[m
+[m
+       The [4mst_rdev[24m field describes the device that this file[m
+       (inode) represents.[m
+[m
+       The [4mst_size[24m field gives the size of the file  (if  it[m
+       is  a regular file or a symbolic link) in bytes.  The[m
+[7m Manual page stat(2) line 52 (press h for help or q to quit)[27m[K[K [KESCESC[K[[[K66[K~~[K       size of a symbolic link is the length of the pathname[m
+       it contains, without a terminating null byte.[m
+[m
+       The  [4mst_blocks[24m  field  indicates the number of blocks[m
+       allocated to the file, 512-byte units.  (This may  be[m
+       smaller than [4mst_size[24m/512 when the file has holes.)[m
+[m
+       The  [4mst_blksize[24m field gives the "preferred" blocksize[m
+       for efficient file system I/O.  (Writing to a file in[m
+       smaller  chunks may cause an inefficient read-modify-[m
+       rewrite.)[m
+[m
+       Not all of the Linux file systems  implement  all  of[m
+       the time fields.  Some file system types allow mount‐[m
+       ing in such a way that file and/or directory accesses[m
+       do  not  cause an update of the [4mst_atime[24m field.  (See[m
+       [4mnoatime[24m, [4mnodiratime[24m, and [4mrelatime[24m  in  [1mmount[0m(8),  and[m
+       related   information  in  [1mmount[0m(2).)   In  addition,[m
+       [4mst_atime[24m is not updated if a file is opened with  the[m
+       [1mO_NOATIME[0m; see [1mopen[0m(2).[m
+[m
+       The  field  [4mst_atime[24m is changed by file accesses, for[m
+       example, by [1mexecve[0m(2),  [1mmknod[0m(2),  [1mpipe[0m(2),  [1mutime[0m(2)[m
+       and  [1mread[0m(2)  (of  more than zero bytes).  Other rou‐[m
+       tines, like [1mmmap[0m(2), may or may not update [4mst_atime[24m.[m
+[7m Manual page stat(2) line 71 (press h for help or q to quit)[27m[K[K [KESCESC[K[[[K66[K~~[K[m
+       The field [4mst_mtime[24m is changed by file  modifications,[m
+       for  example,  by [1mmknod[0m(2), [1mtruncate[0m(2), [1mutime[0m(2) and[m
+       [1mwrite[0m(2)  (of  more  than  zero  bytes).    Moreover,[m
+       [4mst_mtime[24m of a directory is changed by the creation or[m
+       deletion of files in that  directory.   The  [4mst_mtime[24m[m
+       field  is  [4mnot[24m  changed  for changes in owner, group,[m
+       hard link count, or mode.[m
+[m
+       The field [4mst_ctime[24m is changed by writing or  by  set‐[m
+       ting  inode  information  (i.e.,  owner,  group, link[m
+       count, mode, etc.).[m
+[m
+       The following POSIX macros are defined to  check  the[m
+       file type using the [4mst_mode[24m field:[m
+[m
+           [1mS_ISREG[0m(m)  is it a regular file?[m
+[m
+           [1mS_ISDIR[0m(m)  directory?[m
+[m
+           [1mS_ISCHR[0m(m)  character device?[m
+[m
+           [1mS_ISBLK[0m(m)  block device?[m
+[m
+           [1mS_ISFIFO[0m(m) FIFO (named pipe)?[m
+[7m Manual page stat(2) line 96 (press h for help or q to quit)[27m[K[K [KESCESC[K[[[K66[K~~[K[m
+           [1mS_ISLNK[0m(m)  symbolic      link?       (Not     in[m
+                       POSIX.1-1996.)[m
+[m
+           [1mS_ISSOCK[0m(m) socket?  (Not in POSIX.1-1996.)[m
+[m
+       The following  flags  are  defined  for  the  [4mst_mode[24m[m
+       field:[m
+[m
+           [1mS_IFMT[0m     0170000   bit mask for the file type bit[m  fields[m
+           [1mS_IFSOCK[0m   0140000   socket[m
+[m
+           [1mS_IFLNK[0m    0120000   symbolic link[m
+           [1mS_IFREG[0m    0100000   regular file[m
+           [1mS_IFBLK[0m    0060000   block device[m
+           [1mS_IFDIR[0m    0040000   directory[m
+           [1mS_IFCHR[0m    0020000   character device[m
+           [1mS_IFIFO[0m    0010000   FIFO[m
+           [1mS_ISUID[0m    0004000   set UID bit[m
+           [1mS_ISGID[0m    0002000   set-group-ID bit (see below)[m
+           [1mS_ISVTX[0m    0001000   sticky bit (see below)[m
+           [1mS_IRWXU[0m    00700     mask for file owner permission[m s[m
+           [1mS_IRUSR[0m    00400     owner has read permission[m
+[7mManual page stat(2) line 121 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_IWUSR[0m    00200     owner has write permission[m
+[7mManual page stat(2) line 122 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_IXUSR[0m    00100     owner has execute permission[m
+[7mManual page stat(2) line 123 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_IRWXG[0m    00070     mask for group permissions[m
+[7mManual page stat(2) line 124 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_IRGRP[0m    00040     group has read permission[m
+[7mManual page stat(2) line 125 (press h for help or q to quit)[27m[K[H[2J[H           [1mS_ISSOCK[0m(m) socket?  (Not in POSIX.1-1996.)[m
+[m
+       The following  flags  are  defined  for  the  [4mst_mod[24m[m [4me[24m[m
+       field:[m
+[m
+           [1mS_IFMT[0m     0170000   bit mask for the file type [m bit fields[m
+           [1mS_IFSOCK[0m   0140000   socket[m
+[m
+           [1mS_IFLNK[0m    0120000   symbolic link[m
+           [1mS_IFREG[0m    0100000   regular file[m
+           [1mS_IFBLK[0m    0060000   block device[m
+           [1mS_IFDIR[0m    0040000   directory[m
+           [1mS_IFCHR[0m    0020000   character device[m
+           [1mS_IFIFO[0m    0010000   FIFO[m
+           [1mS_ISUID[0m    0004000   set UID bit[m
+           [1mS_ISGID[0m    0002000   set-group-ID bit (see below[m )[m
+           [1mS_ISVTX[0m    0001000   sticky bit (see below)[m
+           [1mS_IRWXU[0m    00700     mask for file owner permiss[m ions[m
+           [1mS_IRUSR[0m    00400     owner has read permission[m
+           [1mS_IWUSR[0m    00200     owner has write permission[m
+           [1mS_IXUSR[0m    00100     owner has execute permissio[m [7mual page stat(2) line 125 (press h for help or q to quit)[27m[K[H[2J[H           [1mS_ISSOCK[0m(m) socket?  (Not in POSIX.1-1996.)[m
+[m
+       The following  flags  are  defined  for  the  [4mst_[24m[m [4mmode[24m[m
+       field:[m
+[m
+           [1mS_IFMT[0m     0170000   bit mask for the file ty[m pe bit fields[m
+           [1mS_IFSOCK[0m   0140000   socket[m
+[m
+           [1mS_IFLNK[0m    0120000   symbolic link[m
+           [1mS_IFREG[0m    0100000   regular file[m
+           [1mS_IFBLK[0m    0060000   block device[m
+           [1mS_IFDIR[0m    0040000   directory[m
+           [1mS_IFCHR[0m    0020000   character device[m
+           [1mS_IFIFO[0m    0010000   FIFO[m
+           [1mS_ISUID[0m    0004000   set UID bit[m
+           [1mS_ISGID[0m    0002000   set-group-ID bit (see be[m low)[m
+           [1mS_ISVTX[0m    0001000   sticky bit (see below)[m
+           [1mS_IRWXU[0m    00700     mask for file owner perm[m issions[m
+           [1mS_IRUSR[0m    00400     owner has read permissio[m n[m
+           [1mS_IWUSR[0m    00200     owner has write permissi[m [7m page stat(2) line 125 (press h for help or q to quit)[27m[K[H[2J[H           [1mS_ISSOCK[0m(m) socket?  (Not in POSIX.1-1996.)[m
+[m
+       The following  flags  are  defined  for  the  [4ms[24m[m [4mt_mode[24m[m
+       field:[m
+[m
+           [1mS_IFMT[0m     0170000   bit mask for the file [m type bit fields[m
+           [1mS_IFSOCK[0m   0140000   socket[m
+[m
+           [1mS_IFLNK[0m    0120000   symbolic link[m
+           [1mS_IFREG[0m    0100000   regular file[m
+           [1mS_IFBLK[0m    0060000   block device[m
+           [1mS_IFDIR[0m    0040000   directory[m
+           [1mS_IFCHR[0m    0020000   character device[m
+           [1mS_IFIFO[0m    0010000   FIFO[m
+           [1mS_ISUID[0m    0004000   set UID bit[m
+           [1mS_ISGID[0m    0002000   set-group-ID bit (see [m below)[m
+           [1mS_ISVTX[0m    0001000   sticky bit (see below)[m
+           [1mS_IRWXU[0m    00700     mask for file owner pe[m rmissions[m
+           [1mS_IRUSR[0m    00400     owner has read permiss[m ion[m
+           [1mS_IWUSR[0m    00200     owner has write permis[m [7mage stat(2) line 125 (press h for help or q to quit)[27m[K[H[2J[H           [1mS_ISSOCK[0m(m) socket?  (Not in POSIX.1-199[m 6.)[m
+[m
+       The following  flags  are  defined  for  the[m   [4mst_mode[24m[m
+       field:[m
+[m
+           [1mS_IFMT[0m     0170000   bit mask for the fi[m le type bit fields[m
+           [1mS_IFSOCK[0m   0140000   socket[m
+[m
+           [1mS_IFLNK[0m    0120000   symbolic link[m
+           [1mS_IFREG[0m    0100000   regular file[m
+           [1mS_IFBLK[0m    0060000   block device[m
+           [1mS_IFDIR[0m    0040000   directory[m
+           [1mS_IFCHR[0m    0020000   character device[m
+           [1mS_IFIFO[0m    0010000   FIFO[m
+           [1mS_ISUID[0m    0004000   set UID bit[m
+           [1mS_ISGID[0m    0002000   set-group-ID bit (s[m ee below)[m
+           [1mS_ISVTX[0m    0001000   sticky bit (see bel[m ow)[m
+           [1mS_IRWXU[0m    00700     mask for file owner[m  permissions[m
+           [1mS_IRUSR[0m    00400     owner has read perm[m [7m stat(2) line 125 (press h for help or q to quit)[27m[K[H[2J[H           [1mS_ISSOCK[0m(m) socket?  (Not in POSIX.1-1[m 996.)[m
+[m
+       The following  flags  are  defined  for  t[m he  [4mst_mode[24m[m
+       field:[m
+[m
+           [1mS_IFMT[0m     0170000   bit mask for the [m file type bit fields[m
+           [1mS_IFSOCK[0m   0140000   socket[m
+[m
+           [1mS_IFLNK[0m    0120000   symbolic link[m
+           [1mS_IFREG[0m    0100000   regular file[m
+           [1mS_IFBLK[0m    0060000   block device[m
+           [1mS_IFDIR[0m    0040000   directory[m
+           [1mS_IFCHR[0m    0020000   character device[m
+           [1mS_IFIFO[0m    0010000   FIFO[m
+           [1mS_ISUID[0m    0004000   set UID bit[m
+           [1mS_ISGID[0m    0002000   set-group-ID bit [m (see below)[m
+           [1mS_ISVTX[0m    0001000   sticky bit (see b[m elow)[m
+           [1mS_IRWXU[0m    00700     mask for file own[m er permissions[m
+           [1mS_IRUSR[0m    00400     owner has read pe[m [7mtat(2) line 125 (press h for help or q to quit)[27m[K[H[2J[H           [1mS_ISSOCK[0m(m) socket?  (Not in POSIX.[m 1-1996.)[m
+[m
+       The following  flags  are  defined  for[m   the  [4mst_mode[24m[m
+       field:[m
+[m
+           [1mS_IFMT[0m     0170000   bit mask for t[m he file type bit fields[m
+           [1mS_IFSOCK[0m   0140000   socket[m
+[m
+           [1mS_IFLNK[0m    0120000   symbolic link[m
+           [1mS_IFREG[0m    0100000   regular file[m
+           [1mS_IFBLK[0m    0060000   block device[m
+           [1mS_IFDIR[0m    0040000   directory[m
+           [1mS_IFCHR[0m    0020000   character devi[m ce[m
+           [1mS_IFIFO[0m    0010000   FIFO[m
+           [1mS_ISUID[0m    0004000   set UID bit[m
+           [1mS_ISGID[0m    0002000   set-group-ID b[m it (see below)[m
+           [1mS_ISVTX[0m    0001000   sticky bit (se[m e below)[m
+           [1mS_IRWXU[0m    00700     mask for file [m owner permissions[m
+[7m(2) line 125 (press h for help or q to quit)[27m[K[H[2J[H           [1mS_ISSOCK[0m(m) socket?  (Not in POSI[m X.1-1996.)[m
+[m
+       The following  flags  are  defined  f[m or  the  [4mst_mode[24m[m
+       field:[m
+[m
+           [1mS_IFMT[0m     0170000   bit mask for[m  the file type bit fields[m
+           [1mS_IFSOCK[0m   0140000   socket[m
+[m
+           [1mS_IFLNK[0m    0120000   symbolic lin[m k[m
+           [1mS_IFREG[0m    0100000   regular file[m
+           [1mS_IFBLK[0m    0060000   block device[m
+           [1mS_IFDIR[0m    0040000   directory[m
+           [1mS_IFCHR[0m    0020000   character de[m vice[m
+           [1mS_IFIFO[0m    0010000   FIFO[m
+           [1mS_ISUID[0m    0004000   set UID bit[m
+           [1mS_ISGID[0m    0002000   set-group-ID[m  bit (see below)[m
+           [1mS_ISVTX[0m    0001000   sticky bit ([m see below)[m
+           [1mS_IRWXU[0m    00700     mask for fil[m [7m) line 125 (press h for help or q to quit)[27m[K[H[2J[H           [1mS_ISSOCK[0m(m) socket?  (Not in P[m OSIX.1-1996.)[m
+[m
+       The following  flags  are  defined[m   for  the  [4mst_mode[24m[m
+       field:[m
+[m
+           [1mS_IFMT[0m     0170000   bit mask [m for the file type bit fields[m
+           [1mS_IFSOCK[0m   0140000   socket[m
+[m
+           [1mS_IFLNK[0m    0120000   symbolic [m link[m
+           [1mS_IFREG[0m    0100000   regular f[m ile[m
+           [1mS_IFBLK[0m    0060000   block dev[m ice[m
+           [1mS_IFDIR[0m    0040000   directory[m
+           [1mS_IFCHR[0m    0020000   character[m  device[m
+           [1mS_IFIFO[0m    0010000   FIFO[m
+           [1mS_ISUID[0m    0004000   set UID b[m it[m
+           [1mS_ISGID[0m    0002000   set-group[m -ID bit (see below)[m
+[7mine 125 (press h for help or q to quit)[27m[K[H[2J[H           [1mS_ISSOCK[0m(m) socket?  (Not in[m  POSIX.1-1996.)[m
+[m
+       The following  flags  are  defin[m ed  for  the  [4mst_mode[24m[m
+       field:[m
+[m
+           [1mS_IFMT[0m     0170000   bit mas[m k for the file type bit fields[m
+           [1mS_IFSOCK[0m   0140000   socket[m
+[m
+           [1mS_IFLNK[0m    0120000   symboli[m c link[m
+           [1mS_IFREG[0m    0100000   regular[m  file[m
+           [1mS_IFBLK[0m    0060000   block d[m evice[m
+           [1mS_IFDIR[0m    0040000   directo[m ry[m
+           [1mS_IFCHR[0m    0020000   charact[m er device[m
+           [1mS_IFIFO[0m    0010000   FIFO[m
+           [1mS_ISUID[0m    0004000   set UID[m  bit[m
+           [1mS_ISGID[0m    0002000   set-gro[m [7me 125 (press h for help or q to quit)[27m[K[H[2J[H           [1mS_ISSOCK[0m(m) socket?  (Not[m  in POSIX.1-1996.)[m
+[m
+       The following  flags  are  de[m fined  for  the  [4mst_mode[24m[m
+       field:[m
+[m
+           [1mS_IFMT[0m     0170000   bit [m mask for the file type bit fields[m
+           [1mS_IFSOCK[0m   0140000   sock[m et[m
+[m
+           [1mS_IFLNK[0m    0120000   symb[m olic link[m
+           [1mS_IFREG[0m    0100000   regu[m lar file[m
+           [1mS_IFBLK[0m    0060000   bloc[m k device[m
+           [1mS_IFDIR[0m    0040000   dire[m ctory[m
+           [1mS_IFCHR[0m    0020000   char[m acter device[m
+           [1mS_IFIFO[0m    0010000   FIFO[m
+           [1mS_ISUID[0m    0004000   set [m UID bit[m
+[7m25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_ISGID[0m    0002000   set-[m [7m25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[Kgroup-ID bit (see below)[m
+[7m26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_ISVTX[0m    0001000   stic[m [7m27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[Kky bit (see below)[m
+[7m27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_IRWXU[0m    00700     mask[m [7m28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K for file owner permissions[m
+[7m29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_IRUSR[0m    00400     owne[m [7m30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[Kr has read permission[m
+[7m30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_IWUSR[0m    00200     owne[m [7m31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[Kr has write permission[m
+[7m31 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ clear
+[H[2J$ clear[C[Cman 2 stat[2Pstat[C[C./a.out [C[C[5@g++ stat.cpp[C
+stat.cpp: In function ‘int main()’:
+stat.cpp:23:27: error: ‘s_IRUSR’ was not declared in this scope
+stat.cpp:26:27: error: ‘s_IWUSR’ was not declared in this scope
+stat.cpp:29:27: error: ‘s_IXUSR’ was not declared in this scope
+$ g++ stat.cpp 
+$ g++ stat.cpp [C[C[8Pclear[C[Cman 2 stat[2Pstat[C[C./a.out 
+4
+$ ./a.out [C[C[5@g++ stat.cpp[C
+$ g++ stat.cpp [C[C[5P./a.out[C
+size: 4096
+drwx$ ./a.out [C[C[5@g++ stat.cpp[C
+$ g++ stat.cpp [C[C[5P./a.out[C
+size: 4096
+drwx
+$ ls -l bin
+total 0
+$ ls -l bin[K[K[K[K$ ls -l [K$ ls -l [K$ ls -l [K$ ls -l [K$ ls -l 
+total 572
+-rwxr-xr-x 1 user user  10208 Oct 28 17:54 [0m[01;32ma.out[0m
+drwxr-xr-x 2 user user   4096 Oct 16 18:18 [01;34mbin[0m
+-rw-r--r-- 1 user user    368 Oct 16 18:03 exec2.cpp
+-rw-r--r-- 1 user user    624 Oct 15 09:19 exec.cpp
+-rw-r--r-- 1 user user     29 Oct 15 09:19 exit.cpp
+-rw-r--r-- 1 user user     29 Oct 15 09:19 fail.cpp
+-rw-r--r-- 1 user user    228 Oct 21 17:43 fib.cpp
+-rw-r--r-- 1 user user    260 Oct 21 18:26 filemanip.cpp
+-rw-r--r-- 1 user user    221 Oct 21 18:10 gdb.cpp
+-rw-r--r-- 1 user user    952 Oct  9 23:15 lecture1
+-rw-r--r-- 1 user user  55139 Oct  9 23:15 lecture1b
+-rw-r--r-- 1 user user  34066 Oct  9 23:18 lecture2
+-rw-r--r-- 1 user user 102961 Oct 15 09:19 lecture4
+-rw-r--r-- 1 user user   8192 Oct 15 09:19 lecture4b
+-rw-r--r-- 1 user user  44221 Oct 16 18:28 lecture5
+-rw-r--r-- 1 user user  30563 Oct 21 18:38 lecture6
+-rw-r--r-- 1 user user  94840 Oct 23 23:46 lecture7
+-rw-r--r-- 1 user user  98304 Oct 28 17:54 lecture8
+-rw-r--r-- 1 user user    110 Oct 16 18:22 Makefile
+-rw-r--r-- 1 user user    581 Oct 23 18:26 open.cpp
+-rw-r--r-- 1 user user     14 Oct 21 18:27 out
+-rw-r--r-- 1 user user    730 Oct 23 17:55 quizres.cpp
+drwxr-xr-x 3 user user   4096 Oct  9 18:11 [01;34mrshell[0m
+-rw-r--r-- 1 user user    605 Oct 28 17:54 stat.cpp
+-rw-r--r-- 1 user user      2 Oct 28 17:40 test
+-rw-r--r-- 1 user user      0 Oct  9 23:18 testfile
+lrwxrwxrwx 1 user user      4 Oct 28 17:36 [01;36mthisisalink[0m -> test
+drwxr-xr-x 2 user user   4096 Oct 14 17:12 [01;34mtmp[0m
+-rw-r--r-- 1 user user    471 Oct 16 12:41 typescript
+$ [K$ [K$ [K$ [K$ [K$ ls -l 
+total 572
+-rwxr-xr-x 1 user user  10208 Oct 28 17:54 [0m[01;32ma.out[0m
+drwxr-xr-x 2 user user   4096 Oct 16 18:18 [01;34mbin[0m
+-rw-r--r-- 1 user user    368 Oct 16 18:03 exec2.cpp
+-rw-r--r-- 1 user user    624 Oct 15 09:19 exec.cpp
+-rw-r--r-- 1 user user     29 Oct 15 09:19 exit.cpp
+-rw-r--r-- 1 user user     29 Oct 15 09:19 fail.cpp
+-rw-r--r-- 1 user user    228 Oct 21 17:43 fib.cpp
+-rw-r--r-- 1 user user    260 Oct 21 18:26 filemanip.cpp
+-rw-r--r-- 1 user user    221 Oct 21 18:10 gdb.cpp
+-rw-r--r-- 1 user user    952 Oct  9 23:15 lecture1
+-rw-r--r-- 1 user user  55139 Oct  9 23:15 lecture1b
+-rw-r--r-- 1 user user  34066 Oct  9 23:18 lecture2
+-rw-r--r-- 1 user user 102961 Oct 15 09:19 lecture4
+-rw-r--r-- 1 user user   8192 Oct 15 09:19 lecture4b
+-rw-r--r-- 1 user user  44221 Oct 16 18:28 lecture5
+-rw-r--r-- 1 user user  30563 Oct 21 18:38 lecture6
+-rw-r--r-- 1 user user  94840 Oct 23 23:46 lecture7
+-rw-r--r-- 1 user user  98304 Oct 28 17:54 lecture8
+-rw-r--r-- 1 user user    110 Oct 16 18:22 Makefile
+-rw-r--r-- 1 user user    581 Oct 23 18:26 open.cpp
+-rw-r--r-- 1 user user     14 Oct 21 18:27 out
+-rw-r--r-- 1 user user    730 Oct 23 17:55 quizres.cpp
+drwxr-xr-x 3 user user   4096 Oct  9 18:11 [01;34mrshell[0m
+-rw-r--r-- 1 user user    605 Oct 28 17:54 stat.cpp
+-rw-r--r-- 1 user user      2 Oct 28 17:40 test
+-rw-r--r-- 1 user user      0 Oct  9 23:18 testfile
+lrwxrwxrwx 1 user user      4 Oct 28 17:36 [01;36mthisisalink[0m -> test
+drwxr-xr-x 2 user user   4096 Oct 14 17:12 [01;34mtmp[0m
+-rw-r--r-- 1 user user    471 Oct 16 12:41 typescript
+$ [K$ [K$ [K$ [K$ [K$ [K$ clear
+[H[2J$ ls -R
+.:
+[0m[01;32ma.out[0m      fib.cpp        lecture4   Makefile     test
+[01;34mbin[0m        filemanip.cpp  lecture4b  open.cpp     testfile
+exec2.cpp  gdb.cpp        lecture5   out          [01;36mthisisalink[0m
+exec.cpp   lecture1       lecture6   quizres.cpp  [01;34mtmp[0m
+exit.cpp   lecture1b      lecture7   [01;34mrshell[0m       typescript
+fail.cpp   lecture2       lecture8   stat.cpp
+
+./bin:
+
+./rshell:
+LICENSE  Makefile  README.md
+
+./tmp:
+$ ls -R -a[K$ ls -R -a[K$ ls -R -a[K$ ls -R -a[K$ ls -R -a[K$ ls -R -a[K$ ls -R -a[K$ ls -R -a[K$ ls -R -a[K$ ls -R -a[K$ ls -R -a[K[K[K[K[K--help | wc -l
+117
+$ [K$ [K$ clear
+[H[2J$ g++ memleak.cpp 
+$ ./a.out 
+$ vla[K[Kalgrind ./a.outgg==[K[K[K[K[K$ valgrind ./a.out[K$ valgrind ./a.out[K$ valgrind ./a.out[K$ valgrind ./a.out[K$ valgrind ./a.out[K$ valgrind ./a.out
+==19026== Memcheck, a memory error detector
+==19026== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
+==19026== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
+==19026== Command: ./a.out
+==19026== 
+==19026== 
+==19026== HEAP SUMMARY:
+==19026==     in use at exit: 4 bytes in 1 blocks
+==19026==   total heap usage: 1 allocs, 0 frees, 4 bytes allocated
+==19026== 
+==19026== LEAK SUMMARY:
+==19026==    definitely lost: 4 bytes in 1 blocks
+==19026==    indirectly lost: 0 bytes in 0 blocks
+==19026==      possibly lost: 0 bytes in 0 blocks
+==19026==    still reachable: 0 bytes in 0 blocks
+==19026==         suppressed: 0 bytes in 0 blocks
+==19026== Rerun with --leak-check=full to see details of leaked memory
+==19026== 
+==19026== For counts of detected and suppressed errors, rerun with: -v
+==19026== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 4 from 4)
+$ clear
+[H[2J$ clear[C[Cvalgrind ./a.out[C[C[8P./a.out [C[C[8@g++ memleak.cpp[C
+$ g++ memleak.cpp [C[Cclear[K[C[Cvalgrind ./a.out
+==19368== Memcheck, a memory error detector
+==19368== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
+==19368== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
+==19368== Command: ./a.out
+==19368== 
+==19368== 
+==19368== HEAP SUMMARY:
+==19368==     in use at exit: 0 bytes in 0 blocks
+==19368==   total heap usage: 1 allocs, 1 frees, 4 bytes allocated
+==19368== 
+==19368== All heap blocks were freed -- no leaks are possible
+==19368== 
+==19368== For counts of detected and suppressed errors, rerun with: -v
+==19368== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 4 from 4)
+$ rm -rg[Kf /[K[K[K[K[K[K[K[Kcpp
+cpp       cpp-4.6   cpp-4.7   cppcheck  cpphs
+$ cpp
+cpp       cpp-4.6   cpp-4.7   cppcheck  cpphs
+$ cppcheck ^C
+$ clear
+[H[2J$ clear[C[Cvalgrind ./a.out[C[Cclear[K[C[C[Kcppcheck memleak.cpp 
+Checking memleak.cpp...
+$ cppcheck memleak.cpp 
+Checking memleak.cpp...
+[memleak.cpp:5]: (error) Memory leak: x
+$ [K$ [K$ cppcheck memleak.cpp [C[C[Clear[K[C[Cvalgrind ./a.out[C[Cg++ memleak.cpp 
+memleak.cpp: In function ‘int main()’:
+memleak.cpp:7:9: error: ‘cout’ was not declared in this scope
+memleak.cpp:7:22: error: ‘endl’ was not declared in this scope
+$ g++ memleak.cpp 
+$ g++ memleak.cpp [C[C[5@cppcheck[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5Pg++[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K./a.out 
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+$ clear
+[H[2J$ clear[C[C./a.out [C[C[8@g++ memleak.cpp[C
+$ g++ memleak.cpp [C[Cclear[K[C[C./a.out 
+-618873784
+32694
+4196848
+0
+0
+0
+4196384
+0
+-351924144
+32767
+0
+$ cppcheck memleak.cpp 
+Checking memleak.cpp...
+[memleak.cpp:9]: (error) Buffer access out-of-bounds: arr
+$ cppcheck memleak.cpp 
+Checking memleak.cpp...
+[memleak.cpp:9]: (error) Buffer access out-of-bounds: arr
+$ cppcheck memleak.cpp 
+Checking memleak.cpp...
+$ g++ memleak.cpp 
+$ ./a.out 
+604220488
+32520
+4196848
+0
+0
+0
+4196384
+0
+-1112582352
+32767
+$ man readdr
+No manual entry for readdr
+$ man readdr[C[K[Kir
+No manual entry for readir
+$ man readirdir
+[?1049h[?1h=READDIR(3)  Linux Programmer's Manual  READDIR(3)[m
+[m
+[1mNAME[0m[m
+       readdir, readdir_r - read a directory[m
+[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<dirent.h>[0m[m
+[m
+       [1mstruct[0m [1mdirent[0m [1m*readdir(DIR[0m [1m*[0m[4mdirp[24m[1m);[0m[m
+[m
+       [1mint[0m [1mreaddir_r(DIR[0m [1m*[0m[4mdirp[24m[1m,[0m [1mstruct[0m [1mdirent[0m [1m*[0m[4mentr[24m[m [4my[24m[1m,[0m [1mstruct[0m [1mdirent[0m [1m**[0m[4mresult[24m[1m);[0m[m
+[m
+   Feature Test Macro Requirements for glibc (see[m
+   [1mfeature_test_macros[0m(7)):[m
+[m
+       [1mreaddir_r[0m():[m
+           _POSIX_C_SOURCE >= 1 || _XOPEN_SOURCE[m
+           || _BSD_SOURCE || _SVID_SOURCE ||[m
+           _POSIX_SOURCE[m
+[m
+[1mDESCRIPTION[0m[m
+       The [1mreaddir[0m() function returns  a  pointer[m
+       to  a  [4mdirent[24m  structure  representing the[m
+       next  directory  entry  in  the  directory[m
+[7mreaddir(3) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7mreaddir(3) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ [K$ [K$ man openddir
+No manual entry for openddir
+$ man openddir[1Pir
+[?1049h[?1h=OPENDIR(3)  Linux Programmer's Manual  OPENDIR(3)[m
+[m
+[1mNAME[0m[m
+       opendir, fdopendir - open a directory[m
+[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<sys/types.h>[0m[m
+       [1m#include[0m [1m<dirent.h>[0m[m
+[m
+       [1mDIR[0m [1m*opendir(const[0m [1mchar[0m [1m*[0m[4mname[24m[1m);[0m[m
+       [1mDIR[0m [1m*fdopendir(int[0m [4mfd[24m[1m);[0m[m
+[m
+   Feature Test Macro Requirements for glibc (see[m
+   [1mfeature_test_macros[0m(7)):[m
+[m
+       [1mfdopendir[0m():[m
+           Since glibc 2.10:[m
+               _XOPEN_SOURCE >= 700 ||[m
+               _POSIX_C_SOURCE >= 200809L[m
+           Before glibc 2.10:[m
+               _GNU_SOURCE[m
+[m
+[1mDESCRIPTION[0m[m
+       The  [1mopendir[0m()  function opens a directory[m
+       stream  corresponding  to  the   directory[m
+[7mopendir(3) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7mopendir(3) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mname[24m,  and returns a pointer to the direc‐[m
+[7mopendir(3) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tory stream.  The stream is positioned  at[m
+[7mopendir(3) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the first entry in the directory.[m
+[7mopendir(3) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mopendir(3) line 7 (press h for help or q to quit)[27m[K[H[2J[H[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<sys/types.h>[0m[m
+       [1m#include[0m [1m<dirent.h>[0m[m
+[m
+       [1mDIR[0m [1m*opendir(const[0m [1mchar[0m [1m*[0m[4mname[24m[1m);[0m[m
+       [1mDIR[0m [1m*fdopendir(int[0m [4mfd[24m[1m);[0m[m
+[m
+   Feature Test Macro Requirements for glibc (see[m
+   [1mfeature_test_macros[0m(7)):[m
+[m
+       [1mfdopendir[0m():[m
+           Since glibc 2.10:[m
+               _XOPEN_SOURCE >= 700 ||[m
+               _POSIX_C_SOURCE >= 200809L[m
+           Before glibc 2.10:[m
+               _GNU_SOURCE[m
+[m
+[1mDESCRIPTION[0m[m
+       The  [1mopendir[0m()  function opens a directory[m
+       stream  corresponding  to  the   directory[m
+       [4mname[24m,  and returns a pointer to the direc‐[m
+       tory stream.  The stream is positioned  at[m
+[7mage opendir(3) line 7 (press h for help or q to quit)[27m[K[H[2J[H[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<sys/types.h>[0m[m
+       [1m#include[0m [1m<dirent.h>[0m[m
+[m
+       [1mDIR[0m [1m*opendir(const[0m [1mchar[0m [1m*[0m[4mname[24m[1m);[0m[m
+       [1mDIR[0m [1m*fdopendir(int[0m [4mfd[24m[1m);[0m[m
+[m
+   Feature Test Macro Requirements for glibc (see[m
+   [1mfeature_test_macros[0m(7)):[m
+[m
+       [1mfdopendir[0m():[m
+           Since glibc 2.10:[m
+               _XOPEN_SOURCE >= 700 ||[m
+               _POSIX_C_SOURCE >= 200809L[m
+           Before glibc 2.10:[m
+               _GNU_SOURCE[m
+[m
+[1mDESCRIPTION[0m[m
+       The  [1mopendir[0m()  function opens a directory[m
+       stream  corresponding  to  the   directory[m
+       [4mname[24m,  and returns a pointer to the direc‐[m
+       tory stream.  The stream is positioned  at[m
+       the first entry in the directory.[m
+[m
+[7mopendir(3) line 7 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ man closedir
+[?1049h[?1h=CLOSEDIR(3) Linux Programmer's Manual CLOSEDIR(3)[m
+[m
+[1mNAME[0m[m
+       closedir - close a directory[m
+[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<sys/types.h>[0m[m
+[m
+       [1m#include[0m [1m<dirent.h>[0m[m
+[m
+       [1mint[0m [1mclosedir(DIR[0m [1m*[0m[4mdirp[24m[1m);[0m[m
+[m
+[1mDESCRIPTION[0m[m
+       The  [1mclosedir[0m() function closes the direc‐[m
+       tory stream associated with [4mdirp[24m.  A  suc‐[m
+       cessful call to [1mclosedir[0m() also closes the[m
+       underlying file descriptor associated with[m
+       [4mdirp[24m.   The  directory  stream  descriptor[m
+       [4mdirp[24m is not available after this call.[m
+[m
+[1mRETURN[0m [1mVALUE[0m[m
+       The [1mclosedir[0m() function returns 0 on  suc‐[m
+       cess.  On error, -1 is returned, and [4merrno[24m[m
+       is set appropriately.[m
+[m
+[7mlosedir(3) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7mlosedir(3) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ [K$ [K$ exit
+exit
+
+Script done on Tue 28 Oct 2014 06:40:12 PM PDT
