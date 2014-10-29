@@ -29,7 +29,7 @@ Known bugs:
 
 * Running `ls` turns the terminal red.
 
-* Running `ls` prints the files separated by commas rather than the default behavior of printing a nice table.
+* Running `ls -a` prints the files separated by commas rather than the default behavior of printing a nice table.
 
 * The `-a` flag no longer prints the `.` and `..` files as it is supposed to.  (HINT: `-a` is behaving like `-A`.)
 
