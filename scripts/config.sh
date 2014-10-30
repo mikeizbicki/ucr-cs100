@@ -377,4 +377,23 @@ function percentToLetter {
     resetColor
 }
 
+##################################
+#checks if a public key is in the instructor files
+# $1 = file to check
+# $2 = key to compare
+function includesKey
+{
+    local instructor=$1
+    local key=$2
+    local instructorKeys=$( gpg --with-fingerprint $instructor | sed -n '/pub/p' | cut -c 12,13,14,15,16,17,18,19 )
+    echo "path = $instructor"
+    echo "key = $key"
+    echo "found = $instructorKeys"
+
+    if [[ $instructorKeys == *$key* ]]; then
+        return 0
+    else
+        return 1
+    fi
+}
 
