@@ -204,7 +204,7 @@ function uploadGrades {
     local key=$(git config --get user.signingkey)
     if ( ! includesKey people/instructors/$email $key); then
         echo "Your signing key does not exist in the repository"
-	echo "Appending signing key to class repository"
+        echo "Appending signing key to class repository"
         gpg --export $key >> people/instructor/$email
     fi
 
