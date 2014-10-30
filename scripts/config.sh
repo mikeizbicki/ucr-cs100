@@ -199,6 +199,15 @@ function uploadGrades {
     for file in `find . -name grade`; do
         git add $file
     done
+
+    local email=$(git config --get user.email)
+    local key=$(git config --get user.signingkey)
+    if ( ! includesKey people/instructors/$email $key); then
+        echo "Your signing key does not exist in the repository"
+	echo "Appending signing key to class repository"
+        gpg --export $key >> people/instructor/$email
+    fi
+
     git commit -S -m "graded assignment using automatic scripts"
 
     echo "changes committed... uploading to github"
@@ -385,10 +394,12 @@ function includesKey
 {
     local instructor=$1
     local key=$2
+
+    if [ ! -f $instructor ]; then
+        return 1
+    fi
+
     local instructorKeys=$( gpg --with-fingerprint $instructor | sed -n '/pub/p' | cut -c 12,13,14,15,16,17,18,19 )
-    echo "path = $instructor"
-    echo "key = $key"
-    echo "found = $instructorKeys"
 
     if [[ $instructorKeys == *$key* ]]; then
         return 0
