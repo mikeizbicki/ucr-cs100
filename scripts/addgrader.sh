@@ -20,6 +20,26 @@ if [ -z "$email" ] || [ -z "$name" ]; then
     echo "ERROR: either name or email is not configured; please run the commands:"
     echo " $ git config --global user.name \"your name here\""
     echo " $ git config --global user.email \"your email here\""
+    exit
+fi
+
+#######################################
+
+output="$instructorinfo/$email"
+gitKey=$(git config --get user.signingkey)
+if [ ! -z "$gitKey" ]; then #git signingkey exists
+    if ( includesKey $output $gitKey ); then
+        echo "Key already exists and is in class repository. Nothing to be done"
+        exit
+    else
+        echo "Key already exists. Exporting key to $output"
+        gpg --export "$gitKey" >> "$output"
+        echo "Adding key to class repository"
+        git add "$output"
+        git commit -m "added instructor $name <$email> to class"
+        git push origin
+        exit
+    fi
 fi
 
 #######################################
@@ -41,9 +61,8 @@ git config user.signingkey "$key"
 #######################################
 
 echo ""
-output="$instructorinfo/$email"
 echo "exporting new key to $output"
-gpg --export "$email" >> "$output"
+gpg --export "$key" >> "$output"
 echo "adding key to class repository"
 git add "$output"
 git commit -m "added instructor $name <$email> to class"
