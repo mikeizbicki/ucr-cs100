@@ -64,9 +64,23 @@ function padPercent {
     printf "$1"
 }
 
+##########################################
+#colors
+red="\x1b[31m"
+green="\x1b[32m"
+yellow="\x1b[33m"
+blue="\x1b[34m"
+mag="\x1b[35m"
+cyn="\x1b[36m"
+endcolor="\x1b[0m"
+
 function error {
-    echo "ERROR: $@" >&2
+    echo -e "$red ERROR: $@$endcolor" >&2
     failScript
+}
+function warning
+{
+    echo -e "$yellow WARN: $@$endcolor" >&2
 }
 
 #######################################
@@ -330,18 +344,18 @@ function colorPercent {
     if [[ -z $1 ]]; then
         resetColor
     elif ((`bc <<< "$per>90"`)); then
-        printf "\x1b[32m"
+        printf "$green"
     elif ((`bc <<< "$per>80"`)); then
-        printf "\x1b[36m"
+        printf "$cyn"
     elif ((`bc <<< "$per>70"`)); then
-        printf "\x1b[33m"
+        printf "$yellow"
     else
-        printf "\x1b[31m"
+        printf "$red"
     fi
 }
 
 function resetColor {
-    printf "\x1b[0m"
+    printf "$endcolor"
 }
 
 # $1 = percent
@@ -414,16 +428,16 @@ checkKeys()
 {
     which gpg > /dev/null 2> /dev/null
     if [ ! $? -eq 0 ];then
-        error "you need to install gpg: https://www.gnupg.org/download/"
+        error "you need to install gpg:$yellow https://www.gnupg.org/download/"
     fi
     for INST in people/instructors/*;do
         local STR=${INST##*/}
         if [[ $STR == *@* ]];then
             gpg --list-keys $STR  > /dev/null 2> /dev/null
             if [ ! $? -eq 0 ] ;then
-                echo "Instructor keys were not installed! Installing..."
+                warning "Instructor keys were not installed! Installing..."
                 scripts/install-instructor-keys.sh
-                echo "Done installing keys!!"
+                echo -e "$green Done installing keys!!$endcolor"
             fi
         fi
     done
