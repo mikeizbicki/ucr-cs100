@@ -412,6 +412,10 @@ function includesKey
 #checks if keys are installed
 checkKeys()
 {
+    which gpg > /dev/null 2> /dev/null
+    if [ ! $? -eq 0 ];then
+        error "you need to install gpg: https://www.gnupg.org/download/"
+    fi
     for INST in people/instructors/*;do
         local STR=${INST##*/}
         if [[ $STR == *@* ]];then
