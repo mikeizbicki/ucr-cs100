@@ -408,3 +408,20 @@ function includesKey
     fi
 }
 
+##########################################
+#checks if keys are installed
+checkKeys()
+{
+    for INST in people/instructors/*;do
+        local STR=${INST##*/}
+        if [[ $STR == *@* ]];then
+            gpg --list-keys $STR  > /dev/null 2> /dev/null
+            if [ ! $? -eq 0 ] ;then
+                echo "Instructor keys were not installed! Installing..."
+                scripts/install-instructor-keys.sh
+                echo "Done installing keys!!"
+            fi
+        fi
+    done
+}
+

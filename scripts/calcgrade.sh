@@ -18,6 +18,11 @@ if [ -z $user ]; then
 fi
 
 #######################################
+# check if instructor keys are installed
+
+checkKeys
+
+#######################################
 # calculate stats
 
 echo "finding grade for github account $user"
