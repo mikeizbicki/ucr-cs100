@@ -214,14 +214,6 @@ function uploadGrades {
         git add $file
     done
 
-    local email=$(git config --get user.email)
-    local key=$(git config --get user.signingkey)
-    if ( ! includesKey people/instructors/$email $key); then
-        echo "Your signing key does not exist in the repository"
-	echo "Appending signing key to class repository"
-        gpg --export $key >> people/instructor/$email
-    fi
-
     git commit -S -m "graded assignment using automatic scripts"
 
     echo "changes committed... uploading to github"
