@@ -44,6 +44,7 @@ syscalls="
     readdir
     readdir_r
     stat
+    lstat
     pipe
     dup2
     dup
