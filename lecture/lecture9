@@ -1,0 +1,199 @@
+Script started on Thu 30 Oct 2014 05:16:01 PM PDT
+bash: .profile: No such file or directory
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ [18P(reverse-i-search)`':[CP': echo $PWDS': PS1="$ "[1@1[C[C[C]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ PS1="$ "
+$ clear
+[H[2J$ [K$ [K$ g++ quiz
+quiz4.cpp    quizres.cpp  
+$ g++ quiz4.cpp 
+quiz4.cpp: In function ‘int main()’:
+quiz4.cpp:7:5: error: ‘cout’ is not a class or namespace
+quiz4.cpp:8:5: error: expected ‘;’ before ‘cout’
+$ g++ quiz4.cpp 
+quiz4.cpp: In function ‘int main()’:
+quiz4.cpp:7:14: error: ‘std::ios_base::oct’ cannot be used as a function
+quiz4.cpp:8:5: error: expected ‘;’ before ‘cout’
+$ g++ quiz4.cpp 
+quiz4.cpp: In function ‘int main()’:
+quiz4.cpp:8:9: error: too few arguments to function ‘std::ios_base& std::oct(std::ios_base&)’
+In file included from /usr/include/c++/4.7/ios:43:0,
+                 from /usr/include/c++/4.7/ostream:40,
+                 from /usr/include/c++/4.7/iostream:40,
+                 from quiz4.cpp:2:
+/usr/include/c++/4.7/bits/ios_base.h:951:3: note: declared here
+quiz4.cpp:9:5: error: expected ‘;’ before ‘cout’
+$ g++ quiz4.cpp 
+$ ./a.out 
+1
+2100
+2
+$ clear
+[H[2J$ [K$ [K$ [K$ [K$ [K$ [K$ [B[K[Kg++ quiz4.cpp 
+$ .a[K/a.out 
+1
+0
+2100
+
+$ ./a.out [C[C[6@g++ quiz4.cpp[C
+$ g++ quiz4.cpp [C[C[6P./a.out[C
+1
+0
+2100
+
+$ ./a.out [C[C[6@g++ quiz4.cpp[C
+$ g++ quiz4.cpp [C[C[6P./a.out[C
+1
+0
+1088
+
+$ ./a.out [C[C[6@g++ quiz4.cpp[C
+$ g++ quiz4.cpp [C[C[6P./a.out[C
+x=-1
+1
+0
+1088
+
+$ clear
+[H[2J$ clear[C[C./a.out [C[C[6@g++ quiz4.cpp[C
+$ g++ quiz4.cpp [C[C[9Pclear[C[C./a.out 
+x=-1
+<<0
+1
+0
+1088
+
+$ ./a.out [C[C[6@g++ quiz4.cpp[C
+$ g++ quiz4.cpp [C[C[6P./a.out[C
+x=-11
+<<20
+1
+0
+1088
+
+$ ./a.out [C[C[6@g++ quiz4.cpp[C
+$ g++ quiz4.cpp [C[C[6P./a.out[C
+x=-11
+<<10240
+1
+0
+1088
+
+$ clear
+[H[2J$ clear[C[C./a.out [C[C[6@g++ quiz4.cpp[C
+$ g++ quiz4.cpp [C[C[9Pclear[C[C./a.out 
+x=-11
+<<0
+1
+0
+1088
+
+$ ./a.out [C[C[6@g++ quiz4.cpp[C
+$ g++ quiz4.cpp [C[C[6P./a.out[C
+x=-11
+<<5
+1
+0
+1088
+
+$ ./a.out [C[C[6@g++ quiz4.cpp[C
+$ g++ quiz4.cpp [C[C[6P./a.out[C
+x=-11
+<<101
+1
+0
+1088
+
+$ g++ -O^C
+$ clear
+[H[2J$ clear[C[C./a.out [C[C[6@g++ quiz4.cpp[C
+quiz4.cpp: In function ‘int main()’:
+quiz4.cpp:23:13: error: ‘0’ cannot be used as a function
+quiz4.cpp:24:13: error: ‘0’ cannot be used as a function
+quiz4.cpp:25:13: error: ‘0’ cannot be used as a function
+$ g++ quiz4.cpp 
+quiz4.cpp: In function ‘int main()’:
+quiz4.cpp:23:13: error: ‘0’ cannot be used as a function
+quiz4.cpp:24:13: error: ‘0’ cannot be used as a function
+quiz4.cpp:25:13: error: ‘0’ cannot be used as a function
+$ g++ quiz4.cpp 
+quiz4.cpp: In function ‘int main()’:
+quiz4.cpp:23:13: error: no match for ‘operator|’ in ‘std::cout.std::basic_ostream<_CharT, _Traits>::operator<< <char, std::char_traits<char> >(0) | 0’
+quiz4.cpp:23:13: note: candidates are:
+In file included from /usr/include/c++/4.7/ios:43:0,
+                 from /usr/include/c++/4.7/ostream:40,
+                 from /usr/include/c++/4.7/iostream:40,
+                 from quiz4.cpp:2:
+/usr/include/c++/4.7/bits/ios_base.h:81:3: note: std::_Ios_Fmtflags std::operator|(std::_Ios_Fmtflags, std::_Ios_Fmtflags)
+/usr/include/c++/4.7/bits/ios_base.h:81:3: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::_Ios_Fmtflags’
+/usr/include/c++/4.7/bits/ios_base.h:121:3: note: std::_Ios_Openmode std::operator|(std::_Ios_Openmode, std::_Ios_Openmode)
+/usr/include/c++/4.7/bits/ios_base.h:121:3: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::_Ios_Openmode’
+/usr/include/c++/4.7/bits/ios_base.h:159:3: note: std::_Ios_Iostate std::operator|(std::_Ios_Iostate, std::_Ios_Iostate)
+/usr/include/c++/4.7/bits/ios_base.h:159:3: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::_Ios_Iostate’
+quiz4.cpp:23:35: error: invalid operands of types ‘int’ and ‘<unresolved overloaded function type>’ to binary ‘operator<<’
+quiz4.cpp:24:13: error: no match for ‘operator|’ in ‘std::cout.std::basic_ostream<_CharT, _Traits>::operator<< <char, std::char_traits<char> >(0) | 1’
+quiz4.cpp:24:13: note: candidates are:
+In file included from /usr/include/c++/4.7/ios:43:0,
+                 from /usr/include/c++/4.7/ostream:40,
+                 from /usr/include/c++/4.7/iostream:40,
+                 from quiz4.cpp:2:
+/usr/include/c++/4.7/bits/ios_base.h:81:3: note: std::_Ios_Fmtflags std::operator|(std::_Ios_Fmtflags, std::_Ios_Fmtflags)
+/usr/include/c++/4.7/bits/ios_base.h:81:3: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::_Ios_Fmtflags’
+/usr/include/c++/4.7/bits/ios_base.h:121:3: note: std::_Ios_Openmode std::operator|(std::_Ios_Openmode, std::_Ios_Openmode)
+/usr/include/c++/4.7/bits/ios_base.h:121:3: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::_Ios_Openmode’
+/usr/include/c++/4.7/bits/ios_base.h:159:3: note: std::_Ios_Iostate std::operator|(std::_Ios_Iostate, std::_Ios_Iostate)
+/usr/include/c++/4.7/bits/ios_base.h:159:3: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::_Ios_Iostate’
+quiz4.cpp:24:35: error: invalid operands of types ‘int’ and ‘<unresolved overloaded function type>’ to binary ‘operator<<’
+quiz4.cpp:25:13: error: no match for ‘operator|’ in ‘std::cout.std::basic_ostream<_CharT, _Traits>::operator<< <char, std::char_traits<char> >(0) | 0’
+quiz4.cpp:25:13: note: candidates are:
+In file included from /usr/include/c++/4.7/ios:43:0,
+                 from /usr/include/c++/4.7/ostream:40,
+                 from /usr/include/c++/4.7/iostream:40,
+                 from quiz4.cpp:2:
+/usr/include/c++/4.7/bits/ios_base.h:81:3: note: std::_Ios_Fmtflags std::operator|(std::_Ios_Fmtflags, std::_Ios_Fmtflags)
+/usr/include/c++/4.7/bits/ios_base.h:81:3: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::_Ios_Fmtflags’
+/usr/include/c++/4.7/bits/ios_base.h:121:3: note: std::_Ios_Openmode std::operator|(std::_Ios_Openmode, std::_Ios_Openmode)
+/usr/include/c++/4.7/bits/ios_base.h:121:3: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::_Ios_Openmode’
+/usr/include/c++/4.7/bits/ios_base.h:159:3: note: std::_Ios_Iostate std::operator|(std::_Ios_Iostate, std::_Ios_Iostate)
+/usr/include/c++/4.7/bits/ios_base.h:159:3: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::_Ios_Iostate’
+quiz4.cpp:25:35: error: invalid operands of types ‘int’ and ‘<unresolved overloaded function type>’ to binary ‘operator<<’
+$ clear
+[H[2J$ clear[C[Cg++ quiz4.cpp 
+$ g++ quiz4.cpp 
+quiz4.cpp: In function ‘int main()’:
+quiz4.cpp:23:43: error: invalid operands of types ‘int’ and ‘<unresolved overloaded function type>’ to binary ‘operator<<’
+$ g++ quiz4.cpp 
+$ g++ quiz4.cpp 
+$ g++ quiz4.cpp [C[C[9Pclear[C[Cg++ quiz4.cpp [C[C[9Pclear[C[C./a.out 
+x=-11
+<<101
+1
+0
+1088
+
+0
+
+$ ./a.out [C[C[6@g++ quiz4.cpp[C
+$ g++ quiz4.cpp 
+$ g++ quiz4.cpp [C[C[6P./a.out[C
+x=-11
+<<101
+1
+0
+1088
+
+1
+
+$ clear
+[H[2J$ clear[C[C./a.out [C[C[6@g++ quiz4.cpp[C
+$ g++ quiz4.cpp [C[C[9Pclear[C[C./a.out 
+x=-11
+<<101
+1
+0
+1088
+
+0
+
+$ [K$ [K$ [K$ [K$ exit
+exit
+
+Script done on Fri 31 Oct 2014 07:35:13 AM PDT

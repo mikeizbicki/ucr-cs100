@@ -1,0 +1,281 @@
+Script started on Thu 06 Nov 2014 05:08:44 PM PST
+bash: .profile: No such file or directory
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ [18P(reverse-i-search)`':[C[32@P': vim examples/old/Perceptron.hs[22PS': PS1="$ "[1@1[C[C[C]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ PS1="$ "
+$ clear
+[H[2J$ [K$ [K$ [K$ ls[K$ ls[K$ ls
+               lecture6
+[0m[01;32ma.out[0m          lecture7
+[01;34mbin[0m            lecture8
+exec2.cpp      lecture9
+exec.cpp       Makefile
+exit.cpp       memleak.cpp
+fail.cpp       open.cpp
+fib.cpp        out
+filemanip.cpp  output.cpp
+gdb.cpp        quiz4.cpp
+in             quizres.cpp
+lecture1       redirect.cpp
+lecture10      [01;34mrshell[0m
+lecture11      stat.cpp
+lecture1b      test
+lecture2       testfile
+lecture4       [01;36mthisisalink[0m
+lecture4b      [01;34mtmp[0m
+lecture5       typescript
+$ ls -l[K$ ls -l[K$ ls -l[K$ ls -l[K$ ls -l[K$ ls -l[K$ ls -l[K$ ls -l[K$ ls -l[K$ ls -l[K$ ls -l[K$ ls -l
+total 3428
+-rw-r--r-- 1 user user       0 Nov  4 17:37  
+-rwxr-xr-x 1 user user    8353 Nov  4 18:20 [0m[01;32ma.out[0m
+drwxr-xr-x 2 user user    4096 Oct 16 18:18 [01;34mbin[0m
+-rw-r--r-- 1 user user     368 Oct 16 18:03 exec2.cpp
+-rw-r--r-- 1 user user     624 Oct 15 09:19 exec.cpp
+-rw-r--r-- 1 user user      29 Oct 15 09:19 exit.cpp
+-rw-r--r-- 1 user user      29 Oct 15 09:19 fail.cpp
+-rw-r--r-- 1 user user     228 Oct 21 17:43 fib.cpp
+-rw-r--r-- 1 user user     260 Oct 21 18:26 filemanip.cpp
+-rw-r--r-- 1 user user     221 Oct 21 18:10 gdb.cpp
+-rw-r--r-- 1 user user       2 Nov  4 18:19 in
+-rw-r--r-- 1 user user     952 Oct  9 23:15 lecture1
+-rw-r--r-- 1 user user 2871296 Nov  4 17:42 lecture10
+-rw-r--r-- 1 user user       0 Nov  6 17:08 lecture11
+-rw-r--r-- 1 user user   55139 Oct  9 23:15 lecture1b
+-rw-r--r-- 1 user user   34066 Oct  9 23:18 lecture2
+-rw-r--r-- 1 user user  102961 Oct 15 09:19 lecture4
+-rw-r--r-- 1 user user    8192 Oct 15 09:19 lecture4b
+-rw-r--r-- 1 user user   44221 Oct 16 18:28 lecture5
+-rw-r--r-- 1 user user   30563 Oct 21 18:38 lecture6
+-rw-r--r-- 1 user user   94840 Oct 23 23:46 lecture7
+-rw-r--r-- 1 user user  112045 Oct 28 18:40 lecture8
+-rw-r--r-- 1 user user    7921 Oct 31 07:35 lecture9
+-rw-r--r-- 1 user user     110 Oct 16 18:22 Makefile
+-rw-r--r-- 1 user user     206 Oct 28 18:19 memleak.cpp
+-rw-r--r-- 1 user user     581 Oct 23 18:26 open.cpp
+-rw-r--r-- 1 user user     321 Nov  4 18:26 out
+-rw-r--r-- 1 user user     305 Nov  4 18:19 output.cpp
+-rw-r--r-- 1 user user     819 Oct 30 18:01 quiz4.cpp
+-rw-r--r-- 1 user user     730 Oct 23 17:55 quizres.cpp
+-rw-r--r-- 1 user user     327 Nov  4 18:13 redirect.cpp
+drwxr-xr-x 3 user user    4096 Oct  9 18:11 [01;34mrshell[0m
+-rw-r--r-- 1 user user    1196 Oct 28 18:08 stat.cpp
+-rw-r--r-- 1 user user     110 Nov  4 17:14 test
+-rw-r--r-- 1 user user     321 Nov  4 18:21 testfile
+lrwxrwxrwx 1 user user       4 Oct 28 17:36 [01;36mthisisalink[0m -> test
+drwxr-xr-x 2 user user    4096 Oct 14 17:12 [01;34mtmp[0m
+-rw-r--r-- 1 user user     471 Oct 16 12:41 typescript
+$ ls
+               in         lecture7     redirect.cpp
+[0m[01;32ma.out[0m          lecture1   lecture8     [01;34mrshell[0m
+[01;34mbin[0m            lecture10  lecture9     stat.cpp
+exec2.cpp      lecture11  Makefile     test
+exec.cpp       lecture1b  memleak.cpp  testfile
+exit.cpp       lecture2   open.cpp     [01;36mthisisalink[0m
+fail.cpp       lecture4   out          [01;34mtmp[0m
+fib.cpp        lecture4b  output.cpp   typescript
+filemanip.cpp  lecture5   quiz4.cpp
+gdb.cpp        lecture6   quizres.cpp
+$ ls -l\[K[K[K[K[K[Kcp
+cp: missing file operand
+Try `cp --help' for more information.
+$ ls
+               in         lecture7     redirect.cpp
+[0m[01;32ma.out[0m          lecture1   lecture8     [01;34mrshell[0m
+[01;34mbin[0m            lecture10  lecture9     stat.cpp
+exec2.cpp      lecture11  Makefile     test
+exec.cpp       lecture1b  memleak.cpp  testfile
+exit.cpp       lecture2   open.cpp     [01;36mthisisalink[0m
+fail.cpp       lecture4   out          [01;34mtmp[0m
+fib.cpp        lecture4b  output.cpp   typescript
+filemanip.cpp  lecture5   quiz4.cpp
+gdb.cpp        lecture6   quizres.cpp
+$ co [K[Kp tmp bin
+cp: omitting directory `tmp'
+$ cp tmp bin -r
+$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ clear
+[H[2J$ g++ glob.cpp 
+$ ./a.out 
+./a.out
+$ ./a.out asd as da sd a
+./a.out
+asd
+as
+da
+sd
+a
+$ ./a.out asd as da sd a[K[K[K[K[K[K[K[K[K[K[K[K[K[K*
+./a.out
+ 
+a.out
+bin
+exec2.cpp
+exec.cpp
+exit.cpp
+fail.cpp
+fib.cpp
+filemanip.cpp
+gdb.cpp
+glob.cpp
+in
+lecture1
+lecture10
+lecture11
+lecture1b
+lecture2
+lecture4
+lecture4b
+lecture5
+lecture6
+lecture7
+lecture8
+lecture9
+Makefile
+memleak.cpp
+open.cpp
+out
+output.cpp
+quiz4.cpp
+quizres.cpp
+redirect.cpp
+rshell
+stat.cpp
+test
+testfile
+thisisalink
+tmp
+typescript
+$ clear
+[H[2J$ clear[C[C./a.out *.cpp
+./a.out
+exec2.cpp
+exec.cpp
+exit.cpp
+fail.cpp
+fib.cpp
+filemanip.cpp
+gdb.cpp
+glob.cpp
+memleak.cpp
+open.cpp
+output.cpp
+quiz4.cpp
+quizres.cpp
+redirect.cpp
+stat.cpp
+$ ./a.out *.cppf*.cpp
+./a.out
+fail.cpp
+fib.cpp
+filemanip.cpp
+$ ./a.out f*.cpp''f*.cpp'
+./a.out
+f*.cpp
+$ clear
+[H[2J$ clear[C[C./a.out 'f*.cpp'[C[C[K[1Pf*.cpp[C\*.cpp
+./a.out
+f*.cpp
+$ ./a.out f\*.cpp[K[K[K[K[K[K*.coo[K[K[Kpp[K[K[K.cpp e*.cpp
+./a.out
+fail.cpp
+fib.cpp
+filemanip.cpp
+exec2.cpp
+exec.cpp
+exit.cpp
+$ ./a.out f*.cpp e*.cpp[C[1P[1P[1@*[1@x[1@*[1@t[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K
+./a.out
+exit.cpp
+$ ./a.out *x*t.cpp[C[C[C[C[C[K[K[K[K[K[K[K[K[K ~
+./a.out
+/home/user
+$ ls ~[K[K[K[K./a.out ~*x*t.cpp[1Pt.cpp?t.cpp
+./a.out
+exit.cpp
+$ ./a.out *x?t.cpp[1P.cpp[1P.cpp[1P.cpp[1P.cppf.cpp*.cpp
+./a.out
+fail.cpp
+fib.cpp
+filemanip.cpp
+$ ./a.out f*.cpp[1P.cpp?.cpp
+./a.out
+f?.cpp
+$ clear
+[H[2J$ grep qwerty
+asd
+asd
+asd
+dd
+
+d qwerty
+qwerty
+qwertyuiop
+qwertyuiop
+^C
+$ grep qwerty$''qwerty$'
+qwerty
+qwerty
+qwertyuiop
+vim^C
+$ s/happy/sad[K[K[K\\[K[K[K[K[K[K[K[K[Ked 's/happy/sad'
+sed: -e expression #1, char 11: unterminated `s' command
+$ sed 's/happy/sad'/'
+I'm   am happy!
+I am sad!
+^C
+$ clear
+[H[2J$ clear[C[Csed 's/happy/sad/'rappy/sad/'.appy/sad/'[1Pappy/sad/'[1Pappy/sad/'[1Pppy/sad/'[C[1Py/sad/'[1Py/sad/'.y/sad/'.y/sad/'.y/sad/'
+I'm happy!
+I'm sad!
+I'm h a harpy?
+I'm a sad?
+$ # tutcgfcjgh
+$ # tutcgfcjgh[C[Csed 's/h...y/sad/' '#'c'o'm'm'e'n't'
+I'm happy!
+I'm sad!
+^C
+$ ^C
+$ sed 's/h...y/sad/ #comment'
+^C
+$ sed 's/h...y/sad/ #comment'[K"[1P[1@"^C
+$ ./a.out '*'
+./a.out
+*
+$ ./a.out '*'[K"[1P*""*"
+./a.out
+*
+$ echo $HOME
+/home/user
+$ echo $HOME[K[K[K[K[K~
+/home/user
+$ HOME=/home/user/proj/ucr-cs100
+$ HOME=/home/user/proj/ucr-cs100 =/home/user/proj/ucr-cs100[C[C[C[C[C[C[C
+bash: HOME: command not found
+$ clear
+[H[2J$ echo $HOME
+/home/user/proj/ucr-cs100
+$ echo ~
+/home/user/proj/ucr-cs100
+$ echo $PATH
+/home/user/.cabal/bin:/home/user/proj/arcanist/bin:~/.cabal/bin:~/proj/arcanist/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ echo $PATH
+/home/user/.cabal/bin:/home/user/proj/arcanist/bin:~/.cabal/bin:~/proj/arcanist/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+$ echo
+
+$ wxwcv[K[K[K[K[Kexecvp("ls",...)^C
+$ cd
+$ pwd
+/home/user/proj/ucr-cs100
+$ cd lecture/
+$ PATH=/dev/random
+$ echo
+
+$ ls
+bash: ls: command not found
+$ chmod
+bash: chmod: command not found
+$ clear
+bash: clear: command not found
+$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ clear
+bash: clear: command not found
+$ exit
+exit
+
+Script done on Thu 06 Nov 2014 05:45:47 PM PST

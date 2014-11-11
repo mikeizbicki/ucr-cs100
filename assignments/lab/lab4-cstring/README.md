@@ -21,7 +21,7 @@ You will need to look up the man pages for each of these functions to make sure 
 
 **IMPORTANT:** You should be implementing the cstring versions, NOT the string versions (i.e. the parameters should be `char*` and not `std::string`).  Your function signatures should be exactly the same as the standard cstring versions.  You should not implement your own string class.
 
-**IMPORTANT:** None of these functions allocate memory.  They assume the user calling them has already allocated the correct amount of memory.  If you are using the `new` or `malloc` in any of these functions
+**IMPORTANT:** None of these functions allocate memory.  They assume the user calling them has already allocated the correct amount of memory.  If you are using the `new` or `malloc` in any of these functions, you are doing something wrong.
 
 Write a `main.c` file that tests your library.  You must use the C compiler `gcc` to compile your program.  You are not allowed to use `g++`.  This will ensure you are not using any C++ features in your code. You must have detailed tests that cover every possible edge case.
 
