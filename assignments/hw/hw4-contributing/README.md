@@ -81,13 +81,18 @@ You MAY use images that you did not create yourself if the use conforms to the i
 
 ### submission instructions
 
-There are two submissions for this assignment.
-The first is part is due on **Thursday, Aug 14**.
-In this submission, you must type a short paragraph describing what your tutorial will be about, and who will be on your team.
-You should print this document and turn it in in class.
+There are three submissions for this assignment.
+The first is part is due at midnight on **Friday, Nov 7**.
+In this submission, you must create an issue on github describing what your tutorial will be about, and who will be on your team.
 I will use this submission to ensure your topic is appropriate.
 
-Your second submission is due on midnight, **Thursday, Aug 28**.
+The second submission is due at midnight on **Thursday, Dec 4**.
+This is a rough draft submission of your project.
+You should create a pull request through github showing the current status of your project.
+You should be approximately 75% complete with your project's content at this point.
+I will use this submission to make sure that your project will actually provide benefit to future cs100 students.
+
+Your second submission is due at midnight on **Thursday, Dec 11**.
 This will be the final submission for your project.
 You must submit your tutorial as a pull request on this repository through github.
 Create a folder in this repo called `/tutorials/yoursubject`.

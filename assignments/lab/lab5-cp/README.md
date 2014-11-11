@@ -6,7 +6,7 @@ You should complete this lab using pair programming with a new partner.
 
 In this lab, you will implement a version of the `cp` command line program that copies files from one location to another.  You will use three different methods for copying the files and compare their performance.  The methods are:
 
-1. Use the `in.get(char)` and `out.put(char)` C++ functions to copy the input file to the output file one character at a time.
+1. Use the [`std::istream::get`](http://www.cplusplus.com/reference/istream/istream/get/) and [`std::ostream::put`](http://www.cplusplus.com/reference/ostream/ostream/put/) C++ functions to copy the input file to the output file one character at a time.
 
 2. Use the Unix system calls `read()` and `write()` to copy the input file to the output file one character at a time.
   

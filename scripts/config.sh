@@ -64,9 +64,23 @@ function padPercent {
     printf "$1"
 }
 
+##########################################
+#colors
+red="\x1b[31m"
+green="\x1b[32m"
+yellow="\x1b[33m"
+blue="\x1b[34m"
+mag="\x1b[35m"
+cyn="\x1b[36m"
+endcolor="\x1b[0m"
+
 function error {
-    echo "ERROR: $@" >&2
+    echo -e "$red ERROR: $@$endcolor" >&2
     failScript
+}
+function warning
+{
+    echo -e "$yellow WARN: $@$endcolor" >&2
 }
 
 #######################################
@@ -209,7 +223,7 @@ function uploadAllGrades {
     echo "uploading repos..."
     accountlist=$(getStudentList)
 
-    # this weird xargs command runs all of the downloadProject functions in parallel
+    # this weird xargs command runs all of the uploadGrades functions in parallel
     if ! (echo "$accountlist" | xargs -n 1 -P 4 bash -c "uploadGrades \$1" -- ); then
         error "ERROR: some repos failed to upload; sometimes we exceed github's connection limits due to parallel uploading; trying again might work?"
     fi
@@ -223,6 +237,7 @@ function uploadGrades {
     for file in `find . -name grade`; do
         git add $file
     done
+
     git commit -S -m "graded assignment using automatic scripts"
 
     echo "changes committed... uploading to github"
@@ -359,19 +374,19 @@ function colorPercent {
     local per="$1"
     if [[ -z $1 ]]; then
         resetColor
-    elif ((`bc <<< "$per>=90"`)); then
-        printf "\x1b[32m"
-    elif ((`bc <<< "$per>=80"`)); then
-        printf "\x1b[36m"
-    elif ((`bc <<< "$per>=70"`)); then
-        printf "\x1b[33m"
+    elif ((`bc <<< "$per>90"`)); then
+        printf "$green"
+    elif ((`bc <<< "$per>80"`)); then
+        printf "$cyn"
+    elif ((`bc <<< "$per>70"`)); then
+        printf "$yellow"
     else
-        printf "\x1b[31m"
+        printf "$red"
     fi
 }
 
 function resetColor {
-    printf "\x1b[0m"
+    printf "$endcolor"
 }
 
 # $1 = percent
@@ -416,4 +431,46 @@ function percentToLetter {
     resetColor
 }
 
+##################################
+#checks if a public key is in the instructor files
+# $1 = file to check
+# $2 = key to compare
+function includesKey
+{
+    local instructor=$1
+    local key=$2
+
+    if [ ! -f $instructor ]; then
+        return 1
+    fi
+
+    local instructorKeys=$( gpg --with-fingerprint $instructor | sed -n '/pub/p' | cut -c 12,13,14,15,16,17,18,19 )
+
+    if [[ $instructorKeys == *$key* ]]; then
+        return 0
+    else
+        return 1
+    fi
+}
+
+##########################################
+#checks if keys are installed
+checkKeys()
+{
+    which gpg > /dev/null 2> /dev/null
+    if [ ! $? -eq 0 ];then
+        error "you need to install gpg:$yellow https://www.gnupg.org/download/"
+    fi
+    for INST in people/instructors/*;do
+        local STR=${INST##*/}
+        if [[ $STR == *@* ]];then
+            gpg --list-keys $STR  > /dev/null 2> /dev/null
+            if [ ! $? -eq 0 ] ;then
+                warning "Instructor keys were not installed! Installing..."
+                scripts/install-instructor-keys.sh
+                echo -e "$green Done installing keys!!$endcolor"
+            fi
+        fi
+    done
+}
 
