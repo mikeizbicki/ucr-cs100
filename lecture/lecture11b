@@ -1,0 +1,592 @@
+Script started on Thu 06 Nov 2014 05:45:51 PM PST
+bash: .profile: No such file or directory
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ [K]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ [K]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ [K]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ [K]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ [K]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ [K]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ [K]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ [K]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ [K]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ [K]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ [K]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ [K]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ [18P(reverse-i-search)`':[Ce': exit[1@x[C[C[Cp': mv exprat.dat vocab.kos.exprat.dat[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co': export[K[1@r[C[C[C[1@t[C[C[C ': export test="hello class"[9PP': export PS1="$ "]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ export PS1="$ "
+$ HOME=/
+$ bash
+user@userland:/home/user/proj/ucr-cs100/lecture$ echo $HOME
+/
+user@userland:/home/user/proj/ucr-cs100/lecture$ exit
+exit
+$ vim ~/.bashrc
+[?1049h[?1h=[1;27r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[27;1H"~/.bashrc" [New File][>c[2;1H[1m[34m~                                                                         [3;1H~                                                                         [4;1H~                                                                         [5;1H~                                                                         [6;1H~                                                                         [7;1H~                                                                         [8;1H~                                                                         [9;1H~                                                                         [10;1H~                                                                         [11;1H~                                                                         [12;1H~                                                                         [13;1H~                                                                         [14;1H~                                                                         [15;1H~                                                                         [16;1H~                                                                         [17;1H~                                                                         [18;1H~                                                                         [19;1H~                                                                         [20;1H~                                                                         [21;1H~                                                                         [22;1H~                                                                         [23;1H~                                                                         [24;1H~                                                                         [25;1H~                                                                         [26;1H~                                                                         [m[27;57H0,0-1[9CAll]2;.bashrc (/) - VIM]1;.bashrc[1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[27;1H[K[27;1H:[?12l[?25hq[?25l[?12l[?25h[?25l[1m[37m[41mE138: Can't write viminfo file /.viminfo![m
+[32mPress ENTER or type command to continue[?12l[?25h]2;user@userland: ~/proj/ucr-cs100/lecture]1;user@userland: ~/proj/ucr-cs100/lecture
+[m[?1l>[?1049l$ vim ~/.bashrc[C[C[C[C[C[C[C[1P/.bashrc[C[C[C[C[C[C[C/.bashrch/.bashrco/.bashrcm/.bashrce/.bashrc[C/.bashrcu/.bashrcx/.bashrc[1P/.bashrcs/.bashrce/.bashrcr/.bashrc
+[?1049h[?1h=[1;27r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[27;1H"/home/user/.bashrc" 114L, 3487C[>c[1;1H# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)[3;1H# for examples
+
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;[8;6H *) return;;
+esac
+
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=10000
+HISTFILESIZE=20000
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# If set, the pattern "**" used in a pathname expansion context will[27;57H1,1[11CTop]2;.bashrc (/home/user) - VIM]1;.bashrc[1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[1;26r[1;1H[13M[1;27r[14;1H# match all files and zero or more directories and subdirectories.
+#shopt -s globstar
+
+# make less more friendly for non-text input files, see lesspipe(1)
+#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# set variable identifying the chroot you work in (used in the prompt beloo[21;1Hw)
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
+
+# set a fancy prompt (non-color, unless we know we "want" color)[27;1H[K[27;57H14,0-1[8C14%[1;1H[?12l[?25h[?25l[1;26r[1;1H[13M[1;27r[14;1Hcase "$TERM" in
+    xterm-color) color_prompt=yes;;
+esac
+
+# uncomment for a colored prompt, if the terminal has the capability; turnn[19;1Hed
+# off by default to not distract the user: the focus in a terminal window
+# should be on the output of commands, not on the prompt
+#force_color_prompt=yes
+
+if [ -n "$force_color_prompt" ]; then
+    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then[26;8H # We have color support; assume it's compliant with Ecma-48[27;57H[K[27;57H27,1[10C28%[1;1H[?12l[?25h[?25l[1;26r[1;1H[13M[1;27r[14;8H # (ISO/IEC-6429). (Lack of such support is extremely rare, and succ[15;1Hh[16;8H # a case would tend to support setf rather than setaf.)[17;8H color_prompt=yes
+    else[19;8H color_prompt=
+    fi
+fi
+
+if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\\[25;1H]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+else[27;57H[K[27;57H39,1[10C41%[1;1H[?12l[?25h[?25l[1;26r[1;1H[13M[1;27r[14;4H PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+unset color_prompt force_color_prompt
+
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ;;
+*)
+    ;;
+esac[27;57H[K[27;57H51,2-9[8C55%[1;9H[?12l[?25h[?25l[1;26r[1;1H[13M[1;27r[14;1H# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$$[17;1H(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'[22;4H #alias grep='grep --color=auto'
+    #alias fgrep='fgrep --color=auto'
+    #alias egrep='egrep --color=auto'
+fi[27;57H[K[27;57H62,5[10C68%[1;5H[?12l[?25h[?25l[1;26r[1;1H[13M[1;27r[14;1H# some more ls aliases
+#alias ll='ls -l'
+#alias la='ls -A'
+#alias l='ls -CF'
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi[27;57H[K[27;57H75,1[10C83%[1;1H[?12l[?25h[?25l[1;26r[1;1H[13M[1;27r[15;1H# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
+##########################################################################[26;1H[1m[34m@                                                                         [m[27;57H[K[27;57H87,1[10C96%[1;1H[?12l[?25h[?25l[1;26r[1;1H[3M[1;27r[23;1H###########################################################################[24;1H#####
+
+. .profile[27;57H[K[27;57H100,0-1[7CBot[11;1H[?12l[?25h[?25l[27;58H13[25;1H[?12l[?25h[?25l[27;59H4,1  [26;1H[?12l[?25h[?25l[27;57H[K[27;1H:[?12l[?25hq[?25l[?12l[?25h[?25l[1m[37m[41mE138: Can't write viminfo file /.viminfo![m
+[32mPress ENTER or type command to continue[?12l[?25h]2;user@userland: ~/proj/ucr-cs100/lecture]1;user@userland: ~/proj/ucr-cs100/lecture
+[m[?1l>[?1049l$ :q![K[K[Kclear
+[H[2J$ echo '$HOME'
+$HOME
+$ echo '$HOME'[K"[1P$HOME""$HOME"
+/
+$ export
+declare -x COLORTERM="gnome-terminal"
+declare -x DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-GL6VdFpjVh,guid=07360da9a233848bd29b07a454586785"
+declare -x DESKTOP_SESSION="gnome-xmonad"
+declare -x DISPLAY=":0.0"
+declare -x EDITOR="vim"
+declare -x GDMSESSION="gnome-xmonad"
+declare -x GDM_LANG="en_US.utf8"
+declare -x GNOME_DESKTOP_SESSION_ID="this-is-deprecated"
+declare -x GNOME_KEYRING_CONTROL="/home/user/.cache/keyring-hsrEiu"
+declare -x GNOME_KEYRING_PID="3380"
+declare -x GPG_AGENT_INFO="/home/user/.cache/keyring-hsrEiu/gpg:0:1"
+declare -x HOME="/"
+declare -x IGNOREEOF="3"
+declare -x LANG="en_US.utf8"
+declare -x LOGNAME="user"
+declare -x LS_COLORS="rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:"
+declare -x OLDPWD
+declare -x PATH="/home/user/.cabal/bin:/home/user/proj/arcanist/bin:~/.cabal/bin:~/proj/arcanist/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
+declare -x PS1="\$ "
+declare -x PWD="/home/user/proj/ucr-cs100/lecture"
+declare -x SESSION_MANAGER="local/userland:@/tmp/.ICE-unix/3398,unix/userland:/tmp/.ICE-unix/3398"
+declare -x SHELL="/bin/bash"
+declare -x SHLVL="2"
+declare -x SSH_AGENT_PID="3439"
+declare -x SSH_AUTH_SOCK="/home/user/.cache/keyring-hsrEiu/ssh"
+declare -x TERM="xterm"
+declare -x USER="user"
+declare -x USERNAME="user"
+declare -x WINDOWID="111149061"
+declare -x WINDOWPATH="7"
+declare -x XAUTHORITY="/var/run/gdm3/auth-for-user-BKkLv9/database"
+declare -x XDG_DATA_DIRS="/usr/share/gnome:/usr/local/share/:/usr/share/"
+declare -x XDG_SESSION_COOKIE="d05a4484d501a2cf851235cb51c77771-1415079813.356778-156359547"
+$ clear
+[H[2J$ ls
+           filemanip.cpp  lecture1b  lecture9     redirect.cpp
+[0m[01;32ma.out[0m      gdb.cpp        lecture2   Makefile     [01;34mrshell[0m
+[01;34mbin[0m        glob.cpp       lecture4   memleak.cpp  stat.cpp
+exec2.cpp  in             lecture4b  open.cpp     test
+exec.cpp   lecture1       lecture5   out          testfile
+exit.cpp   lecture10      lecture6   output.cpp   [01;36mthisisalink[0m
+fail.cpp   lecture11      lecture7   quiz4.cpp    [01;34mtmp[0m
+fib.cpp    lecture11b     lecture8   quizres.cpp  typescript
+$ echo `ls`
+a.out bin exec2.cpp exec.cpp exit.cpp fail.cpp fib.cpp filemanip.cpp gdb.cpp glob.cpp in lecture1 lecture10 lecture11 lecture11b lecture1b lecture2 lecture4 lecture4b lecture5 lecture6 lecture7 lecture8 lecture9 Makefile memleak.cpp open.cpp out output.cpp quiz4.cpp quizres.cpp redirect.cpp rshell stat.cpp test testfile thisisalink tmp typescript
+$ pwd
+/home/user/proj/ucr-cs100/lecture
+$ ls ../scripts/
+[0m[01;32maddgrader.sh[0m      config.sh                         [01;34mmoss[0m
+[01;32mallgrades.sh[0m      [01;32mgradeassignment-all-different.sh[0m  [01;32mmoss.sh[0m
+[01;32manalyzedata.sh[0m    [01;32mgradeassignment-all-same.sh[0m       [01;31mmoss.tgz[0m
+[01;32mcalcgrade.sh[0m      [01;32mgradeassignment-individual.sh[0m     [01;32mrmcomments.sh[0m
+[01;32mchecksyscalls.sh[0m  [01;32minstall-instructor-keys.sh[0m        texput.log
+$ clear
+[H[2J$ echo `ls $HOME~[K`
+bin boot dev etc home initrd.img lib lib64 lost+found media mnt opt proc root run sbin selinux srv sys tmp usr var vmlinuz
+$ echo `ls $HOME`'`[C'$HOME'`
+ls: cannot access $HOME: No such file or directory
+
+$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ cat Makefile | tail
+
+all:
+	$(compiler) $(opt)
+	echo "will this print"
+
+clean:
+
+install:
+
+test:
+$ cat Makefile | tail|tail tail[C[1@ [C[C[1@ [C[C[1@ [1@e[1@c[1@h[1@o
+
+$ echo qwer gkhjh hjhg jhg
+qwer gkhjh hjhg jhg
+$ echo qwer gkhjh hjhg jhg[C[Ccat Makefile |  echo  | tail[C[1@ [1@h[1@e[1@l[1@l[1@o[C[1@ [1@w[1@o[1@r[1@l[1@d
+hello world
+$ cat Makefile |  echo  hello world | tail[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@g[1@r[1@e[1@p[C[1@ 
+Usage: grep [OPTION]... PATTERN [FILE]...
+Try 'grep --help' for more information.
+$ cat Makefile | grep  | tail[C[C[Kclar
+bash: clar: command not found
+$ clear
+[H[2J$ clear[1Parat Makefile | grep  | tail[1P[1P[1P[1P[1@c[1@a[1@t
+
+all:
+	$(compiler) $(opt)
+	echo "will this print"
+
+clean:
+
+install:
+
+test:
+$ cat Makefile | cat  | tail[1@|[C[1@ [1@c[1@a[1@t[C[1@ [1@|[1@c[1@a[1@t[C[1@ [1@|[1@c[1@a[1@t
+
+all:
+	$(compiler) $(opt)
+	echo "will this print"
+
+clean:
+
+install:
+
+test:
+$ cat Makefile | cat | cat |cat |cat | tail[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kd[Khead -5 | til[K[Kail -1
+	$(compiler) $(opt)
+$ man pipe
+[?1049h[?1h=PIPE(2)    Linux Programmer's Manual    PIPE(2)[m
+[m
+[1mNAME[0m[m
+       pipe, pipe2 - create pipe[m
+[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<unistd.h>[0m[m
+[m
+       [1mint[0m [1mpipe(int[0m [4mpipefd[24m[1m[2]);[0m[m
+[m
+       [1m#define[0m [1m_GNU_SOURCE[0m             /* See fea[m ture_test_macros(7) */[m
+       [1m#include[0m [1m<fcntl.h>[0m              /* Obtain [m O_* constant definitions */[m
+       [1m#include[0m [1m<unistd.h>[0m[m
+[m
+       [1mint[0m [1mpipe2(int[0m [4mpipefd[24m[1m[2],[0m [1mint[0m [4mflags[24m[1m);[0m[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mpipe[0m()  creates a pipe, a unidirectional[m
+       data channel that can be used for inter‚Äê[m
+       process communication.  The array [4mpipefd[24m[m
+       is used to return two  file  descriptors[m
+       referring  to  the  ends  of  the  pipe.[m
+       [4mpipefd[0][24m refers to the read end of  the[m
+       pipe.  [4mpipefd[1][24m refers to the write end[m
+[7m pipe(2) line 1 (press h for help or q to quit)[27m[K[H[2J[HPIPE(2)    Linux Programmer's Manual    PIPE(2)[m
+[m
+[1mNAME[0m[m
+       pipe, pipe2 - create pipe[m
+[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<unistd.h>[0m[m
+[m
+       [1mint[0m [1mpipe(int[0m [4mpipefd[24m[1m[2]);[0m[m
+[m
+       [1m#define[0m [1m_GNU_SOURCE[0m             /* See featu[m re_test_macros(7) */[m
+       [1m#include[0m [1m<fcntl.h>[0m              /* Obtain O_[m * constant definitions */[m
+       [1m#include[0m [1m<unistd.h>[0m[m
+[m
+       [1mint[0m [1mpipe2(int[0m [4mpipefd[24m[1m[2],[0m [1mint[0m [4mflags[24m[1m);[0m[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mpipe[0m()  creates a pipe, a unidirectional[m
+       data channel that can be used for inter‚Äê[m
+       process communication.  The array [4mpipefd[24m[m
+       is used to return two  file  descriptors[m
+       referring  to  the  ends  of  the  pipe.[m
+       [4mpipefd[0][24m refers to the read end of  the[m
+       pipe.  [4mpipefd[1][24m refers to the write end[m
+[7mge pipe(2) line 1 (press h for help or q to quit)[27m[K[H[2J[HPIPE(2)    Linux Programmer's Manual    PIPE(2)[m
+[m
+[1mNAME[0m[m
+       pipe, pipe2 - create pipe[m
+[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<unistd.h>[0m[m
+[m
+       [1mint[0m [1mpipe(int[0m [4mpipefd[24m[1m[2]);[0m[m
+[m
+       [1m#define[0m [1m_GNU_SOURCE[0m             /* See feature_[m test_macros(7) */[m
+       [1m#include[0m [1m<fcntl.h>[0m              /* Obtain O_* c[m onstant definitions */[m
+       [1m#include[0m [1m<unistd.h>[0m[m
+[m
+       [1mint[0m [1mpipe2(int[0m [4mpipefd[24m[1m[2],[0m [1mint[0m [4mflags[24m[1m);[0m[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mpipe[0m()  creates a pipe, a unidirectional[m
+       data channel that can be used for inter‚Äê[m
+       process communication.  The array [4mpipefd[24m[m
+       is used to return two  file  descriptors[m
+       referring  to  the  ends  of  the  pipe.[m
+       [4mpipefd[0][24m refers to the read end of  the[m
+       pipe.  [4mpipefd[1][24m refers to the write end[m
+[7m page pipe(2) line 1 (press h for help or q to quit)[27m[K[H[2J[HPIPE(2)    Linux Programmer's Manual    PIPE(2)[m
+[m
+[1mNAME[0m[m
+       pipe, pipe2 - create pipe[m
+[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<unistd.h>[0m[m
+[m
+       [1mint[0m [1mpipe(int[0m [4mpipefd[24m[1m[2]);[0m[m
+[m
+       [1m#define[0m [1m_GNU_SOURCE[0m             /* See feature_te[m st_macros(7) */[m
+       [1m#include[0m [1m<fcntl.h>[0m              /* Obtain O_* con[m stant definitions */[m
+       [1m#include[0m [1m<unistd.h>[0m[m
+[m
+       [1mint[0m [1mpipe2(int[0m [4mpipefd[24m[1m[2],[0m [1mint[0m [4mflags[24m[1m);[0m[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mpipe[0m()  creates a pipe, a unidirectional[m
+       data channel that can be used for inter‚Äê[m
+       process communication.  The array [4mpipefd[24m[m
+       is used to return two  file  descriptors[m
+       referring  to  the  ends  of  the  pipe.[m
+       [4mpipefd[0][24m refers to the read end of  the[m
+       pipe.  [4mpipefd[1][24m refers to the write end[m
+[7mal page pipe(2) line 1 (press h for help or q to quit)[27m[K[H[2J[HPIPE(2)    Linux Programmer's Manual    PIPE(2)[m
+[m
+[1mNAME[0m[m
+       pipe, pipe2 - create pipe[m
+[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<unistd.h>[0m[m
+[m
+       [1mint[0m [1mpipe(int[0m [4mpipefd[24m[1m[2]);[0m[m
+[m
+       [1m#define[0m [1m_GNU_SOURCE[0m             /* See feature_test_[m macros(7) */[m
+       [1m#include[0m [1m<fcntl.h>[0m              /* Obtain O_* consta[m nt definitions */[m
+       [1m#include[0m [1m<unistd.h>[0m[m
+[m
+       [1mint[0m [1mpipe2(int[0m [4mpipefd[24m[1m[2],[0m [1mint[0m [4mflags[24m[1m);[0m[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mpipe[0m()  creates a pipe, a unidirectional[m
+       data channel that can be used for inter‚Äê[m
+       process communication.  The array [4mpipefd[24m[m
+       is used to return two  file  descriptors[m
+       referring  to  the  ends  of  the  pipe.[m
+       [4mpipefd[0][24m refers to the read end of  the[m
+       pipe.  [4mpipefd[1][24m refers to the write end[m
+[7manual page pipe(2) line 1 (press h for help or q to quit)[27m[K[H[2J[HPIPE(2)    Linux Programmer's Manual    PIPE(2)[m
+[m
+[1mNAME[0m[m
+       pipe, pipe2 - create pipe[m
+[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<unistd.h>[0m[m
+[m
+       [1mint[0m [1mpipe(int[0m [4mpipefd[24m[1m[2]);[0m[m
+[m
+       [1m#define[0m [1m_GNU_SOURCE[0m             /* See feature_test_mac[m ros(7) */[m
+       [1m#include[0m [1m<fcntl.h>[0m              /* Obtain O_* constant [m definitions */[m
+       [1m#include[0m [1m<unistd.h>[0m[m
+[m
+       [1mint[0m [1mpipe2(int[0m [4mpipefd[24m[1m[2],[0m [1mint[0m [4mflags[24m[1m);[0m[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mpipe[0m()  creates a pipe, a unidirectional[m
+       data channel that can be used for inter‚Äê[m
+       process communication.  The array [4mpipefd[24m[m
+       is used to return two  file  descriptors[m
+       referring  to  the  ends  of  the  pipe.[m
+       [4mpipefd[0][24m refers to the read end of  the[m
+       pipe.  [4mpipefd[1][24m refers to the write end[m
+[7m Manual page pipe(2) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ man pipe
+[?1049h[?1h=PIPE(2)           Linux Programmer's Manual          PIPE(2)[m
+[m
+[1mNAME[0m[m
+       pipe, pipe2 - create pipe[m
+[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<unistd.h>[0m[m
+[m
+       [1mint[0m [1mpipe(int[0m [4mpipefd[24m[1m[2]);[0m[m
+[m
+       [1m#define[0m [1m_GNU_SOURCE[0m             /* See feature_test_mac[m ros(7) */[m
+       [1m#include[0m [1m<fcntl.h>[0m              /* Obtain O_* constant [m definitions */[m
+       [1m#include[0m [1m<unistd.h>[0m[m
+[m
+       [1mint[0m [1mpipe2(int[0m [4mpipefd[24m[1m[2],[0m [1mint[0m [4mflags[24m[1m);[0m[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mpipe[0m()  creates a pipe, a unidirectional data channel[m
+       that can be used for interprocess communication.  The[m
+       array  [4mpipefd[24m  is used to return two file descriptors[m
+       referring to the ends of the pipe.  [4mpipefd[0][24m  refers[m
+       to the read end of the pipe.  [4mpipefd[1][24m refers to the[m
+       write end of the pipe.  Data written to the write end[m
+       of  the  pipe  is  buffered by the kernel until it is[m
+[7m Manual page pipe(2) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ [K$ [K$ [K$ [K$ [K$ [K$ man pipe
+[?1049h[?1h=PIPE(2)   Linux Programmer's Manual  PIPE(2)[m
+[m
+[1mNAME[0m[m
+       pipe, pipe2 - create pipe[m
+[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<unistd.h>[0m[m
+[m
+       [1mint[0m [1mpipe(int[0m [4mpipefd[24m[1m[2]);[0m[m
+[m
+       [1m#define[0m [1m_GNU_SOURCE[0m             /* See [m feature_test_macros(7) */[m
+       [1m#include[0m [1m<fcntl.h>[0m              /* Obta[m in O_* constant definitions */[m
+       [1m#include[0m [1m<unistd.h>[0m[m
+[m
+       [1mint[0m [1mpipe2(int[0m [4mpipefd[24m[1m[2],[0m [1mint[0m [4mflags[24m[1m);[0m[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mpipe[0m()  creates  a  pipe, a unidirec‚Äê[m
+       tional data channel that can be  used[m
+       for  interprocess communication.  The[m
+       array [4mpipefd[24m is used  to  return  two[m
+       file  descriptors  referring  to  the[m
+       ends of the pipe.   [4mpipefd[0][24m  refers[m
+       to   the   read   end  of  the  pipe.[m
+[7mpe(2) line 1 (press h for help or q to quit)[27m[K[H[2J[HPIPE(2)   Linux Programmer's Manual  PIPE(2)[m
+[m
+[1mNAME[0m[m
+       pipe, pipe2 - create pipe[m
+[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<unistd.h>[0m[m
+[m
+       [1mint[0m [1mpipe(int[0m [4mpipefd[24m[1m[2]);[0m[m
+[m
+       [1m#define[0m [1m_GNU_SOURCE[0m             /* Se[m e feature_test_macros(7) */[m
+       [1m#include[0m [1m<fcntl.h>[0m              /* Ob[m tain O_* constant definitions */[m
+       [1m#include[0m [1m<unistd.h>[0m[m
+[m
+       [1mint[0m [1mpipe2(int[0m [4mpipefd[24m[1m[2],[0m [1mint[0m [4mflags[24m[1m);[0m[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mpipe[0m()  creates  a  pipe, a unidirec‚Äê[m
+       tional data channel that can be  used[m
+       for  interprocess communication.  The[m
+       array [4mpipefd[24m is used  to  return  two[m
+       file  descriptors  referring  to  the[m
+       ends of the pipe.   [4mpipefd[0][24m  refers[m
+       to   the   read   end  of  the  pipe.[m
+[7m(2) line 1 (press h for help or q to quit)[27m[K[H[2J[HPIPE(2)   Linux Programmer's Manual  PIPE[m (2)[m
+[m
+[1mNAME[0m[m
+       pipe, pipe2 - create pipe[m
+[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<unistd.h>[0m[m
+[m
+       [1mint[0m [1mpipe(int[0m [4mpipefd[24m[1m[2]);[0m[m
+[m
+       [1m#define[0m [1m_GNU_SOURCE[0m             /*[m  See feature_test_macros(7) */[m
+       [1m#include[0m [1m<fcntl.h>[0m              /*[m  Obtain O_* constant definitions */[m
+       [1m#include[0m [1m<unistd.h>[0m[m
+[m
+       [1mint[0m [1mpipe2(int[0m [4mpipefd[24m[1m[2],[0m [1mint[0m [4mflags[24m[m [1m);[0m[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mpipe[0m()  creates  a  pipe, a unidir[m ec‚Äê[m
+       tional data channel that can be  u[m sed[m
+       for  interprocess communication.  [m [7m line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ clear
+[H[2J$ g++ pipe.cpp 
+$ ./a.out 
+fd[0]3
+fd[1]4
+$ man write
+[?1049h[?1h=WR... BSD General Commands Manual WR...[m
+[m
+[1mNAME[0m[m
+     [1mwrite[0m ‚Äî send a message to another[m
+     user[m
+[m
+[1mSYNOPSIS[0m[m
+     [1mwrite[0m [4muser[24m [[4mtty[24m][m
+[m
+[1mDESCRIPTION[0m[m
+     The [1mwrite[0m utility allows you to[m
+     communicate with other users, by[m
+     copying lines from your terminal[m
+     to theirs.[m
+[m
+     When you run the [1mwrite[0m command,[m
+     the user you are writing to gets a[m
+     message of the form:[m
+[m
+           Message from[m
+           yourname@yourhost on yourtty[m
+           at hh:mm ...[m
+[m
+     Any further lines you enter will[m
+     be copied to the specified user's[m
+     terminal.  If the other user wants[m
+[7m line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ man write2write write
+[?1049h[?1h=WRITE(2Linux Programmer's ManuaWRITE(2)[m
+[m
+[1mNAME[0m[m
+       write - write to a file descrip‚Äê[m
+       tor[m
+[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<unistd.h>[0m[m
+[m
+       [1mssize_t[0m [1mwrite(int[0m [4mfd[24m[1m,[0m [1mconst[0m [1mvoid[0m[m
+       [1m*[0m[4mbuf[24m[1m,[0m [1msize_t[0m [4mcount[24m[1m);[0m[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mwrite[0m() writes up to [4mcount[24m bytes[m
+       from the buffer pointed  [4mbuf[24m  to[m
+       the file referred to by the file[m
+       descriptor [4mfd[24m.[m
+[m
+       The number of bytes written  may[m
+       be less than [4mcount[24m if, for exam‚Äê[m
+       ple, there is insufficient space[m
+       on   the   underlying   physical[m
+       medium,  or   the   [1mRLIMIT_FSIZE[0m[m
+       resource  limit  is  encountered[m
+       (see [1msetrlimit[0m(2)), or the  call[m
+       was interrupted by a signal han‚Äê[m
+[7m line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ man 2 write[2Pwrite[C[C[1P./a.out [C[C[5@g++ pipe.cpp[C
+$ g++ pipe.cpp [C[C[2Pman 2 write[2Pwrite[C[C[1P./a.out 
+fd[0]=3
+fd[1]=4
+$ ./a.out [C[C[5@g++ pipe.cpp[C
+$ g++ pipe.cpp [C[C[5P./a.out[C
+fd[0]=3
+fd[1]=4
+hello world $ man read
+[?1049h[?1h=READ(2)Linux Programmer's ManualREAD(2)[m
+[m
+[1mNAME[0m[m
+       read - read from a file descrip‚Äê[m
+       tor[m
+[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<unistd.h>[0m[m
+[m
+       [1mssize_t[0m [1mread(int[0m [4mfd[24m[1m,[0m [1mvoid[0m [1m*[0m[4mbuf[24m[1m,[0m [1msi[0m[m [1mze_t[0m [4mcount[24m[1m);[0m[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mread[0m() attempts to  read  up  to[m
+       [4mcount[24m bytes from file descriptor[m
+       [4mfd[24m into the buffer  starting  at[m
+       [4mbuf[24m.[m
+[m
+       If [4mcount[24m is zero, [1mread[0m() returns[m
+       zero and has no  other  results.[m
+       If   [4mcount[24m   is   greater   than[m
+       [1mSSIZE_MAX[0m, the result is unspec‚Äê[m
+       ified.[m
+[m
+[1mRETURN[0m [1mVALUE[0m[m
+       On  success, the number of bytes[m
+[7m line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ [B[K[Kman read[C[C./a.out [C[Cman read[C[C./a.out [C[C[5@g++ pipe.cpp[C
+$ g++ pipe.cpp [C[C[5Pman read[C[C./a.out 
+fd[0]=4
+fd[1]=5
+$ ./a.out [C[C[5@g++ pipe.cpp[C
+$ g++ pipe.cpp [C[C[5P./a.out[C
+fd[0]=4
+fd[1]=5
+hello world$ clear
+[H[2J$ clear[C[C./a.out [C[C[5@g++ pipe.cpp[C
+$ g++ pipe.cpp [C[C[8Pclear[C[C./a.out 
+fd[0]=4
+fd[1]=5
+hello world^C
+$ ls /proc/6043/fd/4^C
+$ clear
+[H[2J$ g++pi[K[K pipe.cpp 
+$ ./a.out 
+fd[0]=4
+fd[1]=5
+hello world                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             MıÁ          „ÌBÁ          B®ÙÁ                                                                                                                                                                                                                         MıÁ          +czÁ          B®ÙÁ                                          ÇöÙÁ                                                                               Ñ     Ñ                     8      `8     ÿ]8     X®8                                          MıÁ          °ÿõÁ          B®ÙÁ  
+     ØïÙÁ                   (       (     ò(     Ë(                           P     ÏK     ÏK                     P!      `!     –S!     ¿DÁ  /       U›ÙÁ          PIÁ          MıÁ  /       N<»Á          B®ÙÁ  »AÁ  MıÁ  †´Í2ˇ  9<»Á          B®ÙÁ  »AÁ   @Á  –´Í2   ôÙ     ¨Í2ˇ  ŸŸÙÁ   yÁ  X8zÁ  ÿÌy           @™Í2ˇ  ¿DÁ  ã@     †AÁ        H¨Í2ˇ         X®8           U             ÌÅ                      0h     ê≤Í2ˇ   ≥Í2ˇ  ‡DÁ          „ÌBÁ  ê¨Í2ˇ  ıÁ          ÷ıÁ  @Á  ∏≤Í2ˇ  ¿≤Í2ˇ  œ≤Í2ˇ  ‡ıÁ  ê≤Í2ˇ                          @€yÁ     f’e˛ˇ‡DÁ          „ÌBÁ  ê¨Í2ˇ    ¿V’e˛ˇ  vÍ#Œˇ   ˇ         pE    
+           Á  @¨Í2ˇ  ê≤Í2ˇ   ≥Í2ˇ   @Á          +czÁ  ê≠Í2ˇ  ıÁ          ÷ıÁ  @Á  Ë˜ÙÁ             hJÁ  ÓˇÙÁ  ÿ9Á          @       êõÁ     f’e˛ˇ @Á          +czÁ  ê≠Í2ˇ    ¿X’e˛ˇ  vÍ#Œˇ                                            Ñ     Ñ     ê≤Í2ˇ   ≥Í2ˇ  ∏Á          °ÿõÁ  †ÆÍ2ˇ  ıÁ          ÷ıÁ  @Á  »ëõÁ   ≥Í2ˇ  ≈ÛÙÁ  ‡DÁ                        p      Ë≠√Á     f’e˛ˇ∏Á          °ÿõÁ  †ÆÍ2ˇ    ‡Z’e˛ˇ  vÍ#Œˇ       h              PÂtd   ê≤Í2ˇ   ≥Í2ˇ  –Á         N<»Á  ¿ØÍ2ˇ  ıÁ          ÷ıÁ  @Á  ∏≤Í2ˇ  ¿≤Í2ˇ  œ≤Í2ˇ  ‡ıÁ  XØ√Á   ≥Í2ˇ  ≈ÛÙÁ  ‡DÁ             f’e˛ˇ–Á         N<»Á  ¿ØÍ2ˇ    ¿\’e˛ˇ  vÍ#Œˇ–Á         9<»Á  ¿ØÍ2ˇ     ]’e˛ˇ  vÍ#ŒˇàÊê≈Eå ¿  Ä `¿Ä ä  àD2.@
+¡ÙÁ  &Ñ¿å –ØÍ2ˇ   ¿2 ¿ P–ØÍ2ˇ  ¿JÁ         ^ñì    »ÙÁ  »IÁ             Á  YNr     4 AÁ  @±Í2ˇ  `ÃAÁ  
+¡ÙÁ  ¯äBÁ  P∞Í2ˇ          HNÁ  ‡DÁ  b„≈Á   òBÁ  XmƒÁ         Ò     Åâœ    (Á  ê±Í2ˇ  HNÁ  ∏±Í2ˇ  –Á  ^ñì    ÃÙÁ          
+¡ÙÁ                    Á  ∞Í2ˇ  ®JÁ         ⁄á0    »ÙÁ  ®JÁ                 [¬     ¯RƒÁ  `≤Í2ˇ  (gƒÁ  
+¡ÙÁ  òS≈Á  p±Í2ˇ          p±Í2ˇ  ¿JÁ         ÌÈC+    »ÙÁ                 -   Á  ß≠     »∂AÁ  ‡≤Í2ˇ  `ÃAÁ  –Á  pBÁ  ÃÙÁ          KÁ  ‡DÁ  ö@      òBÁ  ¯@                         EÁ  0≥Í2ˇ  KÁ  X≥Í2ˇ  »AÁ  ÌÈC+    ÃÙÁ          KÁ                   ˇ  »AÁ  lÚ   –Á  7      ÷∆Á           EÁ  ‡≤Í2ˇ  ¯≤Í2ˇ  òS≈   –Á  8ÙÁ  ö@     8≈Á         ÿ/             `ÙÁ  †åÚÁ   ¿√Á  –ÙÁ  †òÚÁ  lÚÁ          ‡ ÙÁ  pBÁ  ‡DÁ  –ÙÁ  ˇˇˇˇ    –ÙÁ         x`             (µÍ2ˇ  8µÍ2ˇ          Ú	ıÁ     Á          ∏ÙÁ  pBÁ  †
+ÙÁ         ≥Í2ˇ   `            UjıÁ                 »`     Ù`     ê	@     d˝DÁ         ≥Í2ˇ   `     @            ˇˇ      ¥Í2ˇ  4@            ≠@     clear
+
+^[[A^[[A^[[A^C
+$ g++ pipe.cpp 
+$ ./a.out 
+fd[0]=4
+fd[1]=5
+hello world                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ^[^[^C
+$ exit
+exit
+
+Script done on Thu 06 Nov 2014 06:39:18 PM PST

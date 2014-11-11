@@ -1,0 +1,49 @@
+\documentclass{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{listings}
+\lstset{numbers=left,frame=single}
+
+\title{Quiz 4 - complex bash commands and regular expressions}
+\author{CS100 - software construction}
+
+\begin{document}
+\maketitle
+
+\noindent
+Write bash commands to perform the following tasks.
+Each bash command should be a single line.
+That means you are allowed to use io redirection and pipes, but you are NOT allowed to use the connectors \lstinline{;}, \lstinline{&&}, or \lstinline{||}.
+
+\vspace{0.15in}
+\noindent
+\emph{You are allowed to try your commands out on a bash terminal, and read any electronic resources you want while completing this quiz.
+You are NOT allowed to consult any other human beings or sentient robots.
+}
+
+\begin{enumerate}
+\item
+Replace all occurrences of the string ``Mike Izbicki'' in the file \lstinline{./README} with ``best professor ever''.
+\vspace{3in}
+
+\item
+Search your \lstinline{bash} history for all the times you've run the \lstinline{g++} command, and print only the most recent three.
+
+\vspace{3in}
+
+\newpage
+\item
+Print all the email addresses on the webpage \lstinline{http://izbicki.me}.
+The command should print nothing else.
+You may assume that emails have the form \lstinline{username@domainname}, where both \lstinline{username} and \lstinline{domainname} contain only alphanumeric characters and periods.
+(The vast majority of emails fall into this category, but the full email spec allows much weirder things.)
+
+HINT: Use the \lstinline{wget} command with the appropriate flags to print the webpage to stdout.
+
+\vspace{3in}
+
+\item
+Print all files in your computer whose filename ends with any of: ``.jpg'', ``.jpeg'', ``.png'', or ``.gif''.
+
+\end{enumerate}
+\end{document}
