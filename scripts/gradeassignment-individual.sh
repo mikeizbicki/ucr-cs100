@@ -12,7 +12,7 @@ source "$scriptdir/config.sh"
 ########################################
 # check for valid command line params
 
-user="$1"
+user=$(simplifycsaccount "$1")
 if [ -z $user ]; then
     echo "no user name given"
     exit
