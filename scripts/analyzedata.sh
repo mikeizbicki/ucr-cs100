@@ -8,6 +8,7 @@ scriptdir=`dirname "$0"`
 source "$scriptdir/config.sh"
 
 assn="$1"
+tag="hw1"
 
 #######################################
 # functions
@@ -29,40 +30,48 @@ function foreachStudent {
 function numCommits {
     github=$(getStudentInfo "$1" github)
     cd "gradetmp/rshell-$1"
-    #git checkout "$2" --quiet 2> /dev/null
-    #git checkout HEAD --quiet 2> /dev/null
+    #echo $(git rev-list --author=$github --count $2)
     echo $(git rev-list --author=$github --count $2)
     cd "../.."
 }
 
 # $1 = student
+# $2 = commit/tag/branch location to measure
 function timelastcommit {
     github=$(getStudentInfo "$1" github)
     cd "gradetmp/rshell-$1"
-    git checkout master --quiet 2> /dev/null
+    git checkout "$2" --quiet 2> /dev/null
+    #git checkout master --quiet 2> /dev/null
     git log --author=$github --pretty=format:'%at' | head -n1
     cd ../..
 }
 
 # $1 = student
+# $2 = starttime
 function timefirstcommit {
+    local starttime="$2"
+    [ -z "$2" ] && starttime=0
+
     github=$(getStudentInfo "$1" github)
     cd "gradetmp/rshell-$1"
     git checkout master --quiet 2> /dev/null
-    git log --author=$github --pretty=format:'%at' | tail -n1
+
+    #git show --summary $(git merge-base origin/ls origin/master) --pretty=format:'%at'
+    git log --author=$github --pretty=format:'%at' | awk "\$1 > $starttime {print}" | tail -n1
     cd ../..
 }
 
 function totaltime {
-    local starttime=$(timefirstcommit $1)
-    local stoptime=$(timelastcommit $1)
+    local starttime=$(timefirstcommit $1 $2)
+    local stoptime=$(timelastcommit $1 $3)
     expr $stoptime - $starttime
 }
 
 # $1 = student
+# $2 = commit/tag/branch location to measure
 function linesOfCode {
     cd gradetmp/rshell-$1
-    git checkout hw0 --quiet 2>/dev/null
+    git checkout "$2" --quiet 2>/dev/null
     if [ -d src ]; then
         wc -l src/* | tail -n1 | grep -o '^[[:space:]]*[[:digit:]]*[[:space:]]'
     else
@@ -72,16 +81,21 @@ function linesOfCode {
 }
 
 # $1 = student
+# $2 = commit/tag/branch location to measure
 function linesOfCodeWithoutComments {
     cd gradetmp/rshell-$1
-    git checkout hw0 --quiet 2>/dev/null
+    git checkout "$2" --quiet 2>/dev/null
     local total=0
     if [ -d src ]; then
         for file in src/*; do
-            local lines=$(../../scripts/rmcomments.sh $file | wc -l | grep -o '^[[:space:]]*[[:digit:]]*[[:space:]]')
-            [ ! -z "$lines" ] && total=$(($total + $lines))
+            if [ ! -d "$file" ] && [ "$file" != "a.out" ]; then
+                local lines=$(../../scripts/rmcomments.sh $file | wc -l | grep -o '[[:digit:]]*')
+                #echo "lines=$lines" >&2
+                [ ! -z "$lines" ] && total=$(($total + $lines))
+            fi
         done
     fi
+    echo "student=$1; loc=$total" >&2
     echo $total
     cd ../..
 }
@@ -89,12 +103,13 @@ function linesOfCodeWithoutComments {
 # $1 = data file to generate the bar plot from;
 #      data file must have a singe column of numbers and nothing else
 function barplot_percent {
+    file=$(basename $1)
+
     echo "
     set style fill solid border
-    set yrange [0:]
-    set xrange [-5:105]
+    #set yrange [0:]
+    #set xrange [-5:115]
     unset key
-    unset ytics
     set xtics nomirror
     set ytics 10
     set xlabel 'grade'
@@ -105,15 +120,23 @@ function barplot_percent {
     bin(x)=binwidth*floor(x/binwidth)
     gradebin(x)=bin(x>100?100:x)
 
-    green(x)=x>90?1:0
-    blue(x)=(x<=90&&x>80)?1:0
-    yellow(x)=(x<=80&&x>70)?1:0
+    green(x)=x>=90?1:0
+    blue(x)=(x<90&&x>=80)?1:0
+    yellow(x)=(x<80&&x>=70)?1:0
     red(x)=x<=70?1:0
 
-    plot '$1' using (gradebin(\$1)):(green(\$1)) smooth freq with boxes lc rgb '#00cd00'   ,\
-         '$1' using (gradebin(\$1)):(blue(\$1)) smooth freq with boxes lc rgb '#00cdcd'    ,\
-         '$1' using (gradebin(\$1)):(yellow(\$1)) smooth freq with boxes lc rgb '#cdcd00'  ,\
-         '$1' using (gradebin(\$1)):(red(\$1)) smooth freq with boxes lc rgb '#cd0000' \
+    plot '$file' using (gradebin(\$1)):(green(\$1)) smooth freq with boxes lc rgb '#00cd00'   ,\
+         '$file' using (gradebin(\$1)):(blue(\$1)) smooth freq with boxes lc rgb '#00cdcd'    ,\
+         '$file' using (gradebin(\$1)):(yellow(\$1)) smooth freq with boxes lc rgb '#cdcd00'  ,\
+         '$file' using (gradebin(\$1)):(red(\$1)) smooth freq with boxes lc rgb '#cd0000'
+
+    #unset style
+    #unset yrange
+    #unset xrange
+    #unset xtics
+    #unset ytics
+    #unset xlabel
+    #unset boxwidth
     "
 }
 
@@ -125,6 +148,7 @@ function scatterplot {
     set style fill solid border
     #set yrange [0:]
     #set xrange [1412800000:]
+    set xrange [0:]
     unset key
     unset ytics
     set xtics nomirror
@@ -211,14 +235,19 @@ function countdown {
 datafile="scratch/datafile"
 out="scratch/out.gnu"
 
-#foreachStudent "echo" > $datafile.csaccount
-#foreachStudent "numCommits" master 2>/dev/null > $datafile.numCommits
-#foreachStudent "totalGrade" assignments/hw/hw0-rshell > $datafile.totalGrade
-#foreachStudent "timelastcommit" > $datafile.timelastcommit
-#foreachStudent "timefirstcommit" > $datafile.timefirstcommit
-#foreachStudent "totaltime" > $datafile.totaltime
-#foreachStudent "linesOfCode" assignments/hw/hw0-rshell > $datafile.linesOfCode
-#foreachStudent "linesOfCodeWithoutComments" assignments/hw/hw0-rshell #> $datafile.linesOfCodeWithoutComments
+###################
+echo "generating data"
+
+foreachStudent "echo" > $datafile.csaccount
+foreachStudent "numCommits" "$tag" 2>/dev/null > $datafile.numCommits
+foreachStudent "runningTotalGradePercent"  "$assn" > $datafile.totalGrade
+foreachStudent "timelastcommit" "$tag" > $datafile.timelastcommit
+foreachStudent "timefirstcommit" "1414011199"> $datafile.timefirstcommit
+#foreachStudent "timefirstcommit" "$tag" "1415011199"> $datafile.timefirstcommit
+foreachStudent "totaltime" "1414011199" "$tag" > $datafile.totaltime
+foreachStudent "linesOfCode" "$tag" > $datafile.linesOfCode
+#foreachStudent "linesOfCodeWithoutComments" "$tag" > $datafile.linesOfCodeWithoutComments
+
 paste $datafile.numCommits $datafile.totalGrade > $datafile.numCommits-vs-totalGrade
 paste $datafile.timelastcommit $datafile.totalGrade > $datafile.timelastcommit-vs-totalGrade
 paste $datafile.timefirstcommit $datafile.totalGrade > $datafile.timefirstcommit-vs-totalGrade
@@ -228,25 +257,42 @@ paste $datafile.linesOfCodeWithoutComments $datafile.totalGrade > $datafile.line
 
 paste $datafile.csaccount $datafile.numCommits $datafile.totalGrade $datafile.timelastcommit $datafile.timefirstcommit $datafile.linesOfCode $datafile.linesOfCodeWithoutComments $datafile.totalGrade > $datafile.all
 
+###################
+echo "plotting data"
+
+outfile="$(tr / . <<< $assn).ps"
 echo "
     set terminal postscript enhanced
-    set output 'hw0.ps'
+    set output '$outfile'
 
-    set yrange [0:120]
+    set xrange [-20:]
     " > scratch/out.gnu
-#barplot_percent $datafile.totalGrade >> scratch/out.gnu
-echo "set grid xtics" >> scratch/out.gnu
+
+barplot_percent $datafile.totalGrade >> scratch/out.gnu
+
+echo "
+    set yrange [0:120]
+    set xrange [-5:]
+    set grid xtics
+    " >> scratch/out.gnu
+
 echo "set ylabel 'grade'; set xlabel 'number of commits'" >> scratch/out.gnu
 scatterplot $datafile.numCommits-vs-totalGrade >> scratch/out.gnu
 echo "set ylabel 'grade'; set xlabel 'lines of code' " >> scratch/out.gnu
 scatterplot $datafile.linesOfCode-vs-totalGrade >> scratch/out.gnu
+#echo "set ylabel 'grade'; set xlabel 'lines of code (without comments)' " >> scratch/out.gnu
+#scatterplot $datafile.linesOfCodeWithoutComments-vs-totalGrade >> scratch/out.gnu
 
+assn0duedate="1413961199"
+assn1duedate="1415750400"
+duedate=$assn1duedate
 echo "set ylabel 'grade'; set xlabel 'time of last commit' " >> scratch/out.gnu
-countdown $datafile.timelastcommit-vs-totalGrade "1413961199" >> scratch/out.gnu
+countdown $datafile.timelastcommit-vs-totalGrade "$duedate" >> scratch/out.gnu
 echo "set ylabel 'grade'; set xlabel 'time of first commit' " >> scratch/out.gnu
-countdown $datafile.timefirstcommit-vs-totalGrade "1413961199" >> scratch/out.gnu
+countdown $datafile.timefirstcommit-vs-totalGrade "$duedate" >> scratch/out.gnu
 echo "set ylabel 'grade'; set xlabel 'total time' " >> scratch/out.gnu
 countdown $datafile.totaltime-vs-totalGrade >> scratch/out.gnu
+
 cd scratch
 gnuplot out.gnu
 #
