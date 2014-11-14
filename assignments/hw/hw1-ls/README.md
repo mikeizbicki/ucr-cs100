@@ -8,6 +8,8 @@ To implement `ls`, you must use the `readdir` and `stat` syscalls.  For details 
 
 To get you started, the file `ls.cpp` contains code that reads the files in the current working directory.  
 
+You should name your test script for this assigment test-ls.script.
+
 ### submission instructions
 
 You will add this code to your `rshell` project on github.  Create a branch called `ls` and do all of your work under this branch.  When finished, merge with the `master` branch and create a tag called `hw1`.
