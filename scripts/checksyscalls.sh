@@ -13,10 +13,38 @@
 scriptdir=`dirname "$0"`
 source "$scriptdir/config.sh"
 
-if [ -z $1 ]; then
+
+#Here I have described the recursive scheme as you specified.
+
+if [ $# -eq 0 ]; then
     echo "usage: $0 filetograde"
     exit 1
+
+elif [ $# -eq 1 ]; then
+	if [[ -d $1 ]]; then
+		for g in "$1"/*
+		do
+		/bin/bash $scriptdir/checksyscalls.sh $g 
+		done
+	fi
+
+elif [ $# -ge 2 ]; then
+   for f in "$@"
+   do
+      if [[ -d $f ]]; then
+         for s in "$f"/*
+         do
+           /bin/bash $scriptdir/checksyscalls.sh $s
+            
+         done
+
+      else
+         /bin/bash $scriptdir/checksyscalls.sh $f
+      fi
+   done
+   exit 0
 fi
+
 
 # we'll pipe files through these commands to remove spurious counts
 rmcomments="$scriptdir/rmcomments.sh"
@@ -24,7 +52,8 @@ rmstr="sed s/\"[^\"]*\"//g"
 rminclude="sed s/#.*//"
 
 # define all the regexes for syscalls likely to be used by students
-syscalls="
+syscalls='
+		ioctl
     getlogin
     getlogin_r
     gethostname
@@ -38,7 +67,9 @@ syscalls="
     wait
     waitpid
     open
+    close
     read
+    readlink
     write
     opendir
     closedir
@@ -57,15 +88,20 @@ syscalls="
     sigaction
     getpwuid
     getgrgid
-    "
+    '
 
+#The new assigment takes care to no include calls like ifs.close()
+#which is not a syscall but a member function.
+#It also includes the edge case where the call may start with no 
+#whitespaces on the left.
 args=""
 for syscall in $syscalls; do
-    args="$args -e \<$syscall\>[^(]*([^)]*) "
+args="$args -e [^._]\<$syscall\>[^(]*([^)]*) -e ^\<$syscall\>[^(]*([^)]*) "
+#args="$args -e $syscall[^(]*([^)]*) "
 done
 
 # calculate number of syscalls
-syscalls=`cat $@ | "$rmcomments" | $rmstr | $rminclude | sed -e 's/^[ \t]*//' | grep -o $args -n | sed -e 's/^\([1234567890][1234567890]\):/0\1:/' | sed -e 's/\([1234567890]\):/\1:  /'`
+syscalls=`cat $@ | "$rmcomments" | $rmstr | $rminclude | sed -e 's/^[ \t]*//' | grep -e -o $args -n | sed -e 's/^\([1234567890][1234567890]\):/0\1:/' | sed -e 's/\([1234567890]\):/\1:  /'`
 numsyscalls=$(echo "$syscalls" | wc -l)
 
 # calculate number of perror
