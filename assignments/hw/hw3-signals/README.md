@@ -34,6 +34,8 @@ There are no changes to your project structure.
 
 Again, the tests you choose will be the most important part of your grade.  
 
+You should name your test script test_signals.script.
+
 ### collaboration policy
 
 You MAY NOT look at the source code of any other student.
