@@ -10,7 +10,7 @@ Of course, you should also be consulting the man pages.
 As an example, after this assignment, your program should be able to successfully handle the following command:
 
 ```
-$ cat < existingInputFile | tr A-Z a-z | tee newOutputFile1 | tr a-z A-Z > newOutputFile2 &
+$ cat < existingInputFile | tr A-Z a-z | tee newOutputFile1 | tr a-z A-Z > newOutputFile2
 ```
 
 **IMPORTANT:** This is a necessary but not sufficient test case.  You must come up with others on your own.
