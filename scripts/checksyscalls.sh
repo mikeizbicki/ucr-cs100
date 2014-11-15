@@ -25,6 +25,7 @@ rminclude="sed s/#.*//"
 
 # define all the regexes for syscalls likely to be used by students
 syscalls="
+		ioctl
     getlogin
     getlogin_r
     gethostname
