@@ -10,8 +10,8 @@
 # by a parenthesis.  This should never overcount syscalls, but could undercount
 # them in the presence of macros, function pointers, or other fanciness.
 #
-scriptdir=`dirname "$0"`
-source "$scriptdir/config.sh"
+#scriptdir=`dirname "$0"`
+#source "config.sh"
 
 if [ $# -eq 0 ]; then
     echo "usage: $0 filetograde"
@@ -20,7 +20,7 @@ elif [ $# -eq 1 ];then
     if [ -d $1 ]; then
         for s in "$1"/*
         do
-            /bin/bash $scriptdir/checksyscalls.sh $s
+            ./checksyscalls.sh $s
         done
         exit 0
     fi
@@ -30,17 +30,19 @@ else
         if [ -d $f ]; then
             for g in "$f"/*
             do
-                /bin/bash $scriptdir/checksyscalls.sh $g
+                ./checksyscalls.sh $g
             done
         else
-            /bin/bash $scriptdir/checksyscalls.sh $f
+            ./checksyscalls.sh $f
         fi
     done
     exit 0
 fi
 
+source "config.sh"
+
 # we'll pipe files through these commands to remove spurious counts
-rmcomments="$scriptdir/rmcomments.sh"
+rmcomments="./scripts/rmcomments.sh"
 rmstr="sed s/\"[^\"]*\"//g"
 rminclude="sed s/#.*//"
 

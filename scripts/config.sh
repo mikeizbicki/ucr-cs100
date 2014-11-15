@@ -38,9 +38,9 @@ function failScript {
 
 # cd to the repo's root folder by backtracking until we find the LICENSE file
 # this let's the scripts be run from any folder in the repo
-#while [ ! -e "LICENSE" ]; do
-    #cd ..
-#done
+while [ ! -e "LICENSE" ]; do
+    cd ..
+done
 
 #######################################
 # misc display functions
