@@ -13,9 +13,30 @@
 scriptdir=`dirname "$0"`
 source "$scriptdir/config.sh"
 
-if [ -z $1 ]; then
+if [ $# -eq 0 ]; then
     echo "usage: $0 filetograde"
     exit 1
+elif [ $# -eq 1 ];then
+    if [ -d $1 ]; then
+        for s in "$1"/*
+        do
+            /bin/bash $scriptdir/checksyscalls.sh $s
+        done
+        exit 0
+    fi
+else
+    for f in "$@"
+    do
+        if [ -d $f ]; then
+            for g in "$f"/*
+            do
+                /bin/bash $scriptdir/checksyscalls.sh $g
+            done
+        else
+            /bin/bash $scriptdir/checksyscalls.sh $f
+        fi
+    done
+    exit 0
 fi
 
 # we'll pipe files through these commands to remove spurious counts
@@ -37,13 +58,16 @@ syscalls="
     fork
     wait
     waitpid
+    ioctl
     open
+    close
     read
     write
     opendir
     closedir
     readdir
     readdir_r
+    readlink
     lstat
     stat
     pipe
@@ -59,9 +83,12 @@ syscalls="
     getgrgid
     "
 
+#The regex will not match member operators like stream::open.
 args=""
 for syscall in $syscalls; do
-    args="$args -e \<$syscall\>[^(]*([^)]*) "
+
+    args="$args -e [^._]\<$syscall\>[^(]*([^)]*) -e ^\<$syscall\>[^(]*([^)]*) "
+    #args="$args -e \<$syscall\>[^(]*([^)]*) "
 done
 
 # calculate number of syscalls
