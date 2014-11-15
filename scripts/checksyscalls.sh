@@ -1,5 +1,25 @@
 #!/bin/bash
 
+#This function takes in argument folder or files and puts them in an array called FILES. 
+#I am aware that this does not work for folders inside folders but I do not know recursion yet.
+CURR=1
+
+for f in "$@"
+do
+   if [[ -d $f ]]; then
+      for s in "$f"*
+      do
+         FILES[$CURR]=$s
+         CURR=$((CURR+1))
+      done
+ 
+   else
+      FILES[$CURR]=$f
+      CURR=$((CURR+1))
+   fi
+done
+
+
 #
 # This script takes any number of CPP files as parameters.  For each file, it
 # checks to see if there is a matching call to perror for every syscall.  If
@@ -24,7 +44,8 @@ rmstr="sed s/\"[^\"]*\"//g"
 rminclude="sed s/#.*//"
 
 # define all the regexes for syscalls likely to be used by students
-syscalls="
+syscalls='
+		ioctl
     getlogin
     getlogin_r
     gethostname
@@ -38,7 +59,9 @@ syscalls="
     wait
     waitpid
     open
+    close
     read
+    readlink
     write
     opendir
     closedir
@@ -57,19 +80,24 @@ syscalls="
     sigaction
     getpwuid
     getgrgid
-    "
+    '
 
+#The new assigment takes care to no include calls like ifs.close()
+#which is not a syscall but a member function.
+#It also includes the edge case where the call may start with no 
+#whitespaces on the left.
 args=""
 for syscall in $syscalls; do
-    args="$args -e \<$syscall\>[^(]*([^)]*) "
+args="$args -e [^._]\<$syscall\>[^(]*([^)]*) -e ^\<$syscall\>[^(]*([^)]*) "
+#args="$args -e $syscall[^(]*([^)]*) "
 done
 
 # calculate number of syscalls
-syscalls=`cat $@ | "$rmcomments" | $rmstr | $rminclude | sed -e 's/^[ \t]*//' | grep -o $args -n | sed -e 's/^\([1234567890][1234567890]\):/0\1:/' | sed -e 's/\([1234567890]\):/\1:  /'`
+syscalls=`cat ${FILES[@]} | "$rmcomments" | $rmstr | $rminclude | sed -e 's/^[ \t]*//' | grep -e -o $args -n | sed -e 's/^\([1234567890][1234567890]\):/0\1:/' | sed -e 's/\([1234567890]\):/\1:  /'`
 numsyscalls=$(echo "$syscalls" | wc -l)
 
 # calculate number of perror
-perrors=`cat $@ | "$rmcomments" | $rmstr | $rminclude | sed -e 's/^[ \t]*//' | grep -n -e "\<perror\>" | sed -e 's/^\([1234567890][1234567890]\):/0\1:/' | sed -e 's/\([1234567890]\):/\1:  /'`
+perrors=`cat ${FILES[@]} | "$rmcomments" | $rmstr | $rminclude | sed -e 's/^[ \t]*//' | grep -n -e "\<perror\>" | sed -e 's/^\([1234567890][1234567890]\):/0\1:/' | sed -e 's/\([1234567890]\):/\1:  /'`
 numperror=`echo "$perrors" | wc -l`
 
 # print vars
