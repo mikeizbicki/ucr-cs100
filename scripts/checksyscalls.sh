@@ -10,16 +10,39 @@
 # by a parenthesis.  This should never overcount syscalls, but could undercount
 # them in the presence of macros, function pointers, or other fanciness.
 #
-scriptdir=`dirname "$0"`
-source "$scriptdir/config.sh"
+#scriptdir=`dirname "$0"`
+#source "config.sh"
 
-if [ -z $1 ]; then
+if [ $# -eq 0 ]; then
     echo "usage: $0 filetograde"
     exit 1
+elif [ $# -eq 1 ];then
+    if [ -d $1 ]; then
+        for s in "$1"/*
+        do
+            ./checksyscalls.sh $s
+        done
+        exit 0
+    fi
+else
+    for f in "$@"
+    do
+        if [ -d $f ]; then
+            for g in "$f"/*
+            do
+                ./checksyscalls.sh $g
+            done
+        else
+            ./checksyscalls.sh $f
+        fi
+    done
+    exit 0
 fi
 
+source "config.sh"
+
 # we'll pipe files through these commands to remove spurious counts
-rmcomments="$scriptdir/rmcomments.sh"
+rmcomments="./scripts/rmcomments.sh"
 rmstr="sed s/\"[^\"]*\"//g"
 rminclude="sed s/#.*//"
 
@@ -37,13 +60,16 @@ syscalls="
     fork
     wait
     waitpid
+    ioctl
     open
+    close
     read
     write
     opendir
     closedir
     readdir
     readdir_r
+    readlink
     lstat
     stat
     pipe
@@ -59,9 +85,12 @@ syscalls="
     getgrgid
     "
 
+#The regex will not match member operators like stream::open.
 args=""
 for syscall in $syscalls; do
-    args="$args -e \<$syscall\>[^(]*([^)]*) "
+
+    args="$args -e [^._]\<$syscall\>[^(]*([^)]*) -e ^\<$syscall\>[^(]*([^)]*) "
+    #args="$args -e \<$syscall\>[^(]*([^)]*) "
 done
 
 # calculate number of syscalls
