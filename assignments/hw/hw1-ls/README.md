@@ -36,6 +36,11 @@ Again, the tests you choose will be the most important part of your grade.
 
 Remember that the commands `ls -l -R`, `ls -R -l`, `ls -lR` and `ls -Rl` should all do the same thing.  You must consider how these flags interact with the `-a` flag and the optional file parameters.
 
+For your testing script, you should have it named as:
+```
+ls.script
+```
+
 **IMPORTANT:** If you are unsure if your test cases are sufficient, ask one of the instructors to review them *before the deadline*.
 
 ### collaboration policy
