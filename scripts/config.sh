@@ -351,6 +351,16 @@ function totalOutOf {
     echo "$totaloutof"
 }
 
+# calculates the current percentage for user $1 in directory $2
+function runningTotalGradePercent {
+    mkPercent $(totalGrade $1 $2) $(runningTotalOutOf $1 $2)
+}
+
+# calculates the final percentage for user $1 in directory $2
+function totalGradePercent {
+    mkPercent $(totalGrade $1 $2) $(totalOutOf $1 $2)
+}
+
 #######################################
 # displaying grades
 
