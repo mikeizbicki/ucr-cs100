@@ -40,10 +40,9 @@ A commonly used example:
 
     $ find . -iname '*.conf'
 
-Notice the single quotes around `*.conf`. What would happen without it? Bash would interpret the `*.conf` as a glob expression and expand it to all files ending in `.conf` in the current directory. (we don't want this to happen!) This could prevent from looking for all `.conf` files in subdirectories. Remember: we should always quote anything that 
-might contain special characters.
+Notice the single quotes around `*.conf`. What would happen without it? Bash would interpret the `*.conf` as a glob expression and expand it to all files ending in `.conf` in the current directory (we don't want this to happen!). This could prevent from looking for all `.conf` files in subdirectories. Remember: we should always quote anything that might contain special characters.
 
-It need to be known that only single quotes can prevent every character from being interpreted; double quotes still allow bash to interpret some characters. On the other hand, when working with variables, double quotes come in handy to prevent word splitting(it's useful!), which is often used in scripting. 
+It needs to be known that only single quotes can prevent every character from being interpreted; double quotes still allow bash to interpret some characters. On the other hand, when working with variables, double quotes come in handy to prevent word splitting(it's useful!), which is often used in scripting. 
 
 You see, when a filename contains whitespace, bash splits the name on that whitespace when you leave variables unquoted. Suppose you have a file named “spaced name.txt, you put it in a variable `filename= spaced name.txt`, and then you try to move it to “unspacedname.txt” by executing `mv $filename unspacedname.txt`. You’ll get the error “mv: target ’unspacedname.txt‘ is not a directory”. This is because mv gets executed like this: `mv spaced name.txt unspacedname.txt`. In other words, mv will try to move two files, “spaced name.txt” to “unspacedname.txt”, 
 and fail because moving multiple files to a single destination is only allowed when the destination is a directory. 
@@ -153,5 +152,5 @@ uses that amount by default, but you can increase or decrease it as you like. Fi
 executing `$ man bc`(remember, always a good choice). It even supports more advanced mathematical functions, such as the arctangent or the natural 
 logarithm!
 
-![Make life easier](http://www.chronic-illness.org/images/making_life_easier.jpg)
+![Make life easier](http://www.smokesignalsindianlaw.com/files/2013/12/Easy-Button.jpg)
 
