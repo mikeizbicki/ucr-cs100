@@ -13,7 +13,7 @@ Checking for problems
 ---------------------
 
 
-let's start with a code example from the program example1.cpp:
+Let's start with a code example from the program example1.cpp:
 
 ```
     int main()
@@ -181,7 +181,7 @@ This program listed above just creates a character string or cstring and copies 
 
 In our program above, we call the ```new``` operator twice and never call the ```delete``` operator. We call the first ```new``` operator in our ```main``` function and the second ```new``` in our function ```doSomething```. 
 
-Now lets run our program with Valgrind and Memcheck:
+Now let's run our program with Valgrind and Memcheck:
 
 ```
     $ g++ example2.cpp
@@ -219,7 +219,7 @@ As we can see the program runs normal, printing out "hello world" twice under th
  
 If we look back at our program we can see that we used ```new``` but never called ```delete```.
 
-As stated above ```Delete``` is necessary to free up memory so that you do run into memory issues later on.
+As stated above ```delete``` is necessary to free up memory so that you do run into memory issues later on.
  
 To fix our problem we need to add in some deletes for the ```VAR``` pointer and the ```PTR``` pointer like such:
 
@@ -377,6 +377,6 @@ Conclusion
 
 Valgrind has a lot of functionality that can drastically decrease your debugging time and let you focus on being a better programmer. 
 
-Now you can test your programs uing Valgrind to catch the pesky memory leaks that are almost impossible to find with the naked eye.
+Now you can test your programs using Valgrind to catch the pesky memory leaks that are almost impossible to find with the naked eye.
 
 Happy programming!!!
