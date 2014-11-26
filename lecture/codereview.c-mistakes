@@ -1,0 +1,23 @@
+compilation mistakes
+1. fout => fdo
+2. const
+
+major logic:
+3. char* ==
+4. second open should have O_WRONLY
+5. first open should be O_RDONLY
+6. second open needs O_CREAT
+7. error checking
+8. open outside while loop
+9. sizeof(buf)
+10. replace sb.st_size with BUFSIZ
+11. delete the buf if on heap
+12. even better put it on stack
+13. close fdi
+14. write the right number of bytes
+15. special error checking on read`:w
+i16. fstat is worthless
+
+
+extra:
+* create explicit permissions

@@ -44,6 +44,8 @@ Again, the tests you choose will be the most important part of your grade.
 
 You should carefully consider: which redirections can be legally combined together, and which cannot? does order matter?  Also make sure to test that you are parsing the command correctly.
 
+As with your previous assignments: Your `tests` directory will contain a file called `piping.script` that contains all of the test cases you tried. You will generate the file using the script command, and it must be succinct (i.e. it cannot have unnecessary commands in it). You should use comments in your script to document what you are testing with each test case.
+
 **IMPORTANT:** If you are unsure if your test cases are sufficient, ask one of the instructors to review them *before the deadline*.
 
 ### collaboration policy
