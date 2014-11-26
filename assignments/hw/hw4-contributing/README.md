@@ -49,7 +49,7 @@ Pick two or three related topics and write them up in a guide.
 Write a tutorial on how to do template meta programming.
 Similarly, write a tutorial on some of the features in the recent C++ 11 or 14 standards.
 
-* Pick an entry in the [international obfuscated C code contest](ioccc.org) and give a writeup explaining how it works.
+* Pick an entry in the [international obfuscated C code contest](http://ioccc.org) and give a writeup explaining how it works.
 
 <!--One simple way to format these tutorials is as a "top ten list."  For example, the project might be "the top ten most useful bash commands."  Then provide ten commands from bash and show how they work and why they're useful.-->
 
