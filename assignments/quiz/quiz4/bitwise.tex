@@ -11,26 +11,57 @@
 \maketitle
 
 \noindent
-Evaluate the following C expressions.  Assume all types are \lstinline{unsigned int}s.
+%Evaluate the following C expressions.  Assume all types are \lstinline{unsigned int}s.
+The following code comes from the file \lstinline{fcntl.h}.
+\begin{verbatim}
+#define O_RDONLY         00
+#define O_WRONLY         01
+#define O_RDWR           02 /* allows read and write */
+#define O_CREAT        0100 /* not fcntl */
+#define O_EXCL         0200 /* not fcntl */
+#define O_NOCTTY       0400 /* not fcntl */
+#define O_TRUNC       01000 /* not fcntl */
+#define O_APPEND      02000
+#define O_NONBLOCK    04000
 
-\vspace{0.25in}
+int open(const char *pathname, int flags);
+\end{verbatim}
+Each of the \emph{object style macro}s above define a flag that we can pass to the \lstinline{open} syscall.
+These flags modify \lstinline{open}'s behavior.
+%For example, \lstinline{O_RD}
 
- \lstinline{167 | 192}
+\vspace{0.5in}
+\noindent
+Questions:
+\begin{enumerate}
+\item
+What number do the following expressions evaluate to?
 
-\vspace{1in}
+\begin{enumerate}
+\item \lstinline{O_RDONLY | O_WRONLY}
+\vspace{1.0in}
 
- \lstinline{167 & 192}
+\item \lstinline{O_APPEND ^ O_CREAT}
+\vspace{1.0in}
 
-\vspace{1in}
+\item \lstinline{O_RDONLY & O_RDWR}
+\vspace{1.0in}
 
- \lstinline{167 ^ 192}
+\end{enumerate}
+(questions continue on back!)
+\newpage
+\item
+The \lstinline{open} syscall requires that \emph{exactly} one of
+\lstinline{O_RDONLY},
+\lstinline{O_WRONLY}, or
+\lstinline{O_RDWR}
+be passed in the \lstinline{flags} parameter.
+Write a \emph{function-style macro} that takes an integer and evaluates to \emph{true} exactly in this situation.
+You may create helper macros if you want.
 
-\vspace{1in}
+\vspace{4in}
+\item
+Write a \emph{function-style macro} that checks if the flags allow read access.
 
- \lstinline{256 << 2}
-
-\vspace{1in}
-
- \lstinline {256 >> 2}
-
+\end{enumerate}
 \end{document}

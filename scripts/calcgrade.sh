@@ -11,7 +11,7 @@ source "$scriptdir/config.sh"
 ########################################
 # check for valid command line params
 
-user="$1"
+user=$(simplifycsaccount "$1")
 if [ -z $user ]; then
     echo "no github account given"
     exit
@@ -65,7 +65,7 @@ for f in `find . -name grade | sort`; do
         colorPercent "$assnPercent"
         printf "  $assn$endcolor |  $grader "
         if [ "$signature" = "G" ]; then
-            printf"$green[signed]$endcolor"
+            printf "$green[signed]$endcolor"
         else
             if [ "$signature" = "U" ]; then
                 printf "$cyn[signed but untrusted]$endcolor"
