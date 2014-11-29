@@ -1,0 +1,19 @@
+void copyFile(char* fin, char* fout)
+{
+  // do nothing if the files are the same
+  if (fin == fout)
+    return;
+
+  // initialize file reading
+  int fdi = open (fin, O_RDWR);
+  struct stat sb;
+  fstat(fdi,&sb);
+  char* buf = new char[sb.st_size];
+
+  // copy the file
+  while (read(fdi,buf,sizeof(buf))) {
+    int fdo = open (fout, O_APPEND);
+    write(fdo,buf,sizeof(buf));
+    close(fout);
+  }
+}
