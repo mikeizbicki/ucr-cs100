@@ -9,6 +9,8 @@ You will make three modifications to your `rshell` project.
 2. The shell should not exit when the user types `^C`.  Instead, the current foreground job should interrupt.
 
 3. Implement the `cd` command, and change your prompt so that it displays the current working directory.  This will require using the `chdir` function.
+In bash, the `cd` command without an argument will change the current working directory to the home directory.
+You do not have to implement this feature.
 
 ### submission instructions
 
@@ -19,7 +21,7 @@ To download and grade your homework, the TA will run the following commands:
 ```
 $ git clone  http://github.com/yourusername/rshell.git
 $ cd rshell
-$ git checkout tags/hw3
+$ git checkout hw3
 $ make
 $ bin/rshell
 ```
