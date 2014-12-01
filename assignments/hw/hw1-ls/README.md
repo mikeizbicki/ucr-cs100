@@ -36,6 +36,8 @@ Again, the tests you choose will be the most important part of your grade.
 
 Remember that the commands `ls -l -R`, `ls -R -l`, `ls -lR` and `ls -Rl` should all do the same thing.  You must consider how these flags interact with the `-a` flag and the optional file parameters.
 
+As with your previous assignments: Your `tests` directory will contain a file called `ls.script` that contains all of the test cases you tried. You will generate the file using the script command, and it must be succinct (i.e. it cannot have unnecessary commands in it). You should use comments in your script to document what you are testing with each test case.
+
 **IMPORTANT:** If you are unsure if your test cases are sufficient, ask one of the instructors to review them *before the deadline*.
 
 ### collaboration policy
