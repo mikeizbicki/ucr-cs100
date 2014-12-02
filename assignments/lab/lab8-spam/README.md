@@ -8,7 +8,7 @@ In this lab, we're going to learn to send spam emails.  It turns out that with t
 
 First, you're going to practice sending these emails.  Then, you're going to write a bash script to automate the process.
 
-**IMPORTANT:** Don't use this for evil!  It will get your cs account suspended and could even get you arrested!
+**IMPORTANT:** Don't use this for evil!  It will get your cs account suspended and could even get you arrested! Also, you must be logged into the well server for this lab or else you will not be able to find telnet.
 
 #### spoofing an email
 
