@@ -384,12 +384,12 @@ function colorPercent {
     local per="$1"
     if [[ -z $1 ]]; then
         resetColor
-    elif ((`bc <<< "$per>=90"`)); then
-        printf "\x1b[32m"
-    elif ((`bc <<< "$per>=80"`)); then
-        printf "\x1b[36m"
-    elif ((`bc <<< "$per>=70"`)); then
-        printf "\x1b[33m"
+    elif ((`bc <<< "$per>90"`)); then
+        printf "$green"
+    elif ((`bc <<< "$per>80"`)); then
+        printf "$cyn"
+    elif ((`bc <<< "$per>70"`)); then
+        printf "$yellow"
     else
         printf "$red"
     fi
