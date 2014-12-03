@@ -83,6 +83,7 @@ syscalls="
     sigaction
     getpwuid
     getgrgid
+    getenv
     "
 
 #The regex will not match member operators like stream::open.
