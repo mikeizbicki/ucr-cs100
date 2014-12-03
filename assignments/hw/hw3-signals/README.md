@@ -36,6 +36,8 @@ There are no changes to your project structure.
 
 Again, the tests you choose will be the most important part of your grade.  
 
+As with your previous assignments: Your `tests` directory will contain a file called `signals.script` that contains all of the test cases you tried. You will generate the file using the script command, and it must be succinct (i.e. it cannot have unnecessary commands in it). You should use comments in your script to document what you are testing with each test case.
+
 ### collaboration policy
 
 You MAY NOT look at the source code of any other student.
