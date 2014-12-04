@@ -1,16 +1,22 @@
 #A Quick Tutorial to Write a Simple Shell Script and Making It Work
 
+##What is a shell script?
+
+In one word, a shell script is a file containing a sequence of commands for a UNIX-based operating system.
+
+This tutorial has two parts: 
+1. The first part give a simple example and how to make it works. 
+2. The second part introduce more simple syntaxs about how to write a shell script.
+
+##Part 1: All start with a simple example
+
 To successfully write a shell script, you have to do three things:
 
 1. Write a script.
 2. Give the shell permission to execute it
 3. Put it somewhere the shell can find it
 
-##What is a shell script?
-
-In one word, a shell script is a file containing a sequence of commands for a UNIX-based operating system.
-
-##How to write a script?
+###How to write a script?
 
 Let us begin with a "hello world" shell script example to expound how to write a script:
 
@@ -38,9 +44,9 @@ $ echo 'Hello world!!!' #Our first script!!!
 Hello world!!!
 ```
 
-* We could find that every shell script include the first line. It is looks like a comment since it start with '#'. However, it is created on purpose since it tell the system which interpreter such as bash, ruby, python, and others should be used to execute the followed script. For this script, it use bash. And '#!' is a special character construct called shebang.
+* We could find that every shell script include the first line. It is looks like a comment since it start with '#'. However, it is created on purpose since it tell the system which interpreter such as bash, ruby, python, and others should be used to execute the followed script. For this script, it run in the bash shell. And '#!' is a special character construct called shebang.
 
-##How to make your script become executable?
+###How to make your script become executable?
 
 There are three ways to run a shell script:
 
@@ -100,8 +106,10 @@ $ ls -l hello.sh
 
 It uses a binary way to represent the the position of permission in '-rwxrwxrwx'. For example, 7 represents 'rwx', 0 represents '---', 1 represents '--x', and etc.  
 
-##How to put shell scripts in your path?
+###How to put shell scripts in your path?
 
+
+##Part 2: More syntax about how to write a shell
 
 
 ##Conclusion
