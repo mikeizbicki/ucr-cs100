@@ -1,4 +1,10 @@
-#A Quick Tutorial to Write a Simple Shell Script
+#A Quick Tutorial to Write a Simple Shell Script and Making It Work
+
+To successfully write a shell script, you have to do three things:
+
+1. Write a script.
+2. Give the shell permission to execute it
+3. Put it somewhere the shell can find it
 
 ##What is a shell script?
 
@@ -94,9 +100,13 @@ $ ls -l hello.sh
 
 It uses a binary way to represent the the position of permission in '-rwxrwxrwx'. For example, 7 represents 'rwx', 0 represents '---', 1 represents '--x', and etc.  
 
+##How to put shell scripts in your path?
+
+
+
 ##Conclusion
 
-By writing shell scripts and learn more knowledge about shell scripts, It will helps us to learn more things about unix system. If you want to learn more advanced things about shell script, you can go to http://www.freeos.com/guides/lsst/misc.htm#howshell
+By writing shell scripts and learning more knowledge about shell scripts, It will helps us to know more things about unix system. If you want to learn more advanced things about shell script, you can go to http://www.freeos.com/guides/lsst/misc.htm#howshell
 
 Thank you for reading and have fun in cs100!!!
 
