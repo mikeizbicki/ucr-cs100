@@ -36,7 +36,17 @@ Hello world!!!
 
 ##How to make your script become executable?
 
-The system is very picky about not treating any text files as program. Then each time we creat a shell script we may meet a problem about permission: 
+There are three ways to run a shell script:
+
+```
+$ bash hello.sh
+$ sh hello.sh
+$ ./hello.sh
+```
+
+Here, I just use the last way to run my script.
+
+However, the system is very picky about not treating any text files as program. Then each time we creat a shell script we may meet a problem about permission: 
 
 ```
 $ ./hello.sh
@@ -50,7 +60,7 @@ $ ls -l hello.sh
 -rw------- 1 user group 35 Dec  4 04:40 hello.sh
 ```
 
-We can see that we only have 'rw', which means reading and writing permission for user. How we add executing permission for user? Luckly, we have 'chmod' command to change permission of files:
+We can see that we only have 'rw', which means reading and writing permission for user. How we add executing permission for user? Luckily, we have 'chmod' command to change permission of files:
 
 ```
 $ chmod u+x hello.sh
@@ -58,7 +68,7 @@ $ ls -l hello.sh
 -rwx------ 1 user group 35 Dec  4 04:40 hello.sh
 ```
 
-Now we have 'x', which means executing permission for user. Let us run this shell script again:
+Now we have 'x', which means executing permission for user. Let us execute this shell script again:
 
 ```
 $ ./hello.sh
@@ -70,20 +80,23 @@ Now it works.
 FYI: Here I want add an alterative way to change permission. If you want to enable all permissions for everyone, just type following command:
 
 ```
-$chmod 777 hello.sh
+$ chmod 777 hello.sh
 $ ls -l hello.sh
 -rwxrwxrwx 1 user group 35 Dec  4 04:40 hello.sh
 ```
 Or you can change back all permission only for yourself:
 
 ```
-$chmod 700 hello.sh
+$ chmod 700 hello.sh
 $ ls -l hello.sh
 -rwx------ 1 user group 35 Dec  4 04:40 hello.sh
 ```
 
-It uses a binary way to represent the the position of permission in '-rwxrwxrwx'. For example, 7 represents 'rwx', 0 represents '---', 1 represents 'r--', and etc.  
+It uses a binary way to represent the the position of permission in '-rwxrwxrwx'. For example, 7 represents 'rwx', 0 represents '---', 1 represents '--x', and etc.  
 
-##How to move the script to reachable directories?
+##Conclusion
 
+By writing shell scripts and learn more knowledge about shell scripts, It will helps us to learn more things about unix system. If you want to learn more advanced things about shell script, you can go to http://www.freeos.com/guides/lsst/misc.htm#howshell
+
+Thank you for reading and have fun in cs100!!!
 
