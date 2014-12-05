@@ -1,6 +1,6 @@
 #Syscalls and How to Use Them
 
-Here, we will present a list of functions that will be useful when programming your own shell.  These functions are called system calls, and they differ from regular functions because a syscall requests a specific service from the operating system’s kernel. 
+Here, we will present a list of functions that will be useful when programming your own shell.  These functions are called system calls, and they differ from regular functions because a syscall requests a specific service from the operating system’s kernel.
 
 What’s really cool about syscalls are its error checking capabilities. Each syscall has access to a universal variable `errno`, `include <errno.h>` is required to use this variable, that is set to indicate what error has occured. The return value of each syscall can be furthered combined with other functions to make error checking much easier, which can save many headaches in the long run.
 
@@ -13,13 +13,15 @@ Syscalls might seem confusing to use but we’ll try our best to explain some of
 
 **declaration:** `pid_t fork(void);`
 
-**returns:** `fork` returns the pid of the child process that it creates, if an error occurs -1 is returned.
+**returns:** `fork` returns the pid of the child process that it creates to the parent, 0 to the child, or -1 if there was an error.
 
 [man page](http://linux.die.net/man/2/fork)
 
 This is perhaps one of the most important syscall of them all (one syscall to rule them all!) so make sure you really understand this one.
 
-`fork` creates a new process so you can have two things happening at once (multitasking, huzzah!). To create this new process, `fork` creates a copy of the process that was already running. This new process is called a child process, while the older process is called the parent process. 
+`fork` creates a new process so you can have two things happening at once (multitasking, huzzah!). To create this new process, `fork` creates a copy of the process that was already running. This new process is called a child process, while the older process is called the parent process.
+
+Its important to note, that `fork` creates an exact copy of the parent process, and that the child and parent both continue running from the line immediately following `fork`. After this, there is no communication between the child and parent processes (except with `wait` or `pipe` which will be explained later), so anything changed in the parent or child after `fork` will not affect the other. You can think of this like a function which also creates copies of variables and once the function ends, these copies simply disappear.
 
 If you’re creating your own bash shell you will HAVE to use `fork`. You'll use the child process of the `fork` to execute all of your commands. Inside of the child process is where you’ll use functions such as `exec`, which require two processes (more on this later).
 
@@ -30,7 +32,7 @@ Here is an example of `fork`:
 int pid = fork();
 if(pid == 0)//when pid is 0 you are in the child process
 {
-   cout<<"This is the child process "; 
+   cout<<"This is the child process ";
    exit(1);  //when the child process finishes doing what we want it to, cout, we want to kill the child process so it doesn’t go on in the program so we exit
 }
 //if pid is not 0 then we’re in the parent
@@ -42,9 +44,33 @@ else if(pid > 0) //parent function
 
 ```
 
-Here we’re setting `pid`, which is an `int`, which also works even though the declaration returns `pid_t`, to the pid of the child process when we’re in the parent, else we return 0 in the child. Everything that happens inside the if statement is everything the child process executes. This happens because `fork` returns 0 when it is the child process, and that’s how we know when to go in the if statement. You have to have the `exit()` statement when you’re done executing everything you want to in the child. If the exit statement isn't present, the child will become a zombie process - that is, it will never never exit, and continue to run in the background, taking up memory and hampering the program's performance - and we don't want that do we? 
+Here we’re setting `pid`, which is an `int`, to the return value of `fork`. This works even though the declaration returns `pid_t`, because `pid_t` is basically an integer, but is defined this way to work across systems and conform to older systems that use `short` or some other data type. If fork returns 0, that means that we are in the child process. Otherwise, if fork returns a non-zero (not including -1, which you must error check and will be explained later), `fork` returned the pid of the child process and we are therefore in the parent. So, as we can see, the first if statement will only be executed by the child process and the `else if` statement will only be excecuted by the parent. You have to have the `exit()` statement when you’re done executing everything you want to in the child. If the exit statement isn't present, the child will become a zombie process - that is, it will never never exit, and continue to run in the background, taking up memory and hampering the program's performance - and we don't want that do we?
 
 Of course, with a child function, there has to be a parent function. In this particular function, the parent function simply waits for the child process to finish running (because of the wait call, which will be explained later), and executes after the child process is finished.
+
+Also, when using `fork` it is good practice to create clearly written if statements to completely separate what the child and parent process will do. If you do not, it will become hard to tell what your child and parent are executing and finding errors will become difficult. Below is an example of this good practice:
+```
+int pid = fork();
+if (pid == -1)
+{
+    perror("fork"); //syscall to output error
+    exit(1);
+}
+else if (pid == 0) //if it is the child process running
+{
+    //do whatever the child should do
+    return 0; //always end the child process after its done
+}
+else //we are in the parent
+{
+    if (-1 == wait(0))      //error checking, `wait` should almost always be used
+    {                       //in the parent immediately following `fork`
+        perror("wait");
+        exit(1);
+    }
+}
+//you can do whatever the parent function needs to do here
+```
 
 ##perror:
 
@@ -56,25 +82,37 @@ Of course, with a child function, there has to be a parent function. In this par
 
 [man page](http://linux.die.net/man/3/perror)
 
-The glorious error checker! `perror` is used when an error occurs in a syscall, and techincally isn't a syscall - rather its used WITH every single syscall. The parameter of of `perror` which is a `const char *s` is whatever c-string you wish to output when an error happens (examples below). `perror` outputs your custom c-string and then outputs information on the specific error that happened using information from `errno`. 
-    `perror` becomes very useful when you’re debugging your program. If an error happens you’ll be able to ouput your own custom message, which can make the error much easier to find. `perror` is extremely crucial while coding, and adding them after each syscall is considered proper coding etiquette - in fact, many instructors and professors may dock points for not having them (I was a "victim" of this my first assignment). 
+The glorious error checker! `perror` is used when an error occurs in a syscall, and techincally isn't a syscall - rather its used WITH every single syscall. The parameter of of `perror` which is a `const char *s` is whatever c-string you wish to output when an error happens (examples below). `perror` outputs your custom c-string and then outputs information on the specific error that happened using information from `errno`. These are output to `stderr` so in the event that you mess up your standard output, `stdout` or `cout`, it will still print to the screen (unless you mess up your `stderr` too, then I'm sorry it won't help).
 
-Now, we’ll add `perror` to the last example:
+    `errno` is a global `int` variable that is written to by system calls upon exiting (if it was succesful, `errno` is still set, but to success), and will be set to a different value based on the reason the syscall failed. There is no need to try to remember the actual value for each error, `perror` will automatically print out the corresponding error based on the value of `errno` when it is called. If there is any reason that you need these values for checking why a system call failed, they are given as marcos in the man page of the specific system call. Examples on the output will be shown in the example below.
+
+    For these reasons, `perror` is very useful when you’re debugging your program. It will give you not only your message which should indicate which system call failed, but also one from the system that is specified by `errno`. `perror` is extremely crucial while coding, and adding them after each syscall is considered proper coding etiquette - in fact, many instructors and professors may dock points for not having them (I was a "victim" of this my first assignment). The reason for this is because there are many reasons as to why a system call may fail and if you do not properly check each one, they can cause large and also confusing errors.
+
+Now, we will show an example of `perror` with `fork`:
 ```
 int pid = fork();
 if(pid == -1)//fork’s return value for an error is -1
 {
-   perror("There was an error with fork(). ");
+   //perror("There was an error with fork(). ");
+   perror("fork"); //although you certainly can use the above, it is good
+                   //practice not to write more information than necessary
    exit(1);//there was an error with fork so exit the program and go back and fix it
 }
 else if(pid == 0)//when pid is 0 you are in the child process
 {
-   cout<<"This is the child process "; 
+   cout<<"This is the child process ";
    exit(1);  //when the child process finishes doing what we want it to, cout, we want to kill the child process so it doesn’t go on in the program so we exit
 }
 //if pid is not 0 then we’re in the parent
 ```
-This example adds `perror` to the example we started in `fork`. The if statement basically says if there’s an error in the syscall, then output an error message and exit the program. As you can see, the parameter for `perror` is a c-string, in this case it’s, `There was an error with fork().` This message can be customized however you desire. You can output info about the function its in, the line its on - the choice is yours! But beware, with great power comes great responsibility! Outputting error messages that are irrelevant to your function/program are unlikely to be very helpful.
+
+So if fork fails, the output will look something like this:
+
+`fork: Resource temporarily unavailable`
+
+We can see that it outputs our `char *` appended by a `:` and then the error message from the system.
+
+We use the if statement to see if our system call failed. Generally system calls will return `-1` or `NULL` upon error depending on what data type they return. In this case,`fork` returns `-1` so we check if it failed. If it did, then output an error message and exit the program. As you can see, the parameter for `perror` is a c-string, in this case it is simply, `fork.` This message can be customized however you desire. Additional useful information you can output is the function its in, the line its on in your code, among other things - the choice is yours! But beware, with great power comes great responsibility! Outputting error messages that are irrelevant or unnecessarily long are unlikely to be very helpful.
 
 ##wait:
 
@@ -82,15 +120,18 @@ This example adds `perror` to the example we started in `fork`. The if statement
           `#include <sys/wait.h>`
 
 **declaration:** `pid_t wait(int *status);`
-        usually when using `wait`, it is used as such: `wait(0);`
+
+            `pid_t waitpid(pid_t pid, int *status, int options);`
+
+            `int waitid(idtype_t idtype, id_t id, siginfo_t *infop, int options);`
 
 **returns:** When an error occurs -1 is returned otherwise it returns the pid of the child that was killed.
 
 [man page](http://linux.die.net/man/2/wait)
 
-`wait` is a system call that is used to wait for state changes in a child function of the parent process. It also obtains information about the child function when its state changes. 
+`wait`, and associated calls `waitpid` and `waitid`, are system calls used by the parent process to wait for a change in state by a child process. It also obtains information about the child exit status upon return.
 
-`wait` is commonly used along with the `fork` function (and is pretty much a necessity). `wait` is usually used in the parent function, and tells the parent process to wait for the child process to finish executing before moving on. It also prevents two processes from running at once. However, if you want a process to run in the background in your shell (aka you want two processes running at the same time), you wouldn't want to use `wait`.
+`wait` is commonly used along with the `fork` function (and is pretty much a necessity). `wait` is used in the parent process, causing it to stop at the line that contains `wait` until the child process finishes executing. This prevents two processes from running at once. Not using `wait` may create errors because otherwise, the child may not necessarily end before the parent creating zombie or, in this specific case, orphaned processes. If you want two processes to run at once, you should not use `wait` but this can cause unforeseen errors.
 
 examples: here is an example of `wait` with `fork`.
 ```
@@ -102,7 +143,7 @@ if(pid == -1)//fork’s return value for an error is -1
 }
 else if(pid == 0)//when pid is 0 you are in the child process
 {
-   cout<<"This is the child process "; 
+   cout<<"This is the child process ";
    exit(1);  //when the child process finishes doing what we want it to, cout, we want to kill the child process so it doesn’t go on in the program so we exit
 }
 //if pid is not 0 then we’re in the parent
@@ -112,6 +153,26 @@ else if(pid > 0) //parent function
    perror(“There was an error with wait().”);
 }
 ```
+
+Other than just `wait`, there are two other system calls that will also reap zombie processes, `waitpid` and `waitid`. The advantages of using `waitpid` or `waitid` over simply `wait`, is that wait will only stop the parent process until one of the children ends; it will not wait for any specific child or multiple ones. `waitpid` and `waitid` can wait for specific processes to end, either by its pid or its process group ID, and they can also wait for any child.
+
+The differences between `waitpid` and `waitid` are that `waitid` requires the first parameter, `idtype_t idtype` to specify what kind of data is in the second parameter, `id_t id` (a pid, a process group id, or just any child). `waitpid` will automatically tell based on what you pass into its first parameter (numbers `-1`, `0`, `1` have special meanings when passed in, but you could also put in a pid). All `wait` system calls can tell you the exit status of the child, the parameter `int *status` is used to store the child's exit code. `waitid` does not take an `int *`, but instead a `siginfo_t` struct that will give even more information on the exit status of the child. These returned errors are useful for finding out whether or not your child process ended with an error, as, if it did, `wait` will still succeed. However, you normally do not need the amount of information given to you by `waitid` to see whether this happened. `waitpid` and `waitid` also have the last parameter `int options`. This is a flag to designate what kind of status change in the child the parent should wait for. You can bitwise or option flags together, `|`, to indicate to wait for any of multiple changes and the option flag marcos can be found on the man page.
+
+Some examples of `wait` variations:
+```
+int status;
+wait(&status); //status will now contain the exit code of the child
+              //if it exited normally it should be 0
+waitpid(child_pid, &status, 0); //will wait for any change in the process
+                               //whose pid is child_pid
+waitpid(-1, &status, 0); //same as wait(&status), -1 means wait for any child
+                         //process
+struct siginfo_t info;
+waitid(P_PID, child_pid, &info, WNOHANG | WUNTRACED);
+//wait for process whose pid id child_pid and return immediately if no child
+//process has ended or if child has stopped
+```
+Macros used can be found on the man page.
 
 ##exec:
 
@@ -125,7 +186,7 @@ Here is an example of the two most common ones: `int execv(const char *path, cha
 
 [man page](http://linux.die.net/man/3/exec)
 
-`exec` can be used to perform commands in the bash shell, such as `ls` `cat` and `echo`, they usually take in some form of converted user input. The two most commonly used ones are `execv` and `execvp`, but we encourage you to look up the other forms of `exec`! 
+`exec` can be used to perform commands in the bash shell, such as `ls` `cat` and `echo`, they usually take in some form of converted user input. The two most commonly used ones are `execv` and `execvp`, but we encourage you to look up the other forms of `exec`!
 
 Now you may be wondering what the difference between the two of them is. `execv` requires that you append the path for the command to it, while `execvp` will automatically retrieve the path for you. Unless you are specifically required to use `execv` (e.g. your instructor wants you to use the path variable to find the particular command the user input), PLEASE use `execvp`. It will save you so much time, and will give you many more hours of much needed sleep.
 
@@ -141,7 +202,7 @@ if(pid == -1)//fork’s return value for an error is -1
 else if(pid == 0)//when pid is 0 you are in the child process
 {
    cout<<"This is the child process ";
-   if(-1 == execvp(argv[0], argv)) 
+   if(-1 == execvp(argv[0], argv))
       perror("There was an error in execvp. ");
 
 
@@ -157,7 +218,7 @@ else if(pid > 0) //parent function
 
 (Again, we’re using `perror` to check for errors. PLEASE remember to do so as well!)
 
-The parameters for `execvp` are: `const char *file, char *const argv[]`. In this example, `file` is `argv[0]` and `argv` is `argv[]`. `argv`, in this example, is a char pointer pointer containing the user input of what commands they wish to execute. 
+The parameters for `execvp` are: `const char *file, char *const argv[]`. In this example, `file` is `argv[0]` and `argv` is `argv[]`. `argv`, in this example, is a char pointer pointer containing the user input of what commands they wish to execute.
 
 For example, the user can input `ls -l -a` and `argv[0] = ls`, `argv[1]= -l`, `argv[2]= -a`. So esentially, `argv[0]` is the command, while everything after is the flag.
 
@@ -168,14 +229,14 @@ As we told you above, `execvp` finds the path for you. If you wanted to use `exe
 
 **includes:** `#include <unistd.h>`
 
-**declaration:** These are the two `dup` declarations that are most useful: 
+**declaration:** These are the two `dup` declarations that are most useful:
                  `int dup(int oldfd);`  `int dup2(int oldfd, int newfd);`
 
 **returns:** When an error occurs `dup` returns -1 otherwise `dup` returns the new file descriptor.
 
 [man page](http://linux.die.net/man/2/dup)
 
-We all know about the default file descriptors 0, 1 and 2 with 0 meaning stdin, 1 meaning stdout and 2 meaning stderr. `dup(int oldfd)` can be used to copy the file descriptor given for `oldfd`, for example we can do `int fd = dup(1)` which copies stdout to `fd`. `dup` chooses our new file descriptor by choosing the lowest number of the unused descriptors, so if we only have 0, 1 and 2 as our file descriptors(only the default ones) it will choose 3 as our new one. So, in this `dup` example our new `fd` can be used interchangeably with stdout. 
+We all know about the default file descriptors 0, 1 and 2 with 0 meaning stdin, 1 meaning stdout and 2 meaning stderr. `dup(int oldfd)` can be used to copy the file descriptor given for `oldfd`, for example we can do `int fd = dup(1)` which copies stdout to `fd`. `dup` chooses our new file descriptor by choosing the lowest number of the unused descriptors, so if we only have 0, 1 and 2 as our file descriptors(only the default ones) it will choose 3 as our new one. So, in this `dup` example our new `fd` can be used interchangeably with stdout.
 
 Now say, for example, we wanted to redirect the stdout to the screen into a file. We could use `dup2` (we could also use `dup` but I think `dup2` is a simpler way). The way `dup2` works is it takes two parameters `int oldfd` and `int newfd`, `oldfd` is the file descriptor you want to change to what the `newfd`. Let's take our redirect example, we want to take stdout which is 1 and instead of linking it to 1 we want to link it to whatever file descriptor belongs to the file we want to redirect to. For this redirection we would do something like: `dup2(fd,1)` (where `fd` is the file descriptor for the file we want to write to). `dup2` also closes `newfd` after the call. Therefore, after this call stdout is now closed and instead it is rerouted to the file.
 
@@ -191,7 +252,7 @@ if(pid == -1)//fork’s return value for an error is -1
 else if(pid == 0)//when pid is 0 you are in the child process
 {
    cout<<"This is the child process ";
-   if(-1 == execvp(argv[0], argv)) 
+   if(-1 == execvp(argv[0], argv))
       perror("There was an error in execvp. ");
 
    exit(1);  //when the child process finishes doing what we want it to, cout, we want to kill the child process so it doesn’t go on in the program so we exit
@@ -206,14 +267,14 @@ else if(pid > 0) //parent function
 int savestdin;
 if(-1 == (savestdin = dup(0)))//savestdin is now the same as regular stdin
    perror("There is an error with dup. ");
-   
+
    //something can be done here to overwrite stdin, for example redirection
-   
+
 if(-1 == dup2(savestdin,0))//restore stdin, if we would have overwritten stdin this is how we would restore it
    perror("There is an error with dup2. ");
 ```
 
-Here we can see both `dup` and `dup2` being used. 
+Here we can see both `dup` and `dup2` being used.
 
 
 ##pipe:
@@ -230,13 +291,13 @@ Here we can see both `dup` and `dup2` being used.
 [man page](http://linux.die.net/man/2/pipe)
 
 `pipe` is another syscall that is harder to understand, so PLEASE utilize outside resources if need be!
-   
-`pipe` essentially creates an imaginary file that you can write to and read from. The parameter is an int array with two elements, which are the file descriptors for the imaginary file. In the example below, `fd[0]` is the read end of the pipe and `fd[1]` is the write end of the pipe. Let me be clear, however, that pipe ignores the input and only uses the write end as output to whatever it is piping to. 
 
-This function is essential when implementing piping in a bash shell. Piping is moving the stdout of the left side of the pipe into the stdin of whatever program is on the right side of the pipe. For example, you have an executable `names` which outputs a list of names in a random order you can pipe this into `sort` which will sort it alphabetically. This command would look like: `names | sort`. The end result would be the contents of the name executable output to the screen, except sorted. 
-   
+`pipe` essentially creates an imaginary file that you can write to and read from. The parameter is an int array with two elements, which are the file descriptors for the imaginary file. In the example below, `fd[0]` is the read end of the pipe and `fd[1]` is the write end of the pipe. Let me be clear, however, that pipe ignores the input and only uses the write end as output to whatever it is piping to.
+
+This function is essential when implementing piping in a bash shell. Piping is moving the stdout of the left side of the pipe into the stdin of whatever program is on the right side of the pipe. For example, you have an executable `names` which outputs a list of names in a random order you can pipe this into `sort` which will sort it alphabetically. This command would look like: `names | sort`. The end result would be the contents of the name executable output to the screen, except sorted.
+
 Now that we’ve gone over the basics of what piping is we can talk about how to use the syscall `pipe` to create this. Because `pipe` creates an imaginary file that you can read and write from you can use this to implement piping in whatever program you desire to do so in. You will take the stdout of the command on the left side of the pipe symbol and write it to the pipe with `dup`. Then, later, you will read that data from the read end of the pipe.
- 
+
 Here’s an example of `pipe` in action:
 ```
 int fd[2];
@@ -254,12 +315,12 @@ else if(pid == 0)//when pid is 0 you are in the child process
    cout<<"This is the child process ";
 
    //write to the pipe
-   if(-1 == dup2(fd[1],1))//make stdout the write end of the pipe 
+   if(-1 == dup2(fd[1],1))//make stdout the write end of the pipe
       perror("There was an error with dup2. ");
    if(-1 == close(fd[0])//close the read end of the pipe because we're not doing anything with it right now
       perror("There was an error with close. ");
 
-   if(-1 == execvp(argv[0], argv)) 
+   if(-1 == execvp(argv[0], argv))
       perror("There was an error in execvp. ");
 
 
@@ -272,7 +333,7 @@ else if(pid > 0) //parent function
    int savestdin;
    if(-1 == (savestdin = dup(0)))//need to restore later or infinite loop
       perror("There is an error with dup. ");
-   if(-1 == dup2(fd[0],0))//make stdin the read end of the pipe 
+   if(-1 == dup2(fd[0],0))//make stdin the read end of the pipe
       perror("There was an error with dup2. ");
     if(-1 == close(fd[1])//close the write end of the pipe because we're not doing anything with it right now
       perror("There was an error with close. ");
@@ -300,7 +361,7 @@ Here we see the full use of the `pipe` syscall. When we call `pipe` we have our 
 
 As stated above, getcwd gets the c-string containing the current working directory. It inserts the c-string into `buf` to be used later. The parameter size is the length of the `char*` you pass in as the first parameters. For example, if you created `char directory[250]`, you’d pass in `directory, 250`.
 
-Notes: This function is useful when implementing bash commands such as `cd`, and you need to display the current working directory the user is in. 
+Notes: This function is useful when implementing bash commands such as `cd`, and you need to display the current working directory the user is in.
 
 Here is a quick example of `getcwd` in action:
 ```
@@ -320,7 +381,7 @@ if(!getcwd(buf,1024))
 **returns:** If an error occurs `NULL` is returned, otherwise it returns a pointer to a `passwd struct` (seen below)
 
 [man page](http://linux.die.net/man/3/getpwuid)
- 
+
 Notes: As you can probably see, `getpwuid` is a bit different from the other syscalls previously mentioned. It takes in the  user’s ID, which is in a numerical form. After that, it will return a pointer to a structure, which contains these fields:
 ```
 struct passwd {
@@ -353,7 +414,7 @@ if(!(pw = getpwuid(s.st_uid)))
 **returns:** If an error occurs `NULL` is returned, otherwise it returns a pointer to a `group struct`
 
 [man page](http://linux.die.net/man/3/getgrgid)
- 
+
 Much like `getpwuid`, `getgrgid` also returns a pointer to a structure, which contains these fields:
 ```
 struct group {
