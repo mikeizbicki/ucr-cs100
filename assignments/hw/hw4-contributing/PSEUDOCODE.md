@@ -4,6 +4,7 @@ Why and How to Use Pseudocode
 Authors
 ---------
 Tiffany Glenn-Hall
+
 Oscar Gonzalez
 
 Why use pseudocode?
@@ -15,9 +16,7 @@ What are some advantages of pseudocode?
   <li>Explain your code to non-programmers</li>
   <li>Use it as a way of determining objects in your code (help with OOP)</li>
   <li>Use it to determine the best logic for your code</li>
-  <li>Communicate your ideas for opinions/suggestions from other programmers</li>
-  <li></li>
-  <li></li>
+  <li>Communicate your ideas to gain opinions/suggestions from other programmers</li>
 </ol>
 
 
