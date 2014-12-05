@@ -55,6 +55,7 @@ syscalls="
     execle
     execlp
     execv
+    execve
     execvl
     execvp
     fork
@@ -78,11 +79,14 @@ syscalls="
     chdir
     getcwd
     getwd
-    get_current_directory_name
+    get_current_dir_name
     signal
     sigaction
     getpwuid
     getgrgid
+    kill
+    access
+    system
     "
 
 #The regex will not match member operators like stream::open.
