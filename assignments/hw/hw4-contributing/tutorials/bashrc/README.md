@@ -73,8 +73,70 @@ On startup, Bash will take you directly to the directory you specify in <code>ta
 
 <h2>Alias</h2>
 
-After some experience with the shell, you might find yourself tiring of typing cumbersome things over and over.
+After some experience with the shell, you might find yourself tiring of typing cumbersome things over and over. Bash can save you this pain. In <code>.bashrc</code>, consider adding lines such as these:
 
-<h2>Case Study: Color</h2>
+    alias ll='ls -alF'                          # long-listing
+    alias c='clear'                             # useful, common
+    alias ..='cd ..'
+    alias ...='cd ../../../'
+    alias ....='cd ../../../../'                # and so on
+    alias meminfof='free -mlt'                  # memory information
+    # print subdirectories in a tree visualization
+    alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
+    # create a random password
+    alias genpasswd="strings /dev/urandom | grep -o '[[:alnum:]]' | head -n 30 | tr -d '\n'; echo"
 
-Bash has color features based on ANSI codes. This is occasionally extra credit, but may also be used to expand your zen. For instance, these color codes, added to your <code>~/.bashrc</code> file, will allow you to select colors
+...and so on. It is certain that you will, on your journey, find yourself wishing for efficiency. Heed that urge with alias.
+
+<h3>Case Study: Color</h3>
+
+Bash has color features based on [ANSI escape codes](http://en.wikipedia.org/wiki/ANSI_escape_code). This is occasionally extra credit, but may more imporantly be used to expand your zen. For instance, these color codes, added to your <code>~/.bashrc</code> file, will allow you to select colors using variable substitution, as discussed earlier.
+
+    # Normal Colors
+    Black='\e[0;30m'        # Black
+    Red='\e[0;31m'          # Red
+    Green='\e[0;32m'        # Green
+    Yellow='\e[0;33m'       # Yellow
+    Blue='\e[0;34m'         # Blue
+    Purple='\e[0;35m'       # Purple
+    Cyan='\e[0;36m'         # Cyan
+    White='\e[0;37m'        # White
+    
+    # Bold
+    BBlack='\e[1;30m'       # Black
+    BRed='\e[1;31m'         # Red
+    BGreen='\e[1;32m'       # Green
+    BYellow='\e[1;33m'      # Yellow
+    BBlue='\e[1;34m'        # Blue
+    BPurple='\e[1;35m'      # Purple
+    BCyan='\e[1;36m'        # Cyan
+    BWhite='\e[1;37m'       # White
+    
+    # Background
+    On_Black='\e[40m'       # Black
+    On_Red='\e[41m'         # Red
+    On_Green='\e[42m'       # Green
+    On_Yellow='\e[43m'      # Yellow
+    On_Blue='\e[44m'        # Blue
+    On_Purple='\e[45m'      # Purple
+    On_Cyan='\e[46m'        # Cyan
+    On_White='\e[47m'       # White
+    
+    NC="\e[m"               # Color Reset
+    
+Using these, we may more easily use colors, without having to think in terms of confusing brackets and numbers. Consider, for example, constructing this function, which reminds you, in haiku form, of your frailty:
+
+    function _exit()
+    {
+        echo -e "${Blue}a crash reduces\nyour ${Red}${On_White}expensive${NC}${Blue} computer\ntosimple ${Black}stone${NC}"
+    }
+    trap _exit EXIT
+
+This function, since we catch it with <code>trap</code>, will be called when we exit bash. To experience this haiku, consider this:
+
+    $ /bin/bash
+    $ exit              # enlightenment awaits
+    
+These colors can be similarly used on the command line, or in any scripts you may write.
+
+<h2></h2>
