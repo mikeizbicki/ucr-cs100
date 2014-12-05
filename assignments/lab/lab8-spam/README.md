@@ -4,21 +4,21 @@ You should complete this lab using pair programming with a new partner.
 
 ### coding instructions
 
-In this lab, we're going to learn to send spam emails.  It turns out that with the [Simple Mail Transfer Protocol (SMTP)](http://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol), you don't need to know someone's password to send email from their account!  Anyone can send emails from anyone elsse's account!
+In this lab, we're going to learn to send spam emails. It turns out that with the [Simple Mail Transfer Protocol (SMTP)](http://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol), you don't need to know someone's password to send email from their account!  Anyone can send emails from anyone elsse's account!
 
-First, you're going to practice sending these emails.  Then, you're going to write a bash script to automate the process.
+First, you're going to practice sending these emails. Then, you're going to write a bash script to automate the process.
 
-**IMPORTANT:** Don't use this for evil!  It will get your cs account suspended and could even get you arrested!
+**IMPORTANT:** Don't use this for evil! It will get your cs account suspended and could even get you arrested!
 
 #### spoofing an email
 
 First, telnet into the local SMTP webserver:
 
 ```
-telnet email.cs.ucr.edu 25
+telnet mail.cs.ucr.edu 25
 ```
 
-Telnet is a simple command line utility that let's send commands over the network.  Whatever you type in gets sent over the network to the server you're connected to.
+Telnet is a simple command line utility that let's send commands over the network. Whatever you type in gets sent over the network to the server you're connected to.
 
 Now, type the following commands:
 
@@ -32,9 +32,9 @@ I order you to submit correct homework!
 .
 ```
 
-The dot at the end is very important.  It must be on a line all by itself.  That's what tells the server that the email message is over.
+The dot at the end is very important. It must be on a line all by itself. That's what tells the server that the email message is over.
 
-**IMPORTANT:** Our server is configured so that you must be on the computer science network to have access to it.  You cannot do this from home (unless you ssh in).  There are, however, many poorly configured servers on the internet that let anyone access them to send email from.
+**IMPORTANT:** Our server is configured so that you must be on the computer science network to have access to it. You cannot do this from home (unless you ssh in).  There are, however, many poorly configured servers on the internet that let anyone access them to send email from.
 
 #### automate the process using bash
 
