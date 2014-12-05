@@ -158,6 +158,7 @@ In Linux (Shell), there are two types of variable:
 
 Here are some common system variables:
 
+```
 BASH				#shell name
 
 BASH_VERSION		#shell version
@@ -177,6 +178,7 @@ PWD					#current working directory
 PS1                	#prompt settings
 
 OSTYPE				#os type
+```
 
 * User defined variables:
 
@@ -210,9 +212,9 @@ echo "${X} world"
 
 After a shell script is executed, it returns two types of exit status:
 
-*If the command is successful, it returns value zero(0)
+* If the command is successful, it returns value zero(0)
 
-*If the command is not successful, it returns a nonzero value;
+* If the command is not successful, it returns a nonzero value;
 
 We can check exit status of your last command by using variable '$?':
 
