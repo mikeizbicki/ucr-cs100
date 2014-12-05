@@ -10,11 +10,11 @@ In this lab, you will implement a version of the `cp` command line program that 
 
 2. Use the Unix system calls `read()` and `write()` to copy the input file to the output file one character at a time.
   
-3. Use the Unix system calls `read()` and `write()` to copy the input file to the output file one buffer at a time.  The buffer should be of size `BUFSIZ`, which is declared in the `stdio.h` include file.
+3. Use the Unix system calls `read()` and `write()` to copy the input file to the output file one buffer at a time.  The buffer should be of size `BUFSIZ`, which is declared in the `stdio.h` library.
 
 Your final program should have two required arguments (the input and output file) and one optional argument.  If the optional argument is not given, then copy the files using the most efficient of the three methods above.  
 
-If the optional argument is given, then your program will copy the file using each of the three methods, time how long each method takes, and report the results to stdout.  You must show wallclock, user, and system run times.You may use the given `Timer.h` file to measure the run times.  
+If the optional argument is given, then your program will copy the file using each of the three methods, time how long each method takes, and report the results to stdout.  You must show wallclock, user, and system run times. You may use the given `Timer.h` file to measure the run times.  
 
 In order to determine which method is fastest, you'll need to test them on a large file.  Otherwise, the performance differences will not be noticeable.  The file `/usr/share/dict/linux.words` should be sufficiently large.
 
