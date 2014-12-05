@@ -5,7 +5,9 @@
 In one word, a shell script is a file containing a sequence of commands for a UNIX-based operating system.
 
 This tutorial has two parts: 
+
 1. The first part give a simple example and how to make it works. 
+
 2. The second part introduce more simple syntaxs about how to write a shell script.
 
 ##Part 1: All start with a simple example
@@ -45,6 +47,8 @@ Hello world!!!
 ```
 
 * We could find that every shell script include the first line. It is looks like a comment since it start with '#'. However, it is created on purpose since it tell the system which interpreter such as bash, ruby, python, and others should be used to execute the followed script. For this script, it run in the bash shell. And '#!' is a special character construct called shebang.
+
+Tip: For this file, I save it called 'hello.sh'. For shell script file try to give file extension such as '.sh', which can be easily identified by you as shell script.
 
 ###How to make your script become executable?
 
@@ -89,7 +93,7 @@ Hello world!!!
 
 Now it works. 
 
-FYI: Here I want add an alterative way to change permission. If you want to enable all permissions for everyone, just type following command:
+Tip: Here I want add an alterative way to change permission. If you want to enable all permissions for everyone:
 
 ```
 $ chmod 777 hello.sh
@@ -106,15 +110,49 @@ $ ls -l hello.sh
 
 It uses a binary way to represent the the position of permission in '-rwxrwxrwx'. For example, 7 represents 'rwx', 0 represents '---', 1 represents '--x', and etc.  
 
-###How to put shell scripts in your path?
+###How to put shell scripts somewhere shell can find it?
 
+If our current directory does not include the shell script, we will get:
 
-##Part 2: More syntax about how to write a shell
+```
+$ hello.sh
+bash: hello.sh: command not found
+```
+
+In order to have more convenience to use the our script at any directory, we always move shell script into certain directories. The shell will search automatically those directories for execucable files:
+
+1. At first, let us go to your '$HOME', and creat a directory called 'bin': 
+
+```
+$ cd $HOME
+$ pwd
+$ /home/me
+$ mkdir bin
+```
+
+This /bin directory is one of the directories that the system will searche automatically.
+
+2. Then use 'mv' command to move your file to this 'bin/' directory.
+
+3. Finally, your can run your script even your current directory does not include script files:
+
+```
+$ hello.sh
+Hello world!!!
+$ cd ..
+$ hello.sh
+Hello world!!!
+```
+
+and your script will run at any directories.
+
+##Part 2: More syntaxs about how to write a shell
+
 
 
 ##Conclusion
 
-By writing shell scripts and learning more knowledge about shell scripts, It will helps us to know more things about unix system. If you want to learn more advanced things about shell script, you can go to http://www.freeos.com/guides/lsst/misc.htm#howshell
+By writing shell scripts and learning more knowledge about shell scripts, It will helps us to know more things about unix system. If you want to learn more advanced things about shell script, you can go to http://www.freeos.com/guides/lsst/
 
 Thank you for reading and have fun in cs100!!!
 
