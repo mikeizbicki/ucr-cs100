@@ -4,6 +4,8 @@
 
 In one word, a shell script is a file containing a sequence of commands for a UNIX-based operating system.
 
+We also can consider each line of code of the script as a line of command in the terminal.
+
 This tutorial has two parts: 
 
 1. The first part give a simple example and how to make it works. 
@@ -121,12 +123,12 @@ bash: hello.sh: command not found
 
 In order to have more convenience to use the our script at any directory, we always move shell script into certain directories. The shell will search automatically those directories for execucable files:
 
-1. At first, let us go to your '$HOME', and creat a directory called 'bin': 
+1. Let us 'cd' to your '$HOME', then creat a directory called 'bin': 
 
 ```
 $ cd $HOME
 $ pwd
-$ /home/me
+/home/me
 $ mkdir bin
 ```
 
@@ -144,15 +146,113 @@ $ hello.sh
 Hello world!!!
 ```
 
-and your script will run at any directories.
+and your script will run in any directories.
 
 ##Part 2: More syntaxs about how to write a shell
 
+###Variables
 
+In Linux (Shell), there are two types of variable:
+
+* System variables: 
+
+Here are some common system variables:
+
+BASH				#shell name
+
+BASH_VERSION		#shell version
+
+HOME				#home directory
+
+PATH				#path settings
+
+SHELL				#shell name
+
+LOGNAME				#our logging name
+
+USERNAME			#our user name
+
+PWD					#current working directory
+
+PS1                	#prompt settings
+
+OSTYPE				#os type
+
+* User defined variables:
+
+We define a variable as follows:
+
+```
+X="Hello"
+```
+
+Here I want to denote that bash do not allow us to leave a space on either side of '=' sign. The following will gives a error message:
+
+```
+X = "Hello"
+```
+
+And access it as follows:
+
+```
+$X
+```
+
+Tip: we also can use braces to protect your variable. If we want to echo X followed by 'world', we can do following:
+
+```
+#!/bin/bash
+X="Hello"
+echo "${X} world"
+```
+
+###Exit status
+
+After a shell script is executed, it returns two types of exit status:
+
+*If the command is successful, it returns value zero(0)
+
+*If the command is not successful, it returns a nonzero value;
+
+We can check exit status of your last command by using variable '$?':
+
+```
+$ echo hello
+hello
+$ echo $?
+0
+$ dasadafada
+bash: dasadafada: command not found
+$ echo $?
+127
+$ rm cs100/
+rm: cannot remove 'cs100': Is a directory
+$ echo $?
+1
+``` 
+
+We can see that only first command is successful and it returns zero(0).
+
+###The read statement
+
+The read statement can get input from keyboard and store to variable, the following is an example script:
+
+```
+	#!/bin/bash
+	echo "please enter your name: "
+	read myname
+	echo "Hello $myname"
+```
+
+###Command line arguments
+
+###If condition
+
+###Loop
 
 ##Conclusion
 
-By writing shell scripts and learning more knowledge about shell scripts, It will helps us to know more things about unix system. If you want to learn more advanced things about shell script, you can go to http://www.freeos.com/guides/lsst/
+By writing shell scripts and learning more knowledge about shell scripts, It will helps us to have more understand about cs100 and unix system. If you want to learn more advanced things about shell script, you can go to http://www.freeos.com/guides/lsst/
 
 Thank you for reading and have fun in cs100!!!
 
