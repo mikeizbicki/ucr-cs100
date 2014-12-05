@@ -73,7 +73,14 @@ On startup, Bash will take you directly to the directory you specify in <code>ta
 
 <h2>Alias</h2>
 
-After some experience with the shell, you might find yourself tiring of typing cumbersome things over and over. Bash can save you this pain. In <code>.bashrc</code>, consider adding lines such as these:
+>  <em> Before the vast ocean, he sat, surrounded by *nix energy. He watched the waves unendingly splash the rocks, wearing them down finely. He saw that his hands too were worn from repetition. </em>
+
+>  <em> The energy pulsated about him. He realized that his karma expanded as he felt the words around him... </em>
+
+>  <em> ...alias... </em>
+
+
+After some experience with the shell, you might find yourself tiring of typing cumbersome command strings over and over. Aliases will save you from this pain. In <code>.bashrc</code>, consider adding lines such as these:
 
     alias ll='ls -alF'                          # long-listing
     alias c='clear'                             # useful, common
@@ -139,4 +146,6 @@ This function, since we catch it with <code>trap</code>, will be called when we 
     
 These colors can be similarly used on the command line, or in any scripts you may write.
 
-<h2></h2>
+<h2>Git Branch Prompt Information</h2>
+
+stay tuned...
