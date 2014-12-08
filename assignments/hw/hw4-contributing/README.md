@@ -2,14 +2,14 @@
 
 ### requirements
 
-For this assignment, you must give something back to the open source community.  One common problem with open source software is a lack of documentation and easily accessible tutorials.  You will create some.  Future students of this class (and random strangers on the internet) will be using your tutorials to help them learn.
+For this assignment, you must give something back to the open source community.  One common problem with open source software is a lack of documentation and easily accessible tutorials.  You will create some.  Future students of this class (and random strangers on the internet) will be using your tutorials to help them to learn.
 
 Your tutorial should be between 1000-2000 words.
 It should have plenty of code examples and/or pictures illustrating your topic.
 
 #### topic
 
-You are free to choose any topic that will be interesting to future cs100 students.
+You are free to choose any topics that will be interesting to future cs100 students.
 Here are some past assignments and some suggestions for extending their work:
 
 * [Rashid Goshtasbi and Kyler Rynear's video tutorials](https://izbicki.me/blog/videoguide-for-github-vim-bash.html).
@@ -62,7 +62,7 @@ Imagine your favorite internet blog post and write like that.
 In particular, don't write long, drawn-out sentences that use sophisticated verbage because no one wants to read that, especially not cs100 students or random programmers on the internet be kind to us oh and use proper punctuation because reading this sentence totally sucks.
 Also, spll chck ur writing and dnt use txt spk b/c I hate tht 5|-|!7.
 
-I highly recommend you visit UCR's writing center.
+I highly recommend you to visit UCR's writing center.
 
 A short, clear writeup is MUCH better than a long wordy writeup.
 
@@ -99,7 +99,7 @@ You must submit your tutorial as a pull request on this repository through githu
 Create a folder in this repo called `/tutorials/yoursubject`.
 Inside the folder should be at least a file called `README.md` that contains the contents of your tutorial.
 You may include other files in this folder, such as images or cpp files, if they are relevant to the tutorial.
-I will evaluate the pull request the same as any other pull request into an open source project.
+I will evaluate the pull request the same as any other pull requests into an open source project.
 
 ### grading
 
@@ -112,7 +112,7 @@ I will evaluate the pull request the same as any other pull request into an open
 Ultimately, grading is entirely subjective on my part.
 If I enjoyed reading your writeup, you will get a good score.
 If I don't enjoy reading it, you will get a bad score.
-Therefore, I recommend you show me drafts of your progress.
+Therefore, I recommend you to show me drafts of your progress.
 I'll give you advice on how to make your writeup more fun.
 
 If you visit the writing center, I will give you +5 points of extra credit on this assignment.
