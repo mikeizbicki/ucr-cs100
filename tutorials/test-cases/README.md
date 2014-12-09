@@ -11,7 +11,7 @@ I. **“If you are not trying to break your program, you probably didn't write a
   
 
 II. **“You must learn to bark before you can howl with coyotes.”**
-```
+
 Before I get into how to write good test cases, I will reiterate something we all should already know, yet have the tendency to keep on doing for some crazy reason (if you are a student, maybe you are trying to write the piece of your project that is due tomorrow, and you _just_ started. I have been there, done that!): Before you code, know what the heck you are doing! At this point, if you are working on this project then you probably know your way around C++ (or whatever other language you are using) and certain algorithms pretty well. But what do you know about which system calls are needed to accomplish what you are trying to do? How the heck will you take in user input? Parse input?? Error checking who???? What in the world do forks have to do with this assignment? You get the point. It will save a lot of pseudo work [insert hyper link to Cal Newport blog here] and precious time [insert hyper link to 'Time Arbitration' piece] in the long run. 
 
 While you do this, feel free to fill in some sections of the table in the test cases table file [insert name of file here]. This will get you thinking about how you will write your program, and will ultimately help you with your test cases later. 
@@ -19,9 +19,9 @@ While you do this, feel free to fill in some sections of the table in the test c
 (meditation [hyper link here] does help relieve the stress of CS100 though!)
 
 **tl;dr: "You must learn to fly before you can soar with eagles."**  
-```
+
 III. **“You don’t have to learn to be wise. If you just flow you can be successful. Mother Nature will carry you.”**
-```
+
 You probably want to make things as easy as possible for yourself. Here are a few things you might want to consider doing while you are writing your program:
 Keep track of what you are doing in your program [insert pseudo code tutorial here]
 Fill in the table. Or if you don't like the table, jot it down in a notebook where you can access it later. 
@@ -34,7 +34,7 @@ Is there an error message where there should be and is it a good one that's not 
 
 (talk about the art of “Modularity”? Here)
 **tl;dr: "Better a thousand times careful than once dead."**
-```
+
 III. “Don't count your chickens before they hatch.”
 	Alright, so finally your code seems to be working. The little parts look okay. You are now ready to begin testing the functionality of your program in its entire scope—or at least a bigger part of it. Keep in mind that you might have to bounce back and forth (hopefully not too much) between II and III. Let me use a scenario in which a student is testing a program meant to mimic the functionality of `ls` in `bash`.
 	Here, you'll want to think of every possible situation that can arise when the specific section of your shell you are looking at is being used. This is where the test cases you thought of and wrote down (in your table) while researching what your program was meant to do, and while writing your program, come in handy. Consider asking the following questions and jot down what you come up with: 
@@ -44,6 +44,7 @@ What are the limitations of your program? These are things that need to be worki
 What is your program realistically able to do at this point? For example, say you have only messed around with `forking` and `execvp`, then your program won't be working that well—or at all—with user input. Or if your current assignment is meant to get you acquainted with `execvp` and `fork`, you likely don't need to handle `piping` and `input/output redirection` (that might be a future assignment) quite yet. In other words, don't get unnecessarily carried away with your test cases.
 [indent] After you have all these things written down, you are ready to start testing and recording what works and doesn't work. Ideally, your end product (example: the homework you turn in) will have all possible and necessary test cases taken care of. In certain cases, you should document in your `README` file [hyperlink to tutorial here] what behavior (bugs) your program has in certain test cases. Always be thorough in your test cases and your documentation. 
 tl;dr It ain't over 'til the fat lady sings.
+
 IV. “A failure is only a step on the way to your success.”
 	It is very impossible that you will simply write and finish your program and right away have all test cases taken care of. You can always try that and let me know how it goes for ya. It takes trial and error with these type of things. You will likely go back and forth between II and III a bit. However, recording the test cases you tried along with the pseudo code you have been writing through these processes, and of course having started early with your writing process, will help you keep your sanity!
 	There are quite a few resources and debugging tools out there that will help you in your endeavors—namely [insert hyper links for each]:
