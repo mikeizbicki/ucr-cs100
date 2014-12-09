@@ -1,4 +1,4 @@
-Writing Test Cases for your Command Shell
+Writing Test Cases for your Command Shell.
 A short explanation for students and curious programmers taking on such a project
 
 I. 
