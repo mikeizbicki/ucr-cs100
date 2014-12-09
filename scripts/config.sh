@@ -208,12 +208,8 @@ function downloadRepo {
     # switch branch
     if [ ! -z "$branch" ]; then
         cd "$clonedir"
-        if git show-ref --verify --quiet "refs/heads/$branch"; then
-            git checkout "$branch" --quiet
-            git pull origin "$branch" --quiet > /dev/null 2> /dev/null
-        else
-            git checkout -b "$branch" --quiet
-        fi
+        git checkout "$branch" --quiet
+        git pull origin $branch --quiet > /dev/null 2> /dev/null
         cd "$dir"
     fi
 }
