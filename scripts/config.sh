@@ -190,30 +190,20 @@ function downloadRepo {
 
     local dir=$(pwd)
 
-    # download repo
-    if [ ! -d "$clonedir" ]; then
-        echo "  running git clone on [$giturl]"
-        #if [ -z "$branch" ]; then
-            git clone --quiet "$giturl" "$clonedir"
-        #else
-            #git clone -b "$branch" --quiet "$giturl" "$clonedir"
-        #fi
-    else
-        echo "  running git pull in [$clonedir]"
-        cd "$clonedir"
-        git pull origin $branch --quiet > /dev/null 2> /dev/null
-        cd "$dir"
+	#if branch is not provided, set branch to the main branch (current class).
+	if [ -z "$branch" ]; then
+	    $branch=git branch -r | head -1 | grep -o "[a-zA-Z0-9_-]*$"
     fi
 
-    # switch branch
-    if [ ! -z "$branch" ]; then
-        cd "$clonedir"
-        if git show-ref --verify --quiet "refs/heads/$branch"; then
-            git checkout "$branch" --quiet
-            git pull origin "$branch" --quiet > /dev/null 2> /dev/null
-        else
-            git checkout -b "$branch" --quiet
-        fi
+    # download repo & and switch branch
+    if [ ! -d "$clonedir" ]; then
+        echo "  running git clone on [$giturl]"
+            git clone -b "$branch" --quiet "$giturl" "$clonedir"
+    else
+        echo "  running git pull in [$clonedir]"
+		cd "$clonedir"
+		git checkout "$branch" --quiet
+		git pull origin "$branch" --quiet > /dev/null 2> /dev/null
         cd "$dir"
     fi
 }
