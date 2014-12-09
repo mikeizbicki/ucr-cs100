@@ -1,26 +1,27 @@
-###:*Writing Test Cases for your Command Shell*:
+###*Writing Test Cases for your Command Shell*
 **A short explanation for students and curious programmers taking on such a project**
 
-I. 
-What is a test case?
+I. **“If you are not trying to break your program, you probably didn't write a good one”**
+  
+  What is a test case?
 
-What is its purpose?
+  What is its purpose?
 
-Why are they important?
-“If you aren't trying to break your program, you probably didn't write a good one”
+  Why are they important?
+  
 
-II. “You must learn to bark before you can howl with coyotes.”
-
+II. **“You must learn to bark before you can howl with coyotes.”**
+```
 Before I get into how to write good test cases, I will reiterate something we all should already know, yet have the tendency to keep on doing for some crazy reason (if you are a student, maybe you are trying to write the piece of your project that is due tomorrow, and you _just_ started. I have been there, done that!): Before you code, know what the heck you are doing! At this point, if you are working on this project then you probably know your way around C++ (or whatever other language you are using) and certain algorithms pretty well. But what do you know about which system calls are needed to accomplish what you are trying to do? How the heck will you take in user input? Parse input?? Error checking who???? What in the world do forks have to do with this assignment? You get the point. It will save a lot of pseudo work [insert hyper link to Cal Newport blog here] and precious time [insert hyper link to 'Time Arbitration' piece] in the long run. 
 
 While you do this, feel free to fill in some sections of the table in the test cases table file [insert name of file here]. This will get you thinking about how you will write your program, and will ultimately help you with your test cases later. 
 
-“If you can rhythmically slow down your breath to four breaths a minute, you can indirectly control your mind and slow it down from its obnoxious behavior.”
-Okay, maybe don't do exactly this, but take it one step at a time and catch your breath. (meditation [hyper link here] does help relieve the stress of CS100 though!)
+(meditation [hyper link here] does help relieve the stress of CS100 though!)
 
-tl;dr: You must learn to fly before you can soar with eagles.  
-
-III. “You don’t have to learn to be wise. If you just flow you can be successful. Mother Nature will carry you.”
+**tl;dr: "You must learn to fly before you can soar with eagles."**  
+```
+III. **“You don’t have to learn to be wise. If you just flow you can be successful. Mother Nature will carry you.”**
+```
 You probably want to make things as easy as possible for yourself. Here are a few things you might want to consider doing while you are writing your program:
 Keep track of what you are doing in your program [insert pseudo code tutorial here]
 Fill in the table. Or if you don't like the table, jot it down in a notebook where you can access it later. 
@@ -32,7 +33,8 @@ Does your system call work? Does `fork` create a parent a parent and child proce
 Is there an error message where there should be and is it a good one that's not too loud, not too useless? Does the program fail/exit with an error when it should? In other words, error check. ALWAYS! (See `~/ucr-cs100/checksyscalls.sh`)
 
 (talk about the art of “Modularity”? Here)
-tl;dr Better a thousand times careful than once dead.
+**tl;dr: "Better a thousand times careful than once dead."**
+```
 III. “Don't count your chickens before they hatch.”
 	Alright, so finally your code seems to be working. The little parts look okay. You are now ready to begin testing the functionality of your program in its entire scope—or at least a bigger part of it. Keep in mind that you might have to bounce back and forth (hopefully not too much) between II and III. Let me use a scenario in which a student is testing a program meant to mimic the functionality of `ls` in `bash`.
 	Here, you'll want to think of every possible situation that can arise when the specific section of your shell you are looking at is being used. This is where the test cases you thought of and wrote down (in your table) while researching what your program was meant to do, and while writing your program, come in handy. Consider asking the following questions and jot down what you come up with: 
