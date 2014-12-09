@@ -187,34 +187,31 @@ function downloadRepo {
     local clonedir="$1"
     local giturl="$2"
     local branch="$3"
-
     local dir=$(pwd)
 
     # download repo
     if [ ! -d "$clonedir" ]; then
         echo "  running git clone on [$giturl]"
-        #if [ -z "$branch" ]; then
-            git clone --quiet "$giturl" "$clonedir"
-        #else
-            #git clone -b "$branch" --quiet "$giturl" "$clonedir"
-        #fi
+		git clone --quiet "$giturl" "$clonedir"
+		cd "$clonedir"
+		local defaultbranch=`git branch -r | grep origin/HEAD | grep -o "[a-zA-Z0-9_-]*$"`
+        if [ ! -z "$branch" ] && [ $branch != $defaultbranch ]; then
+            git checkout "$branch" --quiet
+            git pull origin "$branch" --quiet > /dev/null 2> /dev/null
+        fi
+		cd "$dir"
     else
         echo "  running git pull in [$clonedir]"
         cd "$clonedir"
-        git pull origin $branch --quiet > /dev/null 2> /dev/null
-        cd "$dir"
-    fi
-
-    # switch branch
-    if [ ! -z "$branch" ]; then
-        cd "$clonedir"
-        if git show-ref --verify --quiet "refs/heads/$branch"; then
-            git checkout "$branch" --quiet
-            git pull origin "$branch" --quiet > /dev/null 2> /dev/null
-        else
-            git checkout -b "$branch" --quiet
-        fi
-        cd "$dir"
+		#if branch is zero, assign to it the deafult branch. 
+		if [ -z "$branch" ]; then
+			branch=`git branch -r | grep origin/HEAD | grep -o "[a-zA-Z0-9_-]*$"`
+		fi
+		#checkout the branch
+		git checkout "$branch" --quiet
+		#run git pull
+		git pull origin "$branch" --quiet > /dev/null 2> /dev/null
+		cd "$dir"
     fi
 }
 
