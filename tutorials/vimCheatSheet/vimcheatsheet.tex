@@ -1,0 +1,249 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+ 
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+\usepackage{fancyhdr}
+\usepackage{url}
+\usepackage{anysize}
+\marginsize{2pt}{2pt}{4pt}{4pt}
+\pagestyle{fancy}
+\renewcommand\headrule{}
+\rhead{UCR-CS100FALL}
+
+
+
+\begin{document}
+\begin{center}
+\Huge\textbf{Vim Cheatsheet}\\
+\large\textit{Itsuki David Fukada, Jesus Christian Reyes}
+\end{center}
+
+
+\begin{multicols}{2}
+\begin{center}
+\Large\textbf{Navigation}
+\end{center}
+\begin{description}
+\item[h] \hfill
+Left
+\item[j] \hfill 
+Down
+\item[k] \hfill
+Up
+\item[l] \hfill
+Right
+\item[gg] \hfill
+begin of the file
+\item[G] \hfill
+end of file
+\item[H] \hfill
+Top of visible page
+\item[M] \hfill
+Middle of visible page
+\item[L] \hfill
+Bottom of visible page
+\item[Ctrl-D] \hfill
+Scroll down
+\item[Crtl-U] \hfill
+Scroll Up
+\item[Ctrl-E] \hfill
+Scroll down one line
+\item[Ctrl-Y] \hfill
+Scroll up one line
+\item[:NUMBER] \hfill
+Go to line NUMBER
+\item[NUMBER + G] \hfill
+Go to line NUMBER (i.e.: 25G)
+\end{description}
+
+\columnbreak
+\begin{center}
+\Large\textbf{ ":" Commands}
+\end{center}
+
+\begin{description}
+\item[:q] \hfill
+Quit
+\item[:q!] \hfill
+Quit (Ignores changes made)
+\item[:w] \hfill
+Save
+\item[:wq (:x)] \hfill
+Save and quit
+\item[:w FILENAME] \hfill
+Saves into FILENAME
+\end{description}
+
+\begin{center}
+\Large\textbf{Searching}
+\end{center}
+
+\begin{description}
+\item[/TEXT] \hfill
+Search for TEXT
+\item[?TEXT] \hfill
+Search for TEXT backwards
+\item[n] \hfill
+Move to next word that matches
+\item[N] \hfill
+Move to previous word that matches
+\end{description}
+\end{multicols}
+
+\begin{multicols}{2}
+\begin{center}
+\Large\textbf{Colorschemes}
+\end{center}
+\begin{description}
+\item[:color \textless TAB \textgreater] \hfill
+Navigate through default colorschemes
+\newline
+*You can add colorschemes in \url{~/.vim/colors}
+\end{description}
+
+\columnbreak
+\begin{center}
+\Large\textbf{Inserting/Deletion}
+\end{center}
+\begin{description}
+\item[i] \hfill
+Insert mode at current cursor
+\item[I] \hfill
+Insert mode at beginning of line
+\item[a] \hfill
+Insert mode after the cursor
+\item[A] \hfill
+Insert mode at end of line.
+\item[x] \hfill
+Deletes the character at current cursor
+\item[dd] \hfill
+Deletes whole line
+\end{description}
+\end{multicols}
+
+\textbf{Format of command:}
+\begin{center}
+\Large\textbf{verb range motion}
+\end{center}
+\begin{center}
+\small{For example, if you use d2w, it will delete 2 words.}
+\end{center}
+\begin{center}
+\small{*If you do not use any range, it will automatically set it to 1.}
+\end{center}
+
+\begin{multicols}{2}
+\begin{center}
+\Large\textbf{Verb Movements}
+\end{center}
+\begin{description}
+\item[d] \hfill
+Delete
+\item[r] \hfill
+Replace
+\item[c] \hfill
+Delete + insert mode
+\end{description}
+
+\columnbreak
+\begin{center}
+\Large\textbf{Motions}
+\end{center}
+\begin{description}
+\item[w] \hfill
+Word
+\item[e] \hfill
+End of word
+\item[0 or \^] \hfill
+Beginning of line
+\item[\$] \hfill
+End of line
+\end{description}
+\end{multicols}
+\newpage
+
+\begin{multicols}{2}
+\begin{center}
+\Large\textbf{Substitution}
+\end{center}
+\begin{description}
+\item[:s/OLD/NEW/g] \hfill
+Replaces all inteances of OLD in current line and replaces with NEW
+\item[:\%s/OLD/NEW/g] \hfill
+Replaces all instances of OLD with NEW
+\item[:\%s/OLD/NEW/gc] \hfill
+Replaces all instances of old with new, but asks for confirmation
+\end{description}
+\columnbreak
+\begin{center}
+\Large\textbf{Tabs/Split}
+\end{center}
+\begin{description}
+\item[:tabe] \hfill
+Creates a new tab
+\item[:tabe FILENAME] \hfill
+Creates a new tab with name FILENAME
+\item[gt] \hfill
+Moves to next tab
+\item[gT] \hfill
+Moves to previous tab
+\end{description}
+
+\end{multicols}
+
+\begin{multicols}{2}
+\begin{center}
+\Large\textbf{Line Folding}
+\end{center}
+\begin{description}
+\item["Highlighted text" + zf] \hfill
+Folds highlighted text
+\item[zf "NUMBER" j] \hfill
+Creates folds from cursor down NUMBER lines
+\item[zf/STRING] \hfill
+Creates fold from cursor to STRING
+\item[zj] \hfill
+Move to next fold
+\item[zk] \hfill
+Move to previous fold
+\item[zo] \hfill
+Open fold at cursor
+\item[ZO] \hfill
+Open all folds
+\item[zm] \hfill
+Increase fold level by one
+\item[zM] \hfill
+Close all oepn folds
+\item[zr] \hfill
+Decrease fold level by one
+\item[zR] \hfill
+Decrease fold level to 0
+\item[zd] \hfill
+Delete fold at cursor
+\item[zD] \hfill
+Delete all folds
+\item[\texttt{[}z] \hfill
+Move to start of open fold
+\item[/z] \hfill
+Move to end of open fold
+\end{description}
+\columnbreak
+\begin{center}
+\Large\textbf{Useful Commands}
+\end{center}
+\begin{description}
+\item[:set autoindent] \hfill
+Automatically indents
+\item[:set nu or :set number] \hfill
+Show line number.
+\end{description}
+\end{multicols}
+
+
+
+
+\end{document}
+
+
