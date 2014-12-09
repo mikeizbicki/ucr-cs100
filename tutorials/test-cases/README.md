@@ -42,7 +42,7 @@ Does your system call work? Does `fork` create a parent a parent and child proce
 
 **tl;dr: "Better a thousand times careful than once dead."**
 
-III. “Don't count your chickens before they hatch.”
+IV. **_“Don't count your chickens before they hatch.”_**
 	
 	Alright, so finally your code seems to be working. The little parts look okay. You are now ready to begin testing the functionality of your program in its entire scope—or at least a bigger and more important part of it. Keep in mind that you might have to bounce back and forth (hopefully not too much) between _II_ and _III_. (See the example of how to use the table below for more on this)
 	
