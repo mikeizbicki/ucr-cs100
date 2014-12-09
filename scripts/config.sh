@@ -4,6 +4,8 @@
 # This script contains common configuration settings and functions.
 #
 
+cd $scriptdir
+
 # export all variables to subshells
 set -a
 
