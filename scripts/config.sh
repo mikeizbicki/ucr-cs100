@@ -193,27 +193,14 @@ function downloadRepo {
     # download repo
     if [ ! -d "$clonedir" ]; then
         echo "  running git clone on [$giturl]"
-        #if [ -z "$branch" ]; then
             git clone --quiet "$giturl" "$clonedir"
-        #else
-            #git clone -b "$branch" --quiet "$giturl" "$clonedir"
-        #fi
-    else
-        echo "  running git pull in [$clonedir]"
-        cd "$clonedir"
-        git pull origin $branch --quiet > /dev/null 2> /dev/null
-        cd "$dir"
     fi
 
     # switch branch
     if [ ! -z "$branch" ]; then
         cd "$clonedir"
-        if git show-ref --verify --quiet "refs/heads/$branch"; then
-            git checkout "$branch" --quiet
-            git pull origin "$branch" --quiet > /dev/null 2> /dev/null
-        else
-            git checkout -b "$branch" --quiet
-        fi
+        git checkout "$branch" --quiet
+        git pull origin $branch --quiet > /dev/null 2> /dev/null
         cd "$dir"
     fi
 }
