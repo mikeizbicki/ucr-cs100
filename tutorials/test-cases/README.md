@@ -73,5 +73,15 @@ There are quite a few resources and _debugging_[hyperlink here] tools out there 
 - `cppchecker`
 - GOOGLE
 
+tl;dr: Read it!
+
+V. An example
+Test Number | Test Name | Description | Commands | Steps | Expected Result | Actual Result | Comments | References
+------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 
 Good luck!
