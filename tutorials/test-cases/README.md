@@ -109,10 +109,10 @@ This is an example for a table that documents your test cases.
 
 I recommend a some sort of spread sheat for this table, since its a little more maneuverable than a table on Github or in _Vim_. However, you might find it a lot easier to write drafts of this table down in a notepad. And maybe your instructor will give you extra credit for a nice final draft of this table. (\*_cross fingers_\*). 
 
-The ultimate goal of this table is to keep track of your successful test cases, and your test cases pending, so you can rest assured knowing that one important test case you thought of while you were furiously typing away. It takes just a couple of seconds to write it down, and like a minute to fill in the rest of the row later after you are not in _the zone_. For cs100 students, you'll be thankful for it later if you're writing your test script in the waning minutes before your submission deadline for example.
+The ultimate goal of this table is to keep track of your successful test cases, and your test cases pending, so you can rest assured knowing that one important test case you thought of while you were furiously typing away is in a safe place where it won't ever be forgotten. It takes just a couple of seconds to write it down, and like a minute to fill in the rest of the row later after you are not in _the zone_. For cs100 students, you'll be thankful for it later if you're writing your test script in the waning minutes before your submission deadline for example.
 
 
-_Failed table_
+don't mind this, just a _Failed table_
 ###### # |Test Name | Description | Command(s) | Steps | Expected Result | Actual Result | Comments | References
        - | -------- | ----------- | ---------- | ----- | --------------- | ------------- | -------- | ----------
  1 | Simple `ls` | `ls` no flags or args | `bin/ls` | 1. Compile 2. run `bin/ls` | Prints out none hidden directory files | _Woops_ accidentally printed out hidden `.` files | Must not have check for no `-a` flag | ls.cpp, lines 197-217
