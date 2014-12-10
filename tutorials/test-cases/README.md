@@ -76,7 +76,7 @@ There are quite a few resources and _debugging_[hyperlink here] tools out there 
 tl;dr: Read it!
 
 V. An example
-Test Number | Test Name | Description | Commands | Steps | Expected Result | Actual Result | Comments | References
+######Test Number | Test Name | Description | Commands | Steps | Expected Result | Actual Result | Comments | References
 ------------------------------------------------------------------------------------------------------------------
 
 
