@@ -13,7 +13,7 @@ I. **_“If you are not trying to break your program, you probably didn't write 
 II. **_“You must learn to bark before you can howl with coyotes.”_**
 
 Before I get into how to write good test cases, I will reiterate something we all should already know, yet have the tendency to keep on doing for some crazy reason (if you are a student, maybe you _just_ started on the piece of your project that is due tomorrow. I have been there, done that!) : 
-  > Before you write code, know what the heck you are doing! 
+	Before you write code, know what the heck you are doing! 
     
 At this point, if you are working on this project then you probably know your way around `C++` (or whatever other language you are using) and certain algorithms pretty well. But *are you you comfortable with* `C`? Specifically, *POINTERS*.  What do you know about *system calls* (these require knowledge of `C`), and which are needed to accomplish what you are trying to do? How the heck will you take in user input? _Parse_ input?? *Error checking*, who???? What in the world do *_forks_* have to do with this assignment?? You get the point. 
     
