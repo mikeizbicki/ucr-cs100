@@ -16,7 +16,7 @@ Let's get started!
 -----------------------------------
 First of all, you must open the terminal. You can find the terminal by clicking Applications -> System -> Terminal. 
 
-From this point on, you will be using the mouse as little as possible! Programming as efficiently as possible is one of the main virtues of Unix culture. That means limiting your mouse usage in favor of keyboard usage.
+From this point on, you will be using the mouse as little as possible! Efficient programming is one of the main virtues of Unix culture. That means limiting your mouse usage in favor of keyboard usage.
 
 **IMPORTANT:** Before you run any commands, type the following into the terminal:
 ```
