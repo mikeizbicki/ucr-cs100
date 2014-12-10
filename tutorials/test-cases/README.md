@@ -3,7 +3,7 @@
 
 I. **_“If you are not trying to break your program, you probably didn't write a good one”_**
 
-What are test cases? What is their purpose? What is its purpose?
+What are test cases? What is their purpose? Why are they important?
 
 A test case is something that is meant to check whether or not a program does what it should be doing. It's you being a good programmer.
      
