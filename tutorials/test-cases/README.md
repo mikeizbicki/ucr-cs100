@@ -78,7 +78,7 @@ tl;dr: Read it!
 V. An example
 ######  | Test Name | Description | Command(s) | Steps | Expected Result | Actual Result | Comments | References
 ------- | --------- | ----------- | ---------- | ----- | --------------- | ------------- | -------- | ---------
-1|Simple `ls`|`ls` no flags or args|`bin/ls`|1. Compile 2. run `bin/ls`|Prints out none hidden directory files| _Woops_ accidentally printed out hidden `.` files|Must not have check for no `-a` flag|ls.cpp, lines 197-217|
+ 1 | Simple `ls` | `ls` no flags or args | `bin/ls` | 1. Compile 2. run `bin/ls` | Prints out none hidden directory files | _Woops_ accidentally printed out hidden `.` files | Must not have check for no `-a` flag | ls.cpp, lines 197-217 |
 
 
 
