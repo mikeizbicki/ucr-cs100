@@ -14,13 +14,13 @@ By the end of this lab, you will be able to execute basic commands in the BASH t
 
 Terms and Definitions
 -----------------------------------
-Shell: An interface for the terminal that allows for interaction between the computer and the user. In this class, we will be using the BASH Unix shell. 
+**Shell:** An interface for the terminal that allows for interaction between the computer and the user. In this class, we will be using the BASH Unix shell. 
 
-Terminal: For the sake of this lab, the "terminal" is the program that the user will run to type in commands. Used interchangably with "shell" and "command line".
+**Terminal:** For the sake of this lab, the "terminal" is the program that the user will run to type in commands. Used interchangably with "shell" and "command line".
 
-Command Line: The command line is a way for the user to interact with the computer through various text commands. Used interchangably with "shell" and "terminal".
+**Command Line:** The command line is a way for the user to interact with the computer through various text commands. Used interchangably with "shell" and "terminal".
 
-Directory: A directory is like a folder. It holds files and other directories.
+**Directory:** A directory is like a folder. It holds files and other directories.
 
 
 
