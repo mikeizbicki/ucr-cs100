@@ -14,7 +14,7 @@ By the end of this lab, you will be able to execute basic commands in the BASH t
 
 Terms and Definitions
 -----------------------------------
-**<your username>:** In this lab, whenever you see <your username>, simply replace it with your UCR ID. An example username is `mjord023`.
+**<your username>:** In this lab, whenever you see `<your username>`, simply replace it with your UCR ID. An example username is `mjord023`.
 **Shell:** An interface for the terminal that allows for interaction between the computer and the user. In this class, we will be using the BASH Unix shell. 
 
 **Terminal:** For the sake of this lab, the "terminal" is the program that the user will run to type in commands. Used interchangably with "shell" and "command line".
