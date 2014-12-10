@@ -17,7 +17,7 @@ Before I get into how to write good test cases, I will reiterate something we al
     
 At this point, if you are working on this project then you probably know your way around `C++` (or whatever other language you are using) and certain algorithms pretty well. But *are you you comfortable with* `C`? Specifically, *POINTERS*.  What do you know about *system calls* (these require knowledge of `C`), and which are needed to accomplish what you are trying to do? How the heck will you take in user input? _Parse_ input?? *Error checking*, who???? What in the world do *_forks_* have to do with this assignment?? You get the point. 
     
-    It will save a lot of **pseudo work** [insert hyper link to Cal Newport blog here] and precious time (**Time Arbitration** is key [insert hyper link to 'Time Arbitration' piece] in the long run ). 
+It will save a lot of **pseudo work** [insert hyper link to Cal Newport blog here] and precious time (**Time Arbitration** is key [insert hyper link to 'Time Arbitration' piece] in the long run ). 
 
 While you do this, feel free to fill in some sections of the test cases table (see the example table below). This will get you thinking about how you will write your program, and will ultimately help you with your test cases later. 
 
