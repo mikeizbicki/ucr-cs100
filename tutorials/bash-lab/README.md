@@ -31,3 +31,14 @@ $ cs100
 A pretty window will pop up confirming that you have enabled CS100 settings. Don't forget this step! It's crucial and will save you plenty of headache throughout this quarter.
 
 Every time you open a new terminal, you must ssh into hammer and enable CS100 settings.
+
+PWD (Print Working Directory)
+------------------------------------
+The first command you will learn is `pwd`. PWD stands for "Print Working Directory" and will output the current directory you are in to the screen. Since you just typed in the ssh command, you should be in the HOME directory. Try it out!
+```
+$ pwd
+```
+The output should look something like this:
+```
+home/csmajs/<your username>
+```
