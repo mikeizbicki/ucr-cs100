@@ -57,3 +57,29 @@ The output should look something like this:
 home/csmajs/<your username>
 ```
 You may have noticed the `$` that gets outputted after a command is run. This simply means that the terminal is expecting an input from the user.
+
+PWD is a useful command that helps you navigate through different directories quickly. If you're lost and you don't know which directory you are in, call PWD! 
+
+LS (list files)
+------------------------------------
+Now you know what directory you're in, don't you want to know what files are inside this directory? `ls` does the job!
+Try typing the following:
+```
+$ ls
+$ ls -a
+$ ls -l
+$ ls Desktop
+```
+The `-a` and `-l` are flags. Most commands come with optional parameters that change how they function. `ls` by itself with simply output the files and directories in the current directory. 
+
+`ls Desktop` will output the files and directories in the `Desktop` directory.
+
+Here are some flags!
+`ls -a`: prints all the files and directories, even if they are hidden such as `.` and `..`
+`ls -l`: prints all the files and directories and gives detailed information including permissions, date last modified, and many more!
+`ls -R`: prints all the files and directories, and those in each directory in it. Think of it as a binary search tree! This command will output every node in the tree.
+`ls -t`: prints all the files and directories and sorts them in order of the date last modified. The most recent will appear first.
+
+These flags can be combined such as `ls -tla` or `ls -aR` and multiple files/directories can also be passed in as parameters.
+
+You will be using `ls` and `pwd` a lot in this lab and throughout the quarter so get used to them! 
