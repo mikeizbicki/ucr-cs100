@@ -28,6 +28,6 @@ Once you are in hammer, you must set the settings to CS100, simply type:
 ```
 $ cs100
 ```
-A pretty window will pop up confirming that you have enabled CS100 settings. Don't forget this step! It's crucial and will save you plenty of headache.
+A pretty window will pop up confirming that you have enabled CS100 settings. Don't forget this step! It's crucial and will save you plenty of headache throughout this quarter.
 
 Every time you open a new terminal, you must ssh into hammer and enable CS100 settings.
