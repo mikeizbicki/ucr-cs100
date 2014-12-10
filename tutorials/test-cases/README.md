@@ -2,17 +2,14 @@
 *A short explanation for students and curious programmers taking on such a project*
 
 I. **_“If you are not trying to break your program, you probably didn't write a good one”_**
-  
-  What is a test case?
-      A test case is something that is meant to check whether or not a program does what it should be doing. It's
-      you being a good programmer.
-      
-  What is its purpose?
-      
-  Why are they important?
-      In 1998, NASA's _Mars Climate Orbiter_ was tasked with looking for water on Mars
-      (among other things), but some of the programmers of this space vessel had been working SI units while others       had been working in English units. The result? The thrusters were 4.45 times more powerful than they should        have been and this $327.6 million project is now lost in space, most likely in pieces. Talk about a failed 
-      test case >_< Sure we are not dealing with million dol
+
+What are test cases? What is their purpose? What is its purpose?
+
+A test case is something that is meant to check whether or not a program does what it should be doing. It's you being a good programmer.
+     
+In 1998, NASA's _Mars Climate Orbiter_ was tasked with looking for water on Mars (among other things), but some of the programmers of this space vessel had been working SI units while others had been working in English units. The result? The thrusters were 4.45 times more powerful than they should have been and this $327.6 million project is now lost in space, *for ever*. Talk about a failed test case >\_< And these were *NASA* programmers. You can imagine how *buggy* our programs might be. Bugs are inevitable at whatever the level of a programmer (I recently updated my phone to Android 5.0 and my Chrome broswer and Messenger are *always* crashing!!). 
+
+It's important to catch these failed test cases and fix them before they come back to bite is in the behind (before they affect our **GRADES**). Basically, we want to know where our program works, where it could use a little more work, and where its limitations are. This tutorial will hopefully get you thinking about how to do this.
 
 II. **_“You must learn to bark before you can howl with coyotes.”_**
 
