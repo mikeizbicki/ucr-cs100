@@ -12,6 +12,18 @@ Linux programmers primarily use the command line to interact with the computer a
 
 By the end of this lab, you will be able to execute basic commands in the BASH terminal to create, move, and delete files and directories, as well as a few other useful functions.
 
+Terms and Definitions
+-----------------------------------
+Shell: An interface for the terminal that allows for interaction between the computer and the user. In this class, we will be using the BASH Unix shell. 
+
+Terminal: For the sake of this lab, the "terminal" is the program that the user will run to type in commands. Used interchangably with "shell" and "command line".
+
+Command Line: The command line is a way for the user to interact with the computer through various text commands. Used interchangably with "shell" and "terminal".
+
+Directory: A directory is like a folder. It holds files and other directories.
+
+
+
 Let's get started!
 -----------------------------------
 First of all, you must open the terminal. You can find the terminal by clicking Applications -> System -> Terminal. 
@@ -42,3 +54,4 @@ The output should look something like this:
 ```
 home/csmajs/<your username>
 ```
+You may have noticed the `$` that gets outputted after a command is run. This simply means that the terminal is expecting an input from the user.
