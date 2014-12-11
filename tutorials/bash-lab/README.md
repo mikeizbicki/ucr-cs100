@@ -148,6 +148,9 @@ The command `rmdir` will delete a directory as long as it is empty. Type the fol
 $ rmdir temp
 ```
 Now that you deleted your directory, make a new directory called `CS`.
+```
+$ mkdir CS
+```
 
 Let's move on to a new comman- What's that? `CS` is still the wrong directory name? Ok, the next command we'll go over is a more efficient method than deleting and creating a new directory. Besides, Unix is all about efficiency right?
 
