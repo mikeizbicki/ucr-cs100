@@ -101,6 +101,7 @@ These flags can be combined such as `ls -tla` or `ls -aR` and multiple files/dir
 You will be using `ls` and `pwd` a lot in this lab and throughout the quarter so get used to them! 
 
 **Exercises:**
+
 1. Write a command that prints all files and folders in the existing folders `Pictures` and `Music`.
 2. Write a command that prints all files and folders in your parent directory.
 3. Write a command that prints all files and folders, including hidden ones, with detailed information, sorted in chronological order. You may only pass in one parameter.
@@ -200,9 +201,10 @@ It's quite empty in here right? Let's furnish it with some files. Create a new f
 Now lets go back to the directory you were just in previously! How do you go back one directory? That's your exercise!
 
 **Exercise:**
+
 6. Write a command that changes directories to your parent directory.
 
-If you haven't run that command yet, you should do so. You are now in the parent directory for `CS100`. Type `pwd` and you will see something along the lines of...
+If you haven't run that command yet, you should do so. **Do not move on unil you do so.** You are now in the parent directory for `CS100`. Type `pwd` and you will see something along the lines of...
 ```
 home/csmajs/<your username>
 ```
