@@ -1,13 +1,117 @@
 #Using Linux command easier
 
-The 9 tricks people should know about linux command.
+The 10 tricks people should know about linux command.
 Note: these tricks apply to bash, which is the default shell on most Linux systems.
 
 ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 
 
-## 1. find ( a powerful tool)
+## 1. Manage files
+
+One important and required skill for a Linux user is how efficiently create, copy and delete files and directories.
+
+To create an empty file, type:
+	
+	$ touch filename.txt
+
+Is always a good practice to write the extension of your file such as .txt, .c, .cpp or any other you might find useful.
+
+To create a directory, type:
+
+	$ mkdir dirname
+
+The word mkdir stands for Make Directory. It is simple as that to use and remember.
+
+Copying files is also an easy and straight forward command. You can copy a source or multiples into a directory, using the 'cp' command:
+
+	$ cp file.txt newfile.txt
+	$ cp lion.png my_dir
+	$ cp file.txt newfile.txt my_dir
+	$ cp -r pics my_dir
+
+In the first example we are simply copying our 'file.txt' into our 'newfile.txt', following the pattern cp SOURCE DEST; The next command places a copy of an image named 'lion.png' into a directory; The third example we have multiple sources being placed inside the directory.
+
+Remember the last parameter should always be our destination.
+
+In the last example we are using the flag -r setting the 'cp' command as recursive. So in the fourth line we are copying the 'pics' directory and everything that has inside and copying it to 'my_dir'.
+
+There are two basic commands to delete that you should know. The 'rm' and 'rmdir' commands, remove and remove directory respectively:
+
+	$ rm file.txt
+	$ rmdir my_dir
+
+ATTENTION: The 'rmdir' command will only delete empty directories. In order to delete a whole directory full of useless documents, type:
+
+	$ rm -rf my_dir
+
+Passing -r flag refers to 'remove directories and their contents recursively'.
+The -f flag stands for 'force' referring to 'ignore nonexistent files, never prompt'.
+
+
+## 2. Getting help
+
+It is not a shame to ask for help while using linux. Even for those experts using shell there will always be a flag or maybe a command that causes headaches into their brilliant minds. So one of the best tips we could give you is about getting the help you need.
+
+Let's pretend you want to use the 'mv' command, but you are afraid of losing files. Before you start you could type:
+	
+	$ mv --help
+
+	or
+	
+	$ mv --h
+
+A lot of information will be displayed in the terminal, and that can be boring for you to go over everything. To simplify your life you could filter the output by piping it and using the 'grep' command. As you are afraid of losing files let's filter by "overwrite" word:
+	
+	$ mv --help | grep overwrite
+
+Now you probably have only two sentences displayed in your screen. Now, use the commands with the appropriate flags and be happy!
+
+
+Keeping the 'mv' command as example, another powerful way of getting help is through reading the manual. Often referred to as "man pages". You can find it easily on the internet. But in case some catastrophe happened with the internet and then you are no longer connected the easiest way to do it is typing:
+
+	$ man mv
+
+That would lead you the mv manual which has much more information than --help flag.
+
+## 3. Using History
+
+Shell keeps track of all yours previous typed commands. Accessing and using it can be a very good ally for beginners and also save you some typing time. First, let's use the command:
+
+	$ history
+
+It displays in your screen all your previous commands ordered by a sequential number. You can use this command just to remember something you type days ago and now you need to run it again. Now, here is the trick. Once you know the number attached in your desired typed command or the position in the list you don't need to type it again. Just run:
+
+	$ !622
+
+In the example above I am running my 622th command which in my case is a 'ls -l'. Notice that shell is now adding 'ls -l' as my last command and not '!622'. Change that number by whatever you need.
+
+Another way of running previous commands without typing it is by position:
+	
+	$ !-3
+
+Running that command shell will run whatever you typed three commands ago. Pretend that you used a command but you forgot to run as super user. You could apply our last example adding the word 'sudo' in the beginning:
+
+	$ sudo !-1
+
+So instead of typing the long command all along bash do it for you. Use that tip tu set different flags as well.
+
+# 3.1 Configure your history
+
+Another thing you should be aware of is that you can actually clean your tracks or make the usage of the 'history' easier for you:
+
+	$ history -c
+
+	$ HISTSIZE=0
+
+These are three simple commands that you use and apply to your history. The first example using the -c flag clears your history.
+
+The next command we are actually changing a variable related to the 'history' command settings.
+
+HISTSIZE is related to how many commands you want to keep track. Setting is to 0 we are actually disabling the function. If you want to re-enable type a value different from 0.
+
+
+## 4. find ( a powerful tool)
 
 ![find: powerful tool](http://funnystack.com/wp-content/uploads/2014/04/Funny-Horse-44.jpg)
 
@@ -30,7 +134,7 @@ Next we will search the whole system for any files named "foo" and display their
 
 
 
-## 2. Special characters (need to know)
+## 5. Special characters (need to know)
 
 ![special: need to know](http://blog.zeronana.info/katsuo/wp-content/uploads/2011/05/facebook_smileys.jpg)
 
@@ -55,7 +159,7 @@ So you see, quoting is a good habit to prevent your commands and scripts from do
 
 
 
-## 3. Process Substitution: save you some time
+## 6. Process Substitution: save you some time
 
 ![efficiency, all I care](http://1funny.com/wp-content/uploads/2009/07/efficient-truck-transport.jpg)
 
@@ -89,7 +193,7 @@ disappears.
 
 
 
-## 4. Ctrl+U and Ctrl+Y: backup command
+## 7. Ctrl+U and Ctrl+Y: backup command
 
 ![backup always userful](http://www.yoyoshare.com/wp-content/uploads/images/culture/80.jpg)
 
@@ -111,7 +215,7 @@ Great tricks!!
 
 
 
-## 5. A simple calculator
+## 8. A simple calculator
 
 ![calculator important sometimes](http://www.mathfunny.com/images/mathpics-mathjoke-mathmeme-pic-joke-math-meme-haha-funny-humor-pun-lol-calculator.jpg)
 
@@ -155,7 +259,7 @@ logarithm!
 
 ![Make life easier](http://www.chronic-illness.org/images/making_life_easier.jpg)
 
-## 6. Converting
+## 9. Converting
 
 Convert documents and pictures are a very simple task that can be done manually... Now imagine that you need to convert a whole directory with hundreds of pictures.
 How would you do that?
@@ -180,7 +284,7 @@ Another trick you should be aware of is the for loop. In the bash shell it won't
 
 Imagemagick has also a lot of others functionalities like resizing, flipping, changing quality or joining images that may help you to play a little bit with image-processing.
 
-## 7. Replacing words
+## 10. Replacing words
 
 Pretend that you messed up an important document with a misspelled word and you just realized it was wrong 5 minutes before you actually need to present it.
 
@@ -217,68 +321,3 @@ Or to make it global and replace all the occurrences:
 
 	:%s/wrong/right/g
 
-## 8. Manage files
-
-One important and required skill for a Linux user is how efficiently create, copy and delete files and directories.
-
-To create an empty file, type:
-	
-	$ touch filename.txt
-
-Is always a good practice to write the extension of your file such as .txt, .c, .cpp or any other you might find useful.
-
-To create a directory, type:
-
-	$ mkdir dirname
-
-The word mkdir stands for Make Directory. It is simple as that to use and remember.
-
-Copying files is also an easy and straight forward command. You can copy a source or multiples into a directory, using the 'cp' command:
-
-	$ cp file.txt newfile.txt
-	$ cp lion.png my_dir
-	$ cp file.txt newfile.txt my_dir
-	$ cp -r pics my_dir
-
-In the first example we are simply copying our 'file.txt' into our 'newfile.txt', following the pattern cp SOURCE DEST; The next command places a copy of an image named 'lion.png' into a directory; The third example we have multiple sources being placed inside the directory.
-
-Remember the last parameter should always be our destination.
-
-In the last example we are using the flag -r setting the 'cp' command as recursive. So in the fourth line we are copying the 'pics' directory and everything that has inside and copying it to 'my_dir'.
-
-There are two basic commands to delete that you should know. The 'rm' and 'rmdir' commands, remove and remove directory respectively:
-
-	$ rm file.txt
-	$ rmdir my_dir
-
-ATTENTION: The 'rmdir' command will only delete empty directories. In order to delete a whole directory full of useless documents, type:
-
-	$ rm -rf my_dir
-
-Passing -r flag refers to 'remove directories and their contents recursively'.
-The -f flag stands for 'force' referring to 'ignore nonexistent files, never prompt'.
-
-## 9. Getting help
-
-It is not a shame to ask for help while using linux. Even for those experts using shell there will always be a flag or maybe a command that causes headaches into their brilliant minds. So one of the best tips we could give you is about getting the help you need.
-
-Let's pretend you want to use the 'mv' command, but you are afraid of losing files. Before you start you could type:
-	
-	$ mv --help
-
-	or
-	
-	$ mv --h
-
-A lot of information will be displayed in the terminal, and that can be boring for you to go over everything. To simplify your life you could filter the output by piping it and using the 'grep' command. As you are afraid of losing files let's filter by "overwrite" word:
-	
-	$ mv --help | grep overwrite
-
-Now you probably have only two sentences displayed in your screen. Now, use the commands with the appropriate flags and be happy!
-
-
-Keeping the 'mv' command as example, another powerful way of getting help is through reading the manual. Often referred to as "man pages". You can find it easily on the internet. But in case some catastrophe happened with the internet and then you are no longer connected the easiest way to do it is typing:
-
-	$ man mv
-
-That would lead you the mv manual which has much more information than --help flag.
