@@ -9,6 +9,8 @@ Note: these tricks apply to bash, which is the default shell on most Linux syste
 
 ## 1. Manage files
 
+![Image of Morpheu](http://www.officevibe.com/wp-content/uploads/2014/01/Flat-Hierarchy-Meme.jpg)
+
 One important and required skill for a Linux user is how efficiently create, copy and delete files and directories.
 
 To create an empty file, type:
@@ -49,7 +51,11 @@ Passing -r flag refers to 'remove directories and their contents recursively'.
 The -f flag stands for 'force' referring to 'ignore nonexistent files, never prompt'.
 
 
+
+
 ## 2. Getting help
+
+![Image of Help](http://www.troll.me/images/facepalm-picard/you-need-help-thumb.jpg)
 
 It is not a shame to ask for help while using linux. Even for those experts using shell there will always be a flag or maybe a command that causes headaches into their brilliant minds. So one of the best tips we could give you is about getting the help you need.
 
@@ -74,7 +80,12 @@ Keeping the 'mv' command as example, another powerful way of getting help is thr
 
 That would lead you the mv manual which has much more information than --help flag.
 
+
+
+
 ## 3. Using History
+
+![Image of GOT](http://www.troll.me/images/boromir/pass-history-exam.jpg)
 
 Shell keeps track of all yours previous typed commands. Accessing and using it can be a very good ally for beginners and also save you some typing time. First, let's use the command:
 
@@ -96,7 +107,7 @@ Running that command shell will run whatever you typed three commands ago. Prete
 
 So instead of typing the long command all along bash do it for you. Use that tip tu set different flags as well.
 
-# 3.1 Configure your history
+#### 3.1 Configure your history
 
 Another thing you should be aware of is that you can actually clean your tracks or make the usage of the 'history' easier for you:
 
@@ -109,6 +120,8 @@ These are three simple commands that you use and apply to your history. The firs
 The next command we are actually changing a variable related to the 'history' command settings.
 
 HISTSIZE is related to how many commands you want to keep track. Setting is to 0 we are actually disabling the function. If you want to re-enable type a value different from 0.
+
+
 
 
 ## 4. find ( a powerful tool)
@@ -257,9 +270,12 @@ uses that amount by default, but you can increase or decrease it as you like. Fi
 executing `$ man bc`(remember, always a good choice). It even supports more advanced mathematical functions, such as the arctangent or the natural 
 logarithm!
 
-![Make life easier](http://www.chronic-illness.org/images/making_life_easier.jpg)
+
+
 
 ## 9. Converting
+
+![Image of a priest](http://catholicmemes.com/wp-content/uploads/2012/11/14144_132533646896386_329999885_n.png)
 
 Convert documents and pictures are a very simple task that can be done manually... Now imagine that you need to convert a whole directory with hundreds of pictures.
 How would you do that?
@@ -284,7 +300,12 @@ Another trick you should be aware of is the for loop. In the bash shell it won't
 
 Imagemagick has also a lot of others functionalities like resizing, flipping, changing quality or joining images that may help you to play a little bit with image-processing.
 
+
+
+
 ## 10. Replacing words
+
+![Image about words](http://commbasics.typepad.com/.a/6a00d83458a0a553ef01b7c6d4e3f1970b-pi)
 
 Pretend that you messed up an important document with a misspelled word and you just realized it was wrong 5 minutes before you actually need to present it.
 
