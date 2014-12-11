@@ -140,3 +140,5 @@ cout << underline << bold << red << yellowHL << "Hello World!" << endl";
 This will print "Hello World!" in red, withc yellow highlighting, underlined, and bolded.
 
 So thats a small taste of what you can do with ANSI. If you followed this tutorial and cannot get the ANSI formatting to work, it is possible you are using a console that does not support those features. I am using the default terminal that comes with Debian and everything works fine. The console that comes with Code::Blocks on Windows however, does not support ANSI. A common symptom of a console that does not support ANSI is junk characters being printed.
+
+I've included a header file called *ANSIfontUtils.h* that contains strings for all of the ANSI codes for font coloring and highlighting, underlining, bolding, and resetting colors to terminal defaults. It also contains functions that apply those ANSI codes to strings automatically. Feel free to use it to spice up your output!
