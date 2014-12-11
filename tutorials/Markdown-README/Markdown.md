@@ -135,3 +135,16 @@ Example usage:
             <td>too many</td>
         </tr>
     </table>
+    
+Result:
+
+<table>
+    <tr>
+        <th>Dogs</th>
+        <th>Cats</th>
+    </tr>
+    <tr>
+        <td>not enough</td>
+        <td>too many</td>
+    </tr>
+</table>
