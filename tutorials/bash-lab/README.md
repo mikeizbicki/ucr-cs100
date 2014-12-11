@@ -281,7 +281,7 @@ You can use this power for evil and make a command that deletes all of the files
 
 **Exercise:**
 
-7. **DO NOT RUN THIS COMMAND** Write a command that removes all files in your computer. 
+7. Write a command that removes all files in your computer. 
 
 cat (concatenate)
 -----------------------------
