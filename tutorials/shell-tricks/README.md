@@ -9,7 +9,7 @@ Note: these tricks apply to bash, which is the default shell on most Linux syste
 
 ## 1. Manage files
 
-![Image of office](http://backpacktactics.com/wp-content/uploads/2011/04/office-paper.jpg)
+![Image of office](http://backpacktactics.com/wp-content/uploads/2011/04/office-paper.jpg =638x464)
 
 One important and required skill for a Linux user is how efficiently create, copy and delete files and directories.
 
