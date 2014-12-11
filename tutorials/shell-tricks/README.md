@@ -1,6 +1,6 @@
 #Using Linux command easier
 
-The 5 tricks people should know about linux command.
+The 7 tricks people should know about linux command.
 Note: these tricks apply to bash, which is the default shell on most Linux systems.
 
 ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
@@ -154,4 +154,58 @@ executing `$ man bc`(remember, always a good choice). It even supports more adva
 logarithm!
 
 ![Make life easier](http://www.chronic-illness.org/images/making_life_easier.jpg)
+
+## 6. Converting
+
+Converting documents and pictures are a very simple task that can be done manually... Now imagine that you need to convert a whole directory with hundreds of pictures.
+How would you do that?
+
+Using the 'convert' command is the easiest way to accomplish that. This command  is a member of the imagemagick suite of tools so you might have to install it by simply running the command:
+
+	$ sudo apt-get install imagemagick
+
+As a first example let's convert one image named lion in the .jgp format to .png:
+	
+	$ convert lion.jpg lion.png
+
+Now, if we put the command inside a loop with the right following commands we can actually change all files inside a directory from a format to another:
+
+	$ for f in *.jpg; do
+	 convert ./"$f" ./"${f%.jpg}.pdf"
+	 done
+
+That can be done because instead of a name we are setting a varible $f with a special character * to replace it by whatever other sequence of character ending with .jpg appear in the directory. Once the variable assume a file name we use that as the first parameter and then we only replace the extension file to our desired one as a second argument which would be .pdf.
+
+Imagemagick has also a lot of others functionalities like resizing, flipping, changing quality or join images that may help you to play a little bit with image-processing.
+
+## 7. Replacing words
+
+Pretend that you messed up an important document with a mispelled word that you just realized it was wrong 5 minutes before you actually need to present it.
+
+Relax your problems are over now, you can fix it in one line using the 'sed' command!
+
+Sed stands for Stream EDitor and can be very usefull when passing the right flags to it.
+
+If you type:
+
+	$ sed 's/hello/goodbye/'
+
+Shell will take your stdin and send to stdout changing the first occurence of hello to goodbye.
+
+To solve our previous problem about the wrong word in a file we should type:
+
+	$ sed -i 's/wrong/right/g' file.txt
+
+The flag -i will save back to your original file and not output anything.
+The g letter stands for global, what will make replace all occurences of the 'wrong' word.
+file.txt is the name of your actual file, that you want to modify.
+
+Remember that you can use the same command with a similar syntaxe in vim what could help you to write code, change variable names etc.
+In vim, type:
+
+	:s/wrong/right/
+
+Or to make it global and replace all the occurences:
+
+	:%s/wrong/right/g
 
