@@ -228,7 +228,7 @@ $ cp main.cpp CS100/mainbro.cpp
 ```
 Lets check our progress in the `CS100` directory with:
 ```
-ls CS100
+$ ls CS100
 ```
 Your `CS100` directory should currently contain the files `main.cpp` and `mainbro.cpp`
 
