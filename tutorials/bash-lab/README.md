@@ -23,7 +23,8 @@ Terms and Definitions
 **Command Line:** The command line is a way for the user to interact with the computer through various text commands. Used interchangably with "shell" and "terminal".
 
 **Directory:** A directory is like a folder. It holds files and other directories.
-**Unix:** 
+
+**Unix:** This lab refers to Unix as the "Unix Philosophy". It emphasizes proper programming etiquette. 
 
 
 
@@ -261,7 +262,13 @@ As you can see, this directory is now empty and can be deleted with `rmdir`.
 
 With great power comes great responsibilities!
 
-You can use this power for evil and make a command that deletes all of the files in your computer. In fact, that's your next exercise!
+You can use this power for evil and make a command that deletes all of the files in your computer. In fact, that's your next exercise! This one might need a bit of research...
+
+**DO NOT RUN THIS COMMAND**
+
+**DO NOT RUN THIS COMMAND**
+
+**DO NOT RUN THIS COMMAND**
 
 **Exercise:**
 
@@ -291,7 +298,39 @@ connectors
 ------------------------------------
 Finally, a more efficant way to quickly run all the commands you've learned is the use of connectors `;`, `&&`, `||`
 The `;` connector will execute every command separated by `;`. 
-The `&&` connector functions similarly to the && comparison operator in C++, it will execute the next command as long as the previous command suceeded.
-The `||` connector functions similarly to the || comparison operator in C++, it will execute commands as long as the previous command failed.
-Using these connectors, we can greatly increase the efficency of our experience with the bash terminal.
 
+The `&&` connector functions similarly to the && comparison operator in C++, it will execute the next command as long as the previous command suceeded.
+
+The `||` connector functions similarly to the || comparison operator in C++, it will execute commands as long as the previous command failed.
+
+When using multiple connectors, using paretheses is extremely important because it tells the computer which order to execute multiple commands.
+
+Using these connectors, we can greatly increase the efficency of our experience with the bash terminal. Try some of these out!
+
+Let's Recap!
+---------------------------------------
+- `pwd` outputs the current directory.
+- `ls` outputs all of the files/directories in the current directory.
+- `touch` creates a file
+- `mkdir` creates a repository
+- `rmdir` removes a repository
+- `mv` moves files
+- `cd` changes directories
+- `cp` copies files
+- `rm` removes files
+- `cat` outputs contents of a file into stdout
+- `man` gives detailed descriptions of commands
+- `.` is the current directory
+- `..` is the parent directory
+
+Final Exercises!
+-------------------------------------------
+By now, you should have finished 7 exercises! In order to show your proficiency with bash commands, we will test you with several more advanced exercises.
+
+8. Write a command that removes a file called `gumwrapper`. If it does not exist, create a file called `gumwrapper` and move it to an existing directory called `trash`. Connectors are allowed.
+
+9. Write a command that creates a directory called `sports`. If sports already existed, do nothing. Otherwise, move the existing file `baseball.txt` from your parent directory into `sports`. The parent directory should not have `baseball.txt` after running this command. There are two ways to do this. Connectors are allowed.
+
+10. Assuming you are not in your HOME directory, write a command that prints out all of the files and directories in your HOME directory. You are not allowed to use connectors or the `cd` command.
+
+Once you are done with all 10 exercises, your TA will come over to review your answers. 
