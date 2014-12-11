@@ -16,7 +16,7 @@ Terms and Definitions
 -----------------------------------
 `<your username>`: In this lab, whenever you see `<your username>`, simply replace it with your UCR username. An example username is `kwest001`.
 
-**Shell:** An interface for the terminal that allows for interaction between the computer and the user. In this class, we will be using the Bash Unix shell. 
+**Shell:** An interface for the terminal that allows for interaction between the computer and the user. In this class, we will be using the Bash shell. 
 
 **Terminal:** For the sake of this lab, the "terminal" is the program that the user will run to type in commands. Used interchangably with "shell" and "command line".
 
