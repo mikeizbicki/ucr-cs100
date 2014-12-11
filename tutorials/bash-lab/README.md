@@ -1,8 +1,8 @@
-# Introduction to the BASH Command Line
+# Introduction to the Bash Command Line
 
 Purpose of this lab
 ------------------------------------
-This lab will familiarize CS 100 students with the command line as they transition from using visual displays on Windows and OS X to the Linux BASH shell.
+This lab will familiarize CS 100 students with the command line as they transition from using visual displays on Windows and OS X to the Linux Bash shell.
 
 Introduction
 ------------------------------------
@@ -10,13 +10,13 @@ Only 1.41% of all desktop and laptop computers run Linux as the primary operatin
 
 Linux programmers primarily use the command line to interact with the computer and this may seem foreign to Windows and Mac users. 
 
-By the end of this lab, you will be able to execute basic commands in the BASH terminal to create, move, and delete files and directories, as well as a few other useful functions.
+By the end of this lab, you will be able to execute basic commands in the Bash terminal to create, move, and delete files and directories, as well as a few other useful functions.
 
 Terms and Definitions
 -----------------------------------
 `<your username>`: In this lab, whenever you see `<your username>`, simply replace it with your UCR username. An example username is `kwest001`.
 
-**Shell:** An interface for the terminal that allows for interaction between the computer and the user. In this class, we will be using the BASH Unix shell. 
+**Shell:** An interface for the terminal that allows for interaction between the computer and the user. In this class, we will be using the Bash Unix shell. 
 
 **Terminal:** For the sake of this lab, the "terminal" is the program that the user will run to type in commands. Used interchangably with "shell" and "command line".
 
