@@ -69,7 +69,7 @@ You may have noticed the `$` that gets outputted after a command is run. This si
 
 ls (list files)
 ------------------------------------
-Now you know what directory you're in, don't you want to know what files are inside this directory? `ls` does the job!
+Now that you know what directory you're in, don't you want to know what files are inside this directory? `ls` does the job!
 Try typing the following:
 ```
 $ ls
@@ -81,7 +81,7 @@ The `-a` and `-l` are flags. Most commands come with optional parameters that ch
 
 `ls Desktop` will output the files and directories in the `Desktop` directory.
 
-Here are some flags, try them out!
+Here are some useful flags. Feel free to try them if you haven't already!
 `ls -a`: prints all the files and directories, even if they are hidden files which begin with a `.`.
 `ls -l`: prints all the files and directories and gives detailed information including permissions, date last modified, and many more!
 `ls -R`: prints all the files and directories, and those in each directory in it. Think of it as a binary search tree! This command will output every node in the tree.
