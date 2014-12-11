@@ -52,7 +52,7 @@ Throughout this lab, there will be 10 exercises. Get out a pen and paper and be 
 
 pwd (Print Working Directory)
 ------------------------------------
-The first command you will learn is `pwd`. PWD stands for "Print Working Directory" and will output the current directory you are in to the screen. Since you just typed in the ssh command, you should be in the HOME directory. Try it out!
+The first command you will learn is `pwd`. `pwd` stands for "Print Working Directory" and will output the current directory you are in to the screen. Since you just typed in the ssh command, you should be in the HOME directory. Try it out!
 ```
 $ pwd
 ```
@@ -64,7 +64,7 @@ What does this mean? You have probably seen something similar to this before (pe
 
 You may have noticed the `$` that gets outputted after a command is run. This simply means that the terminal is expecting an input from the user.
 
-PWD is a useful command that helps you navigate through different directories quickly. If you're lost and you don't know which directory you are in, call PWD! 
+`pwd` is a useful command that helps you navigate through different directories quickly. If you're lost and you don't know which directory you are in, call `pwd`! 
 
 
 ls (list files)
