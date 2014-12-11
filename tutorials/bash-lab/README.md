@@ -83,8 +83,11 @@ The `-a` and `-l` are flags. Most commands come with optional parameters that ch
 
 Here are some useful flags. Feel free to try them if you haven't already!
 `ls -a`: prints all the files and directories, even if they are hidden files which begin with a `.`.
+
 `ls -l`: prints all the files and directories and gives detailed information including permissions, date last modified, and many more!
+
 `ls -R`: prints all the files and directories, and those in each directory in it. Think of it as a binary search tree! This command will output every node in the tree.
+
 `ls -t`: prints all the files and directories and sorts them in order of the date last modified. The most recent will appear first.
 
 Notice that when you used the flag `-a`, you may have noticed some files called `.` and `..`. These are both hidden directories found in every directory. 
