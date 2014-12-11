@@ -204,7 +204,7 @@ Now lets go back to the directory you were just in previously! How do you go bac
 
 6. Write a command that changes directories to your parent directory.
 
-If you haven't run that command yet, **do not move on unil you do so.** 
+If you haven't run that command yet, **do not move on until you do so.** 
 
 You are now in the parent directory for `CS100`. Type `pwd` and you will see something along the lines of...
 ```
