@@ -311,7 +311,7 @@ Pretend that you messed up an important document with a misspelled word and you 
 
 Relax your problems are over now, you can fix it in one line using the 'sed' command!
 
-Sed stands for Stream EDitor and can be very useful when passing the right flags to it.
+Sed stands for Stream EDitor and can be very useful when passing the right flags to it. What distinguishes it from others editors is the way it works making only one pass over the input(s) and the ability to filter text through a pipeline. Sed has several commands, but most commom people use is the substitute command: s.
 
 If you type:
 
@@ -332,6 +332,10 @@ The g letter stands for global, what will make it replace all occurrences of the
 file.txt is the name of your actual file, that you want to modify.
 
 In the second example we are using I/O redirection. The 'cat' command will take the content of file.txt as input, send it to 'sed' replace the words and finally sending to another 'cat' which will create a new file with the desired changes.
+
+You also can use regular expressions to match a defined pattern in 'sed' command, what can make your life even easier in a different task. In our next example you need to put all ucr e-mail addresses inside parenthesis. So we would do:
+
+	$ sed 's/[a-z0-9]*@ucr.edu/(&)/' <file.txt >newfile.txt
 
 Remember that you can use the same command with a similar syntax in vim what could help you to write code, change variable names etc.
 In vim, type:
