@@ -206,7 +206,7 @@ The `cp` command will copy files and directories to your desired destination.
 
 The syntax of this command is as follows:
 ```
-cp [SOURCE] [DESTINATION]
+$ cp [SOURCE] [DESTINATION]
 ```
 Note*: if the destination path does not exist, cp will create a copy of the file or directory with the name of the destination path given.
 
@@ -232,9 +232,7 @@ The `rm` command accepts an optional flag along with a path of the file to be re
 ```
 rm main.cpp
 ```
-
-**Exercise**
-7. On the terminal, create a directory with a file inside, then remove that directory
+On the terminal, create a directory with a file inside, then remove that directory
 
 HA!
 Your command resulted in an error
