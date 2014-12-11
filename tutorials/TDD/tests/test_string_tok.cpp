@@ -5,14 +5,15 @@
 
 BOOST_AUTO_TEST_CASE(string_tok_test)
 {
-  string test_string = "Hello today is a good day!";
-  vector<string> test_vector;
-  test_vector.push_back("Hello");
-  test_vector.push_back("today");
-  test_vector.push_back("is");
-  test_vector.push_back("a");
-  test_vector.push_back("good");
-  test_vector.push_back("day!");
+  const string test_string = "Hello today is a good day!";
+  const string test_string2 = "           Hello     today           is           a      good day!";
 
+  vector<string> test_vector = {"Hello", "today", "is", "a", "good", "day!"};
+
+  //Testing basic tokens
   BOOST_CHECK(tok_string(test_string) == test_vector);
+
+  //Testing many spaces
+  BOOST_CHECK(tok_string(test_string2) == test_vector);
+
 }

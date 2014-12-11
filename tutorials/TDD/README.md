@@ -57,5 +57,137 @@ vector<string> v = some_tok_func(s)
 
 Inside of `v` we want `["Today", "is", "a", "nice", "day!"]`.
 
+First we lets write our test in `tests/test_string_tok.cpp`
 
+```
+#define BOOST_TEST_MODULE "C++ Unit Tests for StrTok"
+#include <boost/test/included/unit_test.hpp> // used so we can include other .cpp
+#include <boost/test/unit_test.hpp>
+#include "../src/string_tok.cpp" // Where we are implementing our code
+
+BOOST_AUTO_TEST_CASE(string_tok_test)
+{
+  const string test_string = "Hello today is a good day!";
+  vector<string> test_vector = {"Hello", "today", "is", "a", "good", "day!"}; // c++11 vector initialization
+
+  BOOST_CHECK(tok_string(test_string) == test_vector);
+}
+```
+
+Now we implement a prototype of `tok_string` in `src/string_tok.cpp`.
+
+```
+vector<string> tok_string(const string& input)
+{
+  vector<string> v;
+  return v;
+}
+```
+
+Now we compile.
+
+```
+$ g++ -std=c++11 -lboost_unit_test_framework tests/test_string_tok.cpp -o str_test
+```
+
+Now we run our test with `./str_test`, and our output should be:
+
+```
+$ ./str_test
+Running 1 test case...
+tests/test_string_tok.cpp(11): error in "string_tok_test": check tok_string(test_string) == test_vector failed
+
+*** 1 failure detected in test suite "C++ Unit Tests for StrTok"
+```
+
+Now that there is a full test file we can begin trying to implement code that
+will pass our test. We want to just know if our test will pass with some very
+basic code so we will edit `src/string_tok.cpp`
+
+```
+vector<string> tok_string(const string& input)
+{
+  vector<string> v = {"Hello", "today", "is", "a", "good", "day!"};
+  return v;
+}
+```
+
+Recompile and run `./str_test`
+
+```
+$ g++ -std=c++11 -lboost_unit_test_framework tests/test_string_tok.cpp -o str_test
+$./str_test
+Running 1 test case...
+
+*** No errors detected
+```
+
+To recap so far what we have done:
+
+  1. Wrote the `string_tok_test`
+  2. Wrote the function `tok_string` to pass `string_tok_test`
+
+Now we need to begin refractoring our implementation. Since we can't just return
+the correct a constant vector each and everytime we need to actually tokenize
+our string.
+
+```
+vector<string> tok_string(const string& input)
+{
+  vector<string> v;
+  string token;
+  istringstream ss(input.c_str());
+
+  //String whitespaces from input
+  while(ss>>token)
+    v.push_back(token);
+
+  return v;
+}
+```
+
+
+Recompile and retest:
+
+```
+$ g++ -std=c++11 -lboost_unit_test_framework tests/test_string_tok.cpp -o str_test
+$./str_test
+Running 1 test case...
+
+*** No errors detected
+```
+
+We can expand on our test cases more to cover more edge cases in our code.
+
+```
+BOOST_AUTO_TEST_CASE(string_tok_test)
+{
+  const string test_string = "Hello today is a good day!";
+  const string test_string2 = "           Hello     today           is           a      good day!";
+
+  vector<string> test_vector = {"Hello", "today", "is", "a", "good", "day!"};
+
+  //Testing basic tokens
+  BOOST_CHECK(tok_string(test_string) == test_vector);
+
+  //Testing many spaces
+  BOOST_CHECK(tok_string(test_string2) == test_vector);
+}
+```
+
+
+```
+$ g++ -std=c++11 -lboost_unit_test_framework tests/test_string_tok.cpp -o str_test
+$./str_test
+Running 1 test case...
+
+*** No errors detected
+```
+
+In summary:
+
+  1. Wrote `string_tok_test`
+  2. Wrote `tok_string`
+  3. Refractored
+  4. Added more tests to `string_tok_test`
 
