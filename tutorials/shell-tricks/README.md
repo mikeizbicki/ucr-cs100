@@ -9,7 +9,7 @@ Note: these tricks apply to bash, which is the default shell on most Linux syste
 
 ## 1. Manage files
 
-![Image of Morpheu](http://www.officevibe.com/wp-content/uploads/2014/01/Flat-Hierarchy-Meme.jpg)
+![Image of office](http://backpacktactics.com/wp-content/uploads/2011/04/office-paper.jpg)
 
 One important and required skill for a Linux user is how efficiently create, copy and delete files and directories.
 
@@ -55,7 +55,7 @@ The -f flag stands for 'force' referring to 'ignore nonexistent files, never pro
 
 ## 2. Getting help
 
-![Image of Help](http://www.troll.me/images/facepalm-picard/you-need-help-thumb.jpg)
+![Image of Help](http://buildmoneyonthenet.com/wp-content/uploads/2014/08/YOU-NEED-HELP-MY-FRIEND.jpg)
 
 It is not a shame to ask for help while using linux. Even for those experts using shell there will always be a flag or maybe a command that causes headaches into their brilliant minds. So one of the best tips we could give you is about getting the help you need.
 
