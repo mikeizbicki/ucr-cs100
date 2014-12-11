@@ -104,15 +104,15 @@ touch (create a file)
 In order to create new files, the `touch` command must be used.
 Note that the `touch` command simply creates an empty file. You will go further indepth into file editing in a future lab.
 
-We will now be creating a new file. In order to accomplish this, enter :
+We will now be creating a new file. In order to do this, enter:
 ```
 $ touch main.cpp
 ```
-lets check out the file you just created using the command:
+Lets check out the file you just created using the command:
 ```
 $ ls
 ```
-Notice how the file now appears in the directory, congratulations, you've just created your first file on linux.
+Notice how the file now appears in the directory. congratulations, you've just created your first file on linux!
 
 **Exercise:**
 
@@ -199,4 +199,80 @@ If you haven't run that command yet, you should do so. You are now in the parent
 home/csmajs/<your username>
 ```
 If you type `ls`, you will see your `CS100` directory. If you type `ls CS100`, you will see the file `main.cpp` and nothing else.
+
+cp (copy)
+------------------------------
+The `cp` command will copy files and directories to your desired destination.
+
+The syntax of this command is as follows:
+```
+cp [SOURCE] [DESTINATION]
+```
+Note*: if the destination path does not exist, cp will create a copy of the file or directory with the name of the destination path given.
+
+  Example: `$ cp main.cpp newpath/newpath.cpp` will create a copy of `main.cpp` with the name `newpath.cpp` in the directory `newpath`
+  
+Remember that `main.cpp` we left behind in the home directory, lets make a copy of it named `mainbro.cpp` and move it to our CS100 directory with the command:
+```
+cp main.cpp CS100/mainbro.cpp
+```
+Lets check our progress in the `CS100` directory with:
+```
+ls CS100
+```
+Your `CS100` directory should currently contain the files `main.cpp` and `mainbro.cpp`
+
+BUT WAIT!
+
+We no longer need the `main.cpp` file in our home directory, lets remove it!
+
+rm (remove)
+------------------------------
+The `rm` command accepts an optional flag along with a path of the file to be removed:
+```
+rm main.cpp
+```
+
+**Exercise**
+7. On the terminal, create a directory with a file inside, then remove that directory
+
+HA!
+Your command resulted in an error
+* if your command did not result in an error, the command you have entered must be incorrect
+
+This error is due to the conflict resulting in the removal of a directory which has content.
+
+by including the `-r` (recursive) flag, we can sucessfully remove all files and directories within the desired path.
+
+With great power comes great responsibilities!
+
+Beware that `-r` flag will remove ALL files in ANY directory even system files
+
+cat (concatenate)
+-----------------------------
+Next, we introduce the `cat` command, which we've forgotten what it exactly does.
+
+No worries.
+
+There is a command that serves as a manual page for most bash commands
+
+man (manual)
+----------------------------------
+`man` command can be used with all bash commands with the syntax
+```
+man [command]
+```
+Lets use the `man` command to find out the purpose of `cat`:
+```
+$ man cat
+```
+After some extensive reading, we can see that the main purpose of `cat` is to display the content of a file into the bash terminal.
+
+connectors
+------------------------------------
+Finally, a more efficant way to quickly run all the commands you've learned is the use of connectors `;`, `&&`, `||`
+The `;` connector will execute consecutively. 
+The `&&` connector functions similarly to the && comparison operator in C++, it will execute the next command as long as the prior command sucessed
+The `||` connector functions similarly to the || comparison operator in C++, it will execute commands as long as the prior command failed.
+Using these connectors, we can greatly increase the efficency of our experience with the bash terminal.
 
