@@ -48,7 +48,7 @@ A pretty window will pop up confirming that you have enabled CS100 settings. Don
 
 Every time you open a new terminal, you must ssh into hammer and enable CS100 settings.
 
-Throughout this lab, there will be several exercises. Get out a pen and paper and be prepared to write down the answers to those exercises in order to show the TA.
+Throughout this lab, there will be 10 exercises. Get out a pen and paper and be prepared to write down the answers to those exercises in order to show the TA.
 
 pwd (Print Working Directory)
 ------------------------------------
