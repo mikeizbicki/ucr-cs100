@@ -7,6 +7,7 @@ BOOST_AUTO_TEST_CASE(string_tok_test)
 {
   const string test_string = "Hello today is a good day!";
   const string test_string2 = "           Hello     today           is           a      good day!";
+  const string test_string3 = "Hello \n today \t is \n\t a good day!";
 
   vector<string> test_vector = {"Hello", "today", "is", "a", "good", "day!"};
 
@@ -16,4 +17,6 @@ BOOST_AUTO_TEST_CASE(string_tok_test)
   //Testing many spaces
   BOOST_CHECK(tok_string(test_string2) == test_vector);
 
+  //Testing newlines spaces and tabs
+  BOOST_CHECK(tok_string(test_string3) == test_vector);
 }

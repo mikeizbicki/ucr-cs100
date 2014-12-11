@@ -48,7 +48,7 @@ To give examples of TDD I will be using the [boost test framework](http://www.bo
 
 In this example I need a function( or functions ) that will take a `string` and return a `vector<string>`.
 
-I want the `strings` in the `vector` to contain no whitespaces and be in the order they were in the string.
+The `strings` in the `vector` should contain no whitespaces and be in the order they were in the string.
 
 ```
 string s = "Today is a nice day!"
@@ -56,7 +56,6 @@ vector<string> v = some_tok_func(s)
 ```
 
 Inside of `v` we want `["Today", "is", "a", "nice", "day!"]`.
-
 First we lets write our test in `tests/test_string_tok.cpp`
 
 ```
@@ -73,8 +72,11 @@ BOOST_AUTO_TEST_CASE(string_tok_test)
   BOOST_CHECK(tok_string(test_string) == test_vector);
 }
 ```
+The tests should be designed so that it is easy to control how they will fail.
 
-Now we implement a prototype of `tok_string` in `src/string_tok.cpp`.
+Now we implement a prototype of `tok_string` in `src/string_tok.cpp`. Our
+prototype should compile but fail 100% of the time . The reason for this is we want to
+ensure we don't get any false posatives in our tests.
 
 ```
 vector<string> tok_string(const string& input)
@@ -84,15 +86,10 @@ vector<string> tok_string(const string& input)
 }
 ```
 
-Now we compile.
+Now we compile and run our test.
 
 ```
 $ g++ -std=c++11 -lboost_unit_test_framework tests/test_string_tok.cpp -o str_test
-```
-
-Now we run our test with `./str_test`, and our output should be:
-
-```
 $ ./str_test
 Running 1 test case...
 tests/test_string_tok.cpp(11): error in "string_tok_test": check tok_string(test_string) == test_vector failed
@@ -102,9 +99,10 @@ tests/test_string_tok.cpp(11): error in "string_tok_test": check tok_string(test
 
 Now that there is a full test file we can begin trying to implement code that
 will pass our test. We want to just know if our test will pass with some very
-basic code so we will edit `src/string_tok.cpp`
+basic code to make sure our code will pass our test.
 
 ```
+// ./src/string_tok.cpp
 vector<string> tok_string(const string& input)
 {
   vector<string> v = {"Hello", "today", "is", "a", "good", "day!"};
@@ -112,7 +110,7 @@ vector<string> tok_string(const string& input)
 }
 ```
 
-Recompile and run `./str_test`
+Recompile and run.
 
 ```
 $ g++ -std=c++11 -lboost_unit_test_framework tests/test_string_tok.cpp -o str_test
@@ -125,7 +123,7 @@ Running 1 test case...
 To recap so far what we have done:
 
   1. Wrote the `string_tok_test`
-  2. Wrote the function `tok_string` to pass `string_tok_test`
+  2. Wrote the function `tok_string` to barely pass `string_tok_test`
 
 Now we need to begin refractoring our implementation. Since we can't just return
 the correct a constant vector each and everytime we need to actually tokenize
@@ -138,14 +136,13 @@ vector<string> tok_string(const string& input)
   string token;
   istringstream ss(input.c_str());
 
-  //String whitespaces from input
+  // Strip whitespaces from input
   while(ss>>token)
     v.push_back(token);
 
   return v;
 }
 ```
-
 
 Recompile and retest:
 
@@ -164,6 +161,7 @@ BOOST_AUTO_TEST_CASE(string_tok_test)
 {
   const string test_string = "Hello today is a good day!";
   const string test_string2 = "           Hello     today           is           a      good day!";
+  const string test_string3 = "Hello \n today \t is \n\t a good day!";
 
   vector<string> test_vector = {"Hello", "today", "is", "a", "good", "day!"};
 
@@ -172,6 +170,9 @@ BOOST_AUTO_TEST_CASE(string_tok_test)
 
   //Testing many spaces
   BOOST_CHECK(tok_string(test_string2) == test_vector);
+
+  //Testing newlines spaces and tabs
+  BOOST_CHECK(tok_string(test_string3) == test_vector);
 }
 ```
 
