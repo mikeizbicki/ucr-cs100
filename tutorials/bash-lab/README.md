@@ -149,7 +149,7 @@ $ rmdir temp
 ```
 Now that you deleted your directory, make a new directory called `CS`.
 
-Let's move on to a new comma- What's that? `CS` is still the wrong directory name? Ok, the next command we'll go over is a more efficient method than deleting and creating a new directory. Besides, Unix is all about efficiency right?
+Let's move on to a new comman- What's that? `CS` is still the wrong directory name? Ok, the next command we'll go over is a more efficient method than deleting and creating a new directory. Besides, Unix is all about efficiency right?
 
 
 
