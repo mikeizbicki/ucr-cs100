@@ -60,3 +60,51 @@ string mkfgTeal(string in){
 string mkfgWhite(string in){
 	return fgWhite + in + reset;
 }
+
+
+//BACKGROUND COLOR
+string mkbgBlack(string in){
+	return bgBlack + in + reset;
+}
+
+string mkbgRed(string in){
+	return bgRed + in + reset;
+}
+
+string mkbgGreen(string in){
+	return bgGreen + in + reset;
+}
+
+string mkbgYellow(string in){
+	return bgYellow + in + reset;
+}
+
+string mkbgBlue(string in){
+	return bgBlue + in + reset;
+}
+
+string mkbgPurple(string in){
+	return bgPurple + in + reset;
+}
+
+string mkbgTeal(string in){
+	return bgTeal + in + reset;
+}
+
+string mkbgWhite(string in){
+	return bgWhite + in + reset;
+}
+
+
+//Misc
+string mkUnderline(string in){
+	return underline + in + reset;
+}
+
+string mkBold(string in){
+	return bold + in + reset;
+}
+
+void resetTerminalColors(){
+	cout << reset;
+}
