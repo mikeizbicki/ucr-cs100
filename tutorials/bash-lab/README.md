@@ -23,6 +23,7 @@ Terms and Definitions
 **Command Line:** The command line is a way for the user to interact with the computer through various text commands. Used interchangably with "shell" and "terminal".
 
 **Directory:** A directory is like a folder. It holds files and other directories.
+**Unix:** 
 
 
 
@@ -46,7 +47,7 @@ A pretty window will pop up confirming that you have enabled CS100 settings. Don
 
 Every time you open a new terminal, you must ssh into hammer and enable CS100 settings.
 
-PWD (Print Working Directory)
+pwd (Print Working Directory)
 ------------------------------------
 The first command you will learn is `pwd`. PWD stands for "Print Working Directory" and will output the current directory you are in to the screen. Since you just typed in the ssh command, you should be in the HOME directory. Try it out!
 ```
@@ -56,11 +57,14 @@ The output should look something like this:
 ```
 home/csmajs/<your username>
 ```
+What does this mean? You have probably seen something similar to this before (perhaps in the url to this website). This is a path! Paths are chains of directories in directories. Each directory is separated by a `/`. In this case, your current directory, `<your username>`, is in `csmajs` which is in `home`. Later on, you will be using paths to access files in directories far away from your current directory.
+
 You may have noticed the `$` that gets outputted after a command is run. This simply means that the terminal is expecting an input from the user.
 
 PWD is a useful command that helps you navigate through different directories quickly. If you're lost and you don't know which directory you are in, call PWD! 
 
-LS (list files)
+
+ls (list files)
 ------------------------------------
 Now you know what directory you're in, don't you want to know what files are inside this directory? `ls` does the job!
 Try typing the following:
@@ -74,12 +78,125 @@ The `-a` and `-l` are flags. Most commands come with optional parameters that ch
 
 `ls Desktop` will output the files and directories in the `Desktop` directory.
 
-Here are some flags!
-`ls -a`: prints all the files and directories, even if they are hidden such as `.` and `..`
+Here are some flags, try them out!
+`ls -a`: prints all the files and directories, even if they are hidden files which begin with a `.`.
 `ls -l`: prints all the files and directories and gives detailed information including permissions, date last modified, and many more!
 `ls -R`: prints all the files and directories, and those in each directory in it. Think of it as a binary search tree! This command will output every node in the tree.
 `ls -t`: prints all the files and directories and sorts them in order of the date last modified. The most recent will appear first.
 
+Notice that when you used the flag `-a`, you may have noticed some files called `.` and `..`. These are both hidden directories found in every directory. 
+
+`.` refers to your current directory.
+
+`..` refers to the parent directory.
+
 These flags can be combined such as `ls -tla` or `ls -aR` and multiple files/directories can also be passed in as parameters.
 
 You will be using `ls` and `pwd` a lot in this lab and throughout the quarter so get used to them! 
+
+**Exercises:**
+
+1. Write a command that prints all files and folders in your parent directory.
+2. Write a command that prints all files and folders, including hidden ones, with detailed information, sorted in chronological order. You may only pass in one parameter.
+
+touch (create a file)
+--------------------------------------
+In order to create new files, the `touch` command must be used.
+Note that the `touch` command simply creates an empty file. You will go further indepth into file editing in a future lab.
+
+We will now be creating a new file. In order to accomplish this, enter :
+```
+$ touch main.cpp
+```
+lets check out the file you just created using the command:
+```
+$ ls
+```
+Notice how the file now appears in the directory, congratulations, you've just created your first file on linux.
+
+**Exercise:**
+
+3. Write a command that creates a file name `deleteme.txt` in a folder call `dontdeleteme`.
+
+mkdir (create a directory)
+--------------------------------------------
+Moving on to the big boys.
+
+We will now create a new directory within our current path.
+The command we will use is `mkdir`. Like the `touch` command, this command also has a path parameter that will determine the location of the new directory.
+
+  Example: commands `mkdir ./newDir` and `mkdir newDir` will both create the directory `newDir` within your current directory.
+  
+Using `mkdir`, lets create a directory name `temp` in our current directory:
+```
+$ mkdir temp
+```
+
+Opps!
+We've just recieved a message from the higher ups saying that our new directory has an incorrect name. Lets delete this and make a new one! Wait a minute... 
+
+rmdir (remove a directory)
+---------------------------------------------
+The command `rmdir` will delete a directory as long as it is empty. Type the following to delete your `temp` directory...
+```
+$ rmdir temp
+```
+Now that you deleted your directory, make a new directory called `CS`.
+
+Let's move on to a new comma- What's that? `CS` is still the wrong directory name? Ok, the next command we'll go over is a more efficient method than deleting and creating a new directory. Besides, Unix is all about efficiency right?
+
+
+
+mv (move)
+-------------------------------------------
+The command `mv` moves files/directories from one place to another. The syntax for this command is:
+```
+$ mv [sourcefile1] [sourcefile2] ... [destinationfolder]
+```
+`mv` can be used in another clever way. If you type mv with two parameters as so...
+```
+$ mv [sourcefile1] [newname]
+```
+This command will rename a file/directory to a new name! Now lets try to rename our `CS` directory. Rename it to `CS100`. 
+```
+$ mv CS CS100
+```
+Great job! now you have a directory called `CS100`! Type `ls` to see it. Here are some exercises to keep you busy...
+
+**Exercises:**
+
+4. Write a command that moves two files called `cs100.rules` and `no.mouse` to a folder called `folder` in your parent's parent directory.
+5. Write a command that renames the file `cs100` to `bestclassever`.
+
+Now that you made a new directory, don't you want to see what's inside?
+
+cd (cooldown... just kidding: change directory)
+-----------------------------------------------------
+So currently, you should still be in your home directory. If you are unsure, type 
+```
+$ pwd
+```
+Let's go deeper into your new `CS100` directory. In order to do this, type the following:
+```
+$ cd CS100
+```
+
+`cd` is a command that allows you to change directories into the directory specified by the parameter. In this case, you will be changing directories to CS100.
+
+Now type `pwd` again! You should now be in the directory you just created. Is there anything inside? What command would you type to find the contents of your current directory?
+
+It's quite empty in here right? Let's furnish it with some files. Create a new file called `main.cpp`. You remember how to do that right?
+
+**Hint!** If you type `cd` with no parameters, it will always take you back to your HOME directory. In this case, it is the directory you were in when you first ssh'd into hammer.
+
+Now lets go back to the directory you were just in previously! How do you go back one directory? That's your exercise!
+
+**Exercise:**
+6. Write a command that changes directories to your parent directory.
+
+If you haven't run that command yet, you should do so. You are now in the parent directory for `CS100`. Type `pwd` and you will see something along the lines of...
+```
+home/csmajs/<your username>
+```
+If you type `ls`, you will see your `CS100` directory. If you type `ls CS100`, you will see the file `main.cpp` and nothing else.
+
