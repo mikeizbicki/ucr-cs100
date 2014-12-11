@@ -101,9 +101,9 @@ These flags can be combined such as `ls -tla` or `ls -aR` and multiple files/dir
 You will be using `ls` and `pwd` a lot in this lab and throughout the quarter so get used to them! 
 
 **Exercises:**
-
-1. Write a command that prints all files and folders in your parent directory.
-2. Write a command that prints all files and folders, including hidden ones, with detailed information, sorted in chronological order. You may only pass in one parameter.
+1. Write a command that prints all files and folders in the existing folders `Pictures` and `Music`.
+2. Write a command that prints all files and folders in your parent directory.
+3. Write a command that prints all files and folders, including hidden ones, with detailed information, sorted in chronological order. You may only pass in one parameter.
 
 touch (create a file)
 --------------------------------------
@@ -122,7 +122,7 @@ Notice how the file now appears in the directory. congratulations, you've just c
 
 **Exercise:**
 
-3. Write a command that creates a file name `deleteme.txt` in a folder call `dontdeleteme`.
+4. Write a command that creates a file name `deleteme.txt` in a folder call `dontdeleteme`.
 
 mkdir (create a directory)
 --------------------------------------------
@@ -171,8 +171,7 @@ Great job! now you have a directory called `CS100`! Type `ls` to see it. Here ar
 
 **Exercises:**
 
-4. Write a command that moves two files called `cs100.rules` and `no.mouse` to a folder called `folder` in your parent's parent directory.
-5. Write a command that renames the file `cs100` to `bestclassever`.
+5. Write a command that moves two files called `cs100.rules` and `no.mouse` to a folder called `folder` in your parent's parent directory.
 
 Now that you made a new directory, don't you want to see what's inside?
 
