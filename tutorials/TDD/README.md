@@ -2,13 +2,16 @@
 
 # Contents
 
+  - [Introduction](#introduction)
   - [What is Test Driven Development](#what-is-test-driven-development)
   - [Why TDD](#why-tdd)
   - [TDD in C++](#tdd-in-c++)
   - [Examples:](#examples)
-    - [Testing tokenizing a string](#testing-tokenizing-a-string)
+    - [Basic Example](#basic-example)
+    - [Tokenizing A String](#tokenizing-a-string)
 
 
+# Introduction
 When I began coding my process consisted of:
 
   * Writing down the problem (homework/or personal project)
@@ -25,26 +28,93 @@ Realizing this pain point I started practicing Test Driven Development.
 
 ## What is Test Driven Development
 
-Test Driven Development (TDD) is a [software development
-process](http://en.wikipedia.org/wiki/Software_development_process). Development processes are methodologies to write code in a way that speeds up development, minimize bugs, and keep a code base managable.
+Test Driven Development (TDD) is a [software development process](http://en.wikipedia.org/wiki/Software_development_process). Development processes are methodologies to write code in a way that speeds up development, minimize bugs, and keep a code base managable.
 
 TDD is fairly simple to use:
 
   1. Write tests
   2. Write code to pass that test
-  3. Refractor until the code meets standards
-
+  3. Refractor until the code meets standard.
 
 ## Why TDD
 
-
-TDD keeps code akin to [unix philosophy](http://en.wikipedia.org/wiki/Unix_philosophy#Eric_Raymond.E2.80.99s_17_Unix_Rules). By following this philosophy it helps keep code modular and understandable. Because TDD forces you to start with focusing on what could go wrong, it practices thinking about edge cases.
+TDD keeps code akin to [unix philosophy](http://en.wikipedia.org/wiki/Unix_philosophy#Eric_Raymond.E2.80.99s_17_Unix_Rules). By following this philosophy it helps keep code modular and understandable.
+An advantage of TDD is that a feauture is required to be unabiguous
 
 ## TDD in C++
 To give examples of TDD I will be using the [boost test framework](http://www.boost.org/doc/libs/1_55_0/libs/test/doc/html/utf.html).
 
 # Examples
-## Testing tokenizing a string
+
+## Basic Example
+
+This is meant to be a very short introduction to testing. For a basic problem to
+solve I will be using the first problem on
+[projecteuler](https://projecteuler.net/problem=1)
+
+`Find the sum of all the multiples of 3 or 5 below 1000.`
+
+First let's write our test in `test/test_project_euler.cpp`.
+
+```
+#define BOOST_TEST_MODULE "EulerTest"
+#include <boost/test/included/unit_test.hpp>
+#include <boost/test/unit_test.hpp>
+
+int find_mult(const int &first_num, const int& second_num, const int &upper_bound)
+{
+  return -1;
+}
+
+BOOST_AUTO_TEST_CASE( euler_test )
+{
+  // The answer is 233168
+  BOOST_CHECK(find_mult(3, 5, 1000) == 233168);
+}
+```
+
+Compile and run our test.
+
+```
+$ g++ test_project_euler.cpp -o run_tests
+$ ./run_tests
+Running 1 test case...
+tests/test_project_euler.cpp(12): error in "euler_test": check find_mult(3, 5, 1000) == 233168 failed
+
+*** 1 failure detected in test suite "EulerTest"
+```
+
+Now that we have our test we will start writing code to try and pass our test.
+
+```
+int find_mult(const int &first_num, const int& second_num, const int &upper_bound)
+{
+  int mult_first_and_second = 0;
+
+  // Using modulo (%) to check if it is a multiple of first_num or second_num
+  for(int i = 0; i < upper_bound; ++i)
+    if(i % first_num == 0 || i % second_num == 0)
+      mult_first_and_second+=i;
+
+  return mult_first_and_second;
+}
+```
+
+Compile and run to see if we pass our test.
+
+```
+$ g++ test_project_euler.cpp -o run_tests
+$ ./run_tests
+Running 1 test case...
+
+*** No errors detected
+```
+
+We passed the test so we were able to find all the multiples of 3 and 5 from 0
+to 1000.
+
+
+## Tokenizing A String
 
 In this example I need a function( or functions ) that will take a `string` and return a `vector<string>`.
 
@@ -89,7 +159,7 @@ vector<string> tok_string(const string& input)
 Now we compile and run our test.
 
 ```
-$ g++ -std=c++11 -lboost_unit_test_framework tests/test_string_tok.cpp -o str_test
+$ g++ -std=c++11  tests/test_string_tok.cpp -o str_test
 $ ./str_test
 Running 1 test case...
 tests/test_string_tok.cpp(11): error in "string_tok_test": check tok_string(test_string) == test_vector failed
@@ -113,7 +183,7 @@ vector<string> tok_string(const string& input)
 Recompile and run.
 
 ```
-$ g++ -std=c++11 -lboost_unit_test_framework tests/test_string_tok.cpp -o str_test
+$ g++ -std=c++11  tests/test_string_tok.cpp -o str_test
 $./str_test
 Running 1 test case...
 
@@ -147,7 +217,7 @@ vector<string> tok_string(const string& input)
 Recompile and retest:
 
 ```
-$ g++ -std=c++11 -lboost_unit_test_framework tests/test_string_tok.cpp -o str_test
+$ g++ -std=c++11  tests/test_string_tok.cpp -o str_test
 $./str_test
 Running 1 test case...
 
@@ -178,7 +248,7 @@ BOOST_AUTO_TEST_CASE(string_tok_test)
 
 
 ```
-$ g++ -std=c++11 -lboost_unit_test_framework tests/test_string_tok.cpp -o str_test
+$ g++ -std=c++11 tests/test_string_tok.cpp -o str_test
 $./str_test
 Running 1 test case...
 
