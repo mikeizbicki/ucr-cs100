@@ -132,7 +132,8 @@ string s = "Today is a nice day!"
 vector<string> v = some_tok_func(s)
 // v should contain `["Today", "is", "a", "nice", "day!"]`.
 ```
-First we lets write our test in `tests/test_string_tok.cpp`
+
+First we lets write our test in `tests/test_string_tok.cpp` The test should be designed such that the first time they are ran they will fail.
 
 ```
 #define BOOST_TEST_MODULE "C++ Unit Tests for StrTok"
@@ -142,16 +143,16 @@ First we lets write our test in `tests/test_string_tok.cpp`
 
 BOOST_AUTO_TEST_CASE(string_tok_test)
 {
+// This sting is the string we are going to try and tokenize
   const string test_string = "Hello today is a good day!";
+// This vector is what tok_string should return 
   vector<string> test_vector = {"Hello", "today", "is", "a", "good", "day!"}; // c++11 vector initialization
 
   BOOST_CHECK(tok_string(test_string) == test_vector);
 }
 ```
-The tests should be designed so that it is easy to control how they will fail.
 
-Now we implement a prototype of `tok_string` in `src/string_tok.cpp`. Our
-prototype should compile but fail.
+Now we implement a prototype of `tok_string` in `src/string_tok.cpp`, so our test can run and fail.
 
 ```
 vector<string> tok_string(const string& input)
@@ -161,7 +162,9 @@ vector<string> tok_string(const string& input)
 }
 ```
 
-Now we compile and run our test.
+`tok_string` will always return an empty vector causing `string_tok_test` to fail. 
+
+Lets find out. Compile and run the test.
 
 ```
 $ g++ -std=c++11  tests/test_string_tok.cpp -o str_test
@@ -172,8 +175,9 @@ tests/test_string_tok.cpp(11): error in "string_tok_test": check tok_string(test
 *** 1 failure detected in test suite "C++ Unit Tests for StrTok"
 ```
 
-Now that there is a full test file we can begin trying to implement code that
-will pass our test. We want to just know if our test will pass with some very
+Good our test failed. Now we can begin implementing code to try and pass the test.
+
+We want to just know if our test will pass with some very
 basic code to make sure our code will pass our test.
 
 ```
@@ -195,9 +199,9 @@ Running 1 test case...
 *** No errors detected
 ```
 
-Now we need to begin refractoring our implementation. Since we can't just return
-the correct a constant vector each and everytime we need to actually tokenize
-our string.
+This is a pitfall I wanted to point out. Our code does pass the test, however the code was implemented to only pass that one test. If the test was slightly adjusted at all the test would immediately fail.  
+
+Now we need to begin refractoring our implementation. 
 
 ```
 vector<string> tok_string(const string& input)
