@@ -1,4 +1,4 @@
-#Macro
+#Macros
 
 ###What is a macro?
 A macro (short for macroinstruction) is a fragment of code that is given a name. The C preoprocessor examines the code before it is compiled, and manipulates it in various ways. For example, the preprocesser replaces the line `#include <stdio.h>` with the text of the file 'stdio.h'. In the same way, whenever the name of the macro is used, it is replaced by the contents of that macro. 
@@ -29,19 +29,6 @@ You could use this macro with a statement like
 
 `int z = MULT(2, 4); // z = 8`
 
-
-###Stringifying Tokens
-
-One potentially useful macro option is to turn a token into a string. The syntax is to prefix the token with a pound sign '#'. This can be used to print out the token. For example
-
-``` 
-#define PRINT_NAME(token) cout << "My name is " << #token << endl
-
-PRINT_NAME(Kenneth Huang);`
-```
-The output would be as expected:`My name is Kenneth Huang
-
-
 ###Multi-line Macros
 
 Macro definitions end at the end of the `#define` line, so to continue the definition onto multiple lines, you have to use a backslash-newline. However, when the macro expands it all appears on one line. For example,
@@ -54,17 +41,28 @@ char a[] = { CHARS }; // is equivalent to
 // int a[] = { 'a', 'b', 'c' };`
 ```
 
+###Stringifying Tokens
+
+One potentially useful macro option is to turn a token into a string. The syntax is to prefix the token with a pound sign '#'. This can be used to print out the token. For example
+
+``` 
+#define PRINT_NAME(token) cout << "My name is " << #token << endl
+
+PRINT_NAME(Kenneth Huang);`
+//Output:My name is Kenneth Huang
+```
+
 ###Combining Macros
 
 Macros definitions can include previously defined macros. For example, if you had a macro that returns the larger of two numbers, and you also wanted to find the largerst of 3 numbers.
 
 ```
 #define MAX(a,b)           ((a < b) ? (b) : (a))
- #define LARGEST(a,b,c)     ((MAX(a,b) < c) ? (c) : (MAX(a,b)))
+#define LARGEST(a,b,c)     ((MAX(a,b) < c) ? (c) : (MAX(a,b)))
 
- cout << "Largest of 1, 2, and 3 is " << LARGEST(1,2,3);
+cout << "Largest of 1, 2, and 3 is " << LARGEST(1,2,3);
  
- //Output: Largest of 1, 2, and 3 is 3`
+//Output: Largest of 1, 2, and 3 is 3`
 ```
 
 ##Common Macro Errors
@@ -141,4 +139,4 @@ Macros have no namespace and you can easily accidentally redefine a macro, that 
 Later if you try to use `myvector.begin()` you will have strange errors that aren't obvious where they came from in your code.
 
 ##Conclusion
-Preprocessor macros add powerful features and flexibility, and they can help reduce the amount of code you write. They're also faster to execute than functions, since no calling/returning is required. However, they also have many drawbacks, as we have seen. They are difficult to debug, can have strange side effects, and have no namespace. But while there now are alternatives like inline functions, macros can still be an incredibly useful tool if you are careful.
+Preprocessor macros add powerful features and flexibility, and they can help reduce the amount of code you write. They're also faster to execute than functions, since no calling/returning is required. However, they also have many drawbacks, as we have seen, and can be very difficult to debug. But while there now are alternatives like inline functions, macros can still be an incredibly useful tool if you are careful.
