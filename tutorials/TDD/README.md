@@ -14,11 +14,10 @@
 When I began coding my process consisted of:
 
   * Writing down the problem (homework/or personal project)
-  * Maybe thinking of some useful functions that might help me
-  * Maybe some objects to use
-  * Open up my editor and just start programming
-  * Realize I didn't think of everything and throw aside my plan
-  and struggle to complete what I set out to do
+  * Thinking of some useful functions that might help me
+  * Deciding what objects to use
+  * Opening up my editor and just start programming
+  * Realizing I didn't think of everything and throw aside my plan and struggle to complete what I set out to do
 
 A lot of time was wasted planning a design that wouldn't work, but also rewriting code without a clear idea of what my code was doing.
 
@@ -42,10 +41,10 @@ TDD's development cycle is simple:
 
 # What TDD Is Not
 
-TDD is not a magic bullet. Even though quality of code is higher, TDD can still lead its own
+TDD is not a magic bullet. Even though quality of code is higher, TDD can still lead to its own
 [problems](http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/). Also it has known issues for not being sufficient testing for interfaces such as UI, databases, or networking.
 
-Because a test was written and passed, does not mean that it is bug free. A programmer may not think of a test case than that is an edge case.
+Because a test was written and passed, does not mean that it is bug free. A programmer may not think of every situtation.
 
 TDD is meant to test and verify your own code. It's not nessesary to test libraries that are included in your code. An example of an unessasary test would be to test std::string `std::string("test") == "test"`. 
 
@@ -175,10 +174,9 @@ tests/test_string_tok.cpp(11): error in "string_tok_test": check tok_string(test
 *** 1 failure detected in test suite "C++ Unit Tests for StrTok"
 ```
 
-Good our test failed. Now we can begin implementing code to try and pass the test.
+Good, our test failed. Now we can begin implementing code to try and pass the test.
 
-We want to just know if our test will pass with some very
-basic code to make sure our code will pass our test.
+Now let us implement some basic code to make sure our code will pass our test.
 
 ```
 // ./src/string_tok.cpp
@@ -259,12 +257,11 @@ Running 1 test case...
 *** No errors detected
 ```
 
-The new tests passed however `BOOST_CHECK(tok_string(test_string3) == test_vector);` is not a good test.
-The reason for this is that it is testing too many things. Suppose newlines broke `tok_string` our 
-test does will not tell us that. It will only tell us that newline or tabs broke our code.
+The new tests pass, however `BOOST_CHECK(tok_string(test_string3) == test_vector);` is not a good test.
+The reason for this is that it is testing too many things. Suppose newlines broke `tok_string`. Our test will not tell us that newline was the cause of the failure. It will tell us that failure was either newline or tabs. This is ambiguous because you don't know the source of the failure.
 
 In summary:
 
-  1. We wrote the test `string_tok_test` to specify what the requirements we wanted.
+  1. We wrote the test `string_tok_test`.
   2. Implemented the function `tok_string` to satisfy the test we made
   3. Refractored until `string_tok_test` was passed
