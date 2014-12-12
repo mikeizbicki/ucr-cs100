@@ -39,8 +39,8 @@ TDD's development cycle is simple:
   1. Write a test (initially failing)
   2. Write code to pass the test
   3. Rerun the tests
-    3.a If the test fails back to 2
-    3.b If the test passes go to 4
+    * If the test fails back to 2
+    * If the test passes go to 4
   4. Refractor to clean up the code.
 
 
