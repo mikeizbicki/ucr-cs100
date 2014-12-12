@@ -34,11 +34,11 @@ You could use this macro with a statement like
 
 One potentially useful macro option is to turn a token into a string. The syntax is to prefix the token with a pound sign '#'. This can be used to print out the token. For example
 
-`#define PRINT_NAME(token) cout << "My name is " << #token << endl
+ `#define PRINT_NAME(token) cout << "My name is " << #token << endl
 
-PRINT_NAME(Kenneth Huang);`
+ PRINT_NAME(Kenneth Huang);`
 
-The output would be as expected:`My name is Kenneth Huang`
+ The output would be as expected:`My name is Kenneth Huang`
 
 ###Multi-line Macros
 
