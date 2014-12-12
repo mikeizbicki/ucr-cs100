@@ -4,8 +4,7 @@
 
   - [Introduction](#introduction)
   - [What is Test Driven Development](#what-is-test-driven-development)
-  - [Why TDD](#why-tdd)
-  - [TDD in C++](#tdd-in-c++)
+  - [What TDD Is Not](#what-tdd-is-not)
   - [Examples:](#examples)
     - [Basic Example](#basic-example)
     - [Tokenizing A String](#tokenizing-a-string)
@@ -28,23 +27,38 @@ Realizing this pain point I started practicing Test Driven Development.
 
 ## What is Test Driven Development
 
-Test Driven Development (TDD) is a [software development process](http://en.wikipedia.org/wiki/Software_development_process). Development processes are methodologies to write code in a way that speeds up development, minimize bugs, and keep a code base managable.
+Test Driven Development (TDD) is a [software development process](http://en.wikipedia.org/wiki/Software_development_process).
+Development processes are methodologies to write code in stages (or cycles), so that development is planned and managed easier.
+This helps speeds up development, minimize bugs, and keep a code base managable.
 
-TDD is fairly simple to use:
+Even though there are many different approuches to development, I prefer TDD because it keeps akin to keeping
+code simple and robust.
 
-  1. Write tests
-  2. Write code to pass that test
-  3. Refractor until the code meets standard.
+TDD's development cycle is simple:
 
-## Why TDD
+  1. Write a test (initially failing)
+  2. Write code to pass the test
+  3. Rerun the tests
+    3.a If the test fails back to 2
+    3.b If the test passes go to 4
+  4. Refractor to clean up the code.
 
-TDD keeps code akin to [unix philosophy](http://en.wikipedia.org/wiki/Unix_philosophy#Eric_Raymond.E2.80.99s_17_Unix_Rules). By following this philosophy it helps keep code modular and understandable.
-An advantage of TDD is that a feauture is required to be unabiguous
 
-## TDD in C++
-To give examples of TDD I will be using the [boost test framework](http://www.boost.org/doc/libs/1_55_0/libs/test/doc/html/utf.html).
+# What TDD Is Not
+
+TDD is not a magic bullet. Even though quality of code is higher, TDD can still lead its own
+[anti-patterns](http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/).
+
+It's also not a code to live by (sorry for the pun). It's an approuch to writing code that will
+help develop code quicker. Because a test was written and passed does not mean that it is bug free.
+
+It's not meant to test others code, it's meant to test and verify your own code. It's not nessesary
+to test libraries that are included in your code, but you don't maintain. An example of an unessasary test would be
+to test std::string `std::string("test") == "test"`.
 
 # Examples
+
+To give examples of TDD I will be using the [boost test framework](http://www.boost.org/doc/libs/1_55_0/libs/test/doc/html/utf.html).
 
 ## Basic Example
 
@@ -224,7 +238,7 @@ Running 1 test case...
 *** No errors detected
 ```
 
-We can expand on our test cases more to cover more edge cases in our code.
+We can expand the test cases more to cover more edge cases.
 
 ```
 BOOST_AUTO_TEST_CASE(string_tok_test)
@@ -257,8 +271,7 @@ Running 1 test case...
 
 In summary:
 
-  1. Wrote `string_tok_test`
-  2. Wrote `tok_string`
-  3. Refractored
-  4. Added more tests to `string_tok_test`
+  1. We wrote the test `string_tok_test` to specify what the requirements we wanted.
+  2. Implemented the function `tok_string` to satisfy the test we made
+  3. Refractored until `string_tok_test` was passed
 
