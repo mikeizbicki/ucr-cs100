@@ -204,11 +204,6 @@ Running 1 test case...
 *** No errors detected
 ```
 
-To recap so far what we have done:
-
-  1. Wrote the `string_tok_test`
-  2. Wrote the function `tok_string` to barely pass `string_tok_test`
-
 Now we need to begin refractoring our implementation. Since we can't just return
 the correct a constant vector each and everytime we need to actually tokenize
 our string.
