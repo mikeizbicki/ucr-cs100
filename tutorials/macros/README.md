@@ -47,7 +47,7 @@ The output would be as expected:`My name is Kenneth Huang
 Macro definitions end at the end of the `#define` line, so to continue the definition onto multiple lines, you have to use a backslash-newline. However, when the macro expands it all appears on one line. For example,
 
 ```
-#define CHARS  'a', \
+#define CHARS   'a', \
                 'b', \
                 'c' 
 char a[] = { CHARS }; // is equivalent to
@@ -58,12 +58,14 @@ char a[] = { CHARS }; // is equivalent to
 
 Macros definitions can include previously defined macros. For example, if you had a macro that returns the larger of two numbers, and you also wanted to find the largerst of 3 numbers.
 
-`#define MAX(a,b)           ((a < b) ? (b) : (a))
+```
+#define MAX(a,b)           ((a < b) ? (b) : (a))
  #define LARGEST(a,b,c)     ((MAX(a,b) < c) ? (c) : (MAX(a,b)))
 
  cout << "Largest of 1, 2, and 3 is " << LARGEST(1,2,3);
  
  //Output: Largest of 1, 2, and 3 is 3`
+```
 
 ##Common Macro Errors
 
@@ -85,27 +87,33 @@ The way to avoid this problem is to force the arguments to be evaluated first, b
 
 Consider the following macro.
 
-`#define MACRO(x,y) {\
+```
+#define MACRO(x,y) {\
     cout << "1st arg is: " << (x) << endl; \
     cout << "2nd arg is: " << (y) << endl; \
     cout << "Sum is: " << ((x) + (y)) << endl; \
-}`
+}
+```
 
 A call to this macro might be `MACRO(2,4)` This call expands to a complete compound statement that doesn't require a semicolon to end it. However, since it looks like a function call, it makes it less confusing if you can use it like one, and write a semicolon afterward, as in `MACRO(2,4);`
 
 In this case the semicolon is redundant, and creates a null statement. This becomes an issue in if else statements.
 
-`if ( x!= y )
+```
+if ( x!= y )
     MACRO(x,y);
-else ... `
+else ... 
+```
 
 Since there are two statements between the `if` and the `else`, this becomes invalid C code. A way to fix this problem is to change the macro definition with a do ... while statement.
 
-`#define MACRO(x,y) \
+```
+#define MACRO(x,y) \
 do { cout << "1st arg is: " << (x) << endl; \
     cout << "2nd arg is: " << (y) << endl; \
     cout << "Sum is: " << ((x) + (y)) << endl; \
-} while (0)`
+} while (0)
+```
 
 Now `MACRO(2,4);` expands into `do {...} while (0);` This is one statement, and the loop executes exactly once.
 
@@ -113,12 +121,14 @@ Now `MACRO(2,4);` expands into `do {...} while (0);` This is one statement, and 
 
 Another problem is that macros don't evaluate their arguments, and instead paste them into the text. This becomes an issue with the previous MAX macro if you pass in x++, y++.
 
-`#define MAX(a,b) ((a) < (b) : (a))
+```
+#define MAX(a,b) ((a) < (b) : (a))
 int x = 5, y = 10;
 int z = MAX(x++, y++);
 
 //This becomes
-// int z = (x++ < y++ ? y++ : x++)`
+// int z = (x++ < y++ ? y++ : x++)
+```
 
 The problem is that in this case y++ is evaluated twice, and y will have a value of 12 instead of what we expected, 11.
 
