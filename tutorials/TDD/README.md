@@ -20,19 +20,16 @@ When I began coding my process consisted of:
   * Realize I didn't think of everything and throw aside my plan
   and struggle to complete what I set out to do
 
-The point being I wasted a lot of time not just planning something that wouldn't
-work, also rewriting code without a clear idea of what my code was doing.
+A lot of time was wasted planning a design that wouldn't work, but also rewriting code without a clear idea of what my code was doing.
 
 Realizing this pain point I started practicing Test Driven Development.
 
 ## What is Test Driven Development
 
 Test Driven Development (TDD) is a [software development process](http://en.wikipedia.org/wiki/Software_development_process).
-Development processes are methodologies to write code in stages (or cycles), so that development is planned and managed easier.
-This helps speeds up development, minimize bugs, and keep a code base managable.
+Development processes are methodologies to write code in stages (or cycles). In general these methodologies are meant to help speed up development, minimize bugs, and keep code bases malleable.
 
-Even though there are many different approuches to development, I prefer TDD because it keeps akin to keeping
-code simple and robust.
+Even though there are many different approuches to development, I prefer TDD because its style is to keep code simple and robust.
 
 TDD's development cycle is simple:
 
@@ -43,18 +40,14 @@ TDD's development cycle is simple:
     * If the test passes go to 4
   4. Refractor to clean up the code.
 
-
 # What TDD Is Not
 
 TDD is not a magic bullet. Even though quality of code is higher, TDD can still lead its own
-[anti-patterns](http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/).
+[problems](http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/). Also it has known issues for not being sufficient testing for interfaces such as UI, databases, or networking.
 
-It's also not a code to live by (sorry for the pun). It's an approuch to writing code that will
-help develop code quicker. Because a test was written and passed does not mean that it is bug free.
+Because a test was written and passed, does not mean that it is bug free. A programmer may not think of a test case than that is an edge case.
 
-It's not meant to test others code, it's meant to test and verify your own code. It's not nessesary
-to test libraries that are included in your code, but you don't maintain. An example of an unessasary test would be
-to test std::string `std::string("test") == "test"`.
+TDD is meant to test and verify your own code. It's not nessesary to test libraries that are included in your code. An example of an unessasary test would be to test std::string `std::string("test") == "test"`. 
 
 # Examples
 
@@ -86,7 +79,6 @@ BOOST_AUTO_TEST_CASE( euler_test )
   BOOST_CHECK(find_mult(3, 5, 1000) == 233168);
 }
 ```
-
 Compile and run our test.
 
 ```
@@ -98,7 +90,7 @@ tests/test_project_euler.cpp(12): error in "euler_test": check find_mult(3, 5, 1
 *** 1 failure detected in test suite "EulerTest"
 ```
 
-Now that we have our test we will start writing code to try and pass our test.
+Our test failed like we wanted it to. Now that we have our test lets implement some code to pass our test.
 
 ```
 int find_mult(const int &first_num, const int& second_num, const int &upper_bound)
@@ -114,6 +106,8 @@ int find_mult(const int &first_num, const int& second_num, const int &upper_boun
 }
 ```
 
+The function `find_mult` is itterating over all integers from 0 to `upper_bound` and summing all the numbers that are a multiple of `first_num` or `second_num`.
+
 Compile and run to see if we pass our test.
 
 ```
@@ -127,19 +121,17 @@ Running 1 test case...
 We passed the test so we were able to find all the multiples of 3 and 5 from 0
 to 1000.
 
-
 ## Tokenizing A String
 
 In this example I need a function( or functions ) that will take a `string` and return a `vector<string>`.
 
-The `strings` in the `vector` should contain no whitespaces and be in the order they were in the string.
+The `strings` in the `vector` should contain no whitespaces, and their arrangment should be in the order they appeared in the string.
 
 ```
 string s = "Today is a nice day!"
 vector<string> v = some_tok_func(s)
+// v should contain `["Today", "is", "a", "nice", "day!"]`.
 ```
-
-Inside of `v` we want `["Today", "is", "a", "nice", "day!"]`.
 First we lets write our test in `tests/test_string_tok.cpp`
 
 ```
