@@ -1,7 +1,7 @@
 #Macros
 
 ###What is a macro?
-A macro (short for macroinstruction) is a fragment of code that is given a name. The C preoprocessor examines the code before it is compiled, and manipulates it in various ways. For example, the preprocesser replaces the line `#include <stdio.h>` with the text of the file 'stdio.h'. In the same way, whenever the name of the macro is used, it is replaced by the contents of that macro. 
+A macro (short for macroinstruction) is a fragment of code that is given a name. The C preprocessor examines the code before it is compiled, and manipulates it in various ways. For example, the preprocessor replaces the line `#include <stdio.h>` with the text of the file 'stdio.h'. In the same way, whenever the name of the macro is used, it is replaced by the contents of that macro. 
 
 In general there are two types of macros, object-like and function-like. By convention, macro names are typically written in uppercase. Programs are easier to read if macros can be identified at a glance.
 
@@ -54,7 +54,7 @@ PRINT_NAME(Kenneth Huang);`
 
 ###Combining Macros
 
-Macros definitions can include previously defined macros. For example, if you had a macro that returns the larger of two numbers, and you also wanted to find the largerst of 3 numbers.
+Macros definitions can include previously defined macros. For example, if you had a macro that returns the larger of two numbers, and you also wanted to find the largest of 3 numbers.
 
 ```
 #define MAX(a,b)           ((a < b) ? (b) : (a))
