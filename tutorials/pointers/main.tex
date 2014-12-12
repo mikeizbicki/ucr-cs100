@@ -1,0 +1,209 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\title{For everything about pointers in C / C++, please refer to this document}
+
+\author{Albert Hsu}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Everything you need to know about pointers in C and C++ in one location. 
+\end{abstract}
+\section{Basic (Where do you live?)}
+ To declare a pointer type use the * right before declaring a variable name. Think of a pointer as a address of a house\\
+ \\
+ 	\centerline{char *address}\\
+\\
+This would declare a char pointer named address. To see who live inside the address, put a * in front of the pointer.  \\
+\\
+\centerline{*address} \\
+\\
+This will tell me what the content of the pointer. AKA who lives there. 
+\\
+\\
+Try not to make a habit of putting the * after type but instead before the variable name so that you don't make this mistake 
+\\\\
+\\
+	\centerline{char* address, NotaAddress}\\
+\\
+This would declare a char pointer named address and a char variable named NotaAddress. If you want to declare two multiple pointers, do this:
+\\
+\\
+\centerline{char *address1, *address2}\\
+\\
+This would correctly create two char pointer. 
+\\
+\\
+\\
+Using the \& symbol to show someone address. We can use this to assign address to an already existing location. Or we can have two different address pointing to the same house
+\\
+\centerline{address = \&AlbertsHouse\\ or\\ address2 = address}\\
+\\ \\ Both address will give me the location of AlbertsHouse. 
+
+\section{Pointers and Arrays (Street Name}
+Arrays are basically const pointers. Think of arrays are street names. The street name will tell you where the first house will be and you can find other houses on the street by walking. Similarly the array points to the first element of the array and each subsequent element is just the next address. \\
+\\
+\centerline{MagicalLane[3] is basically the same as MagicalLane+3} \\
+\\
+This will access the third house on magical lane street. 
+\\
+
+The same properties that applies to pointers also applies to array element since they are basically the same except they're const. For example\\
+\\
+\centerline{int MagicalLane[3] = {0,1,2}}\\
+\centerline{*MagicalLane = 5\\ This will set MagicalLane[0] = 5}\\
+\centerline{*(MagicalLane+2) \\ This will return 2}\\
+
+Array pointers are const but the content is not. This is why you change the content but you can not make array point to somewhere else. This is why arrays cannot change size during runtime without using heap. To use heap, use "new" function for c++ and malloc for c. Just remember to free them up so you don't have memory leaks.   
+
+\section{Math with pointers}
+The rule of thumb when it comes to doing math with pointers is to use parentheses around the pointer. \\
+The ++ could be replaced with any other math operator.\\
+\begin{table}[h]
+\centering
+\begin{tabular}{ccc}
+Command & Memory Address                  & Memory Content                  \\
+p       & Yep                             & Nope                            \\
+*p      & Nope                            & yep                             \\
+*p++    & Incremented after value is read & Unchanged                       \\
+*(p++)  & Incremented after value is read & Unchanged                       \\
+(*p)++  & Unchanged                       & Incremented after value is read \\
+*++p    & Incremented after value is read & Unchanged                       \\
+*(++p)  & Incremented after value is read & Unchanged                       \\
+++*p    & Unchanged                       & Incremented after value is read \\
+++(*p)  & Unchanged                       & Incremented after value is read
+\end{tabular}
+\end{table}\\
+
+\section{Ugly ** double pointer }
+Double pointers are mainly used in C for array of cstring. It's easier to explain it with examples so: 
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ccc}
+On the screen  & What It is    & Seen by compiler 
+\\
+array +1	& 	An Address & 	A pointer
+\\
+*(array+1) & Content of address & A string
+\\
+*(*(array+1))  & Content of Cstring & A character
+\\
+**(array+1) & Same as above & Same as above
+\\
+*(array+1)[0] & First character of the string & A character
+
+\end{tabular}
+\end{table}
+Please note that it double pointer is not exclusively for cstrings. It could just be a pointer pointing to a pointer that points to anything. \\
+\section{Function pointers (Factory address)}
+A factory is a lot like functions. They take in materials and people (parameters) and produce things (function return) that people want. A function pointer is like an address pointing to that factory. To declare a function pointers do something like this:\\
+\centerline{product (*FactoryAddress)(workers, diamonds}\\
+\\
+where product can be any return types and (workers and diamonds can be any data types) To avoid confusion, you must put parenthesis around FactoryAddress to show that it's a function pointer. 
+\\\\
+Some real function pointer examples:\\\\
+\centerline{int (*adder) (int , int)}\\
+\centerline{void (*sayhello) ()}\\
+\centerline{char* (GiveMeAPointer) (char*)}\\
+\\
+All of the above are just pointers not pointing to anything function yet. An empty address. To point to a function use the = operator and assign it to a function name. No need for * or \& symbol. Example:\\
+\\
+\centerline{void (*FactoryAddress) () = AlbertsFactory}\\
+\centerline{FactoryAddress = AlbertsSecondFactory}\\\\
+Both of these are fine.
+\\
+\subsection{Using Function pointers as parameter}
+To declare a function that takes in function pointers:\\
+\\
+\centerline{int doMath(int (*mathfunction)(int, int), int a, int b)}
+\\\\
+Note that doMath is not a function pointer and its first parameter is a function pointer.\\
+\\
+Let say I have two other function call add and divide. I can pass in those function as function pointer when calling doMath function by:\\
+\\
+\centerline{result = doMath(add, 10, 5) } \\
+\centerline{or}\\
+\centerline{result = doMath(divide, 10, 5)}\\
+\\
+You can use function name where it is asking for function pointers. You can also declare a function pointer, set it to the function you want, and then pass it in. Both works. 
+\section{Cheat Sheet}
+\begin{table}[h]
+\centering
+\begin{tabular}{ll}
+\multicolumn{1}{c}{Declaration} & \multicolumn{1}{c}{Result}                                \\
+char *ptr;                      & ptr is set to NULL. No memory allocated.                  \\
+char *ptr, ptr2;                & ptr2 is not a pointer but ptr is.                         \\
+char **ptr;                     & A double pointer is set to NULL. No memory allocated      \\
+char array[];                   & A array is declared but no memory allocated for it.       \\
+char array[10];                 & A array size 10 is declared with memory allocated for it. \\
+char *a[];                      & A pointer to an array with no memory allocated.           \\
+char *a[20];                    & A pointer pointing to an array size 20.                   \\
+char a[][];                     & A 2-D array is declared but no memory allocated for it.   \\
+char a[1][2];                   & A 2-D array with memory allocated for it                 
+\end{tabular}
+\end{table}
+\begin{table}[h]
+\centering
+\begin{tabular}{ccl}
+Code                                           & Is it a memory address                               & Or content of the address \\
+char* ptr;                                     & yes                                            & no                        \\
+ptr;                                           & yes                                                  & no                        \\
+*ptr;                                          & yes                                                  & no                        \\
+\&variable;                                    & yes                                                  & no                        \\
+array;                                         & yes                                                  & no                        \\
+*array;                                        & no                                                   & yes                       \\
+array++;                                       & yes                                                  & no                        \\
+*(array++);                                    & no                                                   & yes                       \\
+array{[}1{]};                                  & no                                                   & yes                       \\
+doublearray{[}0{]}{[}0{]};					   & no						                              & yes                       \\
+**doublearray;           					   & no						                              & yes                       \\
+doublearray;               					   & yes(pointing to another pointer)				   	  & no                        \\
+doublearray+3;             					   & yes(pointing to another pointer)                     & no                        \\
+*doublearray;            					   & yes                         					      & no                        \\
+doublearray{[}0{]};       					   & yes                             				 	  & no                        \\
+*doublearray{[}0{]};    			      	   & no                              					  & yes                       \\                       
+\end{tabular}
+\end{table}
+Note that null pointers doesn't have the apporiate size to store it's data type. To solve this, allow the pointer to point to memory space that are already allocated for that data type. You can point to an exsisting variable of same data type or use new operator or malloc function. \\\\
+Remeber a memory address cannot be set to a data type, it can only contain memory address. 
+
+\begin{table}[h]
+\centering
+\begin{tabular}{cl}
+Memory Allocation                                   & \multicolumn{1}{c}{}                                                                                                              \\\hline
+operator/function                                   & \multicolumn{1}{c}{What it does}                                                                                                  \\\hline
+new(c++)                                            & \begin{tabular}[c]{@{}l@{}}Allocate the right amount of memory\\  on heap. It returns a pointer.\end{tabular}                     \\\hline
+new[](c++)                                          & \begin{tabular}[c]{@{}l@{}}Allocate array of the right amount of \\ memory on heap.\end{tabular}                                   \\\hline
+delete.(c++)                                         & \begin{tabular}[c]{@{}l@{}}Free the allocated memory on heap that \\ were allocated by new.\end{tabular}                           \\\hline
+delete [](c++)                                      & \begin{tabular}[c]{@{}l@{}}Free the array of allocated memory on \\ heap that were allocated by new[].\end{tabular}                \\\hline
+malloc(size\underline{{ }{ }}t size)                                 & \begin{tabular}[c]{@{}l@{}}Allocated size amount of bytes of \\ memory. Returns a pointer pointing to it.\end{tabular}            \\\hline
+\multicolumn{1}{l}{realloc(void* ptr, size\underline{{ }{ }}t size)} & \begin{tabular}[c]{@{}l@{}}Re-allocate the pointer to size amount \\ of bytes of memory.\end{tabular}                              \\\hline
+\multicolumn{1}{l}{calloc(size\underline{{ }{ }}t num, size\underline{{ }{ }}t size)} & \begin{tabular}[c]{@{}l@{}}Allocated block of memory for an \\ array of size num and each of them\\  size bytes long\end{tabular} \\\hline
+free(void* ptr)                                     & De-allocated memory pointed by ptr.                                                                                               
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ccl}
+		Syntax 		& Technical Term       & Meaning        \\\hline
+*                    & dereference          & \begin{tabular}[c]{@{}l@{}}-Content of object a pointer is pointing to. \\ -To declare a pointer\end{tabular}                                                                                                                                       \\\hline
+\&                   & Unary                & Address of a variable. Referencing a variable                                                                                                                                                                                                       \\\hline
+**                   & Double pointer       & Pointer pointing to another pointer                                                                                                                                                                                                                 \\\hline
+-\textgreater        & structure derefence  & \begin{tabular}[c]{@{}l@{}}-The left side is dereference and right side is the \\ member that belong to the object being derefernce\\ -Same as (*a).member\end{tabular}                                                                             \\\hline
+{[}{]}               & array subscript      & \begin{tabular}[c]{@{}l@{}}For E1{[}E2{]}, the array subscript is exactly same as\\  *(E1+E2). You can see the order doesn't matter  \\  so 2{[}array{]} is correct since the complier will see it as *(2+array).\end{tabular} \\
+\multicolumn{1}{l}{} & \multicolumn{1}{l}{} &                                                                                                                                                                                                                                                    
+\end{tabular}
+\end{table}
+\end{document}
