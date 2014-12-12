@@ -34,22 +34,25 @@ You could use this macro with a statement like
 
 One potentially useful macro option is to turn a token into a string. The syntax is to prefix the token with a pound sign '#'. This can be used to print out the token. For example
 
-``` #define PRINT_NAME(token) cout << "My name is " << #token << endl
+``` 
+#define PRINT_NAME(token) cout << "My name is " << #token << endl
 
- PRINT_NAME(Kenneth Huang);`
-
- The output would be as expected:`My name is Kenneth Huang
+PRINT_NAME(Kenneth Huang);`
 ```
+The output would be as expected:`My name is Kenneth Huang
+
 
 ###Multi-line Macros
 
 Macro definitions end at the end of the `#define` line, so to continue the definition onto multiple lines, you have to use a backslash-newline. However, when the macro expands it all appears on one line. For example,
 
-`#define CHARS  'a', \
+```
+#define CHARS  'a', \
                 'b', \
                 'c' 
 char a[] = { CHARS }; // is equivalent to
 // int a[] = { 'a', 'b', 'c' };`
+```
 
 ###Combining Macros
 
