@@ -159,8 +159,7 @@ BOOST_AUTO_TEST_CASE(string_tok_test)
 The tests should be designed so that it is easy to control how they will fail.
 
 Now we implement a prototype of `tok_string` in `src/string_tok.cpp`. Our
-prototype should compile but fail 100% of the time . The reason for this is we want to
-ensure we don't get any false posatives in our tests.
+prototype should compile but fail.
 
 ```
 vector<string> tok_string(const string& input)
@@ -264,9 +263,12 @@ Running 1 test case...
 *** No errors detected
 ```
 
+The new tests passed however `BOOST_CHECK(tok_string(test_string3) == test_vector);` is not a good test.
+The reason for this is that it is testing too many things. Suppose newlines broke `tok_string` our 
+test does will not tell us that. It will only tell us that newline or tabs broke our code.
+
 In summary:
 
   1. We wrote the test `string_tok_test` to specify what the requirements we wanted.
   2. Implemented the function `tok_string` to satisfy the test we made
   3. Refractored until `string_tok_test` was passed
-
