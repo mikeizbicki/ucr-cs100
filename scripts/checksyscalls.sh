@@ -10,8 +10,8 @@
 # by a parenthesis.  This should never overcount syscalls, but could undercount
 # them in the presence of macros, function pointers, or other fanciness.
 #
-#scriptdir=`dirname "$0"`
-#source "config.sh"
+scriptdir=`dirname "$0"`
+#source "$scriptdir/config.sh"
 
 if [ $# -eq 0 ]; then
     echo "usage: $0 filetograde"
@@ -20,7 +20,7 @@ elif [ $# -eq 1 ];then
     if [ -d $1 ]; then
         for s in "$1"/*
         do
-            ./checksyscalls.sh $s
+            $0 $s
         done
         exit 0
     fi
@@ -30,19 +30,19 @@ else
         if [ -d $f ]; then
             for g in "$f"/*
             do
-                ./checksyscalls.sh $g
+                $0 $g
             done
         else
-            ./checksyscalls.sh $f
+            $0 $f
         fi
     done
     exit 0
 fi
 
-source "config.sh"
+source "$scriptdir/config.sh"
 
 # we'll pipe files through these commands to remove spurious counts
-rmcomments="./scripts/rmcomments.sh"
+rmcomments="scripts/rmcomments.sh"
 rmstr="sed s/\"[^\"]*\"//g"
 rminclude="sed s/#.*//"
 
@@ -55,6 +55,7 @@ syscalls="
     execle
     execlp
     execv
+    execve
     execvl
     execvp
     fork
@@ -78,11 +79,14 @@ syscalls="
     chdir
     getcwd
     getwd
-    get_current_directory_name
+    get_current_dir_name
     signal
     sigaction
     getpwuid
     getgrgid
+    kill
+    access
+    system
     "
 
 #The regex will not match member operators like stream::open.

@@ -76,8 +76,8 @@ week | date | assignments | topics
 8 | Nov27 | | THANKSGIVING
 9 | Dec02 | hw3 | syscalls: pthreads
 9 | Dec04 | esr's thoughts on [flaws with unix](http://www.catb.org/esr/writings/taoup/html/ch20s03.html) | syscalls: sockets
-10 | Dec11 | quiz | case study: hacking the email system and the [ioccc.org](http://ioccc.org)
-10 | Dec13 | hw4 | case study: stuxnet and heartbleed
+10 | Dec09 | quiz | case study: hacking the email system and the [ioccc.org](http://ioccc.org)
+10 | Dec11 | hw4 | case study: stuxnet and heartbleed
 
 This schedule is only a rough outline, and will probably change a lot.
 If there's something you want to learn not on the schedule, let me know!

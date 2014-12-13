@@ -15,7 +15,7 @@ First, you're going to practice sending these emails.  Then, you're going to wri
 First, telnet into the local SMTP webserver:
 
 ```
-telnet email.cs.ucr.edu 25
+telnet mail.cs.ucr.edu 25
 ```
 
 Telnet is a simple command line utility that let's us send commands over the network.  Whatever you type in gets sent over the network to the server you're connected to.
