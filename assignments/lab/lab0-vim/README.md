@@ -9,7 +9,7 @@ Open up a terminal and type the command `vimtutor` to get started.  This command
 Once you have finished that, start playing the game: http://vim-adventures.com.
 The first three levels are free (and that's all you're required to do).
 You're welcome to pay for the full game if you want, but I'm not requiring you to do so.
-And you won't get any extra credit for it.
+If you do complete the full game, you will receive 15 points extra credit. See details at [ec-vim](https://github.com/mikeizbicki/ucr-cs100/tree/cs100-2014fall/assignments/ec/ec-vim).
 
 ## vim links
 
