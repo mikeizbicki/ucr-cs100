@@ -1,0 +1,152 @@
+\documentclass{article}
+
+\usepackage{listings}
+
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\title{Pointers Cheat Sheet}
+
+\author{Albert Hsu}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+ 
+
+\section{Basics}
+\begin{table}[h]
+\centering
+\begin{tabular}{ll}
+\multicolumn{1}{c}{Code} & \multicolumn{1}{c}{Result}                                \\
+char *ptr;                      & ptr is set to NULL. No memory allocated.                  \\
+char *ptr, ptr2;                & ptr2 is not a pointer but ptr is pointer.                         \\
+char **ptr;                     & A double pointer is set to NULL. No memory allocated      \\
+char array[10];                 & A array size 10 on stack. \\
+
+char *a[20];                    & An array of char pointer of size 20.                   \\
+char a[1][2];                   & A 2-D array on stack. 
+\\
+char a[x];						& A array of size x. x has to be const.
+\\
+char *a = new char[x];			& A Dynamic array of size x on heap. x can change during runtime.  \\
+
+char **a = new char*[x];			& \begin{tabular}[c]{@{}l@{}}A Dynamic array of size x of char pointers on heap. x can\\ change during runtime.\end{tabular} \\
+
+char **a = new char[x][y]		& A 2-D Dynamic array on heap. x and y can change during runtime. 
+
+\end{tabular}
+\end{table}
+\begin{table}[h]
+\centering
+\begin{tabular}{ccl}
+Code                                           & Is it a memory address                               & Or content of the address \\
+char* ptr;                                     & yes                                            & no                        \\
+ptr;                                           & yes                                                  & no                        \\
+*ptr;                                          & yes                                                  & no                        \\
+\&variable;                                    & yes                                                  & no                        \\
+array;                                         & yes                                                  & no                        \\
+*array;                                        & no                                                   & yes                       \\
+array++;                                       & yes                                                  & no                        \\
+*(array++);                                    & no                                                   & yes                       \\
+array{[}1{]};                                  & no                                                   & yes                       \\
+doublearray{[}0{]}{[}0{]};					   & no						                              & yes                       \\
+**doublearray;           					   & no						                              & yes                       \\
+doublearray;               					   & yes(pointing to another pointer)				   	  & no                        \\
+doublearray+3;             					   & yes(pointing to another pointer)                     & no                        \\
+*doublearray;            					   & yes                         					      & no                        \\
+doublearray{[}0{]};       					   & yes                             				 	  & no                        \\
+*doublearray{[}0{]};    			      	   & no                              					  & yes                       \\                       
+\end{tabular}
+\end{table}
+Note that null pointers doesn't have the apporiate size to store it's data type. To solve this, allow the pointer to point to memory space that are already allocated for that data type. You can point to an exsisting variable of same data type or use new operator or malloc function. \\\\
+Remeber a memory address cannot be set to a data type, it can only contain memory address. \\\\
+
+\begin{table}[h]
+\centering
+\begin{tabular}{cl}
+Memory Allocation                                   & \multicolumn{1}{c}{}                                                                                                              \\\hline
+operator/function                                   & \multicolumn{1}{c}{What it does}                                                                                                  \\\hline
+new(c++)                                            & \begin{tabular}[c]{@{}l@{}}Allocate the right amount of memory\\  on heap. It returns a pointer.\end{tabular}                     \\\hline
+new[](c++)                                          & \begin{tabular}[c]{@{}l@{}}Allocate array of the right amount of \\ memory on heap.\end{tabular}                                   \\\hline
+delete.(c++)                                         & \begin{tabular}[c]{@{}l@{}}Free the allocated memory on heap that \\ were allocated by new.\end{tabular}                           \\\hline
+delete [](c++)                                      & \begin{tabular}[c]{@{}l@{}}Free the array of allocated memory on \\ heap that were allocated by new[].\end{tabular}                \\\hline
+malloc(size\underline{{ }{ }}t size)                                 & \begin{tabular}[c]{@{}l@{}}Allocated size amount of bytes of \\ memory. Returns a pointer pointing to it.\end{tabular}            \\\hline
+\multicolumn{1}{l}{realloc(void* ptr, size\underline{{ }{ }}t size)} & \begin{tabular}[c]{@{}l@{}}Re-allocate the pointer to size amount \\ of bytes of memory.\end{tabular}                              \\\hline
+\multicolumn{1}{l}{calloc(size\underline{{ }{ }}t num, size\underline{{ }{ }}t size)} & \begin{tabular}[c]{@{}l@{}}Allocated block of memory for an \\ array of size num and each of them\\  size bytes long\end{tabular} \\\hline
+free(void* ptr)                                     & De-allocated memory pointed by ptr.                                                                                               
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ccl}
+		Syntax 		& Technical Term       & Meaning        \\\hline
+*                    & dereference          & \begin{tabular}[c]{@{}l@{}}-Content of object a pointer is pointing to. \\ -To declare a pointer\end{tabular}                                                                                                                                       \\\hline
+\&                   & Unary                & Address of a variable. Referencing a variable                                                                                                                                                                                                       \\\hline
+**                   & Double pointer       & Pointer pointing to another pointer                                                                                                                                                                                                                 \\\hline
+-\textgreater        & structure derefence  & \begin{tabular}[c]{@{}l@{}}This combines dereference and dot operator. \end{tabular}                                                                             \\\hline
+{[}{]}               & array subscript      & \begin{tabular}[c]{@{}l@{}}For E1{[}E2{]}, the array subscript is exactly \\same as  *(E1+E2). You can see the order \\doesn't matter    so 2{[}array{]} is correct since the \\complier will see it as *(2+array).\end{tabular} \\
+\multicolumn{1}{l}{} & \multicolumn{1}{l}{} &                                                                                                                                                                                                                                                    
+\end{tabular}
+\end{table}
+\section{Function Pointers}
+Assume that two function both return nothing and takes in one int called func and func2. Remember that function pointer's type and parameters have to be the same just like a char pointer must point at a char type. \\
+
+\begin{table}[h]
+\begin{tabular}{cl}
+Code                 & \multicolumn{1}{c}{Result}                                            \\
+void (*f\_ptr)(int); & Declared a function pointer that takes in one int and return nothing. \\
+f\_ptr = func;       & f\_ptr is now pointing to func                                        \\
+(*f\_ptr)(2);        & calls func passing in 2                                               \\
+f\_ptr(2);           & No different from (*f\_ptr)(2);                                       \\
+(**f\_ptr)(2);       & No different from (*f\_ptr)(2);                                       \\
+f\_ptr = func2;      & f\_ptr is now pointing to func2                                       \\
+f\_ptr = \&func2;    & No different from f\_ptr = func2;                                     \\
+f\_ptr = *func2      & No different from f\_ptr= func2;                                      \\
+f\_ptr = **func2     & No different from f\_ptr= fun2;                                       \\
+\multicolumn{1}{l}{} &                                                                       \\
+\multicolumn{1}{l}{} &                                                                      
+\end{tabular}
+\end{table}
+Assume that func and func2 are already declared that return nothing and takes no parameters. Here are some code that shows function using function pointers\\
+\begin{table}[h]
+\begin{tabular}{cl}
+Code                       & \multicolumn{1}{c}{Result}                                                                                                                  \\
+void f( void(*a)() );      & \begin{tabular}[c]{@{}l@{}}Function prototype for a function that return nothing \\ and takes in one function pointer.\end{tabular}         \\
+int f2(void(*b)(), int c); & \begin{tabular}[c]{@{}l@{}}Function prototype for a function that return a int and\\ takes in one function pointer and a char.\end{tabular} \\
+void (*f\_ptr)() = func;   & Declare a void function pointer and point it to func.                                                                                                            \\
+void (*f\_ptr2)() = func2; & Declare a char function pointer and point it to func2.                                                                                                            \\
+f(f\_ptr);                 & Calls f and pass in func.                                                                                                                   \\
+f2(f\_ptr2, 5);            & Calls f2 and pass in func2 and 5.                                                                                                           \\
+f(f\_ptr2);                & Calls f and pass in func2.                                                                                                                  \\
+f\_ptr = f\_ptr2;          & f\_ptr is now pointing to func2.                                                                                                            \\
+f2(f\_ptr, 5);             & Calls f2 and pass in func2 and 5.                                                                                                        
+\end{tabular}
+\end{table}
+\section{Edge Cases/Errors}
+\begin{table}[h]
+\begin{tabular}{|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{Bad Code}                                                                                                 & \multicolumn{1}{c|}{Error}                                                                    & Explanation                                                                                                                                                                                                                           \\ \hline
+array{[}array.size(){]};                                                                                                       & \begin{tabular}[c]{@{}l@{}}Out of bound. Could \\ cause a segmentation \\ fault.\end{tabular} & \begin{tabular}[c]{@{}l@{}}It's trying to access memory not allocated \\ for that array.\\ Always check your array bounds.\end{tabular}                                                                                               \\ \hline
+\begin{tabular}[c]{@{}l@{}}int *ptr; \\ cout \textless\textless *ptr \textless\textless endl;\end{tabular}                     & Segmentation fault.                                                                           & \begin{tabular}[c]{@{}l@{}}You can't use NULL pointers. Always\\ check if pointers are NULL pointers\\ before using.\end{tabular}                                                                                                     \\ \hline
+int *ptr  = 100;                                                                                                               & Compiler error                                                                                & \begin{tabular}[c]{@{}l@{}}100 is not a int pointer type. Cannot \\ assign values to pointers.\end{tabular}                                                                                                                           \\ \hline
+cout \textless\textless ptr \textless\textless endl;                                                                           & Runtime                                                                                       & \begin{tabular}[c]{@{}l@{}}It will print out the actually address. \\ Usually not what you want.\end{tabular}                                                                                                                         \\ \hline
+if(ptr == ptr2)                                                                                                        & Runtime                                                                                       & \begin{tabular}[c]{@{}l@{}}Compiler will compare the address of \\ ptr and ptr2. Dereference them first.\end{tabular}                                                                                                                 \\ \hline
+char a{[}{]};                                                                                                                  & Compiler error                                                                                & \begin{tabular}[c]{@{}l@{}}Compiler need to know the size of the\\ array. Use memory allocation operator \\ or function.\end{tabular}                                                                                                 \\ \hline
+char *a{[}{]};                                                                                                                 & Compiler error                                                                                & Same as above.                                                                                                                                                                                                                        \\ \hline
+char a{[}{]}{[}{]};                                                                                                            & Compiler error                                                                                & Same as above.                                                                                                                                                                                                                        \\ \hline
+char **a = new char;                                                                                                           & Compiler error                                                                                & \begin{tabular}[c]{@{}l@{}}Double pointer cannot point to a int. \\ Must point to another pointer.\end{tabular}                                                                                                                       \\ \hline
+\begin{tabular}[c]{@{}l@{}}int *ptr, ptr2; \\ ptr1 = new int; \\ ptr2 = ptr1; \\ delete p1; \\ *ptr2 = 2; //Error\end{tabular} & \begin{tabular}[c]{@{}l@{}}Segmentation fault. \\ Dangling pointer\end{tabular}               & \begin{tabular}[c]{@{}l@{}}ptr1 and ptr2 points to the same memory\\  block so when you delete p1, the \\ memory is no longer allocated. When\\  trying to access ptr2, you're \\ trying to access non allocated memory.\end{tabular} \\ \hline
+\begin{tabular}[c]{@{}l@{}}int *ptr;\\ ptr = new int; \\ ptr = new int;\end{tabular}                                           & Memory Leak.                                                                                  & \begin{tabular}[c]{@{}l@{}}The memory allocated for the first new \\ operator is no longer accessible\end{tabular}                                                                                                                    \\ \hline
+\begin{tabular}[c]{@{}l@{}}void function() \{\\ int *ptr = new int; \}\end{tabular}                                            & Memory Leak.                                                                                  & \begin{tabular}[c]{@{}l@{}}Not freeing the allocated memory. \\ Since this is inside a function, each\\ function call will create inaccessible \\ memory on heap.\end{tabular}                                                        \\ \hline
+\end{tabular}
+\end{table}
+\end{document}
+
