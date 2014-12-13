@@ -1,5 +1,5 @@
 #Output Formatting in C++
-Almost anyone who has spent more than a few minutes using C++ has heard of, if not used cout, cin, and cerr. However, many C++ programmers are unaware of some of the obscure tricks and techniques that are available in the *iostream* library. In this tutorial we are going to explore some of those forgotten bits as well as some other formatting features and come out with a few new tools that we can use to format text in more interesting ways.
+In this tutorial, we are going to explore some of the obscure text formatting tools that are available in C++. By the end, you will understand how to print lists into columns, print integers in multiple bases, and manipulate various attributes of your terminal's font using ANSI codes.
 
 ##iomanip
 *iomanip* is a library dedicated to miscellaneous input and output manipulations. Let's get into some of them.
