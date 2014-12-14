@@ -1,0 +1,330 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+\usepackage{fancyhdr}
+\usepackage{framed}
+\usepackage{url}
+\usepackage{anysize}
+\marginsize{16pt}{14pt}{0pt}{40pt}
+\pagestyle{fancy}
+\renewcommand\headrule{}
+\rhead{UCR-CS100FALL}
+
+
+\begin{document}
+\begin{center}
+\LARGE\textbf{Vim Cheatsheet}\\
+\textit{Itsuki David Fukada, Jesus Christian Reyes}
+\end{center}
+
+\begin{framed}
+\begin{center}
+\Large\textbf{Format of command is: ``Verb Range Motion"}
+\end{center}
+\normalsize\begin{verbatim}
+For example, if you use d2w, it will delete 2 words.(To exit insert or visual mode use <Esc>)
+*If you do not use any range, it will automatically set it to 1. Also some verb can be used repeatedily.
+*Also certain words allow "i" to be a range which i stands for "inner." This allows you to have your
+cursor located anywhere on a word and be able to edit the whole word instead of just your cursor to the
+end of the word. For example, if your cursor was in the middle of a word and you enter `dw', you will
+delete only from your cursor to the end of the word. If you entered `diw', you will delete the whole word.
+\end{verbatim}
+\end{framed}
+\begin{multicols}{2}
+\begin{center}
+\textbf{\LARGE{Verb/Editing}}\\
+\end{center}
+\large\begin{tabular}{lll}
+\ttfamily{gg} & Go to (e.g. 20gg goes to line 20)\\
+\ttfamily{f+character} & Finds first instance of character\\
+\ttfamily{r} & Replace a single character\\
+\ttfamily{J} & Join the line below with the current\\
+\ttfamily{c} & Replace (combine with Motion and/or\\\
+& Range)\\
+\ttfamily{x} & Deletes the character at current cursor\\
+& (cut)\\
+\ttfamily{d} & Delete (cut)\\
+\ttfamily{D} & Deletes from cursor to end of line\\
+\ttfamily{y} & Yank the highlighted text (copy)\\
+\ttfamily{p} & Paste the clipboard\\
+\ttfamily{u} & Undo\\
+\ttfamily{U} & Undos entire line\\
+& original state\\
+\ttfamily{Ctrl+r} & Redo\\
+\ttfamily{\textgreater} & Indent to the right\\
+\ttfamily{\textless} & Indent to the left\\
+\ttfamily\url{~} & Changes character's case\\
+\end{tabular}
+\begin{center}
+\textbf{\LARGE{Insertion/Deletion}}\\
+\end{center}
+\large\begin{tabular}{ll}
+\ttfamily{i} & Insert mode at current cursor\\
+\ttfamily{I} & Insert mode at beginning of line\\
+\ttfamily{a} & Insert mode after the cursor\\
+\ttfamily{A} & Insert mode at end of line\\
+\ttfamily{o} & Append a new line below the current line\\
+\ttfamily{O} & Append a new line above the current line\\
+\ttfamily{s} & Delete word and enter insert mode\\
+\ttfamily{S} & Delete line and enter insert mode\\
+\end{tabular}
+\columnbreak
+
+\begin{center}
+\textbf{\LARGE{Motion/Navigation}}
+\end{center}
+\large\begin{tabular}{ll}
+\ttfamily{h} & Left\\
+\ttfamily{j} & Down\\
+\ttfamily{k} & Up\\
+\ttfamily{l} & Right\\
+\ttfamily{w} & Jump forward to the start of a word\\
+\ttfamily{W} & Jump forward to the start of a word\\
+& (can contain punctuation)\\
+\ttfamily{e} & Jump forward to the end of a word\\
+\ttfamily{E} & Jump forward to the end of a word (can\\
+& contain punctuation)\\
+\ttfamily{b} & Jump backward to the start of a word\\
+\ttfamily{B} & Jump backward to the start of a word\\
+& (can contain punctuation)\\
+\ttfamily{0 or} \^ & Jump to the start of the line\\
+\ttfamily{\$} & Jump to the end of the line\\
+\ttfamily{\%} & Jump to matching bracket\\
+\ttfamily{G} & Go to end of file\\
+\ttfamily{H} & (High)Go to top of visible page\\
+\ttfamily{M} & (Middle)Go to middle of visible page\\
+\ttfamily{L} & (Low)Go to bottom of visible page\\
+\ttfamily{(} & Jump forward one sentence\\
+\ttfamily{)} & Jump backward one sentence\\
+\ttfamily{\{} & Jump forward one paragraph\\
+\ttfamily{\}} & Jump backward one paragraph\\
+\ttfamily{``} & Return to the line where cursor was\\
+& before last movement\\
+\end{tabular}
+
+%\columnbreak
+\begin{center}
+\textbf{\LARGE{Other Navigations}}
+\end{center}
+\begin{tabular}{ll}
+\ttfamily{Ctrl-U} & Scroll Up\\
+\ttfamily{Ctrl-D} & Scroll down\\
+\ttfamily{Ctrl-E (Efter)} & Scroll down one line\\
+\ttfamily{Ctrl-Y (Yore)} & croll up one line\\
+\ttfamily{:NUMBER} & to line NUMBER\\
+\ttfamily{NUMBER + G} & to line NUMBER (i.e.: 25G)\\
+\end{tabular}
+\end{multicols}
+
+
+
+\newpage
+
+
+
+
+\begin{center}
+\LARGE\textbf{Commands}
+\end{center}
+
+\begin{multicols}{3}
+\begin{center}
+\LARGE\textbf{Save/Quit}
+\end{center}
+\begin{tabular}{ll}
+\ttfamily{:q} & Quit\\
+\ttfamily{$:$q$!$} & Quit (Ignores changes\\
+& made)\\
+\ttfamily{:w} & Save\\
+\ttfamily{:wq} (:x) & Save and quit\\
+\ttfamily{:w FILENAME} & Saves into \ttfamily{FILENAME}\\
+\end{tabular}
+\begin{center}
+\LARGE\textbf{Tabs/Split}
+\end{center}
+\begin{tabular}{ll}
+\ttfamily{:tabe} & Creates a new tab\\
+\ttfamily{:tabe \ttfamily{FILENAME}} & Creates a new tab\\
+& with name\\
+& \ttfamily{FILENAME}\\
+\ttfamily{gt} & Move to next tab\\
+\ttfamily{gT} & Move to previous\\
+& tab\\
+\ttfamily{\#gt}] & Move to tab number \\
+\end{tabular}
+
+\columnbreak
+\begin{center}
+\Large\textbf{Substitution/Searching}
+\end{center}
+\begin{tabular}{ll}
+\ttfamily{:s/OLD/NEW/g} & Replaces all instances of\\
+& \ttfamily{OLD} \normalfont{in current line}\\
+& with \ttfamily{NEW}\\
+\ttfamily{:\%s/OLD/NEW/g} & Replaces all instances of\\
+& \ttfamily{OLD} \normalfont{with} \ttfamily{NEW}\\
+\ttfamily{:\%s/OLD/NEW/gc} & Replaces all instances of\\
+& \ttfamily{OLD} \normalfont{with} \ttfamily{NEW}\normalfont{, but}\\
+& asks for confirmation\\
+\ttfamily{/TEXT} & Search for \ttfamily{TEXT}\\
+\ttfamily{?TEXT} & Search for \ttfamily{TEXT}\\
+& backwards\\
+\ttfamily{n}] & Move to next word that\\
+& matches\\
+\ttfamily{N} & Move to previous word\\
+& that matches\\
+\end{tabular}
+
+\begin{center}
+\Large\textbf{Colorschemes}
+\end{center}
+\begin{tabular}{ll}
+\ttfamily{:color \textless TAB \textgreater} & Navigate through\\
+& default colorschemes\\
+\newline
+\end{tabular}
+*Add colorschemes in \url{~/.vim/colors}\\
+or create your own at\\
+\url{bytefluent.com/vivify/}\\
+\columnbreak
+
+\begin{center}
+\Large\textbf{Other Commands}
+\end{center}
+\begin{tabular}{ll}
+\ttfamily{:!COMMAND} & Runs \ttfamily{COMMAND}\\
+& (bash commands)\\
+\ttfamily{:r FILENAME} & Copy \ttfamily{FILENAME}\\
+& into your current file\\
+\ttfamily{:r!COMMAND]} & Copy the output\\
+& of \ttfamily{COMMAND} \normalfont{into}\\
+& current file\\
+\end{tabular}
+
+\begin{center}
+\Large\textbf{Set Options}
+\end{center}
+\begin{tabular}{ll}
+\ttfamily{:set ic} & Turn off case-\\
+& sensitive search\\
+\ttfamily{:set autoindent} & Automatically\\
+& indents\\
+\ttfamily{:set cindent} & Automatically\\
+& indents in C style\\
+\ttfamily{:set nu} & Show line number\\
+\ttfamily{:set incsearch} & Begins searching\\
+& when you type first\\
+& character\\
+\ttfamily{:set hls} & Matches to search\\
+& are highlighted\\
+\end{tabular}
+\end{multicols}
+
+
+\begin{multicols}{3}
+\begin{center}
+\Large\textbf{Visual Commands}
+\end{center}
+\begin{tabular}{ll}
+\ttfamily{v} & Start visual mode from cursor\\
+& (highlight)\\ 
+\ttfamily{Ctrl+v} & Highlight blocks of text\\
+\ttfamily{V} & Highlight lines of text\\
+\ttfamily{\textless} & Shift text left\\
+\textgreater & Shift text right\\
+\end{tabular}
+\begin{center}
+\Large\textbf{Macros}
+\end{center}
+\begin{tabular}{ll}
+\ttfamily{q+\ttfamily{CHARACTER}} & Start recording to\\
+& register \ttfamily{CHARACTER}\\
+\ttfamily{q} & Stop recording\\
+\ttfamily{@+\ttfamily{CHARACTER}} & Execute Macro written to\\
+& \ttfamily{CHARACTER}\\
+\ttfamily{@@} & Execute the same macro\\
+& again\\
+\end{tabular}
+
+\columnbreak
+
+\begin{center}
+\Large\textbf{Marks}
+\end{center}
+\begin{tabular}{ll}
+\ttfamily{m+LETTER} & Set mark \ttfamily{LETTER} at cursor\\
+& location\\
+\ttfamily{'LETTER} & Jump to line of mark\\
+& \ttfamily{LETTER}\\
+\ttfamily{`LETTER} & Jump to position mark\\
+& \ttfamily{LETTER}\\
+\ttfamily{d'LETTER} &Delete from current line to\\ 
+& line of mark \ttfamily{LETTER}\\
+\ttfamily{d`LETTER} & Delete from current cursor\\
+& position to position of mark\\
+& \ttfamily{LETTER}\\
+\ttfamily{c'a} & Change text from current\\
+& line to line of mark \ttfamily{LETTER}\\
+\ttfamily{y`a} & Yank text to buffer from\\
+& cursor to position mark\\
+& \ttfamily{LETTER}\\
+\end{tabular}
+
+\columnbreak
+\begin{center}
+\Large\textbf{Buffers}
+\end{center}
+\begin{tabular}{ll}
+\ttfamily{:e file} & Edit existing or new file\\
+\ttfamily{:new} & Creates new window\\
+& displaying contents of\\
+& new buffer\\
+\ttfamily{:ls} & Lists all buffers\\
+\ttfamily{Ctrl-W w} & Move cursor to\\
+& other window\\
+\ttfamily{:vsp} & Split window vertically\\
+\ttfamily{:bd} & Delete the current buffer\\
+& (will fail if unsaved)\\
+\end{tabular}
+\end{multicols}
+
+
+\begin{center}
+\Large\textbf{Line Folding}
+\end{center}
+
+\begin{multicols}{2}
+\begin{tabular}{ll}
+\ttfamily{"Highlighted text" + zf} & Folds highlighted text\\
+\ttfamily{zf "NUMBER" j} & Creates folds from cursor\\
+& down \ttfamily{NUMBER} \normalfont{lines}\\
+\ttfamily{zf/STRING} & Creates fold from cursor\\
+& to \ttfamily{STRING}\\
+\ttfamily{zj} & Move to next fold\\
+\ttfamily{zk} & Move to previous fold\\
+\ttfamily{zo} & Open fold at cursor\\
+\ttfamily{ZO} & Open all folds\\
+\end{tabular}
+\begin{tabular}{ll}
+\ttfamily{zm} & Increase fold level by one\\
+\ttfamily{zM} & Close all open folds\\
+\ttfamily{zr} & Decrease fold level by one\\
+\ttfamily{zR} & Decrease fold level to 0\\
+\ttfamily{zd} & Delete fold at cursor\\
+\ttfamily{zD} & Delete all folds\\
+\ttfamily{\texttt{[}z} & Move to start of open fold\\
+\ttfamily{\texttt{]}z} & Move to end of open fold\\
+\ttfamily{:set=foldmethod=indent} & Automatically creats folds at\\
+& every indent\\
+\end{tabular}
+
+
+
+\end{multicols}
+
+
+\end{document}
+
+
