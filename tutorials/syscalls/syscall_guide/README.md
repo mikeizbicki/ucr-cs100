@@ -16,6 +16,7 @@ Syscalls might seem confusing to use but we’ll try our best to explain some of
 **returns:** `fork` returns the pid of the child process that it creates, if an error occurs -1 is returned.
 
 [man page](http://linux.die.net/man/2/fork)
+[video guide](https://www.youtube.com/watch?v=xVSPv-9x3gk)
 
 This is perhaps one of the most important syscall of them all (one syscall to rule them all!) so make sure you really understand this one.
 
@@ -174,6 +175,7 @@ As we told you above, `execvp` finds the path for you. If you wanted to use `exe
 **returns:** When an error occurs `dup` returns -1 otherwise `dup` returns the new file descriptor.
 
 [man page](http://linux.die.net/man/2/dup)
+[video guide](https://www.youtube.com/watch?v=EqndHT606Tw)
 
 We all know about the default file descriptors 0, 1 and 2 with 0 meaning stdin, 1 meaning stdout and 2 meaning stderr. `dup(int oldfd)` can be used to copy the file descriptor given for `oldfd`, for example we can do `int fd = dup(1)` which copies stdout to `fd`. `dup` chooses our new file descriptor by choosing the lowest number of the unused descriptors, so if we only have 0, 1 and 2 as our file descriptors(only the default ones) it will choose 3 as our new one. So, in this `dup` example our new `fd` can be used interchangeably with stdout. 
 
@@ -228,6 +230,7 @@ Here we can see both `dup` and `dup2` being used.
 **returns:** When an error occurs -1 is returned, otherwise 0 is returned.
 
 [man page](http://linux.die.net/man/2/pipe)
+[video guide](https://www.youtube.com/watch?v=uHH7nHkgZ4w)
 
 `pipe` is another syscall that is harder to understand, so PLEASE utilize outside resources if need be!
    
