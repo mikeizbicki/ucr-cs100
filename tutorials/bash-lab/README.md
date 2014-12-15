@@ -111,7 +111,7 @@ You will be using `ls` and `pwd` a lot in this lab and throughout the quarter so
 touch (create a file)
 --------------------------------------
 In order to create new files, the `touch` command must be used.
-Note that the `touch` command simply creates an empty file. You will go further indepth into file editing in a future lab.
+Note that the `touch` command simply creates an empty file. You will go further indepth into file editing at the end of this lab.
 
 We will now be creating a new file. In order to do this, enter:
 ```
@@ -123,9 +123,16 @@ $ ls
 ```
 Notice how the file now appears in the directory. congratulations, you've just created your first file on linux!
 
+**Tip:** If you `touch` a file that already exists, it will simply update the date last modified. Try running these commands and compare the main.cpp file with `ls -l`
+```
+$ ls -l
+$ touch main.cpp
+$ ls -l
+```
+
 **Exercise:**
 
-4) Write a command that creates a file name `deleteme.txt` in a folder call `dontdeleteme`.
+4) Write a command that creates a file name `touched.txt` in an existing directory called `Desktop`.
 
 mkdir (create a directory)
 --------------------------------------------
@@ -192,6 +199,8 @@ Let's go deeper into your new `CS100` directory. In order to do this, type the f
 $ cd CS100
 ```
 
+*Note that for the sake of this lab, `CS100` is the name of a directory. `cs100` is a command that enables cs100 settings.
+
 `cd` is a command that allows you to change directories into the directory specified by the parameter. In this case, you will be changing directories to CS100.
 
 Now type `pwd` again! You should now be in the directory you just created. Is there anything inside? What command would you type to find the contents of your current directory?
@@ -242,7 +251,10 @@ rm (remove)
 ------------------------------
 **BE VERY CAREFUL WITH THIS COMMAND!!!!!!!!**
 
-The `rm` command accepts an optional flag along with a path of the file to be removed.
+The `rm` command removes a file. The syntax is 
+```
+$ rm [file1] [file2] ... [-flags] 
+```
 
 Enter the following command to remove the unnecessary `main.cpp` in the current directory.
 ```
@@ -291,13 +303,13 @@ Next, we introduce the `cat` command, but we've forgotten what it exactly does.
 
 No worries.
 
-There is a command that serves as a manual page for most bash commands.
+There is a command that serves as a manual page for bash commands.
 
 man (manual)
 ----------------------------------
-`man` command can be used with all bash commands with the syntax
+`man` command can be used with bash commands with the syntax
 ```
-man [command]
+man [commandname]
 ```
 Lets use the `man` command to find out the purpose of `cat`:
 ```
@@ -307,16 +319,23 @@ After some extensive reading, we can see that the main purpose of `cat` is to di
 
 connectors
 ------------------------------------
-Finally, a more efficant way to quickly run all the commands you've learned is the use of connectors `;`, `&&`, `||`
+Finally, a more efficient way to quickly run all the commands you've learned is the use of connectors `;`, `&&`, `||`
 The `;` connector will execute every command separated by `;`. 
 
 The `&&` connector functions similarly to the && comparison operator in C++, it will execute the next command as long as the previous command suceeded.
 
 The `||` connector functions similarly to the || comparison operator in C++, it will execute commands as long as the previous command failed.
 
+Commands can fail in many different ways. An example of a command failing is running `rmdir` on a directory that does not exist.
+
 When using multiple connectors, using paretheses is extremely important because it tells the computer which order to execute multiple commands.
 
-Using these connectors, we can greatly increase the efficency of our experience with the bash terminal. Try some of these out!
+Using these connectors, we can greatly increase the efficency of our experience with the bash terminal. Here's an example!
+
+```
+$ mkdir sanfran && touch sanfran/goldengate.txt
+```
+Can you figure out what that does? What if there's already a directory called `sanfran`?
 
 Let's Recap!
 ---------------------------------------
