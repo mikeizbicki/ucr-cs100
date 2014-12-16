@@ -12,4 +12,4 @@ Lesson #1: fork();
 
 Lesson #2: signal();
 
-Lesson #3: perror("rap");
+Lesson #3: dup();
