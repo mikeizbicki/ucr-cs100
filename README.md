@@ -97,9 +97,9 @@ Some assignments will be individual, and some will be in a group.
 Follow the specified policy exactly!
 
 I take cheating seriously.
-When I catch students cheating, I give them an F in the class.
-Then I forward your case to the academic integrity board and recommend that you be expelled from UCR.
-Finally, I will post a note on this project with your full name and a description of your infraction.
+When I catch students cheating, I give them a F in the class.
+Then I forward their case to the academic integrity board and recommend that he or she be expelled from UCR.
+Finally, I will post a note on this project with his or her full name and a description of their infraction.
 This will be available on the internet forever for future employers to find.
 
 All of your code will be run through an automated cheating detector.
