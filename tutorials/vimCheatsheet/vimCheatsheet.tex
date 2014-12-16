@@ -1,0 +1,395 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+\usepackage{fancyhdr}
+\usepackage{framed}
+\usepackage{url}
+\usepackage{anysize}
+\marginsize{16pt}{14pt}{0pt}{40pt}
+\pagestyle{fancy}
+\renewcommand\headrule{}
+\rhead{UCR-CS100FALL}
+
+
+\begin{document}
+\begin{center}
+\Large\textbf{Vim Cheatsheet}\\
+\textit{Itsuki David Fukada, Jesus Christian Reyes}
+\end{center}
+
+\begin{framed}
+\begin{center}
+\textbf{Format of command is: "Verb Range Motion"}
+\end{center}
+\begin{verbatim}
+For example, if you use d2w, it will delete 2 words.(To exit insert or visual mode use <Esc>)
+*If you do not use any range, it will automatically set it to 1. Also some verb can be used repeatedily.
+*Also Certain words allow "i" to be a range which i stands for inclusion. For example,dw will delete 
+the word from the cursor but diw will delete the entire word. 
+\end{verbatim}
+\end{framed}
+\begin{multicols}{2}
+
+
+
+\begin{center}
+\textbf{Verb/Editing}
+\end{center}
+\begin{description}
+\item[\ttfamily{gg}]
+-Go to (20gg goes to line 20)
+\item[\ttfamily{f+character}]
+-Finds first instance of character
+\item[\ttfamily{r}] 
+-Replace a single character
+\item[\ttfamily{J}] 
+-Join the line below with the current
+\item[\ttfamily{c}]
+-Replace (combine with Motion and/or Range)
+\item[\ttfamily{x}]
+-Deletes the character at current cursor (cut)
+\item[\ttfamily{d}]
+-Delete (cut)
+\item[\ttfamily{D}]
+-Deletes from cursor to end of line
+\item[\ttfamily{y}]
+-Yank the highlighted text (copy)
+\item[\ttfamily{p}]
+-Paste the clipboard
+\item[\ttfamily{u}]
+-Undo
+\item[\ttfamily{U}] 
+-Returns the last line modified to its original state
+\item[\ttfamily{Ctrl+r}]
+-Redo
+\item[\ttfamily{\textgreater}]
+-Indent to the right
+\item[\ttfamily{\textless}]
+-Indent to the left
+\item[\url{~}]
+-Changes charater's case
+\end{description}
+\begin{center}
+\textbf{Insertion/Deletion}
+\end{center}
+\begin{description}
+\item[\ttfamily{i}]
+-Insert mode at current cursor
+\item[\ttfamily{I}] 
+-Insert mode at beginning of line
+\item[\ttfamily{a}]
+-Insert mode after the cursor
+\item[\ttfamily{A}]
+-Insert mode at end of line.
+\item[\ttfamily{o}]
+-Append a new line below the current line
+\item[\ttfamily{O}]
+-Append a new line above the current line
+\item[\ttfamily{s}]
+-Delete word and enter insert mode
+\item[\ttfamily{S}]
+-Delete line and enter insert mode
+\end{description}
+\columnbreak
+
+\begin{center}
+\textbf{Motion/Navigation}
+\end{center}
+\begin{description}
+\item[\ttfamily{h}] 
+-Left
+\item[\ttfamily{j}]
+-Down
+\item[\ttfamily{k}]
+-Up
+\item[\ttfamily{l}] 
+-Right
+\item[\ttfamily{w}]
+-Jump forward to the start of a word
+\item[\ttfamily{W}] 
+-Jump forward to the start of a word (can contain punctuation)
+\item[\ttfamily{e}]
+-Jump forward to the end of a word
+\item[\ttfamily{E}]
+-Jump forward to the end of a word (can contain punctuation)
+\item[\ttfamily{b}]
+-Jump backward to the start of a word
+\item[\ttfamily{B}] 
+-Jump backward to the start of a word (can contain punctuation)
+\item[\ttfamily{0 or} \^]
+-Jump to the start of the line
+\item[\ttfamily{\$}]
+-Jump to the end of the line
+\item[\ttfamily{\%}]
+-Jump to matching bracket
+\item[\ttfamily{G}]
+-Go to end of file
+\item[\ttfamily{H}]
+-(High)Go to top of visible page
+\item[\ttfamily{M}]
+-(Middle)Go to middle of visible page
+\item[\ttfamily{L}]
+-(Low)Go to bottom of visible page
+\item[\ttfamily{(}]
+-Jump forward one sentence
+\item[\ttfamily{)}]
+-Jump backward one sentence
+\item[\ttfamily{\{}]
+-Jump forward one paragraph
+\item[\ttfamily{\}}]
+-Jump backward one paragraph
+\item[\ttfamily{``(backticks)}]
+-Return to the line where cursor was before latest jump
+\end{description}
+
+%\columnbreak
+\begin{center}
+\textbf{Other Navigations}
+\end{center}
+\begin{description}
+\item[\ttfamily{Crtl-U}]
+-Scroll Up
+\item[\ttfamily{Ctrl-D}]
+-Scroll down
+\item[\ttfamily{Ctrl-E (Efter)}]
+-Scroll down one line
+\item[\ttfamily{Ctrl-Y (Yore)}]
+-Scroll up one line
+\item[\ttfamily{:NUMBER}]
+-Go to line NUMBER
+\item[\ttfamily{NUMBER + G}] 
+-Go to line NUMBER (i.e.: 25G)
+\end{description}
+\end{multicols}
+
+
+
+\newpage
+
+
+
+
+\begin{center}
+\Huge\textbf{Commands}
+\end{center}
+
+\begin{multicols}{3}
+\begin{center}
+\Large\textbf{Save/Exit}
+\end{center}
+\begin{description}
+\item[:q] \hfill
+-Quit
+\item[:q!] \hfill
+-Quit (Ignores changes made)
+\item[:w] \hfill
+-Save
+\item[:wq (:x)] \hfill
+-Save and quit
+\item[:w FILENAME] \hfill
+-Saves into FILENAME
+\end{description}
+\begin{center}
+\Large\textbf{Tabs/Split}
+\end{center}
+\begin{description}
+\item[\ttfamily{:tabe}]
+-Creates a new tab
+\item[\ttfamily{:tabe FILENAME}]
+-Creates a new tab with name FILENAME
+\item[\ttfamily{gt}] 
+-Moves to next tab
+\item[\ttfamily{gT}] 
+-Moves to previous tab
+\item[\ttfamily{\#gt}]
+-Move to tab number \#
+\end{description}
+
+\columnbreak
+\begin{center}
+\Large\textbf{Substitution/Searching}
+\end{center}
+\begin{description}
+\item[\ttfamily{:s/OLD/NEW/g}]
+-Replaces all inteances of OLD in current line and replaces with NEW
+\item[\ttfamily{:\%s/OLD/NEW/g}] 
+-Replaces all instances of OLD with NEW
+\item[\ttfamily{:\%s/OLD/NEW/gc}]
+-Replaces all instances of old with new, but asks for confirmation
+\end{description}
+\begin{description}
+\item[\ttfamily{/TEXT}] 
+-Search for TEXT
+\item[\ttfamily{?TEXT}] 
+-Search for TEXT backwards
+\item[\ttfamily{n}] 
+-Move to next word that matches
+\item[\ttfamily{N}]
+-Move to previous word that matches
+\end{description}
+
+\begin{center}
+\Large\textbf{Colorschemes}
+\end{center}
+\begin{description}
+\item[\ttfamily{:color \textless TAB \textgreater}]
+-Navigate through default colorschemes
+\newline
+*You can add colorschemes in \url{~/.vim/colors}
+\\
+\end{description}
+\begin{center}
+\Large\textbf{Other Commands}
+\end{center}
+\begin{description}
+\item[\ttfamily{:!COMMAND}]
+-Runs COMMAND (bash commands)
+\item[\ttfamily{:r FILENAME}] 
+-Copy FILENAME into your current file
+\item[\ttfamily{:r!COMMAND}]
+-Copy the output of COMMAND into current file
+\end{description}
+
+\begin{center}
+\Large\textbf{Set Options}
+\end{center}
+\begin{description}
+\item[\ttfamily{:set ic}]
+-Set ignore case
+\item[\ttfamily{:set autoindent}]
+-Automatically indents
+\item[\ttfamily{:set cindent}] 
+-Automatically indents in C style
+\item[\ttfamily{:set nu or :set number}] 
+-Show line number.
+\item[\ttfamily{:set incsearch}]
+-Incremental search
+\item[\ttfamily{:set hls}] 
+-Highlighted search
+\end{description}
+\end{multicols}
+
+
+\begin{multicols}{3}
+\begin{center}
+\Large\textbf{Visual Commands}
+\end{center}
+\begin{description}
+\item[\ttfamily{Ctrl+v}]
+-Enter visual mode	(highlight)
+\item[\ttfamily{v}]
+-Start visual mode from cursor 
+\item[V] \hfill
+-Start linewise visual mode
+\item[\ttfamily{\textless}] 
+-Shift text left
+\item[\textgreater] \hfill
+-Shift text right
+\end{description}
+\begin{center}
+\Large\textbf{Macros}
+\end{center}
+\begin{description}
+\item[\ttfamily{q+character}]
+-Start recording to register character
+\item[\ttfamily{q}]
+-Stop recording
+\item[\ttfamily{@+character}]
+-Execute Macro on character
+\item[\ttfamily{@@}]
+-Execute the same macro again
+\end{description}
+
+\columnbreak
+
+\begin{center}
+\Large\textbf{Marks}
+\end{center}
+\begin{description}
+\item[\ttfamily{m+LETTER}]
+-Set mark LETTER at cursor location
+\item[\ttfamily{'LETTER}]
+-Jump to line of mark LETTER
+\item[\ttfamily{`LETTER}]
+-Jump to position mark LETTER
+\item[\ttfamily{d'LETTER}]
+-Delete from current line to line of mark LETTER
+\item[\ttfamily{d`LETTER}]
+-Delete from current cursor position to position of mark LETTER
+\item[\ttfamily{c'a}]
+-Change text from current line to line of mark LETTER
+\item[\ttfamily{y`a}]
+-Yank text to buffer from cursor to position mark LETTER
+\end{description}
+
+\columnbreak
+\begin{center}
+\Large\textbf{Buffers}
+\end{center}
+\begin{description}
+\item[\ttfamily{:e file}]
+-Edit existing or new file
+\item[\ttfamily{:new}]
+-Creates new window displaying contents of new buffer
+\item[\ttfamily{:ls}]
+-Lists all buffers
+\item[\ttfamily{Ctrl-W w}]
+-Move cursor to other window
+\item[\ttfamily{:vsp}]
+-Split window vertically
+\item[\ttfamily{:bd}]
+-Delete the current buffer. will fail if unsaved.
+\end{description}
+\end{multicols}
+
+
+\begin{center}
+\Large\textbf{Line Folding}
+\end{center}
+
+\begin{multicols}{3}
+\begin{description}
+\item[\ttfamily{"Highlighted text" + zf}] 
+-Folds highlighted text
+\item[\ttfamily{zf "NUMBER" j}]
+-Creates folds from cursor down NUMBER lines
+\item[\ttfamily{zf/STRING}]
+-Creates fold from cursor to STRING
+\item[\ttfamily{zj}] 
+-Move to next fold
+\item[\ttfamily{zk}]
+-Move to previous fold
+\item[\ttfamily{zo}]
+-Open fold at cursor
+\item[\ttfamily{ZO}]
+-Open all folds
+\item[\ttfamily{zm}]
+-Increase fold level by one
+\item[\ttfamily{zM}]
+-Close all open folds
+\item[\ttfamily{zr}]
+-Decrease fold level by one
+\item[\ttfamily{zR}]
+-Decrease fold level to 0
+\item[\ttfamily{zd}] 
+-Delete fold at cursor
+\item[\ttfamily{zD}]
+-Delete all folds
+\item[\ttfamily{\texttt{[}z}]
+-Move to start of open fold
+\item[\ttfamily{\texttt{]}z}]
+-Move to end of open fold
+\item[\ttfamily{:set=foldmethod=indent}]
+-Automatically creats folds at every indent
+\end{description}
+
+
+
+\end{multicols}
+
+
+\end{document}
+
+
