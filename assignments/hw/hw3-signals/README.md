@@ -6,7 +6,7 @@ You will make three modifications to your `rshell` project.
 
 1. Your shell must be able to find commands (e.g. `ls` and `tee`) by searching for them using the user's current `PATH` environment variable.  Previously, you were required to only look in the directory `/usr/bin` for these commands, but now you must search many directories.  There are versions of the `exec` function that will perform this search for you automatically (e.g. `execvp`), but you are not allowed to use them.  You must use the `getenv` function to get the current `PATH`, then manually search these directories for the command.
 
-2. The shell should not exit when the user types `^C`.  Instead, the current foreground job should interrupt.
+2. The shell should not exit when the user types `^C`.  Instead, the current foreground job should be interrupted.
 
 3. Implement the `cd` command, and change your prompt so that it displays the current working directory.  This will require using the `chdir` function.
 
@@ -55,5 +55,5 @@ You are ENCOURAGED to look at [bash's source code](https://www.gnu.org/software/
 
 #### extra credit
 
-You can earn up to 20 points of extra credit by catching the `^Z` signal to pause the foreground process.
+You can earn up to 20 points of extra credit by catching the `^Z` signal to pause the current foreground process.
 You must also implement the `fg` and `bg` commands.
