@@ -10,28 +10,30 @@ There are two types of macros, object-like and function-like. By convention, mac
 An object-like macro replaces a single identifier with the specified replacement code.
 They are most commonly used to give symbolic names to numeric constants. For example: 
 
-`#define PHONE_NO 3331234`
+`#define ARRAY_SIZE 100`
 
-This means that whenever the programmer enters `PHONE_NO` in his code, it will automatically be replaced by the number. Although the name of the constant is longer than the number, it is more meaningful and helps the program readability. Also it is easier to change the number later, in this case if you want to try a different phone number, changing it at the macro definition will replace it everywhere in your code.
+This means that whenever the programmer enters `ARRAY_SIZE` in his code, it will automatically be replaced by the number. Although the macro name is longer than the actual number, it is more meaningful and helps the program readability. Also it is easier to change the number later, in this example if they want a different array size, changing it at the macro definition will replace it everywhere in your code.
 
 ###Similarity to Constants
 
-Consider the statement `const int PHONE_NO = 3331234`. It functions nearly the same way as an object macro. However there are many significant differences. Consts are properly scoped, and can be used in situations that require a pointer to be passed. They also don't have issues with conflicting usages that might cause unexpected runtime results.
+Consider the statement `const int ARRAY_SIZE = 100`. It functions nearly the same way as an object macro. However there are many significant differences. Consts are properly scoped, and can be used in situations that require a pointer to be passed. Macros aren't error checked, and the compiler checks the code only after they are replaced. This occasionally results in errors that might cause unexpected runtime results, which is a problem consts do not have.
 
-The main advantage to using a macro is that no memory is used to store it in your program, since it's only replacing text with a literal value. That means there's no way to change this value by any means other than altering the macro definition. With consts, some compilers just allocate memory identified by the name, and you might be able to modify the memory with pointers. For example
+The main advantage to using a macro is that they are compatible with C, so any C standard library will use them. Also, no memory is used to store it in your program, since it's only replacing text with a literal value. That means there's no way to change this value by any means other than altering the macro definition. With consts, some compilers just allocate memory identified by the name, and you might be able to modify the memory with pointers. For example:
 
 ```
 const int constant = 10;
 
 int * change_value = (int*) &constant;
 
-*change_value = 5; //constant may be 10 or 5 depending on compiler
+*change_value = 5; //constant may be 10 or 5 or might cause a segfault depending on compiler
 ```
+
+On my x86_64 machine, constant had a value of 5 when compiled with gcc, and a value of 10 when compiled with g++.
 
 ##Function-like Macros
 
 You can define macros that operate much like normal functions. To define a function-like macro, you still use the `#define` directive, but you put a pair of parentheses after the macro name.
-It is usually of the following form:
+They follow this form:
 
 `#define MACRO_NAME(arguments, separated by commas) [code to expand]`
 
@@ -45,21 +47,20 @@ You could use this macro with a statement like
 
 ###Multi-line Macros
 
-Macro definitions end at the end of the `#define` line, so to continue the definition onto multiple lines, you have to use a backslash-newline. However, when the macro expands it all appears on one line. For example,
+Macro definitions end at the end of the `#define` line, so to continue the definition onto multiple lines, you have to use a backslash-newline. However, when the macro expands it all appears on one line. This makes longer macros easier to read. For example,
 
 ```
-#define CHARS   'a', \
-                'b', \
-                'c' 
-char a[] = { CHARS }; // is equivalent to
-// int a[] = { 'a', 'b', 'c' };
+#define ODDEVEN(x) cout << "The number is "; \
+                        if (x % 2 == 0) cout << "EVEN\n";\
+                        else cout << "ODD\n";
+int i = 5;
+ODDEVEN(j);
+//OUTPUT:The number is ODD
 ```
-
-While in this example, defining CHARS this way makes it less readable, being able to split up a macro definition into multiple lines can come in handy with more complex macros.
 
 ###Stringifying Tokens
 
-One potentially useful macro option is to turn a token into a string. The syntax is to prefix the token with a pound sign '#'. This can be used to print out the token. For example
+One potentially useful macro option is to turn a token into a string. The syntax is to prefix the token with a pound sign '#'. This can be used to print out the token. For example:
 
 ``` 
 #define PRINT_GRADE(token) cout << "The grade for " << #token << " is " << token << endl
@@ -84,6 +85,24 @@ cout << "Largest of 1, 2, and 3 is " << MAX3(1,2,3);
 //Output: Largest of 1, 2, and 3 is 3
 ```
 
+##Standard Predefined Macros
+GNU C provides many standard predefined macros that are available regardless of the machine and operating system you use. Their names all begin and end with double underscores, and we'll look at two of them.
+
+`__FILE__`
+This macro contains the name of the current input file as a C string constant.
+
+`__LINE__`
+This macro contains the current input line number as a decimal integer constant.
+
+These can be useful in debugging. One way to use them is:
+```
+#define FILE_LINE cout << "At " __FILE__ ":" << __LINE__ << endl;
+
+FILE_LINE
+//Sample output:At test.cpp:27
+```
+More predefined macros can be found at the [GCC website](https://gcc.gnu.org/onlinedocs/cpp/Standard-Predefined-Macros.html)
+
 ##Common Macro Errors
 
 ###Operator Precedence
@@ -106,8 +125,8 @@ int z = 20 / 3 + 2;
 The way to avoid this problem is to force the arguments to be evaluated first, by surrounding them with parentheses. This is a good way to ensure the correct evaluation of replacement text and it makes it safer.
 
 ```
-#define DIVIDE(a, b) (a) / (b)         
-// Now expands to (20) / (3 + 2)
+#define DIVIDE(a, b) ((a) / (b))         
+// Now expands to ((20) / (3 + 2))
 ```
 
 ###Semicolon Issues
@@ -146,7 +165,7 @@ Now `MACRO(2,4);` expands into `do {...} while (0);` This is one statement, and 
 
 ###Duplication of Side Effects
 
-Another problem is that macros don't evaluate their arguments, and instead paste them into the text. This becomes an issue with the previous MAX macro if you pass in x++, y++.
+Another problem is that macros don't evaluate their arguments, and instead paste them into the text. This becomes an issue with the previous `MAX` macro if you pass in x++, y++.
 
 ```
 #define MAX(a,b) ((a) < (b) : (a))
@@ -159,9 +178,9 @@ int z = MAX(x++, y++);
 
 The problem is that in this case y++ is evaluated twice, and y will have a value of 12 instead of what we expected, 11.
 
-###Macros and namespace
+###Unusual Errors
 
-Macros have no namespace and you can easily accidentally redefine a macro, that was defined in included system header files. For example,
+Macros have no namespace and aren't error checked, as the compiler only checks the code after the macro names are replaced. Because of this, it is easy to create errors that can be difficult to find. For example:
 
 ```
 #define begin() end()
@@ -176,4 +195,4 @@ for (vector<int>::iterator it = myvector.begin() ; it != myvector.end(); ++it)
 There won't be any compile errors, but the for loop won't output anything. Runtime errors like this are difficult to debug, because without looking at the macro definition, the code seems perfectly fine.
 
 ##Conclusion
-Preprocessor macros add powerful features and flexibility, and they can help reduce the amount of code you write. They're also faster to execute than functions, since no calling/returning is required. However, they also have many drawbacks, as we have seen, and can be very difficult to debug. But while there now are alternatives like inline functions, macros can still be an incredibly useful tool if you are careful.
+Preprocessor macros add powerful features and flexibility, and they can help reduce the amount of code you write. They can also increase performance by reducing function call overhead, since they're always expanded inline. However, they come with many drawbacks, as we have seen, and can be very difficult to debug. But while there now are alternatives like inline functions, which weren't standard prior to C99, macros can still be an incredibly useful tool if you are careful.
