@@ -1,22 +1,6 @@
-#Tutorial: Some Syntaxs For The Bash Script And How To Write A Simple One.
+#Tutorial: Simple Syntaxs For Bash Script
 
-##What is a shell script?
-
-In one word, a shell script is a file containing a sequence of commands for a UNIX-based operating system.
-
-We also can consider each line of code of the script as a line of command in the terminal.
-
-This tutorial has two parts: 
-
-Part 1: Give a simple example and how to make it works. 
-
-Part 2: Introduce more simple syntaxs about how to write a shell script.
-
-##Part 1: All start with a simple example
-
-To successfully write and run a shell script, you have to do two things:
-
-###1. How to write a script?
+##All begin with a simple example
 
 Let us begin with a "hello world" shell script example to expound how to write a script:
 
@@ -44,20 +28,22 @@ Hello world!!!
 
 * We could find that every shell script include the first line. It is looks like a comment since it start with '#'. However, it is created on purpose since it tell the system which interpreter such as bash, ruby, python, and others should be used to execute the followed script. For this script, it run in the bash shell. And '#!' is a special character construct called shebang.
 
-Tip: For this file, I save it called 'hello.sh'. For shell script file try to give file extension such as '.sh', which can be easily identified by you as shell script.
+In one word, a shell script is a file containing a sequence of commands for a UNIX-based operating system. We also can consider each line of code of the script as a line of command in the terminal.
 
-###2. How to make your script become executable?
+The following tutorial has two parts: 
 
-There are two ways to run a shell script:
+##Part 1: How to make your script become executable
+
+To successfully run our shell script, we need to make our script become executable. For the above "hello world" example, I save it called 'hello.sh'. For shell script file, try to give file extension such as '.sh'. It can be easily identified by us as shell script.
+
+There are two ways to execute a shell script:
 
 ```
 $ bash hello.sh
 $ ./hello.sh
 ```
 
-Here, I just use the second way to run my script.
-
-However, the system is very picky about not treating any text files as program. Then each time we creat a shell script we may meet a problem about permission: 
+Here, I use the second way to run my script. However, the system is very picky about not treating any text files as program. Then each time we creat a shell script we may meet a problem about permission: 
 
 ```
 $ ./hello.sh
@@ -88,11 +74,11 @@ Hello world!!!
 
 Tip: there is an alterative way to change permission. If you want to learn more about it, you can go to this link: http://linuxcommand.org/lts0070.php 
 
-##Part 2: More syntaxs about how to write a shell
+##Part 2: More syntaxs about shell scripts
 
 ###Variables
 
-The following shows how to defined a variable:
+The following line of command shows how to defined a variable:
 
 ```
 x="Hello"
@@ -139,7 +125,7 @@ d
 
 '$#' represents the number of the total arguments. '$0' represents the first argument which is script itself. '$1' represents your first provided argument. Likewise, '$2' represents the second provided argument, '$3' represents the third provided argument, and etc.
 
-There are some preset variables in Unix, and you can use those variables in any other programs:
+There are also some preset variables in Unix, and you can use those variables in any other programs:
 
 ```
 BASH                #shell name
@@ -168,17 +154,13 @@ $ expr 30 % 7
 $ echo `expr 30 % 7`
 ```
 
-Do not use single quote or double quote, it only works in the back quote.
-
-If you want to perform arithmetic operation to assign value into variable, you can see following example:
+Do not use single quote or double quote, it only works in the back quote. If you want to perform arithmetic operation to assign value into variable, you can look at following example:
 
 ```
 #!/bin/bash
-x=0
-x=$((x+1))
+x=0             #assign 0 into x
+x=$((x+1))      #add 1 to x
 ```
-
-Here we set x equals to 0 first, then we add 1 into x.
 
 ###Exit status
 
@@ -277,9 +259,7 @@ echo "$1 is negative"
 fi
 ```
 
-For the first 'if', I already introduced that it decides whether there are provided arguments.
-
-For the second 'if', the condition is if the first provided argument is great than 0, then the command is echo "$1 is positive". then 'elif' represents 'else if'. Finally, we use 'fi' to end this 'if/else' statements.
+For the first 'if', I already introduced that it decides whether there are provided arguments. For the second 'if', the condition is if the first provided argument is great than 0, then the command is echo "$1 is positive". then 'elif' represents 'else if'. Finally, we use 'fi' to end this 'if/else' statements.
 
 For more details, please check this link: http://ss64.com/bash/if.html
 
