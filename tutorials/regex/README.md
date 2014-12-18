@@ -10,19 +10,25 @@ If you would like to practice regex, we have developed a tool for you to use. Ch
 <a name="top"/>
 ##Table of Contents
 [1. What is it?](#what)    
-[2. Basic characters/Literal characters](#literal)    
-[3. Special/Metacharacters](#meta)    
-[4. Escaped literals](#escaped)    
-[5. POSIX specific syntax](#posix)    
-[6. Additional resources](#resources)    
-[7. Regex Practice program](#practice)
+[2. Regex Practice program](#practice)    
+[3. Basic characters/Literal characters](#literal)    
+[4. Special/Metacharacters](#meta)    
+[5. Escaped literals](#escaped)    
+[6. POSIX specific syntax](#posix)    
+[7. Additional resources](#resources)    
 
 <a name="what"/>
 ###What is Regex?
 
-Regex is a short pattern of letters and symbols which has can match certain strings. Depending on the environment these strings are parsed in, you can match multiple instances or a single instance of a pattern. Regular regex returns the **first** matching string that it finds. Regex is most commonly used for searching and replacing string patterns, and while this may not be the only use, it is very powerful because of the syntax behind regex.
+A regular expression is a pattern of letters and symbols which can represent a search pattern. The most common usage is using this search pattern to search through strings in a document or files. For example, if you wanted to find all the emails in a webpage, regex would be a good solution to use to quickly parse all the text on the page. Depending on the environment these strings are parsed in, you can match multiple instances or a single instance of a pattern. Regular regex returns the **first** matching string that it finds. Regex is most commonly used for searching and replacing string patterns, and while this may not be the only use, it is very powerful because of the syntax behind regex.
 
-Regex is commonly used for `sed` and `grep`, or searching for and/or replacing strings.
+One of the many uses of regex is pattern matching for `sed` and `grep`, two Linux commands for which are used for searching and replacing text or just searching for strings respectively.
+
+[Back to table of contents](#top)
+
+<a name="practice"/>
+##Regex Practice
+Our practice program is [located here](http://github.com/Liniarc/regexProgram). Instructions for running this practice program is located in that repository.
 
 [Back to table of contents](#top)
 
@@ -37,11 +43,8 @@ Any letter or character `a-z`, `A-Z`, `0-9` by itself will match a single instan
   <th>Example</th>
  </tr>
  <tr>
-  <td><pre><code>
-  echo "cat patch dog" | grep "e"
-  cat
-  patch
-  </code></pre></td>
+  <td><pre><code>$ echo 'cat patch dog' | grep 'a'
+c<em><strong>a</em></strong>t p<em><strong>a</strong></em>tch dog</code></pre></td>
  </tr>
 </table>
 
@@ -106,7 +109,7 @@ Here are all the metacharacters:
   </tr>
 </table>  
 
-NOTE: The brackets can use ranges, which is what they are commonly known for.
+NOTE: The brackets can use ranges, which is what they are commonly used for.
 
 <table>
   <tr>
@@ -128,7 +131,7 @@ abcdefg<strong><em>ABCDEFG</em></strong></code></pre>
 See also: [POSIX brackets](http://www.regular-expressions.info/posixbrackets.html)    
 See also: [Character classes](http://www.regular-expressions.info/charclass.html)
 
-+ `.` - The period. Or dot. Matches any character you can think of.
++ `.` - The period, or dot, matches any character.
 
 <table>
   <tr>
@@ -174,7 +177,7 @@ See also: [Anchors](http://www.regular-expressions.info/anchors.html)
   </tr>
   <tr>
     <td>
-    <pre><code>$ echo 'shell' | grep 'el*s'
+    <pre><code>$ echo 'shell fees' | grep 'el*s'
 sh<strong><em>ells</em></strong> fe<strong><em>es</em></strong></code></pre>
     </td>
     <td>
@@ -202,7 +205,7 @@ See also: [Repeating character classes](http://www.regular-expressions.info/char
 
 See also: [Repeating character classes](http://www.regular-expressions.info/charclass.html)
 
-+ `|` - The pipe. Or logical OR. Best used inside of `(` and `)`. You must escape in standard Posix
++ `|` - The pipe. Or logical OR. Best used inside of `(` and `)`. You must escape these in standard Posix, but not in extended Posix.
 <table>
   <tr>
     <th>Posix</th>
@@ -249,7 +252,7 @@ The brackets must be escaped in standard regex.
 See also:
 
 + `(` and `)` - Captures variables and creates character groups.    
-The parenthesis must be escaped in standard regex
+The parenthesis must be escaped in standard Posix
 
 <table>
   <tr>
@@ -277,17 +280,25 @@ See also: [Grouping](http://www.regular-expressions.info/brackets.html)
   <tr>
     <th>Example 1</th>
     <th>Example 2</th>
-    <th>sed Example</th>
   </tr>
   <tr>
     <td>
-    <pre><code>$ echo 'abc abc' | grep '\(...\) \1
+    <pre><code>$ echo 'abc abc' | grep '\(...\) \1'
 <em><strong>abc abc</em></strong></code></pre>
     </td>
     <td>
     <pre><code>$ echo 'ago ag a OR amend amen men' | grep '\(a\(.+\)\)d \1 \2'
 <em><strong>ago ag a</em></strong> OR <em><strong>amend amen men</em></strong></code></pre>
     </td>
+  </tr>
+</table>
+
+
+<table>
+  <tr>
+    <th>sed Example</th>
+  </tr>
+  <tr>
     <td>
     <pre><code>$ echo '"head" "body"' | sed 's/"\([^"]*\)"/&lt;\1>/g'
 &lt;head> &lt;body></code></pre>
@@ -300,20 +311,37 @@ See also: [Backreferences](http://www.regular-expressions.info/backref.html)
 [Back to table of contents](#top)
 
 <a name="escaped"/>
-###Table of Escaped Literals
+###Table of Character classes
 
-These are used to indicate special characters or characteristics. These are **case sensitive**.
-Escaped Symbols are only in **Extended Posix**.
+These are used to indicate special characters or characteristics. They work in conjunction with bracket expressions, so you need to add a second set of bracket around them. **These are POSIX specific.**
 
-Symbol | Explaination
--------|-------------
- `\d`  |  Any digit
- `\D`  |  Any **non**-digit character
- `\s`  |  Any whitespace
- `\S`  |  Any **non**-whitespace character
- `\w`  |  Any alphanumeric character
- `\W`  |  Any **non**-alphanumeric character
+   Symbol     | Explanation
+--------------|-------------
+ `[:alnum:]`  |  Any letter or number
+ `[:alpha:]`  |  Any letter
+ `[:digit:]`  |  Any number
+ `[:upper:]`  |  Any uppercase letter
+ `[:lower:]`  |  Any lowercase letter
+ `[:punct:]`  |  Any punctuation character
+ `[:space:]`  |  Any whitespace character
  
+ <table>
+  <tr>
+    <th>Example 1</th>
+    <th>Example 2</th>
+  </tr>
+  <tr>
+    <td>
+    <pre><code>$ echo 'abcABC123' | grep '[[:alpha:]]*'
+<em><strong>abcABC</em></strong>123</code></pre>
+    </td>
+    <td>
+    <pre><code>$ echo '0xA13F98B' | grep '0x[[:digit:]A-F]*'
+<em><strong>0xA13F98B</em></strong></code></pre>
+    </td>
+  </tr>
+</table>
+
  See also: [Free-spacing](http://www.regular-expressions.info/freespacing.html)
 
 [Back to table of contents](#top)
@@ -323,17 +351,27 @@ Symbol | Explaination
 
 There are a few key differences  POSIX standard says that the **longest** match is returned. Normal regex usually stops with the **first** match found. However, it will still match the **leftmost** result.
 
-Match: GetStatus     
-String: GetStatus Get   
-Use: `Get`     
-Result: **_GetStatus_** Get    
+<table>
+  <tr>
+    <th>Example 1</th>
+    <th>Example 2</th>
+  </tr>
+  <tr>
+    <td>
+Match: GetStatus<br>
+String: GetStatus Get<br>
+Use: <code>Get</code><br>
+Result: <em><strong>GetStatus</strong></em> Get   
+    </td>
+    <td>
+Match: SetStatus<br>
+String: Set SetStatus<br>
+Use: <code>(Set|SetStatus)</code><br>  
+Result: Set <strong><em>SetStatus</em></strong>
+    </td>
+  </tr>
+</table> 
 
-Match: SetStatus     
-String: Set SetStatus   
-Use: `(Set|SetStatus)`     
-Result: Set **_SetStatus_**   
-
-Additionally, every metacharacter except `?` and `+` require escaping  with `\` for use as a metacharacter (`+` and `?` are not part of POSIX standards). Without escaping, those metacharacters are interpreted literally.
 
 See also: [POSIX](http://www.regular-expressions.info/posix.html)
 
@@ -346,8 +384,4 @@ http://www.regular-expressions.info has many pages dedicated to both quickly lea
 
 [Back to table of contents](#top)
 
-<a name="practice"/>
-##Regex Practice
-Our practice program is [located here](http://github.com/Liniarc/regexProgram). Instructions for running this practice program is located in that repository.
 
-[Back to table of contents](#top)
