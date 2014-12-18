@@ -4,7 +4,12 @@
 
 Extend your `rshell` program so that it properly handles input redirection `<`, output redirection `>` and `>>`, and piping `|`.  
 This will require using the Unix functions `dup` and `pipe`.  
-The [syscalls tutorial from hw0](https://github.com/mikeizbicki/ucr-cs100/blob/cs100-2014fall/tutorials/syscalls/README.md) also covers these functions.
+The [syscalls tutorial from hw0](https://github.com/mikeizbicki/ucr-cs100/blob/cs100-2014fall/tutorials/syscalls/README.md) and the following videos should cover these functions.
+
+[![dup/fd](http://i.imgur.com/W21y1zMb.jpg)](https://www.youtube.com/watch?v=EqndHT606Tw)
+
+[![pipes](http://i.imgur.com/TeHSXo9.jpg)](https://www.youtube.com/watch?v=uHH7nHkgZ4w)
+
 Of course, you should also be consulting the man pages.
 
 As an example, after this assignment, your program should be able to successfully handle the following command:
