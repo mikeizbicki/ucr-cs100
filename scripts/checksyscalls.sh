@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 
+#
 # This script takes any number of CPP files as parameters.  For each file, it
 # checks to see if there is a matching call to perror for every syscall.  If
 # there is not, we assume that proper error checking is not happening.  Then
@@ -11,14 +11,38 @@
 # them in the presence of macros, function pointers, or other fanciness.
 #
 scriptdir=`dirname "$0"`
-source "$scriptdir/config.sh"
+#source "$scriptdir/config.sh"
 
-if [ -z $1 ]; then
-    echo "expecting a file to grade"
+if [ $# -eq 0 ]; then
+    echo "usage: $0 filetograde"
+    exit 1
+elif [ $# -eq 1 ];then
+    if [ -d $1 ]; then
+        for s in "$1"/*
+        do
+            $0 $s
+        done
+        exit 0
+    fi
+else
+    for f in "$@"
+    do
+        if [ -d $f ]; then
+            for g in "$f"/*
+            do
+                $0 $g
+            done
+        else
+            $0 $f
+        fi
+    done
+    exit 0
 fi
 
+source "$scriptdir/config.sh"
+
 # we'll pipe files through these commands to remove spurious counts
-rmcomments="$scriptdir/rmcomments.sh"
+rmcomments="scripts/rmcomments.sh"
 rmstr="sed s/\"[^\"]*\"//g"
 rminclude="sed s/#.*//"
 
@@ -29,20 +53,25 @@ syscalls="
     gethostname
     execl
     execle
-    execlp 
-    execv 
+    execlp
+    execv
+    execve
     execvl
-    execvp 
+    execvp
     fork
     wait
     waitpid
+    ioctl
     open
+    close
     read
     write
     opendir
     closedir
     readdir
     readdir_r
+    readlink
+    lstat
     stat
     pipe
     dup2
@@ -50,24 +79,30 @@ syscalls="
     chdir
     getcwd
     getwd
-    get_current_directory_name
+    get_current_dir_name
     signal
     sigaction
     getpwuid
     getgrgid
+    kill
+    access
+    system
     "
 
+#The regex will not match member operators like stream::open.
 args=""
 for syscall in $syscalls; do
-    args="$args -e \<$syscall\>[^(]*([^)]*) "
+
+    args="$args -e [^._]\<$syscall\>[^(]*([^)]*) -e ^\<$syscall\>[^(]*([^)]*) "
+    #args="$args -e \<$syscall\>[^(]*([^)]*) "
 done
 
 # calculate number of syscalls
-syscalls=`cat $@ | "$rmcomments" | $rmstr | $rminclude | sed -e 's/^[ \t]*//' | grep -o $args -n | sed -e 's/^\([1234567890][1234567890]\):/0\1:/' | sed -e 's/\([1234567890]\):/\1:  /'` 
+syscalls=`cat $@ | "$rmcomments" | $rmstr | $rminclude | sed -e 's/^[ \t]*//' | grep -o $args -n | sed -e 's/^\([1234567890][1234567890]\):/0\1:/' | sed -e 's/\([1234567890]\):/\1:  /'`
 numsyscalls=$(echo "$syscalls" | wc -l)
 
 # calculate number of perror
-perrors=`cat $@ | "$rmcomments" | $rmstr | $rminclude | sed -e 's/^[ \t]*//' | grep -n -e "\<perror\>" | sed -e 's/^\([1234567890][1234567890]\):/0\1:/' | sed -e 's/\([1234567890]\):/\1:  /'` 
+perrors=`cat $@ | "$rmcomments" | $rmstr | $rminclude | sed -e 's/^[ \t]*//' | grep -n -e "\<perror\>" | sed -e 's/^\([1234567890][1234567890]\):/0\1:/' | sed -e 's/\([1234567890]\):/\1:  /'`
 numperror=`echo "$perrors" | wc -l`
 
 # print vars
@@ -83,10 +118,10 @@ function printvars {
 }
 echo
 echo "lines with syscalls:"
-out="$(printvars "$syscalls" '1;31') 
+out="$(printvars "$syscalls" '1;31')
      $(printvars "$perrors" '1;32')
     "
-echo "$out" | sed -e 's/^ */  /' | sort 
+echo "$out" | sed -e 's/^ */  /' | sort
 
 # calculate the grade modifier
 grademod="0"
@@ -95,7 +130,7 @@ if [ "$numperror" -lt "$numsyscalls" ]; then
 fi
 
 # output results
-echo 
+echo
 echo "summary:"
 echo "  number of syscalls... $numsyscalls"
 echo "  number of perror..... $numperror"

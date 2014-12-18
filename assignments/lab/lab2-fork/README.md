@@ -18,7 +18,7 @@ Run your program multiple times and see that the output is different each time.
 
 #### fun with fork bombs
 
-The `fork` system call can be used to implement a simple [denial of service](https://en.wikipedia.org/wiki/Denial-of-service_attack) attack called a "fork bomb."  Find the `C` code for a fork bomb on the [wikipedia page](https://en.wikipedia.org/wiki/Fork_bomb).  Compile and run the fork bomb... you can defuse it?!
+The `fork` system call can be used to implement a simple [denial of service](https://en.wikipedia.org/wiki/Denial-of-service_attack) attack called a "fork bomb."  Find the `C` code for a fork bomb on the [wikipedia page](https://en.wikipedia.org/wiki/Fork_bomb).  Compile and run the fork bomb... can you defuse it?!
 
 ### deliverables
 

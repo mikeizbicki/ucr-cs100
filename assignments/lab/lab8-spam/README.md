@@ -4,7 +4,7 @@ You should complete this lab using pair programming with a new partner.
 
 ### coding instructions
 
-In this lab, we're going to learn to send spam emails.  It turns out that with the [Simple Mail Transfer Protocol (SMTP)](http://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol), you don't need to know someone's password to send email from their account!  Anyone can send emails from anyone elsse's account!
+In this lab, we're going to learn to send spam emails.  It turns out that with the [Simple Mail Transfer Protocol (SMTP)](http://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol), you don't need to know someone's password to send email from their account!  Anyone can send emails from anyone else's account!
 
 First, you're going to practice sending these emails.  Then, you're going to write a bash script to automate the process.
 
@@ -15,10 +15,10 @@ First, you're going to practice sending these emails.  Then, you're going to wri
 First, telnet into the local SMTP webserver:
 
 ```
-telnet email.cs.ucr.edu 25
+telnet mail.cs.ucr.edu 25
 ```
 
-Telnet is a simple command line utility that let's us send commands over the network.  Whatever you type in gets sent over the network to the server you're connected to.
+Telnet is a simple command line utility that lets us send commands over the network.  Whatever you type in gets sent over the network to the server you're connected to.
 
 Now, type the following commands:
 

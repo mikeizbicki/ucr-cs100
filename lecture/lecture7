@@ -1,0 +1,1175 @@
+Script started on Thu 23 Oct 2014 05:58:03 PM PDT
+bash: .profile: No such file or directory
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecturre$ clear
+[H[2J]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecturre$ PPS1="$ "[1P
+$ clear
+[H[2J$ ls
+[0m[01;32ma.out[0m          lecture4
+[01;34mbin[0m            lecture4b
+exec2.cpp      lecture5
+exec.cpp       lecture6
+exit.cpp       lecture7
+fail.cpp       Makefile
+fib.cpp        out
+filemanip.cpp  quizres.cpp
+gdb.cpp        [01;34mrshell[0m
+lecture1       testfile
+lecture1b      [01;34mtmp[0m
+lecture2       typescript
+$ pwd
+/home/user/proj/ucr-cs100/lecture
+$ cd ../assignments/lab/lab0[K1-git/
+$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ ls
+git-cheatsheet.md  grade  [0m[01;34mimages[0m  README.md
+$ git blame README.md
+[?1h=245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   1) # using git [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   2) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   3) We will not [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   4) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   5) In this lab,[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   6) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   7) ### creating[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   8) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   9) Open a termi[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  10) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  11) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  12) $ mkdir firs[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  13) $ cd firstre[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  14) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  15) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  16) This folder [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  17) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  18) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  19) $ git init[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  20) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  21) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  22) All the info[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  23) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  24) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  25) $ ls[m
+:[K[H[2J[H245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   1) # using git and github[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   2) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   3) We will not be using il[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   4) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   5) In this lab, you will f[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   6) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   7) ### creating your first[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   8) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   9) Open a terminal, and `c[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  10) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  11) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  12) $ mkdir firstrepo[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  13) $ cd firstrepo[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  14) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  15) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  16) This folder will be the[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  17) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  18) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  19) $ git init[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  20) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  21) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  22) All the information for[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  23) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  24) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  25) $ ls[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  26) $ ls -a[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  27) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  28) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  29) Now we are ready to add[m
+:[K[H[2J[H245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   1) # using git and github[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   2) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   3) We will not be using ilearn in this cl[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   4) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   5) In this lab, you will first learn the [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   6) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   7) ### creating your first repo (and some[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   8) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   9) Open a terminal, and `cd` into the dir[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  10) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  11) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  12) $ mkdir firstrepo[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  13) $ cd firstrepo[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  14) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  15) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  16) This folder will be the home of your f[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  17) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  18) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  19) $ git init[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  20) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  21) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  22) All the information for the git reposi[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  23) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  24) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  25) $ ls[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  26) $ ls -a[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  27) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  28) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  29) Now we are ready to add some files int[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  30) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  31) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  32) $ touch README[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  33) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  34) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  35) The `touch` command is a standard unix[m
+:[K[H[2J[H245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   1) # using git and github[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   2) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   3) We will not be using ilearn in this class.  Instead, we wil[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   4) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   5) In this lab, you will first learn the basics of how to use [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   6) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   7) ### creating your first repo (and some basic unix commands)[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   8) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   9) Open a terminal, and `cd` into the directory you will be do[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  10) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  11) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  12) $ mkdir firstrepo[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  13) $ cd firstrepo[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  14) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  15) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  16) This folder will be the home of your first git repository. [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  17) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  18) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  19) $ git init[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  20) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  21) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  22) All the information for the git repository is stored in a h[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  23) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  24) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  25) $ ls[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  26) $ ls -a[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  27) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  28) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  29) Now we are ready to add some files into our repo.  Every re[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  30) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  31) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  32) $ touch README[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  33) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  34) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  35) The `touch` command is a standard unix command.  If the inp[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  36) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  37) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  38) $ ls -l[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  39) $ touch README[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  40) $ ls -l[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  41) ```[m
+:[K[H[2J[H245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   1) # using git and github[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   2) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   3) We will not be using ilearn in this cl[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   4) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   5) In this lab, you will first learn the [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   6) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   7) ### creating your first repo (and some[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   8) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   9) Open a terminal, and `cd` into the dir[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  10) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  11) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  12) $ mkdir firstrepo[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  13) $ cd firstrepo[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  14) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  15) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  16) This folder will be the home of your f[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  17) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  18) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  19) $ git init[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  20) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  21) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  22) All the information for the git reposi[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  23) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  24) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  25) $ ls[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  26) $ ls -a[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  27) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  28) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  29) Now we are ready to add some files int[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  30) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  31) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  32) $ touch README[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  33) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  34) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  35) The `touch` command is a standard unix[m
+:[K[H[2J[H245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   1) # using git and github[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   2) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   3) We will not be using il[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   4) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   5) In this lab, you will f[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   6) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   7) ### creating your first[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   8) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700   9) Open a terminal, and `c[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  10) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  11) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  12) $ mkdir firstrepo[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  13) $ cd firstrepo[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  14) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  15) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  16) This folder will be the[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  17) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  18) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  19) $ git init[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  20) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  21) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  22) All the information for[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  23) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  24) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  25) $ ls[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  26) $ ls -a[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  27) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  28) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  29) Now we are ready to add[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  30) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  31) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  32) $ touch README[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  33) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  34) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  35) The `touch` command is [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  36) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  37) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  38) $ ls -l[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  39) $ touch README[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  40) $ ls -l[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  41) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  42) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  43) Notice how the timestam[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  44) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  45) We've created our first[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  46) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  47) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  48) $ git status[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  49) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  50) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  51) In the output, there is[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  52) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  53) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  54) $ git add README[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  55) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  56) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  57) Now, when we run `git s[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  58) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  59) Whenever we finish a ta[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  60) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  61) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  62) $ git commit -m "my fir[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  63) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  64) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  65) Every commit needs a "c[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  66) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  67) Let's add some actual c[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  68) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  69) ```[m
+:[K[K [KESCESC[KOO[KBB[K0d75c53a (Kenley Arai     2014-10-11 13:06:39 -0700  70) #include <iostream>[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  71) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  72) int main()[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  73) {[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  74)     std::cout << "hello[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  75)     return 1;[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  76) }[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  77) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  78) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  79) Compile and run the cod[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  80) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  81) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  82) $ g++ main.cpp[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  83) $ ./a.out[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  84) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  85) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  86) Then add it to the repo[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  87) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  88) ```[m
+:[K[K [KESCESC[KOO[KCC[H[2J[H49:36 -0700  60) [m
+49:36 -0700  61) ```[m
+49:36 -0700  62) $ git commit -m "my first commit"[m
+49:36 -0700  63) ```[m
+49:36 -0700  64) [m
+49:36 -0700  65) Every commit needs a "commit message" that describes what chang[m
+49:36 -0700  66) [m
+49:36 -0700  67) Let's add some actual code to our project.  Create a file `main[m
+49:36 -0700  68) [m
+49:36 -0700  69) ```[m
+06:39 -0700  70) #include <iostream>[m
+49:36 -0700  71) [m
+49:36 -0700  72) int main()[m
+49:36 -0700  73) {[m
+49:36 -0700  74)     std::cout << "hello git" << std::endl;[m
+49:36 -0700  75)     return 1;[m
+49:36 -0700  76) }[m
+49:36 -0700  77) ```[m
+49:36 -0700  78) [m
+49:36 -0700  79) Compile and run the code:[m
+49:36 -0700  80) [m
+49:36 -0700  81) ```[m
+49:36 -0700  82) $ g++ main.cpp[m
+49:36 -0700  83) $ ./a.out[m
+49:36 -0700  84) ```[m
+49:36 -0700  85) [m
+49:36 -0700  86) Then add it to the repo and commit your changes:[m
+49:36 -0700  87) [m
+49:36 -0700  88) ```[m
+:[K[K [KESCESC[KOO[KDD[H[2J[H245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  60) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  61) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  62) $ git commit -m "my fir[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  63) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  64) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  65) Every commit needs a "c[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  66) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  67) Let's add some actual c[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  68) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  69) ```[m
+0d75c53a (Kenley Arai     2014-10-11 13:06:39 -0700  70) #include <iostream>[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  71) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  72) int main()[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  73) {[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  74)     std::cout << "hello[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  75)     return 1;[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  76) }[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  77) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  78) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  79) Compile and run the cod[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  80) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  81) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  82) $ g++ main.cpp[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  83) $ ./a.out[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  84) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  85) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  86) Then add it to the repo[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  87) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  88) ```[m
+:[K[K [KESCESC[KOO[KDD[H[2J[H245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  60) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  61) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  62) $ git commit -m "my fir[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  63) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  64) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  65) Every commit needs a "c[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  66) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  67) Let's add some actual c[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  68) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  69) ```[m
+0d75c53a (Kenley Arai     2014-10-11 13:06:39 -0700  70) #include <iostream>[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  71) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  72) int main()[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  73) {[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  74)     std::cout << "hello[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  75)     return 1;[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  76) }[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  77) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  78) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  79) Compile and run the cod[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  80) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  81) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  82) $ g++ main.cpp[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  83) $ ./a.out[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  84) ```[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  85) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  86) Then add it to the repo[m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  87) [m
+245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  88) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  89) $ git add main.cpp[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  90) $ git commit -m "added [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  91) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  92) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  93) **IMPORTANT:**  Notice [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  94) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  95) Let's make one more com[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  96) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  97) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  98) $ echo "This program pr[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700  99) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 100) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 101) Remember that `echo` pr[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 102) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 103) The command `cat` print[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 104) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 105) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 106) $ cat README[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 107) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 108) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 109) Now run:[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 110) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 111) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 112) $ git commit -m "modifi[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 113) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 114) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 115) Uh oh![m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 116) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 117) We got an error message[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 118) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 119) Every time you modify a[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 120) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 121) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 122) $ git add README[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 123) $ git commit -m "modifi[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 124) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 125) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 126) ### traveling through t[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 127) [m
+:[K[K [KESCESC[KOO[KBB[Kdc37fb6f (Mike Izbicki    2014-10-09 23:15:19 -0700 128) Okay![m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 129) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 130) Now we're ready to take[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 131) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 132) Run the command:[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 133) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 134) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 135) $ git log[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 136) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 137) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 138) This gives us a history[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 139) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 140) Sometimes, we want to l[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 141) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 142) We can inspect the prev[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 143) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 144) *(You should replace th[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 145) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 146) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 147) $ git checkout a20aef20[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 148) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 149) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 150) Now let's see what happ[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 151) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 152) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 153) $ cat README[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 154) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 155) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 156) The file is empty again[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 157) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 158) Now run:[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 159) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 160) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 161) $ ls -l[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 162) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 163) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 164) Your `main.cpp` file di[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 165) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 166) Let's restore all those[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 167) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 168) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 169) $ git checkout master[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 170) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 171) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 172) And verify that our cha[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 173) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 174) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 175) $ cat README[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 176) $ ls -l[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 177) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 178) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 179) ### git repos are trees[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 180) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 181) Another important use o[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 182) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 183) Every version of our re[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 184) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 185) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 186) $ git branch[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 187) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 188) [m
+:[K[K [KESCESC[KOO[KBB[Kdc37fb6f (Mike Izbicki    2014-10-09 23:15:19 -0700 189) This should list just a[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 190) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 191) One way to think of bra[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 192) [m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 193) From now on, we'll be d[m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 194) Currently, our repo loo[m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 195) [m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 196) <p align=center>[m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 197) <img src="images/3.png?[m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 198) </p>[m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 199) The purple boxes repres[m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 200) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 201) Every time we add a new[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 202) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 203) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 204) $ git branch userinput[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 205) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 206) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 207) Verify that our branch [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 208) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 209) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 210) $ git branch[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 211) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 212) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 213) You should see two bran[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 214) [m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 215) Our repo tree now looks[m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 216) [m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 217) <p align=center>[m
+:[K[K [KESCESC[KOO[KBB[K4310b5bc (Mike Izbicki    2014-10-13 11:46:44 -0700 218) <img src="images/4.png?[m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 219) </p>[m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 220) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 221) Switch to our new branc[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 222) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 223) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 224) $ git checkout userinpu[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 225) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 226) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 227) Now run:[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 228) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 229) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 230) $ git branch[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 231) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 232) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 233) and verify that the ast[m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 234) Since the only thing yo[m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 235) The only difference is [m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 236) [m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 237) <p align=center>[m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 238) <img src="images/5.png?[m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 239) </p>[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 240) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 241) Let's modify our `main.[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 242) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 243) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 244) #include <iostream>[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 245) #include <string>[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 246) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 247) int main()[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 248) {[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 249)     std::string name;[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 250)     std::cout << "What [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 251)     std::cin >> name;[m
+:[K[K [KESCESC[KOO[KBB[K16e392a5 (rtran012        2014-10-12 16:37:34 -0700 252)     std::cout << "Hello[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 253) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 254)     return 1;[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 255) }[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 256) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 257) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 258) We commit our changes t[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 259) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 260) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 261) $ git add main.cpp[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 262) $ git commit -m "added [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 263) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 264) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 265) Before this commit, the[m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 266) Now your tree looks lik[m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 267) [m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 268) <p align=center>[m
+:[K[K [KESCESC[KOO[KBB[K8c4c9747 (yli082          2014-10-13 10:09:24 -0700 269) <img src="images/6.png?[m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 270) </p>[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 271) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 272) Let's verify that our c[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 273) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 274) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 275) $ git checkout master[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 276) $ cat main.cpp[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 277) $ git checkout userinpu[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 278) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 279) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 280) We're not done with thi[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 281) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 282) Update the `README` fil[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 283) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 284) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 285) $ echo "This program as[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 286) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 287) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 288) And add it to the repo:[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 289) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 290) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 291) $ git add README[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 292) $ git commit -m "update[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 293) ```[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 294) [m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 295) Your repo tree now look[m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 296) [m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 297) <p align=center>[m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 298) <img src="images/7.png?[m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 299) </p>[m
+:[K[K [KESCESC[KOO[KBB[K1171cc7a (Kevin Nguyen    2014-09-19 13:59:30 -0700 300) [m
+:[K[K [KESCESC[KOO[KBB[Kdc37fb6f (Mike Izbicki    2014-10-09 23:15:19 -0700 301) The way branches are us[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 302) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 303) ### fixing a bug[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 304) [m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 305) Wait![m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 306) [m
+:[K[K [KESCESC[KOO[KBB[Kdc37fb6f (Mike Izbicki    2014-10-09 23:15:19 -0700 307) While we were working o[m
+:[K[K [KESCESC[KOO[KBB[K245d4611 (Mike Izbicki    2014-07-25 19:49:36 -0700 308) [m
+:[K[K[?1l>$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ q[Kpwd
+/home/user/proj/ucr-cs100/assignments/lab/lab1-git
+$ cd ../../.[Kle[K[K
+$ pwd
+/home/user/proj/ucr-cs100/assignments
+$ cd ../lecture/
+$ clear
+[H[2J$ g++ open.cpp 
+open.cpp:1:19: fatal error: fctnl.h: No such file or directory
+compilation terminated.
+$ man 2 open
+[?1049h[?1h=OPEN(2) Linux Programmer's ManualOPEN(2)[m
+[m
+[1mNAME[0m[m
+       open,  creat  - open and possibly[m
+       create a file or device[m
+[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<sys/types.h>[0m[m
+       [1m#include[0m [1m<sys/stat.h>[0m[m
+       [1m#include[0m [1m<fcntl.h>[0m[m
+[m
+       [1mint[0m [1mopen(const[0m [1mchar[0m [1m*[0m[4mpathname[24m[1m,[0m [1mint[0m [m [4mflags[24m[1m);[0m[m
+       [1mint[0m [1mopen(const[0m [1mchar[0m [1m*[0m[4mpathname[24m[1m,[0m [1mint[0m [m [4mflags[24m[1m,[0m [1mmode_t[0m [4mmode[24m[1m);[0m[m
+[m
+       [1mint[0m [1mcreat(const[0m [1mchar[0m [1m*[0m[4mpathname[24m[1m,[0m [1mmod[0m[m [1me_t[0m [4mmode[24m[1m);[0m[m
+[m
+[1mDESCRIPTION[0m[m
+       Given  a  [4mpathname[24m  for  a  file,[m
+       [1mopen[0m() returns a file descriptor,[m
+       a small, nonnegative integer  for[m
+       use  in  subsequent  system calls[m
+       ([1mread[0m(2),   [1mwrite[0m(2),   [1mlseek[0m(2),[m
+       [1mfcntl[0m(2),    etc.).    The   file[m
+       descriptor returned by a success‚Äê[m
+       ful  call will be the lowest-num‚Äê[m
+       bered file  descriptor  not  cur‚Äê[m
+[7m) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ man 2 open[C[Cg++ open.cpp 
+open.cpp:3:22: fatal error: iostream.h: No such file or directory
+compilation terminated.
+$ g++ open.cpp 
+$ ./a.out 
+0
+$ ./a.out [C[C[5@g++ open.cpp[C[C[C[3Pman 2 open
+[?1049h[?1h=OPEN(2) Linux Programmer's ManualOPEN(2)[m
+[m
+[1mNAME[0m[m
+       open,  creat  - open and possibly[m
+       create a file or device[m
+[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<sys/types.h>[0m[m
+       [1m#include[0m [1m<sys/stat.h>[0m[m
+       [1m#include[0m [1m<fcntl.h>[0m[m
+[m
+       [1mint[0m [1mopen(const[0m [1mchar[0m [1m*[0m[4mpathname[24m[1m,[0m [1mint[0m [m [4mflags[24m[1m);[0m[m
+       [1mint[0m [1mopen(const[0m [1mchar[0m [1m*[0m[4mpathname[24m[1m,[0m [1mint[0m [m [4mflags[24m[1m,[0m [1mmode_t[0m [4mmode[24m[1m);[0m[m
+[m
+       [1mint[0m [1mcreat(const[0m [1mchar[0m [1m*[0m[4mpathname[24m[1m,[0m [1mmod[0m[m [1me_t[0m [4mmode[24m[1m);[0m[m
+[m
+[1mDESCRIPTION[0m[m
+       Given  a  [4mpathname[24m  for  a  file,[m
+       [1mopen[0m() returns a file descriptor,[m
+       a small, nonnegative integer  for[m
+       use  in  subsequent  system calls[m
+       ([1mread[0m(2),   [1mwrite[0m(2),   [1mlseek[0m(2),[m
+       [1mfcntl[0m(2),    etc.).    The   file[m
+       descriptor returned by a success‚Äê[m
+       ful  call will be the lowest-num‚Äê[m
+       bered file  descriptor  not  cur‚Äê[m
+[7m) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       rently open for the process.[m
+[7m) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       By default, the new file descrip‚Äê[m
+[7m) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tor is set to remain open  across[m
+[7m) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       an     [1mexecve[0m(2)    (i.e.,    the[m
+[7m) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mFD_CLOEXEC[0m file  descriptor  flag[m
+[7m) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       described  in  [1mfcntl[0m(2)  is  ini‚Äê[m
+[7m line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tially  disabled;  the  [1mO_CLOEXEC[0m[m
+[7m line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       flag,  described  below,  can  be[m
+[7m line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       used  to  change  this  default).[m
+[7m line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The  file  offset  is  set to the[m
+[7m line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       beginning  of   the   file   (see[m
+[7m line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mlseek[0m(2)).[m
+[7m line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       A  call  to  [1mopen[0m() creates a new[m
+[7m line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mopen[24m [4mfile[24m [4mdescription[24m,  an  entry[m
+[7m line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       in  the system-wide table of open[m
+[7m line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       files.  This  entry  records  the[m
+[7m line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       file  offset  and the file status[m
+[7m line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       flags   (modifiable    via    the[m
+[7m line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mfcntl[0m(2)  [1mF_SETFL[0m  operation).  A[m
+[7m line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       file descriptor is a reference to[m
+[7m line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       one of these entries; this refer‚Äê[m
+[7m line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ence is unaffected if [4mpathname[24m is[m
+[7m line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       subsequently  removed or modified[m
+[7m line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       to refer  to  a  different  file.[m
+[7m line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The  new open file description is[m
+[7m line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       initially  not  shared  with  any[m
+[7m line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       other  process,  but  sharing may[m
+[7m line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       arise via [1mfork[0m(2).[m
+[7m line 30 (press h for help or q to quit)[27m[K[K/[KOO[K__[KRR[KDD[KOO[K[1;1H[m
+[2;1H       By default, the new file descrip‚Äê[m
+[3;1H       tor is set to remain open  across[m
+[4;1H       an     [1mexecve[0m(2)    (i.e.,    the[m
+[5;1H       [1mFD_CLOEXEC[0m file  descriptor  flag[m
+[6;1H       described  in  [1mfcntl[0m(2)  is  ini‚Äê[m
+[7;1H       tially  disabled;  the  [1mO_CLOEXEC[0m[m
+[8;1H       flag,  described  below,  can  be[m
+[9;1H       used  to  change  this  default).[m
+[10;1H       The  file  offset  is  set to the[m
+[11;1H       beginning  of   the   file   (see[m
+[12;1H       [1mlseek[0m(2)).[m
+[13;1H[m
+[14;1H       A  call  to  [1mopen[0m() creates a new[m
+[15;1H       [4mopen[24m [4mfile[24m [4mdescription[24m,  an  entry[m
+[16;1H       in  the system-wide table of open[m
+[17;1H       files.  This  entry  records  the[m
+[18;1H       file  offset  and the file status[m
+[19;1H       flags   (modifiable    via    the[m
+[20;1H       [1mfcntl[0m(2)  [1mF_SETFL[0m  operation).  A[m
+[21;1H       file descriptor is a reference to[m
+[22;1H       one of these entries; this refer‚Äê[m
+[23;1H       ence is unaffected if [4mpathname[24m is[m
+[24;1H       subsequently  removed or modified[m
+[25;1H       to refer  to  a  different  file.[m
+[26;1H       The  new open file description is[m
+[27;1H       initially  not  shared  with  any[m
+[28;1H       other  process,  but  sharing may[m
+[29;1H       arise via [1mfork[0m(2).[m
+[30;1H[1;1H[m
+[2;1H       By default, the new file descrip‚Äê[m
+[3;1H       tor is set to remain open  across[m
+[4;1H       an     [1mexecve[0m(2)    (i.e.,    the[m
+[5;1H       [1mFD_CLOEXEC[0m file  descriptor  flag[m
+[6;1H       described  in  [1mfcntl[0m(2)  is  ini‚Äê[m
+[7;1H       tially  disabled;  the  [1mO_CLOEXEC[0m[m
+[8;1H       flag,  described  below,  can  be[m
+[9;1H       used  to  change  this  default).[m
+[10;1H       The  file  offset  is  set to the[m
+[11;1H       beginning  of   the   file   (see[m
+[12;1H       [1mlseek[0m(2)).[m
+[13;1H[m
+[14;1H       A  call  to  [1mopen[0m() creates a new[m
+[15;1H       [4mopen[24m [4mfile[24m [4mdescription[24m,  an  entry[m
+[16;1H       in  the system-wide table of open[m
+[17;1H       files.  This  entry  records  the[m
+[18;1H       file  offset  and the file status[m
+[19;1H       flags   (modifiable    via    the[m
+[20;1H       [1mfcntl[0m(2)  [1mF_SETFL[0m  operation).  A[m
+[21;1H       file descriptor is a reference to[m
+[22;1H       one of these entries; this refer‚Äê[m
+[23;1H       ence is unaffected if [4mpathname[24m is[m
+[24;1H       subsequently  removed or modified[m
+[25;1H       to refer  to  a  different  file.[m
+[26;1H       The  new open file description is[m
+[27;1H       initially  not  shared  with  any[m
+[28;1H       other  process,  but  sharing may[m
+[29;1H       arise via [1mfork[0m(2).[m
+[30;1H...skipping...
+       [4mmodes[24m:  [1m[7mO_RDO[27m[0m[1mNLY[0m,  [1mO_WRONLY[0m,   or[m
+       [1mO_RDWR[0m.   These  request  opening[m
+       the file  read-only,  write-only,[m
+       or read/write, respectively.[m
+[m
+       In  addition,  zero  or more file[m
+       creation flags  and  file  status[m
+       flags   can  be  bitwise-[4mor[24m'd  in[m
+       [4mflags[24m.  The [4mfile[24m  [4mcreation[24m  [4mflags[24m[m
+       are  [1mO_CREAT[0m,  [1mO_EXCL[0m,  [1mO_NOCTTY[0m,[m
+       and  [1mO_TRUNC[0m.   The  [4mfile[24m  [4mstatus[24m[m
+       [4mflags[24m  are  all  of the remaining[m
+       flags listed below.  The distinc‚Äê[m
+       tion  between these two groups of[m
+       flags is  that  the  file  status[m
+       flags  can  be  retrieved and (in[m
+       some   cases)   modified    using[m
+       [1mfcntl[0m(2).   The full list of file[m
+       creation flags  and  file  status[m
+       flags is as follows:[m
+[m
+       [1mO_APPEND[0m[m
+              The   file  is  opened  in[m
+              append mode.  Before  each[m
+              [1mwrite[0m(2),  the file offset[m
+              is positioned at  the  end[m
+              of  the  file,  as if with[m
+              [1mlseek[0m(2).   [1mO_APPEND[0m   may[m
+              lead to corrupted files on[m
+[7m line 62 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              NFS file systems  if  more[m
+[7m line 63 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [4mmodes[24m:  [1m[7mO_RDO[27m[0m[1mNLY[0m,  [1mO_WRONLY[0m,   or[m
+[30;1H[K[7m line 62 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       one   of   the  following  [4maccess[24m[m
+[30;1H[K[7m line 61 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ man 2 open[C[C[2P./a.out [C[C[5@g++ open.cpp[C
+open.cpp: In function ‚Äòint main()‚Äô:
+open.cpp:9:13: error: ‚ÄòO_WDONLY‚Äô was not declared in this scope
+$ g++ open.cpp 
+$ ./a.out 
+0
+1
+2
+$ man write
+[?1049h[?1h=WRI... BSD General Commands ManualWRI...[m
+[m
+[1mNAME[0m[m
+     [1mwrite[0m ‚Äî send a message to another[m
+     user[m
+[m
+[1mSYNOPSIS[0m[m
+     [1mwrite[0m [4muser[24m [[4mtty[24m][m
+[m
+[1mDESCRIPTION[0m[m
+     The [1mwrite[0m utility allows you to[m
+     communicate with other users, by[m
+     copying lines from your terminal to[m
+     theirs.[m
+[m
+     When you run the [1mwrite[0m command, the[m
+     user you are writing to gets a mes‚Äê[m
+     sage of the form:[m
+[m
+           Message from[m
+           yourname@yourhost on yourtty[m
+           at hh:mm ...[m
+[m
+     Any further lines you enter will be[m
+     copied to the specified user's ter‚Äê[m
+     minal.  If the other user wants to[m
+     reply, they must run [1mwrite[0m as well.[m
+[m
+     When you are done, type an end-of-[m
+[7m) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ man write2write write
+[?1049h[?1h=WRITE(2)Linux Programmer's ManuaWRITE(2)[m
+[m
+[1mNAME[0m[m
+       write  - write to a file descrip‚Äê[m
+       tor[m
+[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<unistd.h>[0m[m
+[m
+       [1mssize_t[0m [1mwrite(int[0m [4mfd[24m[1m,[0m [1mconst[0m  [1mvoid[0m[m
+       [1m*[0m[4mbuf[24m[1m,[0m [1msize_t[0m [4mcount[24m[1m);[0m[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mwrite[0m()  writes up to [4mcount[24m bytes[m
+       from the buffer  pointed  [4mbuf[24m  to[m
+       the  file referred to by the file[m
+       descriptor [4mfd[24m.[m
+[m
+       The number of bytes  written  may[m
+       be  less than [4mcount[24m if, for exam‚Äê[m
+       ple, there is insufficient  space[m
+       on    the   underlying   physical[m
+       medium,   or   the   [1mRLIMIT_FSIZE[0m[m
+       resource   limit  is  encountered[m
+       (see [1msetrlimit[0m(2)), or  the  call[m
+       was  interrupted by a signal han‚Äê[m
+       dler after  having  written  less[m
+       than   [4mcount[24m  bytes.   (See  also[m
+       [1mpipe[0m(7).)[m
+[7m) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ man 2 write[2Pwrite[C[C[1P./a.out [C[Cman write2 write[C[C[Kclear
+[H[2J$ clear[C[Cman 2 write[2Pwrite[C[C[1P./a.out [C[C[5@g++ open.cpp[C[C[C[5P./a.out[C[C[C[5@g++ open.cpp[C
+open.cpp: In function ‚Äòint main()‚Äô:
+open.cpp:13:22: error: ‚Äòperror‚Äô was not declared in this scope
+$ g++ open.cpp 
+open.cpp:4:19: fatal error: stdin.h: No such file or directory
+compilation terminated.
+$ g++ open.cpp 
+$ ./a.out 
+0
+1
+2
+open: No such file or directory
+$ ls
+[0m[01;32ma.out[0m          lecture1   open.cpp
+[01;34mbin[0m            lecture1b  out
+exec2.cpp      lecture2   quizres.cpp
+exec.cpp       lecture4   [01;34mrshell[0m
+exit.cpp       lecture4b  testfile
+fail.cpp       lecture5   [01;34mtmp[0m
+fib.cpp        lecture6   typescript
+filemanip.cpp  lecture7
+gdb.cpp        Makefile
+$ touch test
+$ touch test[C[Cls[K./a.out 
+0
+1
+2
+$ cat test
+hi! $ clear
+[H[2J$ clearat test[C[C./a.out [C[Ctouch test
+$ g++ open.cpp 
+$ ./a.out 
+0
+1
+2
+sizeof(buf): 1024
+$ ./a.out [C[C[5@g++ open.cpp[C
+$ g++ open.cpp [C[C[5P./a.out[C
+0
+1
+2
+sizeof(buf): 8
+$ ./a.out [C[C[5@g++ open.cpp[C
+$ g++ open.cpp [C[C[5P./a.out[C
+0
+1
+2
+$ ./a.out [C[C[5@g++ open.cpp[C[C[C[5P./a.out[C[C[C[5@g++ open.cpp[C[C[C[5P./a.out[C[C[C[5@g++ open.cpp[C[C[C[3Ptouch test[C[C[5Pclearat test[C[C./a.out [C[Ccat test
+hi! ˇ  –dY“E  ^ñì    8“E          
+8“E                    E  0øííˇ  ®öW“E         ⁄á0    8“E  ®öW“E                 [¬     ¯¢“E  †¿ííˇ  (∑“E  
+8“E  ò£“E  ∞øííˇ          ∞øííˇ  ¿öW“E         ÌÈC+    8“E                 -   E  ß≠     »Ö—E   ¡ííˇ  `Ö—E  –dY“E  pfÖ—E  8“E          õW“E  ‡îW“E  >@      ËÖ—E  ÿ@                         ïY“E  p¡ííˇ  õW“E  ò¡ííˇ  »ëY“E  ÌÈC+    8“E          õW“E                   ˇ  »ëY“E  º5“   –dY“E  7      ÷a	“E           ïY“E   ¡ííˇ  8¡ííˇ  ò£“   –dY“E  8o7“E  >@     8R“E         ÿ/             `U7“E  †‹5“E   “E  –j7“E  †Ë5“E  º5“E          ‡P7“E  pfÖ—E  ‡îW“E  –j7“E  ˇˇˇˇ    –j7“E         p`             h√ííˇ  x√ííˇ          ÚY8“E     E          ∏Q7“E  pfÖ—E  †Z7“E         0¬ííˇ   `            U∫8“E                 ¿`     Ù`     	@     dMà—E         0¬ííˇ   `     ¥@            ˇˇ     @¬ííˇ  …@            =@     H‹Ö—E  ‡@             ê	@     $ man meme[Kset
+[?1049h[?1h=MEMSET(3Linux Programmer's ManuMEMSET(3)[m
+[m
+[1mNAME[0m[m
+       memset  - fill memory with a con‚Äê[m
+       stant byte[m
+[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<string.h>[0m[m
+[m
+       [1mvoid[0m [1m*memset(void[0m [1m*[0m[4ms[24m[1m,[0m [1mint[0m [4mc[24m[1m,[0m [1msize_t[0m[m  [4mn[24m[1m);[0m[m
+[m
+[1mDESCRIPTION[0m[m
+       The [1mmemset[0m() function  fills  the[m
+       first  [4mn[24m bytes of the memory area[m
+       pointed to by [4ms[24m with the constant[m
+       byte [4mc[24m.[m
+[m
+[1mRETURN[0m [1mVALUE[0m[m
+       The  [1mmemset[0m()  function returns a[m
+       pointer to the memory area [4ms[24m.[m
+[m
+[1mCONFORMING[0m [1mTO[0m[m
+       SVr4,    4.3BSD,    C89,     C99,[m
+       POSIX.1-2001.[m
+[m
+[1mSEE[0m [1mALSO[0m[m
+       [1mbzero[0m(3), [1mswab[0m(3), [1mwmemset[0m(3)[m
+[m
+[7m) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ man memset[C[C[2Pcat test[C[C./a.out [C[C[5@g++ open.cpp[C
+$ g++ open.cpp [C[C[3Pman memset[C[C[2Pcat test[C[C./a.out 
+0
+1
+2
+$ ./a.out [C[C[5@g++ open.cpp[C[C[C[3Pman memset[C[C[2Pcat test
+hi!                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             $ clear
+[H[2J$ man open
+[?1049h[?1h=OPENVT(1)       Linux 1.x      OPENVT(1)[m
+[m
+[1mNAME[0m[m
+       openvt - start a program on a new[m
+       virtual terminal (VT).[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mopenvt[0m  [-c  vtnumber]  [OPTIONS][m
+       [--] command[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mopenvt[0m will find the first avail‚Äê[m
+       able VT, and run on it the  given[m
+       [1mcommand[0m  with  the  given [1mcommand[0m[m
+       [1moptions[0m, standard  input,  output[m
+       and  error  are  directed to that[m
+       terminal. The current search path[m
+       ($PATH)   is  used  to  find  the[m
+       requested command. If no  command[m
+       is specified then the environment[m
+       variable $SHELL is used.[m
+[m
+   [1mOPTIONS[0m[m
+       [4m-c,[24m [4m--console=VTNUMBER[24m[m
+              Use the  given  VT  number[m
+              and  not  the first avail‚Äê[m
+              able. Note you  must  have[m
+              write  access  to the sup‚Äê[m
+              plied VT for this to work;[m
+[7m) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4m-f,[24m [4m--force[24m[m
+[7m) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Force opening a VT without[m
+[7m) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              checking   whether  it  is[m
+[7m) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              already in use;[m
+[7m) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4m-e,[24m [4m--exec[24m[m
+[7m line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Directly execute the given[m
+[7m line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              command,  without forking.[m
+[7m line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              This option is  meant  for[m
+[7m line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              use  in  [4m/etc/inittab[24m.  If[m
+[7m line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              you want to use this  fea‚Äê[m
+[7m line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ture  in  another context,[m
+[7m line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              be aware that  [1mopenvt[0m  has[m
+[7m line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              to  be a session leader in[m
+[7m line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              order for -e to work.  See[m
+[7m line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1msetsid[0m(2)  or [1msetsid[0m(1) on[m
+[7m line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              how to achieve this.[m
+[7m line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4m-s,[24m [4m--switch[24m[m
+[7m line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Switch to the new VT  when[m
+[7m line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              starting  the command. The[m
+[7m line 25 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ man open open2 open
+[?1049h[?1h=OPEN(2) Linux Programmer's ManualOPEN(2)[m
+[m
+[1mNAME[0m[m
+       open,  creat  - open and possibly[m
+       create a file or device[m
+[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<sys/types.h>[0m[m
+       [1m#include[0m [1m<sys/stat.h>[0m[m
+       [1m#include[0m [1m<fcntl.h>[0m[m
+[m
+       [1mint[0m [1mopen(const[0m [1mchar[0m [1m*[0m[4mpathname[24m[1m,[0m [1mint[0m [m [4mflags[24m[1m);[0m[m
+       [1mint[0m [1mopen(const[0m [1mchar[0m [1m*[0m[4mpathname[24m[1m,[0m [1mint[0m [m [4mflags[24m[1m,[0m [1mmode_t[0m [4mmode[24m[1m);[0m[m
+[m
+       [1mint[0m [1mcreat(const[0m [1mchar[0m [1m*[0m[4mpathname[24m[1m,[0m [1mmod[0m[m [1me_t[0m [4mmode[24m[1m);[0m[m
+[m
+[1mDESCRIPTION[0m[m
+       Given  a  [4mpathname[24m  for  a  file,[m
+       [1mopen[0m() returns a file descriptor,[m
+       a small, nonnegative integer  for[m
+       use  in  subsequent  system calls[m
+       ([1mread[0m(2),   [1mwrite[0m(2),   [1mlseek[0m(2),[m
+       [1mfcntl[0m(2),    etc.).    The   file[m
+       descriptor returned by a success‚Äê[m
+       ful  call will be the lowest-num‚Äê[m
+       bered file  descriptor  not  cur‚Äê[m
+[7m) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       rently open for the process.[m
+[7m) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       By default, the new file descrip‚Äê[m
+[7m) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tor is set to remain open  across[m
+[7m) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       an     [1mexecve[0m(2)    (i.e.,    the[m
+[7m) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mFD_CLOEXEC[0m file  descriptor  flag[m
+[7m) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       described  in  [1mfcntl[0m(2)  is  ini‚Äê[m
+[7m line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tially  disabled;  the  [1mO_CLOEXEC[0m[m
+[7m line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       flag,  described  below,  can  be[m
+[7m line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       used  to  change  this  default).[m
+[7m line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The  file  offset  is  set to the[m
+[7m line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       beginning  of   the   file   (see[m
+[7m line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mlseek[0m(2)).[m
+[7m line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       A  call  to  [1mopen[0m() creates a new[m
+[7m line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mopen[24m [4mfile[24m [4mdescription[24m,  an  entry[m
+[7m line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       in  the system-wide table of open[m
+[7m line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       files.  This  entry  records  the[m
+[7m line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       file  offset  and the file status[m
+[7m line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       flags   (modifiable    via    the[m
+[7m line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mfcntl[0m(2)  [1mF_SETFL[0m  operation).  A[m
+[7m line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       file descriptor is a reference to[m
+[7m line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       one of these entries; this refer‚Äê[m
+[7m line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ence is unaffected if [4mpathname[24m is[m
+[7m line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       subsequently  removed or modified[m
+[7m line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       to refer  to  a  different  file.[m
+[7m line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The  new open file description is[m
+[7m line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       initially  not  shared  with  any[m
+[7m line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       other  process,  but  sharing may[m
+[7m line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       arise via [1mfork[0m(2).[m
+[7m line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The argument [4mflags[24m  must  include[m
+[7m line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       one   of   the  following  [4maccess[24m[m
+[7m line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mmodes[24m:  [1mO_RDONLY[0m,  [1mO_WRONLY[0m,   or[m
+[7m line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mO_RDWR[0m.   These  request  opening[m
+[7m line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the file  read-only,  write-only,[m
+[7m line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       or read/write, respectively.[m
+[7m line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       In  addition,  zero  or more file[m
+[7m line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       creation flags  and  file  status[m
+[7m line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       flags   can  be  bitwise-[4mor[24m'd  in[m
+[7m line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mflags[24m.  The [4mfile[24m  [4mcreation[24m  [4mflags[24m[m
+[7m line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       are  [1mO_CREAT[0m,  [1mO_EXCL[0m,  [1mO_NOCTTY[0m,[m
+[7m line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       and  [1mO_TRUNC[0m.   The  [4mfile[24m  [4mstatus[24m[m
+[7m line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mflags[24m  are  all  of the remaining[m
+[7m line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       flags listed below.  The distinc‚Äê[m
+[7m line 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tion  between these two groups of[m
+[7m line 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       flags is  that  the  file  status[m
+[7m line 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       flags  can  be  retrieved and (in[m
+[7m line 49 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       some   cases)   modified    using[m
+[7m line 50 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mfcntl[0m(2).   The full list of file[m
+[7m line 51 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       creation flags  and  file  status[m
+[7m line 52 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       flags is as follows:[m
+[7m line 53 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m line 54 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mO_APPEND[0m[m
+[7m line 55 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              The   file  is  opened  in[m
+[7m line 56 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              append mode.  Before  each[m
+[7m line 57 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mwrite[0m(2),  the file offset[m
+[7m line 58 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              is positioned at  the  end[m
+[7m line 59 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              of  the  file,  as if with[m
+[7m line 60 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mlseek[0m(2).   [1mO_APPEND[0m   may[m
+[7m line 61 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              lead to corrupted files on[m
+[7m line 62 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              NFS file systems  if  more[m
+[7m line 63 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              than  one  process appends[m
+[7m line 64 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              data to a  file  at  once.[m
+[7m line 65 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              This  is  because NFS does[m
+[7m line 66 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              not support appending to a[m
+[7m line 67 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              file, so the client kernel[m
+[7m line 68 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              has to simulate it,  which[m
+[7m line 69 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              can't  be  done  without a[m
+[7m line 70 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              race condition.[m
+[7m line 71 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m line 72 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mO_ASYNC[0m[m
+[7m line 73 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Enable signal-driven  I/O:[m
+[7m line 74 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              generate  a  signal ([1mSIGIO[0m[m
+[7m line 75 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              by default, but  this  can[m
+[7m line 76 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              be  changed  via [1mfcntl[0m(2))[m
+[7m line 77 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              when   input   or   output[m
+[7m line 78 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              becomes  possible  on this[m
+[7m line 79 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              file   descriptor.    This[m
+[7m line 80 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              feature  is only available[m
+[7m line 81 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              for terminals,  pseudoter‚Äê[m
+[7m line 82 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              minals,    sockets,    and[m
+[7m line 83 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              (since  Linux  2.6)  pipes[m
+[7m line 84 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              and  FIFOs.   See [1mfcntl[0m(2)[m
+[7m line 85 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              for further details.[m
+[7m line 86 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m line 87 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mO_CLOEXEC[0m (Since Linux 2.6.23)[m
+[7m line 88 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              Enable  the  close-on-exec[m
+[7m line 89 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              flag   for  the  new  file[m
+[7m line 90 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              descriptor.     Specifying[m
+[7m line 91 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              this  flag  permits a pro‚Äê[m
+[7m line 92 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              gram to  avoid  additional[m
+[7m line 93 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mfcntl[0m(2)   [1mF_SETFD[0m  opera‚Äê[m
+[7m line 94 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              tions    to    set     the[m
+[7m line 95 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mFD_CLOEXEC[0m   flag.   Addi‚Äê[m
+[7m line 96 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              tionally, use of this flag[m
+[7m line 97 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              is  essential in some mul‚Äê[m
+[7m line 98 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              tithreaded programs  since[m
+[7m line 99 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              using  a separate [1mfcntl[0m(2)[m
+[7mline 100 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mF_SETFD[0m operation  to  set[m
+[7mline 101 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the  [1mFD_CLOEXEC[0m  flag does[m
+[7mline 102 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              not suffice to avoid  race[m
+[7mline 103 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              conditions    where    one[m
+[7mline 104 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              thread   opens   a    file[m
+[7mline 105 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              descriptor   at  the  same[m
+[7mline 106 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              time  as  another   thread[m
+[7mline 107 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              does    a   [1mfork[0m(2)   plus[m
+[7mline 108 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mexecve[0m(2).[m
+[7mline 109 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mline 110 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mO_CREAT[0m[m
+[7mline 111 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              If the file does not exist[m
+[7mline 112 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              it  will  be created.  The[m
+[7mline 113 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              owner  (user  ID)  of  the[m
+[7mline 114 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              file  is set to the effec‚Äê[m
+[7mline 115 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              tive  user   ID   of   the[m
+[7mline 116 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              process.  The group owner‚Äê[m
+[7mline 117 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ship  (group  ID)  is  set[m
+[7mline 118 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              either  to  the  effective[m
+[7mline 119 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              group ID of the process or[m
+[7mline 120 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              to  the  group  ID  of the[m
+[7mline 121 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              parent directory  (depend‚Äê[m
+[7mline 122 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              ing  on  file  system type[m
+[7mline 123 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              and mount options, and the[m
+[7mline 124 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              mode  of the parent direc‚Äê[m
+[7mline 125 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              tory,   see   the    mount[m
+[7mline 126 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              options    [4mbsdgroups[24m   and[m
+[7mline 127 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4msysvgroups[24m  described   in[m
+[7mline 128 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mmount[0m(8)).[m
+[7mline 129 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7mline 130 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [4mmode[24m specifies the permis‚Äê[m
+[7mline 131 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ man 2 open[2Popen[C[C[3Pclearat test[C[C./a.out [C[C[5@g++ open.cpp[C
+$ g++ open.cpp [C[C[3Pman 2 open[2Popen[C[C[3Pclearat test[C[C./a.out 
+0
+1
+2
+$ rm tets[K[Kst
+$ rm test[C[C./a.out 
+0
+1
+2
+$ cat test
+cat: test: Permission denied
+$ ls 0l [K[K[K-l  [Ktest
+---------- 1 user user 1024 Oct 23 18:26 test
+$ cg[Khmod s[Ka+r test
+$ chmod a+r test[C[C[4Pls -l[C[C[C[C[C[C[C[2Pcat[C[C[C[C[C
+hi!                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             $ cat test[C[C[C[6@hmod a+r[C[C[C[C[C[C[C[4Pls -l[C[C[C[C[C^C
+$ cat test[C[C[C[6@hmod a+r[C[C[C[C[C[C[C[4Pls -l[C[C[C[C[C
+-r--r--r-- 1 user user 1024 Oct 23 18:26 test
+$ ls -l test[C[C[2Pcat[C[C[C[C[C[C[C[C[6@hmod a+r[C[C[C[C[C[C[1P testw test
+$ chmod a+w test[C[C[4Pls -l[C[C[C[C[C
+-rw-rw-rw- 1 user user 1024 Oct 23 18:26 test
+$ ls -l test[C[C[4@chmod a+w[C[C[C[C[C[1P testx test
+$ chmod a+x test[C[C[4Pls -l[C[C[C[C[C[C[C[4@chmod a+w[C[C[C[C[C[C[C[4Pls -l[C[C[C[C[C[C[C[4@chmod a+w[C[C[C[C[C[C[C[4Pls -l[C[C[C[C[C
+-rwxrwxrwx 1 user user 1024 Oct 23 18:26 [0m[01;32mtest[0m
+$ ls -l test[C[C[4@chmod a+x[C[C[C[C[C[C[1P[1@-
+$ chmod a-x test[C[C[4Pls -l[C[C[C[C[C
+-rw-rw-rw- 1 user user 1024 Oct 23 18:26 test
+$ ls -l test[C[C[4@chmod a-x[C[C[C[C[C[1P[1P[1@u[1@+
+$ chmod u+x test[C[C[4Pls -l[C[C[C[C[C
+-rwxrw-rw- 1 user user 1024 Oct 23 18:26 [0m[01;32mtest[0m
+$ [K$ exit
+exit
+
+Script done on Thu 23 Oct 2014 11:46:31 PM PDT

@@ -1,0 +1,9 @@
+Script started on Thu 16 Oct 2014 12:40:22 PM PDT
+bash: ls: command not found
+bash: .profile: No such file or directory
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ exit[K[K[K[Kssh mizbi001@hammer.cs.ucr.edu[Kls
+bash: ls: command not found
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ exit
+exit
+
+Script done on Thu 16 Oct 2014 12:41:44 PM PDT

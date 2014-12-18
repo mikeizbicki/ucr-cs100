@@ -4,13 +4,13 @@
 
 Extend your `rshell` program so that it properly handles input redirection `<`, output redirection `>` and `>>`, and piping `|`.  
 This will require using the Unix functions `dup` and `pipe`.  
-The [syscalls tutorial from hw1](../hw1-rshell/syscalls-tutorial.md) also covers these functions.
+The [syscalls tutorial from hw0](https://github.com/mikeizbicki/ucr-cs100/blob/cs100-2014fall/tutorials/syscalls/README.md) also covers these functions.
 Of course, you should also be consulting the man pages.
 
 As an example, after this assignment, your program should be able to successfully handle the following command:
 
 ```
-$ cat < existingInputFile | tr A-Z a-z | tee newOutputFile1 | tr a-z A-Z > newOutputFile2 &
+$ cat < existingInputFile | tr A-Z a-z | tee newOutputFile1 | tr a-z A-Z > newOutputFile2
 ```
 
 **IMPORTANT:** This is a necessary but not sufficient test case.  You must come up with others on your own.
@@ -42,7 +42,9 @@ There are no changes to your project structure.
 
 Again, the tests you choose will be the most important part of your grade.  
 
-You should carefully consider: which redirections can be legally combined together, and which cannot? does order matter?  Also make sure to test that you are parsing the command correctly.
+You should carefully consider: which redirections can be legally combined together, and which cannot? Does order matter?  Also make sure to test that you are parsing the command correctly.
+
+As with your previous assignments: Your `tests` directory will contain a file called `piping.script` that contains all of the test cases you tried. You will generate the file using the script command, and it must be succinct (i.e. it cannot have unnecessary commands in it). You should use comments in your script to document what you are testing with each test case.
 
 **IMPORTANT:** If you are unsure if your test cases are sufficient, ask one of the instructors to review them *before the deadline*.
 

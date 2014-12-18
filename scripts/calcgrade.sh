@@ -11,11 +11,16 @@ source "$scriptdir/config.sh"
 ########################################
 # check for valid command line params
 
-user="$1"
+user=$(simplifycsaccount "$1")
 if [ -z $user ]; then
     echo "no github account given"
     exit
 fi
+
+#######################################
+# check if instructor keys are installed
+
+checkKeys
 
 #######################################
 # calculate stats
@@ -56,27 +61,22 @@ for f in `find . -name grade | sort`; do
         assnPercent=$(bc <<< "$cmd" 2> /dev/null)
         colorPercent "$assnPercent"
         printf "    %3s / %3s    " "$grade" "$outof"
-        resetColor
-        printf "|"
+        printf "$endcolor|"
         colorPercent "$assnPercent"
-        printf "  $assn"
-        resetColor
-        printf " |  $grader "
+        printf "  $assn$endcolor |  $grader "
         if [ "$signature" = "G" ]; then
-            colorPercent 100
-            printf "[signed]"
-            resetColor
+            printf "$green[signed]$endcolor"
         else
-            colorPercent 0
-            printf "[bad signature]"
-            resetColor
+            if [ "$signature" = "U" ]; then
+                printf "$cyn[signed but untrusted]$endcolor"
+            else
+                printf "$red[bad signature]$endcolor"
+            fi
         fi
         echo
     else
         printf "    %3s / %3s    " "$grade" "$outof"
-        printf "|"
-        printf "  $assn |  ---"
-        printf "\n"
+        printf "|  $assn |  ---\n"
     fi
 done
 

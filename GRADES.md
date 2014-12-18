@@ -6,7 +6,7 @@ All of your grade information will be stored in the repo you forked during lab1.
 This file contains detailed information about how your grades will be stored in that repo.
 
 **IMPORTANT:**
-If you did not give all of the instructors write access to your repository, then you won't be able to get your grades updated, and you will get zeros on the assignments!
+If you did not give all of the instructors write access to your repository (make them collaborators on github), then you won't be able to get your grades updated, and you will get zeros on the assignments!
 
 **IMPORTANT:**
 By default, github sets your repo to `public` and gives everyone read access.
@@ -18,7 +18,7 @@ This won't affect our ability to grade your assignments.
 
 Every assignment has a corresponding directory.
 In that directory is a file called `grade`.
-This file contains your score on that assignment.
+This file (in the `grades` branch) contains your score on that assignment.
 
 An example `grade` file might look like:
 
@@ -43,10 +43,10 @@ If the assignment has not yet been graded, then the contents of the file will co
 
 ## checking your overall grade
 
-You can use the `scripts/calcgrade.sh` file to calculate your whole grade for the course.
+You can use the `scripts/calcgrade.sh` script to calculate your whole grade for the course.
 This script automatically downloads the latest version of your repo, inspects the grade you received on each assignment, and calculates your current and final grades for the course.
 
-The `calcgrade.sh` script expects a single argument that corresponds to the github account of the grade you want to check.
+The `calcgrade.sh` script expects a single argument that corresponds to the UCR netid/CS account of the grade you want to check.
 For example, if you want to find the grade of the `examplestudent` account, you would run:
 
 ```
@@ -57,7 +57,7 @@ and the output looks something like:
 
 ```
 finding grade for github account examplestudent
-repository exists... fetching origin
+repository exists... fetching ORIGIN
 
 ===========================================
     grade        |  assignment

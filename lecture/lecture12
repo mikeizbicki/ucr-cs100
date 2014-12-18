@@ -1,0 +1,352 @@
+Script started on Thu 13 Nov 2014 05:08:54 PM PST
+bash: .profile: No such file or directory
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ [18P(reverse-i-search)`':[CP': downloadAllProjects rshell[10PS': export PS1="$ "[1@1[C[C[C[C[C[C[C[C[C[C]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ export PS1="$ "
+$ clear
+[H[2J$ [K$ [K$ [K$ [K$ sed[1Ped[1Pd[Ksed 's/Mike izbicki/best professor ever /'
+^C
+$ sed 's/Mike izbicki/best professor ever//' < file
+mike izbicki
+$ sed 's/Mike izbicki/best professor ever//' < file[A[C[C[C[C[C[C[C[C[C[Cike izbicki/best professor ever/'[1P[A[C[C[C[C[C[C[C[Cmike izbicki/best professor ever/[1@'[A[C[C[C[C[C[C[C[C
+
+best professor ever
+$ sed 's/mike izbicki/best professor ever//' < file >file
+$ cat file
+$ cat file[C[Csed 's/mike izbicki/best professor ever//' < file >file[K[K[K[K[K[K[K[K[K[K[K[Kfile -i
+$ cat file
+$ cat file[C[Csed 's/mike izbicki/best professor ever//' file -i
+$ sed 's/mike izbicki/best professor ever//' file -i[A[C[Ccat file[K
+[K[A[C[C[C[C[C[C[C[C[C[C
+best professor ever
+$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ cat file[C[Csed 's/mike izbicki/best professor ever/' file -i[C[Ccat file[K[C[Csed 's/mike izbicki/best professor ever/' file -i[C[1@g[C[C[C[C[C[C[C[C[C[K[K[K
+best professor ever
+$ sed 's/mike izbicki/best professor ever/g' file -i
+$ sed 's/mike izbicki/best professor ever/g' file -i[1P[1P[C[C[C[C[C[C[1@\[C[C[C[C[C[C[C[C[C[C[C[C[C[1@\[C[C[C[C[C[C[C[C[C[C[1@\
+$ clear
+[H[2J$ history | grep g++
+15869  g++ main.cpp 
+15904  g++ main.cpp 
+15928  g++ main.cpp 
+15967  g++ main.cpp 
+16441  g++ exec.cpp 
+16444  g++ exec.cpp 
+16448  g++ exec.cpp 
+16452  g++ exec.cpp 
+16454  g++ exec.cpp 
+16456  g++ exec.cpp 
+16463  g++ exec.cpp 
+16465  g++ exec.cpp 
+16467  g++ exec.cpp 
+16469  g++ exec.cpp 
+16471  g++ exec.cpp 
+16474  g++ exec.cpp 
+16476  g++ exec.cpp 
+16479  g++ exec.cpp 
+16483  g++ exec.cpp 
+16488  g++ exec.cpp 
+16490  g++ exec.cpp 
+16493  g++ exec.cpp 
+16497  g++ exit.cpp 
+16505  g++ exit.cpp -o exit
+16506  g++ fail.cpp -o fail
+16679  g++ exec2.cpp 
+16682  g++ exec2.cpp 
+16684  g++ exec2.cpp 
+16691  g++ exec2.cpp 
+16693  g++ exec2.cpp 
+16695  g++ exec2.cpp 
+16702  g++ exec2.cpp 
+16704  g++ exec2.cpp 
+16708  g++ exec2.cpp 
+16710  g++ exec2.cpp 
+16713  g++ exec2.cpp 
+16715  g++ exec2.cpp 
+16718  g++ exec2.cpp 
+16720  g++ exec2.cpp 
+16723  g++ exec2.cpp 
+16727  g++ exec2.cpp 
+16733  alias g+++=g++ -Wall -Werror -ansi -pedantic
+16734  alias g+++="g++ -Wall -Werror -ansi -pedantic"
+16739  g++ exec2.cpp 
+16890  g++ -g gdb.cpp 
+16893  g++ -g gdb.cpp 
+16897  g++ -g gdb.cpp 
+16902  g++ -g gdb.cpp 
+16940  g++ gdb.cpp 
+16942  g++ gdb.cpp 
+16944  g++ gdb.cpp 
+16946  g++ gdb.cpp 
+16948  g++ gdb.cpp 
+16951  g++ gdb.cpp 
+16953  g++ gdb.cpp 
+16955  g++ gdb.cpp 
+16957  g++ gdb.cpp 
+16959  g++ gdb.cpp 
+16962  g++ gdb.cpp -g 
+16965  g++ gdb.cpp
+16968  g++ gdb.cppn-g
+16969  g++ gdb.cpp -g
+16972  g++ gdb.cpp -g
+16974  g++ fib.cpp 
+16979  g++ fib.cpp -g
+17008  g++ gdb.cpp 
+17009  g++ gdb.cpp > out
+17011  g++ gdb.cpp 2> out
+17014  g++ filemanip.cpp 
+17016  g++ filemanip.cpp 
+17538  g++ open.cpp 
+17540  g++ open.cpp 
+17543  g++ open.cpp 
+17548  g++ open.cpp 
+17556  g++ open.cpp 
+17558  g++ open.cpp 
+17560  g++ open.cpp 
+17564  g++ open.cpp 
+17570  g++ open.cpp 
+17599  g++ quizres.cpp 
+17601  g++ quizres.cpp 
+17603  g++ quizres.cpp 
+17605  g++ quizres.cpp 
+17607  g++ quizres.cpp 
+17609  g++ quizres.cpp 
+17611  g++ quizres.cpp 
+17613  g++ quizres.cpp 
+17615  g++ quizres.cpp 
+17617  g++ quizres.cpp 
+17619  g++ quizres.cpp 
+17621  g++ quizres.cpp 
+17624  g++ quizres.cpp 
+17626  g++ quizres.cpp 
+17628  g++ quizres.cpp 
+17631  g++ quizres.cpp 
+17633  g++ quizres.cpp 
+17636  g++ quizres.cpp 
+17638  g++ quizres.cpp 
+17640  g++ quizres.cpp 
+17643  g++ quizres.cpp 
+17645  g++ quizres.cpp 
+18225  g++ memleak.cpp 
+18229  g++ memleak.cpp -g
+18232  g++ memleak.cpp -g
+18238  g++ memleak.cpp -g
+18245  g++ memleak.cpp -g
+18247  g++ memleak.cpp -g
+18260  g++ stat.cpp 
+18263  g++ stat.cpp \
+18264  g++ stat.cpp 
+18266  g++ stat.cpp 
+18292  g++ stat.cpp 
+18295  g++ stat.cpp 
+18297  g++ stat.cpp 
+18299  g++ stat.cpp 
+18304  g++ stat.cpp 
+18306  g++ stat.cpp 
+18308  g++ stat.cpp 
+18316  g++ memleak.cpp 
+18320  g++ memleak.cpp 
+18324  g++ memleak.cpp 
+18327  g++ memleak.cpp 
+18330  g++ memleak.cpp 
+18395  g++ quiz4.cpp 
+18398  g++ quiz4.cpp 
+18400  g++ quiz4.cpp 
+18402  g++ quiz4.cpp 
+18404  g++ quiz4.cpp 
+18407  g++ quiz4.cpp 
+18409  g++ quiz4.cpp 
+18411  g++ quiz4.cpp 
+18414  g++ quiz4.cpp 
+18416  g++ quiz4.cpp 
+18418  g++ quiz4.cpp 
+18421  g++ quiz4.cpp 
+18423  g++ quiz4.cpp 
+18425  g++ quiz4.cpp 
+18428  g++ quiz4.cpp 
+18561  g++ fstream.cpp 
+18563  g++ fstream.cpp 
+18566  g++ fstream.cpp 
+18569  g++ fstream.cpp 
+18896  g++ dup.cpp 
+18898  g++ dup.cpp 
+18902  g++ dup.cpp 
+18904  g++ dup.cpp 
+18907  g++ dup.cpp 
+18911  g++ dup.cpp 
+18913  g++ dup.cpp 
+18916  g++ dup.cpp 
+18919  g++ dup.cpp 
+18926  g++ dup.cpp 
+18928  g++ dup.cpp 
+18934  g++ a.out 
+18935  g++ dup.cpp 
+18939  g++ dup.cpp 
+18944  g++ dup.cpp 
+18947  g++ dup.cpp 
+18999  g++ redirect.cpp 
+19001  g++ redirect.cpp 
+19003  g++ redirect.cpp 
+19005  g++ redirect.cpp 
+19007  g++ redirect.cpp 
+19009  g++ redirect.cpp 
+19012  g++ redirect.cpp 
+19014  g++ redirect.cpp 
+19018  g++ redirect.cpp 
+19020  g++ redirect.cpp 
+19022  g++ redirect.cpp 
+19025  g++ redirect.cpp 
+19028  g++ redirect.cpp 
+19030  g++ redirect.cpp 
+19034  g++ output.cpp 
+19036  g++ output.cpp 
+19039  g++ output.cpp 
+19043  g++ output.cpp 
+19048  g++ output.cpp 
+19086  g++ opendir.cpp 
+19108  g++ glob.cpp 
+19182  g++ pipe.cpp 
+19186  g++ pipe.cpp 
+19188  g++ pipe.cpp 
+19191  g++ pipe.cpp 
+19193  g++ pipe.cpp 
+19196  g++ pipe.cpp 
+19199  g++ pipe.cpp 
+19201  g++ pipe.cpp 
+19688  g++ calcHist_Demo.cpp 
+19695  g++ calcHist_Demo.cpp 
+19698  g++ calcHist_Demo.cpp 
+19699  g++ calcHist_Demo.cpp -lopencv
+19701  g++ calcHist_Demo.cpp -lopencv_core
+19702  g++ calcHist_Demo.cpp -lopencv_core -lopencv_highgui
+19703  g++ calcHist_Demo.cpp -lopencv_core -lopencv_highgui -lopencv_flann
+19704  g++ calcHist_Demo.cpp -lopencv_core -lopencv_highgui -lopencv_features2d
+19705  g++ calcHist_Demo.cpp -lopencv_core -lopencv_highgui -lopencv_calib3d
+19706  g++ calcHist_Demo.cpp -lopencv_core -lopencv_highgui -lopencv_imgproc
+19707  g++ calcHist_Demo.cpp -lopencv_core -lopencv_highgui
+19708  g++ calcHist_Demo.cpp -lopencv_core -lopencv_highgui -lopencv_imgproc
+19709  g++ calcHist_Demo.cpp -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs
+19725  g++ calcHist_Demo.cpp -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs
+19729  g++ calcHist_Demo.cpp -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs
+19734  g++ calcHist_Demo.cpp -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs
+19748  g++ -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs ./calc_rgb_histograms.cpp 
+19750  g++ -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs ./calc_rgb_histograms.cpp 
+19752  g++ -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs ./calc_rgb_histograms.cpp 
+19764  g++ -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs ./calc_rgb_histograms.cpp 
+19765  g++ -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs ./calc_histograms.cpp 
+19770  g++ -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs ./calc_histograms.cpp 
+19772  g++ -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs ./calc_histograms.cpp 
+19774  g++ -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs ./calc_histograms.cpp 
+19776  g++ -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs ./calc_histograms.cpp 
+19778  g++ -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs ./calc_histograms.cpp 
+19782  g++ -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs ./calc_histograms.cpp 
+19999  history | grep g++
+$ clear
+[H[2J$ clear[C[Chistory | grep g++ | tail -3
+19782  g++ -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs ./calc_histograms.cpp 
+19999  history | grep g++
+20001  history | grep g++ | tail -3
+$ history | grep g++ | tail -3n3
+19999  history | grep g++
+20001  history | grep g++ | tail -3
+20002  history | grep g++ | tail -n3
+$ cat .bash_h[K[K[K[K[K[Khis[K[K[K[K~/.bash_history [C[Chistory | grep g++ | tail -n3[1@"[C[C[C[1@"[C[1@[[1@0[1@-[1@9[1@][1@ [1@ 
+19776  g++ -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs ./calc_histograms.cpp 
+19778  g++ -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs ./calc_histograms.cpp 
+19782  g++ -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs ./calc_histograms.cpp 
+$ # 0 g++
+$ # 0 g++[C[Chistory | grep "[0-9]  g++" | tail -n3
+19776  g++ -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs ./calc_histograms.cpp 
+19778  g++ -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs ./calc_histograms.cpp 
+19782  g++ -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs ./calc_histograms.cpp 
+$ history | grep "[0-9]  g++" | tail -n3[C[C# 0 g++[K g++
+$ # 0  g++[C[Chistory | grep "[0-9]  g++" | tail -n3
+19778  g++ -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs ./calc_histograms.cpp 
+19782  g++ -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs ./calc_histograms.cpp 
+20006  # 0  g++
+$ clear
+[H[2J$ clear[C[Chistory | grep "[0-9]  g++" | tail -n3[C[C# 0  g++[K[C[Chistory | grep "[0-9]  g++" | tail -n3[1@^[C[C[C[C[C[1@*[C[1P[1@*[C[Cclear[K[C[C[Kclear[C[Chistory | grep "^[0-9]** g++" | tail -n3[C[C[1@ [C[C[1P
+19776  g++ -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs ./calc_histograms.cpp 
+19778  g++ -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs ./calc_histograms.cpp 
+19782  g++ -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs ./calc_histograms.cpp 
+$ echo bad; g++ good.cpp
+bad
+g++: error: good.cpp: No such file or directory
+g++: fatal error: no input files
+compilation terminated.
+$ clear
+[H[2J$ wget -0 izn[K[K[K[K[KO htt[1@q[C- htt[C[C[C[Cp://izbicki.me | grep @
+You can contact me at <a href="mailto:mike@izbicki.me">mike@izbicki.me</a> for just about anything.
+You can contact me at <a href="mailto:mike@izbicki.me">mike@izbicki.me</a> for just about anything.
+<!-- cs100.students.are@awesome.com -->
+<!-- imagine.doing.this.by.hand@impossible.com -->
+$ wget -qO- http://izbicki.me | grep @ -o
+@
+@
+@
+@
+@
+@
+$ wget -qO- http://izbicki.me | grep @ -o[C[C[C[C[C[C[C[C[C[C[1@[[1P[1@'[1@[[1@a[1@-[1@z[1@A[1@-[1@Z[1@0[1@-[1@9[1@\[1@.[1@][C' -o
+e@
+e@
+e@
+e@
+e@
+d@
+$ wget -qO- http://izbicki.me | grep '[a-zA-Z0-9\.]@' -o[C[1@*
+mike@
+mike@
+mike@
+mike@
+cs100.students.are@
+imagine.doing.this.by.hand@
+$ wget -qO- http://izbicki.me | grep '[a-zA-Z0-9\.]*@' -o[1@[a' -o [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-' -oo[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cz' -o[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CA' -o[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-' -o[1@Z[1@0[1@-[1@9[1@\[1@,[1@][1@*[1P[1@.
+mike@izbicki.me
+mike@izbicki.me
+mike@izbicki.me
+mike@izbicki.me
+cs100.students.are@awesome.com
+imagine.doing.this.by.hand@impossible.com
+$ cleq[Kar
+[H[2J$ # mike.zi[K[Kizbiic[K[Kcki@gmail.com
+$ # mikeizbicki@gmail.com+@gmail.comq@gmail.come@gmail.comr@gmail.comt@gmail.comy@gmail.comu@gmail.comy@gmail.comd@gmail.coms@gmail.comf@gmail.comg@gmail.comh@gmail.comj@gmail.comk@gmail.comk@gmail.comj@gmail.comh@gmail.comk@gmail.comj@gmail.comh@gmail.com[1P@gmail.com[1P@gmail.com[1P@gmail.com[1P@gmail.com[1P@gmail.com[1P@gmail.com[1P@gmail.com[1P@gmail.com[1P@gmail.com[1P@gmail.com[1P@gmail.com[1P@gmail.com[1P@gmail.com[1P@gmail.com[1P@gmail.com[1P@gmail.com[1P@gmail.com[1P@gmail.com[1P@gmail.com[1P@gmail.comf@gmail.coma@gmail.comc@gmail.come@gmail.comb@gmail.como@gmail.como@gmail.comk@gmail.com^C
+$ wget izbicki.me [K; grep < index.html^C
+$ links
+[?1001s[?1000h)07[?1000h[?1002h[?1005h[?1006l[?1015l[1;1H[2J[1;1H[0m                                                           [2;1H                                                           [3;1H                                                           [4;1H                                                           [5;1H                                                           [6;1H                                                           [7;1H                                                           [8;1H                                                           [9;1H                                                           [10;1H                                                           [11;1H                                                           [12;1H                                                           [13;1H                                                           [14;1H                                                           [15;1H                                                           [16;1H                                                           [17;1H                                                           [18;1H                                                           [19;1H                                                           [20;1H                                                           [21;1H                                                           [22;1H                                                           [23;1H                                                           [24;1H                                                           [25;1H                                                           [26;1H                                                           [27;1H                                                          [0m[1;1H[10;8H[0;7m                                             [11;8H   +------------[0m Exit Links [0;7m-------------+   [12;8H   |                                     |   [13;8H   |  Do you really want to exit Links?  |   [14;8H   |                                     |   [15;8H   |           [0;1m[ Yes ][0;7m  [ No ]           |   [16;8H   +-------------------------------------+   [17;8H                                             [0m[15;25H[2J8 [?1000l       [?1002l       [?1005l       $ links google.com
+[?1001s[?1000h)07[?1000h[?1002h[?1005h[?1006l[?1015l[1;1H[2J[1;1H[0m                                                           [2;1H                                                           [3;1H                                                           [4;1H                                                           [5;1H                                                           [6;1H                                                           [7;1H                                                           [8;1H                                                           [9;1H                                                           [10;1H                                                           [11;1H                                                           [12;1H                                                           [13;1H                                                           [14;1H                                                           [15;1H                                                           [16;1H                                                           [17;1H                                                           [18;1H                                                           [19;1H                                                           [20;1H                                                           [21;1H                                                           [22;1H                                                           [23;1H                                                           [24;1H                                                           [25;1H                                                           [26;1H                                                           [27;1H[0;7mLooking up host[0m                                           [0m[1;1H[27;1H[0;7mMaking connection[0m[1;1H[27;1H[0;7mRequest sent[0m     [0m[1;1H[27;1H[0;7mLooking up host[0m[1;1H[27;1H[0;7mMaking connection[0m[1;1H[27;1H[0;7mRequest sent[0m     [0m[1;1H[1;53H[0mGoogle[2;1H   [0;1mSearch[0m [0;7mImages[0m [0;1mMaps[0m [0;1mPlay[0m [0;1mYouTube[0m [0;1mNews[0m [0;1mGmail[0m [0;1mDrive[0m [0;1mMore[3;1H[0m   [0;1m>>[4;1H[0m   [0;1mWeb History[0m | [0;1mSettings[0m | [0;1mSign in[6;1H[0m                         *[7;1H                          A faste [27;1H[0;7mTransferring[0m[2;11H[6;15H[0m*           [7;16HA faster way to browse the web [8;1H               [0;1mInstall Google Chrome[0m          [10;1H                          Google[12;1H  [0;1m_________________________________________________________[13;1H[0m           [0;1m[ Google Search ][0m [0;1m[ I'm Feeling Lucky ][0m         [14;1H                                                           [16;1H [0;1mAdvertising ProgramsBusiness Solutions+GoogleAbout Google[18;1H[0m                (c) 2013 - [0;1mPrivacy & Terms[27;1H[0;7mhttp://www.google.com/imghp?hl=en&tab=wi[0m[2;11H[27;1H[0;7mRequest sent[0m                            [0m[2;11H[1;46H[0mGoogle Images[2;4H                                                        [3;4H                                                        [4;4H                                                        [5;1H                                                           [6;15H                                             [7;16H                                            [8;16H                     [8;47H             [9;1H                                                           [10;27H                                 [11;1H                                                           [12;1H                                                           [13;12H                                       [15;1H                                                           [16;2H                                                          [17;1H                                                           [18;17H                                           [19;1H                                                           [20;1H                                                           [21;1H                                                           [22;1H                                                           [23;1H                                                           [24;1H                                                           [25;1H                                                           [26;1H                                                           [27;1H[0;7mTransferring[0m[26;59H[2;4H[0;7mSearch[0m [0;1mImages[0m [0;1mMaps[0m [0;1mPlay[0m [0;1mYouTube[0m [0;1mNews[0m [0;1mGmail[0m [0;1mDrive[0m [0;1mMore[0m   [3;4H[0;1m>>[0m                                                      [4;4H[0;1mWeb History[0m | [0;1mSettings[0m | [0;1mSign in[0m                        [5;1H                                                           [6;15H*                                            [7;16HA faster way to browse the web              [8;16H[0;1mInstall Google Chrome[8;47H[0m             [9;1H                                                           [10;1HImages                                                     [11;1H                                                           [12;1H  [0;1m_________________________________________________________[13;23H[ Search Images ][14;1H[0m                                                           [15;2H[0;1mAdvertising ProgramsBusiness Solutions+GoogleAbout Google[0m [16;1H                                                           [17;17H(c) 2013 - [0;1mPrivacy & Terms[0m                 [18;1H                                                           [19;1H                                                           [20;1H                                                           [21;1H                                                           [22;1H                                                           [23;1H                                                           [24;1H                                                           [25;1H                                                           [26;1H                                                           [27;1H[0;7mhttps://www.google.com/webhp?hl=en&tab=iw[0m[2;4H[0;1mSearch[0m [0;1mImages[0m [0;7mMaps[27;5H://maps[27;24Hmaps?hl=en&tab=il[0m [0m[2;18H[0;1mMaps[0m [0;7mPlay[27;5Hs://play.google.com/?hl=en&tab=i8[0m   [0m[2;23H[0;1mPlay[0m [0;7mYouTube[27;5H://www.youtube.com/?hl=en&tab=i1[0m [0m[2;28H[0;1mYouTube[0m [0;7mNews[27;8Hnews.google.com/nwshp?hl=en&tab=in[0m[2;36H[0;1mNews[0m [0;7mGmail[27;5Hs://mail.google.com/mail/?tab=im[0m     [0m[2;41H[0;1mGmail[0m [0;7mDrive[27;9Hdrive.google.com/?tab=io[0m    [0m[2;47H[0;1mDrive[0m [0;7mMore[3;4H>>[27;5H://www.google.com/intl/en/options/[0m[2;53H[0;1mMore[3;4H[0;1m>>[4;4H[0;7mWeb History[27;23Hhistory/optout?hl=en[0m[4;4H[0;1mWeb History[0m | [0;7mSettings[27;23Hpreferences?hl=en[0m   [0m[4;18H[0;1mSettings[0m | [0;7mSign in[27;5Hs://accounts.google.com/ServiceLogin?hl=en&continue=ht[0m[4;29H[0;1mSign in[8;16H[0;7mInstall Google Chrome[27;5H://www.google.com/chrome/index.html?hl=en&brand=CHNG&u[0m[8;16H[1;46H[0m       Google[2;11H[0;7mImages[8;16H[0;1mInstall Google Chrome[10;1H[0m                          Google[13;12H[0;1m[ Google Search ][0m [0;1m[ I'm Feeling Lucky ][14;1H[0m                                                           [15;1H                                                          [16;1H [0;1mAdvertising ProgramsBusiness Solutions+GoogleAbout Google[17;1H[0m                                          [18;1H                (c) 2013 - [0;1mPrivacy & Terms[27;23H[0;7mimghp?hl=en&tab=wi[0m                  [0m[2;11H[0;1mImages[0m [0;7mMaps[27;8Hmaps.google.com/maps[27;40Hl[0m[2;18H[0;1mMaps[0m [0;7mPlay[27;5Hs://play.google.com/?hl=en&tab=w8[0m   [0m[2;23H[0;1mPlay[0m [0;7mYouTube[27;5H://www.youtube.com/?tab=w1[0m       [0m[2;28H[0;1mYouTube[0m [0;7mNews[27;8Hnews.google.com/nwshp?hl=en&tab=wn[0m[2;36H[0;1mNews[0m [0;7mGmail[27;5Hs://mail.google.com/mail/?tab=wm[0m     [0m[2;41H[0;1mGmail[0m [0;7mDrive[27;9Hdrive.google.com/?tab=wo[0m    [0m[2;47H[0;1mDrive[0m [0;7mMore[3;4H>>[27;5H://www.google.com/intl/en/options/[0m[2;53H[0;1mMore[3;4H[0;1m>>[4;4H[0;7mWeb History[27;23Hhistory/optout?hl=en[0m[4;4H[0;1mWeb History[0m | [0;7mSettings[27;23Hpreferences?hl=en[0m   [0m[4;18H[0;1mSettings[0m | [0;7mSign in[27;5Hs://accounts.google.com/ServiceLogin?hl=en&continue=ht[0m[4;29H[0;1mSign in[8;16H[0;7mInstall Google Chrome[27;5H://www.google.com/chrome/index.html?hl=en&brand=CHNG&u[0m[8;16H[0;1mInstall Google Chrome[10;27H[0;7mGoogle[27;1HImage http://www.google.com/images/srpr/logo9w.png[0m        [0m[10;27H[0mGoogle[12;3H_________________________________________________________[27;1H[0;7mText field, name q[0m                                [0m[12;3H[0mc[0m[0ms[0m[0m1[0m[0m0[0m[0m0[0m[12;3H[0;1mcs100____________________________________________________[13;12H[0;7m[ Google Search ][27;1HSubmit form to http://www.google.com/search[0m[13;14H[27;1H[0;7mRequest sent[0m                               [0m[13;14H[1;38H[0mcs100 - Google Search[2;4H                                                        [3;4H                                                        [4;4H                                                        [5;1H                                                           [6;15H                                             [7;16H                                            [8;16H                     [8;47H             [9;1H                                                           [10;27H                                 [11;1H                                                           [12;1H                                                           [13;12H                                       [15;1H                                                           [16;2H                                                          [17;1H                                                           [18;17H                                           [19;1H                                                           [20;1H                                                           [21;1H                                                           [22;1H                                                           [23;1H                                                           [24;1H                                                           [25;1H                                                           [26;1H                                                           [27;1H[0;7mTransferring[0m[26;59H[1;28H[0mcs100 - Google Search (p1 of 2)[2;4H[0;1mSearch[0m [0;7mImages[0m [0;1mMaps[0m [0;1mPlay[0m [0;1mYouTube[0m [0;1mNews[0m [0;1mGmail[0m [0;1mDrive[0m [0;1mMore[0m   [3;4H[0;1m>>[0m                                                      [4;4H[0;1mWeb History[0m | [0;1mSettings[0m | [0;1mSign in[0m                        [5;1H                                                           [6;1H[0;1mGo to Google Home[0m [0;1mcs100________________[7;19H[0mWeb[8;19H[0;1mImages[9;19HVideos[10;19HNews[11;19HShopping[12;19HMaps[13;19HBooks[14;1H[0mSearch Options    About 635,000 results[15;19HSponsored[16;3H*    * Any time[17;8H* [0;1mPast[0m       [0;1mShop for cs100 on Google[18;10Hhour[19;8H[0m* [0;1mPast 24[0m  [0;1m[IMG][0m      [0;1m[IMG][0m     [0;1m[IMG][19;55H[IMG][20;10Hhours[0m    [0;1mCompAir 5[0m  [0;1mWorld[0m     [0;1mAlto-Shaam[0m     [0;1mTranq[21;8H[0m* [0;1mPast[0m     [0;1mGallon[0m     [0;1mTableware[0m [0;1mCS-100 Heat...[0m [0;1mThinl[22;10Hweek[0m     [0;1mSynth...[0m   [0;1mC...[0m      [0;1m$1,314.40[0m      [0;1m61...[23;8H[0m* [0;1mPast[0m     [0;1m$174.70[0m    [0;1m$86.40[0m    [0mWebstaurant...[24;10H[0;1mmonth[0m    [0mAir[0m        [0mKaTom[25;8H[0m* [0;1mPast[0m     [0mCompres...[0m [0mRest...[26;10H[0;1myear[0m                                              [27;1H[0;7mReceived 14 kB, 73 kB/s[0m[2;11H[1;57H[0m5[19;30H    [0;1m[IMG][0m     [0;1m[IMG][0m           [20;30H    [0;1mWorld[0m     [0;1mAlto-Shaam CS-10[21;30H[0m    [0;1mTableware[0m [0;1mHeat...[0m         [22;30H    [0;1mC...[0m      [0;1m$1,314.40[0m       [23;30H    [0;1m$86.40[0m    [0mWebstaurant...[24;22H Compres...[0m [0mKaTom[25;19H[0m               [0mRest...[26;19H[0m                                         [27;1H[0;7mhttp://www.google.com/search?hl=en&q=cs100&gbv=1&um=1&ie=U[0m[2;11H[0;1mImages[0m [0;7mMaps[27;8Hmaps.google.com/maps?hl=en&q=cs100&gbv=1&um=1&ie=UT[0m[2;18H[0;1mMaps[0m [0;7mPlay[27;5Hs://play.google.com/?hl=en&q=cs100&gbv=1&um=1&ie=UTF-8[0m[2;23H[0;1mPlay[0m [0;7mYouTube[27;5H://www.youtube.com/results?hl=en&q=cs100&gbv=1&um=1&ie[0m[2;28H[0;1mYouTube[0m [0;7mNews[27;8Hnews.google.com/nwshp?hl=en&tab=wn[0m                 [0m[2;36H[0;1mNews[0m [0;7mGmail[27;5Hs://mail.google.com/mail/?tab=wm[0m     [0m[2;41H[0;1mGmail[0m [0;7mDrive[27;9Hdrive.google.com/?tab=wo[0m    [0m[2;47H[0;1mDrive[0m [0;7mMore[3;4H>>[27;5H://www.google.com/intl/en/options/[0m[2;53H[0;1mMore[3;4H[0;1m>>[4;4H[0;7mWeb History[27;23Hhistory/optout?hl=en[0m[4;4H[0;1mWeb History[0m | [0;7mSettings[27;23Hpreferences?hl=en[0m   [0m[4;18H[0;1mSettings[0m | [0;7mSign in[27;5Hs://accounts.google.com/ServiceLogin?hl=en&continue=ht[0m[4;29H[0;1mSign in[6;1H[0;7mGo to Google Home[27;5H://www.google.com/webhp?hl=en[0m                         [0m[6;1H[0;1mGo to Google Home[0m cs100________________[27;1H[0;7mText field, name q[0m               [0m[6;24H[6;19H[0;1mcs100________________[8;19H[0;7mImages[27;1Hhttp://www.google.com/search?q=cs100&hl=en&gbv=1&ie=UTF-8&[0m[8;19H[0;1mImages[9;19H[0;7mVideos[0m[9;19H[0;1mVideos[10;19H[0;7mNews[0m[10;19H[0;1mNews[11;19H[0;7mShopping[0m[11;19H[0;1mShopping[12;19H[0;7mMaps[27;8Hmaps.google.com/maps?hl=en&q=cs100&gbv=1&um=1&ie=UT[0m[12;19H[0;1mMaps[13;19H[0;7mBooks[27;8Hwww.google.com/search?q=cs100&hl=en&gbv=1&ie=UTF-8&[0m[13;19H[0;1mBooks[17;10H[0;7mPast[18;10Hhour[0m[17;10H[0;1mPast[18;10Hhour[19;10H[0;7mPast 24[20;10Hhours[0m[19;10H[0;1mPast 24[20;10Hhours[21;10H[0;7mPast[22;10Hweek[0m[21;10H[0;1mPast[22;10Hweek[23;10H[0;7mPast[24;10Hmonth[0m[23;10H[0;1mPast[24;10Hmonth[25;10H[0;7mPast[26;10Hyear[0m[25;10H[17;21H[0;7mShop for cs100 on Google[25;10H[0;1mPast[26;10Hyear[27;38H[0;7msa=G&hl=en&gbv=1&ie=U[0m[17;21H[0;1mShop for cs100 on Google[19;19H[0;7m[IMG][27;23Haclk?sa=l&ai=CMyCBXWVlVNKaAsPA-QOrk4[0m[19;19H[0;1m[IMG][20;19H[0;7mCompAir 5[21;19HGallon[22;19HSynth...[0m[20;19H[19;34H[0;7m[IMG][20;19H[0;1mCompAir 5[21;19HGallon[22;19HSynth...[27;37H[0;7mHvQk[0m[19;34H[0;1m[IMG][20;34H[0;7mWorld[21;34HTableware[22;34HC...[0m[20;34H[19;44H[0;7m[IMG][20;34H[0;1mWorld[21;34HTableware[22;34HC...[27;37H[0;7mvxRv[0m[19;44H[2;3H[0;1mSearch[0m [0;1mImages[0m [0;1mMaps[0m [0;1mPlay[0m [0;1mYouTube[0m [0;1mNews[0m [0;1mGmail[0m [0;1mDrive[0m [0;1mMore[0m [3;3H[0;1m>>[0m [4;3H[0;1mWeb History[0m | [0;1mSettings[0m | [0;1mSign in[0m [6;1H[0;1mo to Google Home[0m [0;1mcs100_[6;39H[0m [7;18HWeb [8;18H[0;1mImages[0m [9;18H[0;1mVideos[0m [10;18H[0;1mNews[0m [11;18H[0;1mShopping[0m [12;18H[0;1mMaps[0m [13;18H[0;1mBooks[0m [14;1Hearch Options    About 635,000 results [15;18HSponsored [16;2H*    * Any time [17;7H* [0;1mPast[0m       [0;1mShop for cs100 on Google[0m [18;9H[0;1mhour[0m [19;7H* [0;1mPast 24[0m  [0;1m[IMG][0m          [0;1m[IMG][0m     [0;1m[IMG][0m [20;9H[0;1mhours[0m    [0;1mCompAir 5[0m      [0;1mWorld[0m     [0;7mAlto-Shaam CS-100[21;7H[0m* [0;1mPast[0m     [0;1mGallon[0m         [0;1mTableware[0m [0;7mHeat...[0m [22;9H[0;1mweek[0m     [0;1mSynth...[0m       [0;1mC...[0m      [0;1m$1,314.40[0m [23;7H* [0;1mPast[0m     [0;1m$174.70[0m        [0;1m$86.40[0m    [0mWebstaurant...[0m [24;9H[0;1mmonth[0m    [0mAir Compres...[0m [0mKaTom[0m [25;7H* [0;1mPast[0m [25;33H[0mRest...[0m [26;9H[0;1myear[0m [0m[20;43H[2;1H[0;1mch[0m [0;1mImages[0m [0;1mMaps[0m [0;1mPlay[0m [0;1mYouTube[0m [0;1mNews[0m [0;1mGmail[0m [0;1mDrive[0m [0;1mMore[0m      [3;1H    [4;1H[0;1mHistory[0m | [0;1mSettings[0m | [0;1mSign in[0m      [6;2H[0;1mogle Home[0m [0;1mcs100______[6;33H[0m      [7;12HWeb      [8;12H[0;1mImages[0m      [9;12H[0;1mVideos[0m      [10;12H[0;1mNews[0m      [11;12H[0;1mShopping[0m      [12;12H[0;1mMaps[0m      [13;12H[0;1mBooks[0m      [14;1HOptions    About 635,000 results      [15;12HSponsored      [16;1H* Any time      [17;1H* [0;1mPast[0m       [0;1mShop for cs100 on Google[0m      [18;3H[0;1mhour[0m      [19;1H* [0;1mPast 24[0m  [0;1m[IMG][0m          [0;1m[IMG][0m     [0;1m[IMG][0m             [0;7m[IMG][20;3H[0;1mhours[0m    [0;1mCompAir 5[0m      [0;1mWorld[0m     [0;1mAlto-Shaam CS-100[0m [0;1mTranq[21;1H[0m* [0;1mPast[0m     [0;1mGallon[0m         [0;1mTableware[0m [0;1mHeat...[0m           [0;1mThinl[22;3Hweek[0m     [0;1mSynth...[0m       [0;1mC...[0m      [0;1m$1,314.40[0m         [0;1m$59.9[23;1H[0m* [0;1mPast[0m     [0;1m$174.70[0m        [0;1m$86.40[0m    [0mWebstaurant...[0m    [0mNorth[24;3H[0;1mmonth[0m    [0mAir Compres...[0m [0mKaTom[0m      [25;1H* [0;1mPast[0m      [25;27H[0mRest...[0m      [26;3H[0;1myear[0m      [27;37H[0;7m8J8H[0m[19;55H[2;1H[0;1mMaps[0m [0;1mPlay[0m [0;1mYouTube[0m [0;1mNews[0m [0;1mGmail[0m [0;1mDrive[0m [0;1mMore[0m          [4;1H[0;1mSettings[0m | [0;1mSign in[0m          [6;1H [0;1mcs100________________[0m          [7;2HWeb          [8;2H[0;1mImages[0m          [9;2H[0;1mVideos[0m          [10;2H[0;1mNews[0m          [11;2H[0;1mShopping[0m          [12;2H[0;1mMaps[0m          [13;2H[0;1mBooks[0m          [14;1H About 635,000 results          [15;2HSponsored          [16;1H          [17;1H   [0;1mShop for cs100 on Google[0m          [18;3H    [19;1H [0;1m[IMG][0m          [0;1m[IMG][19;37H[0m        [0;1m[IMG][0m          [20;2H[0;1mCompAir 5[0m      [0;1mWorld[0m     [0;1mAlto-Shaam CS-100[0m [0;7mTranquility[0m    [21;1H [0;1mGallon[0m         [0;1mTableware[0m [0;1mHeat...[0m           [0;7mThinliner 61...[22;2H[0;1mSynth...[0m       [0;1mC...[0m      [0;1m$1,314.40[0m         [0;1m$59.95[0m         [23;1H [0;1m$174.70[0m        [0;1m$86.40[0m    [0mWebstaurant...[0m    [0mNorthshore...[0m  [24;2H[0mAir Compres...[0m [0mKaTom[0m          [25;1H      [25;17H[0mRest...[0m          [26;3H    [0m[20;45H[2;1H[0;1mYouTube[0m [0;1mNews[0m [0;1mGmail[0m [0;1mDrive[0m [0;1mMore[0m          [4;1H [0;1mSign in[0m          [6;1H[0;1m____________[0m          [7;2H   [8;2H      [9;2H      [10;2H    [11;2H        [12;2H    [13;2H     [14;1H,000 results          [15;2H         [17;1H[0;1mr cs100 on Google[0m          [19;2H     [0;1m[IMG][19;27H[0m        [0;1m[IMG][0m               [0;7m[IMG][20;2H[0m     [0;1mWorld[0m     [0;1mAlto-Shaam CS-100[0m [0;1mTranquility[0m         [0;1mMiria[21;2H[0m     [0;1mTableware[0m [0;1mHeat...[0m           [0;1mThinliner 61...[0m     [0;1mCS100[22;2H[0m     [0;1mC...[0m      [0;1m$1,314.40[0m         [0;1m$59.95[0m              [0;1mM...[23;2H[0m     [0;1m$86.40[0m    [0mWebstaurant...[0m    [0mNorthshore...[0m       [0;1m$8,63[24;1H[0mes...[0m [0mKaTom[0m          [24;55H[0mSale [25;7HRest...[0m          [27;37H[0;7m7yIy[0m[19;55H[2;1H[0;1muTube[0m [0;1mNews[0m [0;1mGmail[0m [0;1mDrive[0m [0;1mMore[0m  [4;1H[0;1mign in[0m  [6;11H  [14;1H00 results  [17;1H[0;1mcs100 on Google[0m  [19;5H[0;1m[IMG][0m     [0;1m[IMG][0m  [19;33H[0;1m[IMG][0m  [19;53H[0;1m[IMG][0m  [20;5H[0;1mWorld[0m     [0;1mAlto-Shaam CS-100[0m [0;1mTranquility[0m         [0;7mMirial[0m [21;5H[0;1mTableware[0m [0;1mHeat...[0m           [0;1mThinliner 61...[0m     [0;7mCS10020[22;5H[0;1mC...[0m      [0;1m$1,314.40[0m         [0;1m$59.95[0m  [22;53H[0;7mM...[0m  [23;5H[0;1m$86.40[0m    [0mWebstaurant...[0m    [0mNorthshore...[0m       [0;1m$8,633.[24;1H[0m...[0m [0mKaTom[0m  [24;53H[0mSale St[25;5HRest...[0m  [0m[20;53H[1;52H[0m2[2;1HAll       1. [0;1mBombardier CSeries - Wikipedia, the free encyc[3;1H[0mresults                                                    [4;1H[0;7mVerbatim[0m     [0men.wikipedia.org/wiki/Bombardier_CSeries[0m      [5;1H             (->)                                          [6;1H             The [0;1mCS100[0m took its first flight on 16 Septembe[7;14Hannounced in[8;14HJanuary 2014 that entry into service of the [0;1mCS[9;14H[0muntil the ...[10;14H(->)[0;1mDevelopment[0m - (->)[0;1mDesign[0m - (->)[0;1mOrders and [11;14H[0m(->)[0;1mSpecifications[12;10H[0m 2. [0;1mImages for cs100[14;1H[0m             [0;1m[IMG][IMG][IMG][IMG][15;10H[0m 3.   [0;1mBombardier CS100 maiden flight in Montreal -[16;14H[IMG][0m [0mwww.youtube.com/watch?v=6gRTFXhqs6Q[0mSep 1[17;1H             [0;1mPR[0m    Uploaded by Montreal Gazette videos[18;14H[0;1m2:33[0m  The Bombardier CSeries [0;1mCS100[0m airplane ma[19;5H               flight from the company's site at [0;1m...[0m [20;5H                                                      [21;5H      4. [0;1mCS100 Customers & Operators - Pictures and Vid[22;5H[0m                                  [22;53H    [23;5H         [0mwww.bombardier.com/.../details.bombardier-aero[24;1H[0m             [0moperators-[0;1mcs100[0m.html[24;53H[0m       [25;5H         (->)[26;14H[0;1mCS100[0m Customers & Operators. Aerospace. Bombar[27;23H[0;7msearch?q=cs100&hl=en&gbv=1&ie=UTF-8&[0m[4;1H[2;1H[0m   1. [0;7mBombardier CSeries - Wikipedia, the free encyclopedia[3;1H[0m       [4;1H[0;1mm[0m     [0men.wikipedia.org/wiki/Bombardier_CSeries[0m       [5;7H(->)       [6;7HThe [0;1mCS100[0m took its first flight on 16 September 2013.[7;7Hannounced in       [8;7HJanuary 2014 that entry into service of the [0;1mCS100[0m wou[9;7Huntil the ...       [10;7H(->)[0;1mDevelopment[0m - (->)[0;1mDesign[0m - (->)[0;1mOrders and deliver[11;7H[0m(->)[0;1mSpecifications[0m       [12;3H 2. [0;1mImages for cs100[0m       [14;7H[0;1m[IMG][IMG][IMG][IMG][0m       [15;3H 3.   [0;1mBombardier CS100 maiden flight in Montreal - YouTub[16;7H[IMG][0m [0mwww.youtube.com/watch?v=6gRTFXhqs6Q[0mSep 16, 2013[17;7H[0;1mPR[0m    Uploaded by Montreal Gazette videos       [18;7H[0;1m2:33[0m  The Bombardier CSeries [0;1mCS100[0m airplane makes its[19;13Hflight from the company's site at [0;1m...[0m       [21;3H 4. [0;1mCS100 Customers & Operators - Pictures and Videos - A[23;7H[0mwww.bombardier.com/.../details.bombardier-aerospace-c[24;7Hoperators-[0;1mcs100[0m.html[0m       [25;7H(->)       [26;7H[0;1mCS100[0m Customers & Operators. Aerospace. Bombardier is[27;23H[0;7murl?q=http://en.wikipedia.org/wiki/B[0m[2;7H[0;1mBombardier CSeries - Wikipedia, the free encyclopedia[10;11H[0;7mDevelopment[0m[10;11H[0;1mDevelopment[0m - (->)[0;7mDesign[0m[10;29H[2;1H[0m1. [0;1mBombardier CSeries - Wikipedia, the free encyclopedia[0m   [4;1H   [0men.wikipedia.org/wiki/Bombardier_CSeries[0m   [5;4H(->)   [6;4HThe [0;1mCS100[0m took its first flight on 16 September 2013. Bo[7;4Hannounced in   [8;4HJanuary 2014 that entry into service of the [0;1mCS100[0m would [9;4Huntil the ...   [10;4H(->)[0;1mDevelopment[0m - (->)[0;1mDesign[0m - (->)[0;7mOrders and deliveries[11;4H[0m(->)[0;1mSpecifications[0m   [12;1H2. [0;1mImages for cs100[0m   [14;4H[0;1m[IMG][IMG][IMG][IMG][0m   [15;1H3.   [0;1mBombardier CS100 maiden flight in Montreal - YouTube[0m  [16;4H[0;1m[IMG][0m [0mwww.youtube.com/watch?v=6gRTFXhqs6Q[0mSep 16, 2013 - [17;4H[0;1mPR[0m    Uploaded by Montreal Gazette videos   [18;4H[0;1m2:33[0m  The Bombardier CSeries [0;1mCS100[0m airplane makes its fi[19;10Hflight from the company's site at [0;1m...[0m   [21;1H4. [0;1mCS100 Customers & Operators - Pictures and Videos - Aero[23;4H[0mwww.bombardier.com/.../details.bombardier-aerospace-cser[24;4Hoperators-[0;1mcs100[0m.html[0m   [25;4H(->)   [26;4H[0;1mCS100[0m Customers & Operators. Aerospace. Bombardier is cr[0m[10;39H[0;1mOrders and deliveries[11;8H[0;7mSpecifications[0m[11;8H[0;1mSpecifications[12;4H[0;7mImages for cs100[27;23Himages?hl=en&q=cs100&gbv=1&sa=X&oi=i[0m[12;4H[0;1mImages for cs100[14;4H[0;7m[IMG][27;23Hurl?q=http://en.wikipedia.org/wiki/B[0m[14;4H[0;1m[IMG][0;7m[IMG][27;36Hwww.huffingtonpost.ca/2[0m[14;9H[0;1m[IMG][0;7m[IMG][27;40Hairlinereporter.com[0m[14;14H[0;1m[IMG][0;7m[IMG][27;36Hairwaysnews.com/blog/20[0m[14;19H[0;1m[IMG][15;6H[0;7mBombardier CS100 maiden flight in Montreal - YouTube[27;36Hwww.youtube.com/watch%3[0m[15;6H[0;1mBombardier CS100 maiden flight in Montreal - YouTube[16;4H[0;7m[IMG][0m[16;4H[0;1m[IMG][17;4H[0;7mPR[18;4H2:33[0m[17;4H[2;1H[0;1mBombardier CSeries - Wikipedia, the free encyclopedia[0m   [4;1H[0men.wikipedia.org/wiki/Bombardier_CSeries[0m   [5;1H(->)   [6;1HThe [0;1mCS100[0m took its first flight on 16 September 2013. Bomba[7;1Hannounced in   [8;1HJanuary 2014 that entry into service of the [0;1mCS100[0m would be[9;1Huntil the ...   [10;1H(->)[0;1mDevelopment[0m - (->)[0;1mDesign[0m - (->)[0;1mOrders and deliveries[0m - [11;1H(->)[0;1mSpecifications[0m   [12;1H[0;1mImages for cs100[0m   [14;1H[0;1m[IMG][IMG][IMG][IMG][0m   [15;1H  [0;1mBombardier CS100 maiden flight in Montreal - YouTube[0m   [16;1H[0;1m[IMG][0m [0mwww.youtube.com/watch?v=6gRTFXhqs6Q[0mSep 16, 2013 - 3 m[17;1H[0;1mPR[0m    Uploaded by Montreal Gazette videos   [18;1H[0;1m2:33[0m  The Bombardier CSeries [0;1mCS100[0m airplane makes its first[19;7Hflight from the company's site at [0;1m...[0m   [21;1H[0;7mCS100 Customers & Operators - Pictures and Videos - Aerospa[23;1H[0mwww.bombardier.com/.../details.bombardier-aerospace-cseries[24;1Hoperators-[0;1mcs100[0m.html[0m   [25;1H(->)   [26;1H[0;1mCS100[0m Customers & Operators. Aerospace. Bombardier is creat[27;40H[0;7mbombardier.com/en/m[0m[21;1H[1;52H[0m3[2;1Hfuture                                               [3;1Hwith its CSeries aircraft - the only 100%-new family of air[4;1Hspecifically ...                        [5;1H[0;7mBombardier CS100 jet takes on Boeing and Airbus - CNN.com[6;1H[0m                                                           [7;1H[0mwww.cnn.com/2013/09/17/travel/bombardier-[0;1mcs100[0m-test-flight/[8;1H[0m(->)                                                       [9;1HSep 17, 2013 [0;1m...[0m The Bombardier [0;1mCS100[0m had its first test fl[10;1HMonday, at Mirabel Airport, in                            [11;1HQuebec. Bombardier hopes to take on bigger rivals Airbus an[12;1H[0;1mBombardier CS100 Jetliner - Aerospace Technology[14;1H[0mwww.aerospace-technology.com/projects/bombardier-[0;1mcs100[0m-jetl[15;1H[0m(->)                                                  [16;1HThe Bombardier [0;1mCS100[0m Jetliner is a single-aisle, long-range[17;1Haircraft                                 [18;1Hdeveloped by Bombardier Aerospace. The [0;1mCS100[0m can accommoda[19;1H125                                        [20;1H ...[21;1H[0;1mCSeries Hub | Bombardier Aerospace[0m                         [23;1H[0mcseries.com/[0m                                               [24;1H(->)                [25;1HVideo: #CSeries. Il est de retour dans le ciel! Voyez le #F[26;1Hdecoller et atterrir `a                                    [27;40H[0;7mcnn.com/2013/09/17/[0m[5;1H[0;1mBombardier CS100 jet takes on Boeing and Airbus - CNN.com[12;1H[0;7mBombardier CS100 Jetliner - Aerospace Technology[27;40Haerospace-technolog[0m[12;1H[0;1mBombardier CS100 Jetliner - Aerospace Technology[21;1H[0;7mCSeries Hub | Bombardier Aerospace[27;36Hcseries.com/&sa=U&ei=XW[0m[21;1H[1;52H[0m4[2;1HMirabel, QC, aujourd'hui! http://t.co/4nM4FDcKQq. 2014-11-0[3;1H[0;7mMAQUET Cardiac Assist - CS100(R) IABP With IntelliSync*[0m    [4;1H                [5;1H[0mca.maquet.com/products/iab-pumps/[0;1mcs100[0m/overview/[0m         [6;1H(->)[7;1HThe [0;1mCS100[0m with IntelliSync offers one-button start up, auto[8;1Hadapting to[9;1Hchanging conditions, making it the right choice for any pat[10;1Hcondition.                    [11;1H[0;1mCS100 Fall 2014 - Digital Media Networks Research Lab[0m      [12;1H                                                [13;1H[0mdmn.netlab.uky.edu/~seales/[0;1mcs100[0m.html[14;1H[0m(->)                                                       [15;1H[0;1mCS100[0m Fall 2014 Class Page. Professor Brent Seales Office h[16;2Huesdays 1-                                                [17;1H3pm; Fridays 10-12am. 102G Marksbury Building (859) 257-396[18;1H[0;1mAmazon.com : Black & Decker CS100 12-Volt Cordless Electric[19;1H[0m   [20;1H[0mwww.amazon.com/Black-Decker-[0;1mCS100[0m-Cordless.../B0001Q2EL6[21;1H[0m(->)                              [22;1HBuy Used and Save: Buy a Used "Black & Decker [0;1mCS100[0m 12-Volt[23;1HElectric Bro..." and save 42% off the $69.99 list price. Bu[24;1Hconfidence as the[25;1H ...                                                       [26;1H                       [27;37H[0;7ma.maquet.com/products/[0m[3;1H[0;1mMAQUET Cardiac Assist - CS100(R) IABP With IntelliSync*[11;1H[0;7mCS100 Fall 2014 - Digital Media Networks Research Lab[27;36Hdmn.netlab.uky.edu/~sea[0m[11;1H[0;1mCS100 Fall 2014 - Digital Media Networks Research Lab[18;1H[0;7mAmazon.com : Black & Decker CS100 12-Volt Cordless Electric[27;36Hwww.amazon.com/Black-De[0m[18;1H[1;52H[0m5[2;1H[0;7mCS100 on eBay[0m                                              [3;1H                                                       [4;1HAd[0mwww.ebay.com/electronics[0m(->)[5;1HBuy [0;1mCS100[0m on eBay! New eBay Buyer Protection Program.[6;1H[0;1mDaily Deals[0m - [0;1mCellphones & Accessories[0m - [0;1mDigital Digest Blo[7;1HGadgets[0m                                                    [8;1Hches related to [0;1mcs100[9;1H[0m                                                           [10;1H[0;1m cs100[0m      [0;1mcs100 camera[11;1H cs100[0m      [0;1mcs100 waterloo[0m                           [12;1H[0;1m0 polar[0m     [0;1mcs100 ucr[13;1Hresso cs100[0m [0;1mcs100 first flight[0m       [14;1H    [15;1H                     [0;1m1[0m [0;1m2[0m [0;1m3[0m [0;1m4[0m [0;1m5[0m [0;1m6[0m [0;1m7[0m [0;1m8[0m [0;1m9[0m [0;1m10[0m [0;1mNext[0m             [16;1H           [17;1H[0;1mnced searchSearch Help[0m [0;1mSend feedback[0m                       [18;1H                                                           [19;1H[0;1mle Home[0m [0;1mAdvertising Programs[0m [0;1mBusiness Solutions[0m [0;1mPrivacy & T[20;1Hle[0m                                                      [21;1H                                                           [22;1H                                                           [23;1H                                                           [24;1H                                                           [25;1H                                                           [26;1H                                                           [27;23H[0;7maclk?sa=L&ai=CJAl_XWVlVNKaAsPA-QOrk4[0m[2;1H[0;1mCS100 on eBay[6;1H[0;7mDaily Deals[27;37HWfLT[0m[6;1H[0;1mDaily Deals[0m - [0;7mCellphones & Accessories[27;37Hx9-v[0m[6;15H[2;1H[0;1mS100 on eBay[0m [4;1Hd[0mwww.ebay.com/electronics[0m(->) [5;1Huy [0;1mCS100[0m on eBay! New eBay Buyer Protection Program. [6;1H[0;1maily Deals[0m - [0;1mCellphones & Accessories[0m - [0;7mDigital Digest Blog[7;1H[0;1madgets[0m [8;1Hhes related to [0;1mcs100[0m [10;1H[0;1mcs100[0m      [0;1mcs100 camera[0m [11;1H[0;1mcs100[0m      [0;1mcs100 waterloo[0m [12;1H[0;1m polar[0m     [0;1mcs100 ucr[0m [13;1H[0;1messo cs100[0m [0;1mcs100 first flight[0m [15;21H[0;1m1[0m [0;1m2[0m [0;1m3[0m [0;1m4[0m [0;1m5[0m [0;1m6[0m [0;1m7[0m [0;1m8[0m [0;1m9[0m [0;1m10[0m [0;1mNext[0m [17;1H[0;1mced searchSearch Help[0m [0;1mSend feedback[0m [19;1H[0;1me Home[0m [0;1mAdvertising Programs[0m [0;1mBusiness Solutions[0m [0;1mPrivacy & Te[20;1He[0m [27;37H[0;7mTUNk[0m[6;41H[2;1H[0;1mCS100 on eBay[4;1H[0mAd[0mwww.ebay.com/electronics[0m(->)[5;1HBuy [0;1mCS100[0m on eBay! New eBay Buyer Protection Program.[6;1H[0;1mDaily Deals[0m - [0;1mCellphones & Accessories[0m - [0;1mDigital Digest Blo[7;1H[0;7mGadgets[8;1H[0mches related to [0;1mcs100[10;1H cs100[0m      [0;1mcs100 camera[11;1H cs100[0m      [0;1mcs100 waterloo[12;1H0 polar[0m     [0;1mcs100 ucr[13;1Hresso cs100[0m [0;1mcs100 first flight[15;21H[0m [0;1m1[0m [0;1m2[0m [0;1m3[0m [0;1m4[0m [0;1m5[0m [0;1m6[0m [0;1m7[0m [0;1m8[0m [0;1m9[0m [0;1m10[0m [0;1mNext[17;1Hnced searchSearch Help[0m [0;1mSend feedback[19;1Hle Home[0m [0;1mAdvertising Programs[0m [0;1mBusiness Solutions[0m [0;1mPrivacy & T[20;1Hle[27;37H[0;7mwYdG[0m[7;1H[2;1H[0m 1. [0;1mCS100 on eBay[4;1H[0m    Ad[0mwww.ebay.com/electronics[0m(->)[5;1H    Buy [0;1mCS100[0m on eBay! New eBay Buyer Protection Program.[6;1H    [0;1mDaily Deals[0m - [0;1mCellphones & Accessories[0m - [0;1mDigital Digest[7;1H[0m    [0;1mGadgets[8;1H[0mSearches related to [0;1mcs100[10;1H[0;7mpolk cs100[0m      [0;1mcs100 camera[11;1Hkoss cs100[0m      [0;1mcs100 waterloo[12;1Hcs100 polar[0m     [0;1mcs100 ucr[13;1Hnespresso cs100[0m [0;1mcs100 first flight[15;22H[0m    [0;1m1[0m [0;1m2[0m [0;1m3[0m [0;1m4[0m [0;1m5[0m [0;1m6[0m [0;1m7[0m [0;1m8[0m [0;1m9[0m [0;1m10[0m [0;1mNext[17;1HAdvanced searchSearch Help[0m [0;1mSend feedback[19;1HGoogle Home[0m [0;1mAdvertising Programs[0m [0;1mBusiness Solutions[0m [0;1mPrivacy[20;1HGoogle[27;23H[0;7msearch?hl=en&gbv=1&ie=UTF-8&q=polk+c[0m[10;1H[0;1mpolk cs100[0m      [0;7mcs100 camera[27;53Hcs100+[0m[10;17H[0;1mcs100 camera[11;1H[0;7mkoss cs100[27;53Hkoss+c[0m[11;1H[0;1mkoss cs100[0m      [0;7mcs100 waterloo[27;53Hcs100+[0m[11;17H[0;1mcs100 waterloo[12;1H[0;7mcs100 polar[0m[12;1H[0;1mcs100 polar[0m     [0;7mcs100 ucr[0m[12;17H[0;1mcs100 ucr[13;1H[0;7mnespresso cs100[27;53Hnespre[0m[13;1H[0;1mnespresso cs100[0m [0;7mcs100 first flight[27;53Hcs100+[0m[13;17H[0;1mcs100 first flight[15;28H[0;7m2[27;30Hq=cs100&hl=en&gbv=1&ie=UTF-8&[0m[15;28H[0;1m2[0m [0;7m3[0m[15;30H[0;1m3[0m [0;7m4[0m[15;32H[0;1m4[0m [0;7m5[0m[15;34H[0;1m5[0m [0;7m6[0m[15;36H[0;1m6[0m [0;7m7[0m[15;38H[0;1m7[0m [0;7m8[0m[15;40H[0;1m8[0m [0;7m9[0m[15;42H[0;1m9[0m [0;7m10[0m[15;44H[0;1m10[0m [0;7mNext[0m[15;47H[0;1mNext[17;1H[0;7mAdvanced search[27;23Hadvanced_search?q=cs100&hl=en&gbv=1[0m[17;1H[10;8H[0;7m                                             [11;8H   +------------[0m Exit Links [0;7m-------------+   [12;8H   |                                     |   [13;8H   |  Do you really want to exit Links?  |   [14;8H   |                                     |   [15;8H   |           [0;1m[ Yes ][0;7m  [ No ]           |   [16;8H   +-------------------------------------+   [17;8H                                             [0m[15;25H[2J8 [?1000l       [?1002l       [?1005l       $ [K$ [K$ wget -R http://amazon.com^C
+$ find .
+.
+./lecture8
+./bin
+./bin/tmp
+./ 
+./quizres.cpp
+./lecture12
+./lecture5
+./lecture11b
+./exit.cpp
+./filemanip.cpp
+./exec.cpp
+./lecture7
+./lecture11
+./pipe.cpp
+./testfile
+./lecture9
+./lecture1b
+./file
+./tmp
+./open.cpp
+./lecture6
+./lecture4
+./Makefile
+./typescript
+./lecture4b
+./fail.cpp
+./output.cpp
+./test
+./lecture10
+./.exec.cpp.swp
+./gdb.cpp
+./lecture2
+./exec2.cpp
+./memleak.cpp
+./rshell
+./

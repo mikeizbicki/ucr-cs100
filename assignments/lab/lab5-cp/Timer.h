@@ -92,10 +92,10 @@ Timer::elapsedTime (double &wallclock, double &user_time, double &system_time)
         }
 }
 
-/* Exaqmple of use
+/* Example of use
  
 #include "Timer.h"
-#include <iostream.h>
+#include <iostream>
 
 int main()
 {

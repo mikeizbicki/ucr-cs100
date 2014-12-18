@@ -1,0 +1,3021 @@
+Script started on Thu 16 Oct 2014 05:29:16 PM PDT
+bash: ls: command not found
+bash: .profile: No such file or directory
+]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lectuure$ [A[13P(reverse-i-search)`': 
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce': exit[1@x[C[C[Cp': export PS1=="$ "[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co': export PS1[1@=[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lectu[14@re$ export PS1[C[C[C[C[C
+$ clear
+[H[2J$ [K$ [K$ vim exec2.cpp[K[K[K[K[K[K[K[K[K[K[K[K[K[K$ [K$ g++ ex
+exec2.cpp  exec.cpp   exit.cpp
+$ g++ exec2.cpp 
+$ ./a.out [C[C[6@g++ exec2.cpp[C
+$ g++ exec2.cpp [C[C[9Pclear
+[H[2J$ clear[C[Cg++ exec2.cpp [C[C[9Pclear[C[Cg++ exec2.cpp [C[C[9Pclear[C[C[K./a.out 
+argc=1
+$ ./a.out [C[C[3Pclear[C[Cg++ exec2.cpp 
+$ g++ exec2.cpp [C[C[6P./a.out[C
+argc=1
+argv[0]./a.out
+$ ./a.out [C[C[6@g++ exec2.cpp[C
+$ g++ exec2.cpp [C[C[6P./a.out[C
+argc=1
+argv[0]=./a.out
+argv[1]=$ 
+$ ./a.out qwe
+argc=2
+argv[0]=./a.out
+argv[1]=qwe
+$ clear
+[H[2J$ clear[C[C./a.out qwe^C
+$ pwd
+/home/user/proj/ucr-cs100/lecture
+$ pwdclear[C[C[2Ppwdclear[C[C./a.out qwe[C[C[C[1@.[C[1@.[1@/[1@l[1@e[1@c[1@t[1@u[1@r[1@e[1@/
+argc=2
+argv[0]=../lecture/./a.out
+argv[1]=qwe
+$ ../lecture/./a.out qwe[C[Cpwd[Kclear
+[H[2J$ clear[C[C../lecture/./a.out qwe[C[Cpwd[Kclear[C[C./a.out qwe[K[C[C[6@g++ exec2.cpp[C
+$ g++ exec2.cpp [C[C[9Pclear[C[Cg++ exec2.cpp [C[C[K./exe[K[K[Ka.out 
+^C
+$ ./a.out [C[C[6@g++ exec2.cpp[C
+$ g++ exec2.cpp [C[C[6P./a.out[C
+Segmentation fault
+$ ./a.out pwd[C[Cg++ exec2.cpp 
+$ g++ exec2.cpp [C[C[3P./a.out pwd
+./a.out: ignoring non-option arguments
+/home/user/proj/ucr-cs100/lecture
+$ ./a.out pwd[K[K[K./a.out
+^C
+$ ./a.out ./a.out pwd
+^C
+$ pwd pwd
+/home/user/proj/ucr-cs100/lecture
+$ pwd pwd[C[C[12@./a.out ./a.out[C[C[C[C[K[K[K[K[K[K[K[Kls
+$ clear
+[H[2J$ clear[C[C./a.out ls[C[C[3Ppwd pwd[C[C[12@./a.out ./a.out[C[C[C[C[K pwd[C[C[12Ppwd[C[C[C[C[C[C./a.out ls[C[C[5Pclear[C[C[Kg++ exec2.cpp 
+exec2.cpp: In function ‘int main(int, char**)’:
+exec2.cpp:7:17: error: declaration of ‘char* argv [3]’ shadows a parameter
+exec2.cpp:8:13: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+exec2.cpp:9:27: error: cannot convert ‘char*’ to ‘char* const*’ for argument ‘2’ to ‘int execvp(const char*, char* const*)’
+$ g++ exec2.cpp [C[C[9Pclear[C[Cg++ exec2.cpp 
+exec2.cpp: In function ‘int main(int, char**)’:
+exec2.cpp:8:14: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+exec2.cpp:9:29: error: cannot convert ‘char*’ to ‘char* const*’ for argument ‘2’ to ‘int execvp(const char*, char* const*)’
+$ clear
+[H[2J$ clear[C[Cg++ exec2.cpp 
+exec2.cpp: In function ‘int main(int, char**)’:
+exec2.cpp:8:14: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+exec2.cpp:9:29: error: cannot convert ‘char*’ to ‘char* const*’ for argument ‘2’ to ‘int execvp(const char*, char* const*)’
+$ g++ exec2.cpp [C[C[9Pclear[C[Cg++ exec2.cpp 
+exec2.cpp: In function ‘int main(int, char**)’:
+exec2.cpp:8:14: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+$ clear
+[H[2J$ clear[C[Cg++ exec2.cpp [C[C[9Pclear[C[Cg++ exec2.cpp [C[C[9Pclear[C[C./a.out ls[C[C[3Ppwd pwd[C[C./a.out ls[K[K[K[K[K[K[K[K[K[Kls
+bash: ls: command not found
+$ lsclear[C[Cg++ exec2.cpp [C[C[9Pclear[C[Cg++ exec2.cpp [C[C[9Pclear[C[C./a.out ls[C[C[5Pclear[C[C./a.out ls][K[K[K[K
+$ ./a.out
+$ [K$ [K$ ./a.out[C[Cls[Kclear[C[Cg++ exec2.cpp 
+exec2.cpp: In function ‘int main(int, char**)’:
+exec2.cpp:8:14: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+$ g++ exec2.cpp [C[C[7P./a.out[C[Cls[K./a.out
+got here
+$ ./a.out[C[Cg++ exec2.cpp [C[C[7P./a.out[C[Cg++ exec2.cpp 
+exec2.cpp: In function ‘int main(int, char**)’:
+exec2.cpp:8:14: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+$ clear
+[H[2J$ clear[C[Cg++ exec2.cpp [C[C[7P./a.out
+pwd: ignoring non-option arguments
+/home/user/proj/ucr-cs100/lecture
+$ ./a.out[C[C[2Pclear[C[Cg++ exec2.cpp 
+exec2.cpp: In function ‘int main(int, char**)’:
+exec2.cpp:8:14: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+$ g++ exec2.cpp [C[C[7P./a.out
+/home/user/proj/ucr-cs100/lecture
+$ ./a.out[C[Cg++ exec2.cpp 
+exec2.cpp: In function ‘int main(int, char**)’:
+exec2.cpp:8:14: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+$ g++ exec2.cpp [C[C[7P./a.out
+pwd: ignoring non-option arguments
+/home/user/proj/ucr-cs100/lecture
+$ [K$ [K$ clear
+[H[2J$ g++ a,[K[Kexec2.cpp 
+exec2.cpp: In function ‘int main(int, char**)’:
+exec2.cpp:8:14: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+exec2.cpp:13:15: error: ‘exit’ was not declared in this scope
+$ g++ exec2.cpp [C[C[9Pclear[C[C./a.out
+pwd: ignoring non-option arguments
+/home/user/proj/ucr-cs100/lecture
+$ ./a.out[C[Cg++ exec2.cpp 
+exec2.cpp: In function ‘int main(int, char**)’:
+exec2.cpp:8:14: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+exec2.cpp:13:15: error: ‘exit’ was not declared in this scope
+$ clear
+[H[2J$ clear[C[Cg++ exec2.cpp [C[C[7P./a.out
+pwd: ignoring non-option arguments
+/home/user/proj/ucr-cs100/lecture
+$ ./a.out[C[C[2Pclear[C[Cg++ exec2.cpp 
+exec2.cpp: In function ‘int main(int, char**)’:
+exec2.cpp:8:14: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+exec2.cpp:13:15: error: ‘exit’ was not declared in this scope
+$ g++ exec2.cpp 
+exec2.cpp: In function ‘int main(int, char**)’:
+exec2.cpp:9:14: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+$ g++ exec2.cpp [C[C[7P./a.out
+error
+$ ls[K[Kclear
+[H[2J$ clear[C[C[Kls
+bash: ls: command not found
+$ [K$ [K$ [K$ [K$ lsclear[C[C./a.out[C[Cg++ exec2.cpp 
+exec2.cpp: In function ‘int main(int, char**)’:
+exec2.cpp:11:14: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+$ g++ exec2.cpp [C[Cls[Kclear[C[C./a.out
+execvp: No such file or directory
+$ ls.bugs.bunny 
+a.out	   lecture1   lecture5
+exec2.cpp  lecture1b  rshell
+exec.cpp   lecture2   testfile
+exit.cpp   lecture4   tmp
+fail.cpp   lecture4b  typescript
+$ alias ls-=[K[K=ls.bugs.bunny
+$ ls
+a.out	   lecture1   lecture5
+exec2.cpp  lecture1b  rshell
+exec.cpp   lecture2   testfile
+exit.cpp   lecture4   tmp
+fail.cpp   lecture4b  typescript
+$ clear
+[H[2J$ g++ -Wall -Werror -N[Kansi -pea[Kdantic [A[C[Cag++ -Wall -Werror -ansi -pedanticc[A[C[Clg++ -Wall -Werror -ansi -pedantic[A[C[Cig++ -Wall -Werror -ansi -pedantic[A[C[Cag++ -Wall -Werror -ansi -pedantic[A[C[Csg++ -Wall -Werror -ansi -pedantic[A[C[C g++ -Wall -Werror -ansi -pedantic[A[C[C[Cg++ -Wall -Werror -ansi -pedantic[A[C[C+g++ -Wall -Werror -ansi -pedantic[A[C[C+g++ -Wall -Werror -ansi -pedantic[A[C[C+g++ -Wall -Werror -ansi -pedantic[A[C[C=g++ -Wall -Werror -ansi -pedantic[A[C[C
+
+bash: alias: -Wall: not found
+bash: alias: -Werror: not found
+bash: alias: -ansi: not found
+bash: alias: -pedantic: not found
+$ alias g+++=g++ -Wall -Werror -ansii -pedantic"[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C"g++ -Wall -Werror -ansi -pedantic"[A[C
+
+$ g+++ ^C
+$ clear
+[H[2J$ jfhgldhf gksjldhf glkjshdf glkjsh d flkgjhs dlfkjgh slkdfjgh lskdjfhg  lskdjhf glj[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+[C[C[C[C[C[C[C[C[C[C[C[C[A[A[C[C
+
+[C[C[C[C[C[C[C[C[C[C[C[C[A[A[C[C^C
+
+
+$ /bin/ls
+lsblk          lsmod
+ls.bugs.bunny  
+$ /bin/ls.bugs.bunny ^C
+$ ls -qqqqq
+a.out	   lecture1   lecture5
+exec2.cpp  lecture1b  rshell
+exec.cpp   lecture2   testfile
+exit.cpp   lecture4   tmp
+fail.cpp   lecture4b  typescript
+$ ls -l
+total 256
+-rwxr-xr-x 1 user user   8697 Oct 16 17:56 a.out
+-rw-r--r-- 1 user user    359 Oct 16 17:56 exec2.cpp
+-rw-r--r-- 1 user user    624 Oct 15 09:19 exec.cpp
+-rw-r--r-- 1 user user     29 Oct 15 09:19 exit.cpp
+-rw-r--r-- 1 user user     29 Oct 15 09:19 fail.cpp
+-rw-r--r-- 1 user user    952 Oct  9 23:15 lecture1
+-rw-r--r-- 1 user user  55139 Oct  9 23:15 lecture1b
+-rw-r--r-- 1 user user  34066 Oct  9 23:18 lecture2
+-rw-r--r-- 1 user user 102961 Oct 15 09:19 lecture4
+-rw-r--r-- 1 user user   8192 Oct 15 09:19 lecture4b
+-rw-r--r-- 1 user user   8192 Oct 16 17:59 lecture5
+drwxr-xr-x 3 user user   4096 Oct  9 18:11 rshell
+-rw-r--r-- 1 user user      0 Oct  9 23:18 testfile
+drwxr-xr-x 2 user user   4096 Oct 14 17:12 tmp
+-rw-r--r-- 1 user user    471 Oct 16 12:41 typescript
+$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ ls -l
+total 256
+-rwxr-xr-x 1 user user   8697 Oct 16 17:56 a.out
+-rw-r--r-- 1 user user    359 Oct 16 17:56 exec2.cpp
+-rw-r--r-- 1 user user    624 Oct 15 09:19 exec.cpp
+-rw-r--r-- 1 user user     29 Oct 15 09:19 exit.cpp
+-rw-r--r-- 1 user user     29 Oct 15 09:19 fail.cpp
+-rw-r--r-- 1 user user    952 Oct  9 23:15 lecture1
+-rw-r--r-- 1 user user  55139 Oct  9 23:15 lecture1b
+-rw-r--r-- 1 user user  34066 Oct  9 23:18 lecture2
+-rw-r--r-- 1 user user 102961 Oct 15 09:19 lecture4
+-rw-r--r-- 1 user user   8192 Oct 15 09:19 lecture4b
+-rw-r--r-- 1 user user   8192 Oct 16 17:59 lecture5
+drwxr-xr-x 3 user user   4096 Oct  9 18:11 rshell
+-rw-r--r-- 1 user user      0 Oct  9 23:18 testfile
+drwxr-xr-x 2 user user   4096 Oct 14 17:12 tmp
+-rw-r--r-- 1 user user    471 Oct 16 12:41 typescript
+$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ clear
+[H[2J$ g++ exec2.cpp 
+exec2.cpp: In function ‘int main(int, char**)’:
+exec2.cpp:11:14: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+$ ./a.out 
+execvp: Permission denied
+$ ls
+a.out	   lecture4
+exec2.cpp  lecture4b
+exec.cpp   lecture5
+exit.cpp   Makefile
+fail.cpp   rshell
+lecture1   testfile
+lecture1b  tmp
+lecture2   typescript
+$ clear
+[H[2J$ make all
+echo "test"
+test
+$ make all
+echo "test"
+test
+pwd
+/home/user/proj/ucr-cs100/lecture
+echo "done"
+done
+$ [K$ make all[C[C[3Pclear[C[Cmake all[K[K[Ktarget2
+echo "test" && pwd && echo "done"
+test
+/home/user/proj/ucr-cs100/lecture
+done
+$ clear
+[H[2J$ make
+mkdir bin
+$ ls
+a.out	   lecture4
+bin	   lecture4b
+exec2.cpp  lecture5
+exec.cpp   Makefile
+exit.cpp   rshell
+fail.cpp   testfile
+lecture1   tmp
+lecture1b  typescript
+lecture2
+$ lsmake
+mkdir bin
+mkdir: cannot create directory `bin': File exists
+make: *** [all] Error 1
+$ clear
+[H[2J$ clear[C[C[1Pmake
+mkdir bin
+mkdir: cannot create directory `bin': File exists
+make: *** [all] Error 1
+$ make
+echo "-Wall -Werror"
+-Wall -Werror
+echo "will this print"
+will this print
+$ ls /usr/local/bin
+alex
+allkfn
+allknn
+allkrann
+bugpoint
+cabal
+det
+emst
+fastmks
+ghc
+ghc-7.6.3
+ghc-7.7.20140128
+ghc-7.8.1
+ghc-7.8.2
+ghc-7.8.20140130
+ghci
+ghci-7.6.3
+ghci-7.7.20140128
+ghci-7.8.1
+ghci-7.8.2
+ghci-7.8.20140130
+ghc-pkg
+ghc-pkg-7.6.3
+ghc-pkg-7.7.20140128
+ghc-pkg-7.8.1
+ghc-pkg-7.8.2
+ghc-pkg-7.8.20140130
+gmm
+haddock
+haddock-ghc-7.6.3
+haddock-ghc-7.8.1
+haddock-ghc-7.8.2
+haddock-ghc-7.8.20140130
+happy
+hmm_generate
+hmm_loglik
+hmm_train
+hmm_viterbi
+hp2ps
+hpc
+hsc2hs
+kernel_pca
+kmeans
+lars
+linear_regression
+llc
+lli
+lli-child-target
+llvm-ar
+llvm-as
+llvm-bcanalyzer
+llvm-config
+llvm-cov
+llvm-diff
+llvm-dis
+llvm-dwarfdump
+llvm-extract
+llvm-link
+llvm-mc
+llvm-mcmarkup
+llvm-nm
+llvm-objdump
+llvm-ranlib
+llvm-readobj
+llvm-rtdyld
+llvm-size
+llvm-stress
+llvm-symbolizer
+llvm-tblgen
+local_coordinate_coding
+lsh
+macho-dump
+mvu
+nbc
+nca
+nmf
+opt
+pca
+R
+radical
+range_search
+Rscript
+runghc
+runghc-7.6.3
+runghc-7.7.20140128
+runghc-7.8.1
+runghc-7.8.2
+runghc-7.8.20140130
+runhaskell
+sparse_coding
+thor
+typespeed
+vimgolf
+xmobar
+$ gg[K[Kclear
+[H[2J$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ clear[C[Cls /usr/local/bin
+alex
+allkfn
+allknn
+allkrann
+bugpoint
+cabal
+det
+emst
+fastmks
+ghc
+ghc-7.6.3
+ghc-7.7.20140128
+ghc-7.8.1
+ghc-7.8.2
+ghc-7.8.20140130
+ghci
+ghci-7.6.3
+ghci-7.7.20140128
+ghci-7.8.1
+ghci-7.8.2
+ghci-7.8.20140130
+ghc-pkg
+ghc-pkg-7.6.3
+ghc-pkg-7.7.20140128
+ghc-pkg-7.8.1
+ghc-pkg-7.8.2
+ghc-pkg-7.8.20140130
+gmm
+haddock
+haddock-ghc-7.6.3
+haddock-ghc-7.8.1
+haddock-ghc-7.8.2
+haddock-ghc-7.8.20140130
+happy
+hmm_generate
+hmm_loglik
+hmm_train
+hmm_viterbi
+hp2ps
+hpc
+hsc2hs
+kernel_pca
+kmeans
+lars
+linear_regression
+llc
+lli
+lli-child-target
+llvm-ar
+llvm-as
+llvm-bcanalyzer
+llvm-config
+llvm-cov
+llvm-diff
+llvm-dis
+llvm-dwarfdump
+llvm-extract
+llvm-link
+llvm-mc
+llvm-mcmarkup
+llvm-nm
+llvm-objdump
+llvm-ranlib
+llvm-readobj
+llvm-rtdyld
+llvm-size
+llvm-stress
+llvm-symbolizer
+llvm-tblgen
+local_coordinate_coding
+lsh
+macho-dump
+mvu
+nbc
+nca
+nmf
+opt
+pca
+R
+radical
+range_search
+Rscript
+runghc
+runghc-7.6.3
+runghc-7.7.20140128
+runghc-7.8.1
+runghc-7.8.2
+runghc-7.8.20140130
+runhaskell
+sparse_coding
+thor
+typespeed
+vimgolf
+xmobar
+$ ckear[K[K[K[Klear
+[H[2J$ clear[C[Cls /usr/local/bin[1Pbin[1Pbin[1Pbin[1Pbin[1Pbin[1Pbin
+[
+2to3
+2to3-2.6
+2to3-2.7
+2to3-3.2
+411toppm
+7z
+7za
+a2p
+a2ping
+aclocal
+aclocal-1.11
+aconnect
+acpi
+acpi_fakekey
+acpi_listen
+add-apt-repository
+addftinfo
+addpart
+addr2line
+afm2afm
+afm2pl
+afm2tfm
+afmtodit
+alacarte
+aleph
+allcm
+allec
+allneeded
+alsaloop
+alsamixer
+alsaucm
+amidi
+amixer
+amstex
+animate
+animate.im6
+ant
+anytopnm
+apg
+apgbfm
+aplay
+aplaymidi
+applycal
+appres
+apropos
+apt-add-repository
+apt-cache
+apt-cdrom
+apt-config
+aptdcon
+apt-extracttemplates
+apt-ftparchive
+apt-get
+aptitude
+aptitude-create-state-bundle
+aptitude-curses
+aptitude-run-state-bundle
+apt-key
+apt-listchanges
+apt-mark
+apt-sortpkgs
+ar
+arch
+arecord
+arecordmidi
+arlatex
+arm2hpdl
+as
+asciitopgm
+aseqdump
+aseqnet
+aspell
+aspell-import
+at
+atktopbm
+atobm
+atq
+atrm
+authorindex
+autoconf
+autoheader
+autoinst
+autom4te
+automake
+automake-1.11
+autopoint
+autoreconf
+autoscan
+autoupdate
+avconv
+average
+avplay
+avprobe
+avserver
+awk
+axi-cache
+b2m
+b2m.emacs23
+balsa
+balsa-ab
+baobab
+base64
+basename
+bashbug
+batch
+bbox
+bc
+bcp
+bdftopcf
+bdftruncate
+bf_compact
+bf_compact-bdb
+bf_copy
+bf_copy-bdb
+bf_tar
+bf_tar-bdb
+bibtex
+bibtex8
+bibtex.original
+bibtexu
+bioradtopgm
+bitmap
+bjam
+bluetooth-agent
+bluetooth-applet
+bluetooth-sendto
+bluetooth-wizard
+bluez-simple-agent
+bluez-simple-service
+bluez-test-adapter
+bluez-test-audio
+bluez-test-device
+bluez-test-discovery
+bluez-test-input
+bluez-test-manager
+bluez-test-network
+bluez-test-serial
+bluez-test-service
+bluez-test-telephony
+bmptopnm
+bmptoppm
+bmtoa
+bogofilter
+bogofilter-bdb
+bogolexer
+bogolexer-bdb
+bogotune
+bogotune-bdb
+bogoupgrade
+bogoupgrade-bdb
+bogoutil
+bogoutil-bdb
+brasero
+brushtopbm
+bsd-from
+bsd-mailx
+bsd-write
+bugpoint
+bugpoint-3.0
+buildhash
+bundledoc
+c++
+c2050
+c2ph
+c89
+c89-gcc
+c99
+c99-gcc
+cachepic
+cal
+calendar
+calibrate_ppa
+callgrind_annotate
+callgrind_control
+cancel
+capinfos
+captoinfo
+caribou
+caribou-preferences
+catchsegv
+catman
+cb2ti3
+cc
+cctiff
+ccttest
+ccxxmake
+cdbs-edit-patch
+cd-create-profile
+cd-fix-profile
+cdrdao
+c++filt
+cg_annotate
+cg_diff
+cg_merge
+chacl
+chage
+chardet
+charmap
+chartread
+chattr
+chcon
+checkcites
+cheese
+chem
+chfn
+chkdupexe
+chrt
+chsh
+ciptool
+cjet
+ckbcomp
+ck-history
+ck-launch-session
+ck-list-sessions
+cksum
+clear
+clear_console
+cli
+cli-gacutil
+clutter-scan-immodules
+cmake
+cmp
+cmuwmtopbm
+codepage
+col
+colcrt
+collink
+colormgr
+colprof
+colrm
+column
+comm
+command2foo2lava-pjl
+compare
+compare.im6
+compose
+composite
+composite.im6
+config_data
+conjure
+conjure.im6
+convert
+convert.im6
+corelist
+cpack
+cpan
+cpan2dist
+cpanp
+cpanp-run-perl
+cpp
+cpp-4.6
+cpp-4.7
+cppcheck
+cpufreq-selector
+c_rehash
+crontab
+csplit
+ctags
+ctags.emacs23
+ctangle
+ctanify
+ctanupload
+ctest
+ctie
+ctstat
+cup
+cups-calibrate
+cupstestdsc
+cupstestppd
+curl
+cut
+cvlc
+cvt
+cweave
+db5.1_archive
+db5.1_checkpoint
+db5.1_deadlock
+db5.1_dump
+db5.1_hotbackup
+db5.1_load
+db5.1_log_verify
+db5.1_printlog
+db5.1_recover
+db5.1_replicate
+db5.1_stat
+db5.1_upgrade
+db5.1_verify
+dbus-cleanup-sockets
+dbus-daemon
+dbus-launch
+dbus-monitor
+dbus-send
+dbus-uuidgen
+dc
+dconf
+dconf-editor
+ddate
+ddd
+deallocvt
+debconf
+debconf-apt-progress
+debconf-communicate
+debconf-copydb
+debconf-escape
+debconf-gettextize
+debconf-set-selections
+debconf-show
+debconf-updatepo
+defmt-c
+defmt-sh
+delpart
+de-macro
+derb
+desktop-file-edit
+desktop-file-install
+desktop-file-validate
+detex
+devnag
+dfutool
+dh
+dh_auto_build
+dh_auto_clean
+dh_auto_configure
+dh_auto_install
+dh_autoreconf
+dh_autoreconf_clean
+dh_auto_test
+dh_autotools-dev_restoreconfig
+dh_autotools-dev_updateconfig
+dh_bash-completion
+dh_bugfiles
+dh_builddeb
+dh_clean
+dh_compress
+dh_desktop
+dh_fixperms
+dh_gconf
+dh_gencontrol
+dh_icons
+dh_install
+dh_installcatalogs
+dh_installchangelogs
+dh_installcron
+dh_installdeb
+dh_installdebconf
+dh_installdirs
+dh_installdocs
+dh_installemacsen
+dh_installexamples
+dh_installgsettings
+dh_installifupdown
+dh_installinfo
+dh_installinit
+dh_installlogcheck
+dh_installlogrotate
+dh_installman
+dh_installmanpages
+dh_installmenu
+dh_installmime
+dh_installmodules
+dh_installpam
+dh_installppp
+dh_installtex
+dh_installudev
+dh_installwm
+dh_installxfonts
+dh_installxmlcatalogs
+dh_link
+dh_lintian
+dh_listpackages
+dh_makeshlibs
+dh_md5sums
+dh_movefiles
+dh_numpy
+dh_perl
+dh_prep
+dh_pysupport
+dh_python
+dh_python2
+dh_python3
+dh_scrollkeeper
+dh_shlibdeps
+dh_strip
+dh_suidregister
+dh_testdir
+dh_testroot
+dh_ucf
+dh_undocumented
+dh_usrlocal
+diff
+diff3
+dig
+dircolors
+directomatic
+dirname
+discover-config
+disdvi
+dispcal
+display
+display.im6
+dispread
+dispwin
+dmenu
+dmenu_path
+dmenu_run
+doc2odt
+doc2pdf
+dolphin
+dosepsbin
+dotlockfile
+doxygen
+dpkg
+dpkg-architecture
+dpkg-buildflags
+dpkg-buildpackage
+dpkg-checkbuilddeps
+dpkg-deb
+dpkg-distaddfile
+dpkg-divert
+dpkg-genchanges
+dpkg-gencontrol
+dpkg-gensymbols
+dpkg-maintscript-helper
+dpkg-mergechangelogs
+dpkg-name
+dpkg-parsechangelog
+dpkg-query
+dpkg-scanpackages
+dpkg-scansources
+dpkg-shlibdeps
+dpkg-source
+dpkg-split
+dpkg-statoverride
+dpkg-trigger
+dpkg-vendor
+dprofpp
+dt2dv
+du
+dumpcap
+dump-gnash
+dumphint
+dumpkeys
+dv2dt
+dvi2fax
+dvi2tty
+dviasm
+dvibook
+dviconcat
+dvicopy
+dvigif
+dvihp
+dvilj
+dvilj2p
+dvilj4
+dvilj4l
+dvilj6
+dvilualatex
+dviluatex
+dvipdf
+dvipdfm
+dvipdfmx
+dvipdft
+dvipng
+dvipos
+dvips
+dvired
+dviselect
+dvisvgm
+dvitodvi
+dvitomp
+dvitype
+e2pall
+easy_install
+easy_install-2.6
+easy_install-2.7
+ebb
+ebrowse
+ebrowse.emacs23
+edit
+editcap
+editor
+editres
+eject
+elfedit
+emacs
+emacs23
+emacs23-x
+emacsclient
+emacsclient.emacs23
+empathy
+empathy-accounts
+empathy-debugger
+enc2xs
+enca
+enchant
+enchant-lsmod
+enconv
+env
+envsubst
+eog
+eps2eps
+epsffit
+epspdf
+epspdftk
+epstool
+epstopdf
+eptex
+eqn
+eqn2graph
+erb
+erb1.8
+erb1.9.1
+esc-m
+etags
+etags.emacs23
+etex
+euptex
+eview
+evim
+evince
+evince-previewer
+evince-thumbnailer
+evolution
+evolution-settings
+ex
+exceltex
+expand
+expiry
+expr
+extractbb
+extracticc
+extractres
+extractttag
+eyuvtoppm
+f2c
+f2py
+f2py2.6
+f2py2.7
+f77
+f95
+factor
+faillog
+fakeCMY
+faked-sysv
+faked-tcp
+fakeread
+fakeroot
+fakeroot-sysv
+fakeroot-tcp
+fallocate
+fc
+fc-cache
+fc-cat
+fc-list
+fc-match
+fc-pattern
+fc-query
+fc-scan
+ffmpeg
+ffplay
+ffprobe
+ffserver
+fiascotopnm
+fig4latex
+file
+file-roller
+find
+find2perl
+findaffix
+findhyph
+findsmb
+finger
+firefox
+fitstopnm
+fixdlsrps
+fixfmps
+fixpsditps
+fixpspps
+fixscribeps
+fixtpps
+fixwfwps
+fixwpps
+fixwwps
+flash-player-properties
+flock
+fmt
+fmtutil
+fmtutil-sys
+fold
+font2c
+fontinst
+fonttosfnt
+foo2hiperc
+foo2hiperc-wrapper
+foo2hp
+foo2hp2600-wrapper
+foo2lava
+foo2lava-wrapper
+foo2oak
+foo2oak-wrapper
+foo2qpdl
+foo2qpdl-wrapper
+foo2slx
+foo2slx-wrapper
+foo2xqx
+foo2xqx-wrapper
+foo2zjs
+foo2zjs-icc2ps
+foo2zjs-pstops
+foo2zjs-wrapper
+foomatic-combo-xml
+foomatic-compiledb
+foomatic-configure
+foomatic-datafile
+foomatic-perl-data
+foomatic-ppdfile
+foomatic-ppd-options
+foomatic-ppd-to-xml
+foomatic-printjob
+foomatic-rip
+foomatic-searchprinter
+formail
+fort77
+free
+freetype-config
+from
+fslsfonts
+fstobdf
+fstopgm
+ftp
+funzip
+g++
+g3topbm
+g++-4.7
+gacutil
+gamma4scanimage
+gatttool
+gcalccmd
+gcalctool
+gcc
+gcc-4.6
+gcc-4.7
+gcc-ar
+gcc-ar-4.7
+gcc-nm
+gcc-nm-4.7
+gcc-ranlib
+gcc-ranlib-4.7
+gccxml
+gccxml_cc1plus
+gcm-calibrate
+gcm-import
+gcm-inspect
+gcm-picker
+gcm-viewer
+gconf-merge-tree
+gconftool
+gconftool-2
+gcore
+gcov
+gcov-4.6
+gcov-4.7
+gcr-viewer
+gdb
+gdbserver
+gdbtui
+gdbus
+gdebi
+gdebi-gtk
+gdialog
+gdiffmk
+gdmflexiserver
+gdm-screenshot
+gedit
+gem
+gem1.8
+gem1.9.1
+gemtopbm
+gemtopnm
+genbrk
+gencat
+gencfu
+gencnval
+genctd
+genrb
+geqn
+GET
+getafm
+getconf
+getent
+getfacl
+getkeycodes
+getopt
+gettext
+gettextize
+gettext.sh
+getweb
+gfortran
+gfortran-4.7
+gftodvi
+gftopk
+gftype
+ghc
+ghc-7.4.1
+ghci
+ghci-7.4.1
+ghc-pkg
+ghc-pkg-7.4.1
+ghostscript
+gifdiff
+gifsicle
+giftopnm
+gifview
+gimp
+gimp-2.8
+gimp-console
+gimp-console-2.8
+ginstall-info
+gio-querymodules
+gipddecode
+git
+git-receive-pack
+git-shell
+git-upload-archive
+git-upload-pack
+gjs
+gjs-console
+gkbd-keyboard-display
+gksu
+gksudo
+gksu-properties
+glib-compile-resources
+glib-compile-schemas
+glxdemo
+glxgears
+glxheads
+glxinfo
+gnash
+gnash-gtk-launcher
+gnash-thumbnailer
+gnome-calculator
+gnome-character-map
+gnome-contacts
+gnome-control-center
+gnome-desktop-item-edit
+gnome-dictionary
+gnome-documents
+gnome-file-share-properties
+gnome-font-viewer
+gnome-help
+gnome-keyring
+gnome-keyring-3
+gnome-keyring-daemon
+gnome-nettool
+gnome-open
+gnome-panel
+gnome-power-statistics
+gnome-screensaver
+gnome-screensaver-command
+gnome-screenshot
+gnome-session
+gnome-session-fallback
+gnome-session-properties
+gnome-session-quit
+gnome-session-xmonad
+gnome-settings-daemon
+gnome-shell
+gnome-shell-extension-prefs
+gnome-shell-extension-tool
+gnome-sound-applet
+gnome-sound-recorder
+gnome-system-log
+gnome-system-log-pkexec
+gnome-system-monitor
+gnome-terminal
+gnome-terminal.wrapper
+gnome-text-editor
+gnome-thumbnail-font
+gnome-time-tracker
+gnome-tweak-tool
+gnome-wm
+gnome-www-browser
+gnuplot
+gold
+gouldtoppm
+gpasswd
+gpg
+gpgsplit
+gpgv
+gpg-zip
+gpic
+gpk-application
+gpk-dbus-service
+gpk-install-catalog
+gpk-install-local-file
+gpk-install-mime-type
+gpk-install-package-name
+gpk-install-provide-file
+gpk-log
+gpk-prefs
+gpk-service-pack
+gpk-update-viewer
+gprof
+grap2graph
+grep-changelog
+grep-changelog.emacs23
+gresource
+greytiff
+grn
+grodvi
+groff
+groffer
+grog
+grolbp
+grolj4
+grops
+grotty
+groups
+grub-bin2h
+grub-editenv
+grub-fstest
+grub-kbdcomp
+grub-menulst2cfg
+grub-mkfont
+grub-mkimage
+grub-mklayout
+grub-mkpasswd-pbkdf2
+grub-mkrelpath
+grub-mkrescue
+grub-mount
+grub-ntldr-img
+grub-script-check
+gs
+gsbj
+gsdj
+gsdj500
+gsettings
+gsettings-data-convert
+gsettings-schema-convert
+gsftopk
+gsl-config
+gsl-histogram
+gslj
+gslp
+gsl-randist
+gsnd
+gstreamer-properties
+gtbl
+gtf
+gtk-gnash
+gtk-update-icon-cache
+gtk-update-icon-cache-3.0
+gucharmap
+guild
+gv
+gvfs-cat
+gvfs-copy
+gvfs-info
+gvfs-less
+gvfs-ls
+gvfs-mime
+gvfs-mkdir
+gvfs-monitor-dir
+gvfs-monitor-file
+gvfs-mount
+gvfs-move
+gvfs-open
+gvfs-rename
+gvfs-rm
+gvfs-save
+gvfs-set-attribute
+gvfs-trash
+gvfs-tree
+gview
+gvim
+gvimdiff
+gvimtutor
+gv-update-userconfig
+gxditview
+h2ph
+h2xs
+haddock
+haddock-ghc-7.4.1
+hamster-cli
+hamster-time-tracker
+haskell-compiler
+hbpldecode
+hcitool
+hd
+head
+HEAD
+helpztags
+hexdump
+hipercdecode
+hipstopgm
+host
+hostid
+hp2ps
+hpc
+hpftodit
+hpijs
+hsc2hs
+html2markdown
+html2markdown.py2
+html2text
+i1d3ccss
+i386
+iccgamut
+iceauth
+icedove
+iceweasel
+ico
+icombine
+icontopbm
+iconv
+icu-config
+icuinfo
+id
+identify
+identify.im6
+iecset
+ifnames
+ijoin
+ijs_pxljr
+ilbmtoppm
+illumread
+imgtoppm
+import
+import.im6
+includeres
+indxbib
+info
+infobrowser
+infocmp
+infokey
+infotocap
+inifile
+inimf
+initex
+inkscape
+inkview
+inspect
+install
+installfont-tl
+install-info
+install-menu
+instmodsh
+invest-chart
+invprofcheck
+ionice
+ipcmk
+ipcrm
+ipcs
+ipod-read-sysinfo-extended
+ipod-time-sync
+ipptool
+iproxy
+iptables-xml
+irb
+irb1.8
+irb1.9.1
+ischroot
+isdv4-serial-debugger
+ispell
+ispell-wrapper
+isql-vt
+isqlw-vt
+itweb-settings
+java
+javaws
+jexec
+join
+jpegtopnm
+json_pp
+kate
+kbdinfo
+kbookmarkmerger
+kbuildsycoca4
+kcmshell4
+kcookiejar4
+kde4
+kde4-config
+kde4-menu
+kdebugdialog
+kde-cp
+kded4
+kdeinit4
+kdeinit4_shutdown
+kdeinit4_wrapper
+kde-mv
+kde-open
+kdialog
+keditbookmarks
+keditfiletype
+keytool
+kfile4
+kfilemetadatareader
+kfind
+kfmclient
+kglobalaccel
+khotnewstuff4
+khotnewstuff-upload
+kiconfinder
+kile
+killall
+kioclient
+kjs
+kjscmd
+kmimetypefinder
+knotify4
+kodak2ti3
+koi8rxterm
+konqueror
+konsole
+konsoleprofile
+kpseaccess
+kpsepath
+kpsereadlink
+kpsestat
+kpsetool
+kpsewhere
+kpsewhich
+kpsexpand
+kquitapp
+kreadconfig
+kross
+kshell4
+kstart
+ksvgtopng
+kterm
+ktesnippets_editor
+ktraderclient
+ktrash
+kuiserver
+kwalletd
+kwrapper4
+kwrite
+kwriteconfig
+l2ping
+l2test
+last
+lastb
+lastlog
+latex
+latex2man
+latexfileversion
+lavadecode
+lcf
+ld
+ld.bfd
+ldd
+ld.gold
+leaftoppm
+less
+lessecho
+lessfile
+lesskey
+lesspipe
+lexgrog
+lft
+lft.db
+liblinear-predict
+liblinear-train
+libnetcfg
+libpng12-config
+libpng-config
+libreoffice
+libtool
+libtoolize
+line
+link
+links
+linux32
+linux64
+linux-boot-prober
+linux-version
+lispmtopgm
+listings-ext.sh
+listres
+lkbib
+llc
+llc-3.0
+lli
+lli-3.0
+llvm-ar
+llvm-ar-3.0
+llvm-as
+llvm-as-3.0
+llvm-bcanalyzer
+llvm-bcanalyzer-3.0
+llvm-config
+llvm-config-3.0
+llvm-cov
+llvm-cov-3.0
+llvm-diff
+llvm-diff-3.0
+llvm-dis
+llvm-dis-3.0
+llvm-dwarfdump
+llvm-dwarfdump-3.0
+llvm-extract
+llvm-extract-3.0
+llvm-ld
+llvm-ld-3.0
+llvm-link
+llvm-link-3.0
+llvm-mc
+llvm-mc-3.0
+llvm-nm
+llvm-nm-3.0
+llvm-objdump
+llvm-objdump-3.0
+llvm-prof
+llvm-prof-3.0
+llvm-ranlib
+llvm-ranlib-3.0
+llvm-rtdyld
+llvm-rtdyld-3.0
+llvm-size
+llvm-size-3.0
+llvm-stub
+llvm-stub-3.0
+llvm-tblgen
+llvm-tblgen-3.0
+lnstat
+loadkeys
+loadunimap
+lobase
+localc
+locale
+localedef
+locate
+lockfile
+lodraw
+loffice
+lofromtemplate
+logger
+logname
+loimpress
+lomath
+look
+lookbib
+lorder
+loweb
+lowriter
+lp
+lpoptions
+lppasswd
+lpq
+lpr
+lprm
+lp_solve
+lpstat
+lsattr
+lsb_release
+lscpu
+lsinitramfs
+lsof
+lspci
+lspgpot
+lsusb
+lsw
+ltrace
+lualatex
+luatex
+lucli
+luit
+lwp-download
+lwp-dump
+lwp-mirror
+lwp-request
+lxterm
+lzcat
+lzcmp
+lzdiff
+lzegrep
+lzfgrep
+lzgrep
+lzless
+lzma
+lzmainfo
+lzmore
+m17n-db
+m2300w
+m2300w-wrapper
+m2400w
+m4
+macho-dump
+macho-dump-3.0
+macptopbm
+mag
+magnifier
+mail
+Mail
+mailq
+mailstat
+mailx
+make
+makeconv
+makeglossaries
+makeindex
+makeinfo
+makejvf
+mako-render
+man
+mandb
+manpath
+mapscrn
+match_parens
+mathspic
+mawk
+mcookie
+mc-tool
+mc-wait-for-name
+md5sum
+md5sum.textutils
+mdatopbm
+meinproc4
+meinproc4_simple
+mendex
+mergecap
+mesg
+metacity
+metacity-message
+metacity-theme-viewer
+metacity-window-demo
+mf
+mf2pt1
+mf-nowin
+mfplain
+mft
+mgrtopbm
+mimeopen
+mimetype
+min12xxw
+mkfifo
+mkfontdir
+mkfontscale
+mkindex
+mkjobtexmf
+mkluatexfontdb
+mk_modmap
+mkocp
+mkofm
+mkpasswd
+mkt1font
+mktexfmt
+mktexlsr
+mktexmf
+mktexpk
+mktextfm
+mlocate
+mmroff
+mogrify
+mogrify.im6
+mono
+montage
+montage.im6
+mousetweaks
+mpic++
+mpicc
+mpiCC
+mpicc.openmpi
+mpiCC.openmpi
+mpic++.openmpi
+mpicxx
+mpicxx.openmpi
+mpif77
+mpif77.openmpi
+mpif90
+mpif90.openmpi
+mplayer
+mpost
+mppcheck
+mpplu
+mppprof
+mptopdf
+mscompress
+msexpand
+msgattrib
+msgcat
+msgcmp
+msgcomm
+msgconv
+msgen
+msgexec
+msgfilter
+msgfmt
+msggrep
+msginit
+msgmerge
+msgunfmt
+msguniq
+ms_print
+mtrace
+mtvtoppm
+munchlist
+mutt
+mutt_dotlock
+mutt-org
+mx-create-image-cache
+namei
+nano
+nautilus
+nautilus-autorun-software
+nautilus-connect-server
+nautilus-sendto
+nawk
+ncal
+ncat
+nctoh5
+ncurses5-config
+ncursesw5-config
+ndiff
+neotoppm
+nepomukbackup
+nepomukcontroller
+nepomukindexer
+nepomuk-rcgen
+nepomukserver
+nepomukservicestub
+neqn
+net
+netkit-ftp
+net.samba3
+net-snmp-config
+newaliases
+newgrp
+ngettext
+nice
+niceload
+nl
+nm
+nmap
+nm-applet
+nmblookup
+nmblookup.samba3
+nmcli
+nm-connection-editor
+nm-online
+nm-tool
+nohup
+nosetests
+nosetests-2.6
+nosetests-2.7
+nping
+nproc
+nroff
+nslookup
+nspluginscan
+nspluginviewer
+nstat
+nsupdate
+ntfsdecrypt
+nvlc
+oakdecode
+obex-data-server
+objcopy
+objdump
+oclock
+octave
+od
+odbcinst
+odp2pdf
+odp2ppt
+ods2pdf
+ods-server
+odt2bib
+odt2doc
+odt2docbook
+odt2html
+odt2lt
+odt2pdf
+odt2rtf
+odt2sdw
+odt2sxw
+odt2txt
+odt2txt.unoconv
+odt2xhtml
+odt2xml
+odvicopy
+odvitype
+ofm2opl
+okular
+oldfind
+omfonts
+omshell
+on_ac_power
+onto2vocabularyclass
+ooxml2doc
+ooxml2odt
+ooxml2pdf
+opalc++
+opalcc
+opal_wrapper
+openssl
+opl2ofm
+opldecode
+opt
+opt-3.0
+orbd
+orca
+ortec++
+ortecc
+os-prober
+ot2kpx
+otangle
+otp2ocp
+outocp
+ovf2ovp
+ovp2ovf
+pacat
+pack200
+pacmd
+pactl
+padsp
+pager
+palimpsest
+palmtopnm
+pamcut
+pamdeinterlace
+pamdice
+pamfile
+pamoil
+pamon
+pamstack
+pamstretch
+pamstretch-gen
+panel-test-applets
+paperconf
+paplay
+parallel
+parec
+parecord
+partx
+passwd
+paste
+pasuspender
+patch
+patgen
+pathchk
+pathplot
+pax11publish
+pbibtex
+pbmclean
+pbmlife
+pbmmake
+pbmmask
+pbmpage
+pbmpscale
+pbmreduce
+pbmtext
+pbmtextps
+pbmto10x
+pbmtoascii
+pbmtoatk
+pbmtobbnbg
+pbmtocmuwm
+pbmtoepsi
+pbmtoepson
+pbmtog3
+pbmtogem
+pbmtogo
+pbmtoicon
+pbmtolj
+pbmtomacp
+pbmtomda
+pbmtomgr
+pbmtonokia
+pbmtopgm
+pbmtopi3
+pbmtoplot
+pbmtoppa
+pbmtopsg3
+pbmtoptx
+pbmtowbmp
+pbmtox10bm
+pbmtoxbm
+pbmtoybm
+pbmtozinc
+pbmupc
+pcimodules
+pcre-config
+pcxtoppm
+pdb
+pdb2.6
+pdb2.7
+pdb3
+pdb3.2
+pdf180
+pdf270
+pdf2dsc
+pdf2ps
+pdf90
+pdfannotextractor
+pdfatfi
+pdfbook
+pdfclose
+pdfcrop
+pdfetex
+pdfflip
+pdffonts
+pdfimages
+pdfinfo
+pdfjam
+pdfjam-pocketmod
+pdfjam-slides3up
+pdfjam-slides6up
+pdfjoin
+pdflatex
+pdfnup
+pdfopen
+pdfopt
+pdfpun
+pdfroff
+pdfseparate
+pdftex
+pdftexi2dvi
+pdftocairo
+pdftohtml
+pdftoppm
+pdftops
+pdftosrc
+pdftotext
+pdfunite
+pdvitomp
+pdvitype
+pedigree
+peekfd
+perf
+perf_3.2
+perl
+perl5.14.2
+perlbug
+perldoc
+perlivp
+perltex
+perlthanks
+pf2afm
+pfb2pfa
+pfbtopfa
+pfbtops
+pftp
+pg
+pgmbentley
+pgmcrater
+pgmedge
+pgmenhance
+pgmhist
+pgmkernel
+pgmnoise
+pgmnorm
+pgmoil
+pgmramp
+pgmslice
+pgmtexture
+pgmtofs
+pgmtolispm
+pgmtopbm
+pgmtoppm
+pgrep
+php
+php5
+pi1toppm
+pi3topbm
+pic
+pic2graph
+pico
+piconv
+pilconvert.py
+pildriver.py
+pilfile.py
+pilfont.py
+pilprint.py
+pinky
+pip
+pip-2.6
+pip-2.7
+pjtoppm
+pk2bm
+pkaction
+pkcheck
+pkcon
+pk-debuginfo-install
+pkexec
+pkfix
+pkfix-helper
+pkg-config
+pkgdata
+pkgenpack
+pkill
+pkmon
+pktogf
+pkttyagent
+pktype
+pl2pm
+plasmapkg
+plasma-remote-helper
+plog
+pltotf
+pmap
+pm-is-supported
+pmpost
+pngtopnm
+pnm2ppa
+pnmalias
+pnmarith
+pnmcat
+pnmcolormap
+pnmcomp
+pnmconvol
+pnmcrop
+pnmcut
+pnmdepth
+pnmenlarge
+pnmfile
+pnmflip
+pnmgamma
+pnmhisteq
+pnmhistmap
+pnmindex
+pnminterp
+pnminterp-gen
+pnminvert
+pnmmargin
+pnmmontage
+pnmnlfilt
+pnmnoraw
+pnmnorm
+pnmpad
+pnmpaste
+pnmpsnr
+pnmquant
+pnmremap
+pnmrotate
+pnmscale
+pnmscalefixed
+pnmshear
+pnmsmooth
+pnmsplit
+pnmtile
+pnmtoddif
+pnmtofiasco
+pnmtofits
+pnmtojpeg
+pnmtopalm
+pnmtoplainpnm
+pnmtopng
+pnmtops
+pnmtorast
+pnmtorle
+pnmtosgi
+pnmtosir
+pnmtotiff
+pnmtotiffcmyk
+pnmtoxwd
+po2debconf
+pod2html
+pod2latex
+pod2man
+pod2text
+pod2usage
+podchecker
+podebconf-display-po
+podebconf-report-po
+podselect
+poff
+policytool
+pon
+pooltype
+POST
+post-grohtml
+ppdc
+ppdhtml
+ppdi
+ppdmerge
+ppdpo
+pphs
+ppltotf
+ppm3d
+ppmbrighten
+ppmchange
+ppmcie
+ppmcolormask
+ppmcolors
+ppmdim
+ppmdist
+ppmdither
+ppmfade
+ppmflash
+ppmforge
+ppmhist
+ppmlabel
+ppmmake
+ppmmix
+ppmnorm
+ppmntsc
+ppmpat
+ppmquant
+ppmquantall
+ppmqvga
+ppmrainbow
+ppmrelief
+ppmshadow
+ppmshift
+ppmspread
+ppmtoacad
+ppmtobmp
+ppmtoeyuv
+ppmtogif
+ppmtoicr
+ppmtoilbm
+ppmtojpeg
+ppmtoleaf
+ppmtolj
+ppmtomap
+ppmtomitsu
+ppmtompeg
+ppmtoneo
+ppmtopcx
+ppmtopgm
+ppmtopi1
+ppmtopict
+ppmtopj
+ppmtopuzz
+ppmtorgb3
+ppmtosixel
+ppmtotga
+ppmtouil
+ppmtowinicon
+ppmtoxpm
+ppmtoyuv
+ppmtoyuvsplit
+ppmtv
+ppt2odp
+pr
+precat
+preconv
+pre-grohtml
+prename
+preunzip
+prezip
+prezip-bin
+print
+printafm
+printcal
+printenv
+printerbanner
+printer-profile
+printf
+printtarg
+procmail
+profcheck
+prove
+prtstat
+ps2ascii
+ps2eps
+ps2epsi
+ps2frag
+ps2lexmark
+ps2pdf
+ps2pdf12
+ps2pdf13
+ps2pdf14
+ps2pdfwr
+ps2pk
+ps2ps
+ps2ps2
+ps2txt
+ps4pdf
+psbook
+psed
+psfaddtable
+psfgettable
+psfstriptable
+psfxtable
+psidtopgm
+psjoin
+pslatex
+psmerge
+psnup
+psresize
+psselect
+pst2pdf
+pstoedit
+pstopnm
+pstops
+pstree
+pstree.x11
+pstruct
+ptar
+ptardiff
+ptargrep
+ptdump
+ptex
+ptftopl
+ptrepack
+ptx
+pulseaudio
+purple-remote
+purple-send
+purple-send-async
+purple-url-handler
+pwdx
+py3clean
+py3compile
+py3versions
+pyclean
+pycompile
+pydoc
+pydoc2.6
+pydoc2.7
+pydoc3
+pydoc3.2
+pygettext
+pygettext2.6
+pygettext2.7
+pygettext3
+pygettext3.2
+pyste
+python
+python2
+python2.6
+python2.7
+python2.7-config
+python3
+python3.2
+python3.2mu
+python3mu
+python-config
+pyversions
+qdbus
+qpdldecode
+qrttoppm
+qt-faststart
+querybts
+quickbook
+qvlc
+R
+rake1.9.1
+ranlib
+rarian-example
+rarian-sk-config
+rarian-sk-extract
+rarian-sk-gen-uuid
+rarian-sk-get-cl
+rarian-sk-get-content-list
+rarian-sk-get-extended-content-list
+rarian-sk-get-scripts
+rarian-sk-install
+rarian-sk-migrate
+rarian-sk-preinstall
+rarian-sk-rebuild
+rarian-sk-update
+rasttopnm
+rawshark
+rawtopgm
+rawtoppm
+rcp
+rcs-checkin
+rcs-checkin.emacs23
+rctest
+rdesktop
+rdoc
+rdoc1.8
+rdoc1.9.1
+readelf
+recode-sr-latin
+red
+refer
+refine
+rename
+rename.ul
+renice
+reportbug
+report-hw
+repstopdf
+reset
+resize
+rev
+revfix
+rfcomm
+rgb3toppm
+rgrep
+rgview
+rgvim
+rhythmbox
+rhythmbox-client
+ri
+ri1.8
+ri1.9.1
+rletopnm
+rlogin
+rmid
+rmiregistry
+roff2dvi
+roff2html
+roff2pdf
+roff2ps
+roff2text
+roff2x
+routef
+routel
+rpcclient
+rpcgen
+rpcinfo
+rpdfcrop
+Rscript
+rsh
+rstart
+rstartd
+rsync
+rtstat
+rubibtex
+ruby
+ruby1.8
+ruby1.9.1
+rumakeindex
+runcon
+runghc
+runhaskell
+run-mailcap
+run-with-aspell
+runxlrd
+rview
+rvim
+rvlc
+rxvt
+rxvt-unicode
+rygel
+rygel-preferences
+s2p
+sane-find-scanner
+savelog
+sbigtopgm
+scanimage
+scanin
+scp
+screendump
+script
+scriptreplay
+scrollkeeper-config
+scrollkeeper-extract
+scrollkeeper-gen-seriesid
+scrollkeeper-get-cl
+scrollkeeper-get-content-list
+scrollkeeper-get-extended-content-list
+scrollkeeper-get-index-from-docpath
+scrollkeeper-get-toc-from-docpath
+scrollkeeper-get-toc-from-id
+scrollkeeper-install
+scrollkeeper-preinstall
+scrollkeeper-rebuilddb
+scrollkeeper-uninstall
+scrollkeeper-update
+scrot
+sdiff
+sdptool
+sdw2odt
+seahorse
+see
+select-default-iwrap
+sem
+sensible-browser
+sensible-editor
+sensible-pager
+seq
+servertool
+servicemenudeinstallation
+servicemenuinstallation
+sessreg
+setarch
+setfacl
+setkeycodes
+setleds
+setlogcons
+setmetamode
+setpci
+setsid
+setterm
+setvtrgb
+setxkbmap
+sftp
+sg
+sgitopnm
+sha1sum
+sha224sum
+sha256sum
+sha384sum
+sha512sum
+shasum
+shotwell
+shotwell-video-thumbnailer
+showchar
+showconsolefont
+showfont
+showkey
+showrgb
+shred
+shuf
+simpdftex
+simple-scan
+simpprof
+sirtopnm
+size
+skill
+slabtop
+sldtoppm
+slock
+slogin
+slxdecode
+smbcacls
+smbclient
+smbcquotas
+smbget
+smbpasswd
+smbspool
+smbtar
+smbtree
+smime_keys
+smproxy
+snice
+soelim
+soffice
+software-properties-gtk
+solid-hardware
+sopranocmd
+sopranod
+sort
+sound-juicer
+spctoppm
+spd-conf
+spd-say
+speaker-test
+spec2cie
+specplot
+speech-dispatcher
+splain
+split
+splitfont
+splitindex
+splitti3
+spotread
+sprof
+sputoppm
+spyd2en
+spyd4en
+sq
+sql
+sqlite3
+sselp
+ssh
+ssh-add
+ssh-agent
+ssh-argv0
+ssh-copy-id
+ssh-keygen
+ssh-keyscan
+ssh-vulnkey
+ssid
+st
+st4topgm
+start-pulseaudio-kde
+start-pulseaudio-x11
+startx
+stat
+stdbuf
+strace
+stream
+stream.im6
+strings
+strip
+sty2dtx
+sudo
+sudoedit
+sudoreplay
+sum
+sushi
+su-to-root
+svlc
+svm-checkdata
+svm-easy
+svm-grid
+svm-predict
+svm-scale
+svm-subset
+svm-train
+svn
+svnadmin
+svnauthz-validate
+svndumpfilter
+svnlook
+svnmucc
+svn-multi
+svn-populate-node-origins-index
+svnserve
+svnsync
+svnversion
+swarp
+sxw2odt
+synaptic-pkexec
+synclient
+synctex
+syndaemon
+synthcal
+synthread
+tabbed
+tabs
+tac
+tail
+tangle
+targen
+tasksel
+taskset
+tbl
+tclsh
+tclsh8.4
+tclsh8.5
+teckit_compile
+tee
+telnet
+telnet.netkit
+test
+testparm
+testparm.samba3
+testrb
+testrb1.8
+testrb1.9.1
+tex
+texconfig
+texconfig-dialog
+texconfig-sys
+texcount
+texdef
+texdiff
+texdirflatten
+texdoc
+texdoctk
+texhash
+texi2dvi
+texi2pdf
+texindex
+texlinks
+texliveonfly
+texloganalyser
+texlua
+texluac
+text2pcap
+tfmtodit
+tftopl
+tgatoppm
+thinkjettopbm
+thumbpdf
+tic
+tie
+tiffgamut
+tifftopnm
+time
+timeout
+tload
+tl-paper
+tnameserv
+toc2cddb
+toc2cue
+toe
+tomboy
+top
+tor
+tor-gencert
+torify
+tor-resolve
+torsocks
+totem
+totem-audio-preview
+totem-video-indexer
+totem-video-thumbnailer
+touch
+tpic2pdftex
+tput
+tr
+tracepath
+tracepath6
+traceproto
+traceproto.db
+traceroute
+traceroute6
+traceroute6.db
+traceroute6.iputils
+traceroute.db
+traceroute-nanog
+tracker-control
+tracker-import
+tracker-info
+tracker-needle
+tracker-preferences
+tracker-search
+tracker-sparql
+tracker-stats
+tracker-tag
+transmission-gtk
+transset
+trayer
+troff
+truncate
+tryaffix
+tset
+tsort
+ttf2afm
+ttf2pk
+ttf2tfm
+ttfdump
+tty
+txt2ti3
+typeoutfileinfo
+tzselect
+ucf
+ucfq
+ucfr
+uconv
+ucs2any
+udisks
+udisks-tcp-bridge
+ufraw-batch
+ul
+ulqda
+umax_pp
+unattended-upgrade
+unattended-upgrades
+unexpand
+unicode_stop
+uniq
+unlink
+unlzma
+unoconv
+unopkg
+unpack200
+unshare
+unsq
+unxz
+unzip
+unzipsfx
+upbibtex
+update-alternatives
+updatedb
+updatedb.mlocate
+update-desktop-database
+update-gconf-defaults
+update-menus
+update-mime-database
+update-mime-database.real
+update-pciids
+updmap
+updmap-sys
+updvitype
+upower
+uppltotf
+uptex
+uptftopl
+uptime
+urxvt
+urxvtc
+urxvtcd
+urxvtd
+usb-devices
+usbhid-dump
+usb_printerid
+users
+usewithtor
+uxterm
+valgrind
+valgrind.bin
+valgrind-listener
+verify
+vftovp
+vgdb
+vi
+view
+viewgam
+viewres
+vim
+vim.basic
+vimdiff
+vim.gtk
+vim.tiny
+vimtutor
+vinagre
+vino-passwd
+vino-preferences
+virt_mail
+virtuoso-t
+vlc
+vlc-wrapper
+vlna
+vmstat
+vmwarectrl
+volname
+vpe
+vpl2ovp
+vpl2vpl
+vptovf
+w
+w3m
+w3mman
+wall
+watch
+wbmptopbm
+wc
+weave
+weka
+wftopfa
+wget
+whatis
+whereis
+which
+whiptail
+who
+whoami
+whois
+wicd-client
+wicd-gtk
+winicontoppm
+wireshark
+wish
+wish8.4
+wish8.5
+wmf2eps
+wmf2fig
+wmf2gd
+wmf2svg
+wmf2x
+wmname
+word-list-compress
+wovp2ovf
+wpa_passphrase
+w.procps
+write
+www-browser
+X
+X11
+x11perf
+x11perfcomp
+x86_64
+x86_64-linux-gnu-cpp
+x86_64-linux-gnu-cpp-4.6
+x86_64-linux-gnu-cpp-4.7
+x86_64-linux-gnu-g++
+x86_64-linux-gnu-g++-4.7
+x86_64-linux-gnu-gcc
+x86_64-linux-gnu-gcc-4.6
+x86_64-linux-gnu-gcc-4.7
+x86_64-linux-gnu-gcc-ar-4.7
+x86_64-linux-gnu-gcc-nm-4.7
+x86_64-linux-gnu-gcc-ranlib-4.7
+x86_64-linux-gnu-gfortran
+x86_64-linux-gnu-gfortran-4.7
+xargs
+xauth
+xbiff
+xbmtopbm
+xbrlapi
+xcalc
+xchat
+xclipboard
+xclock
+xcmsdb
+xconsole
+xcursorgen
+xcutsel
+xdg-desktop-icon
+xdg-desktop-menu
+xdg-email
+xdg-icon-resource
+xdg-mime
+xdg-open
+xdg-screensaver
+xdg-settings
+xdg-user-dir
+xdg-user-dirs-gtk-update
+xdg-user-dirs-update
+xditview
+xdpyinfo
+xdriinfo
+xdvi
+xdvi.bin
+xdvipdfmx
+xdvi-xaw
+xedit
+Xephyr
+xetex
+xev
+xeyes
+xfd
+xfontsel
+xfsinfo
+xgamma
+xgc
+xgettext
+xhost
+xicclu
+ximtoppm
+xinit
+xkbbell
+xkbcomp
+xkbevd
+xkbprint
+xkbvleds
+xkbwatch
+xkeystone
+xkill
+xload
+xlogo
+xls2ods
+xlsatoms
+xlsclients
+xlsfonts
+xmag
+xman
+xmessage
+xml2-config
+xmlcatalog
+xmllint
+xmodmap
+xmonad
+xmore
+Xorg
+xpmtoppm
+xprop
+xqxdecode
+xrandr
+xrdb
+xrefresh
+x-session-manager
+xset
+xsetmode
+xsetpointer
+xsetroot
+xsetwacom
+xsm
+xstdcmap
+xsubpp
+xterm
+x-terminal-emulator
+xtotroff
+xulrunner-17.0
+xulrunner-24.0
+xvidtune
+xvinfo
+xvminitoppm
+xwd
+xwdtopnm
+x-window-manager
+xwininfo
+xwud
+x-www-browser
+xxd
+xz
+xzcat
+xzcmp
+xzdiff
+xzegrep
+xzfgrep
+xzgrep
+xzless
+xzmore
+ybmtopbm
+yelp
+yes
+yuvsplittoppm
+yuvtoppm
+zdump
+zeisstopnm
+zeitgeist-daemon
+zenity
+zip
+zipcloak
+zipgrep
+zipinfo
+zipnote
+zipsplit
+zjsdecode
+zsoelim
+$ ls /usr/bin[1Pbin[1Pbin[1Pbin[1Pbin
+bash	       nano
+bunzip2        nc
+busybox        nc.traditional
+bzcat	       netcat
+bzcmp	       netstat
+bzdiff	       nisdomainname
+bzegrep        ntfs-3g
+bzexe	       ntfs-3g.probe
+bzfgrep        ntfs-3g.secaudit
+bzgrep	       ntfs-3g.usermap
+bzip2	       ntfscat
+bzip2recover   ntfsck
+bzless	       ntfscluster
+bzmore	       ntfscmp
+cat	       ntfsdump_logfile
+chacl	       ntfsfix
+chgrp	       ntfsinfo
+chmod	       ntfsls
+chown	       ntfsmftalloc
+chvt	       ntfsmove
+cp	       ntfstruncate
+cpio	       ntfswipe
+dash	       open
+date	       openvt
+dd	       pidof
+df	       ping
+dir	       ping6
+dmesg	       ps
+dnsdomainname  pwd
+domainname     rbash
+dumpkeys       readlink
+echo	       rm
+ed	       rmdir
+egrep	       rnano
+false	       run-parts
+fgconsole      sed
+fgrep	       setfacl
+findmnt        setfont
+fuser	       setupcon
+fusermount     sh
+getfacl        sh.distrib
+grep	       sleep
+gunzip	       ss
+gzexe	       stty
+gzip	       su
+hostname       sync
+ip	       tailf
+kbd_mode       tar
+kill	       tempfile
+kmod	       touch
+less	       true
+lessecho       ulockmgr_server
+lessfile       umount
+lesskey        uname
+lesspipe       uncompress
+ln	       unicode_start
+loadkeys       vdir
+login	       vmmouse_detect
+lowntfs-3g     which
+lsblk	       ypdomainname
+ls.bugs.bunny  zcat
+lsmod	       zcmp
+mkdir	       zdiff
+mknod	       zegrep
+mktemp	       zfgrep
+more	       zforce
+mount	       zgrep
+mountpoint     zless
+mt	       zmore
+mt-gnu	       znew
+mv
+$ 
+$ clear
+[H[2J$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ g[K[K$ [K$ make [K[K;make install[C[C[C[C[C[1@e[C[1@ [C[C[C[C[C[C[C[C[C[C[C[C^C
+$ ./[K[Kconfu[K[Kfigure;autoconf ; autto[K[KomKW[K[Kake[K$ configure;autoconf ; automake^C
+$ exit
+exit
+
+Script done on Thu 16 Oct 2014 06:28:01 PM PDT

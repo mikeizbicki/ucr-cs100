@@ -36,6 +36,8 @@ Again, the tests you choose will be the most important part of your grade.
 
 Remember that the commands `ls -l -R`, `ls -R -l`, `ls -lR` and `ls -Rl` should all do the same thing.  You must consider how these flags interact with the `-a` flag and the optional file parameters.
 
+As with your previous assignments: Your `tests` directory will contain a file called `ls.script` that contains all of the test cases you tried. You will generate the file using the script command, and it must be succinct (i.e. it cannot have unnecessary commands in it). You should use comments in your script to document what you are testing with each test case.
+
 **IMPORTANT:** If you are unsure if your test cases are sufficient, ask one of the instructors to review them *before the deadline*.
 
 ### collaboration policy
@@ -66,3 +68,25 @@ You will receive up to 15 points extra credit if your `ls` command has this abil
 In particular, you should print directories in blue; executables in green; and hidden files (with the `-a` flag only) with a gray background.
 These effects should be combinable.
 So if you have a hidden directory, it should be displayed as blue text on top of a gray background.
+
+#### lab 5 integration
+
+Everyone who showed up for lab 5 got full credit on the lab.
+But your grade on this assignment will depend on your lab 5.
+In particular:
+
+0. You should include all of lab 5 in your submission (`hw1` tag) for this assignment.
+
+1. Your `Makefile` must have an additional target called `cp`.
+This target should build the `cp` program you developed in lab and place it in the `bin` folder.
+The `all` target should depend on the `cp` target.
+
+2. The resulting `cp` executable should behave as specified in the lab.
+In particular: (a) I do not care what the optional parameter is, but I must be able to place the parameter anywhere in the argument list; (b) there should be an error message if the location you are copying to already exists or is a directory.
+
+3. Your account must not make any commits to the source code for `cp`.
+Only your partner's account should be making these commits.
+We will verify this by running `git blame` on your source code.
+It should show only your partner's name, and not yours.
+
+If you do not meet these requirements, you will lose up to 20 points of credit on this assignment.
