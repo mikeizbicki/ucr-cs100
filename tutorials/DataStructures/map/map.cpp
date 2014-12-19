@@ -1,5 +1,4 @@
 #include <iostream>
-#include <iomanip>
 #include <map>
 #include <boost/foreach.hpp>
 
@@ -17,8 +16,8 @@ int main(){
     m[".."] = "perm sz user group date ..";
 
     /*Originally the map was created in seemingly random order, but stl maps
-          sort by the Key following the default key_comp() function.
-      
+          are implemented as binary trees so when iterating through the map
+          the iterator will traverse the tree in order.
     */
     cout << "----------------------------------------" << endl;
     pair<string, string> p;
