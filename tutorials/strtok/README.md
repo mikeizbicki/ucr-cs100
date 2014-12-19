@@ -184,10 +184,9 @@ From this we see that `strtok` was able to get the last token, even though the d
 that the function was able to handle the case of an empty string. Why is that?
 
 In the section 
-[**One Small Step for String**](https://github.com/Dave864/ucr-cs100/tree/cs100-2014fall/tutorials/strtok#one-small-step-for-string) 
-above it was stated that to get the token, `strtok` looks for the first substring in the `str` argument 
-that does not contain the deliminator `delim`. So, if the delimiter is not in the `str` argument, then 
-the entire argument is considered to be the token.
+[**One Small Step for String**][] above it was stated that to get the token, `strtok` looks for the first
+substring in the `str` argument that does not contain the deliminator `delim`. So, if the delimiter is not 
+in the `str` argument, then the entire argument is considered to be the token.
 ```
 char example_3[] = "This is the entire token";
 char *first_token = strtok(example_3, "A");
