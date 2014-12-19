@@ -415,8 +415,9 @@ Testing
 From this we see that `strtok` did not look for the first occurence of the exact sequence; it looked for the
 first occurence of any of the characters passed into the `delim` argument.
 
-It should also be noted that in subsequent calls to `strtok` when parsing a string, you can change what the
-delimiter is to get different tokens.
+Another thing we have not discussed is changing the delimiter in subsequent calls to `strtok`. There is
+nothing really significant about this other than the fact that you can do it. The following
+program is an example of changing the delimiter in subsequent calls of `strtok`.
 ```
 #include <iostream>
 #include <string.h>
@@ -437,6 +438,7 @@ int main()
 	return 0;
 }
 ```
+When you compile and execute the program, you get:
 ```
 I have
 changed
