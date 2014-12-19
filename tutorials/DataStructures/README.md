@@ -18,7 +18,7 @@
 
 ## Purpose
 
-This is meant to be a simple refresher for the data structures you should have had hammered into you in your CS14 class. Since you have just finished a quarter of implementing data structures against your will and hearing more about them is (probably) the last thing you want, I tried to make this extremely simple to work more as a reminder these structures exist (and are easy to implement). But it is important to remember they exist. Don’t ignore them just because you’re tired of using them. Hence this simple refresher of a few data structures you might find useful.
+This is meant to be a simple refresher for the data structures you should have had hammered into you in your CS14 class. Since you have just finished a quarter of implementing data structures against your will and hearing more about them is (probably) the last thing you want, I tried to make this extremely simple to work more as a reminder these structures exist (and are easy to implement). But it is important to remember they exist (don’t ignore them just because you’re tired of using them). You might find this simple refresher of a few data structures useful.
 
 Many of these data structures exist in the Boost library and I would highly recommend getting used to some of the Boost features. Boost has some rather obscure data structures that might be exactly what you need one day. The only reason this tutorial does not cater to the Boost library is that only a few of the Boost packages are installed automatically on Linux, and that the lab machines do not contain a majority of the ones you would need to use the Boost versions of these structures.
 
@@ -28,7 +28,7 @@ Many of these data structures exist in the Boost library and I would highly reco
 
 ### Map
 
-A map is a container filled with Pairs made out of a Key, used to reference/retrieve data, and the actual data itself. An important piece of information to remember about maps are that they are sorted by design as you add to them based off the map's comparison object. To create a map you must decide what you want to store, and how you wish to reference that data. If your
+A map is a container filled with Pairs made out of a Key, used to reference/retrieve data, and the actual data itself. An important piece of information to remember about maps is that they are sorted by design as you add to them based off the map's comparison object. To create a map you must decide what you want to store, and how you wish to reference that data. If your
  `pair<const Key, data_type data>` was `pair<int, string>`, you would have a
   map of int values which referenced some data of type string. Basically, at each index of the `map (m[int])` you would have a string value.
 
@@ -50,7 +50,7 @@ Now maps, by default, are ordered. There also exists the unordered version which
 
 ### Lists
 
-Linked lists are made up of nodes containing the data and a pointer to the next position in the list. This gives lists an advantage over vectors when inserting and deleting since it only requires changing the pointers as opposed to shifting the entire vector over. It should be mentioned as well that a list maintains an advantage over vectors in that vector expansion is costly while lists only need to dynamically allocate a new node. What you lose for this advantage is the ability of random access, making it slow to search through the list. To create a list, you need only to deal with your desired data types.
+Linked lists are made up of nodes containing the data and a pointer to the next position in the list. This gives lists an advantage over vectors when inserting and deleting since it only requires changing the pointers as opposed to shifting the entire vector over. It should be mentioned as well that a list maintains an advantage over vectors in that vector expansion is costly while lists only need to dynamically allocate a new node. What you lose for this advantage is the ability of random access, making it slow to search through the list. To create a list, you only need to deal with your desired data types.
 
 ```
 #include <list>
@@ -72,7 +72,7 @@ The default linked list is a doubly linked list (it contains pointers to the pre
 
 ### Stack
 
-(First In Last Out)
+(Last In, First Out)
 
 Stacks are interesting in that they only deal with the top of the structure. You either push to the top or pop off the top. A good example of an easy stack implementation is using it to reverse something. When you push, say a set of strings, to the stack after popping all of the elements off of the stack, the sentence of strings would be in reverse.
 
@@ -100,7 +100,7 @@ Stacks are used mostly in compilers and operating systems. If that type of thing
 
 ### Queue
 
-(First In First Out)
+(First In, First Out)
 
 Queues can be thought of as a tunnel. What goes into the tunnel first is going to be the first thing to come out of the tunnel. The most common use of this is for job scheduling (just think of a login queue for a game. Those who enter the queue first are those who get logged in first). Just like a stack, the main two operations for a queue are push and pop. You could use this in the case where you had a set of operations you wanted to execute sequentially. By putting them into a queue and just operating on the item popped off the queue you could iterate through said operations.
 
@@ -123,11 +123,11 @@ int main(){
 }
 ```
 
-There also exist priority queues (still `#include <queue>` but declared as `priority_queue<Typename> pq;`) which instead of just pushing to the back, `push()` calls the function `push_back()` of the object being pushed then calls `push_heap` (all inside of the original `push()` function) to reorder the priority queue. So instead of popping the very first thing pushed, what is popped is the item with the highest priority based on the container. So for an example where the container is an int the object with the highest priority would be the highest number. Much like stacks, queues are used in operating systems. Except queues are used more with process scheduling.
+There also exist priority queues (still `#include <queue>` but declared as `priority_queue<Typename> pq;`) which instead of just pushing to the back, `push()` calls the function `push_back()` of the object being pushed then calls `push_heap` (all inside of the original `push()` function) to reorder the priority queue. So instead of popping the very first thing pushed, what is popped is the item with the highest priority based on the container. So for an example where the container is an int, the object with the highest priority would be the highest number. Much like stacks, queues are used in operating systems. Except queues are used more with process scheduling.
 
 ### Vector
 
-Vectors are the go-to answer whenever a simple array is needed but the size is not known at initialization. Internally, a vector is a dynamically allocated array that reallocates more memory when a new element is pushed but requires more space. As stated above in the "List" section, vectors perform efficiently with random access but inefficiently when inserting or removing items. One thing to note with vectors are their ability to change their size or capacity. Capacity refers to the amount of memory allocated to the array; size refers to the number of elements in the vector. Vectors are nice in their simplicity and that they cover the basic needs of many situations.
+Vectors are the go-to answer whenever a simple array is needed but the size is not known at initialization. Internally, a vector is a dynamically allocated array that reallocates more memory when a new element is pushed but requires more space. As stated above in the "List" section, vectors perform efficiently with random access but inefficiently when inserting or removing items. One thing to note with vectors is their ability to change their size or capacity. Capacity refers to the amount of memory allocated to the array; size refers to the number of elements in the vector. Vectors are nice in their simplicity and in that they cover the basic needs of many situations.
 
 ```
 #include <vector>    //vector example is a bit too easy, just treat it as

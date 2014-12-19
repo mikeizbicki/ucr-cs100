@@ -72,7 +72,7 @@ $ ./hello.sh
 Hello world!!!
 ```
 
-Tip: there is an alterative way to change permission. If you want to learn more about it, you can go to this link: http://linuxcommand.org/lts0070.php 
+Tip: there is an alternative way to change permissions. If you want to learn more about it, you can go to this link: http://linuxcommand.org/lts0070.php 
 
 ##Part 2: More syntaxs about shell scripts
 
@@ -123,7 +123,7 @@ d
 5
 ```
 
-'$#' represents the number of the total arguments. '$0' represents the first argument which is script itself. '$1' represents your first provided argument. Likewise, '$2' represents the second provided argument, '$3' represents the third provided argument, and etc.
+'$#' represents the number of the total arguments. '$0' represents the first argument which is the script itself. '$1' represents your first provided argument. Likewise, '$2' represents the second provided argument, '$3' represents the third provided argument, and so on.
 
 There are also some preset variables in Unix, and you can use those variables in any other programs:
 

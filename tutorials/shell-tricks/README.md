@@ -1,6 +1,6 @@
 #Using Linux command easier
 
-The 10 tricks people should know about linux command.
+The 10 tricks people should know about Linux commands.
 Note: these tricks apply to bash, which is the default shell on most Linux systems.
 
 ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
@@ -17,7 +17,7 @@ To create an empty file, type:
 
 	$ touch filename.txt
 
-Is always a good practice to write the extension of your file such as .txt, .c, .cpp or any other you might find useful.
+It is always a good practice to write the extension of your file such as .txt, .c, .cpp or any other you might find useful.
 
 To create a directory, type:
 
@@ -57,7 +57,7 @@ The -f flag stands for 'force' referring to 'ignore nonexistent files, never pro
 
 ![Image of Help](http://buildmoneyonthenet.com/wp-content/uploads/2014/08/YOU-NEED-HELP-MY-FRIEND.jpg)
 
-It is not a shame to ask for help while using linux. Even for those experts using shell there will always be a flag or maybe a command that causes headaches into their brilliant minds. So one of the best tips we could give you is about getting the help you need.
+It is not a shame to ask for help while using Linux. Even for those experts using shell there will always be a flag or maybe a command that causes headaches into their brilliant minds. So one of the best tips we could give you is about getting the help you need.
 
 Let's pretend you want to use the 'mv' command, but you are afraid of losing files. Before you start you could type:
 
@@ -117,9 +117,9 @@ Another thing you should be aware of is that you can actually clean your tracks 
 
 These are three simple commands that you use and apply to your history. The first example using the -c flag clears your history.
 
-The next command we are actually changing a variable related to the 'history' command settings.
+In the next command we are actually changing a variable related to the 'history' command settings.
 
-HISTSIZE is related to how many commands you want to keep track. Setting is to 0 we are actually disabling the function. If you want to re-enable type a value different from 0.
+HISTSIZE is related to how many commands you want to keep track of. The given command is setting this to 0 so we are actually disabling the function. If you want to re-enable type a value different from 0.
 
 
 
@@ -157,10 +157,10 @@ A commonly used example:
 
     $ find . -iname '*.conf'
 
-Notice the single quotes around `*.conf`. What would happen without it? Bash would interpret the `*.conf` as a glob expression and expand it to all files ending in `.conf` in the current directory. (we don't want this to happen!) This could prevent from looking for all `.conf` files in subdirectories. Remember: we should always quote anything that
+Notice the single quotes around `*.conf`. What would happen without it? Bash would interpret the `*.conf` as a glob expression and expand it to all files ending in `.conf` in the current directory. (we don't want this to happen!) This could prevent it from looking for all `.conf` files in subdirectories. Remember: we should always quote anything that
 might contain special characters.
 
-It need to be known that only single quotes can prevent every character from being interpreted; double quotes still allow bash to interpret some characters. On the other hand, when working with variables, double quotes come in handy to prevent word splitting(it's useful!), which is often used in scripting.
+It needs to be known that only single quotes can prevent every character from being interpreted; double quotes still allow bash to interpret some characters. On the other hand, when working with variables, double quotes come in handy to prevent word splitting (it's useful!), which is often used in scripting.
 
 You see, when a filename contains whitespace, bash splits the name on that whitespace when you leave variables unquoted. Suppose you have a file named “spaced name.txt, you put it in a variable `filename= spaced name.txt`, and then you try to move it to “unspacedname.txt” by executing `mv $filename unspacedname.txt`. You’ll get the error “mv: target ’unspacedname.txt‘ is not a directory”. This is because mv gets executed like this: `mv spaced name.txt unspacedname.txt`. In other words, mv will try to move two files, “spaced name.txt” to “unspacedname.txt”,
 and fail because moving multiple files to a single destination is only allowed when the destination is a directory.
@@ -176,8 +176,7 @@ So you see, quoting is a good habit to prevent your commands and scripts from do
 
 ![efficiency, all I care](http://1funny.com/wp-content/uploads/2009/07/efficient-truck-transport.jpg)
 
-Think of showing differences of two commands quickly? One way is to redirect the output to a temporary file
-for both of them, and diff those files, like this:
+Want to of show the differences of two commands quickly? One to do this way is to redirect the output to a temporary file for both of them, and diff those files, like this:
 
     $ find /etc | sort > local_etc_files
     $ find /mnt/remote/etc | sort > remote_etc_files
@@ -274,7 +273,7 @@ logarithm!
 
 ![Image of a priest](http://catholicmemes.com/wp-content/uploads/2012/11/14144_132533646896386_329999885_n.png)
 
-Convert documents and pictures are a very simple task that can be done manually... Now imagine that you need to convert a whole directory with hundreds of pictures.
+Converting documents and pictures are very simple tasks that can be done manually... Now imagine that you need to convert a whole directory with hundreds of pictures.
 How would you do that?
 
 Using the 'convert' command is the easiest way to accomplish that. This command is a member of the imagemagick suite of tools so you might have to install it running the command:
@@ -308,7 +307,7 @@ Pretend that you messed up an important document with a misspelled word and you 
 
 Relax your problems are over now, you can fix it in one line using the 'sed' command!
 
-Sed stands for Stream EDitor and can be very useful when passing the right flags to it. What distinguishes it from others editors is the way it works making only one pass over the input(s) and the ability to filter text through a pipeline. Sed has several commands, but most commom people use is the substitute command: s.
+Sed stands for Stream EDitor and can be very useful when passing the right flags to it. What distinguishes it from others editors is the way it works making only one pass over the input(s) and the ability to filter text through a pipeline. Sed has several commands, but the most common one people use is the substitute command: s.
 
 If you type:
 
@@ -330,11 +329,11 @@ file.txt is the name of your actual file, that you want to modify.
 
 In the second example we are using I/O redirection. The 'cat' command will take the content of file.txt as input, send it to 'sed' replace the words and finally sending to another 'cat' which will create a new file with the desired changes.
 
-You also can use regular expressions to match a defined pattern in 'sed' command, what can make your life even easier in a different task. In our next example you need to put all ucr e-mail addresses inside parenthesis. So we would do:
+You can also use regular expressions to match a defined pattern in the 'sed' command. This can make your life even easier in a different task. In our next example you need to put all ucr e-mail addresses inside parenthesis. So we would do:
 
 	$ sed 's/[a-z0-9]*@ucr.edu/(&)/' <file.txt >newfile.txt
 
-Remember that you can use the same command with a similar syntax in vim what could help you to write code, change variable names etc.
+Remember that you can use the same command with similar syntax in vim, which can help you write code, change variable names, and more. 
 In vim, type:
 
 	:s/wrong/right/

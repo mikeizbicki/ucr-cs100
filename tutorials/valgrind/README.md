@@ -5,7 +5,7 @@ Valgrind Tutorial
 What is Valgrind?
 -----------------
 
-Valgrind is a linux tool that helps you deal with debugging memory management issues. 
+Valgrind is a Linux tool that helps you deal with debugging memory management issues. 
 
 Valgrind has a function called Memcheck that will display the number of allocations and deallocations in bytes.
 

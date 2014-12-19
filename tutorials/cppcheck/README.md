@@ -144,7 +144,7 @@ $
 ```
 ####Why?
 Because you wrote a function when it wasn't even needed. Sheesh what a waste of time.
-Ok, fine heres what this code is and does. We added the main function and we still get the same as errors for not using variables i, but now we also get errors for an unused function `greaterThanZero`.
+Ok, fine here's what this code is and does. We added the main function and we still get the same as errors for not using variables i, but now we also get errors for an unused function `greaterThanZero`.
 _l2Code_
 To fix the problems listed above in the cppcheck report would be to remove the unused function and to remove the variables that were not used.
 What we will be left with will be the `main()` function and the `foo(int x, int y)` function.
@@ -206,7 +206,7 @@ $
 ####Why is there memory vegetable?!?
 Aside from using bad coding practices like using `malloc` instead of `a = new float[somenumber]`, this code is similar to the one prior to this.
 By not using the `free` call to free the allocated memory, the leak will occur when the pointer called "a" goes out of scope.
-Ideally the code should looks something like this:
+Ideally, the code should look something like this:
 ```
 void leakseverywhere(void)
 {
@@ -330,7 +330,7 @@ Checking TrickyArray.cpp...
 $
 ```
 ####But didn't you say it checked array bounds?
-Yes, it does check array bounds, but not if its index is passed in through an argument. Currently, cppcheck does not check functions with respect of the parameter.
+Yes, it does check array bounds, but not if its index is passed in through an argument. Currently, cppcheck does not check functions with respect to the parameter.
 Cppcheck checks the body of the code but does not evaluate the whole function with the argument included. Thus, it does not give us a message about it being out of bounds.
 Remember, one of the goals of cppcheck is to have little to no false positives. This is an example where cppcheck fails where other static debugger succeed.         
 

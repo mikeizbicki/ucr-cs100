@@ -77,7 +77,7 @@ $ ls -a
 $ ls -l
 $ ls Desktop
 ```
-The `-a` and `-l` are flags. Most commands come with optional parameters that change how they function. `ls` by itself with simply output the files and directories in the current directory. 
+The `-a` and `-l` are flags. Most commands come with optional parameters that change how they function. `ls` by itself will simply output the files and directories in the current directory. 
 
 `ls Desktop` will output the files and directories in the `Desktop` directory.
 
@@ -121,7 +121,7 @@ Lets check out the file you just created using the command:
 ```
 $ ls
 ```
-Notice how the file now appears in the directory. congratulations, you've just created your first file on linux!
+Notice how the file now appears in the directory. Congratulations, you've just created your first file on linux!
 
 **Tip:** If you `touch` a file that already exists, it will simply update the date last modified. Try running these commands and compare the main.cpp file with `ls -l`
 ```
@@ -143,7 +143,7 @@ The command we will use is `mkdir`. Like the `touch` command, this command also 
 
   Example: commands `mkdir ./newDir` and `mkdir newDir` will both create the directory `newDir` within your current directory.
   
-Using `mkdir`, lets create a directory name `temp` in our current directory:
+Using `mkdir`, let's create a directory named `temp` in our current directory:
 ```
 $ mkdir temp
 ```
@@ -215,7 +215,7 @@ Now lets go back to the directory you were just in previously! How do you go bac
 
 6) Write a command that changes directories to your parent directory.
 
-If you haven't run that command yet, **do not move on until you do so.** 
+If you haven't ran that command yet, **do not move on until you do so.** 
 
 You are now in the parent directory for `CS100`. Type `pwd` and you will see something along the lines of...
 ```
@@ -311,7 +311,7 @@ man (manual)
 ```
 man [commandname]
 ```
-Lets use the `man` command to find out the purpose of `cat`:
+Let's use the `man` command to find out the purpose of `cat`:
 ```
 $ man cat
 ```
@@ -359,7 +359,7 @@ By now, you should have finished 7 exercises! In order to show your proficiency 
 
 8) Write a command that removes a file called `gumwrapper`. If it does not exist, create a file called `gumwrapper` and move it to an existing directory called `trash`. Connectors are allowed.
 
-9) Write a command that creates a directory called `sports`. If sports already existed, do nothing. Otherwise, move the existing file `baseball.txt` from your parent directory into `sports`. The parent directory should not have `baseball.txt` after running this command. There are two ways to do this. Connectors are allowed.
+9) Write a command that creates a directory called `sports`. If `sports` already existed, do nothing. Otherwise, move the existing file `baseball.txt` from your parent directory into `sports`. The parent directory should not have `baseball.txt` after running this command. There are two ways to do this. Connectors are allowed.
 
 10) Assuming you are not in your HOME directory, write a command that prints out all of the files and directories in your HOME directory. You are not allowed to use connectors or the `cd` command.
 

@@ -35,8 +35,7 @@
 ####One Small Step for String (Parsing once)
 
   The example above does not make it clear exactly how `strtok` is used. Looking at how the function 
-  is set up may show some clues. Accesseing the man page for `strtok` shows the function is set up like
-  this.
+  is set up may show some clues. Accessing the man page for `strtok` shows the function is set up like this.
   ```
   #include <string.h>
   char *strtok(char *str, const char *delim);
@@ -94,9 +93,9 @@
   ```
   Why does this happen? The answer is whenever something is passed into the `str` argument for`strtok`,
   the function assumes that this is a new string to parse. The way `strtok` works is that whenever it finds a t
-  oken, it removes that token and the following deliminator from the string being looked at. It then holds on to 
+  oken, it removes that token and the following delimiter from the string being looked at. It then holds on to 
   the rest of the string to be use as the "default" if no string is passed in the next time `strtok` is called. 
-  In the above program, both calls recieved a new string to parse, overriding the default value.
+  In the above program, both calls received a new string to parse, overriding the default value.
 
   With this in mind let's change the above program and walk through what is happening.
   ```
@@ -189,7 +188,7 @@
   that the function was able to handle the case of an empty string. Why is that?
 
   In **One Small Step for String** it was stated that to get the token, `strtok` looks for the first substring
-  in the `str` argument that does not contain the deliminator `delim`. So, if the delimiter is not in the `str`
+  in the `str` argument that does not contain the delimiter `delim`. So, if the delimiter is not in the `str`
   argument, then the entire argument is considered to be the token.
   ```
   char example_3[] = "This is the entire token";
@@ -237,8 +236,8 @@
   //is seen as
   // What happens@to delimiters@ at the ends
   ```
-  For the case where the deliminator is chained together multiple times, each instance where that happens is
-  the same as if the deliminator was only placed once.
+  For the case where the delimiter is chained together multiple times, each instance where that happens is
+  the same as if the delimiter was only placed once.
   ```
   char example_7[] = "@@ What @@happens to @ chained @@@@@ delimiters";
   char *token = strtok(example_7, "@");
@@ -252,7 +251,7 @@
 
   So far we have only been using examples where the delimiter is only one letter or character. The `strtok`
   function can actually take in multi-character strings as its delimiter. However, when this is done, the
-  function doesn't look for the first occurence of the exact sequence; it looks for the first occurence of 
+  function doesn't look for the first occurrence of the exact sequence; it looks for the first occurrence of 
   any of the characters passed into the `delim` argument.
   ```
 	#include <iostream>

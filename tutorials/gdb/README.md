@@ -3,7 +3,7 @@ Basic guide for gdb
 
 #####What is gdb?
 
-GDB is a debugger which allows the user to see what is going on inside of an executed program. If the written program crashes, the user can use GDB to step through the program to see where the program crashed. GDB helps the user to find and locate bugs such as segmentation faults, errors in output formating, ect. However, gdb does not find memory leaks. In order to find memory leaks, tools such as valgrind and cppcheck should be used. One thing to remember while using GDB is that it is a tool to help a programmer debug a program. GDB does not ensure the program is perfect if ran with GDB.
+GDB is a debugger which allows the user to see what is going on inside of an executed program. If the written program crashes, the user can use GDB to step through the program to see where the program crashed. GDB helps the user find and locate bugs such as segmentation faults, errors in output formating, etc. However, gdb does not find memory leaks. In order to find memory leaks, tools such as valgrind and cppcheck should be used. One thing to remember while using GDB is that it is a tool to help a programmer debug a program. GDB does not ensure the program is perfect when a program is run with it.
 
 
 #####GDB Download
@@ -17,12 +17,12 @@ To download and install GDB, click on the following links
 
 #####Starting gdb
 
-To use `gdb` properly, we need a compiled and executable program. If you have not downloaded the test program, `test.cpp`, do so now from the repository under in `src` folder. To download the examples from the github repository, run the command:
-
+To use `gdb` properly, we need a compiled and executable program. If you have not downloaded the test program, `test.cpp`, do so now by running the following command on the given repository. It will be located in the `src` folder: 
 
 ```
 $ git clone https://github.com/kle016/gdb.git
 ```
+
 Once downloaded, you can get familiarized with GDB by going through the following examples. 
 
 These examples will be covering `run`, `quit`, `help`, `breakpoint`, `info break`, `backtrace`, `delete`, `continue`, `next`, `step`, `finish`, `print`, and `list`. In addition, you will learn how `gdb` can automatically find `segfaults`.
@@ -40,5 +40,4 @@ These examples will be covering `run`, `quit`, `help`, `breakpoint`, `info break
 
 
 By practicing with these examples, you will be able to debug your future programs more efficiently rather than going through your code, line by line and trying to find bugs. You will save time by using `gdb`.
-
 
