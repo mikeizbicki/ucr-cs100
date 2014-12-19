@@ -31,7 +31,7 @@ saves you time and sanity.
 ####One Small Step for String 
 
 The example above does not make it clear exactly how `strtok` is used. Looking at how the function 
-is set up may show some clues. Accesseing the man page for `strtok` shows the function prototype.
+is set up may show some clues. Accessing the man page for `strtok` shows the function prototype.
 ```
 #include <string.h>
 char *strtok(char *str, const char *delim);
@@ -76,7 +76,7 @@ int main()
 		<< "Token 2: " << second_token << endl;
 	return 0;
 }
-
+```
 Based on what has been learned from the `strtok` prototype you would expect the output to look like:
 ```
 Token 1: Root
