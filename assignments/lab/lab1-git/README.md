@@ -616,6 +616,10 @@ This is a full book on how to use git effectively.  It also has videos of progra
 
 http://www.git-scm.com/doc
 
+Here is a game made by previous students to test your git skills:
+
+https://github.com/hgarc014/git-game.git
+
 ## deliverables
 
 Tell the TA once you have issued your pull request.
