@@ -323,7 +323,7 @@ char *token_1 = strtok(example_6, "@");
 //example_7 = "@@Green eggs@@@and ham@@@"
 ```
 The `strtok` function keeps running this check until neither the first or last character in 
-the `str` argument are delims.
+the `str` argument are deliminators.
 ```
 //example_7[0] = '@'
 //example_7[size-1] = '@'
@@ -629,8 +629,8 @@ token = strtok_r(NULL, " ", &save_1);
 //"all " is removed from "all the things!" to get "the things!"
 //save_1 = "the things"
 ```
-You should notice that the procedure described here is very similar to the one discussed in the section 
-[**Gaze into the NULL**](#gaze-into-the-null) above, with the difference being that the string that is 
+Notice that the procedure described here is very similar to the one discussed in the section 
+[**Gaze into the NULL**](#gaze-into-the-null) above, with the difference being that the string 
 saved for later is stored in a `saveptr` rather than within `strtok_r`.
 
 In the next call to `strtok_r` we begin parsing `string_2`. We will skip the step by step walkthrough and move
