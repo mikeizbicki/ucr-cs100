@@ -122,7 +122,7 @@ char *first_token = strtok(example_2, "a");
 //"Roota" is removed from "Rootabeganot" to get "beganot", which is saved for later
 ```
 In the second call to `strtok`, a new value was passed into the `str` argument, overriding the previous saved
-string. The function then runs like before; getting the token, removing it and the delimiter and saving the 
+string. The function then runs like before; get the token, remove it and the delimiter, then save the 
 new string for later.
 ```
 char *first_copy = strtok(example_2, "a");
@@ -227,8 +227,8 @@ We know now what happens when the delimiter is not in the `str` argument. What i
 was at the beginning and or end of the argument? What about if the delimiter was chained together multiple 
 times?
 
-Let's modify the above program to see what happens when the delimiter appears at the ends of the `str`
-argument.
+Let's modify the above program to see if the output changes when the delimiter appears at the ends of the 
+`str` argument.
 ```
 #include <iostream>
 #include <string.h>
@@ -260,78 +260,183 @@ slices
 When you compare this output to the output of the previous program, you see that they are the same. It's as
 if adding the delimiters to the ends of the `str` argument **had no effect at all** on the output.
 
-For the case where the deliminator is chained together multiple times, each instance where that happens is
-the same as if the deliminator was only placed once.
+What about the case for chained delimiters? Will the output stay the same as before like it did when we added
+delimiters to the ends? Let's modify the program one more time and see what happens.
 ```
-char example_6[] = "@@ What @@happens to @ chained @@@@@ delimiters";
-char *token = strtok(example_6, "@");
-//in strtok
-//@@ What @@happens to @ chained @@@@@ delimiters 
-//is the same as
-//@ What @happens to @ chained @ delimiters
-//which is then seen as
-// What @happens to @ chained @ delimiters
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+int main()
+{
+	char example_6[] = "%%%See how%%% the modulo blade%%%%%%slices %%% through %% this string%%%%%%%";
+	//added instances of consecutive delimiters
+	char *token;
+	token = strtok(example_6, "%");
+	//prints out each token in example_6
+	while(token != NULL)
+	{
+		cout << token << endl;
+		token = strtok(NULL, "%");
+	}
+	return 0;
+}
+```
+When you compile and execute this code, you get:
+```
+See how
+ the modulo blade
+slices 
+ through 
+ this string
+```
+Just like before, it appears that chaining the delimiter multiple times did not affect the output. What is
+`strtok` doing to handle these cases?
+
+Let's look at another example and walk through what is happening
+```
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+int main()
+{
+	char example_7[] = "@@@Green eggs@@@and ham@@@@";
+	char *token_1 = strtok(example_7, "@");
+	char *token_2 = strtok(NULL, "@");
+	//prints out each token in example_7
+	cout << token_1 << endl
+		<< token_2 << endl;
+	return 0;
+}
+```
+Before `strtok` looks for tokens, it checks if any of the end characters in the string are delimiters
+and removes them if they are.
+```
+char example_7[] = "@@@Green eggs@@@and ham@@@@";
+char *token_1 = strtok(example_6, "@");
+//example_7[0] == '@'
+//example_7[size-1] == '@'
+//the first and last character are delimiters, so remove them
+//example_7 = "@@Green eggs@@@and ham@@@"
+```
+The `strtok` function keeps running this check until neither the first or last character in 
+the `str` argument are delims.
+```
+//example_7[0] = '@'
+//example_7[size-1] = '@'
+//the first and last character are delimiters, so remove them
+//example_7 = "@Green eggs@@@and ham @@"
+
+//example_7[0] = '@'
+//example_7[size-1] = '@'
+//the first and last character are delimiters, so remove them
+//example_7 = "Green eggs@@@and ham@"
+
+//example_7[0] = 'G'
+//example_7[size-1] = '@'
+//only the last character is a delimiter, so remove it
+//example_7 = "Green eggs@@@and ham"
+
+//example_7[0] = 'G'
+//example_7[size-1] = 'm'
+//neither the first or last character is a delimiter, proceed to find the first token
+
+//token_1 = "Green eggs"
+//"Green eggs@" is removed from "Green eggs@@@and ham" to get "@@and ham" which is saved for later
+```
+In other words, **`strtok` ignores any delims that are at the ends of the string being parsed**. 
+
+This is also how `strtok handles chained delimiters. Back in the section
+[**Gaze into the NULL**](#gaze-into-the-null) above it was stated that each time `strtok` found a token, 
+it would remove that token and the delimiter from the string being parsed. Note that the delimiter was only 
+one character, so if the delimiter was chained together many times, the string that is saved for later would
+have at least one delimiter character at the start. 
+By running the check for delimiters at the ends, `strtok` removes those extra delimiters. 
+```
+char *token_2 = strtok(NULL, "@");
+//NULL, or nothing, is passed into the str argument
+//find first token from leftover = "@@and ham"
+
+//leftover[0] = '@'
+//leftover[size-1] = 'm'
+//only the first character is a delimiter, so remove it
+//leftover = "@and ham"
+
+//leftover[0] = '@'
+//leftover[size-1] = 'm'
+//only the first character is a delimiter, so remove it
+//leftover = "and ham"
+
+//leftover[0] = '@'
+//leftover[size-1] = 'm'
+//neither the first or last character is a delimiter, proceed to find the second token
+
+//token_2 = "and ham"
+```
+In other words, **`strtok` treats chained delimiters as single delimiters**.
+
+So far we have only been using examples where the delimiter is only one letter or character. The `strtok`
+function can actually take in multi-character strings as its delimiter. However, when this is done, the
+function doesn't look for the first occurence of the exact sequence; it looks for the first occurence of 
+any of the characters passed into the `delim` argument.
+```
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+int main()
+{
+	char example_8[] = "Testing 1 to 2 find 12 many 21 delims 121 in a 212 string";
+	char *token;
+	token = strtok(example_8, "12");
+	//prints out each token in example_4
+	while(token != NULL)
+	{
+		cout << token << endl;
+		token = strtok(NULL, "12");
+	}
+	return 0;
+}
+```
+```
+Testing 
+ to 
+ find 
+ many 
+ delims
+ in a 
+ string
 ```
 
-  So far we have only been using examples where the delimiter is only one letter or character. The `strtok`
-  function can actually take in multi-character strings as its delimiter. However, when this is done, the
-  function doesn't look for the first occurence of the exact sequence; it looks for the first occurence of 
-  any of the characters passed into the `delim` argument.
-  ```
-	#include <iostream>
-	#include <string.h>
-	using namespace std;
+It should also be noted that in subsequent calls to `strtok` when parsing a string, you can change what the
+delimiter is to get different tokens.
+```
+#include <iostream>
+#include <string.h>
+using namespace std;
 
-	int main()
-	{
-		char example_8[] = "Testing 1 to 2 find 12 many 21 delims 121 in a 212 string";
-		char *token;
-		token = strtok(example_8, "12");
-		//prints out each token in example_4
-		while(token != NULL)
-		{
-			cout << token << endl;
-			token = strtok(NULL, "12");
-		}
-		return 0;
-	}
-	//Output:
-	//Testing 
-	// to 
-	// find 
-	// many 
-	// delims
-	// in a 
-	// string
-  ```
-
-  It should also be noted that in subsequent calls to `strtok` when parsing a string, you can change what the
-  delimiter is to get different tokens.
-  ```
-	#include <iostream>
-	#include <string.h>
-	using namespace std;
-
-	int main()
-	{
-		char example_9[] = "I have/changed my delimiter?partway through";
-		char *token;
-		token = strtok(example_9, "/");
-		cout << token << endl;
-		token = strtok(NULL, " ");
-		cout << token << endl;
-		token = strtok(NULL, "?");
-		cout << token << endl;
-		token = strtok(NULL, "+");
-		cout << token << endl;
-		return 0;
-	}
-	//Output:
-	//I have
-	//changed
-	//my delimiter
-	//partway through
-  ```
+int main()
+{
+	char example_9[] = "I have/changed my delimiter?partway through";
+	char *token;
+	token = strtok(example_9, "/");
+	cout << token << endl;
+	token = strtok(NULL, " ");
+	cout << token << endl;
+	token = strtok(NULL, "?");
+	cout << token << endl;
+	token = strtok(NULL, "+");
+	cout << token << endl;
+	return 0;
+}
+```
+```
+I have
+changed
+my delimiter
+partway through
+```
 
 ###The Hidden _r
 
