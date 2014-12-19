@@ -1,34 +1,25 @@
-#SED TEXT MODIFIER
+### <a name="What is *sed*?"></a>What is sed?
 
-Welcome to cs100! :smiley: :trollface: :fearful:
+`sed` (stream editor) is a quick and efficient way of changing the contents of a file without having to go in and change things yourself.
 
-![Image of Linux Penguin]
-(http://pixabay.com/static/uploads/photo/2013/07/13/12/31/penguin-159784_640.png)
+#### <a name="Table of Contents"></a>Table of Contents
 
-Today you will be learning about the `sed` bash command!
+1. [How Does it Work?](#How Does it Work?)
 
-### <a name="Top"></a>Top
+2. [What Does it Look Like?](#What Does it Look Like?)
 
-1. [What is *sed*?](#What is *sed*?)
+3. [What Can We Do With it?](#What Can We Do With it?)
 
-2. [How Does it Work?](#How Does it Work?)
+4. [Substitution](#Substitution)
 
-3. [What Does it Look Like?](#What Does it Look Like?)
-
-4. [What Can We Do With it?](#What Can We Do With it?)
-
-### <a name="What is *sed*?"></a>What is *sed*?
-
-`sed` (standing for {**s**}tream {**ed**}itor) is a quick and efficient way of changing the text inside of a file without having to go in and change things yourself.
-
-##### [Back to Top](#Top)
+5. [Emulation](#Emulation)
 
 ### <a name="How Does it Work?"></a>How Does it Work?
 
 `sed` works by maintaining two data buffers (temporary containers): the active **pattern**
 space and the auxiliary **hold** space. Both begin empty.
 
-* For our purposes, let&#39;s look at the following `sed` command:
+For our purposes, let&#39;s look at the following `sed` command:
 
 ```
 sed 's/Hello/Goodbye/' testfile
@@ -37,7 +28,7 @@ sed 's/Hello/Goodbye/' testfile
 `sed` operates by going line by line of the testfile and placing each line
 into the **pattern** space after removing any leading newline characters.
 
-* So if we had a file containing,
+So if we had a file containing,
 
 ```
 #filename: testfile
@@ -46,27 +37,11 @@ This is a test file
 Computer Science is fun!
 ```
 
-* `sed` would take the string "Hello World!\n," remove the newline character, and place the string into the pattern space.
+`sed` would take the string "Hello World!\n," remove the newline character, and place the string into the pattern space. Once the text is in the pattern space, the provided commands are executed. Now that "Hello World!" is in the pattern space, the `'s/Hello/Goodbye/'` command is applied to it. A command will only execute if the text in the pattern space qualifies for the command, or matches the pattern. Since "Hello" was present in the pattern space, substitution command will swap out "Hello" with "Goodbye."
 
-Once the text is in the pattern space, the provided commands are executed.
+When the end of the line is reached, the pattern space is output to the output stream (standard output) and has its newline replaced back in. After `'s/Hello/Goodbye/'` has been applied the pattern space, the newline is added back to the string. So the output from the first line will be "Hello World!\n." Another cycle then begins for the next line of text in the file. Next, the string "This is a test file\n" is placed into the pattern space. This time however, "Hello" is not present, so `'s/Hello/Goodbye/'` does not execute, and "This is a test file\n" is simply output to the output stream. The same will occur for the final string. The **pattern** space is emptied out between cycles; however, the **hold** space maintains its data throughout the process. 
 
-* Now that "Hello World!" is in the pattern space, the `'s/Hello/Goodbye/'` command is applied to it.
-
-A command will only execute if the text in the pattern space qualifies for the command, or matches the pattern.
-
-* Since "Hello" was present in the pattern space, substitution command will swap out "Hello" with "Goodbye."
-
-When the end of the line is reached, the pattern space is output to the output stream (standard output) and has its newline replaced back in.
-
-* After `'s/Hello/Goodbye/'` has been applied the pattern space, the newline is added back to the string. So the output from the first line will be "Hello World!\n."
-
-Another cycle then begins for the next line of text in the file.
-
-* Next, the string "This is a test file\n" is placed into the pattern space. This time however, "Hello" is not present, so `'s/Hello/Goodbye/'` does not execute, and "This is a test file\n" is simply output to the output stream. The same will occur for the final string.
-
-The **pattern** space is emptied out between cycles; however, the **hold** space maintains its data throughout the process.
-
-The previous example did not actually need to use the hold space because there was no need for temporary storage. So let&#39;s look at a different example that does use the hold space.
+This example does not actually need to use the hold space since there was no need for temporary storage. So let&#39;s look at a different example that does use the hold space.
 
 Say we want to capture the line before a line that matches a search pattern. The command,
 
@@ -83,8 +58,6 @@ The `-n` flag turns off `sed`&#39;s printing, unless specified some other comman
 So the above `sed` command behaves as the previous example right up until the point the string in the pattern space matches the regular expression. The `h` command at the end of the script forwards each line into the hold space. Whenever a line matches the regex expression, `x` swaps the hold space and the pattern space. So the lines that do not match the regular expression, are available to be output to the output stream and the matching string is temporarily stored. The `p` prints the current pattern space, which currently contains the line before the matching line. The second `x` swaps the hold space and the pattern space again so that the script can carry on as normal.
 
 The "1!" in front of the `p` signals `p` to only print all lines that are not the first line.
-
-##### [Back to Top](#Top)
 
 ### <a name="What Does it Look Like?"></a>What Does it Look Like?
 `sed` takes the general form,
@@ -155,17 +128,11 @@ sed -i -f sed.sh numbers
 
 Each script expression in "sed.sh" will make a pass through "numbers" and make its specific changes. So when the above command finishes, every digit in the file will be converted to its English name.
 
-#### [Back to Top](#Top)
-
 ### <a name="What Can We Do With it?"></a>What Can We Do With it?
 `sed` can be used for more than just simple text transformations. With regular expressions, `sed` has potential to handle very complex transformations. You can build an entire program using only `sed` (<i.e./> a script that capitalizes all the vowels in a text file and so forth). You can also make `sed` behave like other commands (i.e. `grep` and `head`).
 
-For the purposes of cs100, we will confine the scope of our usage of `sed` to the following 2 categories:
+###<a name="Substitution"></a>Substitution
 
-####1. [Substitution](#Substitution)
-####2. [Emulation](#Emulation)
-
-#####1. <a name="Substitution"></a>Substitution
 The meat and potatoes of `sed` is the `s` command (s for substitution)
 
 Here is a simple example of `sed` substitution in action:
@@ -257,7 +224,8 @@ sed -i 's/^[[:digit:]][[:digit:]][[:digit:]]/(&)/' phonelist
 ```
 Now each phone number in the ACM phone list will have a parenthesis around its three-digit area code.
 
-#####2. <a name="Emulation"></a>Emulation
+###<a name="Emulation"></a>Emulation
+
 `sed` can imitate other bash commands (although it would probably be more straightforward to just use the premade bash commands `sed` is copying). We will look at 2 commands that `sed` can easily imitate: `grep` and `head`.
 
 * `grep`
@@ -324,9 +292,10 @@ sed -n '5! p' elist
 
 will output every line except for the fifth line of the input file.
 
-#### [Back to Top](#Top)
-
 Happy Hacking!
+
+![Image of Linux Penguin]
+(http://pixabay.com/static/uploads/photo/2013/07/13/12/31/penguin-159784_640.png)
 
 [regex]: http://www.regular-expressions.info
 [sed]: http://linux.die.net/man/1/sed
