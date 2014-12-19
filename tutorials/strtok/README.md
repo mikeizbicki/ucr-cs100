@@ -223,6 +223,8 @@ slices
  through 
  this string
 ```
+
+#####Delimiters at the Ends and Chained Delimiters
 We know now what happens when the delimiter is not in the `str` argument. What if, however, the delimiter
 was at the beginning and or end of the argument? What about if the delimiter was chained together multiple 
 times?
@@ -376,10 +378,11 @@ char *token_2 = strtok(NULL, "@");
 ```
 In other words, **`strtok` treats chained delimiters as single delimiters**.
 
+#####Multi-character and Changing Delimiters
 So far we have only been using examples where the delimiter is only one letter or character. The `strtok`
-function can actually take in multi-character strings as its delimiter. However, when this is done, the
-function doesn't look for the first occurence of the exact sequence; it looks for the first occurence of 
-any of the characters passed into the `delim` argument.
+function can actually take in multi-character strings as its delimiter. Doing this, however, raises an
+important question; is the delimiter that `strtok` searches for the exact pattern entered or something else?
+Let's test it to find out.
 ```
 #include <iostream>
 #include <string.h>
@@ -399,6 +402,7 @@ int main()
 	return 0;
 }
 ```
+When we compile and execute this program, we get:
 ```
 Testing 
  to 
@@ -408,6 +412,8 @@ Testing
  in a 
  string
 ```
+From this we see that `strtok` did not look for the first occurence of the exact sequence; it looked for the
+first occurence of any of the characters passed into the `delim` argument.
 
 It should also be noted that in subsequent calls to `strtok` when parsing a string, you can change what the
 delimiter is to get different tokens.
