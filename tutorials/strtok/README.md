@@ -347,7 +347,7 @@ the `str` argument are delims.
 ```
 In other words, **`strtok` ignores any delims that are at the ends of the string being parsed**. 
 
-This is also how `strtok handles chained delimiters. Back in the section
+This is also how `strtok` handles chained delimiters. Back in the section
 [**Gaze into the NULL**](#gaze-into-the-null) above it was stated that each time `strtok` found a token, 
 it would remove that token and the delimiter from the string being parsed. Note that the delimiter was only 
 one character, so if the delimiter was chained together many times, the string that is saved for later would
