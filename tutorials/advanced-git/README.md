@@ -1,5 +1,5 @@
 #advanced git: the introductory tutorial
-   After the end of this tutorial, you should know how to add a remote, fetch the contents a remote, reset your HEAD pointer to a different commit, run a git blame, and git stash some changes that you do not want to commit just yet.
+   After the end of this tutorial, you should know how to add a remote, fetch the contents of a remote, reset your HEAD pointer to a different commit, run a git blame, and git stash some changes that you do not want to commit just yet.
    
    This is an introductory tutorial, so the goal is to get you acquainted with some of the more advanced features of git. If you would like a complete run down of how to use a certain command, you can click on the command under the section `Topics covered:`, and it will link you to the man page of that specific command on the internet.
    
@@ -146,7 +146,7 @@ If you want to know who changed certain lines, you can use the -L flag to figure
 
 `ending-linenumber` is the line you wish to end at.
 
-This will tell you who edit the file within those line numbers on the command line instead of pulling up a text-editor.
+This will tell you who edited the file within those line numbers on the command line instead of pulling up a text-editor.
  
  #git stash
 `git stash` is another cool feature that allows you to save your changes without making any commits. You can `git stash` several times, and later apply those changes when you see fit.

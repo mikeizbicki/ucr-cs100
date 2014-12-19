@@ -144,7 +144,7 @@ Also, recall that we can represent decimal values by preceding it with `#`
 Hexadecimal
 ---
 
-Hexadecimal is a little more difficult to see, compared to decimal, octal, and binary. Hexadecimal is the base-16 number system. Now, you might be wondering what we use to to represent values past 9. Well it's simple really - hexadecimal values range from 0-F. That's right! We use the first 6 letter of the alphabet! Here are a couple of examples of hex math:
+Hexadecimal is a little more difficult to see, compared to decimal, octal, and binary. Hexadecimal is the base-16 number system. Now, you might be wondering what we use to to represent values past 9. Well it's simple, really - hexadecimal values range from 0-F. That's right! We use the first 6 letters of the alphabet! Here are a couple of examples of hex math:
 
 ```
 	  x9		  xA		  x1F 
@@ -448,9 +448,9 @@ Notice how that one bit on the far right moved to the left? And then a 0 was add
  1<<7 = 1000 0000 (128)
 ```
 
-There we go. Super simple right? Also notice how that values are doubling? That's what left-shifting essentially does! It doubles the size of your value! Of course, this operator doesn't have much value in C++, as we can just multiply by two. But it's nice to have in mind!
+There we go. Super simple right? Also notice how the values are doubling? That's what left-shifting essentially does! It doubles the size of your value! Of course, this operator doesn't have much value in C++, as we can just multiply by two. But it's nice to have in mind!
 
-If you're tired, don't worry! You're on the home stretch!
+If you're tired, don't worry! You're in the home stretch!
 
 Bitwise Right-Shift
 ---
