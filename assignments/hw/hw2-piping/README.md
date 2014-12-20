@@ -50,7 +50,7 @@ You should carefully consider: which redirections can be legally combined togeth
 
 [Open Issues](https://github.com/mikeizbicki/ucr-cs100/labels/hw2)
 
-[Close Issues](https://github.com/mikeizbicki/ucr-cs100/issues?q=label%3Ahw2+is%3Aclosed)
+[Closed Issues](https://github.com/mikeizbicki/ucr-cs100/issues?q=label%3Ahw2+is%3Aclosed)
 
 ### collaboration policy
 
