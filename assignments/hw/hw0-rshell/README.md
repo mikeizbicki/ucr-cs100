@@ -108,6 +108,7 @@ If you are unsure if your test cases are sufficient, ask one of the instructors 
 ###FAQ
 
 [Open issues](https://github.com/mikeizbicki/ucr-cs100/labels/hw0)
+
 [Close issues](https://github.com/mikeizbicki/ucr-cs100/issues?q=label%3Ahw0+is%3Aclosed)
 
 ### collaboration policy
