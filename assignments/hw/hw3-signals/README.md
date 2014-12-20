@@ -34,7 +34,7 @@ There are no changes to your project structure.
 
 [Open Issues](https://github.com/mikeizbicki/ucr-cs100/labels/hw3)
 
-[Close Issues](https://github.com/mikeizbicki/ucr-cs100/issues?q=label%3Ahw3+is%3Aclosed)
+[Closed Issues](https://github.com/mikeizbicki/ucr-cs100/issues?q=label%3Ahw3+is%3Aclosed)
 
 ### testing
 
