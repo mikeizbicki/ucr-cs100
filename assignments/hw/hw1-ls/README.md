@@ -38,6 +38,12 @@ Remember that the commands `ls -l -R`, `ls -R -l`, `ls -lR` and `ls -Rl` should 
 
 **IMPORTANT:** If you are unsure if your test cases are sufficient, ask one of the instructors to review them *before the deadline*.
 
+###FAQ
+
+[Open Issues](https://github.com/mikeizbicki/ucr-cs100/labels/hw1)
+
+[Closed Issues](https://github.com/mikeizbicki/ucr-cs100/issues?q=label%3Ahw1+is%3Aclosed)
+
 ### collaboration policy
 
 You MAY NOT look at the source code of any other student.
