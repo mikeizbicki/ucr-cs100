@@ -46,6 +46,12 @@ You should carefully consider: which redirections can be legally combined togeth
 
 **IMPORTANT:** If you are unsure if your test cases are sufficient, ask one of the instructors to review them *before the deadline*.
 
+###FAQ
+
+[Open Issues](https://github.com/mikeizbicki/ucr-cs100/labels/hw2)
+
+[Close Issues](https://github.com/mikeizbicki/ucr-cs100/issues?q=label%3Ahw2+is%3Aclosed)
+
 ### collaboration policy
 
 You MAY NOT look at the source code of any other student.
