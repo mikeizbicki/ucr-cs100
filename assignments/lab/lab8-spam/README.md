@@ -18,7 +18,7 @@ First, telnet into the local SMTP webserver:
 telnet mail.cs.ucr.edu 25
 ```
 
-Telnet is a simple command line utility that let's us send commands over the network.  Whatever you type in gets sent over the network to the server you're connected to.
+Telnet is a simple command line utility that lets us send commands over the network.  Whatever you type in gets sent over the network to the server you're connected to.
 
 Now, type the following commands:
 

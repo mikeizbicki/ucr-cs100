@@ -32,7 +32,10 @@ There should be no limit to the number of commands that can be chained together 
 3. Execute the command.
 This will require using the syscalls `fork`, `execvp`, and `waitpid`.
 You should refer to the man pages for detailed instructions on how to use these functions.
-There is also a [nice tutorial](../../../tutorials/syscalls/README.md) prepared by previous cs100 students.
+
+There are also [nice tutorials](../../../tutorials/syscalls/README.md) prepared by previous cs100 students.
+
+[![video guide](http://i.imgur.com/3hRxF4x.jpg)](https://www.youtube.com/watch?v=xVSPv-9x3gk).
 
 4. You must have a special built in command of `exit` which exits your shell.
 
