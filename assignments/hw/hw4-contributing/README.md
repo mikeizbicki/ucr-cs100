@@ -66,6 +66,12 @@ I highly recommend you visit UCR's writing center.
 
 A short, clear writeup is MUCH better than a long wordy writeup.
 
+###FAQ
+
+[Open Issues](https://github.com/mikeizbicki/ucr-cs100/labels/hw4)
+
+[Closed Issues](https://github.com/mikeizbicki/ucr-cs100/issues?q=label%3Ahw4+is%3Aclosed)
+
 ### collaboration policy
 
 You may work in a team on this assignment, or you may work individually.

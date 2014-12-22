@@ -32,6 +32,12 @@ You should run them as well to verify that you've submitted your code successful
 
 There are no changes to your project structure.
 
+###FAQ
+
+[Open Issues](https://github.com/mikeizbicki/ucr-cs100/labels/hw3)
+
+[Closed Issues](https://github.com/mikeizbicki/ucr-cs100/issues?q=label%3Ahw3+is%3Aclosed)
+
 ### testing
 
 Again, the tests you choose will be the most important part of your grade.  
