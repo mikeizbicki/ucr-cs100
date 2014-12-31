@@ -1,93 +1,0 @@
-Script started on Tue 14 Oct 2014 06:10:32 PM PDT
-]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ [18P(reverse-i-search)`':[Ce': ./exit && echo test && exit helllo[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cx': ./exit && echo test && exit hello[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Pp': export PS1="$ "
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@o[C[C[C[1@r[C[C[C]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ export PS1="$ ""[A]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ 
-
-$ clear
-[H[2J$ clear[C[Cexport PS1="$ "[C[C./exit && echo test && exit hello[1P[1P[1P[1P helloe helloc helloh helloo hello
-test
-hello
-$ ./exit && echo test && echo hello[1P[1P[1@\[1@\[1P[1P[1@|[1@|[1P[1P[1@|[1@|[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K./exit || echo test || echo hello^C
-$ [
-bash: [: missing `]'
-$ [ -f-[1P-[Cf "test" ] && echo "test"
-$ ls
-[0m[01;32ma.out[0m     exit.cpp  [01;34mgitexample[0m  lecture2   [01;34mrshell[0m
-exec.cpp  [01;32mfail[0m      lecture1    lecture4   testfile
-[01;32mexit[0m      fail.cpp  lecture1b   lecture4b  [01;34mtmp[0m
-$ ls[ -f "test" ] && echo "test"[1P[1P[1@|[1@|
-test
-$ man [
-[?1049h[?1h=TEST(1)             User Commands            TEST(1)[m
-[m
-[1mNAME[0m[m
-       test - check file types and compare values[m
-[m
-[1mSYNOPSIS[0m[m
-       [1mtest[0m [4mEXPRESSION[24m[m
-       [1mtest[0m[m
-[m
-       [1m[[0m [4mEXPRESSION[24m ][m
-       [1m[[0m ][m
-       [1m[[0m [4mOPTION[24m[m
-[m
-[1mDESCRIPTION[0m[m
-       Exit  with  the  status determined by EXPRES‐[m
-       SION.[m
-[m
-       [1m--help[0m display this help and exit[m
-[m
-       [1m--version[0m[m
-              output version information and exit[m
-[m
-       An  omitted  EXPRESSION  defaults  to  false.[m
-       Otherwise,  EXPRESSION  is  true or false and[m
-       sets exit status.  It is one of:[m
-[m
-       ( EXPRESSION )[m
-              EXPRESSION is true[m
-[m
-       ! EXPRESSION[m
-[7mual page [(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              EXPRESSION is false[m
-[7mual page [(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mual page [(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       EXPRESSION1 [1m-a[0m EXPRESSION2[m
-[7mual page [(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              both EXPRESSION1 and  EXPRESSION2  are[m
-[7mual page [(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              true[m
-[7mual page [(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mual page [(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       EXPRESSION1 [1m-o[0m EXPRESSION2[m
-[7mal page [(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              either  EXPRESSION1  or EXPRESSION2 is[m
-[7mal page [(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              true[m
-[7mal page [(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page [(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-n[0m STRING[m
-[7mal page [(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the length of STRING is nonzero[m
-[7mal page [(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page [(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       STRING equivalent to [1m-n[0m STRING[m
-[7mal page [(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page [(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1m-z[0m STRING[m
-[7mal page [(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the length of STRING is zero[m
-[7mal page [(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page [(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       STRING1 = STRING2[m
-[7mal page [(1) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the strings are equal[m
-[7mal page [(1) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page [(1) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       STRING1 != STRING2[m
-[7mal page [(1) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              the strings are not equal[m
-[7mal page [(1) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page [(1) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       INTEGER1 [1m-eq[0m INTEGER2[m
-[7mal page [(1) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              INTEGER1 is equal to INTEGER2[m
-[7mal page [(1) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page [(1) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       INTEGER1 [1m-ge[0m INTEGER2[m
-[7mal page [(1) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              INTEGER1 is greater than or  equal  to[m
-[7mal page [(1) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              INTEGER2[m
-[7mal page [(1) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page [(1) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       INTEGER1 [1m-gt[0m INTEGER2[m
-[7mal page [(1) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              INTEGER1 is greater than INTEGER2[m
-[7mal page [(1) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page [(1) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       INTEGER1 [1m-le[0m INTEGER2[m
-[7mal page [(1) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              INTEGER1  is  less  than  or  equal to[m
-[7mal page [(1) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              INTEGER2[m
-[7mal page [(1) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page [(1) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       INTEGER1 [1m-lt[0m INTEGER2[m
-[7mal page [(1) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              INTEGER1 is less than INTEGER2[m
-[7mal page [(1) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page [(1) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       INTEGER1 [1m-ne[0m INTEGER2[m
-[7mal page [(1) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              INTEGER1 is not equal to INTEGER2[m
-[7mal page [(1) line 46 (press h 

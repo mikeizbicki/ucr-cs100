@@ -1,327 +1,0 @@
-Script started on Thu 09 Oct 2014 05:49:02 PM PDT
-]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ [18P(reverse-i-search)`':[Ce': clear=x': git commit -m "made example student"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[20Pp': export PS1="$ "[1@o[C[C[C[1@r[C[C[C[1@t[C[C[C]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ export PS1="$ "
-$ c[Kgit status
-# On branch grades
-# Changes not staged for commit:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#   (commit or discard the untracked or modified content in submodules)
-#
-#	modified:   gitexample (untracked content)
-#	modified:   ../scripts/config.sh
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	lecture2
-no changes added to commit (use "git add" and/or "git commit -a")
-$ clear
-[H[2J$ touch testfile
-$ git add testfile
-$ git commit -m" [K[K "adding a testfile"
-[grades 39230df] adding a testfile
- 0 files changed
- create mode 100644 lecture/testfile
-$ git branch
-  cs100-2014fall
-  cs100-2014summer
-* grades
-  gradestest
-  signingtest
-$ git pudh [K[K[Ksh origin grafr[K[Kdes
-Username for 'https://github.com': mikeizbicki
-Password for 'https://mikeizbicki@github.com': 
-fatal: Authentication failed
-$ git push origin grades
-Username for 'https://github.com': mikeizbicki
-Password for 'https://mikeizbicki@github.com': 
-Counting objects: 6, done.
-Delta compression using up to 4 threads.
-Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
-Writing objects:  25% (1/4)   Writing objects:  50% (2/4)   Writing objects:  75% (3/4)   Writing objects: 100% (4/4)   Writing objects: 100% (4/4), 330 bytes, done.
-Total 4 (delta 2), reused 1 (delta 0)
-To https://github.com/mikeizbicki/ucr-cs100.git
- * [new branch]      grades -> grades
-$ clear
-[H[2J$ cat testfile 
-$ git ou[K[Kpull origin grades
-remote: Counting objects: 4, done.[K
-remote: Compressing objects:  33% (1/3)   [Kremote: Compressing objects:  66% (2/3)   [Kremote: Compressing objects: 100% (3/3)   [Kremote: Compressing objects: 100% (3/3), done.[K
-remote: Total 4 (delta 0), reused 0 (delta 0)[K
-Unpacking objects:  25% (1/4)   Unpacking objects:  50% (2/4)   Unpacking objects:  75% (3/4)   Unpacking objects: 100% (4/4)   Unpacking objects: 100% (4/4), done.
-From https://github.com/mikeizbicki/ucr-cs100
- * branch            grades     -> FETCH_HEAD
-Updating 39230df..fa6e37c
-Fast-forward
- lecture/testfile |    1 +
- 1 file changed, 1 insertion(+)
-$ ls
-[0m[01;34mgitexample[0m  lecture1  lecture1b  lecture2  testfile
-$ cat testfile 
-we're editing in the cloud
-$ vim testfile 
-[?1049h[?1h=[1;22r[?12;25h[?12l[?25h[27m[m[37m[H[2J[?25l[22;1H"testfile" 1L, 27C[>c[1;1H[33m  1 [m[37mwe're editing in the cloud
-[1m[34m~                                                                     [3;1H~                                                                     [4;1H~                                                                     [5;1H~                                                                     [6;1H~                                                                     [7;1H~                                                                     [8;1H~                                                                     [9;1H~                                                                     [10;1H~                                                                     [11;1H~                                                                     [12;1H~                                                                     [13;1H~                                                                     [14;1H~                                                                     [15;1H~                                                                     [16;1H~                                                                     [17;1H~                                                                     [18;1H~                                                                     [19;1H~                                                                     [20;1H~                                                                     [21;1H~                                                                     [m[37m[22;53H1,1[11CAll]2;testfile (~/proj/ucr-cs100/lecture) - VIM]1;testfile[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[1;5H[K]2;testfile + (~/proj/ucr-cs100/lecture) - VIM]1;testfile[22;1H--No lines in buffer--[22;53H[K[22;53H0,0-1[9CAll[1;5H[?12l[?25h[?25l[22;1H[K[22;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"testfile" 0L, 0C written]2;user@userland: ~/proj/ucr-cs100/lecture]1;user@userland: ~/proj/ucr-cs100/lecture
-[39;49m[?1l>[?12l[?25h[?1049l$ cat testfile 
-$ git add testfile
-$ git commit -m 'd[K[K"deleted contents;[K"
-[grades 51d09f6] deleted contents
- 1 file changed, 1 deletion(-)
-$ git push origin [K[K[K[K[K[K[K[K
-Counting objects: 7, done.
-Delta compression using up to 4 threads.
-Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
-Writing objects:  25% (1/4)   Writing objects:  50% (2/4)   Writing objects:  75% (3/4)   Writing objects: 100% (4/4)   Writing objects: 100% (4/4), 318 bytes, done.
-Total 4 (delta 2), reused 1 (delta 0)
-To https://github.com/mikeizbicki/ucr-cs100.git
-   fa6e37c..51d09f6  grades -> grades
-$ ls
-[0m[01;34mgitexample[0m  lecture1  lecture1b  lecture2  testfile
-$ cd [K[K[Kgit [K[K[K[Kclear
-[H[2J$ git clone https://github.com/examplestudent/rshell.git
-Cloning into 'rshell'...
-warning: You appear to have cloned an empty repository.
-$ ls
-[0m[01;34mgitexample[0m  lecture1  lecture1b  lecture2  [01;34mrshell[0m  testfile
-$ cd rshell
-$ ls
-$ git status
-# On branch master
-#
-# Initial commit
-#
-nothing to commit (create/copy files and use "git add" to track)
-$ git log
-fatal: bad default revision 'HEAD'
-$ touch LIcensE[K[K[K[K[KCENSE
-$ touch mak[K[K[KMakefuk[K[Kile
-$ touch Makefile[K[K[K[K[K[K[K[C[C[C[C[C[C[C[C[C[KREADME
-$ mv RE1[KADME README [K.md
-$ clear
-[H[2J$ ls
-LICENSE  Makefile  README.md
-$ git add .
-$ git status
-# On branch master
-#
-# Initial commit
-#
-# Changes to be committed:
-#   (use "git rm --cached <file>..." to unstage)
-#
-#	new file:   LICENSE
-#	new file:   Makefile
-#	new file:   README.md
-#
-$ git commit -m "first commit"
-[master (root-commit) 0c2ccce] first commit
- 0 files changed
- create mode 100644 LICENSE
- create mode 100644 Makefile
- create mode 100644 README.md
-$ git push origin master
-Username for 'https://github.com': examplestudent
-Password for 'https://examplestudent@github.com': 
-Counting objects: 3, done.
-Delta compression using up to 4 threads.
-Compressing objects:  50% (1/2)   Compressing objects: 100% (2/2)   Compressing objects: 100% (2/2), done.
-Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 233 bytes, done.
-Total 3 (delta 0), reused 0 (delta 0)
-To https://github.com/examplestudent/rshell.git
- * [new branch]      master -> master
-$ clear
-[H[2J$ git cimm[K[K[K[Kcommit --author=Linus Tolb[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kman git
-[?1049h[?1h=GIT(1)                       Git Manual                       GIT(1)[m
-[m
-[1mNAME[0m[m
-       git - the stupid content tracker[m
-[m
-[1mSYNOPSIS[0m[m
-       [4mgit[24m [--version] [--help] [-c <name>=<value>][m
-           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-p[m ath][m
-           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare][m
-           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>[m ][m
-           <command> [<args>][m
-[m
-[1mDESCRIPTION[0m[m
-       Git is a fast, scalable, distributed revision control system[m
-       with an unusually rich command set that provides both[m
-       high-level operations and full access to internals.[m
-[m
-       See [1mgittutorial[0m(7) to get started, then see [1mEveryday[0m [1mGit[0m[1][m
-       for a useful minimum set of commands, and "man[m
-[7m Manual page git(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       git-commandname" for documentation of each command. CVS users[m
-[7m Manual page git(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       may also want to read [1mgitcvs-migration[0m(7). See the [1mGit[0m [1mUser’s[0m[m
-[7m Manual page git(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mManual[0m[2] for a more in-depth introduction.[m
-[7m Manual page git(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The [4m<command>[24m is either a name of a Git command (see below)[m
-[7m Manual page git(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       or an alias as defined in the configuration file (see [1mgit-[0m[m
-[7m Manual page git(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mconfig[0m(1)).[m
-[7m Manual page git(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [4mgit[24m [--version] [--help] [-c <name>=<value>][m
-[22;1H[K[7m Manual page git(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mSYNOPSIS[0m[m
-[22;1H[K[7m Manual page git(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
-[22;1H[K[7m Manual page git(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The [4m<command>[24m is either a name of a Git command (see below)[m
-[7m Manual page git(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       or an alias as defined in the configuration file (see [1mgit-[0m[m
-[7m Manual page git(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mconfig[0m(1)).[m
-[7m Manual page git(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Formatted and hyperlinked version of the latest git[m
-[7m Manual page git(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       documentation can be viewed at[m
-[7m Manual page git(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       http://www.kernel.org/pub/software/scm/git/docs/.[m
-[7m Manual page git(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mOPTIONS[0m[m
-[7m Manual page git(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       --version[m
-[7m Manual page git(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Prints the git suite version that the [4mgit[24m program came[m
-[7m Manual page git(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           from.[m
-[7m Manual page git(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       --help[m
-[7m Manual page git(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Prints the synopsis and a list of the most commonly used[m
-[7m Manual page git(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           commands. If the option [4m--all[24m or [4m-a[24m is given then all[m
-[7m Manual page git(1) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           available commands are printed. If a git command is named[m
-[7m Manual page git(1) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           this option will bring up the manual page for that[m
-[7m Manual page git(1) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           command.[m
-[7m Manual page git(1) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Other options are available to control how the manual[m
-[7m Manual page git(1) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           page is displayed. See [1mgit-help[0m(1) for more information,[m
-[7m Manual page git(1) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           because git --help ...  is converted internally into git[m
-[7m Manual page git(1) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           help ....[m
-[7m Manual page git(1) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       -c <name>=<value>[m
-[7m Manual page git(1) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Pass a configuration parameter to the command. The value[m
-[7m Manual page git(1) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           given will override values from configuration files. The[m
-[7m Manual page git(1) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           <name> is expected in the same format as listed by [4mgit[24m[m
-[7m Manual page git(1) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [4mconfig[24m (subkeys separated by dots).[m
-[7m Manual page git(1) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       --exec-path[=<path>][m
-[7m Manual page git(1) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Path to wherever your core git programs are installed.[m
-[7m Manual page git(1) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           This can also be controlled by setting the GIT_EXEC_PATH[m
-[7m Manual page git(1) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           environment variable. If no path is given, [4mgit[24m will print[m
-[7m Manual page git(1) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           the current setting and then exit.[m
-[7m Manual page git(1) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       --html-path[m
-[7m Manual page git(1) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Print the path, without trailing slash, where git’s HTML[m
-[7m Manual page git(1) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           documentation is installed and exit.[m
-[7m Manual page git(1) line 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       --man-path[m
-[7m Manual page git(1) line 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Print the manpath (see man(1)) for the man pages for this[m
-[7m Manual page git(1) line 49 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           version of git and exit.[m
-[7m Manual page git(1) line 50 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 51 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       --info-path[m
-[7m Manual page git(1) line 52 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Print the path where the Info files documenting this[m
-[7m Manual page git(1) line 53 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           version of git are installed and exit.[m
-[7m Manual page git(1) line 54 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 55 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       -p, --paginate[m
-[7m Manual page git(1) line 56 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Pipe all output into [4mless[24m (or if set, $PAGER) if standard[m
-[7m Manual page git(1) line 57 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           output is a terminal. This overrides the pager.<cmd>[m
-[7m Manual page git(1) line 58 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           configuration options (see the "Configuration Mechanism"[m
-[7m Manual page git(1) line 59 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           section below).[m
-[7m Manual page git(1) line 60 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 61 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       --no-pager[m
-[7m Manual page git(1) line 62 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Do not pipe git output into a pager.[m
-[7m Manual page git(1) line 63 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 64 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       --git-dir=<path>[m
-[7m Manual page git(1) line 65 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Set the path to the repository. This can also be[m
-[7m Manual page git(1) line 66 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           controlled by setting the GIT_DIR environment variable.[m
-[7m Manual page git(1) line 67 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           It can be an absolute path or relative path to current[m
-[7m Manual page git(1) line 68 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           working directory.[m
-[7m Manual page git(1) line 69 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 70 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       --work-tree=<path>[m
-[7m Manual page git(1) line 71 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Set the path to the working tree. It can be an absolute[m
-[7m Manual page git(1) line 72 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           path or a path relative to the current working directory.[m
-[7m Manual page git(1) line 73 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           This can also be controlled by setting the GIT_WORK_TREE[m
-[7m Manual page git(1) line 74 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           environment variable and the core.worktree configuration[m
-[7m Manual page git(1) line 75 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           variable (see core.worktree in [1mgit-config[0m(1) for a more[m
-[7m Manual page git(1) line 76 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           detailed discussion).[m
-[7m Manual page git(1) line 77 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 78 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       --namespace=<path>[m
-[7m Manual page git(1) line 79 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Set the git namespace. See [1mgitnamespaces[0m(7) for more[m
-[7m Manual page git(1) line 80 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           details. Equivalent to setting the GIT_NAMESPACE[m
-[7m Manual page git(1) line 81 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           environment variable.[m
-[7m Manual page git(1) line 82 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 83 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       --bare[m
-[7m Manual page git(1) line 84 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Treat the repository as a bare repository. If GIT_DIR[m
-[7m Manual page git(1) line 85 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           environment is not set, it is set to the current working[m
-[7m Manual page git(1) line 86 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           directory.[m
-[7m Manual page git(1) line 87 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 88 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       --no-replace-objects[m
-[7m Manual page git(1) line 89 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Do not use replacement refs to replace git objects. See[m
-[7m Manual page git(1) line 90 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mgit-replace[0m(1) for more information.[m
-[7m Manual page git(1) line 91 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 92 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mFURTHER[0m [1mDOCUMENTATION[0m[m
-[7m Manual page git(1) line 93 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       See the references above to get started using git. The[m
-[7m Manual page git(1) line 94 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       following is probably more detail than necessary for a[m
-[7m Manual page git(1) line 95 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       first-time user.[m
-[7m Manual page git(1) line 96 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 97 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The [1mgit[0m [1mconcepts[0m [1mchapter[0m [1mof[0m [1mthe[0m [1muser-manual[0m[3] and [1mgitcore-[0m[m
-[7m Manual page git(1) line 98 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mtutorial[0m(7) both provide introductions to the underlying git[m
-[7m Manual page git(1) line 99 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       architecture.[m
-[7m Manual page git(1) line 100 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 101 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       See [1mgitworkflows[0m(7) for an overview of recommended workflows.[m
-[7m Manual page git(1) line 102 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 103 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       See also the [1mhowto[0m[4] documents for some useful examples.[m
-[7m Manual page git(1) line 104 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 105 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The internals are documented in the [1mGIT[0m [1mAPI[0m [1mdocumentation[0m[5].[m
-[7m Manual page git(1) line 106 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 107 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mGIT[0m [1mCOMMANDS[0m[m
-[7m Manual page git(1) line 108 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       We divide git into high level ("porcelain") commands and low[m
-[7m Manual page git(1) line 109 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       level ("plumbing") commands.[m
-[7m Manual page git(1) line 110 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 111 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mHIGH-LEVEL[0m [1mCOMMANDS[0m [1m(PORCELAIN)[0m[m
-[7m Manual page git(1) line 112 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       We separate the porcelain commands into the main commands and[m
-[7m Manual page git(1) line 113 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       some ancillary user utilities.[m
-[7m Manual page git(1) line 114 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 115 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mMain[0m [1mporcelain[0m [1mcommands[0m[m
-[7m Manual page git(1) line 116 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mgit-add[0m(1)[m
-[7m Manual page git(1) line 117 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Add file contents to the index.[m
-[7m Manual page git(1) line 118 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 119 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mgit-am[0m(1)[m
-[7m Manual page git(1) line 120 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Apply a series of patches from a mailbox.[m
-[7m Manual page git(1) line 121 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 122 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mgit-archive[0m(1)[m
-[7m Manual page git(1) line 123 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Create an archive of files from a named tree.[m
-[7m Manual page git(1) line 124 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 125 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mgit-bisect[0m(1)[m
-[7m Manual page git(1) line 126 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Find by binary search the change that introduced a bug.[m
-[7m Manual page git(1) line 127 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 128 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mgit-branch[0m(1)[m
-[7m Manual page git(1) line 129 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           List, create, or delete branches.[m
-[7m Manual page git(1) line 130 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 131 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mgit-bundle[0m(1)[m
-[7m Manual page git(1) line 132 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Move objects and refs by archive.[m
-[7m Manual page git(1) line 133 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 134 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mgit-checkout[0m(1)[m
-[7m Manual page git(1) line 135 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Checkout a branch or paths to the working tree.[m
-[7m Manual page git(1) line 136 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 137 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mgit-cherry-pick[0m(1)[m
-[7m Manual page git(1) line 138 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Apply the changes introduced by some existing commits.[m
-[7m Manual page git(1) line 139 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 140 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mgit-citool[0m(1)[m
-[7m Manual page git(1) line 141 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Graphical alternative to git-commit.[m
-[7m Manual page git(1) line 142 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 143 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mgit-clean[0m(1)[m
-[7m Manual page git(1) line 144 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Remove untracked files from the working tree.[m
-[7m Manual page git(1) line 145 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 146 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mgit-clone[0m(1)[m
-[7m Manual page git(1) line 147 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Clone a repository into a new directory.[m
-[7m Manual page git(1) line 148 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 149 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mgit-commit[0m(1)[m
-[7m Manual page git(1) line 150 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Record changes to the repository.[m
-[7m Manual page git(1) line 151 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 152 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mgit-describe[0m(1)[m
-[7m Manual page git(1) line 153 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Show the most recent tag that is reachable from a commit.[m
-[7m Manual page git(1) line 154 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 155 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mgit-diff[0m(1)[m
-[7m Manual page git(1) line 156 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Show changes between commits, commit and working tree,[m
-[7m Manual page git(1) line 157 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           etc.[m
-[7m Manual page git(1) line 158 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 159 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mgit-fetch[0m(1)[m
-[7m Manual page git(1) line 160 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Download objects and refs from another repository.[m
-[7m Manual page git(1) line 161 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 162 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mgit-format-patch[0m(1)[m
-[7m Manual page git(1) line 163 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Prepare patches for e-mail submission.[m
-[7m Manual page git(1) line 164 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page git(1) line 165 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mgit-gc[0m(1)[m
-[7m Manual page git(1) line 166 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           Cleanup unnecessary files and optimize the local[m
-[7m Manual page git(1) line 167 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ exit
-exit
-
-Script done on Thu 09 Oct 2014 06:20:58 PM PDT

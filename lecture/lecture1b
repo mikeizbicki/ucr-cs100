@@ -1,658 +1,0 @@
-Script started on Tue 07 Oct 2014 05:14:06 PM PDT
-]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lectuure$ mkdir gitexample
-]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lectuure$ [A[13P(reverse-i-search)`': 
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce': mkdir gitexammple[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cx': mkdir gitexample[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cp': export PS1="$ "[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co': export PS1[1@=[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr': export PS[1@1[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lectu[13@re$ export PS[C[C[C[C[C
-$ cd gitexample/
-$ clear
-[H[2J$ ls
-$ pwd
-/home/user/proj/ucr-cs100/lecture/gitexample
-$ git init
-Initialized empty Git repository in /home/user/proj/ucr-cs100/lecture/gitexample/.git/
-$ ls
-$ ls -a
-[0m[01;34m.[0m  [01;34m..[0m  [01;34m.git[0m
-$ cd ..[K[K[K[K[Kpwd
-/home/user/proj/ucr-cs100/lecture/gitexample
-$ cd .
-$ cd .[C[C[1Ppwd
-/home/user/proj/ucr-cs100/lecture/gitexample
-$ git init[K[K[K[K[K[K[K[Kclear
-[H[2J$ vim README
-[?1049h[?1h=[1;22r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[22;1H<DME" [New File][>c[1;1H[33m  1 [m
-[1m[34m~                                  [3;1H~                                  [4;1H~                                  [5;1H~                                  [6;1H~                                  [7;1H~                                  [8;1H~                                  [9;1H~                                  [10;1H~                                  [11;1H~                                  [12;1H~                                  [13;1H~                                  [14;1H~                                  [15;1H~                                  [16;1H~                                  [17;1H~                                  [18;1H~                                  [19;1H~                                  [20;1H~                                  [21;1H~                                  [m[22;19H0,0-1[8CAll]2;README (~/pr...example) - VIM]1;README[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[22;1H[1m-- INSERT --[m[22;13H[K[22;19H0,1[10CAll[1;5H[?12l[?25h[?25l[33m [mT[22;19H1,2]2;README + (~/...example) - VIM]1;README[1;6H[?12l[?25h[?25lTh[22;21H3[1;7H[?12l[?25h[?25lhi[22;21H4[1;8H[?12l[?25h[?25lis[22;21H5[1;9H[?12l[?25h[?25l[22;21H6[1;10H[?12l[?25h[?25l i[22;21H7[1;11H[?12l[?25h[?25lis[22;21H8[1;12H[?12l[?25h[?25l[22;21H9[1;13H[?12l[?25h[?25l a[22;21H10[1;14H[?12l[?25h[?25lan[22;22H1[1;15H[?12l[?25h[?25l[22;22H2[1;16H[?12l[?25h[?25l e[22;22H3[1;17H[?12l[?25h[?25lex[22;22H4[1;18H[?12l[?25h[?25lxa[22;22H5[1;19H[?12l[?25h[?25lam[22;22H6[1;20H[?12l[?25h[?25lmp[22;22H7[1;21H[?12l[?25h[?25lpl[22;22H8[1;22H[?12l[?25h[?25lle[22;22H9[1;23H[?12l[?25h[?25l[22;21H20[1;24H[?12l[?25h[?25l f[22;22H1[1;25H[?12l[?25h[?25lfo[22;22H2[1;26H[?12l[?25h[?25lor[22;22H3[1;27H[?12l[?25h[?25l[22;22H4[1;28H[?12l[?25h[?25l c[22;22H5[1;29H[?12l[?25h[?25lcs[22;22H6[1;30H[?12l[?25h[?25ls1[22;22H7[1;31H[?12l[?25h[?25l10[22;22H8[1;32H[?12l[?25h[?25l00[22;22H9[1;33H[?12l[?25h[?25l[22;21H30[1;34H[?12l[?25h[?25l o[22;22H1[1;35H[?12l[?25h[?25lon[22;22H2[2;5H[?12l[?25h[?25l[33m    [m [2;6H[K[22;22H3[2;6H[?12l[?25h[?25l h[22;22H4[2;7H[?12l[?25h[?25lho[22;22H5[2;8H[?12l[?25h[?25low[22;22H6[2;9H[?12l[?25h[?25l[22;22H7[2;10H[?12l[?25h[?25l t[22;22H8[2;11H[?12l[?25h[?25lto[22;22H9[2;12H[?12l[?25h[?25l[22;21H40[2;13H[?12l[?25h[?25l u[22;22H1[2;14H[?12l[?25h[?25lus[22;22H2[2;15H[?12l[?25h[?25lse[22;22H3[2;16H[?12l[?25h[?25l[22;22H4[2;17H[?12l[?25h[?25l f[22;22H5[2;18H[?12l[?25h[?25lfi[22;22H6[2;19H[?12l[?25h[?25l[2;18H[K[22;22H5[2;18H[?12l[?25h[?25l[2;17H[K[22;22H4[2;17H[?12l[?25h[?25l g[22;22H5[2;18H[?12l[?25h[?25lgi[22;22H6[2;19H[?12l[?25h[?25lit[22;22H7[2;20H[?12l[?25h[?25lt.[22;22H8[2;21H[?12l[?25h[22;1H[K[2;20H[?25l[22;19H1,47[9CAll[2;20H[?12l[?25h[?25l[22;19H[K[22;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l[22;3H[K[22;3H[?12l[?25h[?25l"README"<1L, 48C written  1,47[9CAll]2;README (~/pr...example) - VIM]1;README[22;19H[K[22;19H1,47[9CAll[2;20H[?12l[?25h[?25l[22;1H[1m-- INSERT --[m[22;13H[K[22;19H2,1[10CAll[3;1H[33m  2 [m[3;5H[K]2;README + (~/...example) - VIM]1;README[3;5H[?12l[?25h[?25l
-[33m  3 [m[4;5H[K[22;19H3[4;5H[?12l[?25h[?25l
-[33m  4 [m[5;5H[K[22;19H4[5;5H[?12l[?25h[?25l
-[33m  5 [m[6;5H[K[22;19H5[6;5H[?12l[?25h[?25l
-[33m  6 [m[7;5H[K[22;19H6[7;5H[?12l[?25h[?25l
-[33m  7 [m[8;5H[K[22;19H7[8;5H[?12l[?25h[?25l
-[33m  8 [m[9;5H[K[22;19H8[9;5H[?12l[?25h[?25l
-[33m  9 [m[10;5H[K[22;19H9[10;5H[?12l[?25h[?25l[33m [mT[22;21H2[10;6H[?12l[?25h[?25lTh[22;21H3[10;7H[?12l[?25h[?25lhi[22;21H4[10;8H[?12l[?25h[?25lis[22;21H5[10;9H[?12l[?25h[?25l[22;21H6[10;10H[?12l[?25h[?25l i[22;21H7[10;11H[?12l[?25h[?25lis[22;21H8[10;12H[?12l[?25h[?25l[22;21H9[10;13H[?12l[?25h[?25l t[22;21H10[10;14H[?12l[?25h[?25lth[22;22H1[10;15H[?12l[?25h[?25lhe[22;22H2[10;16H[?12l[?25h[?25l[22;22H3[10;17H[?12l[?25h[?25l b[22;22H4[10;18H[?12l[?25h[?25lbo[22;22H5[10;19H[?12l[?25h[?25loo[22;22H6[10;20H[?12l[?25h[?25lot[22;22H7[10;21H[?12l[?25h[?25l[10;20H[K[22;22H6[10;20H[?12l[?25h[?25l[10;19H[K[22;22H5[10;19H[?12l[?25h[?25lot[22;22H6[10;20H[?12l[?25h[?25ltt[22;22H7[10;21H[?12l[?25h[?25lto[22;22H8[10;22H[?12l[?25h[?25lom[22;22H9[10;23H[?12l[?25h[?25l[22;21H20[10;24H[?12l[?25h[?25l o[22;22H1[10;25H[?12l[?25h[?25lof[22;22H2[10;26H[?12l[?25h[?25l[22;22H3[10;27H[?12l[?25h[?25l t[22;22H4[10;28H[?12l[?25h[?25lth[22;22H5[10;29H[?12l[?25h[?25lhe[22;22H6[10;30H[?12l[?25h[?25l[22;22H7[10;31H[?12l[?25h[?25l f[22;22H8[10;32H[?12l[?25h[?25lfi[22;22H9[10;33H[?12l[?25h[?25lil[22;21H30[10;34H[?12l[?25h[?25lle[22;22H1[10;35H[?12l[?25h[?25le.[22;22H2[11;5H[?12l[?25h[22;1H[K[11;4H[?25l[22;19H9,31[9CAll[10;35H[?12l[?25h[?25l[22;19H[K[22;1H:[?12l[?25hw[?25l[?12l[?25h[?25l"README"<9L, 87C written  9,31[9CAll]2;README (~/pr...example) - VIM]1;README[22;19H[K[22;19H9,31[9CAll[10;35H[?12l[?25h[?25l[22;19H1,1 [1;5H[?12l[?25h[?25l[22;19H5,0-1[6;5H[?12l[?25h[?25l[22;1H[K[22;1H:[?12l[?25h7[?25l[?12l[?25h[?25l[18C7,0-1[8CAll[8;5H[?12l[?25h[?25l[22;19H9,1  [10;5H[?12l[?25h[?25l[33m [mis the bottom of the file.[10;31H[K]2;README + (~/...example) - VIM]1;README[10;5H[?12l[?25h[?25l[22;1H1 cha...onds ago[22;19H[K[10;4H[33m [mThis is the bottom of the file.[22;19H9,1[10CAll]2;README (~/pr...example) - VIM]1;README[10;5H[?12l[?25h[?25l[10;5H[K]2;README + (~/...example) - VIM]1;README[22;21H0-1[10;5H[?12l[?25h[?25l[22;19H[K[10;4H[33m [mThis is the bottom of the file.[22;19H9,1[10CAll]2;README (~/pr...example) - VIM]1;README[10;5H[?12l[?25h[?25l[22;21H6[10;10H[?12l[?25h[?25l[22;21H9[10;13H[?12l[?25h[?25l[22;21H13[10;17H[?12l[?25h[?25l[10;17H[K]2;README + (~/...example) - VIM]1;README[22;22H2[10;16H[?12l[?25h[?25l[22;19H[K[10;16H bottom of the file.[22;19H9,13[9CAll]2;README (~/pr...example) - VIM]1;README[10;17H[?12l[?25h[?25l[22;1H[1m-- INSERT --[m[22;14H[K[22;19H9,13[9CAll[10;17H[?12l[?25h[?25lebottom of the file.[10;35H[K[22;22H2]2;README + (~/...example) - VIM]1;README[10;16H[?12l[?25h[?25lhbottom of the file.[10;34H[K[22;22H1[10;15H[?12l[?25h[?25ltbottom of the file.[10;33H[K[22;22H0[10;14H[?12l[?25h[?25ltebottom of the file.[22;22H1[10;15H[?12l[?25h[?25ltbottom of the file.[10;33H[K[22;22H0[10;14H[?12l[?25h[?25lthbottom of the file.[22;22H1[10;15H[?12l[?25h[?25lhebottom of the file.[22;22H2[10;16H[?12l[?25h[?25le bottom of the file.[22;22H3[10;17H[?12l[?25h[22;1H[K[10;16H[?25l[22;19H9,12[9CAll[10;16H[?12l[?25h[?25l[22;19H[K[22;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"README"<9L, 87C written]2;user@userland: ~/proj/ucr-cs100/lecture]1;user@userland: ~/proj/ucr-cs100/lecture
-[?1l>[?12l[?25h[?1049l$ cat README 
-This is an example for cs100 on how to use git.
-
-
-
-
-
-
-
-This is the bottom of the file.
-$ git status
-# On branch master
-#
-# Initial commit
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	README
-nothing added to commit but untracked files present (use "git add" to track)
-$ clear
-[H[2J$ git add README
-$ git add README[C[C[9Pclear[C[Cgit status[C[Ccat README [C[C[1Pgit status
-# On branch master
-#
-# Initial commit
-#
-# Changes to be committed:
-#   (use "git rm --cached <file>..." to unstage)
-#
-#	new file:   README
-#
-$ pwd
-/home/user/proj/ucr-cs100/lecture/gitexample
-$ ls -a
-[0m[01;34m.[0m  [01;34m..[0m  [01;34m.git[0m  README
-$ 
-$ git commit 
-[?1049h[?1h=[1;22r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[22;1H<OMMIT_EDITMSG"<TMSG" 12L, 277C[>c[1;1H[33m  1 
-  2 [m[34m# Please enter the commit messaa[m[3;1H[33m    [m[34mge for your changes. Lines starr[m[4;1H[33m    [m[34mting[m
-[33m  3 [m[34m# with '#' will be ignored, andd[m[6;1H[33m    [m[34m an empty message aborts the coo[m[7;1H[33m    [m[34mmmit.[m
-[33m  4 [m[34m# On branch [m[35mmaster[m
-[33m  5 [m[34m#[m
-[33m  6 [m[34m# Initial commit[m
-[33m  7 [m[34m#[m
-[33m  8 [m[34m# [m[35mChanges to be committed:[m
-[33m  9 [m[34m#   (use "git rm --cached <filee[m[14;1H[33m    [m[34m>..." to unstage)[m
-[33m 10 [m[34m#[m
-[33m 11 [m[34m#   [m[32mnew file[m[34m: [m[31m  README[m
-[33m 12 [m[34m#[m
-[1m[34m~                                  [19;1H~                                  [20;1H~                                  [21;1H~                                  [m[22;19H1,0-1[8CAll]2;COMMIT_EDITM...le/.git) - VIM]1;COMMIT_EDITMSG[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[22;20H2,1 [17;5H[?12l[?25h[?25l[22;1H[1m-- INSERT --[m[22;13H[K[22;19H13,1[9CAll[18;1H[33m 13 [m[18;5H[K[18;5H[?12l[?25h[?25l[33m [mA[22;22H2[18;6H[?12l[?25h[?25lAd[22;22H3[18;7H[?12l[?25h[?25ldd[22;22H4[18;8H[?12l[?25h[?25lde[22;22H5[18;9H[?12l[?25h[?25led[22;22H6[18;10H[?12l[?25h[?25l[22;22H7[18;11H[?12l[?25h[?25l a[22;22H8[18;12H[?12l[?25h[?25l[22;22H9[18;13H[?12l[?25h[?25l R[22;22H10[18;14H[?12l[?25h[?25lRE[22;23H1[18;15H[?12l[?25h[?25lEA[22;23H2[18;16H[?12l[?25h[?25lAD[22;23H3[18;17H[?12l[?25h[?25lDM[22;23H4[18;18H[?12l[?25h[?25lME[22;23H5[18;19H[?12l[?25h[22;1H[K[18;18H[?25l[4mREADME[m[22;19H13,14[8CAll[18;18H[?12l[?25h[?25l[1m[34m~                                  [m[22;20H2,1 [17;5H[?12l[?25h[?25l[22;19H[K[22;1H:[?12l[?25h1[?25l[?12l[?25h[?25l[18C1,0-1[8CAll[1;5H[?12l[?25h[?25l[2;4H[33m [mAdded a [4mREADME[m[2;19H[K[3;2H[33m 3 [m[34m# Please enter the commit messaa[m[4;1H[33m    [m[34mge for your changes. Lines starr[m[5;1H[33m    [m[34mting[m[5;9H[K[6;2H[33m 4 [m[34m# with '#' will be ignored, andd[m[7;1H[33m    [m[34m an empty message aborts the coo[m[8;1H[33m    [m[34mmmit.[m[8;10H[K[9;6H[34m On branch [m[35mmaster[m[10;6H[K[11;6H[34m Initial commit[m[12;6H[K[13;6H[34m [m[35mChanges to be committed:[m[13;31H[K[14;1H[33m 10 [m[34m#   (use "git rm --cached <filee[m[15;1H[33m    [m[34m>..." to unstage)[m[16;6H[K[17;6H[34m   [m[32mnew file[m[34m: [m[31m  README[m
-[33m 13 [m[34m#[m[18;6H[K[22;19H2,1  [2;5H[?12l[?25h[?25l[22;19H1,0-1[1;5H[?12l[?25h[?25l[33m Added a [m[4m[33mREADME[m[2;4H[33m [m[34m# Please enter the commit messaa[m[3;1H[33m    [m[34mge for your changes. Lines starr[m[4;1H[33m    [m[34mting[m[4;9H[K[5;2H[33m 3 [m[34m# with '#' will be ignored, andd[m[6;1H[33m    [m[34m an empty message aborts the coo[m[7;1H[33m    [m[34mmmit.[m[7;10H[K[8;2H[33m 4 [m[34m# On branch [m[35mmaster[m[9;6H[K[10;6H[34m Initial commit[m[11;6H[K[12;6H[34m [m[35mChanges to be committed:[m[13;6H[34m   (use "git rm --cached <filee[m[14;1H[33m    [m[34m>..." to unstage)[m[14;22H[K[15;1H[33m 10 [m[34m#[m[15;6H[K[16;6H[34m   [m[32mnew file[m[34m: [m[31m  README[m[17;6H[K[18;1H[1m[34m~                                  [m[22;21H1  [1;5H[?12l[?25h[?25l[22;21H2[1;6H[?12l[?25h[?25l[22;19H2[2;6H[?12l[?25h[?25l[22;19H1[1;6H[?12l[?25h[?25l[22;1H[K[22;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l<OMMIT_EDITMSG"<L, 291C written]2;user@userland: ~/proj/ucr-cs100/lecture]1;user@userland: ~/proj/ucr-cs100/lecture
-[?1l>[?12l[?25h[?1049l[master (root-commit) f5384a5] Added a README
- 1 file changed, 9 insertions(+)
- create mode 100644 README
-$ git l[K[K[K[K[Kclear
-[H[2J$ git log
-[?1h=commit f5384a53dd9e953e07dafe0113e0[m
-Author: Mike Izbicki <mike@izbicki.[m
-Date:   Tue Oct 7 17:28:50 2014 -07[m
-[m
-    Added a README[m
-[7m(END)[27m[K[K[?1l>$ touch main.cpp
-$ ls 
-main.cpp  README
-$ cat main.cpp 
-$ git add main.cpp
-$ git commit
-[?1049h[?1h=[1;22r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[22;1H<OMMIT_EDITMSG"<ITMSG" 9L, 257C[>c[1;1H[33m  1 
-  2 [m[34m# Please enter the commit messaa[m[3;1H[33m    [m[34mge for your changes. Lines starr[m[4;1H[33m    [m[34mting[m
-[33m  3 [m[34m# with '#' will be ignored, andd[m[6;1H[33m    [m[34m an empty message aborts the coo[m[7;1H[33m    [m[34mmmit.[m
-[33m  4 [m[34m# On branch [m[35mmaster[m
-[33m  5 [m[34m# [m[35mChanges to be committed:[m
-[33m  6 [m[34m#   (use "git reset HEAD <file>>[m[11;1H[33m    [m[34m..." to unstage)[m
-[33m  7 [m[34m#[m
-[33m  8 [m[34m#   [m[32mnew file[m[34m: [m[31m  main.cpp[m
-[33m  9 [m[34m#[m
-[1m[34m~                                  [16;1H~                                  [17;1H~                                  [18;1H~                                  [19;1H~                                  [20;1H~                                  [21;1H~                                  [m[22;19H1,0-1[8CAll]2;COMMIT_EDITM...le/.git) - VIM]1;COMMIT_EDITMSG[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[22;1H[1m-- INSERT --[m[22;13H[K[22;19H1,1[10CAll[1;5H[?12l[?25h[?25l[33m a[m[22;21H2[1;6H[?12l[?25h[?25l[33mad[m[22;21H3[1;7H[?12l[?25h[?25l[33mdd[m[22;21H4[1;8H[?12l[?25h[?25l[4m[33madd[m[33m [m[22;21H5[1;9H[?12l[?25h[?25l[33madd[m[1;8H[K[22;21H4[1;8H[?12l[?25h[?25l[33mde[m[22;21H5[1;9H[?12l[?25h[?25l[33med[m[22;21H6[1;10H[?12l[?25h[?25l[4m[33madded[m[33m [m[22;21H7[1;11H[?12l[?25h[?25l[33m m[m[22;21H8[1;12H[?12l[?25h[?25l[33mma[m[22;21H9[1;13H[?12l[?25h[?25l[33mai[m[22;21H10[1;14H[?12l[?25h[?25l[33min[m[22;22H1[1;15H[?12l[?25h[?25l[33m [m[22;22H2[1;16H[?12l[?25h[?25l[33m f[m[22;22H3[1;17H[?12l[?25h[?25l[33mfi[m[22;22H4[1;18H[?12l[?25h[?25l[33mil[m[22;22H5[1;19H[?12l[?25h[?25l[33mle[m[22;22H6[1;20H[?12l[?25h[22;1H[K[1;19H[?25l[22;19H1,15[9CAll[1;19H[?12l[?25h[?25l[22;19H[K[22;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l<OMMIT_EDITMSG"<L, 272C written]2;user@userland: ~/proj/ucr-cs100/lecture]1;user@userland: ~/proj/ucr-cs100/lecture
-[?1l>[?12l[?25h[?1049l[master 3165847] added main file
- 0 files changed
- create mode 100644 main.cpp
-$ git commit[C[C[Kclear
-[H[2J$ clear[C[Cgit commitadd main.cpp[C[C[3Pcat main.cpp [C[Cls [Ktouch main.cpp[C[C[7Pgit log[C[C[2Pclear[C[Cgit log
-[?1h=commit 316584767c64c47a9d16c0dc6dc0[m
-Author: Mike Izbicki <mike@izbicki.[m
-Date:   Tue Oct 7 17:33:05 2014 -07[m
-[m
-    added main file[m
-[m
-commit f5384a53dd9e953e07dafe0113e0[m
-Author: Mike Izbicki <mike@izbicki.[m
-Date:   Tue Oct 7 17:28:50 2014 -07[m
-[m
-    Added a README[m
-[7m(END)[27m[K[K[?1l>$ vim main.cpp 
-[?1049h[?1h=[1;22r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[22;1H"main.cpp"<ain.cpp" 0L, 0C[>c[1;1H[33m  1 [m
-[1m[34m~                                  [3;1H~                                  [4;1H~                                  [5;1H~                                  [6;1H~                                  [7;1H~                                  [8;1H~                                  [9;1H~                                  [10;1H~                                  [11;1H~                                  [12;1H~                                  [13;1H~                                  [14;1H~                                  [15;1H~                                  [16;1H~                                  [17;1H~                                  [18;1H~                                  [19;1H~                                  [20;1H~                                  [21;1H~                                  [m[22;19H0,0-1[8CAll]2;main.cpp (~/...example) - VIM]1;main.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[22;1H[1m-- INSERT --[m[22;13H[K[22;19H0,1[10CAll[1;5H[?12l[?25h[?25l[33m [m$[22;19H1,2]2;main.cpp + (...example) - VIM]1;main.cpp[1;6H[?12l[?25h[?25l[1;5H[K[22;21H1[1;5H[?12l[?25h[?25l[33m [m#[22;21H2[1;6H[?12l[?25h[?25l#i[22;21H3[1;7H[?12l[?25h[?25lin[22;21H4[1;8H[?12l[?25h[?25lnc[22;21H5[1;9H[?12l[?25h[?25lcl[22;21H6[1;10H[?12l[?25h[?25llu[22;21H7[1;11H[?12l[?25h[?25lud[22;21H8[1;12H[?12l[?25h[?25lde[22;21H9[1;13H[?12l[?25h[?25l[22;21H10[1;14H[?12l[?25h[?25l[1;5H[35m#include <[m[22;22H1[1;15H[?12l[?25h[?25l[35m<[mi[22;22H2[1;16H[?12l[?25h[?25lio[22;22H3[1;17H[?12l[?25h[?25los[22;22H4[1;18H[?12l[?25h[?25lst[22;22H5[1;19H[?12l[?25h[?25ltr[22;22H6[1;20H[?12l[?25h[?25lre[22;22H7[1;21H[?12l[?25h[?25lea[22;22H8[1;22H[?12l[?25h[?25lam[22;22H9[1;23H[?12l[?25h[?25l[1;14H[31m<iostream>[m[22;21H20[1;24H[?12l[?25h[?25l
-[33m  2 [m[2;5H[K[22;19H2,1 [2;5H[?12l[?25h[?25l
-[33m  3 [m[3;5H[K[22;19H3[3;5H[?12l[?25h[?25l[33m [mu[22;21H2[3;6H[?12l[?25h[?25lus[22;21H3[3;7H[?12l[?25h[?25lsi[22;21H4[3;8H[?12l[?25h[?25lin[22;21H5[3;9H[?12l[?25h[?25l[33musing[m[22;21H6[3;10H[?12l[?25h[?25l[22;21H7[3;11H[?12l[?25h[?25l n[22;21H8[3;12H[?12l[?25h[?25lna[22;21H9[3;13H[?12l[?25h[?25lam[22;21H10[3;14H[?12l[?25h[?25lme[22;22H1[3;15H[?12l[?25h[?25les[22;22H2[3;16H[?12l[?25h[?25lsp[22;22H3[3;17H[?12l[?25h[?25lpa[22;22H4[3;18H[?12l[?25h[?25lac[22;22H5[3;19H[?12l[?25h[?25l[3;11H[32mnamespace[m[22;22H6[3;20H[?12l[?25h[?25l[22;22H7[3;21H[?12l[?25h[?25l s[22;22H8[3;22H[?12l[?25h[?25lst[22;22H9[3;23H[?12l[?25h[?25ltd[22;21H20[3;24H[?12l[?25h[?25ld;[22;22H1[3;25H[?12l[?25h[?25l
-[33m  4 [m[4;5H[K[22;19H4,1 [4;5H[?12l[?25h[?25l
-[33m  5 [m[5;5H[K[22;19H5[5;5H[?12l[?25h[?25l[33m [mi[22;21H2[5;6H[?12l[?25h[?25lin[22;21H3[5;7H[?12l[?25h[?25l[32mint[m[22;21H4[5;8H[?12l[?25h[?25l[22;21H5[5;9H[?12l[?25h[?25l m[22;21H6[5;10H[?12l[?25h[?25lma[22;21H7[5;11H[?12l[?25h[?25lai[22;21H8[5;12H[?12l[?25h[?25lin[22;21H9[5;13H[?12l[?25h[?25ln([22;19H[K[22;19H5,10[9CAll[5;14H[?12l[?25h[?25l()[46m()[m[22;19H[K[22;19H5,11[9CAll[5;15H[?12l[?25h[?25l
-[33m  6 [m[6;5H[K[5;13H()[22;19H6,1 [6;5H[?12l[?25h[?25l[33m [m{[22;19H[K[22;19H6,2[10CAll[6;6H[?12l[?25h[?25l
-[33m  7 [m    [7;9H[K[22;19H7,5[7;9H[?12l[?25h[?25l[7;4H[33m [m}[6;5H[46m{[7;5H}[m[22;19H[K[22;19H7,2[10CAll[7;6H[?12l[?25h[?25l[22;19H[K[22;19H6,2[10CAll[6;6H[?12l[?25h[?25l[7;4H[33m [m[46m [m
-[33m  8 [m}[8;6H[K[6;5H{[7;5H [22;19H7,5[7;9H[?12l[?25h[?25l c[22;21H6[7;10H[?12l[?25h[?25lco[22;21H7[7;11H[?12l[?25h[?25lou[22;21H8[7;12H[?12l[?25h[?25lut[22;21H9[7;13H[?12l[?25h[?25l[22;21H10[7;14H[?12l[?25h[?25l <[22;22H1[7;15H[?12l[?25h[?25l<<[22;22H2[7;16H[?12l[?25h[?25l[22;22H3[7;17H[?12l[?25h[?25l [31m"[m[22;22H4[7;18H[?12l[?25h[?25l[31m"h[m[22;22H5[7;19H[?12l[?25h[?25l[31mhe[m[22;22H6[7;20H[?12l[?25h[?25l[31mel[m[22;22H7[7;21H[?12l[?25h[?25l[31mll[m[22;22H8[7;22H[?12l[?25h[?25l[31mlo[m[22;22H9[7;23H[?12l[?25h[?25l[31m [m[22;21H20[7;24H[?12l[?25h[?25l[31m w[m[22;22H1[7;25H[?12l[?25h[?25l[31mwo[m[22;22H2[7;26H[?12l[?25h[?25l[31mor[m[22;22H3[7;27H[?12l[?25h[?25l[31mrl[m[22;22H4[7;28H[?12l[?25h[?25l[31mld[m[22;22H5[7;29H[?12l[?25h[?25l[31md![m[22;22H6[7;30H[?12l[?25h[?25l[31m!"[m[22;22H7[7;31H[?12l[?25h[?25l[22;22H8[7;32H[?12l[?25h[?25l <[22;22H9[7;33H[?12l[?25h[?25l<<[22;21H30[7;34H[?12l[?25h[?25l[22;22H1[7;35H[?12l[?25h[?25l e[22;22H2[8;5H[?12l[?25h[?25l[8;21r[8;1H[L[1;22r[8;1H[33m    [mn[22;19H[K[22;19H7,33[9CAll[8;6H[?12l[?25h[?25lnd[22;22H4[8;7H[?12l[?25h[?25ldl[22;22H5[8;8H[?12l[?25h[?25ll;[22;22H6[8;9H[?12l[?25h[?25l[22;22H5[8;8H[?12l[?25h[?25l[22;22H1[7;35H[?12l[?25h[?25l[22;21H28[7;32H[?12l[?25h[?25l[7;32H[K[8;2H[33m 8 [m    << endl;[9;2H[33m 9[m[22;19H8,5 [8;9H[?12l[?25h[?25l     << endl;[22;21H9[8;13H[?12l[?25h[?25l  << endl;[22;21H10[8;14H[?12l[?25h[?25l  << endl;[22;22H1[8;15H[?12l[?25h[?25l << endl;[8;22H[K[22;22H0[8;14H[?12l[?25h[?25l[22;22H8[8;22H[?12l[?25h[?25l[9;4H[33m [m 
-[33m 10 [m}[10;6H[K[22;19H9,10[9;14H[?12l[?25h[?25l[10;4H[33m [m 
-[33m 11 [m}[11;6H[K[22;19H10,10[10;14H[?12l[?25h[?25l[22;22H9 [10;13H[?12l[?25h[?25l[22;22H8[10;12H[?12l[?25h[?25l[22;22H7[10;11H[?12l[?25h[?25l[22;22H6[10;10H[?12l[?25h[?25l[22;22H5[10;9H[?12l[?25h[?25l r[22;22H6[10;10H[?12l[?25h[?25lre[22;22H7[10;11H[?12l[?25h[?25let[22;22H8[10;12H[?12l[?25h[?25ltu[22;22H9[10;13H[?12l[?25h[?25lur[22;22H10[10;14H[?12l[?25h[?25l[33mreturn[m[22;23H1[10;15H[?12l[?25h[?25l[22;23H2[10;16H[?12l[?25h[?25l [31m0[m[22;23H3[10;17H[?12l[?25h[?25l[31m0[m;[22;23H4[10;18H[?12l[?25h[?25l[6;5H[46m{[11;5H}[m[22;19H[K[22;19H11,2[9CAll[11;6H[?12l[?25h[?25l[11;5H[K[6;5H{[22;22H1[11;5H[?12l[?25h[?25l[1m[34m~                                  [m[22;20H0,14[10;18H[?12l[?25h[?25l
-[33m 11 [m    [11;9H[K[22;20H1,5 [11;9H[?12l[?25h[?25l[11;4H[33m [m}[6;5H[46m{[11;5H}[m[22;19H[K[22;19H11,2[9CAll[11;6H[?12l[?25h[22;1H[K[11;5H[?25l[22;19H11,1[9CAll[11;5H[?12l[?25h[?25l[22;19H[K[22;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"main.cpp"<L, 118C written]2;user@userland: ~/proj/ucr-cs100/lecture]1;user@userland: ~/proj/ucr-cs100/lecture
-[?1l>[?12l[?25h[?1049l$ g++ main.cpp 
-$ ls
-[0m[01;32ma.out[0m  main.cpp  README
-$ ./a.out 
-hello world!
-$ clear
-[H[2J$ git status
-# On branch master
-# Changes not staged for commit:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	modified:   main.cpp
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	a.out
-no changes added to commit (use "git add" and/or "git commit -a")
-$ git add main.cpp
-$ git commit 
-[?1049h[?1h=[1;22r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[22;1H<OMMIT_EDITMSG"<TMSG" 13L, 353C[>c[1;1H[33m  1 
-  2 [m[34m# Please enter the commit messaa[m[3;1H[33m    [m[34mge for your changes. Lines starr[m[4;1H[33m    [m[34mting[m
-[33m  3 [m[34m# with '#' will be ignored, andd[m[6;1H[33m    [m[34m an empty message aborts the coo[m[7;1H[33m    [m[34mmmit.[m
-[33m  4 [m[34m# On branch [m[35mmaster[m
-[33m  5 [m[34m# [m[35mChanges to be committed:[m
-[33m  6 [m[34m#   (use "git reset HEAD <file>>[m[11;1H[33m    [m[34m..." to unstage)[m
-[33m  7 [m[34m#[m
-[33m  8 [m[34m#   [m[32mmodified[m[34m: [m[31m  main.cpp[m
-[33m  9 [m[34m#[m
-[33m 10 [m[34m# [m[35mUntracked files:[m
-[33m 11 [m[34m#   (use "git add <file>..." too[m[17;1H[33m    [m[34m include in what will be committ[m[18;1H[33m    [m[34mted)[m
-[33m 12 [m[34m#[m
-[33m 13 [m[34m#   [m[31ma.out[m
-[1m[34m~                                  [m[22;19H1,0-1[8CAll]2;COMMIT_EDITM...le/.git) - VIM]1;COMMIT_EDITMSG[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[22;1H[K[22;1H:[?12l[?25hq[?25l[?12l[?25h[?25l]2;user@userland: ~/proj/ucr-cs100/lecture]1;user@userland: ~/proj/ucr-cs100/lecture[22;1H[K[22;1H[?1l>[?12l[?25h[?1049lAborting commit due to empty commit message.
-$ git commit -m ""a"d"d"e"d" "s"o"m"e" "c"o"d"e" "t" [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co"" "m"a"i"n"."c"p"p"
-[master cf76399] added some code to main.cpp
- 1 file changed, 11 insertions(+)
-$ clear
-[H[2J$ git vom[K[K[Kcommit -m [K[K[K[K[K[K[K[K[K[K[K[K[K[Kgit status
-# On branch master
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	a.out
-nothing added to commit but untracked files present (use "git add" to track)
-$ clear
-[H[2J$ git log
-[?1h=commit cf76399d30f571c05841a2534997[m
-Author: Mike Izbicki <mike@izbicki.[m
-Date:   Tue Oct 7 17:40:53 2014 -07[m
-[m
-    added some code to main.cpp[m
-[m
-commit 316584767c64c47a9d16c0dc6dc0[m
-Author: Mike Izbicki <mike@izbicki.[m
-Date:   Tue Oct 7 17:33:05 2014 -07[m
-[m
-    added main file[m
-[m
-commit f5384a53dd9e953e07dafe0113e0[m
-Author: Mike Izbicki <mike@izbicki.[m
-Date:   Tue Oct 7 17:28:50 2014 -07[m
-[m
-    Added a README[m
-[7m(END)[27m[K[K[?1l>$ clear[K[K[K[K[Kgit checkout f5384a53dd9e953e07da fe0113e0
-Note: checking out 'f5384a53dd9e953e07dafe0113e0'.
-
-You are in 'detached HEAD' state. You can look around, make experimental
-changes and commit them, and you can discard any commits you make in this
-state without impacting any branches by performing another checkout.
-
-If you want to create a new branch to retain commits you create, you may
-do so (now or later) by using -b with the checkout command again. Example:
-
-  git checkout -b new_branch_name
-
-HEAD is now at f5384a5... Added a README
-$ clear
-[H[2J$ ls
-[0m[01;32ma.out[0m  README
-$ ls[K[Kgit checkout 316fa4
-error: pathspec '316fa4' did not match any file(s) known to git.
-$ git checkout 316fa4[1P484
-error: pathspec '316f84' did not match any file(s) known to git.
-$ git checkout 316f84[1P84584[C[1P4a4[1P484
-Previous HEAD position was f5384a5... Added a README
-HEAD is now at 3165847... added main file
-$ ls
-[0m[01;32ma.out[0m  main.cpp  README
-$ cat main.cpp 
-$ git checkout cf7639
-Previous HEAD position was 3165847... added main file
-HEAD is now at cf76399... added some code to main.cpp
-$ clear
-[H[2J$ ls
-[0m[01;32ma.out[0m  main.cpp  README
-$ cat main.cpp 
-#include <iostream>
-
-using namespace std;
-
-int main()
-{
-    cout << "hello world!"
-         << endl;
-
-    return 0;
-}
-$ ls -a
-[0m[01;34m.[0m   [01;32ma.out[0m  main.cpp
-[01;34m..[0m  [01;34m.git[0m   README
-$ git branch goodbye
-$ ls -a
-[0m[01;34m.[0m   [01;32ma.out[0m  main.cpp
-[01;34m..[0m  [01;34m.git[0m   README
-$ catls -a[C[Cgit branch goodbye[C[Cls -a[K[C[Ccat main.cpp [C[Cls[Kcat main.cpp 
-#include <iostream>
-
-using namespace std;
-
-int main()
-{
-    cout << "hello world!"
-         << endl;
-
-    return 0;
-}
-$ clear
-[H[2J$ vim main.cpp 
-[?1049h[?1h=[1;22r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[22;1H"main.cpp"<.cpp" 11L, 118C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
-[33m  2 
-  3 using[m [32mnamespace[m std;
-[33m  4 
-  5 [m[32mint[m main()
-[33m  6 [m{
-[33m  7 [m    cout << [31m"hello world!"[m
-[33m  8 [m[8C << endl;
-[33m  9 
- 10 [m    [33mreturn[m [31m0[m;
-[33m 11 [m}
-[1m[34m~                                  [13;1H~                                  [14;1H~                                  [15;1H~                                  [16;1H~                                  [17;1H~                                  [18;1H~                                  [19;1H~                                  [20;1H~                                  [21;1H~                                  [m[22;19H1,1[10CAll]2;main.cpp (~/...example) - VIM]1;main.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[22;1H[K[22;1H:[?12l[?25h7[?25l[?12l[?25h[?25l[18C7,5[10CAll[7;9H[?12l[?25h[?25l[22;21H10[7;14H[?12l[?25h[?25l[22;22H3[7;17H[?12l[?25h[?25l[22;22H4[7;18H[?12l[?25h[?25l[31m" world!"[m[7;26H[K]2;main.cpp + (...example) - VIM]1;main.cpp[7;18H[?12l[?25h[?25l[22;1H[1m-- INSERT --[m[22;19H[K[22;19H7,14[9CAll[7;18H[?12l[?25h[?25l[31m"g world!"[m[22;22H5[7;19H[?12l[?25h[?25l[31mgo world!"[m[22;22H6[7;20H[?12l[?25h[?25l[31moo world!"[m[22;22H7[7;21H[?12l[?25h[?25l[31mod world!"[m[22;22H8[7;22H[?12l[?25h[?25l[31mdb world!"[m[22;22H9[7;23H[?12l[?25h[?25l[31mby world!"[m[22;21H20[7;24H[?12l[?25h[?25l[31mye world!"[m[22;22H1[7;25H[?12l[?25h[?25l[22;22H9[7;33H[?12l[?25h[?25l[22;22H8[7;32H[?12l[?25h[?25l[31m!n"[m[22;22H9[7;33H[?12l[?25h[?25l[31m!"[m[7;33H[K[22;22H8[7;32H[?12l[?25h[?25l[31m! "[m[22;22H9[7;33H[?12l[?25h[?25l[31m :"[m[22;21H30[7;34H[?12l[?25h[?25l[31m:("[m[22;19H[K[22;19H7,31[9CAll[7;35H[?12l[?25h[22;1H[K[7;34H[?25l[22;19H7,30[9CAll[7;34H[?12l[?25h[?25l[22;19H[K[22;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"main.cpp"<L, 123C written]2;user@userland: ~/proj/ucr-cs100/lecture]1;user@userland: ~/proj/ucr-cs100/lecture
-[?1l>[?12l[?25h[?1049l$ gid a[K[K[Kt add main.cpp
-$ git commit -m "sd[Kaddness"
-[detached HEAD fc7d155] saddness
- 1 file changed, 1 insertion(+), 1 deletion(-)
-$ git log
-[?1h=commit fc7d15581b0d3a3b9d44c87dd2e8[m
-Author: Mike Izbicki <mike@izbicki.[m
-Date:   Tue Oct 7 17:50:52 2014 -07[m
-[m
-    saddness[m
-[m
-commit cf76399d30f571c05841a2534997[m
-Author: Mike Izbicki <mike@izbicki.[m
-Date:   Tue Oct 7 17:40:53 2014 -07[m
-[m
-    added some code to main.cpp[m
-[m
-commit 316584767c64c47a9d16c0dc6dc0[m
-Author: Mike Izbicki <mike@izbicki.[m
-Date:   Tue Oct 7 17:33:05 2014 -07[m
-[m
-    added main file[m
-[m
-commit f5384a53dd9e953e07dafe0113e0[m
-Author: Mike Izbicki <mike@izbicki.[m
-Date:   Tue Oct 7 17:28:50 2014 -07[m
-:[K[K [KESCESC[KOO[KBB[K[m
-:[K[K [KESCESC[KOO[KBB[K    Added a README[m
-:[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KAA[K[HMAuthor: Mike Izbicki <mike@izbicki.[m
-[22;1H[K:[K[K [KESCESC[KOO[KAA[K[HMcommit fc7d15581b0d3a3b9d44c87dd2e8[m
-[22;1H[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KBB[K[m
-:[K[K [KESCESC[KOO[KBB[K    Added a README[m
-[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KAA[K[HMAuthor: Mike Izbicki <mike@izbicki.[m
-[22;1H[K:[K[K [KESCESC[KOO[KAA[K[HMcommit fc7d15581b0d3a3b9d44c87dd2e8[m
-[22;1H[K:[K[K[?1l>$ clear
-[H[2J$ cat main.cpp 
-#include <iostream>
-
-using namespace std;
-
-int main()
-{
-    cout << "goodbye world! :("
-         << endl;
-
-    return 0;
-}
-$ g++ main.cpp 
-$ ./a.out 
-goodbye world! :(
-$ clear
-[H[2J$ git branch
-* (no branch)
-  goodbye
-  master
-$ git checkout master
-Warning: you are leaving 1 commit behind, not connected to
-any of your branches:
-
-  fc7d155 saddness
-
-If you want to keep them by creating a new branch, this may be a good time
-to do so with:
-
- git branch new_branch_name fc7d15581b0d3a3b9d44c87dd2e86dcd3c7098b8
-
-Switched to branch 'master'
-$ git branch sad[K[K[Kgoodbye2
-$ git checkout goodbye12[K[K2
-Switched to branch 'goodbye2'
-$ git branch
-  goodbye
-* goodbye2
-  master
-$ clear
-[H[2J$ clear[C[Cgit branch
-  goodbye
-* goodbye2
-  master
-$ git [K[K[K[Kcat na[K[Kmain.cpp 
-#include <iostream>
-
-using namespace std;
-
-int main()
-{
-    cout << "hello world!"
-         << endl;
-
-    return 0;
-}
-$ vim main.cpp 
-[?1049h[?1h=[1;22r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[22;1H"main.cpp"<.cpp" 11L, 118C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
-[33m  2 
-  3 using[m [32mnamespace[m std;
-[33m  4 
-  5 [m[32mint[m main()
-[33m  6 [m{
-[33m  7 [m    cout << [31m"hello world!"[m
-[33m  8 [m[8C << endl;
-[33m  9 
- 10 [m    [33mreturn[m [31m0[m;
-[33m 11 [m}
-[1m[34m~                                  [13;1H~                                  [14;1H~                                  [15;1H~                                  [16;1H~                                  [17;1H~                                  [18;1H~                                  [19;1H~                                  [20;1H~                                  [21;1H~                                  [m[22;19H1,1[10CAll]2;main.cpp (~/...example) - VIM]1;main.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[22;1H[K[22;1H:[?12l[?25h7[?25l[?12l[?25h[?25l[18C7,5[10CAll[7;9H[?12l[?25h[?25l[22;21H10[7;14H[?12l[?25h[?25l[22;22H3[7;17H[?12l[?25h[?25l[22;22H4[7;18H[?12l[?25h[?25l[31m" world!"[m[7;26H[K]2;main.cpp + (...example) - VIM]1;main.cpp[7;18H[?12l[?25h[?25l[22;1H[1m-- INSERT --[m[22;19H[K[22;19H7,14[9CAll[7;18H[?12l[?25h[?25l[31m"g world!"[m[22;22H5[7;19H[?12l[?25h[?25l[31mgo world!"[m[22;22H6[7;20H[?12l[?25h[?25l[31moo world!"[m[22;22H7[7;21H[?12l[?25h[?25l[31mod world!"[m[22;22H8[7;22H[?12l[?25h[?25l[31mdb world!"[m[22;22H9[7;23H[?12l[?25h[?25l[31mby world!"[m[22;21H20[7;24H[?12l[?25h[?25l[31mye world!"[m[22;22H1[7;25H[?12l[?25h[?25l[22;22H9[7;33H[?12l[?25h[?25l[22;22H8[7;32H[?12l[?25h[?25l[31m! "[m[22;22H9[7;33H[?12l[?25h[?25l[31m :"[m[22;21H30[7;34H[?12l[?25h[?25l[31m:("[m[22;19H[K[22;19H7,31[9CAll[7;35H[?12l[?25h[22;1H[K[7;34H[?25l[22;19H7,30[9CAll[7;34H[?12l[?25h[?25l[22;19H[K[22;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"main.cpp"<L, 123C written]2;user@userland: ~/proj/ucr-cs100/lecture]1;user@userland: ~/proj/ucr-cs100/lecture
-[?1l>[?12l[?25h[?1049l$ git add main.cpp
-$ git commit -m "hope this works"
-[goodbye2 966e9f0] hope this works
- 1 file changed, 1 insertion(+), 1 deletion(-)
-$ clear
-[H[2J$ git checkout master
-Switched to branch 'master'
-$ ls
-[0m[01;32ma.out[0m  main.cpp  README
-$ caat [K[K[Kt main.cpp 
-#include <iostream>
-
-using namespace std;
-
-int main()
-{
-    cout << "hello world!"
-         << endl;
-
-    return 0;
-}
-$ git checkout goodbye2
-Switched to branch 'goodbye2'
-$ git checkout goodbye2[C[C[8Pcat main.cpp 
-#include <iostream>
-
-using namespace std;
-
-int main()
-{
-    cout << "goodbye world! :("
-         << endl;
-
-    return 0;
-}
-$ git [K[K[K[Kclear
-[H[2J$ git ce[Kheckout -b [K[K[K[K[Kt[K[K[K[K[K[K[K[K[K[K[K[Kgit branch
-  goodbye
-* goodbye2
-  master
-$ git checkout master
-Switched to branch 'master'
-$ vim main.cpp 
-[?1049h[?1h=[1;22r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[22;1H"main.cpp"<.cpp" 11L, 118C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
-[33m  2 
-  3 using[m [32mnamespace[m std;
-[33m  4 
-  5 [m[32mint[m main()
-[33m  6 [m{
-[33m  7 [m    cout << [31m"hello world!"[m
-[33m  8 [m[8C << endl;
-[33m  9 
- 10 [m    [33mreturn[m [31m0[m;
-[33m 11 [m}
-[1m[34m~                                  [13;1H~                                  [14;1H~                                  [15;1H~                                  [16;1H~                                  [17;1H~                                  [18;1H~                                  [19;1H~                                  [20;1H~                                  [21;1H~                                  [m[22;19H1,1[10CAll]2;main.cpp (~/...example) - VIM]1;main.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[22;19H2,0-1[2;5H[?12l[?25h[?25l[22;19H3,1  [3;5H[?12l[?25h[?25l[22;19H4,0-1[4;5H[?12l[?25h[?25l[22;19H5,1  [5;5H[?12l[?25h[?25l[6;5H[46m{[11;5H}[m[22;19H6[6;5H[?12l[?25h[?25l{[11;5H}[22;19H7[7;5H[?12l[?25h[?25l[6;5H[46m{[11;5H}[m[22;19H6[6;5H[?12l[?25h[?25l[22;1H[1m-- INSERT --[m[22;13H[K[22;19H7,5[10CTop[7;9H[K[8;8H cout << [31m"hello world!"[m[9;13H << endl;[10;9H[K[11;4H[33m [m[46m [m   [33mreturn[m [31m0[m;
-[33m 12 [m}[12;6H[K[6;5H{[11;5H ]2;main.cpp + (...example) - VIM]1;main.cpp[7;9H[?12l[?25h[?25l c[22;21H6[10CAll[7;10H[?12l[?25h[?25lci[22;21H7[7;11H[?12l[?25h[?25l[7;10H[K[22;21H6[7;10H[?12l[?25h[?25l[7;9H[K[22;21H5[7;9H[?12l[?25h[?25l s[22;21H6[7;10H[?12l[?25h[?25lst[22;21H7[7;11H[?12l[?25h[?25ltr[22;21H8[7;12H[?12l[?25h[?25lri[22;21H9[7;13H[?12l[?25h[?25lin[22;21H10[7;14H[?12l[?25h[?25lng[22;22H1[7;15H[?12l[?25h[?25l[22;22H2[7;16H[?12l[?25h[?25l n[22;22H3[7;17H[?12l[?25h[?25lna[22;22H4[7;18H[?12l[?25h[?25lam[22;22H5[7;19H[?12l[?25h[?25lme[22;22H6[7;20H[?12l[?25h[?25le=[22;22H7[7;21H[?12l[?25h[?25l=[31m"[m[22;22H8[7;22H[?12l[?25h[?25l[31m""[m[22;22H9[7;23H[?12l[?25h[?25l[31m"[m;[22;21H20[7;24H[?12l[?25h[?25l[8;9H[K[9;8H cout << [31m"hello world!"[m[10;13H << endl;[11;9H[K[12;4H[33m [m    [33mreturn[m [31m0[m;
-[33m 13 [m}[13;6H[K[22;19H8,5 [8;9H[?12l[?25h[?25l c[22;21H6[8;10H[?12l[?25h[?25lco[22;21H7[8;11H[?12l[?25h[?25lou[22;21H8[8;12H[?12l[?25h[?25lut[22;21H9[8;13H[?12l[?25h[?25l[22;21H10[8;14H[?12l[?25h[?25l ,[22;22H1[8;15H[?12l[?25h[?25l,,[22;22H2[8;16H[?12l[?25h[?25l[22;22H3[8;17H[?12l[?25h[?25l[22;22H2[8;16H[?12l[?25h[?25l[8;15H[K[22;22H1[8;15H[?12l[?25h[?25l[8;14H[K[22;22H0[8;14H[?12l[?25h[?25l[22;22H1[8;15H[?12l[?25h[?25l[22;22H0[8;14H[?12l[?25h[?25l <[22;22H1[8;15H[?12l[?25h[?25l<<[22;22H2[8;16H[?12l[?25h[?25l[22;22H3[8;17H[?12l[?25h[?25l [31m"[m[22;22H4[8;18H[?12l[?25h[?25l[31m"w[m[22;22H5[8;19H[?12l[?25h[?25l[31mwh[m[22;22H6[8;20H[?12l[?25h[?25l[31mha[m[22;22H7[8;21H[?12l[?25h[?25l[31mat[m[22;22H8[8;22H[?12l[?25h[?25l[31mt'[m[22;22H9[8;23H[?12l[?25h[?25l[31m's[m[22;21H20[8;24H[?12l[?25h[?25l[31m [m[22;22H1[8;25H[?12l[?25h[?25l[31m y[m[22;22H2[8;26H[?12l[?25h[?25l[31myo[m[22;22H3[8;27H[?12l[?25h[?25l[31mou[m[22;22H4[8;28H[?12l[?25h[?25l[31mur[m[22;22H5[8;29H[?12l[?25h[?25l[31m [m[22;22H6[8;30H[?12l[?25h[?25l[31m n[m[22;22H7[8;31H[?12l[?25h[?25l[31mna[m[22;22H8[8;32H[?12l[?25h[?25l[31mam[m[22;22H9[8;33H[?12l[?25h[?25l[31mme[m[22;21H30[8;34H[?12l[?25h[?25l[31me?[m[22;22H1[8;35H[?12l[?25h[?25l[31m [m[22;22H2[9;5H[?12l[?25h[?25l[9;21r[9;1H[L[1;22r[9;1H[33m    [m[31m"[m[22;19H[K[22;19H8,33[9CAll[9;6H[?12l[?25h[?25l[31m"[m;[22;22H4[9;7H[?12l[?25h[?25l[10;9H[K[11;8H cout << [31m"hello world!"[m[12;13H << endl;[13;9H[K[14;4H[33m [m    [33mreturn[m [31m0[m;
-[33m 14 [m}[15;6H[K[22;19H9,5 [10;9H[?12l[?25h[?25l c[22;21H6[10;10H[?12l[?25h[?25lci[22;21H7[10;11H[?12l[?25h[?25lin[22;21H8[10;12H[?12l[?25h[?25l[22;21H9[10;13H[?12l[?25h[?25l >[22;21H10[10;14H[?12l[?25h[?25l>>[22;22H1[10;15H[?12l[?25h[?25l[22;22H2[10;16H[?12l[?25h[?25l n[22;22H3[10;17H[?12l[?25h[?25lna[22;22H4[10;18H[?12l[?25h[?25lam[22;22H5[10;19H[?12l[?25h[?25lme[22;22H6[10;20H[?12l[?25h[?25le;[22;22H7[10;21H[?12l[?25h[?25l[22;19H10,17[11;21H[?12l[?25h[22;1H[K[11;20H[?25l[22;19H10,16[8CAll[11;20H[?12l[?25h[?25l[22;22H20[11;24H[?12l[?25h[?25l[31m !"[m[11;26H[K[11;24H[?12l[?25h[?25l[22;1H[1m-- INSERT --[m[22;19H[K[22;19H10,20[8CAll[11;24H[?12l[?25h[?25l[31m "[m[11;25H[K[11;24H[?12l[?25h[?25l[11;24H[K[11;24H[?12l[?25h[?25l[31m "[m[22;23H1[11;25H[?12l[?25h[?25l[22;23H2[11;26H[?12l[?25h[?25l <[22;23H3[11;27H[?12l[?25h[?25l<<[22;23H4[11;28H[?12l[?25h[?25l[22;23H5[11;29H[?12l[?25h[?25l n[22;23H6[11;30H[?12l[?25h[?25lna[22;23H7[11;31H[?12l[?25h[?25lam[22;23H8[11;32H[?12l[?25h[?25lme[22;23H9[11;33H[?12l[?25h[22;1H[K[11;32H[?25l[22;19H10,28[8CAll[11;32H[?12l[?25h[?25l[22;19H[K[22;1H:[?12l[?25hw[?25l[?12l[?25h[?25l"main.cpp"<L, 191C written  10,28[8CAll]2;main.cpp (~/...example) - VIM]1;main.cpp[22;19H[K[22;19H10,28[8CAll[11;32H[?12l[?25h[?25l[22;1H[K[22;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"main.cpp"<L, 191C written]2;user@userland: ~/proj/ucr-cs100/lecture]1;user@userland: ~/proj/ucr-cs100/lecture
-[?1l>[?12l[?25h[?1049l$ g++ main.cpp 
-$ ./a.out 
-what's your name? Mike
-hello Mike
-$ git status
-# On branch master
-# Changes not staged for commit:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	modified:   main.cpp
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	a.out
-no changes added to commit (use "git add" and/or "git commit -a")
-$ git add main.cpp
-$ git commit -m "added user input"
-[master 4c5d145] added user input
- 1 file changed, 4 insertions(+), 1 deletion(-)
-$ git log
-[?1h=commit 4c5d1458d81c00ef9c7ab51e9c87[m
-Author: Mike Izbicki <mike@izbicki.[m
-Date:   Tue Oct 7 17:59:52 2014 -07[m
-[m
-    added user input[m
-[m
-commit cf76399d30f571c05841a2534997[m
-Author: Mike Izbicki <mike@izbicki.[m
-Date:   Tue Oct 7 17:40:53 2014 -07[m
-[m
-    added some code to main.cpp[m
-[m
-commit 316584767c64c47a9d16c0dc6dc0[m
-Author: Mike Izbicki <mike@izbicki.[m
-Date:   Tue Oct 7 17:33:05 2014 -07[m
-[m
-    added main file[m
-[m
-commit f5384a53dd9e953e07dafe0113e0[m
-Author: Mike Izbicki <mike@izbicki.[m
-Date:   Tue Oct 7 17:28:50 2014 -07[m
-:[K[K[K:[K[K:[K[K[7mNo next tag  (press RETURN)[27m[22;1H[K[K:[K[K:[K[K [KESCESC[Kqq[K:[K[K[?1l>$ clear
-[H[2J$ git checkout goodbye2
-Switched to branch 'goodbye2'
-$ cat main.cpp 
-#include <iostream>
-
-using namespace std;
-
-int main()
-{
-    cout << "goodbye world! :("
-         << endl;
-
-    return 0;
-}
-$ git checkout master
-Switched to branch 'master'
-$ cat main.cpp 
-#include <iostream>
-
-using namespace std;
-
-int main()
-{
-    string name="";
-    cout << "what's your name? ";
-    cin >> name;
-    cout << "hello " << name
-         << endl;
-
-    return 0;
-}
-$ cat main.cpp [C[Cgit checkout master[C[C[6Pcat main.cpp [C[Cgit checkout goodbye2
-Switched to branch 'goodbye2'
-$ git log
-[?1h=commit 966e9f0713a2034f8398cf24e0f6[m
-Author: Mike Izbicki <mike@izbicki.[m
-Date:   Tue Oct 7 17:55:25 2014 -07[m
-[m
-    hope this works[m
-[m
-commit cf76399d30f571c05841a2534997[m
-Author: Mike Izbicki <mike@izbicki.[m
-Date:   Tue Oct 7 17:40:53 2014 -07[m
-[m
-    added some code to main.cpp[m
-[m
-commit 316584767c64c47a9d16c0dc6dc0[m
-Author: Mike Izbicki <mike@izbicki.[m
-Date:   Tue Oct 7 17:33:05 2014 -07[m
-[m
-    added main file[m
-[m
-commit f5384a53dd9e953e07dafe0113e0[m
-Author: Mike Izbicki <mike@izbicki.[m
-Date:   Tue Oct 7 17:28:50 2014 -07[m
-:[K[K[?1l>$ clear
-[H[2J$ bit g[K[K[K[K[Kig[K[Kgit branch
-  goodbye
-* goodbye2
-  master
-$ git checkout master
-Switched to branch 'master'
-$ ls
-[0m[01;32ma.out[0m  main.cpp  README
-$ touch Makefile
-$ ls
-[0m[01;32ma.out[0m  main.cpp  Makefile  README
-$ cat Makefile 
-$ git add Makefile
-$ git commit -m "empty makefile"
-[master 05b64eb] empty makefile
- 0 files changed
- create mode 100644 Makefile
-$ git checkout -b Makefilebranch
-Switched to a new branch 'Makefilebranch'
-$ vim Makefile 
-[?1049h[?1h=[1;22r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[22;1H"Makefile"<akefile" 0L, 0C[>c[1;1H[33m  1 [m
-[1m[34m~                                  [3;1H~                                  [4;1H~                                  [5;1H~                                  [6;1H~                                  [7;1H~                                  [8;1H~                                  [9;1H~                                  [10;1H~                                  [11;1H~                                  [12;1H~                                  [13;1H~                                  [14;1H~                                  [15;1H~                                  [16;1H~                                  [17;1H~                                  [18;1H~                                  [19;1H~                                  [20;1H~                                  [21;1H~                                  [m[22;19H0,0-1[8CAll]2;Makefile (~/...example) - VIM]1;Makefile[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[22;1H[1m-- INSERT --[m[22;13H[K[22;19H0,1[10CAll[1;5H[?12l[?25h[?25l[33m [m[34m#[m[22;19H1,2]2;Makefile + (...example) - VIM]1;Makefile[1;6H[?12l[?25h[?25l[34m [m[22;21H3[1;7H[?12l[?25h[?25l[34m t[m[22;21H4[1;8H[?12l[?25h[?25l[34mth[m[22;21H5[1;9H[?12l[?25h[?25l[34mhi[m[22;21H6[1;10H[?12l[?25h[?25l[34mis[m[22;21H7[1;11H[?12l[?25h[?25l[34m [m[22;21H8[1;12H[?12l[?25h[?25l[34m i[m[22;21H9[1;13H[?12l[?25h[?25l[34mis[m[22;21H10[1;14H[?12l[?25h[?25l[34m [m[22;22H1[1;15H[?12l[?25h[?25l[34m a[m[22;22H2[1;16H[?12l[?25h[?25l[34m [m[22;22H3[1;17H[?12l[?25h[?25l[34m c[m[22;22H4[1;18H[?12l[?25h[?25l[34mco[m[22;22H5[1;19H[?12l[?25h[?25l[34mom[m[22;22H6[1;20H[?12l[?25h[?25l[34mmm[m[22;22H7[1;21H[?12l[?25h[?25l[34mme[m[22;22H8[1;22H[?12l[?25h[?25l[34men[m[22;22H9[1;23H[?12l[?25h[?25l[34mnt[m[22;21H20[1;24H[?12l[?25h[22;1H[K[1;23H[?25l[22;19H1,19[9CAll[1;23H[?12l[?25h[?25l[22;19H[K[22;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"Makefile"<1L, 20C written]2;user@userland: ~/proj/ucr-cs100/lecture]1;user@userland: ~/proj/ucr-cs100/lecture
-[?1l>[?12l[?25h[?1049l$ git a[K[K[K[K[Kckear[K[K[K[K[Kclear
-[H[2J$ git add Makefile
-$ git commit -a[Km "added comment"
-[Makefilebranch a576564] added comment
- 1 file changed, 1 insertion(+)
-$ git checkout master
-Switched to branch 'master'
-$ git merge Makefilebranch 
-Updating 05b64eb..a576564
-Fast-forward
- Makefile |    1 +
- 1 file changed, 1 insertion(+)
-$ git branch
-  Makefilebranch
-  goodbye
-  goodbye2
-* master
-$ cat MAk[K[Kakefile 
-# this is a comment
-$ git checkou[K[K[K[K[K[K[K[K[K[K[Kclear
-[H[2J$ git checkout Makefilebranch 
-Switched to branch 'Makefilebranch'
-$ cat Makefile 
-# this is a comment
-$ cat Makefile [C[C[15@git checkout Makefilebranch[C[C[Cclear[Kat Makefile [C[C[3Pgit branchmerge Makefilebranch [C[C[C[C[C[C[6Pcheckout master[C[C[C[C[C[C[Commit -m "added comment"[C[C[C[C[C[C[13Padd Makefile[C[Cclear[K[C[Cvim Makefile [C[Cgit checkout -b Makefilebranch[C[C[C[C[C[C[Commit -m "empty makefile"[C[C[C[C[C[C[Checkout -b Makefilebranch^C
-$ git branch
-* Makefilebranch
-  goodbye
-  goodbye2
-  master
-$ git branch[K[K[K[K[K[Kcheckout master
-Switched to branch 'master'
-$ git merge goodbye2
-Auto-merging main.cpp
-CONFLICT (content): Merge conflict in main.cpp
-Automatic merge failed; fix conflicts and then commit the result.
-$ clear
-[H[2J$ vim main.cpp 
-[?1049h[?1h=[1;22r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[22;1H"main.cpp"<.cpp" 18L, 261C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
-[33m  2 
-  3 using[m [32mnamespace[m std;
-[33m  4 
-  5 [m[32mint[m main()
-[33m  6 [m{
-[33m  7 [m<<<<<<< HEAD
-[33m  8 [m    string name=[31m""[m;
-[33m  9 [m    cout << [31m"what's your name?  [m[10;1H[33m    [m[31m"[m;
-[33m 10 [m    cin >> name;
-[33m 11 [m    cout << [31m"hello "[m << name
-[33m 12 [m=======
-[33m 13 [m    cout << [31m"goodbye world! :("[m[15;1H[33m 14 [m>>>>>>> goodbye2
-[33m 15 [m[8C << endl;
-[33m 16 
- 17 [m    [33mreturn[m [31m0[m;
-[33m 18 [m}
-[1m[34m~                                  [21;1H~                                  [m[22;19H1,1[10CAll]2;main.cpp (~/...example) - VIM]1;main.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[22;19H2,0-1[2;5H[?12l[?25h[?25l[22;19H3,1  [3;5H[?12l[?25h[?25l[22;19H4,0-1[4;5H[?12l[?25h[?25l[22;19H5,1  [5;5H[?12l[?25h[?25l[6;5H[46m{[19;5H}[m[22;19H6[6;5H[?12l[?25h[?25l{[19;5H}[22;19H7[7;5H[?12l[?25h[?25l[33m [m    string name=[31m""[m;[8;8H cout << [31m"what's your name?  [m[9;1H[33m    [m[31m"[m;[9;9H[K[10;2H[33m 9 [m    cin >> name;[11;9Hcout << [31m"hello "[m << name[12;4H[33m [m=======[12;12H[K[13;4H[33m [m    cout << [31m"goodbye world! :("[m[14;4H[33m [m>>>>>>> goodbye2[14;21H[K[15;4H[33m [m         << endl;[16;14H[K[17;8H [33mreturn[m [31m0[m;[18;4H[33m [m}[18;9H[K[19;1H[1m[34m~                                  ]2;main.cpp + (...example) - VIM]1;main.cpp[m[22;21H5[7;9H[?12l[?25h[?25l[22;1H[K[22;1H:[?12l[?25h1[?25l[?12l[?25h1[?25l[?12l[?25h[?25l[18C11,1[9CAll[12;5H[?12l[?25h[?25l[22;20H0[11;5H[?12l[?25h[?25l[33m [m=======[11;12H[K[12;4H[33m [m    cout << [31m"goodbye world! :("[m[13;4H[33m [m>>>>>>> goodbye2[13;21H[K[14;4H[33m [m         << endl;[15;14H[K[16;8H [33mreturn[m [31m0[m;[17;4H[33m [m}[17;9H[K[18;1H[1m[34m~                                  [11;5H[?12l[?25h[?25l[m[33m [m    cout << [31m"goodbye world! :("[m[12;4H[33m [m>>>>>>> goodbye2[12;21H[K[13;4H[33m [m         << endl;[14;14H[K[15;8H [33mreturn[m [31m0[m;[16;4H[33m [m}[16;9H[K[17;1H[1m[34m~                                  [m[22;22H5[11;9H[?12l[?25h[?25l[22;22H10[11;14H[?12l[?25h[?25l[22;23H3[11;17H[?12l[?25h[?25l[22;23H4[11;18H[?12l[?25h[?25l[22;22H22[11;26H[?12l[?25h[?25l[22;23H7[11;31H[?12l[?25h[?25l[22;23H2[11;26H[?12l[?25h[?25l[11;26H[K[22;23H1[11;25H[?12l[?25h[?25l[22;1H[1m-- INSERT --[m[22;19H[K[22;19H10,22[8CAll[11;26H[?12l[?25h[?25l[31m "[m[22;23H3[11;27H[?12l[?25h[?25l[22;23H4[11;28H[?12l[?25h[?25l <[22;23H5[11;29H[?12l[?25h[?25l<<[22;23H6[11;30H[?12l[?25h[?25l[22;23H7[11;31H[?12l[?25h[?25l n[22;23H8[11;32H[?12l[?25h[?25lna[22;23H9[11;33H[?12l[?25h[?25lam[22;22H30[11;34H[?12l[?25h[?25lme[22;23H1[11;35H[?12l[?25h[?25le;[22;23H2[12;5H[?12l[?25h[?25l[11;35H[K[22;23H1[11;35H[?12l[?25h[22;1H[K[11;34H[?25l[22;19H10,30[8CAll[11;34H[?12l[?25h[?25l[22;20H1,16[12;20H[?12l[?25h[?25l[12;4H[33m [m         << endl;[13;14H[K[14;8H [33mreturn[m [31m0[m;[15;4H[33m [m}[15;9H[K[16;1H[1m[34m~                                  [m[22;23H0[12;14H[?12l[?25h[?25l[22;19H[K[22;1H:[?12l[?25hw[?25l[?12l[?25h[?25l"main.cpp"<L, 193C written  11,10[8CAll]2;main.cpp (~/...example) - VIM]1;main.cpp[22;19H[K[22;19H11,10[8CAll[12;14H[?12l[?25h[?25l[22;1H[K[22;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"main.cpp"<L, 193C written]2;user@userland: ~/proj/ucr-cs100/lecture]1;user@userland: ~/proj/ucr-cs100/lecture
-[?1l>[?12l[?25h[?1049l$ g++ main.cpp 
-$ ./a.out 
-what's your name? mike
-goodbye mike
-$ git add main.cpp
-$ git commit -m "goodbye with user  nput[K[K[K[Kinput"
-[master 562867b] goodbye with user input
-$ git h[Kcheckout goodbye
-Switched to branch 'goodbye'
-$ cat main.cpp 
-#include <iostream>
-
-using namespace std;
-
-int main()
-{
-    cout << "hello world!"
-         << endl;
-
-    return 0;
-}
-$ cat main.cpp [C[Cgit checkout goodbye2
-Switched to branch 'goodbye2'
-$ git checkout goodbye2[C[C[8Pcat main.cpp 
-#include <iostream>
-
-using namespace std;
-
-int main()
-{
-    cout << "goodbye world! :("
-         << endl;
-
-    return 0;
-}
-$ [K$ exit
-exit
-
-Script done on Wed 08 Oct 2014 11:12:09 AM PDT

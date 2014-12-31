@@ -1,1996 +1,0 @@
-Script started on Tue 14 Oct 2014 05:10:58 PM PDT
-]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ [18P(reverse-i-search)`':[Ce': ssh mizbi001@hammer..cs.ucr.edu[A[C[C[C[C[C[C[C[C[C[C[C[C[14Px': exit
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cp': export PS1="$ "[1@o[C[C[Cr': export PS1="$ " [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct': export PS1="$ ""[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ export PS1="$ "[A]0;user@userland: ~/proj/ucr-cs100/lectureuser@userland:~/proj/ucr-cs100/lecture$ 
-
-$ clear
-[H[2J$ [K$ [K$ ls
-[0m[01;34mgitexample[0m  lecture4
-lecture1    [01;34mrshell[0m
-lecture1b   testfile
-lecture2
-$ ls
-[0m[01;34mgitexample[0m  lecture4
-lecture1    [01;34mrshell[0m
-lecture1b   testfile
-lecture2
-$ ls
-[0m[01;34mgitexample[0m  lecture4
-lecture1    [01;34mrshell[0m
-lecture1b   testfile
-lecture2
-$ clear
-[H[2J$ ls; ls; ls
-[0m[01;34mgitexample[0m  lecture4
-lecture1    [01;34mrshell[0m
-lecture1b   testfile
-lecture2
-[0m[01;34mgitexample[0m  lecture4
-lecture1    [01;34mrshell[0m
-lecture1b   testfile
-lecture2
-[0m[01;34mgitexample[0m  lecture4
-lecture1    [01;34mrshell[0m
-lecture1b   testfile
-lecture2
-$ clear
-[H[2J$ mkdir tmp; cd tmp
-$ pwd
-/home/user/proj/ucr-cs100/lecture/tmp
-$ [K$ [K$ clear
-[H[2J$ pwd; cd ..; pwd
-/home/user/proj/ucr-cs100/lecture/tmp
-/home/user/proj/ucr-cs100/lecture
-$ man exec
-[?1049h[?1h=ELinux)Programmer'sEXEC(3)[m
-[m
-[1mNAME[0m[m
-       execl, execlp, exe‐[m
-       cle, execv, execvp,[m
-       execvpe - execute a[m
-       file[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mextern[0m [1mchar[0m [1m**envi‐[0m[m
-       [1mron;[0m[m
-[m
-       [1mint[0m     [1mexecl(const[0m[m
-       [1mchar[0m  [1m*[0m[4mpath[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-[7ms h for help or q to quit)[27m[K[H[2J[HELinux)Programmer'sEXEC(3)[m
-[m
-[1mNAME[0m[m
-       execl, execlp, exe‐[m
-       cle, execv, execvp,[m
-       execvpe - execute a[m
-       file[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mextern[0m [1mchar[0m [1m**envi‐[0m[m
-       [1mron;[0m[m
-[m
-       [1mint[0m     [1mexecl(const[0m[m
-       [1mchar[0m  [1m*[0m[4mpath[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m    [1mexeclp(const[0m[m
-       [1mchar[0m  [1m*[0m[4mfile[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m    [1mexecle(const[0m[m
-[7m1 (press h for help or q to quit)[27m[K[H[2J[HELinux)Programmer'sEXEC(3)[m
-[m
-[1mNAME[0m[m
-       execl, execlp, exe‐[m
-       cle, execv, execvp,[m
-       execvpe - execute a[m
-       file[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mextern[0m [1mchar[0m [1m**envi‐[0m[m
-       [1mron;[0m[m
-[m
-       [1mint[0m     [1mexecl(const[0m[m
-       [1mchar[0m  [1m*[0m[4mpath[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m    [1mexeclp(const[0m[m
-       [1mchar[0m  [1m*[0m[4mfile[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m    [1mexecle(const[0m[m
-       [1mchar[0m  [1m*[0m[4mpath[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m[m
-                      [1m...,[0m[m
-       [1mchar[0m    [1m*[0m     [1mconst[0m[m
-       [4menvp[24m[1m[]);[0m[m
-[7m) line 1 (press h for help or q to quit)[27m[K[H[2J[HELinux)Programmer'sEXEC(3)[m
-[m
-[1mNAME[0m[m
-       execl, execlp, exe‐[m
-       cle, execv, execvp,[m
-       execvpe - execute a[m
-       file[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mextern[0m [1mchar[0m [1m**envi‐[0m[m
-       [1mron;[0m[m
-[m
-       [1mint[0m     [1mexecl(const[0m[m
-       [1mchar[0m  [1m*[0m[4mpath[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m    [1mexeclp(const[0m[m
-       [1mchar[0m  [1m*[0m[4mfile[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m    [1mexecle(const[0m[m
-       [1mchar[0m  [1m*[0m[4mpath[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m[m
-                      [1m...,[0m[m
-       [1mchar[0m    [1m*[0m     [1mconst[0m[m
-       [4menvp[24m[1m[]);[0m[m
-[7mc(3) line 1 (press h for help or q to quit)[27m[K[H[2J[HELinux)Programmer'sEXEC(3)[m
-[m
-[1mNAME[0m[m
-       execl, execlp, exe‐[m
-       cle, execv, execvp,[m
-       execvpe - execute a[m
-       file[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mextern[0m [1mchar[0m [1m**envi‐[0m[m
-       [1mron;[0m[m
-[m
-       [1mint[0m     [1mexecl(const[0m[m
-       [1mchar[0m  [1m*[0m[4mpath[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m    [1mexeclp(const[0m[m
-       [1mchar[0m  [1m*[0m[4mfile[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m    [1mexecle(const[0m[m
-       [1mchar[0m  [1m*[0m[4mpath[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m[m
-                      [1m...,[0m[m
-       [1mchar[0m    [1m*[0m     [1mconst[0m[m
-       [4menvp[24m[1m[]);[0m[m
-[7mxec(3) line 1 (press h for help or q to quit)[27m[K[H[2J[HELinux)Programmer'sEXEC(3)[m
-[m
-[1mNAME[0m[m
-       execl, execlp, exe‐[m
-       cle, execv, execvp,[m
-       execvpe - execute a[m
-       file[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mextern[0m [1mchar[0m [1m**envi‐[0m[m
-       [1mron;[0m[m
-[m
-       [1mint[0m     [1mexecl(const[0m[m
-       [1mchar[0m  [1m*[0m[4mpath[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m    [1mexeclp(const[0m[m
-       [1mchar[0m  [1m*[0m[4mfile[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m    [1mexecle(const[0m[m
-       [1mchar[0m  [1m*[0m[4mpath[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m[m
-                      [1m...,[0m[m
-       [1mchar[0m    [1m*[0m     [1mconst[0m[m
-       [4menvp[24m[1m[]);[0m[m
-[7me exec(3) line 1 (press h for help or q to quit)[27m[K[H[2J[HELinux)Programmer'sEXEC(3)[m
-[m
-[1mNAME[0m[m
-       execl, execlp, exe‐[m
-       cle, execv, execvp,[m
-       execvpe - execute a[m
-       file[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mextern[0m [1mchar[0m [1m**envi‐[0m[m
-       [1mron;[0m[m
-[m
-       [1mint[0m     [1mexecl(const[0m[m
-       [1mchar[0m  [1m*[0m[4mpath[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m    [1mexeclp(const[0m[m
-       [1mchar[0m  [1m*[0m[4mfile[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m    [1mexecle(const[0m[m
-       [1mchar[0m  [1m*[0m[4mpath[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m[m
-                      [1m...,[0m[m
-       [1mchar[0m    [1m*[0m     [1mconst[0m[m
-       [4menvp[24m[1m[]);[0m[m
-[7mage exec(3) line 1 (press h for help or q to quit)[27m[K[H[2J[HELinux)Programmer'sEXEC(3)[m
-[m
-[1mNAME[0m[m
-       execl, execlp, exe‐[m
-       cle, execv, execvp,[m
-       execvpe - execute a[m
-       file[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mextern[0m [1mchar[0m [1m**envi‐[0m[m
-       [1mron;[0m[m
-[m
-       [1mint[0m     [1mexecl(const[0m[m
-       [1mchar[0m  [1m*[0m[4mpath[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m    [1mexeclp(const[0m[m
-       [1mchar[0m  [1m*[0m[4mfile[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m    [1mexecle(const[0m[m
-       [1mchar[0m  [1m*[0m[4mpath[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m[m
-                      [1m...,[0m[m
-       [1mchar[0m    [1m*[0m     [1mconst[0m[m
-       [4menvp[24m[1m[]);[0m[m
-[7ml page exec(3) line 1 (press h for help or q to quit)[27m[K[H[2J[HELinux)Programmer'sEXEC(3)[m
-[m
-[1mNAME[0m[m
-       execl, execlp, exe‐[m
-       cle, execv, execvp,[m
-       execvpe - execute a[m
-       file[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mextern[0m [1mchar[0m [1m**envi‐[0m[m
-       [1mron;[0m[m
-[m
-       [1mint[0m     [1mexecl(const[0m[m
-       [1mchar[0m  [1m*[0m[4mpath[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m    [1mexeclp(const[0m[m
-       [1mchar[0m  [1m*[0m[4mfile[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m    [1mexecle(const[0m[m
-       [1mchar[0m  [1m*[0m[4mpath[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m[m
-                      [1m...,[0m[m
-       [1mchar[0m    [1m*[0m     [1mconst[0m[m
-       [4menvp[24m[1m[]);[0m[m
-[7mual page exec(3) line 1 (press h for help or q to quit)[27m[K[H[2J[HELinux)Programmer'sEXEC(3)[m
-[m
-[1mNAME[0m[m
-       execl, execlp, exe‐[m
-       cle, execv, execvp,[m
-       execvpe - execute a[m
-       file[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mextern[0m [1mchar[0m [1m**envi‐[0m[m
-       [1mron;[0m[m
-[m
-       [1mint[0m     [1mexecl(const[0m[m
-       [1mchar[0m  [1m*[0m[4mpath[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m    [1mexeclp(const[0m[m
-       [1mchar[0m  [1m*[0m[4mfile[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m    [1mexecle(const[0m[m
-       [1mchar[0m  [1m*[0m[4mpath[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m[m
-                      [1m...,[0m[m
-       [1mchar[0m    [1m*[0m     [1mconst[0m[m
-       [4menvp[24m[1m[]);[0m[m
-[7mManual page exec(3) line 1 (press h for help or q to quit)[27m[K[H[2J[HELinux)Programmer'sEXEC(3)[m
-[m
-[1mNAME[0m[m
-       execl, execlp, exe‐[m
-       cle, execv, execvp,[m
-       execvpe - execute a[m
-       file[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mextern[0m [1mchar[0m [1m**envi‐[0m[m
-       [1mron;[0m[m
-[m
-       [1mint[0m     [1mexecl(const[0m[m
-       [1mchar[0m  [1m*[0m[4mpath[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m    [1mexeclp(const[0m[m
-       [1mchar[0m  [1m*[0m[4mfile[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m    [1mexecle(const[0m[m
-       [1mchar[0m  [1m*[0m[4mpath[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m[m
-                      [1m...,[0m[m
-       [1mchar[0m    [1m*[0m     [1mconst[0m[m
-       [4menvp[24m[1m[]);[0m[m
-[7m Manual page exec(3) line 1 (press h for help or q to quit)[27m[K[H[2J[HELinux)Programmer'sEXEC(3)[m
-[m
-[1mNAME[0m[m
-       execl, execlp, exe‐[m
-       cle, execv, execvp,[m
-       execvpe - execute a[m
-       file[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mextern[0m [1mchar[0m [1m**envi‐[0m[m
-       [1mron;[0m[m
-[m
-       [1mint[0m     [1mexecl(const[0m[m
-       [1mchar[0m  [1m*[0m[4mpath[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m    [1mexeclp(const[0m[m
-       [1mchar[0m  [1m*[0m[4mfile[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m    [1mexecle(const[0m[m
-       [1mchar[0m  [1m*[0m[4mpath[24m[1m,[0m  [1mconst[0m[m
-       [1mchar[0m [1m*[0m[4marg[24m[1m,[0m[m
-                      [1m...,[0m[m
-       [1mchar[0m    [1m*[0m     [1mconst[0m[m
-       [4menvp[24m[1m[]);[0m[m
-       [1mint[0m     [1mexecv(const[0m[m
-       [1mchar[0m  [1m*[0m[4mpath[24m[1m,[0m   [1mchar[0m[m
-       [1m*const[0m [4margv[24m[1m[]);[0m[m
-       [1mint[0m    [1mexecvp(const[0m[m
-[7m Manual page exec(3) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ man exec
-[?1049h[?1h=EXEC(3)                Linux Programmer's Manual               EXEC(3)[m
-[m
-[1mNAME[0m[m
-       execl, execlp, execle, execv, execvp, execvpe - execute a file[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mextern[0m [1mchar[0m [1m**environ;[0m[m
-[m
-       [1mint[0m [1mexecl(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mconst[0m [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m [1mexeclp(const[0m [1mchar[0m [1m*[0m[4mfile[24m[1m,[0m [1mconst[0m [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m [1mexecle(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mconst[0m [1mchar[0m [1m*[0m[4marg[24m[1m,[0m[m
-                  [1m...,[0m [1mchar[0m [1m*[0m [1mconst[0m [4menvp[24m[1m[]);[0m[m
-       [1mint[0m [1mexecv(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mchar[0m [1m*const[0m [4margv[24m[1m[]);[0m[m
-       [1mint[0m [1mexecvp(const[0m [1mchar[0m [1m*[0m[4mfile[24m[1m,[0m [1mchar[0m [1m*const[0m [4margv[24m[1m[]);[0m[m
-       [1mint[0m [1mexecvpe(const[0m [1mchar[0m [1m*[0m[4mfile[24m[1m,[0m [1mchar[0m [1m*const[0m [4margv[24m[1m[],[0m[m
-                  [1mchar[0m [1m*const[0m [4menvp[24m[1m[]);[0m[m
-[m
-   Feature    Test    Macro   Requirements   for   glibc   (see   [1mfea‐[0m[m
-   [1mture_test_macros[0m(7)):[m
-[m
-       [1mexecvpe[0m(): _GNU_SOURCE[m
-[m
-[1mDESCRIPTION[0m[m
-       The [1mexec[0m() family of functions  replaces  the  current  process[m
-       image  with  a  new  process image.  The functions described in[m
-       this manual page are front-ends for [1mexecve[0m(2).  (See the manual[m
-       page for [1mexecve[0m(2) for further details about the replacement of[m
-       the current process image.)[m
-[7m Manual page exec(3) line 1 (press h for help or q to quit)[27m[K[H[2J[HEXEC(3)                Linux Programmer's Manual               EXEC(3[m )[m
-[m
-[1mNAME[0m[m
-       execl, execlp, execle, execv, execvp, execvpe - execute a file[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mextern[0m [1mchar[0m [1m**environ;[0m[m
-[m
-       [1mint[0m [1mexecl(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mconst[0m [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m [1mexeclp(const[0m [1mchar[0m [1m*[0m[4mfile[24m[1m,[0m [1mconst[0m [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m [1mexecle(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mconst[0m [1mchar[0m [1m*[0m[4marg[24m[1m,[0m[m
-                  [1m...,[0m [1mchar[0m [1m*[0m [1mconst[0m [4menvp[24m[1m[]);[0m[m
-       [1mint[0m [1mexecv(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mchar[0m [1m*const[0m [4margv[24m[1m[]);[0m[m
-       [1mint[0m [1mexecvp(const[0m [1mchar[0m [1m*[0m[4mfile[24m[1m,[0m [1mchar[0m [1m*const[0m [4margv[24m[1m[]);[0m[m
-       [1mint[0m [1mexecvpe(const[0m [1mchar[0m [1m*[0m[4mfile[24m[1m,[0m [1mchar[0m [1m*const[0m [4margv[24m[1m[],[0m[m
-                  [1mchar[0m [1m*const[0m [4menvp[24m[1m[]);[0m[m
-[m
-   Feature    Test    Macro   Requirements   for   glibc   (see   [1mfea[0m[m [1m‐[0m[m
-   [1mture_test_macros[0m(7)):[m
-[m
-       [1mexecvpe[0m(): _GNU_SOURCE[m
-[m
-[1mDESCRIPTION[0m[m
-       The [1mexec[0m() family of functions  replaces  the  current  proces[m s[m
-       image  with  a  new  process image.  The functions described i[m [7m Manual page exec(3) line 1 (press h for help or q to quit)[27m[K[H[2J[HEXEC(3)                Linux Programmer's Manual               EXE[m C(3)[m
-[m
-[1mNAME[0m[m
-       execl, execlp, execle, execv, execvp, execvpe - execute a f[m ile[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mextern[0m [1mchar[0m [1m**environ;[0m[m
-[m
-       [1mint[0m [1mexecl(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mconst[0m [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m [1mexeclp(const[0m [1mchar[0m [1m*[0m[4mfile[24m[1m,[0m [1mconst[0m [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m [1mexecle(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mconst[0m [1mchar[0m [1m*[0m[4marg[24m[1m,[0m[m
-                  [1m...,[0m [1mchar[0m [1m*[0m [1mconst[0m [4menvp[24m[1m[]);[0m[m
-       [1mint[0m [1mexecv(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mchar[0m [1m*const[0m [4margv[24m[1m[]);[0m[m
-       [1mint[0m [1mexecvp(const[0m [1mchar[0m [1m*[0m[4mfile[24m[1m,[0m [1mchar[0m [1m*const[0m [4margv[24m[1m[]);[0m[m
-       [1mint[0m [1mexecvpe(const[0m [1mchar[0m [1m*[0m[4mfile[24m[1m,[0m [1mchar[0m [1m*const[0m [4margv[24m[1m[],[0m[m
-                  [1mchar[0m [1m*const[0m [4menvp[24m[1m[]);[0m[m
-[m
-   Feature    Test    Macro   Requirements   for   glibc   (see   [m [1mfea‐[0m[m
-   [1mture_test_macros[0m(7)):[m
-[m
-       [1mexecvpe[0m(): _GNU_SOURCE[m
-[m
-[1mDESCRIPTION[0m[m
-       The [1mexec[0m() family of functions  replaces  the  current  pro[m cess[m
-[7m Manual page exec(3) line 1 (press h for help or q to quit)[27m[K[H[2J[HEXEC(3)                Linux Programmer's Manual               [m EXEC(3)[m
-[m
-[1mNAME[0m[m
-       execl, execlp, execle, execv, execvp, execvpe - execute [m a file[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mextern[0m [1mchar[0m [1m**environ;[0m[m
-[m
-       [1mint[0m [1mexecl(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mconst[0m [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m [1mexeclp(const[0m [1mchar[0m [1m*[0m[4mfile[24m[1m,[0m [1mconst[0m [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m [1mexecle(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mconst[0m [1mchar[0m [1m*[0m[4marg[24m[1m,[0m[m
-                  [1m...,[0m [1mchar[0m [1m*[0m [1mconst[0m [4menvp[24m[1m[]);[0m[m
-       [1mint[0m [1mexecv(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mchar[0m [1m*const[0m [4margv[24m[1m[]);[0m[m
-       [1mint[0m [1mexecvp(const[0m [1mchar[0m [1m*[0m[4mfile[24m[1m,[0m [1mchar[0m [1m*const[0m [4margv[24m[1m[]);[0m[m
-       [1mint[0m [1mexecvpe(const[0m [1mchar[0m [1m*[0m[4mfile[24m[1m,[0m [1mchar[0m [1m*const[0m [4margv[24m[1m[],[0m[m
-                  [1mchar[0m [1m*const[0m [4menvp[24m[1m[]);[0m[m
-[m
-   Feature    Test    Macro   Requirements   for   glibc   (see[m    [1mfea‐[0m[m
-   [1mture_test_macros[0m(7)):[m
-[m
-       [1mexecvpe[0m(): _GNU_SOURCE[m
-[m
-[1mDESCRIPTION[0m[m
-       The [1mexec[0m() family of functions  replaces  the  current  [m process[m
-[7m Manual page exec(3) line 1 (press h for help or q to quit)[27m[K[H[2J[HEXEC(3)                Linux Programmer's Manual            [m    EXEC(3)[m
-[m
-[1mNAME[0m[m
-       execl, execlp, execle, execv, execvp, execvpe - execu[m te a file[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mextern[0m [1mchar[0m [1m**environ;[0m[m
-[m
-       [1mint[0m [1mexecl(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mconst[0m [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m [1mexeclp(const[0m [1mchar[0m [1m*[0m[4mfile[24m[1m,[0m [1mconst[0m [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m [1mexecle(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mconst[0m [1mchar[0m [1m*[0m[4marg[24m[1m,[0m[m
-                  [1m...,[0m [1mchar[0m [1m*[0m [1mconst[0m [4menvp[24m[1m[]);[0m[m
-       [1mint[0m [1mexecv(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mchar[0m [1m*const[0m [4margv[24m[1m[]);[0m[m
-       [1mint[0m [1mexecvp(const[0m [1mchar[0m [1m*[0m[4mfile[24m[1m,[0m [1mchar[0m [1m*const[0m [4margv[24m[1m[]);[0m[m
-       [1mint[0m [1mexecvpe(const[0m [1mchar[0m [1m*[0m[4mfile[24m[1m,[0m [1mchar[0m [1m*const[0m [4margv[24m[1m[],[0m[m
-                  [1mchar[0m [1m*const[0m [4menvp[24m[1m[]);[0m[m
-[m
-   Feature    Test    Macro   Requirements   for   glibc   ([m see   [1mfea‐[0m[m
-   [1mture_test_macros[0m(7)):[m
-[m
-       [1mexecvpe[0m(): _GNU_SOURCE[m
-[m
-[1mDESCRIPTION[0m[m
-       The [1mexec[0m() family of functions  replaces  the  curren[m t  process[m
-[7mManual page exec(3) line 1 (press h for help or q to quit)[27m[K[H[2J[HEXEC(3)                Linux Programmer's Manual         [m       EXEC(3)[m
-[m
-[1mNAME[0m[m
-       execl, execlp, execle, execv, execvp, execvpe - ex[m ecute a file[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mextern[0m [1mchar[0m [1m**environ;[0m[m
-[m
-       [1mint[0m [1mexecl(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mconst[0m [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...);[0m[m
-       [1mint[0m [1mexeclp(const[0m [1mchar[0m [1m*[0m[4mfile[24m[1m,[0m [1mconst[0m [1mchar[0m [1m*[0m[4marg[24m[1m,[0m [1m...)[0m[m [1m;[0m[m
-       [1mint[0m [1mexecle(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mconst[0m [1mchar[0m [1m*[0m[4marg[24m[1m,[0m[m
-                  [1m...,[0m [1mchar[0m [1m*[0m [1mconst[0m [4menvp[24m[1m[]);[0m[m
-       [1mint[0m [1mexecv(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mchar[0m [1m*const[0m [4margv[24m[1m[]);[0m[m
-       [1mint[0m [1mexecvp(const[0m [1mchar[0m [1m*[0m[4mfile[24m[1m,[0m [1mchar[0m [1m*const[0m [4margv[24m[1m[]);[0m[m
-       [1mint[0m [1mexecvpe(const[0m [1mchar[0m [1m*[0m[4mfile[24m[1m,[0m [1mchar[0m [1m*const[0m [4margv[24m[1m[],[0m[m
-                  [1mchar[0m [1m*const[0m [4menvp[24m[1m[]);[0m[m
-[m
-   Feature    Test    Macro   Requirements   for   glibc [m   (see   [1mfea‐[0m[m
-   [1mture_test_macros[0m(7)):[m
-[m
-       [1mexecvpe[0m(): _GNU_SOURCE[m
-[m
-[1mDESCRIPTION[0m[m
-       The [1mexec[0m() family of functions  replaces  the  cur[m [7mual page exec(3) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ g++ exec.cpp 
-$ ./a.out 
-$ ./a.out [C[C[5@g++ exec.cpp[C[C[C[5Pman exec
-[?1049h[?1h=EXEC(3)        Linux Programmer's Manual        EXEC(3)[m
-[m
-[1mNAME[0m[m
-       execl,  execlp, execle, execv, execvp, execvpe -[m
-       execute a file[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mextern[0m [1mchar[0m [1m**environ;[0m[m
-[m
-       [1mint[0m [1mexecl(const[0m [1mchar[0m  [1m*[0m[4mpath[24m[1m,[0m  [1mconst[0m  [1mchar[0m  [1m*[0m[4marg[24m[1m,[0m[m
-       [1m...);[0m[m
-       [1mint[0m  [1mexeclp(const[0m  [1mchar[0m  [1m*[0m[4mfile[24m[1m,[0m [1mconst[0m [1mchar[0m [1m*[0m[4marg[24m[1m,[0m[m
-       [1m...);[0m[m
-       [1mint[0m [1mexecle(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mconst[0m [1mchar[0m [1m*[0m[4marg[24m[1m,[0m[m
-                  [1m...,[0m [1mchar[0m [1m*[0m [1mconst[0m [4menvp[24m[1m[]);[0m[m
-       [1mint[0m [1mexecv(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mchar[0m [1m*const[0m [4margv[24m[1m[]);[0m[m
-       [1mint[0m  [1mexecvp(const[0m  [1mchar[0m   [1m*[0m[4mfile[24m[1m,[0m   [1mchar[0m   [1m*const[0m[m
-       [4margv[24m[1m[]);[0m[m
-       [1mint[0m   [1mexecvpe(const[0m   [1mchar[0m  [1m*[0m[4mfile[24m[1m,[0m  [1mchar[0m  [1m*const[0m[m
-       [4margv[24m[1m[],[0m[m
-                  [1mchar[0m [1m*const[0m [4menvp[24m[1m[]);[0m[m
-[m
-   Feature Test Macro Requirements for glibc (see  [1mfea‐[0m[m
-   [1mture_test_macros[0m(7)):[m
-[m
-       [1mexecvpe[0m(): _GNU_SOURCE[m
-[m
-[1mDESCRIPTION[0m[m
-[7mual page exec(3) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The [1mexec[0m() family of functions replaces the cur‐[m
-[7mual page exec(3) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       rent process image with  a  new  process  image.[m
-[7mual page exec(3) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The  functions described in this manual page are[m
-[7mual page exec(3) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       front-ends for [1mexecve[0m(2).  (See the manual  page[m
-[7mual page exec(3) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       execl,  execlp, execle, execv, execvp, execvpe -[m
-[31;1H[K[7mual page exec(3) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mNAME[0m[m
-[31;1H[K[7mual page exec(3) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
-[31;1H[K[7mual page exec(3) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HMEXEC(3)        Linux Programmer's Manual        EXEC(3)[m
-[31;1H[K[7mual page exec(3) line 1 (press h for help or q to quit)[27m[K[K       The [1mexec[0m() family of functions replaces the cur‐[m
-[7mual page exec(3) line 4 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ man exec[C[C./a.out [C[C[5@g++ exec.cpp[C
-exec.cpp: In function ‘int main()’:
-exec.cpp:9:13: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-exec.cpp:10:13: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-exec.cpp:11:13: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-$ clear
-[H[2J$ ./a.out 
-.:
-.      exec.cpp       lecture1	 lecture4  tmp
-..     .exec.cpp.swp  lecture1b  rshell
-a.out  gitexample     lecture2	 testfile
-
-./gitexample:
-.  ..  a.out  .git  main.cpp  README
-
-./gitexample/.git:
-.	  COMMIT_EDITMSG  HEAD	 info	  ORIG_HEAD
-..	  config	  hooks  logs	  refs
-branches  description	  index  objects
-
-./gitexample/.git/branches:
-.  ..
-
-./gitexample/.git/hooks:
-.		       pre-applypatch.sample
-..		       pre-commit.sample
-applypatch-msg.sample  prepare-commit-msg.sample
-commit-msg.sample      pre-rebase.sample
-post-update.sample     update.sample
-
-./gitexample/.git/info:
-.  ..  exclude
-
-./gitexample/.git/logs:
-.  ..  HEAD  refs
-
-./gitexample/.git/logs/refs:
-.  ..  heads
-
-./gitexample/.git/logs/refs/heads:
-.  ..  goodbye	goodbye2  Makefilebranch  master
-
-./gitexample/.git/objects:
-.   05	1f  31	35  45	56  96	a0  a5	cf  de	f5  info
-..  16	20  34	3a  4c	74  9a	a3  c5	dd  e6	fc  pack
-
-./gitexample/.git/objects/05:
-.  ..  b64eba905b09812e18d20ac40285ae456f9b6a
-
-./gitexample/.git/objects/16:
-.  ..  637eac1b42417367fff3867c0ca710d3c9c9d7
-
-./gitexample/.git/objects/1f:
-.  ..  44018d1fbd36260f7d6e7ab3475e5da8b18f21
-
-./gitexample/.git/objects/20:
-.  ..  f7fec79b3fd4b9de52bf38cc6c72021488ce3c
-
-./gitexample/.git/objects/31:
-.   1f7e840f0ac9d73461e240526c8aafa3fa9b3b
-..  6584767c64c47a9d16c0dc6dc05de688414503
-
-./gitexample/.git/objects/34:
-.  ..  beffef11b14f6cf8a84db45ade25a61c3ecf26
-
-./gitexample/.git/objects/35:
-.  ..  72316c289083a9773c0c3bb91f74bdc8dd4d70
-
-./gitexample/.git/objects/3a:
-.  ..  c747aa30ed431dbd9e47bc7042cd7deb7eff68
-
-./gitexample/.git/objects/45:
-.  ..  7cd6bc6c929f1198d33c19c30bae27de65bced
-
-./gitexample/.git/objects/4c:
-.  ..  5d1458d81c00ef9c7ab51e9c87ca65230af06d
-
-./gitexample/.git/objects/56:
-.  ..  2867befcd6556a2a173b8f5eeef92d82580725
-
-./gitexample/.git/objects/74:
-.  ..  c84e93d3648a0c6e6f7b8bea377e057e5e20cd
-
-./gitexample/.git/objects/96:
-.  ..  6e9f0713a2034f8398cf24e0f65c146171a4a8
-
-./gitexample/.git/objects/9a:
-.  ..  d94594b3e26ba034f9622d79139735b36f4735
-
-./gitexample/.git/objects/a0:
-.  ..  ca7542253b984febef5446539eb901439e9473
-
-./gitexample/.git/objects/a3:
-.  ..  992946d9520c43b40e59ab7cbc84a2c91e9e09
-
-./gitexample/.git/objects/a5:
-.  ..  765640b916a1b29b67b2269eb7f1faa8d20891
-
-./gitexample/.git/objects/c5:
-.  ..  4fb4a08475e92a85c72c055c466eaa677501c0
-
-./gitexample/.git/objects/cf:
-.  ..  76399d30f571c05841a25349979f8435803d5c
-
-./gitexample/.git/objects/dd:
-.  ..  b6173f5db1ca412909749972fd0628ebcab03a
-
-./gitexample/.git/objects/de:
-.  ..  92db4b34cf082dcb45c16b1f16e9f5737436f2
-
-./gitexample/.git/objects/e6:
-.  ..  9de29bb2d1d6434b8b29ae775ad8c2e48c5391
-
-./gitexample/.git/objects/f5:
-.  ..  384a53dd9e953e07dafe0113e016a2831e2002
-
-./gitexample/.git/objects/fc:
-.  ..  7d15581b0d3a3b9d44c87dd2e86dcd3c7098b8
-
-./gitexample/.git/objects/info:
-.  ..
-
-./gitexample/.git/objects/pack:
-.  ..
-
-./gitexample/.git/refs:
-.  ..  heads  tags
-
-./gitexample/.git/refs/heads:
-.  ..  goodbye	goodbye2  Makefilebranch  master
-
-./gitexample/.git/refs/tags:
-.  ..
-
-./rshell:
-.  ..  .git  LICENSE  Makefile	README.md
-
-./rshell/.git:
-.	  COMMIT_EDITMSG  HEAD	 info	  refs
-..	  config	  hooks  logs
-branches  description	  index  objects
-
-./rshell/.git/branches:
-.  ..
-
-./rshell/.git/hooks:
-.		       pre-applypatch.sample
-..		       pre-commit.sample
-applypatch-msg.sample  prepare-commit-msg.sample
-commit-msg.sample      pre-rebase.sample
-post-update.sample     update.sample
-
-./rshell/.git/info:
-.  ..  exclude
-
-./rshell/.git/logs:
-.  ..  HEAD  refs
-
-./rshell/.git/logs/refs:
-.  ..  heads  remotes
-
-./rshell/.git/logs/refs/heads:
-.  ..  master
-
-./rshell/.git/logs/refs/remotes:
-.  ..  origin
-
-./rshell/.git/logs/refs/remotes/origin:
-.  ..  master
-
-./rshell/.git/objects:
-.  ..  0c  0d  e6  info  pack
-
-./rshell/.git/objects/0c:
-.  ..  2cccedd5279bd323acf5c8555b2297ef6230f9
-
-./rshell/.git/objects/0d:
-.  ..  3aae9e7d250d735656f3c611298b05b70d808f
-
-./rshell/.git/objects/e6:
-.  ..  9de29bb2d1d6434b8b29ae775ad8c2e48c5391
-
-./rshell/.git/objects/info:
-.  ..
-
-./rshell/.git/objects/pack:
-.  ..
-
-./rshell/.git/refs:
-.  ..  heads  remotes  tags
-
-./rshell/.git/refs/heads:
-.  ..  master
-
-./rshell/.git/refs/remotes:
-.  ..  origin
-
-./rshell/.git/refs/remotes/origin:
-.  ..  master
-
-./rshell/.git/refs/tags:
-.  ..
-
-./tmp:
-.  ..
-$ ./a.out [C[C[3Pclear[C[Cg++ exec.cpp [C[C[8Pclear
-[H[2J$ clear[C[C./a.out [C[C[3Pclear[C[Cg++ exec.cpp 
-exec.cpp: In function ‘int main()’:
-exec.cpp:9:13: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-exec.cpp:10:13: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-exec.cpp:11:13: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-$ g++ exec.cpp [C[C[8Pclear[C[C./a.out 
-total 172
-drwxr-xr-x  5 user user  4096 Oct 14 17:28 .
-drwxr-xr-x 10 user user  4096 Oct 14 12:18 ..
--rwxr-xr-x  1 user user  7042 Oct 14 17:28 a.out
--rw-r--r--  1 user user   215 Oct 14 17:28 exec.cpp
--rw-------  1 user user 12288 Oct 14 17:28 .exec.cpp.swp
-drwxr-xr-x  3 user user  4096 Oct  7 18:18 gitexample
--rw-r--r--  1 user user   952 Oct  9 23:15 lecture1
--rw-r--r--  1 user user 55139 Oct  9 23:15 lecture1b
--rw-r--r--  1 user user 34066 Oct  9 23:18 lecture2
--rw-r--r--  1 user user 32768 Oct 14 17:27 lecture4
-drwxr-xr-x  3 user user  4096 Oct  9 18:11 rshell
--rw-r--r--  1 user user     0 Oct  9 23:18 testfile
-drwxr-xr-x  2 user user  4096 Oct 14 17:12 tmp
-$ ls -a -l
-total 172
-drwxr-xr-x  5 user user  4096 Oct 14 17:28 [0m[01;34m.[0m
-drwxr-xr-x 10 user user  4096 Oct 14 12:18 [01;34m..[0m
--rwxr-xr-x  1 user user  7042 Oct 14 17:28 [01;32ma.out[0m
--rw-r--r--  1 user user   215 Oct 14 17:28 exec.cpp
--rw-------  1 user user 12288 Oct 14 17:28 .exec.cpp.swp
-drwxr-xr-x  3 user user  4096 Oct  7 18:18 [01;34mgitexample[0m
--rw-r--r--  1 user user   952 Oct  9 23:15 lecture1
--rw-r--r--  1 user user 55139 Oct  9 23:15 lecture1b
--rw-r--r--  1 user user 34066 Oct  9 23:18 lecture2
--rw-r--r--  1 user user 32768 Oct 14 17:27 lecture4
-drwxr-xr-x  3 user user  4096 Oct  9 18:11 [01;34mrshell[0m
--rw-r--r--  1 user user     0 Oct  9 23:18 testfile
-drwxr-xr-x  2 user user  4096 Oct 14 17:12 [01;34mtmp[0m
-$ clear
-[H[2J$ clear[C[Cls -a -l[C[C./a.out [C[C[5@g++ exec.cpp[C
-exec.cpp: In function ‘int main()’:
-exec.cpp:9:13: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-exec.cpp:10:13: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-exec.cpp:11:13: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-$ g++ exec.cpp [C[C[8Pclear[C[Cg++ exec.cpp 
-exec.cpp: In function ‘int main()’:
-exec.cpp:9:13: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-exec.cpp:12:13: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-exec.cpp:13:13: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-$ g++ exec.cpp [C[C[8Pclear[C[Cls -a -l[C[C./a.out 
-Segmentation fault
-$ ./a.out [C[C[5@g++ exec.cpp[C
-exec.cpp: In function ‘int main()’:
-exec.cpp:15:9: error: invalid conversion from ‘const char**’ to ‘char* const*’ [-fpermissive]
-In file included from exec.cpp:1:0:
-/usr/include/unistd.h:575:12: error:   initializing argument 2 of ‘int execvp(const char*, char* const*)’ [-fpermissive]
-$  clear
-[H[2J$ man strcpy
-[?1049h[?1h=STRCPY(3)      Linux Programmer's Manual      STRCPY(3)[m
-[m
-[1mNAME[0m[m
-       strcpy, strncpy - copy a string[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<string.h>[0m[m
-[m
-       [1mchar[0m [1m*strcpy(char[0m [1m*[0m[4mdest[24m[1m,[0m [1mconst[0m [1mchar[0m [1m*[0m[4msrc[24m[1m);[0m[m
-[m
-       [1mchar[0m [1m*strncpy(char[0m [1m*[0m[4mdest[24m[1m,[0m [1mconst[0m [1mchar[0m [1m*[0m[4msrc[24m[1m,[0m [1msize_t[0m [m [4mn[24m[1m);[0m[m
-[m
-[1mDESCRIPTION[0m[m
-       The  [1mstrcpy[0m() function copies the string pointed[m
-       to by [4msrc[24m, including the terminating  null  byte[m
-       ('\0'),  to  the buffer pointed to by [4mdest[24m.  The[m
-       strings may not  overlap,  and  the  destination[m
-       string  [4mdest[24m must be large enough to receive the[m
-       copy.  [4mBeware[24m [4mof[24m [4mbuffer[24m [4moverruns![24m  (See BUGS.)[m
-[m
-       The [1mstrncpy[0m() function is similar,  except  that[m
-       at  most [4mn[24m bytes of [4msrc[24m are copied.  [1mWarning[0m: If[m
-       there is no null byte among the first [4mn[24m bytes of[m
-       [4msrc[24m, the string placed in [4mdest[24m will not be null-[m
-       terminated.[m
-[m
-       If the length of [4msrc[24m is less than  [4mn[24m,  [1mstrncpy[0m()[m
-       writes  additional  null bytes to [4mdest[24m to ensure[m
-       that a total of [4mn[24m bytes are written.[m
-[7ml page strcpy(3) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ man strcpy[C[Cg++ exec.cpp 
-exec.cpp: In function ‘int main()’:
-exec.cpp:12:13: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-exec.cpp:13:13: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-$ g++ exec.cpp [C[C[3Pman strcpy[C[Cg++ exec.cpp [K$ g++ exec.cpp [K$ g++ exec.cpp 
-exec.cpp: In function ‘int main()’:
-exec.cpp:14:13: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-exec.cpp:15:13: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-$ g++ exec.cpp [C[C[3Pman strcpy[C[Cg++ exec.cpp [C[C[5P./a.out[C
- before
-total 184
-drwxr-xr-x  5 user user  4096 Oct 14 17:38 .
-drwxr-xr-x 10 user user  4096 Oct 14 12:18 ..
--rwxr-xr-x  1 user user 10143 Oct 14 17:38 a.out
--rw-r--r--  1 user user   349 Oct 14 17:38 exec.cpp
--rw-------  1 user user 12288 Oct 14 17:38 .exec.cpp.swp
-drwxr-xr-x  3 user user  4096 Oct  7 18:18 gitexample
--rw-r--r--  1 user user   952 Oct  9 23:15 lecture1
--rw-r--r--  1 user user 55139 Oct  9 23:15 lecture1b
--rw-r--r--  1 user user 34066 Oct  9 23:18 lecture2
--rw-r--r--  1 user user 36864 Oct 14 17:36 lecture4
-drwxr-xr-x  3 user user  4096 Oct  9 18:11 rshell
--rw-r--r--  1 user user     0 Oct  9 23:18 testfile
-drwxr-xr-x  2 user user  4096 Oct 14 17:12 tmp
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ 
-$ ps
-  PID TTY          TIME CMD
- 9941 pts/10   00:00:00 bash
-22050 pts/10   00:00:00 ps
-$ ps[K[Kman ps
-[?1049h[?1h=PS(1)             User Commands             PS(1)[m
-[m
-[1mNAME[0m[m
-       ps - report a snapshot of the current[m
-       processes.[m
-[m
-[1mSYNOPSIS[0m[m
-       [1mps[0m [[4moptions[24m][m
-[m
-[1mDESCRIPTION[0m[m
-       [1mps[0m displays information about a selection[m
-       of the active processes.  If you want a[m
-       repetitive update of the selection and the[m
-       displayed information, use [4mtop[24m(1) instead.[m
-[m
-       This version of [1mps[0m accepts several kinds[m
-       of options:[m
-[m
-       1   UNIX options, which may be grouped and[m
-           must be preceded by a dash.[m
-       2   BSD options, which may be grouped and[m
-           must not be used with a dash.[m
-       3   GNU long options, which are preceded[m
-           by two dashes.[m
-[m
-       Options of different types may be freely[m
-       mixed, but conflicts can appear.  There[m
-       are some synonymous options, which are[m
-       functionally identical, due to the many[m
-       standards and [1mps[0m implementations that this[m
-[7mpage ps(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ ps -ef
-UID        PID  PPID  C STIME TTY          TIME CMD
-root         1     0  0 Oct03 ?        00:00:06 ini
-root         2     0  0 Oct03 ?        00:00:00 [kt
-root         3     2  0 Oct03 ?        00:02:12 [ks
-root         6     2  0 Oct03 ?        00:00:10 [mi
-root         7     2  0 Oct03 ?        00:00:04 [wa
-root        21     2  0 Oct03 ?        00:00:00 [cp
-root        22     2  0 Oct03 ?        00:00:00 [kh
-root        23     2  0 Oct03 ?        00:00:00 [kd
-root        24     2  0 Oct03 ?        00:00:00 [ne
-root        25     2  0 Oct03 ?        00:00:01 [sy
-root        26     2  0 Oct03 ?        00:00:00 [bd
-root        27     2  0 Oct03 ?        00:00:00 [ki
-root        28     2  0 Oct03 ?        00:00:00 [kb
-root        29     2  0 Oct03 ?        00:00:00 [kh
-root        30     2  0 Oct03 ?        00:00:15 [ks
-root        31     2  0 Oct03 ?        00:00:00 [ks
-root        32     2  0 Oct03 ?        00:00:00 [kh
-root        33     2  0 Oct03 ?        00:00:00 [fs
-root        34     2  0 Oct03 ?        00:00:00 [cr
-root       175     2  0 Oct03 ?        00:00:00 [at
-root       177     2  0 Oct03 ?        00:00:00 [kh
-root       200     2  0 Oct03 ?        00:00:00 [sc
-root       201     2  0 Oct03 ?        00:00:43 [sc
-root       202     2  0 Oct03 ?        00:00:00 [sc
-root       203     2  0 Oct03 ?        00:00:00 [sc
-root       204     2  0 Oct03 ?        00:00:00 [sc
-root       205     2  0 Oct03 ?        00:00:00 [sc
-root       245     2  0 Oct03 ?        00:00:36 [jb
-root       246     2  0 Oct03 ?        00:00:00 [ex
-root       390     1  0 Oct03 ?        00:00:13 ude
-root       506     2  0 Oct03 ?        00:00:04 [ip
-root       507     2  0 Oct03 ?        00:00:49 [ip
-root       574     2  0 Oct03 ?        00:00:00 [cf
-root       584     2  0 Oct03 ?        00:00:00 [kp
-root       597     2  0 Oct03 ?        00:00:00 [iw
-root       685     2  0 Oct03 ?        00:00:00 [hd
-root      1888     1  0 Oct03 ?        00:00:00 /sb
-root      1902     2  0 16:54 ?        00:00:00 [mi
-root      1904     2  0 16:54 ?        00:00:00 [ks
-root      1905     2  0 16:54 ?        00:00:00 [wa
-root      1906     2  0 16:54 ?        00:00:00 [mi
-root      1908     2  0 16:54 ?        00:00:00 [ks
-root      1909     2  0 16:54 ?        00:00:00 [wa
-root      1910     2  0 16:54 ?        00:00:00 [mi
-root      1912     2  0 16:54 ?        00:00:00 [ks
-root      1913     2  0 16:54 ?        00:00:00 [wa
-statd     1919     1  0 Oct03 ?        00:00:00 /sb
-root      1922   390  0 16:54 ?        00:00:00 ude
-root      1923   390  0 16:54 ?        00:00:00 ude
-root      1924     2  0 Oct03 ?        00:00:00 [rp
-root      1926     2  0 Oct03 ?        00:00:00 [nf
-root      1933     1  0 Oct03 ?        00:00:00 /us
-root      2224     1  0 Oct03 ?        00:01:49 /us
-daemon    2365     1  0 Oct03 ?        00:00:00 /us
-root      2445     1  0 Oct03 ?        00:00:00 /us
-root      2526  2804  0 16:54 ?        00:00:00 /sb
-114       2534     1  0 Oct03 ?        00:03:47 /us
-user      2545  3542  0 16:54 ?        00:00:00 /bi
-user      2546  2545  0 16:54 ?        00:00:03 gno
-user      2550  2546  0 16:54 ?        00:00:00 gno
-user      2551  2546  0 16:54 pts/4    00:00:00 bas
-102       2561     1  0 Oct03 ?        01:44:59 /us
-user      2643  2546  0 16:54 pts/9    00:00:00 bas
-avahi     2708     1  0 Oct03 ?        00:01:11 ava
-avahi     2717  2708  0 Oct03 ?        00:00:00 ava
-root      2718     1  0 Oct03 ?        00:00:00 /us
-root      2795     2  0 Oct03 ?        00:00:00 [kr
-root      2804     1  0 Oct03 ?        00:42:41 /us
-root      2856     1  1 Oct03 ?        03:18:12 /us
-root      2880     1  0 Oct03 ?        00:00:53 /us
-root      2887     1  0 Oct03 ?        00:00:57 /us
-105       2919     1  0 Oct03 ?        00:00:00 /us
-root      2930     1  0 Oct03 ?        00:01:40 /us
-colord    2933     1  0 Oct03 ?        00:00:00 /us
-root      2950  2930  0 Oct03 ?        00:00:00 /us
-root      2951     1  0 Oct03 ?        00:01:50 /us
-root      2978  2950  0 Oct03 tty7     02:31:22 /us
-colord    2983     1  0 Oct03 ?        00:00:52 /us
-root      3018     1  0 Oct03 ?        00:09:15 /us
-root      3039  3018  0 Oct03 ?        00:04:13 /us
-root      3045     1  0 Oct03 ?        00:00:53 /sb
-root      3048     1  0 Oct03 ?        00:00:00 /us
-root      3074     1  0 Oct03 ?        00:00:00 /us
-root      3075     1  0 Oct03 tty1     00:00:00 /sb
-root      3076     1  0 Oct03 tty2     00:00:00 /sb
-root      3077     1  0 Oct03 tty3     00:00:00 /sb
-root      3078     1  0 Oct03 tty4     00:00:00 /sb
-root      3079     1  0 Oct03 tty5     00:00:00 /sb
-root      3080     1  0 Oct03 tty6     00:00:00 /sb
-root      3096     1  0 Oct03 ?        00:03:23 /us
-root      3100     1  0 Oct03 ?        01:00:39 /us
-root      3176     2  0 Oct03 ?        00:00:30 [fl
-root      3186     1  0 Oct03 ?        00:08:09 /us
-rtkit     3336     1  0 Oct03 ?        00:00:05 /us
-root      3364  2950  0 Oct03 ?        00:01:09 gdm
-user      3373  4901  0 16:55 ?        00:00:14 /us
-user      3427     1  0 Oct03 ?        00:00:18 /us
-root      3429     2  0 Oct03 ?        00:00:00 [ka
-user      3445  3364  0 Oct03 ?        00:04:42 gno
-user      3486  3445  0 Oct03 ?        00:00:01 /us
-user      3489     1  0 Oct03 ?        00:00:00 /us
-user      3490     1  0 Oct03 ?        00:02:26 /us
-user      3496  3445  0 Oct03 ?        00:05:54 /us
-user      3508     1  0 Oct03 ?        00:00:17 /us
-user      3514     1  0 Oct03 ?        00:18:05 /us
-user      3518     1  0 Oct03 ?        00:00:01 /us
-root      3520     1  0 Oct03 ?        00:05:12 /us
-root      3521  3520  0 Oct03 ?        00:00:48 udi
-user      3524     1  0 Oct03 ?        00:00:26 /us
-user      3527     1  0 Oct03 ?        00:00:00 /us
-user      3534  3445  0 Oct03 ?        00:03:40 /ho
-user      3535  3534  0 Oct03 ?        00:00:00 /bi
-user      3536  3535  0 Oct03 ?        00:08:39 /ho
-user      3542  3445  0 Oct03 ?        00:40:11 gno
-user      3545     1  0 Oct03 ?        00:00:00 /us
-user      3552     1  0 Oct03 ?        00:00:01 /us
-user      3554     1  0 Oct03 ?        00:00:00 /us
-user      3558  3445  0 Oct03 ?        00:03:35 /us
-user      3560  3445  0 Oct03 ?        00:07:52 nm-
-user      3562  3445  0 Oct03 ?        00:00:03 /us
-user      3564  3445  0 Oct03 ?        00:00:59 gno
-user      3566  3445  0 Oct03 ?        00:08:21 /us
-user      3568  3445  0 Oct03 ?        00:00:08 /us
-user      3569  3445  0 Oct03 ?        00:00:03 /us
-user      3589     1  0 Oct03 ?        00:24:33 /us
-user      3592     1  0 Oct03 ?        00:05:11 /us
-user      3599     1  0 Oct03 ?        00:00:00 /us
-user      3607     1  0 Oct03 ?        00:00:11 /us
-user      3657 10738  0 Oct13 pts/5    00:00:20 vim
-user      4901  3542  3 Oct03 ?        08:49:25 ice
-user      4904     1  0 Oct04 ?        00:00:00 /us
-user      4915     1  0 Oct03 ?        00:00:00 /us
-user      5779     1  0 Oct04 ?        00:00:13 evi
-user      5955  3534  0 Oct04 ?        00:00:00 /bi
-user      5956  5955  0 Oct04 ?        00:00:03 xte
-user      5958  5956  0 Oct04 pts/2    00:00:00 bas
-user      6431     1  0 Oct03 ?        00:00:00 /us
-user      6716     1  0 Oct03 ?        00:00:00 /us
-user      6817     1  0 Oct03 ?        00:00:01 /us
-user      7012     1  0 Oct03 ?        00:00:00 /us
-user      7420     1  0 Oct03 ?        00:00:00 /us
-user      7611     1  0 Oct03 ?        00:00:00 /us
-user      7791     1  0 Oct04 ?        00:00:11 evi
-user      7799     1  0 Oct03 ?        00:00:00 /us
-user      8074     1  0 Oct03 ?        00:00:00 /us
-root      9243     2  0 17:09 ?        00:00:00 [kw
-user      9939  2551  0 17:10 pts/4    00:00:00 scr
-user      9940  9939  0 17:10 pts/4    00:00:00 scr
-user      9941  9940  0 17:10 pts/10   00:00:00 bas
-user     10621     1  0 09:16 ?        00:00:26 evi
-user     10735  3534  0 Oct06 ?        00:00:00 /bi
-user     10736 10735  0 Oct06 ?        00:00:06 xte
-user     10738 10736  0 Oct06 pts/5    00:00:01 bas
-user     12434  3542  0 Oct06 ?        00:02:32 kon
-user     12565     1  0 Oct06 ?        00:00:12 /us
-user     12917  3534  0 17:17 ?        00:00:00 /bi
-user     12918 12917  0 17:17 ?        00:00:00 xte
-user     12920 12918  0 17:17 pts/11   00:00:00 bas
-user     13043  2643  0 17:17 pts/9    00:00:00 vim
-user     13416 30502  0 Oct13 pts/7    00:00:16 vim
-user     13663  3534  0 09:46 ?        00:00:00 /bi
-user     13664 13663  0 09:46 ?        00:00:00 xte
-user     13666 13664  0 09:46 pts/6    00:00:00 bas
-user     13710 13666  0 09:46 pts/6    00:00:01 /us
-root     15299     2  0 17:23 ?        00:00:00 [kw
-user     15959  3534  0 Oct08 ?        00:00:00 /bi
-user     15960 15959  0 Oct08 ?        00:00:14 xte
-user     15967 15960  0 Oct08 pts/8    00:00:02 bas
-root     16338     2  0 17:25 ?        00:00:00 [kw
-user     16520     1  0 Oct03 ?        00:00:00 kde
-user     16523 16520  0 Oct03 ?        00:00:33 kde
-user     16525     1  0 Oct03 ?        00:00:29 kde
-user     16672 16520  0 Oct03 ?        00:00:00 /us
-user     16680     1  0 Oct03 ?        00:00:04 /us
-root     16694     2  0 17:26 ?        00:00:00 [kw
-user     17649  5958  0 12:19 pts/2    00:00:01 vim
-root     17857     2  0 17:29 ?        00:00:00 [kw
-user     18338  3534  0 Oct04 ?        00:00:00 /bi
-user     18339 18338  0 Oct04 ?        00:00:02 xte
-user     18341 18339  0 Oct04 pts/3    00:00:00 bas
-root     18556     2  0 17:31 ?        00:00:00 [kw
-root     18892     2  0 17:32 ?        00:00:00 [kw
-root     19817     2  0 17:34 ?        00:00:00 [kw
-user     19851  3542  0 Oct06 ?        00:17:57 xch
-root     19942     2  0 17:34 ?        00:00:00 [kw
-root     21221     2  0 17:37 ?        00:00:00 [kw
-root     21453     2  0 17:38 ?        00:00:00 [kw
-root     21925     2  0 17:39 ?        00:00:00 [kw
-root     21926     2  0 17:39 ?        00:00:00 [kw
-user     22274 19851  0 17:39 ?        00:00:00 xch
-user     22388 19851  0 17:40 ?        00:00:00 xch
-user     22407  9941  0 17:40 pts/10   00:00:00 ps 
-user     25491     1  0 Oct03 ?        00:00:04 /us
-user     26886 31368  0 14:40 pts/1    00:00:00 cab
-user     27113 26886  0 14:40 pts/1    00:00:04 /us
-root     27929     2  0 14:41 ?        00:00:00 [kw
-root     27959     2  0 15:50 ?        00:00:00 [kw
-root     27968     2  0 15:50 ?        00:00:00 [kw
-user     28818 31328  0 Oct04 pts/0    00:02:21 vim
-user     30499  3534  0 Oct08 ?        00:00:00 /bi
-user     30500 30499  0 Oct08 ?        00:00:08 xte
-user     30502 30500  0 Oct08 pts/7    00:00:05 bas
-user     31325  3534  0 Oct03 ?        00:00:00 /bi
-user     31326 31325  0 Oct03 ?        00:00:23 xte
-user     31328 31326  0 Oct03 pts/0    00:00:00 bas
-user     31332  3534  0 Oct03 ?        00:00:00 /bi
-user     31334 31332  0 Oct03 ?        00:00:05 xte
-user     31368 31334  0 Oct03 pts/1    00:00:00 bas
-$ [K$ [K$ [K$ [K$ [K$ [K$ ps -ef
-UID        PID  PPID  C STIME TTY          TIME CMD
-root         1     0  0 Oct03 ?        00:00:06 init [3]  
-root         2     0  0 Oct03 ?        00:00:00 [kthreadd]
-root         3     2  0 Oct03 ?        00:02:12 [ksoftirqd/0]
-root         6     2  0 Oct03 ?        00:00:10 [migration/0]
-root         7     2  0 Oct03 ?        00:00:04 [watchdog/0]
-root        21     2  0 Oct03 ?        00:00:00 [cpuset]
-root        22     2  0 Oct03 ?        00:00:00 [khelper]
-root        23     2  0 Oct03 ?        00:00:00 [kdevtmpfs]
-root        24     2  0 Oct03 ?        00:00:00 [netns]
-root        25     2  0 Oct03 ?        00:00:01 [sync_supers]
-root        26     2  0 Oct03 ?        00:00:00 [bdi-default]
-root        27     2  0 Oct03 ?        00:00:00 [kintegrityd]
-root        28     2  0 Oct03 ?        00:00:00 [kblockd]
-root        29     2  0 Oct03 ?        00:00:00 [khungtaskd]
-root        30     2  0 Oct03 ?        00:00:15 [kswapd0]
-root        31     2  0 Oct03 ?        00:00:00 [ksmd]
-root        32     2  0 Oct03 ?        00:00:00 [khugepaged]
-root        33     2  0 Oct03 ?        00:00:00 [fsnotify_mark]
-root        34     2  0 Oct03 ?        00:00:00 [crypto]
-root       175     2  0 Oct03 ?        00:00:00 [ata_sff]
-root       177     2  0 Oct03 ?        00:00:00 [khubd]
-root       200     2  0 Oct03 ?        00:00:00 [scsi_eh_0]
-root       201     2  0 Oct03 ?        00:00:43 [scsi_eh_1]
-root       202     2  0 Oct03 ?        00:00:00 [scsi_eh_2]
-root       203     2  0 Oct03 ?        00:00:00 [scsi_eh_3]
-root       204     2  0 Oct03 ?        00:00:00 [scsi_eh_4]
-root       205     2  0 Oct03 ?        00:00:00 [scsi_eh_5]
-root       245     2  0 Oct03 ?        00:00:36 [jbd2/sda1-8]
-root       246     2  0 Oct03 ?        00:00:00 [ext4-dio-unwrit]
-root       390     1  0 Oct03 ?        00:00:13 udevd --daemon
-root       506     2  0 Oct03 ?        00:00:04 [ips-adjust]
-root       507     2  0 Oct03 ?        00:00:49 [ips-monitor]
-root       574     2  0 Oct03 ?        00:00:00 [cfg80211]
-root       584     2  0 Oct03 ?        00:00:00 [kpsmoused]
-root       597     2  0 Oct03 ?        00:00:00 [iwlwifi]
-root       685     2  0 Oct03 ?        00:00:00 [hd-audio0]
-root      1888     1  0 Oct03 ?        00:00:00 /sbin/rpcbind -w
-root      1902     2  0 16:54 ?        00:00:00 [migration/1]
-root      1904     2  0 16:54 ?        00:00:00 [ksoftirqd/1]
-root      1905     2  0 16:54 ?        00:00:00 [watchdog/1]
-root      1906     2  0 16:54 ?        00:00:00 [migration/2]
-root      1908     2  0 16:54 ?        00:00:00 [ksoftirqd/2]
-root      1909     2  0 16:54 ?        00:00:00 [watchdog/2]
-root      1910     2  0 16:54 ?        00:00:00 [migration/3]
-root      1912     2  0 16:54 ?        00:00:00 [ksoftirqd/3]
-root      1913     2  0 16:54 ?        00:00:00 [watchdog/3]
-statd     1919     1  0 Oct03 ?        00:00:00 /sbin/rpc.statd
-root      1922   390  0 16:54 ?        00:00:00 udevd --daemon
-root      1923   390  0 16:54 ?        00:00:00 udevd --daemon
-root      1924     2  0 Oct03 ?        00:00:00 [rpciod]
-root      1926     2  0 Oct03 ?        00:00:00 [nfsiod]
-root      1933     1  0 Oct03 ?        00:00:00 /usr/sbin/rpc.idmapd
-root      2224     1  0 Oct03 ?        00:01:49 /usr/sbin/rsyslogd -c
-daemon    2365     1  0 Oct03 ?        00:00:00 /usr/sbin/atd
-root      2445     1  0 Oct03 ?        00:00:00 /usr/sbin/cron
-root      2526  2804  0 16:54 ?        00:00:00 /sbin/dhclient -d -4 
-114       2534     1  0 Oct03 ?        00:03:47 /usr/bin/tor --defaul
-user      2545  3542  0 16:54 ?        00:00:00 /bin/sh /home/user/.c
-user      2546  2545  0 16:54 ?        00:00:04 gnome-terminal --hide
-user      2550  2546  0 16:54 ?        00:00:00 gnome-pty-helper
-user      2551  2546  0 16:54 pts/4    00:00:00 bash
-102       2561     1  0 Oct03 ?        01:45:00 /usr/bin/dbus-daemon 
-user      2643  2546  0 16:54 pts/9    00:00:00 bash
-avahi     2708     1  0 Oct03 ?        00:01:11 avahi-daemon: running
-avahi     2717  2708  0 Oct03 ?        00:00:00 avahi-daemon: chroot 
-root      2718     1  0 Oct03 ?        00:00:00 /usr/sbin/bluetoothd
-root      2795     2  0 Oct03 ?        00:00:00 [krfcommd]
-root      2804     1  0 Oct03 ?        00:42:41 /usr/sbin/NetworkMana
-root      2856     1  1 Oct03 ?        03:18:12 /usr/lib/policykit-1/
-root      2880     1  0 Oct03 ?        00:00:53 /usr/sbin/acpid
-root      2887     1  0 Oct03 ?        00:00:57 /usr/sbin/cupsd -C /e
-105       2919     1  0 Oct03 ?        00:00:00 /usr/sbin/exim4 -bd -
-root      2930     1  0 Oct03 ?        00:01:40 /usr/sbin/gdm3
-colord    2933     1  0 Oct03 ?        00:00:00 /usr/lib/x86_64-linux
-root      2950  2930  0 Oct03 ?        00:00:00 /usr/lib/gdm3/gdm-sim
-root      2951     1  0 Oct03 ?        00:01:50 /usr/sbin/modem-manag
-root      2978  2950  0 Oct03 tty7     02:31:22 /usr/bin/Xorg :0 -br 
-colord    2983     1  0 Oct03 ?        00:00:52 /usr/lib/x86_64-linux
-root      3018     1  0 Oct03 ?        00:09:15 /usr/bin/python -O /u
-root      3039  3018  0 Oct03 ?        00:04:13 /usr/bin/python -O /u
-root      3045     1  0 Oct03 ?        00:00:53 /sbin/wpa_supplicant 
-root      3048     1  0 Oct03 ?        00:00:00 /usr/sbin/acpi_fakeke
-root      3074     1  0 Oct03 ?        00:00:00 /usr/sbin/minissdpd -
-root      3075     1  0 Oct03 tty1     00:00:00 /sbin/getty 38400 tty
-root      3076     1  0 Oct03 tty2     00:00:00 /sbin/getty 38400 tty
-root      3077     1  0 Oct03 tty3     00:00:00 /sbin/getty 38400 tty
-root      3078     1  0 Oct03 tty4     00:00:00 /sbin/getty 38400 tty
-root      3079     1  0 Oct03 tty5     00:00:00 /sbin/getty 38400 tty
-root      3080     1  0 Oct03 tty6     00:00:00 /sbin/getty 38400 tty
-root      3096     1  0 Oct03 ?        00:03:23 /usr/lib/accountsserv
-root      3100     1  0 Oct03 ?        01:00:39 /usr/sbin/console-kit
-root      3176     2  0 Oct03 ?        00:00:30 [flush-8:0]
-root      3186     1  0 Oct03 ?        00:08:09 /usr/lib/upower/upowe
-rtkit     3336     1  0 Oct03 ?        00:00:05 /usr/lib/rtkit/rtkit-
-root      3364  2950  0 Oct03 ?        00:01:09 gdm-session-worker [p
-user      3373  4901  0 16:55 ?        00:00:14 /usr/lib/iceweasel/xu
-user      3427     1  0 Oct03 ?        00:00:18 /usr/bin/gnome-keyrin
-root      3429     2  0 Oct03 ?        00:00:00 [kauditd]
-user      3445  3364  0 Oct03 ?        00:04:42 gnome-session --sessi
-user      3486  3445  0 Oct03 ?        00:00:01 /usr/bin/ssh-agent /u
-user      3489     1  0 Oct03 ?        00:00:00 /usr/bin/dbus-launch 
-user      3490     1  0 Oct03 ?        00:02:26 /usr/bin/dbus-daemon 
-user      3496  3445  0 Oct03 ?        00:05:54 /usr/lib/gnome-settin
-user      3508     1  0 Oct03 ?        00:00:17 /usr/lib/gvfs/gvfsd
-user      3514     1  0 Oct03 ?        00:18:05 /usr/bin/pulseaudio -
-user      3518     1  0 Oct03 ?        00:00:01 /usr/lib/gvfs/gvfs-gd
-root      3520     1  0 Oct03 ?        00:05:12 /usr/lib/udisks/udisk
-root      3521  3520  0 Oct03 ?        00:00:48 udisks-daemon: pollin
-user      3524     1  0 Oct03 ?        00:00:26 /usr/lib/gvfs/gvfs-af
-user      3527     1  0 Oct03 ?        00:00:00 /usr/lib/gvfs/gvfs-gp
-user      3534  3445  0 Oct03 ?        00:03:40 /home/user/.xmonad/xm
-user      3535  3534  0 Oct03 ?        00:00:00 /bin/sh -c /home/user
-user      3536  3535  0 Oct03 ?        00:08:39 /home/user/.dropbox-d
-user      3542  3445  0 Oct03 ?        00:40:11 gnome-panel
-user      3545     1  0 Oct03 ?        00:00:00 /usr/lib/gnome-settin
-user      3552     1  0 Oct03 ?        00:00:01 /usr/lib/x86_64-linux
-user      3554     1  0 Oct03 ?        00:00:00 /usr/lib/dconf/dconf-
-user      3558  3445  0 Oct03 ?        00:03:35 /usr/lib/policykit-1-
-user      3560  3445  0 Oct03 ?        00:07:52 nm-applet
-user      3562  3445  0 Oct03 ?        00:00:03 /usr/lib/gnome-disk-u
-user      3564  3445  0 Oct03 ?        00:00:59 gnome-screensaver
-user      3566  3445  0 Oct03 ?        00:08:21 /usr/lib/tracker/trac
-user      3568  3445  0 Oct03 ?        00:00:08 /usr/lib/notification
-user      3569  3445  0 Oct03 ?        00:00:03 /usr/lib/evolution/3.
-user      3589     1  0 Oct03 ?        00:24:33 /usr/lib/gnome-applet
-user      3592     1  0 Oct03 ?        00:05:11 /usr/lib/telepathy/mi
-user      3599     1  0 Oct03 ?        00:00:00 /usr/lib/gnome-online
-user      3607     1  0 Oct03 ?        00:00:11 /usr/lib/evolution/ev
-user      3657 10738  0 Oct13 pts/5    00:00:20 vim covertree.tex
-user      4901  3542  3 Oct03 ?        08:49:25 iceweasel
-user      4904     1  0 Oct04 ?        00:00:00 /usr/lib/evince/evinc
-user      4915     1  0 Oct03 ?        00:00:00 /usr/lib/at-spi2-core
-user      5779     1  0 Oct04 ?        00:00:13 evince /home/user/dow
-user      5955  3534  0 Oct04 ?        00:00:00 /bin/sh -c xterm
-user      5956  5955  0 Oct04 ?        00:00:03 xterm
-user      5958  5956  0 Oct04 pts/2    00:00:00 bash
-user      6431     1  0 Oct03 ?        00:00:00 /usr/lib/tracker/trac
-user      6716     1  0 Oct03 ?        00:00:00 /usr/lib/tracker/trac
-user      6817     1  0 Oct03 ?        00:00:01 /usr/lib/tracker/trac
-user      7012     1  0 Oct03 ?        00:00:00 /usr/lib/tracker/trac
-user      7420     1  0 Oct03 ?        00:00:00 /usr/lib/tracker/trac
-user      7611     1  0 Oct03 ?        00:00:00 /usr/lib/tracker/trac
-user      7791     1  0 Oct04 ?        00:00:11 evince /home/user/dow
-user      7799     1  0 Oct03 ?        00:00:00 /usr/lib/tracker/trac
-user      8074     1  0 Oct03 ?        00:00:00 /usr/lib/tracker/trac
-root      9243     2  0 17:09 ?        00:00:00 [kworker/0:2]
-user      9939  2551  0 17:10 pts/4    00:00:00 script lecture4
-user      9940  9939  0 17:10 pts/4    00:00:00 script lecture4
-user      9941  9940  0 17:10 pts/10   00:00:00 bash -i
-user     10621     1  0 09:16 ?        00:00:26 evince /home/user/dow
-user     10735  3534  0 Oct06 ?        00:00:00 /bin/sh -c xterm
-user     10736 10735  0 Oct06 ?        00:00:06 xterm
-user     10738 10736  0 Oct06 pts/5    00:00:01 bash
-user     12434  3542  0 Oct06 ?        00:02:32 konqueror
-user     12565     1  0 Oct06 ?        00:00:12 /usr/bin/knotify4
-user     12917  3534  0 17:17 ?        00:00:00 /bin/sh -c xterm
-user     12918 12917  0 17:17 ?        00:00:00 xterm
-user     12920 12918  0 17:17 pts/11   00:00:00 bash
-user     13043  2643  0 17:17 pts/9    00:00:00 vim exec.cpp
-user     13416 30502  0 Oct13 pts/7    00:00:16 vim exec/hlearn-linea
-user     13663  3534  0 09:46 ?        00:00:00 /bin/sh -c xterm
-user     13664 13663  0 09:46 ?        00:00:00 xterm
-user     13666 13664  0 09:46 pts/6    00:00:00 bash
-user     13710 13666  0 09:46 pts/6    00:00:01 /usr/local/lib/ghc-7.
-root     15299     2  0 17:23 ?        00:00:00 [kworker/3:2]
-user     15959  3534  0 Oct08 ?        00:00:00 /bin/sh -c xterm
-user     15960 15959  0 Oct08 ?        00:00:14 xterm
-user     15967 15960  0 Oct08 pts/8    00:00:02 bash
-root     16338     2  0 17:25 ?        00:00:00 [kworker/1:0]
-user     16520     1  0 Oct03 ?        00:00:00 kdeinit4: kdeinit4 Ru
-user     16523 16520  0 Oct03 ?        00:00:33 kdeinit4: klauncher [
-user     16525     1  0 Oct03 ?        00:00:29 kdeinit4: kded4 [kdei
-user     16672 16520  0 Oct03 ?        00:00:00 /usr/lib/kde4/libexec
-user     16680     1  0 Oct03 ?        00:00:04 /usr/bin/kwalletd
-root     16694     2  0 17:26 ?        00:00:00 [kworker/2:2]
-user     17649  5958  0 12:19 pts/2    00:00:01 vim exec.cpp
-root     17857     2  0 17:29 ?        00:00:00 [kworker/0:0]
-user     18338  3534  0 Oct04 ?        00:00:00 /bin/sh -c xterm
-user     18339 18338  0 Oct04 ?        00:00:02 xterm
-user     18341 18339  0 Oct04 pts/3    00:00:00 bash
-root     18556     2  0 17:31 ?        00:00:00 [kworker/1:2]
-root     18892     2  0 17:32 ?        00:00:00 [kworker/2:0]
-root     19817     2  0 17:34 ?        00:00:00 [kworker/3:1]
-user     19851  3542  0 Oct06 ?        00:17:57 xchat
-root     19942     2  0 17:34 ?        00:00:00 [kworker/0:1]
-root     21221     2  0 17:37 ?        00:00:00 [kworker/2:1]
-root     21453     2  0 17:38 ?        00:00:00 [kworker/1:1]
-root     21925     2  0 17:39 ?        00:00:00 [kworker/0:3]
-root     21926     2  0 17:39 ?        00:00:00 [kworker/0:4]
-user     22634 19851  0 17:40 ?        00:00:00 xchat
-user     22641  9941  0 17:40 pts/10   00:00:00 ps -ef
-user     25491     1  0 Oct03 ?        00:00:04 /usr/lib/gvfs/gvfsd-m
-user     26886 31368  0 14:40 pts/1    00:00:00 cabal --sandbox-confi
-user     27113 26886  0 14:40 pts/1    00:00:04 /usr/local/lib/ghc-7.
-root     27929     2  0 14:41 ?        00:00:00 [kworker/u:3]
-root     27959     2  0 15:50 ?        00:00:00 [kworker/u:15]
-root     27968     2  0 15:50 ?        00:00:00 [kworker/u:27]
-user     28818 31328  0 Oct04 pts/0    00:02:21 vim SubHask/Category.
-user     30499  3534  0 Oct08 ?        00:00:00 /bin/sh -c xterm
-user     30500 30499  0 Oct08 ?        00:00:08 xterm
-user     30502 30500  0 Oct08 pts/7    00:00:05 bash
-user     31325  3534  0 Oct03 ?        00:00:00 /bin/sh -c xterm
-user     31326 31325  0 Oct03 ?        00:00:23 xterm
-user     31328 31326  0 Oct03 pts/0    00:00:00 bash
-user     31332  3534  0 Oct03 ?        00:00:00 /bin/sh -c xterm
-user     31334 31332  0 Oct03 ?        00:00:05 xterm
-user     31368 31334  0 Oct03 pts/1    00:00:00 bash
-$ [K$ [K$ [K$ [K$ man fork
-[?1049h[?1h=FORK(2)        Linux Programmer's Manual        FORK(2)[m
-[m
-[1mNAME[0m[m
-       fork - create a child process[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mpid_t[0m [1mfork(void);[0m[m
-[m
-[1mDESCRIPTION[0m[m
-       [1mfork[0m()  creates a new process by duplicating the[m
-       calling process.  The new process,  referred  to[m
-       as the [4mchild[24m, is an exact duplicate of the call‐[m
-       ing process, referred to as the  [4mparent[24m,  except[m
-       for the following points:[m
-[m
-       *  The  child has its own unique process ID, and[m
-          this PID does not match the ID of any  exist‐[m
-          ing process group ([1msetpgid[0m(2)).[m
-[m
-       *  The  child's parent process ID is the same as[m
-          the parent's process ID.[m
-[m
-       *  The child does not inherit its parent's  mem‐[m
-          ory locks ([1mmlock[0m(2), [1mmlockall[0m(2)).[m
-[m
-       *  Process  resource utilizations ([1mgetrusage[0m(2))[m
-          and CPU time counters ([1mtimes[0m(2)) are reset to[m
-          zero in the child.[m
-[7mual page fork(2) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ clear
-[H[2J$ g++ te[K[Kexec.cpp 
-$ ./a.out 
-test
-$ [K$ [K$ [K$ ./a.out [C[C[5@g++ exec.cpp[C
-$ g++ exec.cpp [C[C[5P./a.out[C
-test
-test
-$ ./a.out [C[C[5@g++ exec.cpp[C
-$ g++ exec.cpp [C[C[5P./a.out[C
-test
-test
-test
-$ test
-./a.out [C[C[5@g++ exec.cpp[C
-$ g++ exec.cpp [C[C[5P./a.out[C
-test
-test
-test
-test
-$ test
-test
-test
-test
-^C
-$ ./a.out [C[C[5@g++ exec.cpp[C
-$ g++ exec.cpp [C[C[5P./a.out[C
-^C
-$ [K$ [K$ [K$ [K$ clear
-[H[2J$ clear[C[C./a.out [C[C[5@g++ exec.cpp[C
-$ g++ exec.cpp [C[C[8Pclear[C[C./a.out 
-^C
-$ ./a.out [C[C[5@g++ exec.cpp[C
-$ g++ exec.cpp [C[C[5P./a.out[C
-^C
-$ [K$ [K$ [K$ [K$ mN [K[Kan fork
-[?1049h[?1h=FORK(2) Linux Programmer's Manual FORK(2)[m
-[m
-[1mNAME[0m[m
-       fork - create a child process[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mpid_t[0m [1mfork(void);[0m[m
-[m
-[1mDESCRIPTION[0m[m
-       [1mfork[0m()  creates  a  new process by[m
-       duplicating the  calling  process.[m
-       The  new  process,  referred to as[m
-       the [4mchild[24m, is an  exact  duplicate[m
-       of  the  calling process, referred[m
-       to as the [4mparent[24m, except  for  the[m
-       following points:[m
-[m
-       *  The  child  has  its own unique[m
-          process ID, and this  PID  does[m
-          not  match the ID of any exist‐[m
-          ing process group ([1msetpgid[0m(2)).[m
-[m
-       *  The child's parent  process  ID[m
-          is  the  same  as  the parent's[m
-          process ID.[m
-[m
-       *  The child does not inherit  its[m
-          parent's      memory      locks[m
-[7m2) line 1 (press h for help or q to quit)[27m[K[H[2J[HFORK(2) Linux Programmer's Manual FORK(2)[m
-[m
-[1mNAME[0m[m
-       fork - create a child process[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mpid_t[0m [1mfork(void);[0m[m
-[m
-[1mDESCRIPTION[0m[m
-       [1mfork[0m()  creates  a  new process by[m
-       duplicating the  calling  process.[m
-       The  new  process,  referred to as[m
-       the [4mchild[24m, is an  exact  duplicate[m
-       of  the  calling process, referred[m
-       to as the [4mparent[24m, except  for  the[m
-       following points:[m
-[m
-       *  The  child  has  its own unique[m
-          process ID, and this  PID  does[m
-          not  match the ID of any exist‐[m
-          ing process group ([1msetpgid[0m(2)).[m
-[m
-       *  The child's parent  process  ID[m
-          is  the  same  as  the parent's[m
-          process ID.[m
-[m
-       *  The child does not inherit  its[m
-          parent's      memory      locks[m
-[7mrk(2) line 1 (press h for help or q to quit)[27m[K[H[2J[HFORK(2) Linux Programmer's Manual FORK(2)[m
-[m
-[1mNAME[0m[m
-       fork - create a child process[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mpid_t[0m [1mfork(void);[0m[m
-[m
-[1mDESCRIPTION[0m[m
-       [1mfork[0m()  creates  a  new process by[m
-       duplicating the  calling  process.[m
-       The  new  process,  referred to as[m
-       the [4mchild[24m, is an  exact  duplicate[m
-       of  the  calling process, referred[m
-       to as the [4mparent[24m, except  for  the[m
-       following points:[m
-[m
-       *  The  child  has  its own unique[m
-          process ID, and this  PID  does[m
-          not  match the ID of any exist‐[m
-          ing process group ([1msetpgid[0m(2)).[m
-[m
-       *  The child's parent  process  ID[m
-          is  the  same  as  the parent's[m
-          process ID.[m
-[m
-       *  The child does not inherit  its[m
-          parent's      memory      locks[m
-[7mfork(2) line 1 (press h for help or q to quit)[27m[K[H[2J[HFORK(2) Linux Programmer's Manual FORK(2)[m
-[m
-[1mNAME[0m[m
-       fork - create a child process[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mpid_t[0m [1mfork(void);[0m[m
-[m
-[1mDESCRIPTION[0m[m
-       [1mfork[0m()  creates  a  new process by[m
-       duplicating the  calling  process.[m
-       The  new  process,  referred to as[m
-       the [4mchild[24m, is an  exact  duplicate[m
-       of  the  calling process, referred[m
-       to as the [4mparent[24m, except  for  the[m
-       following points:[m
-[m
-       *  The  child  has  its own unique[m
-          process ID, and this  PID  does[m
-          not  match the ID of any exist‐[m
-          ing process group ([1msetpgid[0m(2)).[m
-[m
-       *  The child's parent  process  ID[m
-          is  the  same  as  the parent's[m
-          process ID.[m
-[m
-       *  The child does not inherit  its[m
-          parent's      memory      locks[m
-[7mge fork(2) line 1 (press h for help or q to quit)[27m[K[H[2J[HFORK(2) Linux Programmer's Manual FORK(2)[m
-[m
-[1mNAME[0m[m
-       fork - create a child process[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mpid_t[0m [1mfork(void);[0m[m
-[m
-[1mDESCRIPTION[0m[m
-       [1mfork[0m()  creates  a  new process by[m
-       duplicating the  calling  process.[m
-       The  new  process,  referred to as[m
-       the [4mchild[24m, is an  exact  duplicate[m
-       of  the  calling process, referred[m
-       to as the [4mparent[24m, except  for  the[m
-       following points:[m
-[m
-       *  The  child  has  its own unique[m
-          process ID, and this  PID  does[m
-          not  match the ID of any exist‐[m
-          ing process group ([1msetpgid[0m(2)).[m
-[m
-       *  The child's parent  process  ID[m
-          is  the  same  as  the parent's[m
-          process ID.[m
-[m
-       *  The child does not inherit  its[m
-          parent's      memory      locks[m
-[7m page fork(2) line 1 (press h for help or q to quit)[27m[K[H[2J[HFORK(2) Linux Programmer's Manual FORK(2)[m
-[m
-[1mNAME[0m[m
-       fork - create a child process[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mpid_t[0m [1mfork(void);[0m[m
-[m
-[1mDESCRIPTION[0m[m
-       [1mfork[0m()  creates  a  new process by[m
-       duplicating the  calling  process.[m
-       The  new  process,  referred to as[m
-       the [4mchild[24m, is an  exact  duplicate[m
-       of  the  calling process, referred[m
-       to as the [4mparent[24m, except  for  the[m
-       following points:[m
-[m
-       *  The  child  has  its own unique[m
-          process ID, and this  PID  does[m
-          not  match the ID of any exist‐[m
-          ing process group ([1msetpgid[0m(2)).[m
-[m
-       *  The child's parent  process  ID[m
-          is  the  same  as  the parent's[m
-          process ID.[m
-[m
-       *  The child does not inherit  its[m
-          parent's      memory      locks[m
-[7mual page fork(2) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ man fork
-[?1049h[?1h=FORK(2)        Linux Programmer's Manual        FORK(2)[m
-[m
-[1mNAME[0m[m
-       fork - create a child process[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mpid_t[0m [1mfork(void);[0m[m
-[m
-[1mDESCRIPTION[0m[m
-       [1mfork[0m()  creates a new process by duplicating the[m
-       calling process.  The new process,  referred  to[m
-       as the [4mchild[24m, is an exact duplicate of the call‐[m
-       ing process, referred to as the  [4mparent[24m,  except[m
-       for the following points:[m
-[m
-       *  The  child has its own unique process ID, and[m
-          this PID does not match the ID of any  exist‐[m
-          ing process group ([1msetpgid[0m(2)).[m
-[m
-       *  The  child's parent process ID is the same as[m
-          the parent's process ID.[m
-[m
-       *  The child does not inherit its parent's  mem‐[m
-          ory locks ([1mmlock[0m(2), [1mmlockall[0m(2)).[m
-[m
-       *  Process  resource utilizations ([1mgetrusage[0m(2))[m
-          and CPU time counters ([1mtimes[0m(2)) are reset to[m
-          zero in the child.[m
-[7mual page fork(2) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mual page fork(2) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       *  The  child's  set  of pending signals is ini‐[m
-[7mual page fork(2) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          tially empty ([1msigpending[0m(2)).[m
-[7mual page fork(2) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mual page fork(2) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       *  The child does not inherit semaphore  adjust‐[m
-[7mual page fork(2) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          ments from its parent ([1msemop[0m(2)).[m
-[7mual page fork(2) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page fork(2) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       *  The  child does not inherit record locks from[m
-[7mal page fork(2) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          its parent ([1mfcntl[0m(2)).[m
-[7mal page fork(2) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page fork(2) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       *  The child does not inherit  timers  from  its[m
-[7mal page fork(2) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          parent  ([1msetitimer[0m(2),  [1malarm[0m(2),  [1mtimer_cre‐[0m[m
-[7mal page fork(2) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mate[0m(2)).[m
-[7mal page fork(2) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page fork(2) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       *  The child does not inherit outstanding  asyn‐[m
-[7mal page fork(2) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          chronous   I/O  operations  from  its  parent[m
-[7mal page fork(2) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          ([1maio_read[0m(3),  [1maio_write[0m(3)),  nor  does   it[m
-[7mal page fork(2) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          inherit  any  asynchronous  I/O contexts from[m
-[7mal page fork(2) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          its parent (see [1mio_setup[0m(2)).[m
-[7mal page fork(2) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page fork(2) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The process attributes in the preceding list are[m
-[7mal page fork(2) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       all  specified  in POSIX.1-2001.  The parent and[m
-[7mal page fork(2) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       child also differ with respect to the  following[m
-[7mal page fork(2) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Linux-specific process attributes:[m
-[7mal page fork(2) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page fork(2) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       *  The  child  does not inherit directory change[m
-[7mal page fork(2) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          notifications (dnotify) from its parent  (see[m
-[7mal page fork(2) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          the description of [1mF_NOTIFY[0m in [1mfcntl[0m(2)).[m
-[7mal page fork(2) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page fork(2) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       *  The   [1mprctl[0m(2)  [1mPR_SET_PDEATHSIG[0m  setting  is[m
-[7mal page fork(2) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          reset so that the child does  not  receive  a[m
-[7mal page fork(2) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          signal when its parent terminates.[m
-[7mal page fork(2) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page fork(2) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       *  The  default  timer slack value is set to the[m
-[7mal page fork(2) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          parent's current timer slack value.  See  the[m
-[7mal page fork(2) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          description of [1mPR_SET_TIMERSLACK[0m in [1mprctl[0m(2).[m
-[7mal page fork(2) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page fork(2) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       *  Memory  mappings  that  have been marked with[m
-[7mal page fork(2) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          the [1mmadvise[0m(2)  [1mMADV_DONTFORK[0m  flag  are  not[m
-[7mal page fork(2) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          inherited across a [1mfork[0m().[m
-[7mal page fork(2) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page fork(2) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       *  The termination signal of the child is always[m
-[7mal page fork(2) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mSIGCHLD[0m (see [1mclone[0m(2)).[m
-[7mal page fork(2) line 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page fork(2) line 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Note the following further points:[m
-[7mal page fork(2) line 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page fork(2) line 49 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       *  The child process is created  with  a  single[m
-[7mal page fork(2) line 50 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          thread—the   one  that  called  [1mfork[0m().   The[m
-[7mal page fork(2) line 51 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          entire virtual address space of the parent is[m
-[7mal page fork(2) line 52 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          replicated in the child, including the states[m
-[7mal page fork(2) line 53 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          of mutexes, condition  variables,  and  other[m
-[7mal page fork(2) line 54 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          pthreads      objects;     the     use     of[m
-[7mal page fork(2) line 55 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mpthread_atfork[0m(3) may be helpful for  dealing[m
-[7mal page fork(2) line 56 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          with problems that this can cause.[m
-[7mal page fork(2) line 57 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page fork(2) line 58 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       *  The child inherits copies of the parent's set[m
-[7mal page fork(2) line 59 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          of open file descriptors.  Each file descrip‐[m
-[7mal page fork(2) line 60 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          tor in the child refers to the same open file[m
-[7mal page fork(2) line 61 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          description (see [1mopen[0m(2)) as the  correspond‐[m
-[7mal page fork(2) line 62 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          ing  file  descriptor  in  the  parent.  This[m
-[7mal page fork(2) line 63 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          means that the  two  descriptors  share  open[m
-[7mal page fork(2) line 64 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          file  status  flags, current file offset, and[m
-[7mal page fork(2) line 65 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          signal-driven   I/O   attributes   (see   the[m
-[7mal page fork(2) line 66 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          description   of  [1mF_SETOWN[0m  and  [1mF_SETSIG[0m  in[m
-[7mal page fork(2) line 67 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mfcntl[0m(2)).[m
-[7mal page fork(2) line 68 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page fork(2) line 69 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       *  The child inherits copies of the parent's set[m
-[7mal page fork(2) line 70 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          of   open   message  queue  descriptors  (see[m
-[7mal page fork(2) line 71 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          [1mmq_overview[0m(7)).   Each  descriptor  in   the[m
-[7mal page fork(2) line 72 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          child  refers  to the same open message queue[m
-[7mal page fork(2) line 73 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          description as the  corresponding  descriptor[m
-[7mal page fork(2) line 74 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          in  the  parent.   This  means  that  the two[m
-[7mal page fork(2) line 75 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          descriptors share the same flags ([4mmq_flags[24m).[m
-[7mal page fork(2) line 76 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page fork(2) line 77 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       *  The child inherits copies of the parent's set[m
-[7mal page fork(2) line 78 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          of  open  directory streams (see [1mopendir[0m(3)).[m
-[7mal page fork(2) line 79 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          POSIX.1-2001  says  that  the   corresponding[m
-[7mal page fork(2) line 80 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          directory streams in the parent and child [4mmay[24m[m
-[7mal page fork(2) line 81 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          share the directory  stream  positioning;  on[m
-[7mal page fork(2) line 82 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K          Linux/glibc they do not.[m
-[7mal page fork(2) line 83 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page fork(2) line 84 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mRETURN[0m [1mVALUE[0m[m
-[7mal page fork(2) line 85 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       On  success,  the  PID  of  the child process is[m
-[7mal page fork(2) line 86 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       returned in the parent, and 0 is returned in the[m
-[7mal page fork(2) line 87 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       child.   On  failure, -1 is returned in the par‐[m
-[7mal page fork(2) line 88 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       ent, no child process is created, and  [4merrno[24m  is[m
-[7mal page fork(2) line 89 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       set appropriately.[m
-[7mal page fork(2) line 90 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page fork(2) line 91 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mERRORS[0m[m
-[7mal page fork(2) line 92 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mEAGAIN[0m [1mfork[0m()  cannot allocate sufficient memory[m
-[7mal page fork(2) line 93 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              to copy  the  parent's  page  tables  and[m
-[7mal page fork(2) line 94 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              allocate a task structure for the child.[m
-[7mal page fork(2) line 95 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7mal page fork(2) line 96 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mEAGAIN[0m It  was  not  possible  to  create  a new[m
-[7mal page fork(2) line 97 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              process because the caller's [1mRLIMIT_NPROC[0m[m
-[7mal page fork(2) line 98 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              resource   limit   was  encountered.   To[m
-[7mal page fork(2) line 99 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              exceed this limit, the process must  have[m
-[7ml page fork(2) line 100 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              either    the    [1mCAP_SYS_ADMIN[0m   or   the[m
-[7ml page fork(2) line 101 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              [1mCAP_SYS_RESOURCE[0m capability.[m
-[7ml page fork(2) line 102 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7ml page fork(2) line 103 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mENOMEM[0m [1mfork[0m() failed to allocate  the  necessary[m
-[7ml page fork(2) line 104 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              kernel   structures   because  memory  is[m
-[7ml page fork(2) line 105 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              tight.[m
-[7ml page fork(2) line 106 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ [K$ [K$ [K$ [K$ [K$ [K$ man fork[C[C./a.out [C[C[5@g++ exec.cpp[C
-$ g++ exec.cpp [C[C[5Pman fork
-[?1049h[?1h=FORK(2)Linux Programmer's ManuaFORK(2)[m
-[m
-[1mNAME[0m[m
-       fork - create a child process[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mpid_t[0m [1mfork(void);[0m[m
-[m
-[1mDESCRIPTION[0m[m
-       [1mfork[0m() creates a new process by[m
-       duplicating     the     calling[m
-       process.    The   new  process,[m
-       referred to as the [4mchild[24m, is an[m
-       exact  duplicate of the calling[m
-       process,  referred  to  as  the[m
-       [4mparent[24m,  except for the follow‐[m
-       ing points:[m
-[m
-       *  The child has its own unique[m
-          process  ID,  and  this  PID[m
-          does not match the ID of any[m
-          existing    process    group[m
-          ([1msetpgid[0m(2)).[m
-[m
-       *  The child's  parent  process[m
-          ID  is  the same as the par‐[m
-          ent's process ID.[m
-[m
-[7mline 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7mline 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ man fork[C[Cg++ exec.cpp [C[C[5Pman fork[C[C./a.out 
-I'm a parent.
-i'm a child
-$ ./a.out 
-I'm a parent.
-i'm a child
-$ ./a.out 
-I'm a parent.
-i'm a child
-$ ./a.out 
-I'm a parent.
-i'm a child
-$ ./a.out 
-I'm a parent.
-i'm a child
-$ ./a.out 
-I'm a parent.
-i'm a child
-$ clear
-[H[2J$ clear[C[C./a.out [C[Cman fork[C[Cg++ exec.cpp 
-exec.cpp: In function ‘int main()’:
-exec.cpp:18:17: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-exec.cpp:19:17: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-$ g++ exec.cpp [C[C[8Pclear[C[C./a.out [C[Cman fork[C[C./a.out 
-I'm a parent.
-i'm a child
- before
-$ total 236
-drwxr-xr-x  5 user user  4096 Oct 14 17:58 .
-drwxr-xr-x 10 user user  4096 Oct 14 12:18 ..
--rwxr-xr-x  1 user user 10193 Oct 14 17:58 a.out
--rw-r--r--  1 user user   559 Oct 14 17:58 exec.cpp
--rw-------  1 user user 12288 Oct 14 17:58 .exec.cpp.swp
-drwxr-xr-x  3 user user  4096 Oct  7 18:18 gitexample
--rw-r--r--  1 user user   952 Oct  9 23:15 lecture1
--rw-r--r--  1 user user 55139 Oct  9 23:15 lecture1b
--rw-r--r--  1 user user 34066 Oct  9 23:18 lecture2
--rw-r--r--  1 user user 90112 Oct 14 17:53 lecture4
-drwxr-xr-x  3 user user  4096 Oct  9 18:11 rshell
--rw-r--r--  1 user user     0 Oct  9 23:18 testfile
-drwxr-xr-x  2 user user  4096 Oct 14 17:12 tmp
-clear
-[H[2J$ ls
-[0m[01;32ma.out[0m       lecture1   lecture4  [01;34mtmp[0m
-exec.cpp    lecture1b  [01;34mrshell[0m
-[01;34mgitexample[0m  lecture2   testfile
-$ man wait
-[?1049h[?1h=WAIT(2)Linux Programmer's ManuaWAIT(2)[m
-[m
-[1mNAME[0m[m
-       wait,  waitpid,  waitid  - wait[m
-       for process to change state[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<sys/types.h>[0m[m
-       [1m#include[0m [1m<sys/wait.h>[0m[m
-[m
-       [1mpid_t[0m [1mwait(int[0m [1m*[0m[4mstatus[24m[1m);[0m[m
-[m
-       [1mpid_t[0m  [1mwaitpid(pid_t[0m  [4mpid[24m[1m,[0m  [1mint[0m[m
-       [1m*[0m[4mstatus[24m[1m,[0m [1mint[0m [4moptions[24m[1m);[0m[m
-[m
-       [1mint[0m   [1mwaitid(idtype_t[0m   [4midtype[24m[1m,[0m[m
-       [1mid_t[0m [4mid[24m[1m,[0m [1msiginfo_t[0m [1m*[0m[4minfop[24m[1m,[0m  [1mint[0m[m
-       [4moptions[24m[1m);[0m[m
-[m
-   Feature Test Macro Requirements for[m
-   glibc (see [1mfeature_test_macros[0m(7)):[m
-[m
-       [1mwaitid[0m():[m
-           _SVID_SOURCE ||[m
-           _XOPEN_SOURCE >= 500 ||[m
-           _XOPEN_SOURCE && _XOPEN_SOURC[m E_EXTENDED[m
-           || /* Since glibc 2.12: */[m
-           _POSIX_C_SOURCE >= 200809L[m
-[m
-[7mline 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ [K$ [K$ [K$ [K$ [K$ man wait
-[?1049h[?1h=WAIT(2)       Linux Programmer's Manual      WAIT(2)[m
-[m
-[1mNAME[0m[m
-       wait,  waitpid,  waitid - wait for process to[m
-       change state[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<sys/types.h>[0m[m
-       [1m#include[0m [1m<sys/wait.h>[0m[m
-[m
-       [1mpid_t[0m [1mwait(int[0m [1m*[0m[4mstatus[24m[1m);[0m[m
-[m
-       [1mpid_t[0m [1mwaitpid(pid_t[0m  [4mpid[24m[1m,[0m  [1mint[0m  [1m*[0m[4mstatus[24m[1m,[0m  [1mint[0m[m
-       [4moptions[24m[1m);[0m[m
-[m
-       [1mint[0m  [1mwaitid(idtype_t[0m  [4midtype[24m[1m,[0m  [1mid_t[0m  [4mid[24m[1m,[0m [1msig‐[0m[m
-       [1minfo_t[0m [1m*[0m[4minfop[24m[1m,[0m [1mint[0m [4moptions[24m[1m);[0m[m
-[m
-   Feature Test Macro Requirements  for  glibc  (see[m
-   [1mfeature_test_macros[0m(7)):[m
-[m
-       [1mwaitid[0m():[m
-           _SVID_SOURCE || _XOPEN_SOURCE >= 500 ||[m
-           _XOPEN_SOURCE && _XOPEN_SOURCE_EXTENDED[m
-           || /* Since glibc 2.12: */[m
-           _POSIX_C_SOURCE >= 200809L[m
-[m
-[1mDESCRIPTION[0m[m
-       All  of  these  system calls are used to wait[m
-       for state changes in a child of  the  calling[m
-[7m page wait(2) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ [K$ [K$ [K$ [K$ [K$ [K$ man wait[C[Cls[Kclear[C[C./a.out [C[C[5@g++ exec.cpp[C
-exec.cpp: In function ‘int main()’:
-exec.cpp:18:17: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-exec.cpp:19:17: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-exec.cpp:29:14: error: ‘wait’ was not declared in this scope
-$ main[K[Kg++ exec.cpp [C[C[5Pman wait
-[?1049h[?1h=WAIT(Linux Programmer's ManuWAIT(2)[m
-[m
-[1mNAME[0m[m
-       wait, waitpid, waitid - wait[m
-       for process to change state[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<sys/types.h>[0m[m
-       [1m#include[0m [1m<sys/wait.h>[0m[m
-[m
-       [1mpid_t[0m [1mwait(int[0m [1m*[0m[4mstatus[24m[1m);[0m[m
-[m
-       [1mpid_t[0m [1mwaitpid(pid_t[0m [4mpid[24m[1m,[0m [1mint[0m[m
-       [1m*[0m[4mstatus[24m[1m,[0m [1mint[0m [4moptions[24m[1m);[0m[m
-[m
-       [1mint[0m  [1mwaitid(idtype_t[0m [4midtype[24m[1m,[0m[m
-       [1mid_t[0m [4mid[24m[1m,[0m  [1msiginfo_t[0m  [1m*[0m[4minfop[24m[1m,[0m[m
-       [1mint[0m [4moptions[24m[1m);[0m[m
-[m
-   Feature  Test Macro Requirements[m
-   for     glibc     (see      [1mfea‐[0m[m
-   [1mture_test_macros[0m(7)):[m
-[m
-       [1mwaitid[0m():[m
-           _SVID_SOURCE ||[m
-           _XOPEN_SOURCE >= 500 ||[m
-           _XOPEN_SOURCE && _XOPEN_SO[m URCE_EXTENDED[m
-           || /* Since glibc 2.12:[m
-           */[m
-[7me 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ man wait[C[Cg++ exec.cpp 
-exec.cpp: In function ‘int main()’:
-exec.cpp:20:17: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-exec.cpp:21:17: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-exec.cpp:31:14: error: too few arguments to function ‘__pid_t wait(void*)’
-In file included from exec.cpp:2:0:
-/usr/include/x86_64-linux-gnu/sys/wait.h:116:16: note: declared here
-$ man wait
-[?1049h[?1h=WAIT(Linux Programmer's ManuWAIT(2)[m
-[m
-[1mNAME[0m[m
-       wait, waitpid, waitid - wait[m
-       for process to change state[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<sys/types.h>[0m[m
-       [1m#include[0m [1m<sys/wait.h>[0m[m
-[m
-       [1mpid_t[0m [1mwait(int[0m [1m*[0m[4mstatus[24m[1m);[0m[m
-[m
-       [1mpid_t[0m [1mwaitpid(pid_t[0m [4mpid[24m[1m,[0m [1mint[0m[m
-       [1m*[0m[4mstatus[24m[1m,[0m [1mint[0m [4moptions[24m[1m);[0m[m
-[m
-       [1mint[0m  [1mwaitid(idtype_t[0m [4midtype[24m[1m,[0m[m
-       [1mid_t[0m [4mid[24m[1m,[0m  [1msiginfo_t[0m  [1m*[0m[4minfop[24m[1m,[0m[m
-       [1mint[0m [4moptions[24m[1m);[0m[m
-[m
-   Feature  Test Macro Requirements[m
-   for     glibc     (see      [1mfea‐[0m[m
-   [1mture_test_macros[0m(7)):[m
-[m
-       [1mwaitid[0m():[m
-           _SVID_SOURCE ||[m
-           _XOPEN_SOURCE >= 500 ||[m
-           _XOPEN_SOURCE && _XOPEN_SO[m URCE_EXTENDED[m
-           || /* Since glibc 2.12:[m
-           */[m
-[7me 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ man wait[C[C[Kclear
-[H[2J$ clear[C[Cman wait[C[Cg++ exec.cpp 
-exec.cpp: In function ‘int main()’:
-exec.cpp:20:17: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-exec.cpp:21:17: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-$ g++ exec.cpp [C[C[8Pclear[C[Cman wait[C[Cg++ exec.cpp [K$ g++ exec.cpp [K$ g++ exec.cpp [K$ g++ exec.cpp [K$ g++ exec.cpp [K$ g++ exec.cpp [K$ g++ exec.cpp [C[C[5Pman wait[C[Cg++ exec.cpp [C[C[5Pman wait[C[Cls[Kclear[C[C./a.out 
-i'm a child
- before
-total 244
-drwxr-xr-x  5 user user  4096 Oct 14 18:04 .
-drwxr-xr-x 10 user user  4096 Oct 14 12:18 ..
--rwxr-xr-x  1 user user 10243 Oct 14 18:04 a.out
--rw-r--r--  1 user user   624 Oct 14 18:04 exec.cpp
--rw-------  1 user user 12288 Oct 14 18:04 .exec.cpp.swp
-drwxr-xr-x  3 user user  4096 Oct  7 18:18 gitexample
--rw-r--r--  1 user user   952 Oct  9 23:15 lecture1
--rw-r--r--  1 user user 55139 Oct  9 23:15 lecture1b
--rw-r--r--  1 user user 34066 Oct  9 23:18 lecture2
--rw-r--r--  1 user user 98304 Oct 14 18:03 lecture4
-drwxr-xr-x  3 user user  4096 Oct  9 18:11 rshell
--rw-r--r--  1 user user     0 Oct  9 23:18 testfile
-drwxr-xr-x  2 user user  4096 Oct 14 17:12 tmp
-I'm a parent.
-$ man wait
-[?1049h[?1h=WAIT(2)       Linux Programmer's Manual      WAIT(2)[m
-[m
-[1mNAME[0m[m
-       wait,  waitpid,  waitid - wait for process to[m
-       change state[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<sys/types.h>[0m[m
-       [1m#include[0m [1m<sys/wait.h>[0m[m
-[m
-       [1mpid_t[0m [1mwait(int[0m [1m*[0m[4mstatus[24m[1m);[0m[m
-[m
-       [1mpid_t[0m [1mwaitpid(pid_t[0m  [4mpid[24m[1m,[0m  [1mint[0m  [1m*[0m[4mstatus[24m[1m,[0m  [1mint[0m[m
-       [4moptions[24m[1m);[0m[m
-[m
-       [1mint[0m  [1mwaitid(idtype_t[0m  [4midtype[24m[1m,[0m  [1mid_t[0m  [4mid[24m[1m,[0m [1msig‐[0m[m
-       [1minfo_t[0m [1m*[0m[4minfop[24m[1m,[0m [1mint[0m [4moptions[24m[1m);[0m[m
-[m
-   Feature Test Macro Requirements  for  glibc  (see[m
-   [1mfeature_test_macros[0m(7)):[m
-[m
-       [1mwaitid[0m():[m
-           _SVID_SOURCE || _XOPEN_SOURCE >= 500 ||[m
-           _XOPEN_SOURCE && _XOPEN_SOURCE_EXTENDED[m
-           || /* Since glibc 2.12: */[m
-           _POSIX_C_SOURCE >= 200809L[m
-[m
-[1mDESCRIPTION[0m[m
-       All  of  these  system calls are used to wait[m
-       for state changes in a child of  the  calling[m
-[7m page wait(2) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ clear
-[H[2J$ g++ exit.cpp 
-$ ./a.out 
-$ ./a.out [C[C[Kecho test
-test
-$ echo test test test
-test test test
-$ echo test test test[K[K[K[K[K[K[K[K[K[K[K[K[K[Khello world
-hello world
-$ echo hello world[C[C[C[C[C[C[Ctest test test[K[C[C[1P./a.out &&&[K echo test
-test
-$ ./a.out && echo test[1P[1P[1P[1@;
-test
-$ ./a.out; echo test[1P[C[1@ [1@|[1@|
-$ g++ exit.cpp -o exit
-$ g++ fail.cpp -o fail
-$ fail
-bash: fail: command not found
-$ ./fail 
-$ ./fail && exho te[1P[1@c[C[C[C[C[Cst
-$ ./fail && echo test[1P[1P[1P[1P[1@e[1@x[1@i[1@t
-test
-$ ./exit && echo test && exit hello
-test
-exit
-bash: exit: hello: numeric argument required
-
-Script done on Tue 14 Oct 2014 06:10:20 PM PDT

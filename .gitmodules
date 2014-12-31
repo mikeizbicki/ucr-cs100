@@ -1,0 +1,3 @@
+[submodule "gitlearn"]
+	path = gitlearn
+	url = https://github.com/mikeizbicki/gitlearn
