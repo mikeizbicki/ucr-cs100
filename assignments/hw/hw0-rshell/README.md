@@ -32,7 +32,10 @@ There should be no limit to the number of commands that can be chained together 
 3. Execute the command.
 This will require using the syscalls `fork`, `execvp`, and `waitpid`.
 You should refer to the man pages for detailed instructions on how to use these functions.
-There is also a [nice tutorial](../../../tutorials/syscalls/README.md) prepared by previous cs100 students.
+
+There are also [nice tutorials](../../../tutorials/syscalls/README.md) prepared by previous cs100 students.
+
+[![video guide](http://i.imgur.com/3hRxF4x.jpg)](https://www.youtube.com/watch?v=xVSPv-9x3gk).
 
 4. You must have a special built in command of `exit` which exits your shell.
 
@@ -46,7 +49,7 @@ But in the command `ls # -lR /`, you would execute `/bin/ls`, but you would not 
 
 ### submission instructions
 
-Create a new project on github called `rshell`.  Create a branch called `exec`.  Do all of your work under this branch.  When finished, merge the `exec` branch into the `master` branch, and create a tag called `hw0`.
+Create a new project on github called `rshell`.  Create a branch called `exec`.  Do all of your work under this branch.  When finished, merge the `exec` branch into the `master` branch, and create a tag called `hw0`.Remember that tags and branches in github are case sensitive, so please double check that the letters in your tag are lower case to avoid problems when submitting your assignment.
 
 To download and grade your homework, the TA will run the following commands:
 
@@ -212,5 +215,5 @@ My username is `mizbi001`, and if I'm logged into the machine `alpha023`, then m
 mizbi001@alpha023$
 ```
 You can get up to 10 points of extra credit if your prompt prints this extra information.
-You will need to lookup the functions `getlogin` and `gethostname`.
+You will need to lookup the man pages for the functions `getlogin` and `gethostname`.
 You must not hard code the username or hostname!

@@ -11,6 +11,8 @@ There are a lot of books that have made it into the "hacker culture."  Reading t
 
 4.  Jessica Livingston's *Founders at Work*.
 
+5.  Chad Fowler's *The Passionate Programmer: Creating a Remarkable Career in Software Development*
+
 You may also suggest another book that you think has hacker value.  If I agree, I'll add it to the list.
 
 **IMPORTANT:** If you've already read one of these books, that doesn't count.  Read a different one.

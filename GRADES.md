@@ -2,11 +2,14 @@
 
 We will not be using ilearn in this course.
 Instead, we will use git.
-All of your grade information will be stored in the repo you forked during lab1.
-This file contains detailed information about how your grades will be stored in that repo.
+All of your grade information will be stored in the `grades` branch of the repo you forked during lab1.
+This file contains detailed information about how your grades will be stored in that branch.
 
 **IMPORTANT:**
 If you did not give all of the instructors write access to your repository (make them collaborators on github), then you won't be able to get your grades updated, and you will get zeros on the assignments!
+
+**IMPORTANT:**
+Always make sure you're in the right branch when making changes to the repo! You never want to accidentally erase your grades and end up with zeros!
 
 **IMPORTANT:**
 By default, github sets your repo to `public` and gives everyone read access.

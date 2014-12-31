@@ -14,12 +14,15 @@ If you do complete the full game, you will receive 15 points extra credit. See d
 ## vim links
 
 Here's some extra (optional but recommended) reading:
+[A simple and effecive vim configuration](https://github.com/atan009/vimrc)
 
 [stackoverflow: what is your most productive shortcut with vim?](http://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim)
 
 [stackoverflow: simple vim commands you wish you'd known earlier](http://stackoverflow.com/questions/1276403/simple-vim-commands-you-wish-youd-known-earlier)
 
 [vim for people who think things like vim are weird and hard](http://csswizardry.com/2014/06/vim-for-people-who-think-things-like-vim-are-weird-and-hard/)
+
+[A simple and effective vim configuation](https://github.com/atan009/vimrc)
 
 ## deliverables
 
