@@ -12,7 +12,7 @@ assn="$1"
 #######################################
 # display
 
-downloadAllGrades
+#downloadAllGrades
 
 echo "================================================================================"
 echo " cs account | name                | pnts /  run ( tot) | grade run  | grade tot "
