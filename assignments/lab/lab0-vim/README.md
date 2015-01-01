@@ -1,29 +1,62 @@
+*You will need to be comfortable with the bash terminal in order to complete this lab.
+Some previous cs100 students created a [short tutorial](./terminal.md) you can work through if you need a refresher.
+You will not lose any points if you can't finish the main lab in time due to working through this tutorial.
+You will be able to work through it later.*
+
 # learning `vim`
 
-In this lab, you will familiarize yourself with the `vim` text editor.  In this class, you must use `vim` for all homework and lab assignments.  At first, you will find that `vim` is very weird.  But with practice, you will find `vim` much more powerful than either the `geany` or `Cloud9` editors you are already familiar with.  
+In this course, we won't be using any graphical interfaces.
+All our programming will be done on the terminal using a text editor called `vim`.
+The purpose of this lab is to introduce you to `vim`.
+It will seem weird at first.
+But with practice, you will find `vim` much more powerful than either the `geany` or `Cloud9` editors you are already familiar with.
 
-The key to mastering `vim` is practice.  Therefore, you are required to use `vim` for all lab and homeworks assignments in this course.  **Using any editor other than `vim` will result in a 0 on the assignment.**
+### part 1: vimtutor
 
-Open up a terminal and type the command `vimtutor` to get started.  This command walks you through the basics of using the `vim` editor.  Don't just read the file!!!  Make sure to actually do the exercises!!!
+Open up a terminal and type the command:
+```
+$ vimtutor
+```
+This command walks you through the basics of using the `vim` editor.
+Don't just read the file!!!
+Make sure to actually do the exercises!!!
 
-Once you have finished that, start playing the game: http://vim-adventures.com.
+**IMPORTANT:**
+The key to mastering `vim` is practice.
+Therefore, you are required to use `vim` for all lab and homeworks assignments in this course.
+**Using any editor other than `vim` will result in a 0 on the assignment.**
+
+### part 2: the vim-adventures game
+
+Once you have finished `vimtutor`, start playing the game: http://vim-adventures.com.
 The first three levels are free (and that's all you're required to do).
 You're welcome to pay for the full game if you want, but I'm not requiring you to do so.
-If you do complete the full game, you will receive 15 points extra credit. See details at [ec-vim](https://github.com/mikeizbicki/ucr-cs100/tree/cs100-2014fall/assignments/ec/ec-vim).
 
-## vim links
+### part 3: the `.vimrc` file
 
-Here's some extra (optional but recommended) reading:
-[A simple and effecive vim configuration](https://github.com/atan009/vimrc)
+`vim` stores its settings in a file called `.vimrc` located in your home directory.
+You are required to add ten customizations to this file.
 
-[stackoverflow: what is your most productive shortcut with vim?](http://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim)
+To edit your `.vimrc` file, run the command:
+```
+$ vim ~/.vimrc
+```
+The `~` is a shortcut name for your home directory.
 
-[stackoverflow: simple vim commands you wish you'd known earlier](http://stackoverflow.com/questions/1276403/simple-vim-commands-you-wish-youd-known-earlier)
+For some good ideas on what options to use, you can look at these examples:
 
-[vim for people who think things like vim are weird and hard](http://csswizardry.com/2014/06/vim-for-people-who-think-things-like-vim-are-weird-and-hard/)
+* [Mike Izbicki (the instructor's) personal `.vimrc` file](https://github.com/mikeizbicki/dotfiles/blob/master/.vimrc)
 
-[A simple and effective vim configuation](https://github.com/atan009/vimrc)
+* [A vim configuration prepared by previous cs100 students](https://github.com/atan009/vimrc)
+
+You may also find the following links useful:
+
+* [stackoverflow: what is your most productive shortcut with vim?](http://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim)
+
+* [stackoverflow: simple vim commands you wish you'd known earlier](http://stackoverflow.com/questions/1276403/simple-vim-commands-you-wish-youd-known-earlier)
+
+* [vim for people who think things like vim are weird and hard](http://csswizardry.com/2014/06/vim-for-people-who-think-things-like-vim-are-weird-and-hard/)
 
 ## deliverables
 
-None
+Show the TA your modified `.vimrc` file.
