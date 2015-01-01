@@ -1,9 +1,9 @@
+# the `vim` text editor
+
 *You will need to be comfortable with the bash terminal in order to complete this lab.
 Some previous cs100 students created a [short tutorial](./terminal.md) you can work through if you need a refresher.
 You will not lose any points if you can't finish the main lab in time due to working through this tutorial.
 You will be able to finish the lab later.*
-
-# learning `vim`
 
 In this course, we won't be using any graphical interfaces.
 All our programming will be done on the terminal using a text editor called `vim`.
