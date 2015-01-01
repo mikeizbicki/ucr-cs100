@@ -1,7 +1,7 @@
 *You will need to be comfortable with the bash terminal in order to complete this lab.
 Some previous cs100 students created a [short tutorial](./terminal.md) you can work through if you need a refresher.
 You will not lose any points if you can't finish the main lab in time due to working through this tutorial.
-You will be able to work through it later.*
+You will be able to finish the lab later.*
 
 # learning `vim`
 
@@ -35,7 +35,7 @@ You're welcome to pay for the full game if you want, but I'm not requiring you t
 ### part 3: the `.vimrc` file
 
 `vim` stores its settings in a file called `.vimrc` located in your home directory.
-You are required to add ten customizations to this file.
+Your task is to add ten customizations of your choice to this file.
 
 To edit your `.vimrc` file, run the command:
 ```
@@ -45,7 +45,7 @@ The `~` is a shortcut name for your home directory.
 
 For some good ideas on what options to use, you can look at these examples:
 
-* [Mike Izbicki (the instructor's) personal `.vimrc` file](https://github.com/mikeizbicki/dotfiles/blob/master/.vimrc)
+* [Mike Izbicki's (the instructor's) personal `.vimrc` file](https://github.com/mikeizbicki/dotfiles/blob/master/.vimrc)
 
 * [A vim configuration prepared by previous cs100 students](https://github.com/atan009/vimrc)
 
@@ -59,4 +59,5 @@ You may also find the following links useful:
 
 ## deliverables
 
-Show the TA your modified `.vimrc` file.
+Everyone gets full credit on this lab just for showing up.
+But you can't leave until you finish all three parts and show the TA your modified `.vimrc` file.
