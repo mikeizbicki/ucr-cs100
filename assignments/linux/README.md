@@ -9,6 +9,7 @@ The first is as a dual boot operating system.
 Every Linux distribution's installer will walk you through how to do this.
 But be careful!
 It's very easy to accidentally erase all your old data!
+**So far, this has happened to at least one student every quarter I've taught cs100!**
 So make backups first!
 
 The second option is as a virtual machine inside of your windows/mac computer.
