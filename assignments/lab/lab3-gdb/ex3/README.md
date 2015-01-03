@@ -1,8 +1,4 @@
-###Example 3
-
-Use the techniques you learned in the last two examples to solve the following problem.
-
-**instructions** 
+###Exercise 3: debugging a real program
 
 You're a progamming intern at the defense contractor HBHairy.
 Your main job is to repackage a bunch of open source software.
@@ -40,12 +36,6 @@ Known bugs:
 * Running `ls -R` segfaults.
 
 * Running `ls -l` segfaults.
-
-### deliverables
-
-You must demonstrate your fixed code to the TA.
-Your score on this lab will be 2 points for attendance, plus 1 point for each bug you fix.
-It is possible to get a 12/10 on this lab.
 
 <!--
 

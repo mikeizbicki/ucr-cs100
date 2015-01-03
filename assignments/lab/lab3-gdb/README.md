@@ -26,3 +26,5 @@ The third exercise will challenge you to use those commands in a real-world debu
 ## deliverables
 
 When finished, show the TA the written answers to exercise 1 and the working `ls` program from exercise 3.
+Your score on this lab will be 2 points for exercise 1, plus 1 point for each bug you fix in exercise 3.
+There are 10 bugs, so it is possible to get a 12/10 on this lab.

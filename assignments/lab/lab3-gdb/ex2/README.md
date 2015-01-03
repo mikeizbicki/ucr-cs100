@@ -1,4 +1,4 @@
-# Exercise 2: a simplified `ls` program
+###Exercise 2: a simplified ls program
 
 [`ex2.cpp`](ex2.cpp) is a program that outputs specific information of specified files.
 The program uses the `stat` system call to create a struct for each filename passed in.
