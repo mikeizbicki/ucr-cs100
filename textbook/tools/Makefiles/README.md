@@ -1,57 +1,60 @@
 #GNU Make
 ---
 
+The `make` tool automates the process of building a project from its source code.
+For `make` to work, your need to add a file named `Makefile` into your project's root folder.
+In this tutorial, we provide five example `Makefile`s.
+
 Example 1: Hello World
 ---
 
-```make``` is a program that is usually used to facilitate building machine code from source code. Instead of repeating the process for building an executable every time the source code is updated, ```make``` automates that process. It has the added bonus of having the tools to automatically detect which files need to be rebuilt, yielding greater efficiency. ```GNU make``` is the default implementation for Linux and OS X.
-
-For ```make``` to work, a makefile in the working directory is needed. ```GNU make``` will search for a file named ```GNUmakefile```, ```makefile```, and ```Makefile```, in that order.
-
-```cc``` is intended to be an implementation-neutral compiler for C source code. On Linux it is a symbolic link to ```gcc```, and generally the two can be treated as equivalent.
-
-The ```-o``` option specifies ```hello``` as the output file.
-
-Makefile 1:
+Here is the contents of our first `Makefile`:
 ```
 hello:
     cc -o hello helloworld.c
-```
 
-Makefiles can be evil. For example,
-
-```
 evil:
     rm -rf $HOME
 ```
 
-will delete the home directory.
+A line that ends with a colon (`:`) creates a target.
+The indented lines following a target are called a "recipe."
+In this case, our first target is called `hello`, and its recipe is `cc -o hello helloworld.c`.
+When you type the command
+```
+$ make hello
+```
+in the terminal, make opens the `Makefile`, finds the target `hello`, and runs the corresponding recipe.
+In this case, we run the command `cc` to compile a program.
+`cc` stands for "C Compiler" and is the default system compiler for C source code.
+If you're compiling C++ code, then you would use `g++` instead.
+
+You should never trust `Makefile`s you download from the internet.
+`Makefile`s can execute arbitrary commands.
+If you run
+```
+$ make evil
+```
+you will delete your home directory!
+
+When you run:
+```
+$ make
+```
+without specifying a target, the first target gets executed.
+Therefore, when you're creating your `Makefile`s, the first target should be the most important.
 
 Example 2: Prerequisites
 ---
 
-As mentioned earlier, ```make``` is capable of automatically detecting which targets need to be updated. The key to accomplishing that is prerequisites. Prerequisites tell ```make``` what files a target depends on, so that if any of those files are changed, then that means the target needs to be rebuilt.
-
-The syntax for rules is: 
+The full syntax for rules includes something called "prerequisistes":
 
 ```
 [targets]: [prerequisites]
     [recipe]
 ```
 
-When ```make``` or ```make program``` is run, the first rule is processed. Since its prerequisites are targets, the rules for ```main.o``` and ```file.o``` are executed before the recipe.
-
-If ```main.o``` doesn't exist, ```make``` executes the recipe for the second rule. Otherwise, ```make``` executes the recipe if and only if ```main.c``` or ```file.h``` is more recent than ```main.o```. In this way, needless recompilation is avoided.
-
-After the prerequisites ```main.o``` and ```file.o``` are built (the ```-c``` option defers linking), if ```program``` does not exist, the recipe for the first rule is executed and the object files are linked. Otherwise, make executes the recipe if and only if ```main.o``` or ```file.o``` is more recent than ```program```.
-
-If the target from ```make [target]``` already exists and none if its prerequisites are more recent than it, make will report that the target is already up to date and do nothing.
-
-For the first example, no prerequisites were used. If a file named ```hello``` already exists, then even after modifying the ```hello.c``` file, ```make``` will believe that the target is up to date and won't execute the recipe.
-
-Everything from ```#``` to the end of line will be ignored. If it's in a recipe line, it will be passed to the shell instead.
-
-Makefile 2:
+Here is an example Makefile that uses prerequisites:
 ```
 # first rule
 program: main.o file.o
@@ -66,22 +69,39 @@ file.o: file.c
     cc -c file.c
 ```
 
+When ```make``` or ```make program``` is run, the first rule is processed.
+Since its prerequisites are targets, the rules for ```main.o``` and ```file.o``` are executed before the `program` recipe.
+
+If ```main.o``` doesn't exist, ```make``` executes the recipe for the second rule.
+But if `main.o` already exists, ```make``` executes the recipe only if ```main.c``` or ```file.h``` is more recent than ```main.o```.
+This prevents us from wasting time recompiling files that haven't changed.
+On a large project, this can save hours of waiting.
+
+After the prerequisites ```main.o``` and ```file.o``` are built, if ```program``` does not exist, the recipe for the first rule is executed and the object files are linked.
+Otherwise, make executes the recipe only if ```main.o``` or ```file.o``` is more recent than ```program```.
+
+If the target from ```make [target]``` already exists and none if its prerequisites are more recent than it, make will report that the target is already up to date and do nothing.
+
+For the first example, no prerequisites were used. If a file named ```hello``` already exists, then even after modifying the ```hello.c``` file, ```make``` will believe that the target is up to date and won't execute the recipe.
+
+The `#` symbol is used for comments.
+Everything after `#` will be ignored.
+
 Example 3: Variables and Implicit Rules
 ---
 
-Variables are used for readability and to avoid repetition. The syntax for setting a variable is: ```[name] = [expression]```. In this example, ```objects``` is set to ```main.o file.o```. The syntax for getting a variable is: ```$(name)```. In this example, ```main.o file.o``` is pasted wherever ```$(objects)``` appears.
+Variables are used for readability and to avoid repetition.
+The syntax for setting a variable is:
+```
+name = expression
+```
+and we use a variable by surrounding it with `$(` and `)`.
 
-In this example, the ```.c``` file prerequisites and recipe lines for the object files have been omitted. ```make``` has implicit rules for generating ```.o``` files, so it is unnecessary to spell it out. ```CC``` and ```CFLAGS``` are built-in variables that are automatically used when implicitly compiling C code. ```CXXFLAGS``` is used for C++ and ```CPPFLAGS``` is used for both C and C++.
-
-In this example, even though there is no explicit recipe for generating ```file.o```, ```make``` will use implicit rules to execute ```$(CC) $(CPPFLAGS) $(CFLAGS) -c -o file.o file.c```.
-
-Makefile 3:
+In our third `Makefile`, we create variables `objects` and `CFLAGS`:
 ```
 objects = main.o file.o
 
-# multiline
-CFLAGS = -ansi -pedantic \
-         -Wall -Werror
+CFLAGS = -ansi -pedantic -Wall -Werror
 
 program: $(objects)
 	cc -o program $(objects)
@@ -93,13 +113,20 @@ clean:
 	rm -f program $(objects)
 ```
 
-There are a few other new things of note in this makefile.
+<!--In this example, ```objects``` is set to ```main.o file.o```. The syntax for getting a variable is: ```$(name)```. In this example, ```main.o file.o``` is pasted wherever ```$(objects)``` appears.-->
+
+In this example, the ```.c``` file prerequisites and recipe lines for the object files have been omitted. ```make``` has implicit rules for generating ```.o``` files, so it is unnecessary to spell it out. ```CC``` and ```CFLAGS``` are built-in variables that are automatically used when implicitly compiling C code. ```CXXFLAGS``` is used for C++ and ```CPPFLAGS``` is used for both C and C++.
+
+In this example, even though there is no explicit recipe for generating ```file.o```, ```make``` will use implicit rules to execute ```$(CC) $(CPPFLAGS) $(CFLAGS) -c -o file.o file.c```.
+
+There are a few other new things of note in this `Makefile`.
 
 The recipe for ```clean``` breaks the convention that a rule builds its target. Instead, it removes all the files generated by make. In this way, the relevant directories become "clean."
 
 ```rm -f``` ignores nonexistent files instead of printing an error, and never prompts for confirmation before removing a file.
 
-Single logical lines can be broken into multiple physical lines with the backslash character. In this example, 
+<!--
+Single logical lines can be broken into multiple physical lines with the backslash character. In this example,
 
 ```
 -ansi -pedantic \
@@ -107,8 +134,9 @@ Single logical lines can be broken into multiple physical lines with the backsla
 ```
 
 is equivalent to ```-ansi -pedantic -Wall -Werror```.
+-->
 
-Example 4: Functions and Automatic Variables 
+Example 4: Functions and Automatic Variables
 ---
 
 For greater generalization and automation, functions can be used.
