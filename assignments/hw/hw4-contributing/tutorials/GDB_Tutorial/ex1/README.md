@@ -20,7 +20,7 @@ Second: goodbye
 
 Clearly, the copy function is flawed. At first, you might want to make print
 statements in the function that output each character. Unfortunately, this
-can result in long outputs. Also, its tedious to go back and add print
+can result in long outputs. Also, it's tedious to go back and add print
 statements at various locations. In many cases, outputting specific elements
 of data structures may result in very long outputs. 
 This is where GDB is useful.

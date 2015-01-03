@@ -1,44 +1,22 @@
-Sample 1
+#GNU Make
 ---
 
-```make``` is a program usually used to build machine code from source code. ```GNU make``` is the default implementation for Linux and OS X.
+Example 1: Hello World
+---
 
-For make to work, a makefile in the working directory is needed. ```GNU make``` will search for a file named ```GNUmakefile```, ```makefile```, and ```Makefile```, in that order.
+```make``` is a program that is usually used to facilitate building machine code from source code. Instead of repeating the process for building an executable every time the source code is updated, ```make``` automates that process. It has the added bonus of having the tools to automatically detect which files need to be rebuilt, yielding greater efficiency. ```GNU make``` is the default implementation for Linux and OS X.
 
+For ```make``` to work, a makefile in the working directory is needed. ```GNU make``` will search for a file named ```GNUmakefile```, ```makefile```, and ```Makefile```, in that order.
+
+```cc``` is intended to be an implementation-neutral compiler for C source code. On Linux it is a symbolic link to ```gcc```, and generally the two can be treated as equivalent.
+
+The ```-o``` option specifies ```hello``` as the output file.
+
+Makefile 1:
 ```
 hello:
     cc -o hello helloworld.c
 ```
-
-These two lines compose a complete makefile (the ```-o``` option specifies ```hello``` as the output file). It contains a single rule, following the syntax:
-
-```
-[target]:
-    [recipe]
-```
-
-The target is usually the name of the file that needs to be built, and the recipe is usually the list of shell commands used to build the target. In this sample, the target is an executable file named ```hello```, which is built from a recipe that compiles the C source file ```helloworld.c```.
-
-To use make, type:
-```make [target]```
-
-If no ```target``` is specified, the first one is used (excluding targets starting with '```.```'). In this sample, ```make``` and ```make hello``` are equivalent.
-
-It is possible to specify more than one target for a rule.
-
-```
-all hello:
-    cc -o hello helloworld.c
-```
-
-The syntax for rules is updated to:
-
-```
-[targets]:
-    [recipe]
-```
-
-In this example, ```make```, ```make all```, and ```make hello``` are equivalent.
 
 Makefiles can be evil. For example,
 
@@ -49,11 +27,31 @@ evil:
 
 will delete the home directory.
 
-Sample 2
+Example 2: Prerequisites
 ---
 
-Working on large programs, it is inefficient to recompile everything for every  change. The solution is prerequisites.
+As mentioned earlier, ```make``` is capable of automatically detecting which targets need to be updated. The key to accomplishing that is prerequisites. Prerequisites tell ```make``` what files a target depends on, so that if any of those files are changed, then that means the target needs to be rebuilt.
 
+The syntax for rules is: 
+
+```
+[targets]: [prerequisites]
+    [recipe]
+```
+
+When ```make``` or ```make program``` is run, the first rule is processed. Since its prerequisites are targets, the rules for ```main.o``` and ```file.o``` are executed before the recipe.
+
+If ```main.o``` doesn't exist, ```make``` executes the recipe for the second rule. Otherwise, ```make``` executes the recipe if and only if ```main.c``` or ```file.h``` is more recent than ```main.o```. In this way, needless recompilation is avoided.
+
+After the prerequisites ```main.o``` and ```file.o``` are built (the ```-c``` option defers linking), if ```program``` does not exist, the recipe for the first rule is executed and the object files are linked. Otherwise, make executes the recipe if and only if ```main.o``` or ```file.o``` is more recent than ```program```.
+
+If the target from ```make [target]``` already exists and none if its prerequisites are more recent than it, make will report that the target is already up to date and do nothing.
+
+For the first example, no prerequisites were used. If a file named ```hello``` already exists, then even after modifying the ```hello.c``` file, ```make``` will believe that the target is up to date and won't execute the recipe.
+
+Everything from ```#``` to the end of line will be ignored. If it's in a recipe line, it will be passed to the shell instead.
+
+Makefile 2:
 ```
 # first rule
 program: main.o file.o
@@ -68,28 +66,16 @@ file.o: file.c
     cc -c file.c
 ```
 
-The syntax for rules is updated to: 
-
-```
-[targets]: [prerequisites]
-    [recipe]
-```
-
-When ```make``` or ```make program``` is run, the first rule is processed. Since its prerequisites are targets, they (the rules for ```main.o``` and ```file.o```) are executed before the recipe.
-
-If ```main.o``` doesn't exist, ```make``` executes the recipe for the second rule. Otherwise, ```make``` executes the recipe if and only if ```main.c``` or ```file.h``` is more recent than ```main.o```. In this way, needless recompilation is avoided.
-
-After the prerequisites ```main.o``` and ```file.o``` are built (the ```-c``` option defers linking), if ```program``` does not exist, the recipe for the first rule is executed and the object files are linked. Otherwise, make executes the recipe if and only if ```main.o``` or ```file.o``` is more recent than ```program```.
-
-If the target from ```make [target]``` already exists and none if its prerequisites are more recent than it, make will report that the target is already up to date and do nothing.
-
-For the first sample, no prerequisites were used. If a file named ```hello``` already exists, then even after modifying the ```hello.c``` file, ```make``` will believe that the target is up to date and won't execute the recipe.
-
-Everything from '```#```' to the end of line will be ignored. If it's in a recipe line, it will be passed to the shell instead.
-
-Sample 3
+Example 3: Variables and Implicit Rules
 ---
 
+Variables are used for readability and to avoid repetition. The syntax for setting a variable is: ```[name] = [expression]```. In this example, ```objects``` is set to ```main.o file.o```. The syntax for getting a variable is: ```$(name)```. In this example, ```main.o file.o``` is pasted wherever ```$(objects)``` appears.
+
+In this example, the ```.c``` file prerequisites and recipe lines for the object files have been omitted. ```make``` has implicit rules for generating ```.o``` files, so it is unnecessary to spell it out. ```CC``` and ```CFLAGS``` are built-in variables that are automatically used when implicitly compiling C code. ```CXXFLAGS``` is used for C++ and ```CPPFLAGS``` is used for both C and C++.
+
+In this example, even though there is no explicit recipe for generating ```file.o```, ```make``` will use implicit rules to execute ```$(CC) $(CPPFLAGS) $(CFLAGS) -c -o file.o file.c```.
+
+Makefile 3:
 ```
 objects = main.o file.o
 
@@ -107,17 +93,13 @@ clean:
 	rm -f program $(objects)
 ```
 
-Variables are used for readability and to avoid repetition. The syntax for setting a variable is: ```[name] = [expression]```. In this sample, ```objects``` is set to ```main.o file.o```. The syntax for getting a variable is: ```$([name])```. In this example, ```main.o file.o``` is pasted wherever ```$(objects)``` appears.
+There are a few other new things of note in this makefile.
 
-In this sample, the ```.c``` file prerequisites and recipe lines for the object files have been omitted; ```make``` has implicit rules for generating ```.o``` files, so it is unnecessary to spell it out.
+The recipe for ```clean``` breaks the convention that a rule builds its target. Instead, it removes all the files generated by make. In this way, the relevant directories become "clean."
 
-```CFLAGS``` is a variable that is automatically used when implicitly compiling C code. ```CXXFLAGS``` is used for C++ and ```CPPFLAGS``` is used for both C and C++.
+```rm -f``` ignores nonexistent files instead of printing an error, and never prompts for confirmation before removing a file.
 
-The recipe for ```clean``` breaks the convention that a rule builds its target. Instead, it removes all the files generated by make. It is a target often found in makefiles.
-
-The ```-f``` option for ```rm``` ignores nonexistent files instead of printing an error, and doesn't prompt.
-
-Single logical lines can be broken into multiple physical lines with the backslash character. In this sample, 
+Single logical lines can be broken into multiple physical lines with the backslash character. In this example, 
 
 ```
 -ansi -pedantic \
@@ -126,9 +108,22 @@ Single logical lines can be broken into multiple physical lines with the backsla
 
 is equivalent to ```-ansi -pedantic -Wall -Werror```.
 
-Sample 4
+Example 4: Functions and Automatic Variables 
 ---
 
+For greater generalization and automation, functions can be used.
+
+The ```wildcard``` function uses the syntax ```$(wildcard [pattern])```. It returns a list of space-separated files that match the pattern. The ```*``` character matches any string. In this example, ```$(wildcard *.c)``` is replaced by all ```.c``` files: ```file.c main.c```.
+
+The ```patsubst``` function uses the syntax ```$(patsubst [pattern], [replacement], [text])```. It replaces all whitespace-separated words in ```[text]``` that match ```[pattern]``` with ```[replacement]```. The ```%``` character matches any string for all instances of ```%``` in an expression. In this example, the pathsubst function is replaced by ```file.o main.o```.
+
+```$@``` is the target of the rule. In this example, ```cc -o $@ $(objects)``` is equivalent to ```cc -o program $(objects)```.
+
+```%.o:``` matches all object files. Because ```main.o``` requires ```file.h``` in addition to ```main.c```, that prerequisite is indicated in the next line. The implicit rules handle the rest.
+
+The rule for ```clean``` has been modified to use the wildcard. It is subtly different from the previous version, which removed all files specified by ```objects``` -- this version removes all files ending in ```.o```.
+
+Makefile 4:
 ```
 CFLAGS = -ansi -pedantic -Wall -Werror
 objects = $(patsubst %.c, %.o, $(wildcard *.c))
@@ -143,19 +138,29 @@ clean:
 	rm -f program *.o
 ```
 
-The ```wildcard``` function uses the syntax ```$(wildcard [pattern])```. It returns a list of space-separated files that match the pattern. The '```*```' character matches any string. In this sample, ```$(wildcard *.c)``` is replaced by all ```.c``` files: ```file.c main.c```.
-
-The ```patsubst``` function uses the syntax ```$(patsubst [pattern], [replacement], [text])```. It replaces all whitespace-separated words in ```[text]``` that match ```[pattern]``` with ```[replacement]```. The '```%```' character matches any string for all instances of '```%```' in an expression. In this sample, the pathsubst function is replaced by ```file.o main.o```.
-
-```$@``` is the target of the rule. In this sample, ```cc -o $@ $(objects)``` is equivalent to ```cc -o program $(objects)```.
-
-```%.o:``` matches all object files. Because ```main.o``` requires ```file.h``` in addition to ```main.c```, that prerequisite is indicated in the next line. The implicit rules handle the rest.
-
-The rule for ```clean``` has been modified to use the wildcard. It is subtly different from the previous version, which removed all files specified by ```objects``` -- this version removes all files ending in ```.o```.
-
-Sample 5
+Example 5: Directories
 ---
 
+Files are sometimes organized by their type. One setup is to put all the source code files in a directory called ```src```, object files in a directory called ```obj```, and binary executables in a directory called ```bin```.
+
+```VPATH``` is a variable that tells make which directories to search for target and prerequisite files in addition to the working directory. In this example, make will search ```src/``` in addition to the working directory.
+
+Multiple directories are delimited by ```:```. For example, ```VPATH = src1:src2:../src3``` tells make to search ```src1/```, ```src2/```, and ```../src3``` in addition to the working directory.
+
+The ```addprefix``` function uses the syntax ```(addprefix [prefix], [names...])```. It prepends ```[prefix]``` to each name in the whitespace-separated ```[names...]``` and returns the result. In this example, the ```addprefix``` function is replaced by ```obj/main.o obj/file.o```.
+
+Order-only prerequisites are listed after ```|```. Unlike normal prerequisites, ```make``` does not check whether it is more recent than the target. The syntax for rules is updated to:
+
+```
+[targets]: [normal prerequisites] | [order-only prerequisites]
+    [recipe]
+```
+
+Whenever a file is added to, removed from, or renamed in a directory, the timestamp of the directory is updated. It is inefficient to rebuild a target just because the timestamp of its prerequisite directory was updated. That is why it is an order-only prerequisite.
+
+```$<``` is the first prerequisite of the rule. In this example, it would be the C source file corresponding to the target object file.
+
+Makefile 5:
 ```
 VPATH = src
 CFLAGS = -ansi -pedantic -Wall -Werror
@@ -179,20 +184,3 @@ obj:
 clean:
     rm -rf obj bin
 ```
-
-```VPATH``` is a variable that tells make which directories to search for target and prerequisite files in addition to the working directory. In this sample, make will search ```src/``` in addition to the working directory.
-
-Multiple directories are delimited by ```:```. For example, ```VPATH = src1:src2:../src3``` tells make to search ```src1/```, ```src2/```, and ```../src3``` in addition to the working directory.
-
-The ```addprefix``` function uses the syntax ```(addprefix [prefix], [names...])```. It prepends ```[prefix]``` to each name in the whitespace-separated ```[names...]``` and returns the result. In this sample, the ```addprefix``` function is replaced by ```obj/main.o obj/file.o```.
-
-Order-only prerequisites are listed after ```|```. Unlike normal prerequisites, ```make``` does not check whether it is more recent than the target. The syntax for rules is updated to:
-
-```
-[targets]: [normal prerequisites] | [order-only prerequisites]
-    [recipe]
-```
-
-Whenever a file is added to, removed from, or renamed in a directory, the timestamp of the directory is updated. It is inefficient to rebuild a target just because the timestamp of its prerequisite directory was updated. That is why it is an order-only prerequisite.
-
-```$<``` is the first prerequisite of the rule. In this sample, it would be the C source file corresponding to the target object file.

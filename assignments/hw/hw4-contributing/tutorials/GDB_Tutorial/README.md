@@ -35,8 +35,8 @@ GDBs UI is similar to bash. You enter commands and arguments into the
 prompt. After you start GDB, you can configure how the program will run with these
 commands. To understand how this works, lets look at the following examples.
 
-[Example 1](ex1/)
+[Exercise 1](ex1/)
 
-[Example 2](ex2/)
+[Exercise 2](ex2/)
 
-[Example 3](ex3/)
+[Exercise 3](ex3/)
