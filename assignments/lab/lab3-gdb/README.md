@@ -1,64 +1,28 @@
-# learning to use gdb
+# Introduction to gdb
 
-You should complete this lab using pair programming with a new partner.
+The GNU DeBugger (`gdb`) is one of the most powerful tools you have to find and fix bugs in your programs.
+This lab contains three exercises to learn about how it works.
 
-### instructions 
+Beginners often don't see the benefit of using `gdb`.
+They ask: "Why go through all the hassle of `gdb` when I can just add `cerr` statements to my code?"
+Both methods work on small projects.
+But on large projects `cerr` statements won't work.
+And with practice, you'll be much faster at debugging using `gdb` than you would be with `cerr` statements.
+At first it will be weird, but  stick with it!
+I promise it will pay off!
+**If you ever catch yourself putting in `cerr` statements, STOP!
+Wwitch to using `gdb`!**
 
-You're a progamming intern at the defense contractor HBHairy.
-Your main job is to repackage a bunch of open source software.
-HBHairy resells it to the navy for a premium.
-But your CEO [managed to upset the hacker group Anonymous](http://www.networkworld.com/article/2183906/malware-cybercrime/anonymous-attack-on-hbgary-federal-didn-t-ruin-us--says-hbgary-ceo.html).
-They've hacked into HBHairy's internal company servers and changed the code for the `ls` program!
-Your job is to find and fix the changes they've made.
+This lab contains three exercises.
+The first two exercises were written by Chetas Manjunath (a former cs100 student) to introduce you to the basic `gdb` commands.
+The third exercise will challenge you to use those commands in a real-world debugging disaster!
 
-If you had been using version control, then this would be really easy.
-You'd just run `git checkout` to go back to the last known good commit.
-But your boss is an idiot, so none of the source code was version controlled.
-Instead, you must use the `gdb` debugger to track down all of the bad code.
+1. (required) [Exercise 1](ex1/): an introduction to the `gdb` commands
 
-You will find all the source code in the file `hbhairy-utils.tar.xz`.
-Lucky for you the hackers left the `INSTALL` file intact.
+3. (optional) [Exercise 2](ex2/): practice on a simplified version of `ls`
 
-Known bugs:
+2. (required) [Exercise 3](ex3/): debugging the GNU `ls` command, a program with >5000 lines of code
 
-* The first thing printed by `ls` is always `(null)`.
+## deliverables
 
-* `ls` prints the text `!!!WE ARE LEGION!!!`
-
-* `ls` prints the text `lolololololololololololololololololololololol`
-
-* Running `ls` turns the terminal red.
-
-* Running `ls -a` prints the files separated by commas rather than the default behavior of printing a nice table.
-
-* The `-a` flag no longer prints the `.` and `..` files as it is supposed to.  (HINT: `-a` is behaving like `-A`.)
-
-* Running the command `ls --help` just prints the Anonymous logo mask and doesn't print any help information.
-
-* Running `ls -R` quotes a Monty Python insult at you.
-
-* Running `ls -R` segfaults.
-
-* Running `ls -l` segfaults.
-
-### deliverables
-
-You must demonstrate your fixed code to the TA.
-Your score on this lab will be 2 points for attendance, plus 1 point for each bug you fix.
-It is possible to get a 12/10 on this lab.
-
-<!--
-
-TA Message:
-
-The original `ls.c` file is now called `omfg.c`.
-If you run the command:
-
-```
-$ diff ls.c omfg.c
-```
-
-You can see where all the changes were made to the source.
-The file `system.h` has a few macros added to it as well.
-
--->
+When finished, show the TA the written answers to exercise 1 and the working `ls` program from exercise 3.
