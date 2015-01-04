@@ -72,7 +72,7 @@ Go to your forked repository in your terminal and enter:
   $ git rebase -i HEAD~3
 ```
 
-At this point, a editor will open containing text similar to:
+At this point, an editor will open containing text similar to:
 ```
 pick 01d1124 Updated title of README.md
 pick 6340aaa Added new section
