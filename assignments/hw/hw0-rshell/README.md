@@ -2,18 +2,19 @@
 
 ### coding requirements
 
-Write a command shell called `rshell`.  Your shell will perform the following steps:
+Write a command shell called `rshell`.
+Your shell will perform the following steps:
 
 1. Print a command prompt (e.g. `$`)
 
 2. Read in a command on one line.
-Commands will have the form: 
+Commands will have the form:
 ```
 cmd         = executable [ argumentList ] [ connecter cmd ]
 connecter   = || or && or ;
 ```
-where `executable` is an executable program in the `PATH` and `argumentList` is a list of zero or more words.
-The connecter is an optional way you can run multiple commands at once.
+where `executable` is an executable program in the `PATH` and `argumentList` is a list of zero or more arguments separated by spaces.
+The connector is an optional way you can run multiple commands at once.
 If a command is followed by `;`, then the next command is always executed;
 if a command is followed by `&&`, then the next command is executed only if the first one succeeds;
 if a command is followed by `||`, then the next command is executed only if the first one fails.
@@ -33,25 +34,36 @@ There should be no limit to the number of commands that can be chained together 
 This will require using the syscalls `fork`, `execvp`, and `waitpid`.
 You should refer to the man pages for detailed instructions on how to use these functions.
 
-There are also [nice tutorials](../../../tutorials/syscalls/README.md) prepared by previous cs100 students.
-
-[![video guide](http://i.imgur.com/3hRxF4x.jpg)](https://www.youtube.com/watch?v=xVSPv-9x3gk).
-
 4. You must have a special built in command of `exit` which exits your shell.
 
 5. Anything that appears after a `#` character should be considered a comment.
 For example, in the command `ls -lR /`, you would execute the program `/bin/ls` passing into it the parameters `-lR` and `/`.
 But in the command `ls # -lR /`, you would execute `/bin/ls`, but you would not pass any parameters because they appear in the comment section.
 
-**IMPORTANT:** Most bash commands are actually executables located in `/bin`.  But some commands are special and are built in to bash.  The `cd` command is the most common example.  So while the `ls` command should "just work" for you, the `cd` command won't.  You'll be adding this feature in a later homework.
+**IMPORTANT:**
+Most bash commands are actually executables located in `/bin`, `/usr/bin/`, or a similar directory.
+But some commands are special and are built-in to bash.
+The `cd` command is the most common example.
+So while the `ls` command should "just work" in your shell, the `cd` command won't.
+You'll be adding this feature in a later homework.
 
-**HINT:** Pay careful attention to how you parse the command string the user enters.  There are many ways to mess this up and introduce bugs into your program.  You will be adding more parsing features in future assignments, so it will make your life much easier if you do it right the first time!  I recommend using either the `strtok` function from the C standard libraries or the `Tokenizer` class provide in the [boost library](http://www.boost.org/doc/libs/1_36_0/libs/tokenizer/tokenizer.htm).  Students often don't do this section of the assignment well and end up having to redo all of assignment one in order to complete the future assignments.
+**HINT:**
+Pay careful attention to how you parse the command string the user enters.
+There are many ways to mess this up and introduce bugs into your program.
+You will be adding more parsing features in future assignments, so it will make your life much easier if you do it right the first time!
+I recommend using either the `strtok` function from the C standard libraries or the `Tokenizer` class provide in the [boost library](http://www.boost.org/doc/libs/1_36_0/libs/tokenizer/tokenizer.htm).
+Students often don't do this section of the assignment well and end up having to redo all of assignment one in order to complete the future assignments.
 
 ### submission instructions
 
-Create a new project on github called `rshell`.  Create a branch called `exec`.  Do all of your work under this branch.  When finished, merge the `exec` branch into the `master` branch, and create a tag called `hw0`.Remember that tags and branches in github are case sensitive, so please double check that the letters in your tag are lower case to avoid problems when submitting your assignment.
+Create a new project on github called `rshell`.
+Create a branch called `exec`.
+Do all of your work under this branch.
+When finished, merge the `exec` branch into the `master` branch, and create a tag called `hw0`.
+Remember that tags and branches in git are case sensitive,
+so please double check that the letters in your tag are lower case to avoid problems when submitting your assignment.
 
-To download and grade your homework, the TA will run the following commands:
+To download and grade your homework, the TA will run the following commands from the `hammer` server:
 
 ```
 $ git clone  http://github.com/yourusername/rshell.git
@@ -71,30 +83,45 @@ NO EXCEPTIONS.
 
 ### project structure
 
-**IMPORTANT:** The file/directory names below are a standard convention.  You must use the exact same names in your project, including capitalization.
+**IMPORTANT:**
+The file/directory names below are a standard convention.
+You must use the exact same names in your project, including capitalization.
 
 You must have a directory called `src` which contains all the source code files for the project.
 
-You must have a `Makefile` in the root directory.  In the `Makefile` you will have two targets.  The first target is called `all` and the second target is called `rshell`.  Both of these targets will compile your program using `g++` with the flags: `-Wall -Werror -ansi -pedantic`.
+You must have a `Makefile` in the root directory.
+In the `Makefile` you will have two targets.
+The first target is called `all` and the second target is called `rshell`.
+Both of these targets will compile your program using `g++` with the flags: `-Wall -Werror -ansi -pedantic`.
 
 You must NOT have a directory called `bin` in the project; however, when the project is built, this directory must be created and all executable files placed here.
 
-You must have a `LICENSE` file in your project.  You may select any open source license.  I recommend either GPL or BSD3.
+You must have a `LICENSE` file in your project.
+You may select any open source license.
+I recommend either GPL or BSD3.
 
-You must have a `README` file.  Calling the file `README.md` is also acceptable if you want to use markdown syntax.  This file should briefly summarize your project.  In particular, it must include a list of known bugs.  If you do not have any known bugs, then you probably have not sufficiently tested your code.  See the testing section below for more details.  I recommend watching [this video tutorial](https://izbicki.me/blog/videoguide-for-github-vim-bash.html#readme) on creating a good `README` file.
+You must have a `README.md` file.
+This file should briefly summarize your project.
+In particular, it must include a list of known bugs.
+If you do not have any known bugs, then you probably have not sufficiently tested your code!
+See the testing section below for more details.
+I recommend watching [this video tutorial](https://izbicki.me/blog/videoguide-for-github-vim-bash.html#readme) on creating a good `README` file.
 
-You must have a directory called `tests`.  The directory will contain a file called `exec.script` that contains all of the test cases you tried.  You will generate the file using the `script` command, and it must be succinct (i.e. it cannot have unnecessary commands in it).  You should use comments in your script to document what you are testing with each test case.  [This video tutorial](https://izbicki.me/blog/videoguide-for-github-vim-bash.html#script) explains how to use the `script` command.
-
-<!--When you run `rschell` from within `script`, you must run it using the `valgrind` debugging tool.  See the [valgrind-tutorial](valgrind-tutorial) folder in this directory for a tutorial on how to find memory leaks using valgrind.
--->
+You must have a directory called `tests`.
+The directory will contain a file called `exec.script` that contains all of the test cases you tried.
+You will generate the file using the `script` command, and it must be succinct (i.e. it cannot have unnecessary commands in it).
+You should use comments in your script to document what you are testing with each test case.
+[This video tutorial](https://izbicki.me/blog/videoguide-for-github-vim-bash.html#script) explains how to use the `script` command.
 
 ### coding conventions
 
 Your code must not generate any warnings on compilation.
 
-<!--Your code must pass the `cppchecker` linting tool with no warnings.-->
-
 Your final executable must have no memory leaks.
+
+Your code must be properly indented.
+I don't care if you indent with tabs or with spaces, but you must be consistent.
+Any submission that uses both spaces and tabs for indentation will receive an automatic -20 points.
 
 Every time you run a syscall, you must check for an error condition.
 If an error occurs, then call `perror`.
@@ -102,11 +129,17 @@ For examples on when, how, and why to use `perror`, see [this video tutorial](ht
 
 ### testing
 
-Proper testing is the most important part of developing software.  It therefore will have a very large impact on your grade. 
+Proper testing is the most important part of developing software.
+It therefore will have a very large impact on your grade.
 
-It is not enough to simply show that your program works in some cases.  You must show that it works in every possible edge case.  **That means you must try to write test cases that will break your program!**  
+It is not enough to simply show that your program works in some cases.
+You must show that it works in every possible edge case.
+**That means you must try to write test cases that will break your program!**
 
-**IMPORTANT:** If you do not include a particular test case that we think is important, then we will assume your program fails that test.  It doesn't matter if your program actually passes the test or not.  If you didn't test that case and document it, then your program fails!
+**IMPORTANT:**
+If you do not include a particular test case that we think is important, then we will assume your program fails that test.
+It doesn't matter if your program actually passes the test or not.
+If you didn't test that case and document it, then your program fails!
 
 If you are unsure if your test cases are sufficient, ask one of the instructors to review them *before the deadline*.
 
@@ -123,7 +156,7 @@ You are ENCOURAGED to look at [bash's source code](https://www.gnu.org/software/
 
 ### grading
 
-30 points for executing commands 
+30 points for executing commands
 
 30 points for executing multiple commands on a single line with `;`, `&&`, and `||`
 
@@ -199,10 +232,10 @@ extra credit:
 
 -->
 
-**IMPORTANT:** 
+**IMPORTANT:**
 Your project structure is not explicitly listed in the grading schedule above, but if you do not format your project correctly, you will lose points.
 
-**IMPORTANT:** 
+**IMPORTANT:**
 Your test cases are also not explicitly listed above, but they are included implicitly in each category.
 For example, if you get comments working correctly, but do not test and document that feature, then you will get zero credit for comments.
 
@@ -217,3 +250,14 @@ mizbi001@alpha023$
 You can get up to 10 points of extra credit if your prompt prints this extra information.
 You will need to lookup the man pages for the functions `getlogin` and `gethostname`.
 You must not hard code the username or hostname!
+
+**REMINDER:**
+If anything is unclear about this assignment, remember that you can get extra credit by submitting pull requests and asking good questions in the issue tracker.
+
+### additional resources
+
+Previous cs100 students [nice tutorials](../../../tutorials/syscalls/README.md) prepared by previous cs100 students.
+
+[![video guide](http://i.imgur.com/3hRxF4x.jpg)](https://www.youtube.com/watch?v=xVSPv-9x3gk).
+
+

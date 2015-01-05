@@ -1,4 +1,4 @@
-## cs100 - open source software construction
+# cs100 - open source software construction
 
 This is a course on [how to be a hacker](http://www.catb.org/esr/faqs/hacker-howto.html).
 Being a hacker [means a lot of things](http://www.catb.org/jargon/html/H/hacker.html).
@@ -30,18 +30,18 @@ But these tools are powerful.
 Mastering these tools will make you a *much* more efficient programmer.
 Once you've mastered them, you'll never go back.
 
-Required work in this course:
+There are two main projects you will work on in this course:
 
-1. Your main project in this course is to build your own unix shell.
+1. Your first four homework assignments walk you through the process of building your own unix shell.
 This is the biggest project you've undertaken so far.
 You'll be developing it as an open source project,
 and you will collaborate with each other at various points.
 
-2. You will contribute to the open source community by improving the documentation on a project of your choice.
+2. Your last homework assignment is to contribute to the open source community by improving the documentation on a project of your choice.
 Many of the required readings for this course were written by former cs100 students.
 If you do a good job on this project, future cs 100 students will be learning from you for years to come!
 
-By the end of the course, you should be comfortable running your own open source projects and contributing to other people's projects.
+**By the end of the course, you should be comfortable running your own open source projects and contributing to other people's projects.**
 
 ### instructors
 
@@ -82,7 +82,7 @@ week | date | reading/quiz | topics
 7 | Feb18 | Shubhro Saha's [why engineers should write](http://www.shubhro.com/2014/12/27/software-engineers-should-write/); the economist's [good writing style](http://www.economist.com/styleguide/introduction) | syscalls: signal handling (`signal`,`sigaction`)
 8 | Feb23 | the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls) | shell scripting: environment variables (`export`,`PATH`,`HOME`,`EDITOR`)
 8 | Feb25 | **quiz** | syscalls: environment variables (`getenv`,`setenv`)
-9 | Mar02 | esr's classic [Master Foo](http://www.catb.org/esr/writings/taoup/html/unix_koans.html) | syscalls: pthreads
+9 | Mar02 | esr's classic [Master Foo series](http://www.catb.org/esr/writings/taoup/html/unix_koans.html) | syscalls: pthreads
 9 | Mar04 | esr's thoughts on [flaws with unix](http://www.catb.org/esr/writings/taoup/html/ch20s03.html); Poul-Henning Kamp's [a generation lost in the bazaar](https://queue.acm.org/detail.cfm?id=2349257&ref=fullrss) | syscalls: sockets
 10 | Mar09 | **quiz** | case study: hacking the email system and the [ioccc.org](http://ioccc.org)
 10 | Mar11 | --- | case study: stuxnet and heartbleed
@@ -109,7 +109,7 @@ Instead, we will be using a course management system called `gitlearn`.
 This software was developed in part by previous cs100 students,
 and you will be able to earn considerable extra credit by contributing to it.
 We will be using this system as a case study in bash programming and the unix philosophy.
-For details, see the [gitlearn homepage](https://github.com/mikeizbicki/gitlearn).
+For details, see the [gitlearn repo](https://github.com/mikeizbicki/gitlearn).
 
 ### cheating policy
 
