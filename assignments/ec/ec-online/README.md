@@ -13,7 +13,7 @@ If you want an example, you can visit my webpage at https://izbicki.me.
 1. If you have a project on github that earns more than 10 stars, you will get 10 points extra credit.
 Stars from fellow cs100 students count as only 1/4 a star.
 
-2. If you start 20 repos created by other people, you will get 5 points extra credit.
+2. If you star 20 repos created by other people, you will get 5 points extra credit.
 Some good places to look for cool repos are other students in this class or the [/r/coolgithubprojects](http://reddit.com/r/coolgithubprojects) subreddit.
 
 2. If you have a stackoverflow account with more than 100 points, you will get 10 points extra credit.
