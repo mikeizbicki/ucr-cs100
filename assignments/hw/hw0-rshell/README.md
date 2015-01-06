@@ -256,7 +256,7 @@ If anything is unclear about this assignment, remember that you can get extra cr
 
 ### additional resources
 
-Previous cs100 students [nice tutorials](../../../tutorials/syscalls/README.md) prepared by previous cs100 students.
+Check out some [nice tutorials](../../../tutorials/syscalls/README.md) prepared by previous cs100 students:
 
 [![video guide](http://i.imgur.com/3hRxF4x.jpg)](https://www.youtube.com/watch?v=xVSPv-9x3gk).
 
