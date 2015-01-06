@@ -71,7 +71,7 @@ where any errors or outputs occur.
   info breakpoint
 ```
 
-`info breakpoint` will print out the number of breakpoints, the type, the location, and any conditions associated with the brekapoint. It will also tell you however many times you've hit the breakpoint. It will also print out any watchpoints.
+`info breakpoint` will print out the number of breakpoints, the type, the location, and any conditions associated with the breakpoint. It will also tell you however many times you've hit the breakpoint. It will also print out any watchpoints.
 
 ```
   (gdb) clear
@@ -126,7 +126,7 @@ After using `run` and reaching a line with input or a breakpoint, there are many
 ```
   (gdb) condition <breakpoint number> <condition>
   or 
-  (gdb) cond <breakpoint number> <condtion>
+  (gdb) cond <breakpoint number> <condition>
 ```
 
 OR
