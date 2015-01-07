@@ -28,7 +28,7 @@ Realizing this pain point I started practicing Test Driven Development.
 Test Driven Development (TDD) is a [software development process](http://en.wikipedia.org/wiki/Software_development_process).
 Development processes are methodologies to write code in stages (or cycles). In general these methodologies are meant to help speed up development, minimize bugs, and keep code bases malleable.
 
-Even though there are many different approuches to development, I prefer TDD because its style is to keep code simple and robust.
+Even though there are many different approaches to development, I prefer TDD because its style is to keep code simple and robust.
 
 TDD's development cycle is simple:
 
@@ -44,7 +44,7 @@ TDD's development cycle is simple:
 TDD is not a magic bullet. Even though quality of code is higher, TDD can still lead to its own
 [problems](http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/). Also it has known issues for not being sufficient testing for interfaces such as UI, databases, or networking.
 
-Because a test was written and passed, does not mean that it is bug free. A programmer may not think of every situtation.
+Because a test was written and passed, does not mean that it is bug free. A programmer may not think of every situation.
 
 TDD is meant to test and verify your own code. It's not nessesary to test libraries that are included in your code. An example of an unessasary test would be to test std::string `std::string("test") == "test"`. 
 
@@ -124,7 +124,7 @@ to 1000.
 
 In this example I need a function( or functions ) that will take a `string` and return a `vector<string>`.
 
-The `strings` in the `vector` should contain no whitespaces, and their arrangment should be in the order they appeared in the string.
+The `strings` in the `vector` should contain no whitespaces, and their arrangement should be in the order they appeared in the string.
 
 ```
 string s = "Today is a nice day!"
