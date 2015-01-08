@@ -48,7 +48,7 @@ If you do a good job on this project, future cs 100 students will be learning fr
 position | name | office hours
 --- | --- | ---
 lecturer | Mike Izbicki | TBA
-teaching assistant | Busra Celikkaya | TBA
+teaching assistant | Busra Celikkaya | Friday 2pm-3pm
 teaching assistant | Zachary Benavides | TBA
 
 **IMPORTANT:**
