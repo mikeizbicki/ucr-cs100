@@ -539,7 +539,7 @@ git clone https://github.com/examplestudent/ucr-cs100.git
 
 This will create a folder in your current working directory called `ucr-cs100`.  This folder contains the contents of the repo you just cloned.
 
-In the directory `people/students`, there is a file called `exampleuser` that contains the following information:
+In the directory `people/students`, there is a file called `examplestudent` that contains the following information:
 
 ```
 name = Mike Izbicki
