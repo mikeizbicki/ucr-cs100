@@ -461,7 +461,7 @@ $ git add README
 $ git commit -m "changed the README"
 ```
 
-You should check the [git cheatsheet](git-cheatsheet.md) to figure out what the `git branch -d` command does.
+You should check the [git cheatsheet](https://github.com/mikeizbicki/ucr-cs100/blob/2015winter/textbook/cheatsheets/git-cheatsheet.md) to figure out what the `git branch -d` command does.
 
 ## enrolling in this course
 
