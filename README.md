@@ -45,9 +45,9 @@ If you do a good job on this project, future cs 100 students will be learning fr
 
 ### instructors
 
-position | name | office hours
+position | name | office hours (WCH 110)
 --- | --- | ---
-lecturer | Mike Izbicki | TBA
+lecturer | Mike Izbicki | Tuesday 11-noon
 teaching assistant | Busra Celikkaya | Friday 2pm-3pm
 teaching assistant | Zachary Benavides | TBA
 
