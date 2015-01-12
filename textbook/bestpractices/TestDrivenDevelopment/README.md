@@ -105,7 +105,7 @@ int find_mult(const int &first_num, const int& second_num, const int &upper_boun
 }
 ```
 
-The function `find_mult` is itterating over all integers from 0 to `upper_bound` and summing all the numbers that are a multiple of `first_num` or `second_num`.
+The function `find_mult` is iterating over all integers from 0 to `upper_bound` and summing all the numbers that are a multiple of `first_num` or `second_num`.
 
 Compile and run to see if we pass our test.
 
@@ -132,7 +132,7 @@ vector<string> v = some_tok_func(s)
 // v should contain `["Today", "is", "a", "nice", "day!"]`.
 ```
 
-First we lets write our test in `tests/test_string_tok.cpp` The test should be designed such that the first time they are ran they will fail.
+First let's write our test in `tests/test_string_tok.cpp` The test should be designed such that the first time they are ran they will fail.
 
 ```
 #define BOOST_TEST_MODULE "C++ Unit Tests for StrTok"
@@ -264,4 +264,4 @@ In summary:
 
   1. We wrote the test `string_tok_test`.
   2. Implemented the function `tok_string` to satisfy the test we made
-  3. Refractored until `string_tok_test` was passed
+  3. Refractor the test until `string_tok_test` was passed
