@@ -24,12 +24,12 @@ To sync changes you make in a fork with the original repository, you need to con
 3. Specify a new remote *upstream* repository that will be synced with the fork:
 
 ```
-  $ git remote add *upstream* https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+  $ git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
 ```
 4. Check that the new *upstream* repository you've specified for your fork:
 
 ```
-  $ git remove -v
+  $ git remote -v
 ```
 
 As you can see, `origin` refers to your forked repository, while `upstream` will refer to the original owner's repository.
