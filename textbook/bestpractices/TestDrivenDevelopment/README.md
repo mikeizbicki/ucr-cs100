@@ -28,7 +28,7 @@ Realizing this pain point I started practicing Test Driven Development.
 Test Driven Development (TDD) is a [software development process](http://en.wikipedia.org/wiki/Software_development_process).
 Development processes are methodologies to write code in stages (or cycles). In general these methodologies are meant to help speed up development, minimize bugs, and keep code bases malleable.
 
-Even though there are many different approuches to development, I prefer TDD because its style is to keep code simple and robust.
+Even though there are many different approaches to development, I prefer TDD because its style is to keep code simple and robust.
 
 TDD's development cycle is simple:
 
@@ -44,9 +44,9 @@ TDD's development cycle is simple:
 TDD is not a magic bullet. Even though quality of code is higher, TDD can still lead to its own
 [problems](http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/). Also it has known issues for not being sufficient testing for interfaces such as UI, databases, or networking.
 
-Because a test was written and passed, does not mean that it is bug free. A programmer may not think of every situtation.
+Because a test was written and passed, does not mean that it is bug free. A programmer may not think of every situation.
 
-TDD is meant to test and verify your own code. It's not nessesary to test libraries that are included in your code. An example of an unessasary test would be to test std::string `std::string("test") == "test"`. 
+TDD is meant to test and verify your own code. It's not nessesary to test libraries that are included in your code. An example of an unnecessary test would be to test std::string `std::string("test") == "test"`. 
 
 # Examples
 
@@ -105,7 +105,7 @@ int find_mult(const int &first_num, const int& second_num, const int &upper_boun
 }
 ```
 
-The function `find_mult` is itterating over all integers from 0 to `upper_bound` and summing all the numbers that are a multiple of `first_num` or `second_num`.
+The function `find_mult` is iterating over all integers from 0 to `upper_bound` and summing all the numbers that are a multiple of `first_num` or `second_num`.
 
 Compile and run to see if we pass our test.
 
@@ -124,7 +124,7 @@ to 1000.
 
 In this example I need a function( or functions ) that will take a `string` and return a `vector<string>`.
 
-The `strings` in the `vector` should contain no whitespaces, and their arrangment should be in the order they appeared in the string.
+The `strings` in the `vector` should contain no whitespaces, and their arrangement should be in the order they appeared in the string.
 
 ```
 string s = "Today is a nice day!"
@@ -132,7 +132,7 @@ vector<string> v = some_tok_func(s)
 // v should contain `["Today", "is", "a", "nice", "day!"]`.
 ```
 
-First we lets write our test in `tests/test_string_tok.cpp` The test should be designed such that the first time they are ran they will fail.
+First let's write our test in `tests/test_string_tok.cpp`. The test should be designed such that the first time they are ran they will fail.
 
 ```
 #define BOOST_TEST_MODULE "C++ Unit Tests for StrTok"
@@ -263,5 +263,5 @@ The reason for this is that it is testing too many things. Suppose newlines brok
 In summary:
 
   1. We wrote the test `string_tok_test`.
-  2. Implemented the function `tok_string` to satisfy the test we made
-  3. Refractored until `string_tok_test` was passed
+  2. Implemented the function `tok_string` to satisfy the test we made.
+  3. Refractor the test until `string_tok_test` was passed.
