@@ -58,11 +58,11 @@ We will talk about how to do this in class.
 This is a system similar to the piazza system you may already be familiar with,
 but it is more popular for open source software development.
 
-### couse schedules
+### course schedules
 
 Our lectures will roughly follow this schedule.
 You should do the required readings before class.
-I will occasionally have unscheduled quizes to ensure you are doing the reading.
+I will occasionally have unscheduled quizzes to ensure you are doing the reading.
 
 week | date | reading/quiz | topics
 --- | --- | --- | ---
