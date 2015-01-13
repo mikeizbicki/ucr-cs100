@@ -259,7 +259,7 @@ echo "$1 is negative"
 fi
 ```
 
-For the first 'if', I already introduced that it decides whether there are provided arguments. For the second 'if', the condition is if the first provided argument is great than 0, then the command is echo "$1 is positive". then 'elif' represents 'else if'. Finally, we use 'fi' to end this 'if/else' statement.
+For the first 'if', I already introduced that it decides whether there are provided arguments. For the second 'if', the condition is: if the first provided argument is greater than 0, then the command is echo "$1 is positive". then 'elif' represents 'else if'. Finally, we use 'fi' to end this 'if/else' statement.
 
 For more details, please check this link: http://ss64.com/bash/if.html
 
