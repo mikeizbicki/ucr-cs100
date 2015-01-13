@@ -10,8 +10,8 @@ Your shell will perform the following steps:
 2. Read in a command on one line.
 Commands will have the form:
 ```
-cmd         = executable [ argumentList ] [ connecter cmd ]
-connecter   = || or && or ;
+cmd         = executable [ argumentList ] [ connector cmd ]
+connector   = || or && or ;
 ```
 where `executable` is an executable program in the `PATH` and `argumentList` is a list of zero or more arguments separated by spaces.
 The connector is an optional way you can run multiple commands at once.
