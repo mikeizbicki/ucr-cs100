@@ -558,7 +558,7 @@ website = http://izbicki.me
 ```
 
 You need to create a file in the `people/students` directory that has the same name as your **CS account** and no file extension.
-You need to add into the file all the information contained in the `example001` file.
+You need to add into the file all the information contained in the `examplestudent` file.
 
 * The `name` field should be your full name.
 
