@@ -46,7 +46,7 @@ TDD is not a magic bullet. Even though quality of code is higher, TDD can still 
 
 Because a test was written and passed, does not mean that it is bug free. A programmer may not think of every situtation.
 
-TDD is meant to test and verify your own code. It's not nessesary to test libraries that are included in your code. An example of an unessasary test would be to test std::string `std::string("test") == "test"`. 
+TDD is meant to test and verify your own code. It's not nessesary to test libraries that are included in your code. An example of an unnessasary test would be to test std::string `std::string("test") == "test"`. 
 
 # Examples
 
@@ -55,12 +55,12 @@ To give examples of TDD I will be using the [boost test framework](http://www.bo
 ## Basic Example
 
 This is meant to be a very short introduction to testing. For a basic problem to
-solve I will be using the first problem on
+solve, I will be using the first problem on
 [projecteuler](https://projecteuler.net/problem=1)
 
 `Find the sum of all the multiples of 3 or 5 below 1000.`
 
-First let's write our test in `test/test_project_euler.cpp`.
+First, let's write our test in `test/test_project_euler.cpp`.
 
 ```
 #define BOOST_TEST_MODULE "EulerTest"
@@ -89,7 +89,7 @@ tests/test_project_euler.cpp(12): error in "euler_test": check find_mult(3, 5, 1
 *** 1 failure detected in test suite "EulerTest"
 ```
 
-Our test failed like we wanted it to. Now that we have our test lets implement some code to pass our test.
+Our test failed like we wanted it to. Now that we have our test let's implement some code to pass our test.
 
 ```
 int find_mult(const int &first_num, const int& second_num, const int &upper_bound)
@@ -105,7 +105,7 @@ int find_mult(const int &first_num, const int& second_num, const int &upper_boun
 }
 ```
 
-The function `find_mult` is itterating over all integers from 0 to `upper_bound` and summing all the numbers that are a multiple of `first_num` or `second_num`.
+The function `find_mult` is iterating over all integers from 0 to `upper_bound` and summing all the numbers that are a multiple of `first_num` or `second_num`.
 
 Compile and run to see if we pass our test.
 
@@ -122,7 +122,7 @@ to 1000.
 
 ## Tokenizing A String
 
-In this example I need a function( or functions ) that will take a `string` and return a `vector<string>`.
+In this example, I need a function( or functions ) that will take a `string` and return a `vector<string>`.
 
 The `strings` in the `vector` should contain no whitespaces, and their arrangment should be in the order they appeared in the string.
 
@@ -132,7 +132,7 @@ vector<string> v = some_tok_func(s)
 // v should contain `["Today", "is", "a", "nice", "day!"]`.
 ```
 
-First we lets write our test in `tests/test_string_tok.cpp` The test should be designed such that the first time they are ran they will fail.
+First, let's write our test in `tests/test_string_tok.cpp` The test should be designed such that the first time they are ran they will fail.
 
 ```
 #define BOOST_TEST_MODULE "C++ Unit Tests for StrTok"
@@ -163,7 +163,7 @@ vector<string> tok_string(const string& input)
 
 `tok_string` will always return an empty vector causing `string_tok_test` to fail. 
 
-Lets find out. Compile and run the test.
+Let's find out. Compile and run the test.
 
 ```
 $ g++ -std=c++11  tests/test_string_tok.cpp -o str_test
