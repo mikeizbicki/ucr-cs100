@@ -6,7 +6,7 @@ README Quick Reference Guide
 Program Overview
 ---
 * Give a brief description of what your project is and what it is intended to do.
-* Include an example of what your project can do, something that will grab the attention of some one who just happened upon your repository.
+* Include an example of what your project can do, something that will grab the attention of someone who just happened upon your repository.
 
 How to use
 ---
@@ -25,7 +25,7 @@ Installation guide
 * It is better to explicitly list the commands needed rather then describe the steps. 
   * E.g. ```make``` as opposed to "run make".
 
-Bug/Limitations/Issues
+Bugs/Limitations/Issues
 ---
 * Explicitly list all of the known bugs in your project.
 * If there are any known limitations or issues, explicitly list those as well.

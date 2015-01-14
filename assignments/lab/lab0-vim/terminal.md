@@ -16,9 +16,9 @@ Terms and Definitions
 
 **Shell:** An interface for the terminal that allows for interaction between the computer and the user. In this class, we will be using the Bash shell.
 
-**Terminal:** For the sake of this lab, the "terminal" is the program that the user will run to type in commands. Used interchangably with "shell" and "command line".
+**Terminal:** For the sake of this lab, the "terminal" is the program that the user will run to type in commands. Used interchangeably with "shell" and "command line".
 
-**Command Line:** The command line is a way for the user to interact with the computer through various text commands. Used interchangably with "shell" and "terminal".
+**Command Line:** The command line is a way for the user to interact with the computer through various text commands. Used interchangeably with "shell" and "terminal".
 
 **Directory:** A directory is like a folder. It holds files and other directories.
 
@@ -41,7 +41,7 @@ The symbol `$` is called the "prompt."
 You don't type this into the terminal.
 It's purpose is to let you know that all the text after `$` is a command that should be typed in.
 
-You may be promted to log in after you ssh into hammer. Hammer is a server provided by UCR specifically for CS100 to break stuff! You will be doing all of your work in hammer so remember to always ssh into hammer when you go to lab!
+You may be prompted to log in after you `ssh` into hammer. Hammer is a server provided by UCR specifically for CS100 to break stuff! You will be doing all of your work in hammer so remember to always `ssh` into hammer when you go to lab!
 
 Once you are in hammer, you must enable some CS100-specific settings by typing:
 ```
@@ -49,11 +49,11 @@ $ cs100
 ```
 A pretty message will pop up confirming that you have enabled CS100 settings. Don't forget this step! It's crucial and will save you plenty of headache throughout this quarter.
 
-Every time you open a new terminal, you must ssh into hammer and enable CS100 settings.
+Every time you open a new terminal, you must `ssh` into hammer and enable CS100 settings.
 
 pwd (print working directory)
 ------------------------------------
-The first command you will learn is `pwd`. `pwd` stands for "Print Working Directory" and will output the current directory you are in to the screen. Since you just typed in the ssh command, you should be in your home directory. Try it out:
+The first command you will learn is `pwd`. `pwd` stands for "Print Working Directory" and will output the current directory you are in to the screen. Since you just typed in the `ssh` command, you should be in your home directory. Try it out:
 ```
 $ pwd
 ```
@@ -145,8 +145,8 @@ Let's create a directory name `temp` in our current directory:
 $ mkdir temp
 ```
 
-Opps!
-We've just recieved a message from the higher ups saying that our new directory has an incorrect name. Let's delete `mkdir` and make a new one! Wait a minute...
+Oops!
+We've just received a message from the higher ups saying that our new directory has an incorrect name. Let's delete `mkdir` and make a new one! Wait a minute...
 
 rmdir (remove a directory)
 ---------------------------------------------
@@ -159,7 +159,7 @@ Now that you deleted your directory, make a new directory called `CS`.
 $ mkdir CS
 ```
 
-Let's move on to a new comman- What's that? `CS` is still the wrong directory name? Ok, the next command we'll go over is a more efficient method than deleting and creating a new directory.
+Let's move on to a new command - What's that? `CS` is still the wrong directory name? Ok, the next command we'll go over is a more efficient method than deleting and creating a new directory.
 
 mv (move)
 -------------------------------------------
@@ -193,7 +193,7 @@ Now type `pwd` again! You should now be in the directory you just created. Is th
 
 It's quite empty in here right? Let's furnish it with some files. Create a new file called `main.cpp`. You remember how to do that right?
 
-**Hint:** If you type `cd` with no parameters, it will always take you back to your HOME directory. In this case, it is the directory you were in when you first ssh'd into hammer.
+**Hint:** If you type `cd` with no parameters, it will always take you back to your HOME directory. In this case, it is the directory you were in when you first `ssh` into hammer.
 
 Now lets go back to the directory you were just in previously! How do you go back one directory? That's your exercise!
 
@@ -217,7 +217,7 @@ The syntax of this command is as follows:
 ```
 $ cp [SOURCE] [DESTINATION]
 ```
-**Note:** If the destination path does not exist, cp will create a copy of the file or directory with the name of the destination path given.
+**Note:** If the destination path does not exist, `cp` will create a copy of the file or directory with the name of the destination path given.
 
 Remember that `main.cpp` we left behind in the HOME directory? Lets make a copy of it named `mainbro.cpp` and move it to our CS100 directory with the command:
 ```
@@ -260,7 +260,7 @@ Your command resulted in an error.
 
 This error is due to the conflict from attempting to remove a non-empty directory.
 
-By including the `-r` (recursive) flag, we can sucessfully remove all files and directories within the desired path.
+By including the `-r` (recursive) flag, we can successfully remove all files and directories within the desired path.
 
 Empty this repository with the `-r` flag! Afterwards, check its contents.
 ```
@@ -301,22 +301,22 @@ Lets use the `man` command to find out the purpose of `cat`:
 ```
 $ man cat
 ```
-After some extensive reading, we can see that the main purpose of `cat` is to display the content of a file into stdout.
+After some extensive reading, we can see that the main purpose of `cat` is to display the content of a file into `stdout`.
 
 connectors
 ------------------------------------
 Finally, a more efficient way to quickly run all the commands you've learned is the use of connectors `;`, `&&`, `||`
 The `;` connector will execute every command separated by `;`.
 
-The `&&` connector functions similarly to the && comparison operator in C++, it will execute the next command as long as the previous command suceeded.
+The `&&` connector functions similarly to the && comparison operator in C++, it will execute the next command as long as the previous command succeeded.
 
 The `||` connector functions similarly to the || comparison operator in C++, it will execute commands as long as the previous command failed.
 
 Commands can fail in many different ways. An example of a command failing is running `rmdir` on a directory that does not exist.
 
-When using multiple connectors, using paretheses is extremely important because it tells the computer which order to execute multiple commands.
+When using multiple connectors, using parentheses is extremely important because it tells the computer which order to execute multiple commands.
 
-Using these connectors, we can greatly increase the efficency of our experience with the bash terminal. Here's an example!
+Using these connectors, we can greatly increase the efficiency of our experience with the bash terminal. Here's an example!
 
 ```
 $ mkdir sanfran && touch sanfran/goldengate.txt
@@ -337,7 +337,7 @@ Let's Recap!
 - `cd` changes directories
 - `cp` copies files
 - `rm` removes files
-- `cat` outputs contents of a file into stdout
+- `cat` outputs contents of a file into `stdout`
 - `man` gives detailed descriptions of commands
 
 Final Exercises!
