@@ -91,7 +91,7 @@ You can use the command
 `number_of_commits` is the number of commits that you wish to go back by. If you have 10 commits that you want to squash, you can type in 10, and git will start at the head, and traverse back 10 commits.
 
 
-A window in your prefered text-editor should open with "pick" proceeded by the commit numbers.
+A window in your preferred text-editor should open with "pick" proceeded by the commit numbers.
 If you use "pick", you proceed to add that particular commit into the repository. 
 If you use "squash", you proceed to merge that commit with the previous commit where you put squash.
 When you are doing picking and squashing the commits, exit from the text-editor.
@@ -157,7 +157,7 @@ This will tell you who edit the file within those line numbers on the command li
  
     git stash
 
-This will save your changes all the way back to the previous commit. This allows you to modify or add anything that you might need prior to commiting your older changes.
+This will save your changes all the way back to the previous commit. This allows you to modify or add anything that you might need prior to committing your older changes.
 
 To replace your changes you can use the following command:
 
@@ -180,7 +180,7 @@ This allows you to continue working on that portion of the project.
 If you apply without putting a number, then you apply the most current one in the stash.
 
 ---------------------------
-#more infomation
+#more information
 If you need more information on git, here are some resources that you can checkout.
 
 [git-scm](http://git-scm.com/) - 

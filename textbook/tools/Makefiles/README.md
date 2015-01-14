@@ -47,7 +47,7 @@ Therefore, when you're creating your `Makefile`s, the first target should be the
 Example 2: Prerequisites
 ---
 
-The full syntax for rules includes something called "prerequisistes":
+The full syntax for rules includes something called "prerequisites":
 
 ```
 [targets]: [prerequisites]
