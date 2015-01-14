@@ -81,10 +81,10 @@ The above template lets you document test cases and the useful information that 
 
 - Description: This column gives a brief explanation of the test case. It should be easy to read and understand for you and others who may look at it later.
 - Commands: These are the commands that are being tested. Ideally, these will not be neither redundant nor overly complex.
-- Expected Result: This the behavior that the requirement specs call for. Be sure to also reference your machine's Bash terminal for exactly what should happen.
+- Expected Result: This is the behavior that the requirement specs call for. Be sure to also reference your machine's Bash terminal for exactly what should happen.
 - Actual Result: This column contains a brief message addressing the actual result of the test case. A simple "same as expected" is enough when the test case succeeds. 
 - Status: Either "pass" or "fail". If the test case is not entirely working--for example 97% working--then it should still be consider a "fail" until the issue is fully fixed.
-- Comments: This is a conscise message stating the possible reasons for a failed test case and any other issues that need to be addressed. When a test case changes status from "fail" to "pass", this message should keep a brief summary of the bug that was fixed.
+- Comments: This is a concise message stating the possible reasons for a failed test case and any other issues that need to be addressed. When a test case changes status from "fail" to "pass", this message should keep a brief summary of the bug that was fixed.
 - Reference: The source file and the line numbers that (1) contains the code that dealt with the test and/or (2) possibly contains the bug.
 
 	

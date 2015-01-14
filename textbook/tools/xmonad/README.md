@@ -38,7 +38,7 @@ Now, the command to run the terminal is **MOD-SHIFT-N**. MOD is by default the a
 
 ![](images/terms.png)
 
-As you can see the terminal fills the screen completely. Lets see what happens when run run another terminal.
+As you can see the terminal fills the screen completely. Lets see what happens when run another terminal.
 
 *MOD-SHIFT-N again*
 
@@ -58,7 +58,7 @@ To cycle anticlockwise press **MOD-K**
  
 
 ###Closing the terminal
-To close a focussed window press **MOD-SHIFT-C**
+To close a focused window press **MOD-SHIFT-C**
 
 After *MOD-SHIFT-C*, the screen will look like
 
@@ -95,9 +95,9 @@ A workspace is a virtual screen. Every workspace has a desktop and has access to
 In the xmonad environment, you will have 9 workspaces, which can be accessed using **MOD-1** to **MOD-9**.
 This comes in real handy when you are working on something and suddenly you need to do something else. Instead of closing your current setup, you can just switch to a different workspace and come back later.
 
-###Moving focussed window to another workspace
+###Moving focused window to another workspace
 
-To move the focussed window to different workspace simply enter **MOD-SHIFT-NUM**.
+To move the focused window to different workspace simply enter **MOD-SHIFT-NUM**.
 
 ###Installing Dmenu
 
@@ -107,7 +107,7 @@ For user with debian based distros, run `sudo apt-get install dmenu` in the term
 
 For other distro users, follow the instructions [here](http://software.opensuse.org/download.html?project=utilities%3Asuckless&package=dmenu)
 
-Xmonad has a default key binding to launch dmenu. The combo is **MOD-P**. On pressing MOD-P, you will notice that a toolbar will appear on the top of the screen. Here you can type the name of any application and press *ENTER* to launch it. Even partial names work, as long as there is no ambiguity. For e.g to ruun firefox, you can just type fir and that will do the job.
+Xmonad has a default key binding to launch dmenu. The combo is **MOD-P**. On pressing MOD-P, you will notice that a toolbar will appear on the top of the screen. Here you can type the name of any application and press *ENTER* to launch it. Even partial names work, as long as there is no ambiguity. For e.g to run firefox, you can just type fir and that will do the job.
 
 On pressing *MOD-P*
 
@@ -131,8 +131,8 @@ Ubuntu user should run `unity-control-center`.
 
 ###Personalizing Xmonad
 
-Xmonad is very flexible in personlizations. You can add many things including new keyboard shortcuts, addons etc.
+Xmonad is very flexible in personalizations. You can add many things including new keyboard shortcuts, addons etc.
 
-To configure you have to edit the `~/.xmonad/xmonad.hs` file. The configuration is not so easy as it has to be written in haskell. However, you can find many configurations online. A personal favourite of mine is [this](https://www.haskell.org/haskellwiki/Xmonad/Config_archive/John_Goerzen's_Configuration). This one will also teach you how to add your own keyboard bindings.
+To configure you have to edit the `~/.xmonad/xmonad.hs` file. The configuration is not so easy as it has to be written in haskell. However, you can find many configurations online. A personal favorite of mine is [this](https://www.haskell.org/haskellwiki/Xmonad/Config_archive/John_Goerzen's_Configuration). This one will also teach you how to add your own keyboard bindings.
 
 Report typos and/or broken links at ihund001@ucr.edu

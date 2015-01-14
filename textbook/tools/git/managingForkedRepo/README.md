@@ -146,7 +146,7 @@ hint: 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
-This error occured because after you merged your commits, git thinks that you're local repository is behind the repository on github. To get your merged commit onto your github, you need to force push this change onto your forked repository on github.
+This error occurred because after you merged your commits, git thinks that you're local repository is behind the repository on github. To get your merged commit onto your github, you need to force push this change onto your forked repository on github.
 
 ```
   $ git push -f

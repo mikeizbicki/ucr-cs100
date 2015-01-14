@@ -71,7 +71,7 @@ Looking at the line right below, we see that the 1,024 bytes lost are not recove
 ### How to fix memory leaks
 
 
-To obtain more information about where the memory leak may have occured you can type the command:
+To obtain more information about where the memory leak may have occurred you can type the command:
 
 ```
     $ valgrind --tool=memcheck --leak-check=full ./a.out
@@ -349,7 +349,7 @@ We can see right under ```Command:``` that we have the statement ```Use of unini
 
 We also see that below the line ```Process terminating with default action of signal 11(SIGSEGV)``` we get the message ```Bad permissions for mapped region at address 0x400AC0```. The ```Bad permission``` statement also states that we have not allocated the memory that we want to access.
 
-We can see that Valgrind and Memcheck are trying to help us find our issue by giving us the message ```Use --track-origins=yes to see where uninitialised values come from```. So lets give this a try ourselves:
+We can see that Valgrind and Memcheck are trying to help us find our issue by giving us the message ```Use --track-origins=yes to see where uninitialised values come from```. So let's give this a try ourselves:
 
 Let's run the command:
 
@@ -377,6 +377,6 @@ Conclusion
 
 Valgrind has a lot of functionality that can drastically decrease your debugging time and let you focus on being a better programmer. 
 
-Now you can test your programs uing Valgrind to catch the pesky memory leaks that are almost impossible to find with the naked eye.
+Now you can test your programs using Valgrind to catch the pesky memory leaks that are almost impossible to find with the naked eye.
 
 Happy programming!!!
