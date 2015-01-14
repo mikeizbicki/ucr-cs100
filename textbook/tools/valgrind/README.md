@@ -317,7 +317,7 @@ When we compile and run this program through Valgrind using Memcheck, we get:
     ==4942== Using Valgrind-3.10.0.SVN and LibVEX; rerun with -h for copyright info
     ==4942== Command: ./a.out
     ==4942== 
-    ==4942== Use of uninitialized value of size 8
+    ==4942== Use of uninitialised value of size 8
     ==4942==    at 0x4C2E1E0: strcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
     ==4942==    by 0x400C4D: main (in /home/william/ucr-cs100/tutorials/valgrind/a.out)
     ==4942== 
@@ -340,16 +340,16 @@ When we compile and run this program through Valgrind using Memcheck, we get:
     ==4942== Rerun with --leak-check=full to see details of leaked memory
     ==4942== 
     ==4942== For counts of detected and suppressed errors, rerun with: -v
-    ==4942== Use --track-origins=yes to see where uninitialized values come from
+    ==4942== Use --track-origins=yes to see where uninitialised values come from
     ==4942== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
     Segmentation fault (core dumped)
 ```
 
-We can see right under ```Command:``` that we have the statement ```Use of uninitialized value of size 8```, this statement implies that we tried to use memory that we have not allocated which would cause a segmentation fault. This segmentation fault is shown at the end of the output.
+We can see right under ```Command:``` that we have the statement ```Use of uninitialised value of size 8```, this statement implies that we tried to use memory that we have not allocated which would cause a segmentation fault. This segmentation fault is shown at the end of the output.
 
 We also see that below the line ```Process terminating with default action of signal 11(SIGSEGV)``` we get the message ```Bad permissions for mapped region at address 0x400AC0```. The ```Bad permission``` statement also states that we have not allocated the memory that we want to access.
 
-We can see that Valgrind and Memcheck are trying to help us find our issue by giving us the message ```Use --track-origins=yes to see where uninitialized values come from```. So let's give this a try ourselves:
+We can see that Valgrind and Memcheck are trying to help us find our issue by giving us the message ```Use --track-origins=yes to see where uninitialised values come from```. So let's give this a try ourselves:
 
 Let's run the command:
 
@@ -360,14 +360,14 @@ Let's run the command:
 We get the following output that is different from before:
 
 ```
-    ==5278== Use of uninitialized value of size 8
+    ==5278== Use of uninitialised value of size 8
     ==5278==    at 0x4C2E1E0: strcpy (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
     ==5278==    by 0x400C4D: main (in /home/william/ucr-cs100/tutorials/valgrind/a.out)
-    ==5278==  Uninitialized value was created by a stack allocation
+    ==5278==  Uninitialised value was created by a stack allocation
     ==5278==    at 0x400BFA: main (in /home/william/ucr-cs100/tutorials/valgrind/a.out)
 ```
 
-The extra two lines added from before tell you what function the uninitialized value was created in, in this case ```main```.
+The extra two lines added from before tell you what function the uninitialised value was created in, in this case ```main```.
 
 
 This feature of Valgrind and Memcheck can help tremendously in debugging your programs and save you tons of time.
