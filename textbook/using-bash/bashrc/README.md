@@ -31,7 +31,7 @@ Note: If you would rather not read a guide, and instead ~~steal~~ examine a cust
 <a name="basics"/>
 <h2>Syntax and Basics</h2>
 
-Before we delve into the possibilities, we should go over some basics of what we can user in `.bashrc` to create the file that we want. `~/.bashrc` is written in the Bash syntax. This lanugage is very powerful, and is full of simple tools that will allow you to express complex commands succinctly. In the language, we find there are some constructs that will be useful to you in understanding and, more importantly, creating your own useful tools in Bash. Note that the `#` character denotes the comment symbol. Everything after a `#` will be ignored when entered as a command.
+Before we delve into the possibilities, we should go over some basics of what we can user in `.bashrc` to create the file that we want. `~/.bashrc` is written in the Bash syntax. This language is very powerful, and is full of simple tools that will allow you to express complex commands succinctly. In the language, we find there are some constructs that will be useful to you in understanding and, more importantly, creating your own useful tools in Bash. Note that the `#` character denotes the comment symbol. Everything after a `#` will be ignored when entered as a command.
 
 <a name="vars"/>
 <h4>Variables</h4>
@@ -118,7 +118,7 @@ After some experience with the shell, you might find yourself tiring of typing c
 <a name="color"/>
 <h3>Colors</h3>
 
-Bash has color features based on [ANSI escape codes](http://en.wikipedia.org/wiki/ANSI_escape_code). This is occasionally extra credit, but may more imporantly be used to expand your zen. For instance, these color codes, added to your <code>~/.bashrc</code> file, will allow you to select colors using variable substitution, as discussed earlier.
+Bash has color features based on [ANSI escape codes](http://en.wikipedia.org/wiki/ANSI_escape_code). This is occasionally extra credit, but may more importantly be used to expand your zen. For instance, these color codes, added to your <code>~/.bashrc</code> file, will allow you to select colors using variable substitution, as discussed earlier.
 
     # Normal Colors
     Black='\e[0;30m'        # Black
