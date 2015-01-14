@@ -3,7 +3,7 @@ Basic guide for gdb
 
 #####What is gdb?
 
-GDB is a debugger which allows the user to see what is going on inside of an executed program. If the written program crashes, the user can use GDB to step through the program to see where the program crashed. GDB helps the user to find and locate bugs such as segmentation faults, errors in output formating, ect. However, gdb does not find memory leaks. In order to find memory leaks, tools such as valgrind and cppcheck should be used. One thing to remember while using GDB is that it is a tool to help a programmer debug a program. GDB does not ensure the program is perfect if ran with GDB.
+GDB is a debugger which allows the user to see what is going on inside of an executed program. If the written program crashes, the user can use GDB to step through the program to see where the program crashed. GDB helps the user to find and locate bugs such as segmentation faults, errors in output formatting, ect. However, gdb does not find memory leaks. In order to find memory leaks, tools such as valgrind and cppcheck should be used. One thing to remember while using GDB is that it is a tool to help a programmer debug a program. GDB does not ensure the program is perfect if ran with GDB.
 
 
 #####GDB Download

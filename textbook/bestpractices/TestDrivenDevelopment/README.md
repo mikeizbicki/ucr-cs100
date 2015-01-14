@@ -46,7 +46,7 @@ TDD is not a magic bullet. Even though quality of code is higher, TDD can still 
 
 Because a test was written and passed, does not mean that it is bug free. A programmer may not think of every situation.
 
-TDD is meant to test and verify your own code. It's not nessesary to test libraries that are included in your code. An example of an unnecessary test would be to test std::string `std::string("test") == "test"`. 
+TDD is meant to test and verify your own code. It's not necessary to test libraries that are included in your code. An example of an unnecessary test would be to test std::string `std::string("test") == "test"`. 
 
 # Examples
 
