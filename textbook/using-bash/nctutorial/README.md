@@ -22,7 +22,7 @@ A short tutorial, on a very complicated and versatile tool.
  opens up a terminal-link prompt for the user to use. `netcat` does not, so you can automate tasks and make your life easier by using I/O redirection as well as piping
  with `netcat`.
 
- `netcat` and `telnet` both rely on the usage of computer networking ports. These are not physical ports on the compter (like USB or ethernet), but they are virtual
+ `netcat` and `telnet` both rely on the usage of computer networking ports. These are not physical ports on the computer (like USB or Ethernet), but they are virtual
  ports. Ports in computer networking allow programs on the computer to share
  information with each other, or with someone else over the internet. Think of it like a bucket with two people on each side. One person puts something in the bucket, and
  the other person takes the thing out. These explanations are vastly oversimplified, but they will do for our purposes. However, if you are interested in ports and their
@@ -40,7 +40,7 @@ browsing (HTTP over SSL), and a fun one is 3724 for Xbox Live.
 
 If you type `nc localhost 32981` you probably will not see anything in the output. This is because `netcat` is going to that port, checking if anything is there, and
 returning. It will output what is on that port on the standard output. However, if you type `nc -l localhost 32981` it will appear as though your terminal has frozen. Let it 
-go! It is fine. What you told `netcat` to do is to go to port 32981 and wait there until someone or somthing gives it some data. `-l` tells `netcat` to listen to a port, rather than try to connect to it. You cannot use this with the -p option. As soon as it recieves the data, `netcat`
+go! It is fine. What you told `netcat` to do is to go to port 32981 and wait there until someone or something gives it some data. `-l` tells `netcat` to listen to a port, rather than try to connect to it. You cannot use this with the -p option. As soon as it receives the data, `netcat`
 will close. Now we can start looking at some optional features of `netcat` as well as some examples to illustrate them. When using the `-l` option, `netcat` will default
 to your default interfaces as shown by the `ifconfig` command.
 
@@ -59,7 +59,7 @@ This is a VERY simple system, where you can talk to another terminal session ope
  ```
  nc -l 32981 # Or any port number you prefer above 32768!
  ```
- What this does is it tells `netcat` to listen to port 32981 (Or whatever) and it will print what it recieves.
+ What this does is it tells `netcat` to listen to port 32981 (Or whatever) and it will print what it receives.
 
  On the other window, we will connect to the server:
  ```
