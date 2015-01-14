@@ -1,6 +1,6 @@
 Video Tutorial on System Calls
-==============================
-Here, we have video tutorials for a few select system calls which we found difficult to visualize. Before watching these videos, please make sure you have gone over the [syscall_guide](https://github.com/mikeizbicki/ucr-cs100/tree/cs100-2014fall/tutorials/syscalls/syscall_guide) text tutorial. 
+
+Here, we have video tutorials for a few select system calls which we found difficult to visualize. Before watching these videos, please make sure you have gone over the [syscall_guide](../../../textbook/assignment-help/syscalls) text tutorial. 
 
 ##fork()
 In this video, we illustrate the basics of `fork()`. We demonstrate how `fork()` creates multiple processes that are identified by a pid, how fork returns an integer from each process to help identify if it is the child or parent, how changes or actions in the child do not carry over into the parent, and how zombie processes may be created and prevented.
