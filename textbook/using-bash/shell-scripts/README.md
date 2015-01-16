@@ -1,4 +1,4 @@
-#Tutorial: Simple Syntaxs For Bash Script
+#Tutorial: Simple Syntaxes For Bash Script
 
 ##All begin with a simple example
 
@@ -154,7 +154,7 @@ $ expr 30 % 7
 $ echo `expr 30 % 7`
 ```
 
-Do not use single or double quotes, it only works in the back quote. If you want to perform mathmetic operations to assign value to a variable, you can look at the following example:
+Do not use single or double quotes, it only works in the back quote. If you want to perform mathematic operations to assign value to a variable, you can look at the following example:
 
 ```
 #!/bin/bash
