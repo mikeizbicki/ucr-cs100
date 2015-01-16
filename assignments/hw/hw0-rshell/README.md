@@ -272,7 +272,7 @@ Here is a complete list of resources created by previous cs100 students that mig
 
 * video: [a fun cartoon tutorial](http://youtu.be/2c4ow5RoKA8)
 
-* vidoe: [explanation of `fork` and `exec`](https://www.youtube.com/watch?v=xVSPv-9x3gk)
+* video: [explanation of `fork` and `exec`](https://www.youtube.com/watch?v=xVSPv-9x3gk)
 
 * video: [using bash, github, vim, and syscalls](https://izbicki.me/blog/videoguide-for-github-vim-bash.html)
 
