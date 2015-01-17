@@ -12,7 +12,7 @@ To get you started, the file `ls.cpp` contains code that reads the files in the 
 
 ### submission instructions
 
-You will add this code to your `rshell` project on github.  Create a branch called `ls` and do all of your work under this branch.  When finished, merge with the `master` branch and create a tag called `hw1`.
+You will add this code to your `rshell` project on GitHub.  Create a branch called `ls` and do all of your work under this branch.  When finished, merge with the `master` branch and create a tag called `hw1`.
 
 To download and grade your homework, the TA will run the following commands:
 
@@ -46,7 +46,7 @@ As with your previous assignments: Your `tests` directory will contain a file ca
 
 You MAY NOT look at the source code of any other student.
 
-You MAY discuss with other students in general terms how to use the unix functions.
+You MAY discuss with other students in general terms how to use the Unix functions.
 
 You are ENCOURAGED to talk with other students about test cases.
 You are allowed to freely share ideas in this regard.

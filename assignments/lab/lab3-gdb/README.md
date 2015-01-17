@@ -8,7 +8,7 @@ They ask: "Why go through all the hassle of `gdb` when I can just add `cerr` sta
 Both methods work on small projects.
 But on large projects `cerr` statements won't work.
 And with practice, you'll be much faster at debugging using `gdb` than you would be with `cerr` statements.
-At first it will be weird, but  stick with it!
+At first it will be weird, but stick with it!
 I promise it will pay off!
 **If you ever catch yourself putting in `cerr` statements, STOP!
 Switch to using `gdb`!**

@@ -1,3 +1,20 @@
+# more command line utilities
+
+The commands will require you to use the `link`, `unlink`, and `rmdir` system commands.
+
+### `rm`
+
+Implement your own version of the `rm` command.  You must be able to support an unlimited number of files passed in as command line parameters.  If any of those files are directories, you must not delete them unless the optional `-r` flag is also present.  Instead, print a warning message.
+
+### `mv`
+
+Implement your own version of the `mv` command.  Given the command:
+
+```
+mv file1 file2
+```
+
+If `file2` does not exist, then you should rename `file1` to `file2`.  Otherwise, if `file2` is a directory, you should move `file1` into `file2`.  If `file2` is not a directory, you should print an error message.
 # how to be a spammer
 
 You should complete this lab using pair programming with a new partner.
@@ -8,7 +25,7 @@ In this lab, we're going to learn to send spam emails.  It turns out that with t
 
 First, you're going to practice sending these emails.  Then, you're going to write a bash script to automate the process.
 
-**IMPORTANT:** Don't use this for evil!  It will get your cs account suspended and could even get you arrested!
+**IMPORTANT:** Don't use this for evil!  It will get your CS account suspended and could even get you arrested!
 
 #### spoofing an email
 
@@ -38,7 +55,7 @@ The dot at the end is very important.  It must be on a line all by itself.  That
 
 #### automate the process using bash
 
-In this part of the lab, you're going to write a bash script that sends spam to your friends.  The script should be called `sendspam.sh`.  It will take two parameters.  The first is the email address of the recipient, and the second is the email of the sender.  Your script will read stdin to get the body of the email, and the subject line will always be `This email is spam!`.
+In this part of the lab, you're going to write a bash script that sends spam to your friends.  The script should be called `sendspam.sh`.  It will take two parameters.  The first is the email address of the recipient, and the second is the email of the sender.  Your script will read `stdin` to get the body of the email, and the subject line will always be `This email is spam!`.
 
 For example, if you were a jerk, you could spoof an email from me to one of your classmates using the command:
 

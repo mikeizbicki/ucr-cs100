@@ -21,7 +21,7 @@ $ cat < existingInputFile | tr A-Z a-z | tee newOutputFile1 | tr a-z A-Z > newOu
 **IMPORTANT:** This is a necessary but not sufficient test case.  You must come up with others on your own.
 
 Bash has an extensive syntax for redirection, and you are not required to implement all of it.
-But if you're curious, see the [linux documentation project's bash io-redirection tutorial](http://www.tldp.org/LDP/abs/html/io-redirection.html) for details.
+But if you're curious, see the [Linux documentation project's bash IO-redirection tutorial](http://www.tldp.org/LDP/abs/html/io-redirection.html) for details.
 
 ### submission instructions
 
@@ -57,7 +57,7 @@ As with your previous assignments: Your `tests` directory will contain a file ca
 
 You MAY NOT look at the source code of any other student.
 
-You MAY discuss with other students in general terms how to use the unix functions.
+You MAY discuss with other students in general terms how to use the Unix functions.
 
 You are ENCOURAGED to talk with other students about test cases.
 You are allowed to freely share ideas in this regard.
@@ -74,7 +74,7 @@ You are ENCOURAGED to look at [bash's source code](https://www.gnu.org/software/
 
 #### extra credit 1
 
-The bash shell has an additional form of input redirection that let's you redirect from a string instead of a file.  For example, these two commands will give us the same output:
+The bash shell has an additional form of input redirection that lets you redirect from a string instead of a file.  For example, these two commands will give us the same output:
 
 ```
 $ echo extra credit rocks | cat
@@ -90,5 +90,5 @@ For example,
 ```
 $ g++ main.cpp 2> errors
 ```
-will direct stderr (which is where g++ prints error messages) to the file errors.
+will direct `stderr` (which is where g++ prints error messages) to the file errors.
 If you implement this syntax for any file descriptor and both `>` and `>>`, you will get up to 20 points extra credit.

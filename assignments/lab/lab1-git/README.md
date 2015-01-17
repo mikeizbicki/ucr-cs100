@@ -2,9 +2,9 @@
 
 We will not be using ilearn in this class.  Instead, we will be using a version control system called `git`.  Version control systems are widely used in industry and in open source projects.  They are the tool that lets many programmers work together on large, complex software.  I don't know what programming language you will use at your future job (it may not even exist yet!), but I guarantee you will be using version control.
 
-In this lab, you will first learn the basics of how to use `git` and github.  Then, we will discuss how to use these tools to access your grades and submit assignments.
+In this lab, you will first learn the basics of how to use `git` and GitHub.  Then, we will discuss how to use these tools to access your grades and submit assignments.
 
-### creating your first repo (and some basic unix commands)
+### creating your first repo (and some basic Unix commands)
 
 Open a terminal, and `cd` into the directory you will be doing your cs100 work in.  Then create a folder named `firstrepo` and `cd` into it:
 
@@ -32,7 +32,7 @@ Now we are ready to add some files into our repo.  Every repo in this class must
 $ touch README
 ```
 
-The `touch` command is a standard unix command.  If the input file does not already exist, `touch` creates an empty file with that name.  If the file does already exist, it updates the file's timestamp to the current time.  The `ls -l` command displays the full information about each file in the current directory.  Run the following commands:
+The `touch` command is a standard Unix command.  If the input file does not already exist, `touch` creates an empty file with that name.  If the file does already exist, it updates the file's timestamp to the current time.  The `ls -l` command displays the full information about each file in the current directory.  Run the following commands:
 
 ```
 $ ls -l
@@ -186,7 +186,7 @@ Every version of our repo is called a "branch."  A project can have many branche
 $ git branch
 ```
 
-This should list just a single branch called "master."  This branch was created for you automatically when you ran the `git init` command.
+This should list just a single branch called `master`.  This branch was created for you automatically when you ran the `git init` command.
 
 One way to think of branches is as a nice label for your commit hashes.  Your "master" branch currently points to your commit with the message "modified the README."  That's why when we ran `git checkout master` above, it restored our project to the state of that commit.  We could also have used `git checkout [hash]`, if you replaced `[hash]` with the appropriate hash value.  But that's much less convenient.  When you use `git checkout` in the future, you will usually be using it on branch names.
 
@@ -269,7 +269,7 @@ Now your tree looks like:
 <img src="images/6.png?align=true">
 </p>
 
-Let's verify that our changes affected only the userinput branch and not the master branch.  First, checkout the master branch, then cat the `main.cpp` file, then return to the user input branch.
+Let's verify that our changes affected only the `userinput` branch and not the `master` branch.  First, checkout the master branch, then cat the `main.cpp` file, then return to the user input branch.
 
 ```
 $ git checkout master
@@ -465,11 +465,11 @@ You should check the [git cheatsheet](https://github.com/mikeizbicki/ucr-cs100/b
 
 ## enrolling in this course
 
-We will not be using ilearn in this course.  We will be using git and github to manage everything.  This will give you practice working with open source software.  To enroll in this course, you will follow the same steps that you would do to contribute to an open source project.
+We will not be using ilearn in this course.  We will be using git and GitHub to manage everything.  This will give you practice working with open source software.  To enroll in this course, you will follow the same steps that you would do to contribute to an open source project.
 
 ### subscribing to the course
 
-If you do not already have a github account, you will need to create one.  Go to http://www.github.com and register an account.  Your github account does NOT need to be the same as your cs account.  For example, my account is just my full name `mikeizbicki`.  Feel free to get creative and pick something fun.  If you already have a github account, you do not need to register a new one.
+If you do not already have a GitHub account, you will need to create one.  Go to http://www.github.com and register an account.  Your GitHub account does NOT need to be the same as your CS account.  For example, my account is just my full name `mikeizbicki`.  Feel free to get creative and pick something fun.  If you already have a GitHub account, you do not need to register a new one.
 
 Return to http://github.com/mikeizbicki/ucr-cs100. At the top of the page there is a button labeled `Watch`:
 
@@ -499,7 +499,7 @@ Click this button to create a new version of this repository in your own GitHub 
 
 By default, you are the only person with write access to your new repository.  You must give all the instructors write access so we can update your grades.  Visit the page:
 
-*(Use your actual github username below)*
+*(Use your actual GitHub username below)*
 
 ```
 https://github.com/examplestudent/ucr-cs100
@@ -531,7 +531,7 @@ Because you don't have write permission to this repo, adding changes will involv
 
 You've already forked the repository, so we can skip that step.  In order to modify the forked repo, you'll need to copy it onto your local computer.  This process is called "cloning" a repository.  Run the command:
 
-*(Use your actual github username below)*
+*(Use your actual GitHub username below)*
 
 ```
 git clone https://github.com/examplestudent/ucr-cs100.git
@@ -587,17 +587,17 @@ You are not required to participate, but you still MUST provide valid social net
 In order to opt out, you should create new accounts at each of the sites, provide those usernames, and then never user those accounts again.
 
 We have two more steps to get your changes added into the original repository.
-First, we have to update your forked repository on the github servers.
+First, we have to update your forked repository on the GitHub servers.
 Run the command:
 
 ```
 git push origin 2015winter
 ```
 
-This "pushes" all the changes you've made back up to github.
+This "pushes" all the changes you've made back up to GitHub.
 
 Now you need to issue a "pull request" to this repository.
-This is done through the github web server and not through the command line.
+This is done through the GitHub web server and not through the command line.
 Visit your forked project's webpage at: http://www.github.com/yourusername/ucr-cs100.
 There is a dull gray button labeled `pull request`:
 
@@ -611,7 +611,7 @@ Once you issue your pull request, the TA will review your contribution and add i
 
 ## references
 
-We've only scratched the surface of what the git command has to offer.  You should be able to get by in this course using just these commands.  But if your looking for more info, here's some good links:
+We've only scratched the surface of what the git command has to offer.  You should be able to get by in this course using just these commands.  But if you are looking for more info, here's some good links:
 
 This webpage is a reference for the most common and useful git commands.
 
