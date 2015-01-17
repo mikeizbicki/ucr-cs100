@@ -87,7 +87,7 @@ or
 sed -i 's/aol.com/gmail.com/' oldlist      #the '-i' flag modifies the passed in file and puts the newly modified file back into the old one
 ```
 
-which replaces the first occurence of "aol.com" on each line of the input source with "gmail.com".
+which replaces the first occurrence of "aol.com" on each line of the input source with "gmail.com".
 
 **NOTE:** `sed` can be written with or without single quotations. Although it is better practice to always include them.
 
@@ -103,7 +103,7 @@ If `sed` is called without a source of input:
 sed 's/aol.com/gmail.com/'
 ```
 
-`sed` will become "hungup" and will wait for input from standard input (input manually entered input from the user) where `sed` will execute its commands as the user passes in new lines for it to anaylze.
+`sed` will become "hungup" and will wait for input from standard input (input manually entered input from the user) where `sed` will execute its commands as the user passes in new lines for it to analyze.
 
 `sed` commands can also be listed together into a file called a **sed script** (which is used instead of an explicit regular expression or search pattern with the `-f` flag). A `sed` script would like,
 
@@ -154,7 +154,7 @@ There are four parts to the substitution command:
 *1.* The command character (in this case `s` for substitution) must go on the left side of the first
 delimiter.
 
-*2.* The character after `s` is called a delimiter. The delimiters are needed to parse the command, to seperate the substitution command from the search pattern and seperate the search pattern from the replacement string. In the case of the above example, the delimiter is a slash, but the delimiter can be any character you want as long as there are three of them:
+*2.* The character after `s` is called a delimiter. The delimiters are needed to parse the command, to separate the substitution command from the search pattern and separate the search pattern from the replacement string. In the case of the above example, the delimiter is a slash, but the delimiter can be any character you want as long as there are three of them:
 
 ```
 echo aol.com | sed 's/aol.com/gmail.com/'
@@ -213,7 +213,7 @@ The president of the UCR ACM chapter has the 100 new members all enter their pho
 Since there is no way for him to anticipate the exact first three numbers for each phone number, the president will have to write a **regular expression** to get the job done. Regular expressions themselves are worthy of their own tutorial, so we will not delve too deep into the intricacies of writing one, but we will use them to demonstrate `sed`&#39;s power. For a detailed introduction to regular expressions, please visit [this][regex] tutorial.
 
 The president&#39;s regular expression will require a `^`, which in a regular expression dictates that the match must begin at the start of the line, a
-`[[:digit:]]`, which translates to the first character of a match needing to be a digit, and lastily a `&`, which is a variable that represents the pattern that was matched.
+`[[:digit:]]`, which translates to the first character of a match needing to be a digit, and lastly a `&`, which is a variable that represents the pattern that was matched.
 
 Since the president wants to capture the first three digit of each line, he will need three `[[:digit:]]`&#39;s and since he needs to place parentheses around those first three digits, he will simply put parentheses around the `&` after the second delimiter.
 

@@ -10,8 +10,8 @@ Your shell will perform the following steps:
 2. Read in a command on one line.
 Commands will have the form:
 ```
-cmd         = executable [ argumentList ] [ connecter cmd ]
-connecter   = || or && or ;
+cmd         = executable [ argumentList ] [ connector cmd ]
+connector   = || or && or ;
 ```
 where `executable` is an executable program in the `PATH` and `argumentList` is a list of zero or more arguments separated by spaces.
 The connector is an optional way you can run multiple commands at once.
@@ -28,22 +28,30 @@ is equivalent to:
 ```
 $ ls -a; echo hello; mkdir test
 ```
-There should be no limit to the number of commands that can be chained together using these operators.
+There should be no limit to the number of commands that can be chained together using these operators,
+and your program must be able to handle any combination of operators.
+For example, you should be able to handle the command:
+```
+$ ls -a; echo hello && mkdir test || echo world; cd test
+```
 
 3. Execute the command.
 This will require using the syscalls `fork`, `execvp`, and `waitpid`.
-You should refer to the man pages for detailed instructions on how to use these functions.
+Previous cs100 students created a [written tutorial](../../../tutorials/syscalls/README.md)
+and two video tutorials
+( [a fun cartoon tutorial](http://youtu.be/2c4ow5RoKA8)
+; [more serious explanation](https://www.youtube.com/watch?v=xVSPv-9x3gk)).
+You should also refer to the man pages for detailed instructions.
 
-4. You must have a special built in command of `exit` which exits your shell.
+4. You must have a special built-in command of `exit` which exits your shell.
 
 5. Anything that appears after a `#` character should be considered a comment.
 For example, in the command `ls -lR /`, you would execute the program `/bin/ls` passing into it the parameters `-lR` and `/`.
 But in the command `ls # -lR /`, you would execute `/bin/ls`, but you would not pass any parameters because they appear in the comment section.
 
 **IMPORTANT:**
-Most bash commands are actually executables located in `/bin`, `/usr/bin/`, or a similar directory.
-But some commands are special and are built-in to bash.
-The `cd` command is the most common example.
+Most bash commands are actually executables located in `/bin`, `/usr/bin/` (e.g. `ls`).
+But some commands are are built-in to bash (e.g. `cd`).
 So while the `ls` command should "just work" in your shell, the `cd` command won't.
 You'll be adding this feature in a later homework.
 
@@ -51,7 +59,7 @@ You'll be adding this feature in a later homework.
 Pay careful attention to how you parse the command string the user enters.
 There are many ways to mess this up and introduce bugs into your program.
 You will be adding more parsing features in future assignments, so it will make your life much easier if you do it right the first time!
-I recommend using either the `strtok` function from the C standard libraries or the `Tokenizer` class provide in the [boost library](http://www.boost.org/doc/libs/1_36_0/libs/tokenizer/tokenizer.htm).
+I recommend using either the `strtok` function from the C standard libraries (see [this tutorial](../../../textbook/assignment-help/strtok/README.md) by former cs100 student Dave MacPherson) or the `Tokenizer` class provide in the [boost library](http://www.boost.org/doc/libs/1_36_0/libs/tokenizer/tokenizer.htm).
 Students often don't do this section of the assignment well and end up having to redo all of assignment one in order to complete the future assignments.
 
 ### submission instructions
@@ -60,8 +68,7 @@ Create a new project on github called `rshell`.
 Create a branch called `exec`.
 Do all of your work under this branch.
 When finished, merge the `exec` branch into the `master` branch, and create a tag called `hw0`.
-Remember that tags and branches in git are case sensitive,
-so please double check that the letters in your tag are lower case to avoid problems when submitting your assignment.
+Remember that tags and branches in git are case sensitive!
 
 To download and grade your homework, the TA will run the following commands from the `hammer` server:
 
@@ -83,10 +90,6 @@ NO EXCEPTIONS.
 
 ### project structure
 
-**IMPORTANT:**
-The file/directory names below are a standard convention.
-You must use the exact same names in your project, including capitalization.
-
 You must have a directory called `src` which contains all the source code files for the project.
 
 You must have a `Makefile` in the root directory.
@@ -94,7 +97,8 @@ In the `Makefile` you will have two targets.
 The first target is called `all` and the second target is called `rshell`.
 Both of these targets will compile your program using `g++` with the flags: `-Wall -Werror -ansi -pedantic`.
 
-You must NOT have a directory called `bin` in the project; however, when the project is built, this directory must be created and all executable files placed here.
+You must NOT have a directory called `bin` in the project;
+however, when the project is built, this directory must be created and all executable files placed here.
 
 You must have a `LICENSE` file in your project.
 You may select any open source license.
@@ -104,14 +108,18 @@ You must have a `README.md` file.
 This file should briefly summarize your project.
 In particular, it must include a list of known bugs.
 If you do not have any known bugs, then you probably have not sufficiently tested your code!
-See the testing section below for more details.
-I recommend watching [this video tutorial](https://izbicki.me/blog/videoguide-for-github-vim-bash.html#readme) on creating a good `README` file.
+For more details on how to write a good README file, see [this tutorial](../../../textbook/bestpractices/WritingREADMEs/README.md) by former cs100 student Alexander Ortiz.
+You must use [the Markdown formatting language](../../../textbook/bestpractices/WritingREADMEs/Markdown.md) when writing your README.
 
 You must have a directory called `tests`.
 The directory will contain a file called `exec.script` that contains all of the test cases you tried.
 You will generate the file using the `script` command, and it must be succinct (i.e. it cannot have unnecessary commands in it).
 You should use comments in your script to document what you are testing with each test case.
 [This video tutorial](https://izbicki.me/blog/videoguide-for-github-vim-bash.html#script) explains how to use the `script` command.
+
+**IMPORTANT:**
+The file/directory names above are a standard convention.
+You must use the exact same names in your project, including capitalization.
 
 ### coding conventions
 
@@ -125,6 +133,7 @@ Any submission that uses both spaces and tabs for indentation will receive an au
 
 Every time you run a syscall, you must check for an error condition.
 If an error occurs, then call `perror`.
+For every syscall you use that is not error checked, you will receive an automatic -5 points.
 For examples on when, how, and why to use `perror`, see [this video tutorial](https://izbicki.me/blog/videoguide-for-github-vim-bash.html#perror).
 
 ### testing
@@ -233,7 +242,8 @@ extra credit:
 -->
 
 **IMPORTANT:**
-Your project structure is not explicitly listed in the grading schedule above, but if you do not format your project correctly, you will lose points.
+Your project structure is not explicitly listed in the grading schedule above.
+But for each part of the project structure you don't follow, you will receive an automatic -20 points.
 
 **IMPORTANT:**
 Your test cases are also not explicitly listed above, but they are included implicitly in each category.
@@ -254,10 +264,20 @@ You must not hard code the username or hostname!
 **REMINDER:**
 If anything is unclear about this assignment, remember that you can get extra credit by submitting pull requests and asking good questions in the issue tracker.
 
-### additional resources
+## additional resources
 
-Check out some [nice tutorials](../../../tutorials/syscalls/README.md) prepared by previous cs100 students:
+Here is a complete list of resources created by previous cs100 students that might help with this assignment:
 
-[![video guide](http://i.imgur.com/3hRxF4x.jpg)](https://www.youtube.com/watch?v=xVSPv-9x3gk).
+* [written tutorial on syscalls](../../../textbook/assignment-help/syscalls/exec.md)
 
+* video: [a fun cartoon tutorial](http://youtu.be/2c4ow5RoKA8)
 
+* video: [explanation of `fork` and `exec`](https://www.youtube.com/watch?v=xVSPv-9x3gk)
+
+* video: [using bash, github, vim, and syscalls](https://izbicki.me/blog/videoguide-for-github-vim-bash.html)
+
+* [writing README files](../../../textbook/bestpractices/WritingREADMEs/README.md)
+
+* [the Markdown formatting language](../../../textbook/bestpractices/WritingREADMEs/Markdown.md)
+
+* [writing Makefiles](../../../textbook/tools/Makefiles/README.md)

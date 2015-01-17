@@ -78,7 +78,7 @@ Download the winning files here: [**www.ioccc.org/years.html#2012_hamano**](http
 
 ##2. Helpful things to know
 
-This section is intended to provide a starting point to begin deobfuscation and convey prequisite information.
+This section is intended to provide a starting point to begin deobfuscation and convey prerequisite information.
 
 
 ####Operation of hamano.c
@@ -98,7 +98,7 @@ Become familiar with the basic structure of an unpolluted pdf file, comparing an
 This will be used to remove code not useful to pdf creation and as a guide to direct deobfuscation.
 
 
-_Note:_ the file below has been modified to be of reduced size, it is the output of hamano, and anything which is not pdf relevant has been ommitted
+_Note:_ the file below has been modified to be of reduced size, it is the output of hamano, and anything which is not pdf relevant has been omitted
 
 ```
 **HEADER**
@@ -334,7 +334,7 @@ Nyan w[]={"+*-(,&-&","+*,&-&","+*.&/&","+*/*/+","+*())'('"  ,"+**&)&","+*(&'&","
 
 2. Typedef to hide variable types
 
-3. Unecessary variable creation
+3. Unnecessary variable creation
 
 4. Use of memory addresses stored in an array
 

@@ -1,4 +1,4 @@
-#Tutorial: Simple Syntaxs For Bash Script
+#Tutorial: Simple Syntaxes For Bash Script
 
 ##All begin with a simple example
 
@@ -154,7 +154,7 @@ $ expr 30 % 7
 $ echo `expr 30 % 7`
 ```
 
-Do not use single or double quotes, it only works in the back quote. If you want to perform mathmetic operations to assign value to a variable, you can look at the following example:
+Do not use single or double quotes, it only works in the back quote. If you want to perform mathematic operations to assign value to a variable, you can look at the following example:
 
 ```
 #!/bin/bash
@@ -259,7 +259,7 @@ echo "$1 is negative"
 fi
 ```
 
-For the first 'if', I already introduced that it decides whether there are provided arguments. For the second 'if', the condition is if the first provided argument is great than 0, then the command is echo "$1 is positive". then 'elif' represents 'else if'. Finally, we use 'fi' to end this 'if/else' statement.
+For the first 'if', I already introduced that it decides whether there are provided arguments. For the second 'if', the condition is: if the first provided argument is greater than 0, then the command is echo "$1 is positive". then 'elif' represents 'else if'. Finally, we use 'fi' to end this 'if/else' statement.
 
 For more details, please check this link: http://ss64.com/bash/if.html
 

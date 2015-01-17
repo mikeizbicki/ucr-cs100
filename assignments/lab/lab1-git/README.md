@@ -461,7 +461,7 @@ $ git add README
 $ git commit -m "changed the README"
 ```
 
-You should check the [git cheatsheet](git-cheatsheet.md) to figure out what the `git branch -d` command does.
+You should check the [git cheatsheet](https://github.com/mikeizbicki/ucr-cs100/blob/2015winter/textbook/cheatsheets/git-cheatsheet.md) to figure out what the `git branch -d` command does.
 
 ## enrolling in this course
 
@@ -539,21 +539,26 @@ git clone https://github.com/examplestudent/ucr-cs100.git
 
 This will create a folder in your current working directory called `ucr-cs100`.  This folder contains the contents of the repo you just cloned.
 
-In the directory `people/students`, there is a file called `example001` that contains the following information:
+In the directory `people/students`, there is a file called `examplestudent` that contains the following information:
 
 ```
 name = Mike Izbicki
 giturl = http://github.com/examplestudent/ucr-cs100.git
 
+# you MUST put valid accounts for each of the following websites below
+# if you do not have an account (or do not want to list one you already have) then you may create a new, empty account
 github = examplestudent
 stackoverflow = mikeizbicki
 slashdot = jackpirate
 reddit = PokerPirate
 hackernews = jackpirate
+
+# only include a personal website if you already have one
+website = http://izbicki.me
 ```
 
 You need to create a file in the `people/students` directory that has the same name as your **CS account** and no file extension.
-You need to add into the file all the information contained in the `example001` file.
+You need to add into the file all the information contained in the `examplestudent` file.
 
 * The `name` field should be your full name.
 
