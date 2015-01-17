@@ -171,7 +171,7 @@ Macros used can be found on the man page.
 
 **includes:** `#include <unistd.h>`
 
-**declaration:** (multiple declarations depending on which `exec` funtion is used)
+**declaration:** (multiple declarations depending on which `exec` function is used)
 
 Here is an example of the two most common ones: `int execv(const char *path, char *const argv[]);`  `int execvp(const char *file, char *const argv[]);`
 

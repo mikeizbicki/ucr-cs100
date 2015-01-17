@@ -636,5 +636,9 @@ Complete source of deobfuscated code can be found attached as myhamano.c
 
 outputORIG.pdf is output from unchanged hamano using text `aabbccddxx`
 
+<<<<<<< HEAD
 output.pdf is output from myhamano.c using text `aabbccddxx`
 
+=======
+output.pdf is ouput from myhamano.c using text `aabbccddxx`
+>>>>>>> a620dbeaf176e83dc8b2de8d7f0a399b7deaf225
