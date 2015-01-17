@@ -49,7 +49,7 @@ I think ~~your~~ you're bad at grammar.
     
 Lists and nested lists
 ---
-Lists can either be ordered or unordered.To create an ordered list begin the list item with ```n.``` where ```n``` is the number of the list item. To create an unordered list begin each item with an ```*```. Lists can be nested by using white space to indent the nested items.
+Lists can either be ordered or unordered. To create an ordered list begin the list item with ```n.``` where ```n``` is the number of the list item. To create an unordered list begin each item with an ```*```. Lists can be nested by using white space to indent the nested items.
 
 Example usage:
     
@@ -155,3 +155,4 @@ Result:
         <td>too many</td>
     </tr>
 </table>
+
