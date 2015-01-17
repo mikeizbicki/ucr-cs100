@@ -173,7 +173,7 @@ Unlike function templates, class templates don’t use arguments to figure out t
 ```
 Object <int> myobject;
 ```
-As we can see, class templates allow us to create abstract objects with unique behaviour that are reusable for multiple types.
+As we can see, class templates allow us to create abstract objects with unique behavior that are reusable for multiple types.
 These attributes are very useful for creating abstract data structures with specific functions such as queues, stacks, and maps.
 
 ##Multiple Types with Class Templates
@@ -220,12 +220,12 @@ int main()
 ```
 The instantiation of the map in the code above includes a key type of string and a value type of int. In the second line, the number for index **Michael** is set to **5023**. These two types are paired together in the Pair class template.
 
-As we can see, templates tend to make certain implementations easier to write and understand because theres less clutter to look at.
+As we can see, templates tend to make certain implementations easier to write and understand because there is less clutter to look at.
 
 ##Ok, so why should I use them?
 
 
-As mentioned above, class templates can be used for creating objects with unique behaviour that are adaptable.
+As mentioned above, class templates can be used for creating objects with unique behavior that are adaptable.
 Let's say we want to implement a generic stack class:
 ```
 template <class T>
@@ -243,7 +243,7 @@ public:
 };
 
 ```
-A stack is an abstract container that only manipulates the last value whether it is adding or removing values. Without templates, the stack class wouldn’t be able to apply this behaviour to different types.
+A stack is an abstract container that only manipulates the last value whether it is adding or removing values. Without templates, the stack class wouldn’t be able to apply this behavior to different types.
 As you can see, using templates is crucial when implementing containers because normal functions would not be able to handle multiple types.
 
 Templates are easier to write and understand because you are implementing the code once for various types instead of writing almost identical code multiple times.
@@ -256,7 +256,7 @@ Another code generation tool are Macros. Macros come from C while templates are 
 
 Since templates run at compile time, they take more build time but are more safe(more on this later).
 
-There are two types of macros: “Object-like” macros that take no arguments, and “function-like” macros that can be defined to accept arguments. To specify an Object-like macro, you would write #define followed by an identifier name and a string or numerics. When the preprocessor sees this it will substitute each occurrence of that macro in source code.
+There are two types of macros: “Object-like” macros that take no arguments, and “function-like” macros that can be defined to accept arguments. To specify an Object-like macro, you would write #define followed by an identifier name and a string or numeric. When the preprocessor sees this it will substitute each occurrence of that macro in source code.
 
 Here is a basic example program using macros:
 
@@ -275,7 +275,7 @@ int main()
 
 Note how the identifier name are always all upper case. It is not required but it is convention. Also note how the NAME macro has quotations around Greg.
 
-Everytime `NAME` appears in the program, the preprocessor will substitute it with "Greg". If the quotes were not there then that would lead to a syntax error.
+Every time `NAME` appears in the program, the preprocessor will substitute it with "Greg". If the quotes were not there then that would lead to a syntax error.
 
 Here is what the compiler error looks like when you forget the quotes on Greg in the macro definition:
 
@@ -410,4 +410,5 @@ The last thing about macros is that they cannot be stepped into with a debugger 
 By now, I hope that you have a good enough understanding of templates to use it on your own. Even though you may end up never using it, it is important to understand the structure of templates as you may see them in other programs.
 
 Just like programming, take templates one step at a time. Try not to dive in too deep and make a complicated program with templates. Doing so while you're still inexperienced may lead to seeing those hard to understand compiler errors. Even with simple templates, you may still run into compiler errors. However, fixing those errors will allow you to be more comfortable with templates.
+
 
