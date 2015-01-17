@@ -107,7 +107,11 @@ For user with debian-based distros, run `sudo apt-get install dmenu` in the term
 
 For other distro users, follow the instructions [here](http://software.opensuse.org/download.html?project=utilities%3Asuckless&package=dmenu)
 
+<<<<<<< HEAD
 Xmonad has a default key binding to launch dmenu. The combo is **MOD-P**. On pressing MOD-P, you will notice that a toolbar will appear on the top of the screen. Here you can type the name of any application and press *ENTER* to launch it. Even partial names work, as long as there is no ambiguity. For e.g. to run Firefox, you can just type fir and that will do the job.
+=======
+Xmonad has a default key binding to launch dmenu. The combo is **MOD-P**. On pressing MOD-P, you will notice that a toolbar will appear on the top of the screen. Here you can type the name of any application and press *ENTER* to launch it. Even partial names work, as long as there is no ambiguity. For e.g to run firefox, you can just type fir and that will do the job.
+>>>>>>> a620dbeaf176e83dc8b2de8d7f0a399b7deaf225
 
 On pressing *MOD-P*
 
@@ -131,9 +135,17 @@ Ubuntu user should run `unity-control-center`.
 
 ###Personalizing Xmonad
 
+<<<<<<< HEAD
 Xmonad is very flexible in personalizations. You can add many things including new keyboard shortcuts, add-ons etc.
 
 To configure you have to edit the `~/.xmonad/xmonad.hs` file. The configuration is not so easy as it has to be written in haskell. However, you can find many configurations online. A personal favorite of mine is [this](https://www.haskell.org/haskellwiki/Xmonad/Config_archive/John_Goerzen's_Configuration). This one will also teach you how to add your own keyboard bindings.
 
 Report typos and/or broken links at ihund001@ucr.edu
 
+=======
+Xmonad is very flexible in personalizations. You can add many things including new keyboard shortcuts, addons etc.
+
+To configure you have to edit the `~/.xmonad/xmonad.hs` file. The configuration is not so easy as it has to be written in haskell. However, you can find many configurations online. A personal favorite of mine is [this](https://www.haskell.org/haskellwiki/Xmonad/Config_archive/John_Goerzen's_Configuration). This one will also teach you how to add your own keyboard bindings.
+
+Report typos and/or broken links at ihund001@ucr.edu
+>>>>>>> a620dbeaf176e83dc8b2de8d7f0a399b7deaf225
