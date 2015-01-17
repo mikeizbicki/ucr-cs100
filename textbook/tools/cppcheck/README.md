@@ -98,7 +98,7 @@ $
 ####Why?
 In this example, we see some stylistic problems with this code. 
 While it may not cause any problems in the program, it is good practice to not have unnecessary code.
-Although, cppcheck does not normally display these style isses.
+Although, cppcheck does not normally display these style issues.
 In order to display the style issues, we run the command `--enable=style`.
 At the same time, enabling style will also enable warning, performance, and portability issues.
 
@@ -388,4 +388,5 @@ cppcheck works in a way where it trues to avoid false positives so many of the b
 this being said, there will be many things that cppcheck will not catch such as [stylistic errors](#styleuse), syntax, and [runtime](#overflowing) bugs.
 
 *tl;dr: cppcheck is good at what it does, but use a variety of tools to fully debug your programs.*              
+
 

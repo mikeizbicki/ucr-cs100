@@ -48,7 +48,7 @@ Variables will be useful when we wish to work within our <code>.bashrc</code> fi
 
 Variables in <code>.bashrc</code> are also important since some are predefined to interact with your shell. For instance, <code>echo $HOME</code> in the terminal will show you what the tilde is interpreted to - that is - your home directory. To make Bash always feel like <code>$HOME</code>, you can simply change the value of the environment variable on the command line, in this form:
 
-    $ HOME=/your/preffered/path
+    $ HOME=/your/proffered/path
     $ echo $HOME                    # prints /your/preferred/path
     $ cd ~                          # takes you to /your/preffered/path
 
@@ -227,3 +227,4 @@ Hopefully seeing this small primer has inspired you with some ideas of your own 
 [Introduction to Aliases](https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions)
 
 [Try Putting These in `.bashrc`!](http://stackoverflow.com/questions/68372/what-is-your-single-most-favorite-command-line-trick-using-bash)
+

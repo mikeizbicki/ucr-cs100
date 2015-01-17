@@ -1,6 +1,6 @@
 #Using Linux command easier
 
-The 10 tricks people should know about linux command.
+The 10 tricks people should know about Linux command.
 Note: these tricks apply to bash, which is the default shell on most Linux systems.
 
 ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
@@ -308,7 +308,7 @@ Pretend that you messed up an important document with a misspelled word and you 
 
 Relax, your problems are over now, you can fix it in one line using the 'sed' command!
 
-Sed stands for Stream EDitor and can be very useful when passing the right flags to it. What distinguishes it from others editors is the way it works making only one pass over the input(s) and the ability to filter text through a pipeline. Sed has several commands, but most commom people use is the substitute command: s.
+Sed stands for Stream EDitor and can be very useful when passing the right flags to it. What distinguishes it from others editors is the way it works making only one pass over the input(s) and the ability to filter text through a pipeline. Sed has several commands, but people more commonly use is the substitute command: s.
 
 If you type:
 
@@ -342,4 +342,5 @@ In vim, type:
 Or to make it global and replace all the occurrences:
 
 	:%s/wrong/right/g
+
 
