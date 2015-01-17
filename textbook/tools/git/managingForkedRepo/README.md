@@ -125,7 +125,7 @@ Fixed grammar errors
 # width '#' will be ignored, and an empty message aborts the commit.
 # Explicit paths specified without -i nor -o; assuming --only paths...
 # Not currently on any branch.
-# Changes to be commited:
+# Changes to be committed:
 #   (use "git reset HEAD <file>..." to unstage)
 #       modified: README.md
 #
@@ -174,3 +174,4 @@ Say you've made a commit to your forked repository that had A LOT of changes fro
 ```
 
 **NOTE**: `git reset --hard` is a very powerful command and cannot be undone. If you'd like to keep the changes you've made just in case, you should branch off a copy of your changes before resetting. If you'd like to learn more about `git reset`, there's a great article that explains it [here](http://git-scm.com/blog/2011/07/11/reset.html).
+
