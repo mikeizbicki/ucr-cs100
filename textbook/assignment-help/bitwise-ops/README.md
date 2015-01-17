@@ -311,7 +311,7 @@ The truth table for the AND operation is:
 	</TR>
 </TABLE>
 			
-For example, lets bitwise AND the decimal values 5 and 9:
+For example, let bitwise AND the decimal values 5 and 9:
 
 ```
     5 & 9 //Use & on their bit representations
