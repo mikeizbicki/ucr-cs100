@@ -269,7 +269,7 @@ This section will step through the code in logical blocks and explain the obfusc
 
 #define o(s) b[s]=_; p("%u    0  obj",s);
 //create beginning object tags in pdf, %u places arg s into the string
-//everytime this is called reference table data is saved
+//every time this is called reference table data is saved
 
 #define E for(c=d;c  < 123;c++) //copy into code, will be REMOVED
 #define DANCE "trailer   " D(/Root 3 0            R /Size %d) "\nstartxref %u %%%%EOF\n*/" //trailer of pdf file
@@ -316,7 +316,7 @@ This section will step through the code in logical blocks and explain the obfusc
 ####Section 2: Variable declarations
 
 ``` c
-//these obfusticate the data types, they can be used interchangably with the type they are defined as
+//these obfusticate the data types, they can be used interchangeably with the type they are defined as
 //will be REMOVED
 typedef int N;
 typedef char*Nyan;
@@ -363,7 +363,7 @@ Nyan nyan(Nyan _,N y,A n){ //pass in a memory address past the beginning of body
     // | is bitwise or
     // n is of type char, characters decimal value is being used, value can be found in ASCII charts
     
-    for(a=0;*_=*s++;a++,_++,*_++=32){ //many uncessary items placed in increment section to obfuscate, intentionally filled condition section
+    for(a=0;*_=*s++;a++,_++,*_++=32){ //many unnecessary items placed in increment section to obfuscate, intentionally filled condition section
         *_+=*_-32?10:0;//ternary operator, if condition before ? is true expression before : will run, if false expression after : will run
         
         if(a%2&&*_/16==3){
@@ -379,7 +379,7 @@ Nyan nyan(Nyan _,N y,A n){ //pass in a memory address past the beginning of body
     }
     
     return n?n-9?nyan(_,y,n-2):_:nyan(_+=~y&' '?sprintf(_,17[w]):0,y,9);
-    //equivalent of nested if statments
+    //equivalent of nested if statements
 }
 ```
 **Obfuscation used:**
@@ -451,7 +451,7 @@ char* processBody(char* bodyAddr, int c, char n){
 ####Section 4: main
 
 ``` c
-N main(N c){ //int c uneeded here, recieves nothing, can be moved in main
+N main(N c){ //int c unneeded here, receives nothing, can be moved in main
     
     A e[256]; //bodyData
     
@@ -636,4 +636,5 @@ Complete source of deobfuscated code can be found attached as myhamano.c
 
 outputORIG.pdf is output from unchanged hamano using text `aabbccddxx`
 
-output.pdf is ouput from myhamano.c using text `aabbccddxx`
+output.pdf is output from myhamano.c using text `aabbccddxx`
+
