@@ -11,7 +11,7 @@ GDB is a debugger which allows the user to see what is going on inside of an exe
 
 To download and install GDB, click on the following links
 
-[Download GDB](www.gnu.org/software/gdb/download/)
+[Download GDB](http://www.gnu.org/software/gdb/download/)
 
 [How to Install](http://www.tutorialspoint.com/gnu_debugger/installing_gdb.htm)
 
@@ -40,5 +40,6 @@ These examples will be covering `run`, `quit`, `help`, `breakpoint`, `info break
 
 
 By practicing with these examples, you will be able to debug your future programs more efficiently rather than going through your code, line by line and trying to find bugs. You will save time by using `gdb`.
+
 
 

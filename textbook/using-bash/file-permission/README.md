@@ -75,7 +75,7 @@ In the diagram of filesystem, you will see `home` directory which is a group dir
 
 So this is how to protect the users from each other in the one server. In the personal computer, usually there is only one group and one user in the `home` directory.
 
-##Changing permisson
+##Changing permission
 
 ###umask
 
@@ -145,6 +145,7 @@ So, how do we set sticky bit to a file or directory? There is several ways to do
 ##Security
 
 When you write into a read-only file in vim, you will be noticed as warning - "this file is read-only". However, it also has a tip on the next "using `!` can override this file. " This is because, you are actually writing a temp file into system, then the system will delete the original file and create a new one. So you have permission to make the file read-only, but you don't have actual permission to change the permission setting under the system level. Many application delete and create new files when edits are made, if you directory permissions are not secure. This can be a security concern. Therefore, the permission setting will be very important on the security system.
+
 
 
 
