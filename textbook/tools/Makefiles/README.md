@@ -169,7 +169,7 @@ clean:
 Example 5: Directories
 ---
 
-Files are sometimes organized by their type. One setup is to put all the source code files in a directory called ```src```, object files in a directory called ```obj```, and binary executables in a directory called ```bin```.
+Files are sometimes organized by their type. One setup is to put all the source code files in a directory called ```src```, object files in a directory called ```obj```, and binary executable in a directory called ```bin```.
 
 ```VPATH``` is a variable that tells make which directories to search for target and prerequisite files in addition to the working directory. In this example, make will search ```src/``` in addition to the working directory.
 
@@ -212,3 +212,4 @@ obj:
 clean:
     rm -rf obj bin
 ```
+
