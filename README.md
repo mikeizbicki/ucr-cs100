@@ -32,14 +32,14 @@ Once you've mastered them, you'll never go back.
 
 There are two main projects you will work on in this course:
 
-1. Your first four homework assignments walk you through the process of building your own unix shell.
+1. Your first four homework assignments walk you through the process of building your own Unix shell.
 This is the biggest project you've undertaken so far.
 You'll be developing it as an open source project,
 and you will collaborate with each other at various points.
 
 2. Your last homework assignment is to contribute to the open source community by improving the documentation on a project of your choice.
-Many of the required readings for this course were written by former cs100 students.
-If you do a good job on this project, future cs 100 students will be learning from you for years to come!
+Many of the required readings for this course were written by former CS100 students.
+If you do a good job on this project, future CS100 students will be learning from you for years to come!
 
 **By the end of the course, you should be comfortable running your own open source projects and contributing to other people's projects.**
 
@@ -53,7 +53,7 @@ teaching assistant | Zachary Benavides | TBA
 
 **IMPORTANT:**
 If you want to contact the instructors about the course, you should NOT do it via email.
-Instead, you should report an issue via github.
+Instead, you should report an issue via GitHub.
 We will talk about how to do this in class.
 This is a system similar to the piazza system you may already be familiar with,
 but it is more popular for open source software development.
@@ -108,7 +108,7 @@ We will not be using ilearn in this course.
 Instead, we will be using a course management system called `gitlearn`.
 This software was developed in part by previous cs100 students,
 and you will be able to earn considerable extra credit by contributing to it.
-We will be using this system as a case study in bash programming and the unix philosophy.
+We will be using this system as a case study in bash programming and the Unix philosophy.
 For details, see the [gitlearn repo](https://github.com/mikeizbicki/gitlearn).
 
 ### cheating policy
