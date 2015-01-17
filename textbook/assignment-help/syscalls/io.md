@@ -1,4 +1,4 @@
-Input and Output Systemcalls
+Input and Output System Calls
 ===
 This document describes the system calls pertaining to input and output redirections. These system calls involve manipulating file descriptors such as stdin(0), stdout(1) and stderr(2). The system calls that will be described here are `pipe` and `dup`
 
@@ -146,5 +146,6 @@ if(-1 == dup2(savestdin,0))//restore stdin
 ```
 
 Here we see the full use of the `pipe` syscall. When we call `pipe` we have our `int fd[2]` as the parameter, `pipe` populates this array with the file descriptors of the read and write end of the imaginary file that is created. Then we `fork` the process, and in the child we change the stdout of whatever you are running to the write end of the imaginary file. In our example of `names|sort` the output of our names executable will be the input of our file. Then we go to our parent function and set the stdin to the read end of the `pipe`. We do this because we want the thing we wrote to the imaginary file to be the input to the right side of the pipe. In our example `names|sort` we want the names output to be the input of the sort program. After this we have to immediately call another `fork` function to execute the right side of the pipe.
+
 
 
