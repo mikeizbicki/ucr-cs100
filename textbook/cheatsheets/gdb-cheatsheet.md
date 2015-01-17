@@ -3,7 +3,7 @@ GDB Cheatsheet
 
 ###Starting GDB
 
-After you finish up your sweet program, you should generally compile it with your standard flags, but also with the `-g` flag. The `-g` flag lets gdb debug our executable and gives us a bunch of helpful feedback. Without it, gdb will still run your program, but it won't allow you to step through to see if there's any errors, and where they occur. 
+After you finish up your sweet program, you should generally compile it with your standard flags, but also with the `-g` flag. The `-g` flag lets gdb debug our executable and gives us a bunch of helpful feedback. Without it, gdb will still run your program, but it won't allow you to step through to see if there are any errors, and where they occur. 
 
 ```
   $ g++ -g -Werror -Wall -ansi -pedantic moo.cpp
@@ -23,11 +23,11 @@ Doing it this way is the quickest way to start debugging. You can also just run 
 ```
 
 
-`file` is the command that tells gdb that the following argument is the program to be debugged. If there is already a current executable in gdb, then you can use `file` to a new executable, instead of restarting gdb. This is useful whenever you have multiple executables that you need to debug.
+`file` is the command that tells gdb that the following argument is the program to be debugged. If there is already a current executable in gdb, then you can use `file` to a new executable, instead of restarting gdb. This is useful whenever you have multiple executable that you need to debug.
 
 ###GDB Flags
 
-There are many GDB flags, but most of them aren't too useful. The most useful so far in this class are :<br>
+There are many GDB flags, but most of them aren't too useful. The most useful so far in this class are: <br>
 
 ```
   $ gdb --args <program> <arguments>
@@ -256,7 +256,7 @@ Sometimes you may go too far in your debugging. Luckily, these commands allow yo
   (gdb) rc
 ```
 
-`Reverse-continue` rewinds your program until it hits a breakpoints or until it's at the beginning of the program. It functions exactly the same as normal continue, except it goes backwards!
+`Reverse-continue` rewinds your program until it hits a breakpoint or until it's at the beginning of the program. It functions exactly the same as normal continue, except it goes backwards!
 
 ```
   (gdb) kill
@@ -273,3 +273,4 @@ Sometimes you may go too far in your debugging. Luckily, these commands allow yo
 ```
 
 `quit` does what it sounds like; it quits gdb!
+

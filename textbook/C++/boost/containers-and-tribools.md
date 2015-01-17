@@ -1,7 +1,7 @@
 #Boost
 Boost is one of many c++ libraries which adds additional features to the STL. As such, this tutorial will focus on demonstrating the potential of two of its libraries: Container and Tribool, which can often be applied in place of their STL equivalents.
 ##Containers - Stable vector
-Within Boost, there are dozens of containers, one of which is the stable vector, a safer alternative to the STL vector. Its safety comes from an often overlooked aspect of vectors, which is their tendency to invalidate iterators upon erasing data in the middle of a vector. Therefore, stable vectors account for this weakness, and allow a user to erase data from the middle of a vector without it ever invalidating the iterators.
+Within Boost, there are dozens of containers, one of which is the stable vector, a safer alternative to the STL vector. Its safety comes from an often-overlooked aspect of vectors, which is their tendency to invalidate iterators upon erasing data in the middle of a vector. Therefore, stable vectors account for this weakness, and allow a user to erase data from the middle of a vector without it ever invalidating the iterators.
 
 Before illustrating the application of this added stability, it's important to understand how vectors become invalidated,
 take the following snippet of code:
@@ -37,7 +37,7 @@ int main(){
 ```
 Notice how similar it is to the previous example? This demonstrates how easy it is to use stable vectors, and should feel familiar for those already associated with STL vectors. However, this example lacks enough depth to demonstrate the practicality and potential of stable vectors, so let's apply it to a real world example.
 
-For instance, imagine writing the payroll software for a company which experiences a high turnover-rate in its employees. Since it's incredibly important that payroll is always ontime, the software can only afford minimal downtime, and must be able to add and remove employees at a moments notice. Therefore, an STL vector would create problems as soon as too many employees were removed from the system, but a stable vector would have no problem with the deletion and could function with mininmal interruptions. It would look something like this:
+For instance, imagine writing the payroll software for a company which experiences a high turnover-rate in its employees. Since it's incredibly important that payroll is always on time, the software can only afford minimal downtime, and must be able to add and remove employees at a moments notice. Therefore, an STL vector would create problems as soon as too many employees were removed from the system, but a stable vector would have no problem with the deletion and could function with minimal interruptions. It would look something like this:
 ```
 #include <boost/container/stable_vector.hpp>
 #include <string>
@@ -127,3 +127,4 @@ A     | U U U T
 A     | T T T T
 
 Since Tribool works with the && and || operators, it's easy to implement these comparisons into c++ code. Not only does this create more depth in the programs, but it also serves to preserve the unknown state after comparison, allowing Tribool to easily replace booleans in older code you've written. Overall, Tribools have great potential for creating safer programs, which can react more gently to thrown errors and exceptions.
+
