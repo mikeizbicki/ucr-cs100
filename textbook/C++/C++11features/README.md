@@ -7,7 +7,7 @@
 * auto type  
 * trailing return type and decltype  
 
-##How to Use C++11 Feautures  
+##How to Use C++11 Features  
 
 Since its standardization in 2011, standard shipping compilers have included support for various C++11 features, depending on the compiler and version. For instance, GCC 4.3 and later support C++11 features by including a flag `-std=c++0x` to your `g++` command line. GCC 4.7 and later support use of the `-std=c++11` flag, as well.  
 
@@ -137,7 +137,7 @@ Okay, so `auto` may not be a new term to the C++ language, but with C++11, the p
 
 The auto feature is accessible by standard compilers that accept C++11 features. GCC 4.4 and later versions can handle the auto feature.  
 
-###So,what is auto in C++11?  
+###So, what is auto in C++11?  
 
 In C++11, auto is a type-inferenced data type, in that the data type of the variable is deduced by the compiler upon initialization or upon later inspection (e.g., when used as a function return type, which we will address soon.)  
 A general definition of `auto` can be explained as:  
@@ -194,7 +194,7 @@ Speaking of function return types, what if we wanted to determine our return typ
 
 **Note:** `decltype` is a recently added C++11 feature and relies on GCC 4.8.1 version and later.  
 
-Our analysis of the C++11 auto type now brings us to the discussion of trailing return types and `decltype`. Prior to C++11, the return type of a function had to be declared right away in the beginning of the function declaration--whatever type is returned from a function must be explicity stated. This is no longer true with C++11, so long as the function incorporates correct syntax for a trailing return type to be deduced.  
+Our analysis of the C++11 auto type now brings us to the discussion of trailing return types and `decltype`. Prior to C++11, the return type of a function had to be declared right away in the beginning of the function declaration--whatever type is returned from a function must be explicitly stated. This is no longer true with C++11, so long as the function incorporates correct syntax for a trailing return type to be deduced.  
 To get a better understanding of the need for trailing return type syntax and `decltype`, let us look at a simple function with no trailing return type syntax and transform the function to allow type deduction of the return type. Consider the following function declaration:  
 
 `double add(double dbl1, int int1);`  
@@ -203,7 +203,7 @@ Now say we want to deduce the return type using `auto`:
 
 `auto add(double dbl1, int int1);`  
 
-Here, we have a problem because the compiler cannot infer the type of auto. If we want to be able to use `auto` here, we have to inform the compiler of our returning type by using trailing return syntax. For our example, this is the syntax for adding a trailing return type our our `add` function:  
+Here, we have a problem because the compiler cannot infer the type of auto. If we want to be able to use `auto` here, we have to inform the compiler of our returning type by using trailing return syntax. For our example, this is the syntax for adding a trailing return type our `add` function:  
 
 `auto add(double db1, int int1) -> double;`  
 Now, we have specified `double` as our return type. But this does not make good use of our `auto` type, as we are explicitly defining our type to `double`.  
@@ -220,8 +220,9 @@ Now, this code will work perfectly fine in C++11. Keep in mind that `->decltype(
 
 ##Sum it Up  
 
-Ok, so maybe C++11 features take a little getting used to, but it would not be C++ otherwise! I believe one can save themselves quite a few headaches down the road if one relies on good practice of utilizing safe C++11 features when coding, and with repetive use of these features, they can become almost second nature, as any other well-practiced coding style. A computer scientist must always be looking to learn and adapt to maintain their level of excellence as a programmer, and taking on new C++11 features is not a bad start. 
+Ok, so maybe C++11 features take a little getting used to, but it would not be C++ otherwise! I believe one can save themselves quite a few headaches down the road if one relies on good practice of utilizing safe C++11 features when coding, and with repetitive use of these features, they can become almost second nature, as any other well-practiced coding style. A computer scientist must always be looking to learn and adapt to maintain their level of excellence as a programmer, and taking on new C++11 features is not a bad start. 
 
 ##Credit  
 
-For technical details support, I refered to the C++11 FAQ by Bjarne Stroustrup and the latest draft of the C++11 standard.  
+For technical details support, I referred to the C++11 FAQ by Bjarne Stroustrup and the latest draft of the C++11 standard.  
+
