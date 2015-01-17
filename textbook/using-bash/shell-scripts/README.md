@@ -74,7 +74,7 @@ Hello world!!!
 
 Tip: there is an alterative way to change permission. If you want to learn more about it, you can go to this link: http://linuxcommand.org/lts0070.php 
 
-##Part 2: More syntaxs about shell scripts
+##Part 2: More syntax about shell scripts
 
 ###Variables
 
@@ -313,7 +313,8 @@ done
 For more details, please check this link: http://www.cyberciti.biz/faq/bash-for-loop/
 
 ##Conclusion
-By writing shell scripts and gaining more knowledge about shell scripts, it helps us to have a better understanding about cs100 and the unix system. If you want to learn more advanced skills and more details about shell script, here is the link: http://linux.die.net/man/1/bash or http://linuxcommand.org/lc3_writing_shell_scripts.php
+By writing shell scripts and gaining more knowledge about shell scripts, it helps us to have a better understanding about cs100 and the Unix system. If you want to learn more advanced skills and more details about shell script, here is the link: http://linux.die.net/man/1/bash or http://linuxcommand.org/lc3_writing_shell_scripts.php
 
 Thank you for reading and have fun in cs100! :)
+
 

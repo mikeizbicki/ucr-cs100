@@ -109,7 +109,7 @@ nc -z localhost 80
 ```
 `-z` makes `netcat` scan for listeners. This cannot be used with the -l option. You must specify a port, or range of ports to scan. 
 This command checks to see if anything is listening on port 80, however the output can get a little tricky. First of all, the command will not print anything if there is
-nothing listening on the port. This might confuse new users. If something IS listening, then you will get a message like the folowing:
+nothing listening on the port. This might confuse new users. If something IS listening, then you will get a message like the following:
 ```
 Connection to localhost port 32981 [tcp/*] succeeded!
 ```
@@ -158,7 +158,7 @@ nc -l 32981 | nc www.amazon.com 80
 ```
 What we are doing is making a `netcat` server on port 32981. Requests to that port will be piped (or forwarded) to the amazon.com webserver on port 80. Now if we go to a
 web browser and type `localhost:32981` in the address bar, nothing will happen! Why? Well, the first call to `netcat` makes the server, and the second one redirects the 
-request, but we are not doing anything with the repy from amazon! We can fix this with a two way pipe, or "named pipe". If you would like some more information on named
+request, but we are not doing anything with the reply from amazon! We can fix this with a two way pipe, or "named pipe". If you would like some more information on named
 pipes, I recommend you check out this [article](http://www.tldp.org/LDP/lpg/node15.html).
 
 This time, do this:
@@ -203,3 +203,4 @@ Here is a link dump if you are interested in learning more about `netcat` or som
 * [Metasploit Project](http://en.wikipedia.org/wiki/Metasploit_Project)
 * [Wireshark](http://en.wikipedia.org/wiki/Wireshark)
 * [Wiki for Packet Analyzers](http://en.wikipedia.org/wiki/Packet_analyzer)
+

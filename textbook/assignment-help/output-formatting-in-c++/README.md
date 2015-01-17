@@ -19,10 +19,10 @@ output:
 26
 32
 ```
-The above code will output the number 26 three times. Once in hexadecimal, once in decimal, and once in octal. This is a really simple function that might not be screaming usefullness, but does come in handy every now and then. For example, when dealing with bitwise shifting, it can be helpful to display the integer that is being shifted in octal or hexadecimal. Another common use is file permission manipulation. File permisions are stored in integers but they aren't really usefull unless they are represented in octal.
+The above code will output the number 26 three times. Once in hexadecimal, once in decimal, and once in octal. This is a really simple function that might not be screaming usefulness, but does come in handy every now and then. For example, when dealing with bitwise shifting, it can be helpful to display the integer that is being shifted in octal or hexadecimal. Another common use is file permission manipulation. File permissions are stored in integers but they aren't really useful unless they are represented in octal.
 
 ###setw()
-`setw()` is a really usefull fuction when dealing with columns of output. In terms of a spreadsheet, `setw()` essentially sets the width of a cell. Here's an example.
+`setw()` is a really useful function when dealing with columns of output. In terms of a spreadsheet, `setw()` essentially sets the width of a cell. Here's an example.
 
 code:
 ```
@@ -38,7 +38,7 @@ output:
      apple    orange    cherry
       plum   pumpkin     grape
 ```
-The above code prints out a table of six elements into two rows and three columns. Each element can be up to 10 characters long. If any element is longer than 10 characters, it will cause the rest of the line to shift. `setw()` does not permenently set the new width. It is only set for the next bit of text being printed. That is why it is called before every line of output in the given code.
+The above code prints out a table of six elements into two rows and three columns. Each element can be up to 10 characters long. If any element is longer than 10 characters, it will cause the rest of the line to shift. `setw()` does not permanently set the new width. It is only set for the next bit of text being printed. That is why it is called before every line of output in the given code.
 
 There are a couple more things you can do with `setw()`. First of all, you can set the justification. This is also wonderfully simple. Here's how you would left justify the last example:
 
@@ -57,7 +57,7 @@ output:
 apple     orange    cherry    
 plum      pumpkin   grape     
 ```
-All I had to do was add `cout << left;` before the text I wanted to justify. Unlike, `setw()` the justfication only has to be set once and all of the following output will adhere to it until it is set to something else. The three justification options are `left`, `right`, and `internal`. The first two are pretty obvious. `internal`, on the other hand left justifies the signs of numbers and right justifies the magnitude of number. For example, `cout setw(5) << internal << -57` could output `-  57`. According to the documentation, this is aparently usefull for accounting documents. So here's to you, accountants out there!
+All I had to do was add `cout << left;` before the text I wanted to justify. Unlike, `setw()` the justification only has to be set once and all of the following output will adhere to it until it is set to something else. The three justification options are `left`, `right`, and `internal`. The first two are pretty obvious. `internal`, on the other hand left justifies the signs of numbers and right justifies the magnitude of number. For example, `cout setw(5) << internal << -57` could output `-  57`. According to the documentation, this is apparently useful for accounting documents. So here's to you, accountants out there!
 
 The last thing I want to discuss regarding `setw()` is `setfill()`. `setfill()` allows you to set what character is used in the empty spaces that appear when using `setw()`.
 
@@ -137,9 +137,10 @@ string bold = "\033[1m";
 
 cout << underline << bold << red << yellowHL << "Hello World!" << endl";
 ```
-This will print "Hello World!" in red, withc yellow highlighting, underlined, and bolded.
+This will print "Hello World!" in red, with yellow highlighting, underlined, and bolded.
 
-So thats a small taste of what you can do with ANSI. If you followed this tutorial and cannot get the ANSI formatting to work, it is possible you are using a console that does not support those features. I am using the default terminal that comes with Debian and everything works fine. The console that comes with Code::Blocks on Windows however, does not support ANSI. A common symptom of a console that does not support ANSI is junk characters being printed.
+So that’s a small taste of what you can do with ANSI. If you followed this tutorial and cannot get the ANSI formatting to work, it is possible you are using a console that does not support those features. I am using the default terminal that comes with Debian and everything works fine. The console that comes with Code::Blocks on Windows however, does not support ANSI. A common symptom of a console that does not support ANSI is junk characters being printed.
 
 I've included a header file called *ANSIfontUtils.h* that contains strings for all of the ANSI codes for font coloring and highlighting, underlining, bolding, and resetting colors to terminal defaults. It also contains functions that apply those ANSI codes to strings automatically. Feel free to use it to spice up your output!
+
 

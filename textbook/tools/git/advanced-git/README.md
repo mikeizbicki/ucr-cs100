@@ -115,7 +115,7 @@ This resets the pointer back to the commit number that you wish to reset to.
 ##NOTE: THIS WILL RESET YOUR HEAD POINTER, AND YOU WILL LOSE YOUR WORK.
 You should only do this if you really need to reset your repository back to it's original format.
 
-The second one is `--soft`. This mode will reset your repository to the state at that time, and keeps your changes as `changes to be commited`.
+The second one is `--soft`. This mode will reset your repository to the state at that time, and keeps your changes as `changes to be committed`.
 
  
  #git diff
@@ -192,3 +192,4 @@ It does belong to a private git hosting website, so some of the git remotes will
 
 [git for ages 4 and up](https://www.youtube.com/watch?v=1ffBJ4sVUb4) -
 This was a really handy tutorial video on YouTube which helped me out a lot. He goes over a lot of git features, but the video is about 1 1/2 hours long. It's great if you have some free time, and you want to learn more about git.
+
