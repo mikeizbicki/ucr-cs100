@@ -16,9 +16,9 @@ This means that whenever the programmer enters `ARRAY_SIZE` in his code, it will
 
 ###Similarity to Constants
 
-Consider the statement `const int ARRAY_SIZE = 100`. It functions nearly the same way as an object macro. However there are many significant differences. Consts are properly scoped, and can be used in situations that require a pointer to be passed. Macros aren't error checked, and the compiler checks the code only after they are replaced. This occasionally results in errors that might cause unexpected runtime results, which is a problem consts do not have.
+Consider the statement `const int ARRAY_SIZE = 100`. It functions nearly the same way as an object macro. However there are many significant differences. `const`s are properly scoped, and can be used in situations that require a pointer to be passed. Macros aren't error checked, and the compiler checks the code only after they are replaced. This occasionally results in errors that might cause unexpected runtime results, which is a problem `const`s do not have.
 
-The main advantage to using a macro is that they are compatible with C, so any C standard library will use them. Also, no memory is used to store it in your program, since it's only replacing text with a literal value. That means there's no way to change this value by any means other than altering the macro definition. With consts, some compilers just allocate memory identified by the name, and you might be able to modify the memory with pointers. For example:
+The main advantage to using a macro is that they are compatible with C, so any C standard library will use them. Also, no memory is used to store it in your program, since it's only replacing text with a literal value. That means there's no way to change this value by any means other than altering the macro definition. With `const`s, some compilers just allocate memory identified by the name, and you might be able to modify the memory with pointers. For example:
 
 ```
 const int constant = 10;
@@ -165,7 +165,7 @@ Now `MACRO(2,4);` expands into `do {...} while (0);` This is one statement, and 
 
 ###Duplication of Side Effects
 
-Another problem is that macros don't evaluate their arguments, and instead paste them into the text. This becomes an issue with the previous `MAX` macro if you pass in x++, y++.
+Another problem is that macros don't evaluate their arguments, and instead paste them into the text. This becomes an issue with the previous `MAX` macro if you pass in `x++, y++`.
 
 ```
 #define MAX(a,b) ((a) < (b) : (a))
@@ -176,11 +176,11 @@ int z = MAX(x++, y++);
 // int z = (x++ < y++ ? y++ : x++)
 ```
 
-The problem is that in this case y++ is evaluated twice, and y will have a value of 12 instead of what we expected, 11.
+The problem is that in this case `y++` is evaluated twice, and `y` will have a value of 12 instead of what we expected, 11.
 
 ###Unusual Errors
 
-Macros have no namespace and aren't error checked, as the compiler only checks the code after the macro names are replaced. Because of this, it is easy to create errors that can be difficult to find. For example:
+Macros do not have namespace and aren't error checked, as the compiler only checks the code after the macro names are replaced. Because of this, it is easy to create errors that can be difficult to find. For example:
 
 ```
 #define begin() end()
@@ -192,7 +192,7 @@ for (vector<int>::iterator it = myvector.begin() ; it != myvector.end(); ++it)
 
 ```
 
-There won't be any compile errors, but the for loop won't output anything. Runtime errors like this are difficult to debug, because without looking at the macro definition, the code seems perfectly fine.
+There won't be any compile errors, but the `for` loop won't output anything. Runtime errors like this are difficult to debug, because without looking at the macro definition, the code seems perfectly fine.
 
 ##Conclusion
 Preprocessor macros add powerful features and flexibility, and they can help reduce the amount of code you write. They can also increase performance by reducing function call overhead, since they're always expanded inline. However, they come with many drawbacks, as we have seen, and can be very difficult to debug. But while there now are alternatives like inline functions, which weren't standard prior to C99, macros can still be an incredibly useful tool if you are careful.

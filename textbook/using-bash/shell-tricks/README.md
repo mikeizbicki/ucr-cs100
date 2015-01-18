@@ -128,7 +128,7 @@ HISTSIZE is related to how many commands you want to keep track of. Setting it t
 
 ![find: powerful tool](http://funnystack.com/wp-content/uploads/2014/04/Funny-Horse-44.jpg)
 
-The `find` command is used to fetch the positions of  files you want on a Unix or Linux system.  `find` will search any set of directories you specify for files that match the supplied search criteria.  You can search for files by name, owner, group, type, permissions, date, and other criteria.  The search is recursive in that it will search all subdirectories too (very powerful, right ? ).  The syntax looks like this:
+The `find` command is used to fetch the positions of files you want on a Unix or Linux system.  `find` will search any set of directories you specify for files that match the supplied search criteria.  You can search for files by name, owner, group, type, permissions, date, and other criteria.  The search is recursive in that it will search all subdirectories too (very powerful, right ? ).  The syntax looks like this:
 
     find where-to-look criteria what-to-do
 All arguments to find are optional, and there are defaults for all parts.
@@ -293,7 +293,7 @@ Now, if we put that command inside a loop with the right changes we can actually
 
 It can be done because instead of a name we are setting a variable $f, with a special character \*, to replace it by whatever other sequence of characters ending with .jpg may appear in the directory. Once the variable assumes a file name we use that as the first parameter and then we only replace the extension file to our desired one as a second argument, which would be .pdf.
 
-Another trick you should be aware of is the for loop. In the bash shell it won't run the command when you press enter; it will let you enter more things afterward and only run it when you type 'done', signaling the end of the loop.
+Another trick you should be aware of is the `for` loop. In the bash shell it won't run the command when you press enter; it will let you enter more things afterward and only run it when you type 'done', signaling the end of the loop.
 
 Imagemagick has also a lot of others functionalities like resizing, flipping, changing quality or joining images that may help you to play a little bit with image-processing.
 

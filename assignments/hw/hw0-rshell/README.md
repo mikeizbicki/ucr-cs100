@@ -51,7 +51,7 @@ But in the command `ls # -lR /`, you would execute `/bin/ls`, but you would not 
 
 **IMPORTANT:**
 Most bash commands are actually executables located in `/bin`, `/usr/bin/` (e.g. `ls`).
-But some commands are are built-in to bash (e.g. `cd`).
+But some commands are built-in to bash (e.g. `cd`).
 So while the `ls` command should "just work" in your shell, the `cd` command won't.
 You'll be adding this feature in a later homework.
 
@@ -191,7 +191,7 @@ test cases for part 1 (each worth 5 pts):
 
 test cases for part 2: (total 35 points, so possibility of extra credit)
 
-* simple example showing two commands connected with each operator; they must show both the case where the first command succeds and the case where the first command fails. (15 pts)
+* simple example showing two commands connected with each operator; they must show both the case where the first command succeeds and the case where the first command fails. (15 pts)
 
 * an example showing lots of commands chained together (5 pts)
 
@@ -229,7 +229,7 @@ other deductions:
 
 * for every warning during compilation they get -5 pts
 
-* for every memory leak reported by valgrind -5 pts up to -20 points; if valgrind wasn't run then -20 points
+* for every memory leak reported by `valgrind` -5 pts up to -20 points; if `valgrind` wasn't run then -20 points
 
 * for every error reported by cppchecker, -5 points
 
@@ -258,7 +258,7 @@ My username is `mizbi001`, and if I'm logged into the machine `alpha023`, then m
 mizbi001@alpha023$
 ```
 You can get up to 10 points of extra credit if your prompt prints this extra information.
-You will need to lookup the man pages for the functions `getlogin` and `gethostname`.
+You will need to look up the man pages for the functions `getlogin` and `gethostname`.
 You must not hard code the username or hostname!
 
 **REMINDER:**

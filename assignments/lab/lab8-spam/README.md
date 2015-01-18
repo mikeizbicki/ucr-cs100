@@ -38,7 +38,7 @@ The dot at the end is very important.  It must be on a line all by itself.  That
 
 #### automate the process using bash
 
-In this part of the lab, you're going to write a bash script that sends spam to your friends.  The script should be called `sendspam.sh`.  It will take two parameters.  The first is the email address of the recipient, and the second is the email of the sender.  Your script will read stdin to get the body of the email, and the subject line will always be `This email is spam!`.
+In this part of the lab, you're going to write a bash script that sends spam to your friends.  The script should be called `sendspam.sh`.  It will take two parameters.  The first is the email address of the recipient, and the second is the email of the sender.  Your script will read `stdin` to get the body of the email, and the subject line will always be `This email is spam!`.
 
 For example, if you were a jerk, you could spoof an email from me to one of your classmates using the command:
 
