@@ -163,7 +163,7 @@ vector<string> tok_string(const string& input)
 
 `tok_string` will always return an empty vector causing `string_tok_test` to fail. 
 
-Lets find out. Compile and run the test.
+Let’s find out. Compile and run the test.
 
 ```
 $ g++ -std=c++11  tests/test_string_tok.cpp -o str_test

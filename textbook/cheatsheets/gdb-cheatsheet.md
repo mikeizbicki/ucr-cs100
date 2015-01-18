@@ -43,7 +43,7 @@ This argument can only be used once, and anything after the program will be cons
   $ gdb -q <program>
 ```
 
-If you don't want your terminal to be flooded with nonsense, then you can use this flag. It omits the many lines of text explaining legal issues. This flag can be placed anywhere except after the --args flag. 
+If you don't want your terminal to be flooded with nonsense, then you can use this flag. It omits the many lines of text explaining legal issues. This flag can be placed anywhere except after the `--args` flag. 
 
 ```
   $ gdb <program> -tui
