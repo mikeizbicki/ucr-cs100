@@ -275,7 +275,7 @@ This section will step through the code in logical blocks and explain the obfusc
 #define DANCE "trailer   " D(/Root 3 0            R /Size %d) "\nstartxref %u %%%%EOF\n*/" //trailer of pdf file
 
 #define p(s, ...)_+=printf(s,  ##__VA_ARGS__)
-// ... and __VA_ARGS__ is used to specifiy undetermined amount of arguments to print
+// ... and __VA_ARGS__ is used to specify undetermined amount of arguments to print
 // ## in __VA_ARGS__ allows printf to function if there is only one argument
 
 //entire contents is sent to p later in code which populations %d and %f, this holds the font info
@@ -316,7 +316,7 @@ This section will step through the code in logical blocks and explain the obfusc
 ####Section 2: Variable declarations
 
 ``` c
-//these obfusticate the data types, they can be used interchangeably with the type they are defined as
+//these obfuscate the data types, they can be used interchangeably with the type they are defined as
 //will be REMOVED
 typedef int N;
 typedef char*Nyan;

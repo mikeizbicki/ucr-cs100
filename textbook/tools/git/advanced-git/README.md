@@ -3,7 +3,7 @@
    
    This is an introductory tutorial, so the goal is to get you acquainted with some of the more advanced features of git. If you would like a complete run down of how to use a certain command, you can click on the command under the section `Topics covered:`, and it will link you to the man page of that specific command on the internet.
    
-   `<>` indicates a variable at anytime in this tutorial.
+   `<>` indicates a variable at any time in this tutorial.
 
 #topics covered:
    * [git remote](http://git-scm.com/docs/git-remote)
@@ -15,14 +15,14 @@
    * [git stash](http://git-scm.com/docs/git-stash)
 
 #starting git
-I will be assuming that you have completed the git lab for this course, and you have some general knowledge about how git works. You can use git init, git pull, git push, git checkout, git branch, and git tag. If you don't know, here is a basic rundown.
+I will be assuming that you have completed the git lab for this course, and you have some general knowledge about how git works. You can use `git init`, `git pull`, `git push`, `git checkout`, `git branch`, and `git tag`. If you don't know, here is a basic rundown.
 
-* git init - inits a repo inside the folder allowing for you to track changes
-* git pull - pulls from the remote that you designate from
-* git push - pushes to the remote that you designate to
-* git checkout - allows you to checkout a branch, a tag, or a commit
-* git branch - create a new branch, or list the branches that you have setup
-* git tag - create a new tag, or list all the tags that you have setup.
+* `git init` - inits a repo inside the folder allowing for you to track changes
+* `git pull` - pulls from the remote that you designate from
+* `git push` - pushes to the remote that you designate to
+* `git checkout` - allows you to checkout a branch, a tag, or a commit
+* `git branch` - create a new branch, or list the branches that you have setup
+* `git tag` - create a new tag, or list all the tags that you have setup.
 
 Now to the juicier parts of git! :]
 

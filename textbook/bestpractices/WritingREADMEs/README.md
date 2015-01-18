@@ -22,7 +22,7 @@ Prerequisites
 Installation guide
 ---
 * List the steps needed to install your project.
-* It is better to explicitly list the commands needed rather then describe the steps. 
+* It is better to explicitly list the commands needed rather than describe the steps. 
   * E.g. ```make``` as opposed to "run make".
 
 Bugs/Limitations/Issues

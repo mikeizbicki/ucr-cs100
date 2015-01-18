@@ -349,7 +349,7 @@ These are used to indicate special characters or characteristics. They work in c
 <a name="posix"/>
 ##POSIX Specific Syntax
 
-There are a few key differences  POSIX standard says that the **longest** match is returned. Normal regex usually stops with the **first** match found. However, it will still match the **leftmost** result.
+There are a few key differences POSIX standard says that the **longest** match is returned. Normal regex usually stops with the **first** match found. However, it will still match the **leftmost** result.
 
 <table>
   <tr>

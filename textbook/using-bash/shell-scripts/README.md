@@ -72,7 +72,7 @@ $ ./hello.sh
 Hello world!!!
 ```
 
-Tip: there is an alterative way to change permission. If you want to learn more about it, you can go to this link: http://linuxcommand.org/lts0070.php 
+Tip: there is an alternative way to change permission. If you want to learn more about it, you can go to this link: http://linuxcommand.org/lts0070.php 
 
 ##Part 2: More syntax about shell scripts
 
@@ -168,7 +168,7 @@ After a shell script is executed, it returns two types of exit statuses:
 
 * If the command is successful, it returns value zero(0)
 
-* If the command is not successful, it returns a nonzero value in the range between 1 to 255;
+* If the command is not successful, it returns a nonzero value in the range between 1 and 255;
 
 We can examine the exit status of your last command by using parameter '$?':
 
@@ -259,7 +259,7 @@ echo "$1 is negative"
 fi
 ```
 
-For the first 'if', I already introduced that it decides whether there are provided arguments. For the second 'if', the condition is: if the first provided argument is greater than 0, then the command is echo "$1 is positive". then 'elif' represents 'else if'. Finally, we use 'fi' to end this 'if/else' statement.
+For the first 'if', I already introduced that it decides whether there are provided arguments. For the second 'if', the condition is: if the first provided argument is greater than 0, then the command is echo "$1 is positive". Then 'elif' represents 'else if'. Finally, we use 'fi' to end this 'if/else' statement.
 
 For more details, please check this link: http://ss64.com/bash/if.html
 

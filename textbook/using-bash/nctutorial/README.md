@@ -178,7 +178,7 @@ The key is that your computer does not make the web request directly. It request
 output. This is an incredibly basic proxy, but of course with some work and added code, you can build your very own proxy server, and now you have the knowledge to do so.
 
 The same thing can be done, but instead of websites, with ports. If your company or school blocks a port for outgoing requests, then you can forward requests to that pipe to
-go through a different pipe. For example, port 80 is blocked. No matter! simply use:
+go through a different pipe. For example, port 80 is blocked. No matter! Simply use:
 ```
 nc -l 80 | nc localhost 32981
 ```
@@ -187,7 +187,7 @@ Now any requests made to port 80 will be forwarded to port 32981. Yay for you!
 ### Further Reading
 
 As I mentioned back in the beginning, `netcat` is referred to as a "swiss army knife" by many. It is a great little tool for many things, but it is not always the best tool.
-You would not cut a tree down with a spoon, right? We saw in the port scanning section that there are better tools, like nmap, and netstat. Also, many system administrators
+You would not cut a tree down with a spoon, right? We saw in the port scanning section that there are better tools, like `nmap`, and `netstat`. Also, many system administrators
 might block usage of `netcat` because of the possibility of malicious actions with it. You might want a prompt to play around with rather than sending one whole chunk of
 commands to the server. In that case, you are probably better off using `telnet`. With named pipes and redirections running wild, the syntax for `netcat` might be a little
 too crazy for you, so you might be better off with a different version of `netcat` like `ncat`. Maybe you are more interested in breaking into systems and nothing else, then
