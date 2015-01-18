@@ -14,11 +14,11 @@ In this lab, you will implement a version of the `cp` command line program that 
 
 Your final program should have two required arguments (the input and output file) and one optional argument.  If the optional argument is not given, then copy the files using the most efficient of the three methods above.  
 
-If the optional argument is given, then your program will copy the file using each of the three methods, time how long each method takes, and report the results to stdout.  You must show wallclock, user, and system run times.You may use the given `Timer.h` file to measure the run times.  
+If the optional argument is given, then your program will copy the file using each of the three methods, time how long each method takes, and report the results to stdout.  You must show wallclock, user, and system run times. You may use the given `Timer.h` file to measure the run times.  
 
 In order to determine which method is fastest, you'll need to test them on a large file.  Otherwise, the performance differences will not be noticeable.  The file `/usr/share/dict/linux.words` should be sufficiently large.
 
-**IMPORTANT:** If the file you are copying to already exists, your program must print an error.  The built-in `cp` will check to see if the second file is a directory.  If it is, then `cp` will copy the file into the directory.  You do NOT have to implement this feature.
+**IMPORTANT:** If the file you are copying to already exists, your program must print an error.  The built-in `cp` will check to see if the second file is a directory.  If it is, then `cp` will copy the file into the directory. You do NOT have to implement this feature.
 
 **IMPORTANT:** The built-in `cp` program can support copying entire directories using the `-r` flag.  You do not need to implement this feature.  You should simply print an error message if the first argument is a directory.
 

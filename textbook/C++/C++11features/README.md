@@ -24,7 +24,7 @@ If a compiler supports C++11 features, it likely supports initialization lists. 
 ###What is an initialization list?  
 
 An initialization list is exactly what it sounds like--an explicitly stated list of values to initialize a containing object with. Initialization lists were accepted prior to C++11 when initializing arrays, but now, the mechanism for accepting curly-bracket-enclosed lists is a function, often a constructor, accepting an argument of a new template class type `std::initializer_list<T>`, where `T` is a simple data type. `T` represents the same simple data type that makes up the data type of each element within the curly brackets, and the elements that make up the initializer list are separated by commas. The initializer list can be empty. 
-In C++11, the STL containers and string class contain initializer-list constructors and support initialization lists. So, with the convenience of C++11 initialization lists, we can now initialize a vector of strings without repetitive calls to the vector push_back member function. This code is accepted in C++11:  
+In C++11, the STL containers and string class contain initializer-list constructors and support initialization lists. So, with the convenience of C++11 initialization lists, we can now initialize a vector of strings without repetitive calls to the vector `push_back` member function. This code is accepted in C++11:  
 
 ```  
 #include <iostream> 
@@ -67,8 +67,8 @@ and
 `for ( for-range-declaration : braced-init-list ) loop-statement`  
 
 In both forms, the for-range-declaration consists of a declaration of a variable of the same data type or of a reference of the same data type as the data type of each element in the range-expression (and can also be specified as `const` if desired).  
-For example, if the for statement involves iterating through a vector of `int`s, then, if each element of the vector is to be read but not changed, the for-range-declaration could be a declaration of a variable of type int, such as `int elem`, or of a constant reference of type int, such as `const int &elem`  
-In this same example, if the purpose of the for statement is to manipulate the data of the int elements, the for-range-declaration would be declared as a reference to an int, such as `int& elem`.  
+For example, if the for statement involves iterating through a vector of `int`s, then, if each element of the vector is to be read but not changed, the for-range-declaration could be a declaration of a variable of type `int`, such as `int elem`, or of a constant reference of type `int`, such as `const int &elem`  
+In this same example, if the purpose of the `for` statement is to manipulate the data of the `int` elements, the for-range-declaration would be declared as a reference to an `int`, such as `int& elem`.  
 If providing an explicit list of elements to index consecutively, use the second form of the range-for statement by providing the explicit list in curly brackets, much like the syntax for initialized lists.  
 An example of a for-range statement with a braced-init-list:  
 
@@ -139,7 +139,7 @@ The auto feature is accessible by standard compilers that accept C++11 features.
 
 ###So, what is auto in C++11?  
 
-In C++11, auto is a type-inferenced data type, in that the data type of the variable is deduced by the compiler upon initialization or upon later inspection (e.g., when used as a function return type, which we will address soon.)  
+In C++11, auto is a type-inferred data type, in that the data type of the variable is deduced by the compiler upon initialization or upon later inspection (e.g., when used as a function return type, which we will address soon.)  
 A general definition of `auto` can be explained as:  
 `auto x = expression;`  
 here, `auto` infers the resulting data type from `expression` and initializes the variable `x` with the same value and data type returned by `expression`.  
@@ -207,7 +207,7 @@ Here, we have a problem because the compiler cannot infer the type of auto. If w
 
 `auto add(double db1, int int1) -> double;`  
 Now, we have specified `double` as our return type. But this does not make good use of our `auto` type, as we are explicitly defining our type to `double`.  
-Now, we can introduce `decltype`. Like `auto`, `decltype` is a type specifier that deduces its type by a given expression, and acts very much like auto. Let us now incorporate decltype into our example function, this time presenting the function body:  
+Now, we can introduce `decltype`. Like `auto`, `decltype` is a type specifier that deduces its type by a given expression, and acts very much like auto. Let us now incorporate `decltype` into our example function, this time presenting the function body:  
 
 ```  
 auto add(double dbl1, int int1) -> decltype(dbl1 + int1)  

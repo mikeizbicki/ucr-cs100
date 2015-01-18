@@ -128,7 +128,7 @@ HISTSIZE is related to how many commands you want to keep track of. Setting it t
 
 ![find: powerful tool](http://funnystack.com/wp-content/uploads/2014/04/Funny-Horse-44.jpg)
 
-The `find` command is used to fetch the positions of  files you want on a Unix or Linux system.  `find` will search any set of directories you specify for files that match the supplied search criteria.  You can search for files by name, owner, group, type, permissions, date, and other criteria.  The search is recursive in that it will search all subdirectories too (very powerful, right ? ).  The syntax looks like this:
+The `find` command is used to fetch the positions of files you want on a Unix or Linux system.  `find` will search any set of directories you specify for files that match the supplied search criteria.  You can search for files by name, owner, group, type, permissions, date, and other criteria.  The search is recursive in that it will search all subdirectories too (very powerful, right ? ).  The syntax looks like this:
 
     find where-to-look criteria what-to-do
 All arguments to find are optional, and there are defaults for all parts.

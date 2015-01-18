@@ -66,7 +66,7 @@ Rules:
   1. Write so it is easy for others to understand
   2. Write so you can walk away from this project, pick it up another day and be able to understand your plan
   3. Write related ideas without blank line between them, put blank lines between ideas that are less/not related
-  4. Start your pseudocode with what your code is suppose to accomplish
+  4. Start your pseudocode with what your code is supposed to accomplish
   5. Indent if using flow control (loops, if/else...)
 
 
@@ -175,7 +175,7 @@ When looking at this code consider how we used our pseudocode to develop it and 
 
   * How would this code break if we had more than one cell for each cell type?
   * How would this code break if we had different numbers of cell type 1 and cell type 2?
-  * Based on our pseudocode how could we have broken up our function fun() even more?
+  * Based on our pseudocode how could we have broken up our function `fun()` even more?
 
 ```C++
 void fun(int t, RS (&cellType1)[ncellType1], RS (&cellType2)[ncellType2], bool (&C_CT1CT2)[nCT1][nCT2], 
