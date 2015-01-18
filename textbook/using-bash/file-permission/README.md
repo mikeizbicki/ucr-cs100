@@ -70,7 +70,7 @@ On the left "/" means root directory, which is the top level directory on a syst
 
 You are a member of root group, so you have right to access and execute the file, but do not have right to change the file. 
 
-In the diagram of filesystem, you will see `home` directory which is a group directory. In this directory in the picture, there is four usernames: rick, anna, emmy and bob -- in the lab, you will see `csgrads csmajs grads` in the `home` directory. In this group of members, you don't have right access thoes directories, but for me, I only have right access to the /home/csgrads/sjin010 which is my account.
+In the diagram of filesystem, you will see `home` directory which is a group directory. In this directory in the picture, there is four usernames: rick, anna, emmy and bob -- in the lab, you will see `csgrads csmajs grads` in the `home` directory. In this group of members, you don't have right access those directories, but for me, I only have right access to the /home/csgrads/sjin010 which is my account.
 ![screenshot-sjin010 tango-18](https://cloud.githubusercontent.com/assets/9039778/5337107/992c241a-7e79-11e4-9ed3-2019375cd4fb.png)
 
 So this is how to protect the users from each other in the one server. In the personal computer, usually there is only one group and one user in the `home` directory.

@@ -78,7 +78,7 @@ int main(){
 }
 ```
 
-The default linked list is a doubly linked list (it contains pointers to the previous node as well as the next). If you want a singly linked list, then use stl `<forward_list>`.
+The default linked list is a doubly linked list (it contains pointers to the previous node as well as the next). If you want a singly linked list, then use STL `<forward_list>`.
 
 ### Stack
 
@@ -132,7 +132,7 @@ int main(){
 }
 ```
 
-There also exist priority queues (still `#include <queue>` but declared as `priority_queue<Typename> pq;`) which instead of just pushing to the back, `push()` calls the function `push_back()` of the object being pushed then calls `push_heap` (all inside of the original `push()` function) to reorder the priority queue. So instead of popping the very first thing pushed, what is popped is the item with the highest priority based on the container. So for an example where the container is an int the object with the highest priority would be the highest number. Much like stacks, queues are used in operating systems. Except queues are used more with process scheduling.
+There also exist priority queues (still `#include <queue>` but declared as `priority_queue<Typename> pq;`) which instead of just pushing to the back, `push()` calls the function `push_back()` of the object being pushed then calls `push_heap` (all inside of the original `push()` function) to reorder the priority queue. So instead of popping the very first thing pushed, what is popped is the item with the highest priority based on the container. So for an example where the container is an `int` the object with the highest priority would be the highest number. Much like stacks, queues are used in operating systems. Except queues are used more with process scheduling.
 
 ### Vector
 

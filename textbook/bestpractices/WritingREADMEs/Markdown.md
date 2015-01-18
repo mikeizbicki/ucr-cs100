@@ -1,10 +1,10 @@
 Markdown Quick Reference Guide
 ===
-This is a quick reference guide for various Markdown syntax that I found useful through out cs100. Please enjoy!
+This is a quick reference guide for various Markdown syntax that I found useful throughout cs100. Please enjoy!
 
 Flavors
 ---
-There are a variety of Markdown "flavors". Which are different implementations of Markdown with varying syntax. Entities such as [Github](https://help.github.com/articles/github-flavored-markdown/), [Reddit](http://www.reddit.com/wiki/commenting), and [Stack Exchange](http://stackoverflow.com/editing-help) have their own flavors of Markdown. Recently there has been a push for a standard implementation of Markdown, you can read more about that [here](http://blog.codinghorror.com/standard-flavored-markdown/), but for the time being there are multiple implementations that must be recognized. The following tutorial is guaranteed to interpret correctly as Github flavored Markdown. But, the same results can not be guaranteed when interpreted as any other flavor of Markdown.
+There are a variety of Markdown "flavors". These "flavors" are different implementations of Markdown with varying syntax. Entities such as [Github](https://help.github.com/articles/github-flavored-markdown/), [Reddit](http://www.reddit.com/wiki/commenting), and [Stack Exchange](http://stackoverflow.com/editing-help) have their own flavors of Markdown. Recently there has been a push for a standard implementation of Markdown, you can read more about that [here](http://blog.codinghorror.com/standard-flavored-markdown/), but for the time being there are multiple implementations that must be recognized. The following tutorial is guaranteed to interpret correctly as Github flavored Markdown. But, the same results cannot be guaranteed when interpreted as any other flavor of Markdown.
 
 Creating a Markdown Document
 ---

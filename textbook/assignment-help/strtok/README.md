@@ -559,7 +559,7 @@ being parsed will be reset. That is what happens in the program here; in the mid
 the parsed string is reset to `string_2`.
 
 What we need to do to is somehow keep track of where we are in each string that we are parsing so we can go 
-back to were we left off. Unfortunately this is just not possible with the `strtok` function. Enter the function
+back to where we left off. Unfortunately this is just not possible with the `strtok` function. Enter the function
 **`strtok_r`**.
 
 The function `strtok_r` is essentially the same as `strtok`, and follows the same rules with regards to

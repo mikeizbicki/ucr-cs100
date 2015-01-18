@@ -171,7 +171,7 @@ These colors can be similarly used on the command line, or in any scripts you ma
         echo -e "${Red}`pwd`${NC}"
     }
     
-With this defined in `.bashrc`, you will suddenly be able to type have a red pwd whenever you want! But why should we be restricted to red? Consider this function, which uses parameters to generalize colors:
+With this defined in `.bashrc`, you will suddenly be able to type have a red `pwd` whenever you want! But why should we be restricted to red? Consider this function, which uses parameters to generalize colors:
 
     function mod_pwd {
         if [ $1 = "red" ]; then
