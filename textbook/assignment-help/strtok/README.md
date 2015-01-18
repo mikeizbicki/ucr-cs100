@@ -91,7 +91,7 @@ Why does this happen? The answer is whenever something is passed into the `str` 
 the function assumes that this is a new string to parse. The way `strtok` works is that whenever it finds a
 token, it removes that token and the following deliminator from the string being looked at. It then holds on 
 to the rest of the string to be use as the "default" if no string is passed in the next time `strtok` 
-is called. In the above program, both calls recieved a new string to parse, overriding the default value.
+is called. In the above program, both calls received a new string to parse, overriding the default value.
 
 With this in mind let's change the above program and walk through what is happening.
 ```
