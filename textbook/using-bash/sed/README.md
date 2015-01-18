@@ -53,7 +53,7 @@ will do this.
 
 Before you can see what this expression is doing, there are a few things you should know.
 
-The `-n` flag turns off `sed`&#39;s printing, unless specified some other command, like `p`. `p` will print the pattern space to standard output and `regex` is simply a stand-in for a regular expression, a search pattern (more on this later). The most important things though are `x` and `h`. `x` swaps the pattern space and the hold space while `h` copies the current the pattern space to the hold space.
+The `-n` flag turns off `sed`&#39;s printing, unless specified some other command, like `p`. `p` will print the pattern space to standard output and `regex` is simply a stand-in for a regular expression, a search pattern (more on this later). The most important things though are `x` and `h`. `x` swaps the pattern space and the hold space while `h` copies the current pattern space to the hold space.
 
 So the above `sed` command behaves as the previous example right up until the point the string in the pattern space matches the regular expression. The `h` command at the end of the script forwards each line into the hold space. Whenever a line matches the regex expression, `x` swaps the hold space and the pattern space. So the lines that do not match the regular expression, are available to be output to the output stream and the matching string is temporarily stored. The `p` prints the current pattern space, which currently contains the line before the matching line. The second `x` swaps the hold space and the pattern space again so that the script can carry on as normal.
 
@@ -103,9 +103,9 @@ If `sed` is called without a source of input:
 sed 's/aol.com/gmail.com/'
 ```
 
-`sed` will become "hungup" and will wait for input from standard input (input manually entered input from the user) where `sed` will execute its commands as the user passes in new lines for it to analyze.
+`sed` will become "hungup" and will wait for input from standard input (input manually entered from the user) where `sed` will execute its commands as the user passes in new lines for it to analyze.
 
-`sed` commands can also be listed together into a file called a **sed script** (which is used instead of an explicit regular expression or search pattern with the `-f` flag). A `sed` script would like,
+`sed` commands can also be listed together into a file called a **sed script** (which is used instead of an explicit regular expression or search pattern with the `-f` flag). A `sed` script would look like,
 
 ```
 # 'sed.sh' replaces digits with their English word
@@ -208,14 +208,14 @@ beside the point. The point is that while you are searching through your README 
 
 With that in mind, let&#39;s move on to the next example.
 
-The president of the UCR ACM chapter has the 100 new members all enter their phone numbers in his laptop. Everyone enters their number in the form of "##########," which is not easy on the eyes. So after the president gets back home and sees that no one distinguished their area code from the rest of the seven digit phone number, he decides to run a `sed` script to place set of parentheses around the first 3 digits of every phone number.
+The president of the UCR ACM chapter has the 100 new members all enter their phone numbers in his laptop. Everyone enters their number in the form of "##########," which is not easy on the eyes. So after the president gets back home and sees that no one distinguished their area code from the rest of the seven digit phone number, he decides to run a `sed` script to place a set of parentheses around the first 3 digits of every phone number.
 
 Since there is no way for him to anticipate the exact first three numbers for each phone number, the president will have to write a **regular expression** to get the job done. Regular expressions themselves are worthy of their own tutorial, so we will not delve too deep into the intricacies of writing one, but we will use them to demonstrate `sed`&#39;s power. For a detailed introduction to regular expressions, please visit [this][regex] tutorial.
 
 The president&#39;s regular expression will require a `^`, which in a regular expression dictates that the match must begin at the start of the line, a
 `[[:digit:]]`, which translates to the first character of a match needing to be a digit, and lastly a `&`, which is a variable that represents the pattern that was matched.
 
-Since the president wants to capture the first three digit of each line, he will need three `[[:digit:]]`&#39;s and since he needs to place parentheses around those first three digits, he will simply put parentheses around the `&` after the second delimiter.
+Since the president wants to capture the first three digits of each line, he will need three `[[:digit:]]`&#39;s and since he needs to place parentheses around those first three digits, he will simply put parentheses around the `&` after the second delimiter.
 
 The `sed` command he comes up with looks like this:
 
@@ -233,11 +233,11 @@ Now each phone number in the ACM phone list will have a parenthesis around its t
 The `grep` bash command searches a file for specific text. Like `sed`, `grep` takes in a search pattern to compare input to. Once `grep` finds a match, it prints the line with the matching text
 to standard output.
 
-In order for `sed` do what `grep` does, it will need two additional things: the "-n" option and the "p" command.
+In order for `sed` to do what `grep` does, it will need two additional things: the "-n" option and the "p" command.
 
 The "-n" turns off `sed`&#39;s printing unless requested with the "p" option, which duplicates the input.
 
-Say an secretary at Google wants to make sure they included "employee45@gmail.com" in a file called "elist" containing all the emails of the employees in the office. Using `grep`, the secretary could search
+Say a secretary at Google wants to make sure they included "employee45@gmail.com" in a file called "elist" containing all the emails of the employees in the office. Using `grep`, the secretary could search
 for the email with,
 
 ```
