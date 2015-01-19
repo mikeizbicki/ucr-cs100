@@ -205,7 +205,7 @@ else if(pid == 0)//when pid is 0 you are in the child process
 else if(pid > 0) //parent function
 {
     if( -1 == wait(0)) //wait for the child process to finish executing
-        perror(“There was an error with wait().);
+        perror(“There was an error with wait(). ");
 }
 ```
 
