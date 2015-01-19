@@ -115,7 +115,7 @@ On pressing *MOD-P*
 
 ###Cheatsheet
 
-Xmonad has a built in cheatsheat called xmessage. It displays the default keyboard bindings.
+Xmonad has a built in cheatsheet called xmessage. It displays the default keyboard bindings.
 It can be run by pressing **MOD-SHIFT-SLASH**
  
 On pressing *MOD-SHIFT-SLASH*
