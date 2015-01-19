@@ -8,3 +8,5 @@ It should read and execute commands on an individual basis, as well as when comb
 cmd            = executable [argumentList] [connector cmd]
 connector      = || or && or ;
 ```
+
+
