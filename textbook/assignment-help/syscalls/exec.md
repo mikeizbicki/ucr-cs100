@@ -16,7 +16,7 @@ This is perhaps one of the most important syscall of them all so make sure you r
 
 `fork` creates a new process so you can have two programs running at once (multitasking, huzzah!). To create this new process, `fork` creates a copy of the process that was already running. This new process is called a child, while the older process is called the parent.
 
-Its important to note, that `fork` creates an exact copy of the parent process, and that the child and parent both continue running from the line immediately following `fork`. After this, there is no communication between the child and parent processes (except with `wait` or `pipe` which will be explained later), so anything changed in the parent or child after `fork` will not affect the other. You can think of this like a function which creates local copies of variables and once the function ends, these copies go out of scope and disappear.
+It's important to note, that `fork` creates an exact copy of the parent process, and that the child and parent both continue running from the line immediately following `fork`. After this, there is no communication between the child and parent processes (except with `wait` or `pipe` which will be explained later), so anything changed in the parent or child after `fork` will not affect the other. You can think of this like a function which creates local copies of variables and once the function ends, these copies go out of scope and disappear.
 
 If you’re creating your own bash shell you will HAVE to use `fork`. You'll use the child process of the `fork` to execute all of your commands because `exec` will end the process its running in upon completion.
 
