@@ -28,7 +28,7 @@ What cppcheck can and can't do
 * class code checks
 * code exception checking
 * [memory leak checking](#memoryhole) to a certain extent
-* obselete function usage warning
+* obsolete function usage warning
 * invalid usage of STL
 * usage of [uninitialized variables](#randomvariable) and [unused functions](#uselessfunction)
 
