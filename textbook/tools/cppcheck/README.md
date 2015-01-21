@@ -1,4 +1,4 @@
-cppcheckTutorial
+cppcheck Tutorial
 ================
 
 As a fair warning to readers, this tutorial was written with Linux users in mind.
