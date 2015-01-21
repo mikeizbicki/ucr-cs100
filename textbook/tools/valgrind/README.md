@@ -18,7 +18,7 @@ let's start with a code example from the program example1.cpp:
 ```
     int main()
     {   
-        char *var = new char[1024};
+        char *var = new char[1024];
         return 0;
     }
 ```
