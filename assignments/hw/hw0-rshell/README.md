@@ -52,7 +52,7 @@ Pay careful attention to how you parse the command string the user enters.
 There are many ways to mess this up and introduce bugs into your program.
 You will be adding more parsing features in future assignments, so it will make your life much easier if you do it right the first time!
 I recommend using either the `strtok` function from the C standard libraries or the `Tokenizer` class provided in the [boost library](http://www.boost.org/doc/libs/1_36_0/libs/tokenizer/tokenizer.htm).
-Often students who don't do this section of the assignment well and end up having to redo all of assignment one in order to complete the future assignments.
+Often students who don't do this section of the assignment well end up having to redo all of assignment one in order to complete the future assignments.
 
 ### submission instructions
 
