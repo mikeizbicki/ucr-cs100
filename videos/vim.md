@@ -1,4 +1,4 @@
-advancing to intermediate level vim
+Advancing to Intermediate Level Vim
 ===================================
 
 ##Introduction
@@ -36,3 +36,4 @@ There's a lot of ways to move around in vim. A big part of being efficient in vi
 I'm much more broad in focus in this video. But the main point I try to drive home is that concise movements to get to where you want to go are almost always going to be better than imprecise `h j k l` or `w b` movement. When you're moving around a file, you generally know where you want to go and what you want to see-- learn how to make vim get to those places quicker using the stuff in this video.
 
 [![Movement](http://img.youtube.com/vi/c_VoBUeEQOc/0.jpg)](https://www.youtube.com/watch?v=c_VoBUeEQOc)
+

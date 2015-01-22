@@ -1,4 +1,4 @@
-cppcheckTutorial
+cppcheck Tutorial
 ================
 
 As a fair warning to readers, this tutorial was written with Linux users in mind.
@@ -22,13 +22,13 @@ A download can be found <a href="http://sourceforge.net/projects/cppcheck/" targ
 
 What cppcheck can and can't do
 =============================
-##Capabilites of cppcheck
+##Capabilities of cppcheck
 
 * out of bounds error check as seen [below](#outofbounds)
 * class code checks
 * code exception checking
 * [memory leak checking](#memoryhole) to a certain extent
-* obselete function usage warning
+* obsolete function usage warning
 * invalid usage of STL
 * usage of [uninitialized variables](#randomvariable) and [unused functions](#uselessfunction)
 
@@ -39,11 +39,11 @@ What cppcheck can and can't do
 How To Use cppcheck
 ===================
 
-Alright, enough introductions lets get to what you are really interested in; how do you actually use this debugger?
+Alright, enough introductions let's get to what you are really interested in; how do you actually use this debugger?
 
 <a name="outofbounds"></a>
 In the code below, the user initializes a char array of size 10 and then assigns 0 to slot #10.
-This seems ok at first glance, however the user forgot that by declaring an array of size 10, the array indicies go from 0 to 9.
+This seems ok at first glance, however the user forgot that by declaring an array of size 10, the array indices go from 0 to 9.
 What this means is that in the code line `a[10] = 0;` the `[10]` would go out of bounds.
 
 ```
@@ -98,7 +98,7 @@ $
 ####Why?
 In this example, we see some stylistic problems with this code. 
 While it may not cause any problems in the program, it is good practice to not have unnecessary code.
-Although, cppcheck does not normally display these style isses.
+Although, cppcheck does not normally display these style issues.
 In order to display the style issues, we run the command `--enable=style`.
 At the same time, enabling style will also enable warning, performance, and portability issues.
 
@@ -144,7 +144,7 @@ $
 ```
 ####Why?
 Because you wrote a function when it wasn't even needed. Sheesh what a waste of time.
-Ok, fine heres what this code is and does. We added the main function and we still get the same as errors for not using variables i, but now we also get errors for an unused function `greaterThanZero`.
+Ok, fine here's what this code is and does. We added the main function and we still get the same as errors for not using variables i, but now we also get errors for an unused function `greaterThanZero`.
 _l2Code_
 To fix the problems listed above in the cppcheck report would be to remove the unused function and to remove the variables that were not used.
 What we will be left with will be the `main()` function and the `foo(int x, int y)` function.
@@ -220,7 +220,7 @@ int main(void)
 }
 ```
 By calling `free(a);` the program will free the allocated memory.
-This works similarily to the c++ call of `delete []a;`.
+This works similarly to the c++ call of `delete []a;`.
 
 
 Bugs that cppcheck does not find
@@ -388,4 +388,5 @@ cppcheck works in a way where it trues to avoid false positives so many of the b
 this being said, there will be many things that cppcheck will not catch such as [stylistic errors](#styleuse), syntax, and [runtime](#overflowing) bugs.
 
 *tl;dr: cppcheck is good at what it does, but use a variety of tools to fully debug your programs.*              
+
 

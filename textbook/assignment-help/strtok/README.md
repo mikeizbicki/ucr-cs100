@@ -91,7 +91,7 @@ Why does this happen? The answer is whenever something is passed into the `str` 
 the function assumes that this is a new string to parse. The way `strtok` works is that whenever it finds a
 token, it removes that token and the following deliminator from the string being looked at. It then holds on 
 to the rest of the string to be use as the "default" if no string is passed in the next time `strtok` 
-is called. In the above program, both calls recieved a new string to parse, overriding the default value.
+is called. In the above program, both calls received a new string to parse, overriding the default value.
 
 With this in mind let's change the above program and walk through what is happening.
 ```
@@ -190,7 +190,7 @@ So, if the delimiter is not in the `str` argument, then the entire argument is c
 ```
 char example_3[] = "This is the entire token";
 char *first_token = strtok(example_3, "A");
-//Look for the first occurence of "A"
+//Look for the first occurrence of "A"
 //"A" was not found
 //first_token = "This is the entire token";
 ```
@@ -412,8 +412,8 @@ Testing
  in a 
  string
 ```
-From this we see that `strtok` did not look for the first occurence of the exact sequence; it looked for the
-first occurence of any of the characters passed into the `delim` argument.
+From this we see that `strtok` did not look for the first occurrence of the exact sequence; it looked for the
+first occurrence of any of the characters passed into the `delim` argument.
 
 Another thing we have not discussed is changing the delimiter in subsequent calls to `strtok`. There is
 nothing really significant about this other than the fact that you can do it. The following
@@ -559,7 +559,7 @@ being parsed will be reset. That is what happens in the program here; in the mid
 the parsed string is reset to `string_2`.
 
 What we need to do to is somehow keep track of where we are in each string that we are parsing so we can go 
-back to were we left off. Unfortunately this is just not possible with the `strtok` function. Enter the function
+back to where we left off. Unfortunately this is just not possible with the `strtok` function. Enter the function
 **`strtok_r`**.
 
 The function `strtok_r` is essentially the same as `strtok`, and follows the same rules with regards to
@@ -669,7 +669,7 @@ things!
 As a general rule, only use `strtok` when parsing a single string and use `strtok_r` whenever you 
 parse multiple strings. Also, you must always specify what `saveptr` you are using when using `strtok_r`.
 
-Here is a quick cheatsheet that summarizes the features we covered:
+Here is a quick cheat sheet that summarizes the features we covered:
 * `strtok` can be used to parse strings
 * function setup for `strtok` and `strtok_r`
 
@@ -688,4 +688,5 @@ char *strtok_r(char *str, const char *delim, char **saveptr);
 * strtok_r is used to parse multiple strings at once
 * `strtok_r` follows the same rules as `strtok` with the addition of the `saveptr` argument
   * the `saveptr` argument keeps track of what is left after the first token is found
+
 

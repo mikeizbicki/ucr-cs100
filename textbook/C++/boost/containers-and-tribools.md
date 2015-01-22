@@ -1,7 +1,7 @@
 #Boost
 Boost is one of many c++ libraries which adds additional features to the STL. As such, this tutorial will focus on demonstrating the potential of two of its libraries: Container and Tribool, which can often be applied in place of their STL equivalents.
 ##Containers - Stable vector
-Within Boost, there are dozens of containers, one of which is the stable vector, a safer alternative to the STL vector. Its safety comes from an often overlooked aspect of vectors, which is their tendency to invalidate iterators upon erasing data in the middle of a vector. Therefore, stable vectors account for this weakness, and allow a user to erase data from the middle of a vector without it ever invalidating the iterators.
+Within Boost, there are dozens of containers, one of which is the stable vector, a safer alternative to the STL vector. Its safety comes from an often-overlooked aspect of vectors, which is their tendency to invalidate iterators upon erasing data in the middle of a vector. Therefore, stable vectors account for this weakness, and allow a user to erase data from the middle of a vector without it ever invalidating the iterators.
 
 Before illustrating the application of this added stability, it's important to understand how vectors become invalidated,
 take the following snippet of code:
@@ -37,7 +37,7 @@ int main(){
 ```
 Notice how similar it is to the previous example? This demonstrates how easy it is to use stable vectors, and should feel familiar for those already associated with STL vectors. However, this example lacks enough depth to demonstrate the practicality and potential of stable vectors, so let's apply it to a real world example.
 
-For instance, imagine writing the payroll software for a company which experiences a high turnover-rate in its employees. Since it's incredibly important that payroll is always ontime, the software can only afford minimal downtime, and must be able to add and remove employees at a moments notice. Therefore, an STL vector would create problems as soon as too many employees were removed from the system, but a stable vector would have no problem with the deletion and could function with mininmal interruptions. It would look something like this:
+For instance, imagine writing the payroll software for a company which experiences a high turnover-rate in its employees. Since it's incredibly important that payroll is always on time, the software can only afford minimal downtime, and must be able to add and remove employees at a moment’s notice. Therefore, an STL vector would create problems as soon as too many employees were removed from the system, but a stable vector would have no problem with the deletion and could function with minimal interruptions. It would look something like this:
 ```
 #include <boost/container/stable_vector.hpp>
 #include <string>
@@ -74,7 +74,7 @@ int main(){
 ```
 Notice how utilizing a stable vector early on in the creation of the program allows it to be more flexible in the future. Although this is a simplified example, it demonstrates the practicality of stable vectors, as in this scenario, it would have saved a real company thousands of dollars by not having prolonged downtime. This is the type of forethought that you as a programmer need to make when deciding between standard vectors and stable ones.
 ##Disadvantages of Stable Vectors
-Speaking of which vector to select, it's important to note the disadvantages of stable vectors. Namely, it has setbacks in two ways: through it's organization of elements, and its memory allocation. Unlike STL's vector, stable vectors don't have element contiguity, meaning that its elements are not located directly after each other in memory. Furthermore, due to stable vector being something of a hybrid between list and vector, it has overhead in performance and memory allocation, making it run slower. Overall, there are clearly best times to use both, and its important to apply the proper vector to each program you build. 
+Speaking of which vector to select, it's important to note the disadvantages of stable vectors. Namely, it has setbacks in two ways: through its organization of elements, and its memory allocation. Unlike STL's vector, stable vectors don't have element contiguity, meaning that its elements are not located directly after each other in memory. Furthermore, due to stable vector being something of a hybrid between list and vector, it has overhead in performance and memory allocation, making it run slower. Overall, there are clearly best times to use both, and it’s important to apply the proper vector to each program you build. 
 ##Tribools
 The next boost library is Tribool, which, as its name implies, is a tri-state boolean. Being that programmers work primarily in binary concepts, at first it may seem difficult to understand the application of a tri-state device, because many problems can be solved with a simple true or false check. However, tribools introduce a third state, indeterminate, which works well in many real-time applications.
 
@@ -110,7 +110,7 @@ int main(){
 }
 ```
 ##Three-valued Logic
-In addition to their tri-state attributes, Tribools also serve as a medium for three-valued logic, meaning they can be combined with boolean operators && and || in order to create more complex comparisons. Below is a trinary table for And and Or logic, which can be applied to Tribool:
+In addition to their tri-state attributes, Tribools also serve as a medium for three-valued logic, meaning they can be combined with boolean operators && and || in order to create more complex comparisons. Below is a trinary table for AND and OR logic, which can be applied to Tribool:
 
 A && B| B
 ------|------
@@ -127,3 +127,4 @@ A     | U U U T
 A     | T T T T
 
 Since Tribool works with the && and || operators, it's easy to implement these comparisons into c++ code. Not only does this create more depth in the programs, but it also serves to preserve the unknown state after comparison, allowing Tribool to easily replace booleans in older code you've written. Overall, Tribools have great potential for creating safer programs, which can react more gently to thrown errors and exceptions.
+

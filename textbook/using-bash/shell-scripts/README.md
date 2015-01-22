@@ -1,4 +1,4 @@
-#Tutorial: Simple Syntaxs For Bash Script
+#Tutorial: Simple Syntaxes For Bash Script
 
 ##All begin with a simple example
 
@@ -72,9 +72,9 @@ $ ./hello.sh
 Hello world!!!
 ```
 
-Tip: there is an alterative way to change permission. If you want to learn more about it, you can go to this link: http://linuxcommand.org/lts0070.php 
+Tip: there is an alternative way to change permission. If you want to learn more about it, you can go to this link: http://linuxcommand.org/lts0070.php 
 
-##Part 2: More syntaxs about shell scripts
+##Part 2: More syntax about shell scripts
 
 ###Variables
 
@@ -154,7 +154,7 @@ $ expr 30 % 7
 $ echo `expr 30 % 7`
 ```
 
-Do not use single or double quotes, it only works in the back quote. If you want to perform mathmetic operations to assign value to a variable, you can look at the following example:
+Do not use single or double quotes, it only works in the back quote. If you want to perform mathematic operations to assign value to a variable, you can look at the following example:
 
 ```
 #!/bin/bash
@@ -168,7 +168,7 @@ After a shell script is executed, it returns two types of exit statuses:
 
 * If the command is successful, it returns value zero(0)
 
-* If the command is not successful, it returns a nonzero value in the range between 1 to 255;
+* If the command is not successful, it returns a nonzero value in the range between 1 and 255;
 
 We can examine the exit status of your last command by using parameter '$?':
 
@@ -259,7 +259,7 @@ echo "$1 is negative"
 fi
 ```
 
-For the first 'if', I already introduced that it decides whether there are provided arguments. For the second 'if', the condition is if the first provided argument is great than 0, then the command is echo "$1 is positive". then 'elif' represents 'else if'. Finally, we use 'fi' to end this 'if/else' statement.
+For the first 'if', I already introduced that it decides whether there are provided arguments. For the second 'if', the condition is: if the first provided argument is greater than 0, then the command is echo "$1 is positive". Then 'elif' represents 'else if'. Finally, we use 'fi' to end this 'if/else' statement.
 
 For more details, please check this link: http://ss64.com/bash/if.html
 
@@ -313,7 +313,8 @@ done
 For more details, please check this link: http://www.cyberciti.biz/faq/bash-for-loop/
 
 ##Conclusion
-By writing shell scripts and gaining more knowledge about shell scripts, it helps us to have a better understanding about cs100 and the unix system. If you want to learn more advanced skills and more details about shell script, here is the link: http://linux.die.net/man/1/bash or http://linuxcommand.org/lc3_writing_shell_scripts.php
+By writing shell scripts and gaining more knowledge about shell scripts, it helps us to have a better understanding about cs100 and the Unix system. If you want to learn more advanced skills and more details about shell script, here is the link: http://linux.die.net/man/1/bash or http://linuxcommand.org/lc3_writing_shell_scripts.php
 
 Thank you for reading and have fun in cs100! :)
+
 

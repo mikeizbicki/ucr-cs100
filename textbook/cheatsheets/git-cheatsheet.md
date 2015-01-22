@@ -51,7 +51,7 @@ With `git init`, you will create a new Git repository on the project that you ar
 ```
 $ git clone [url]
 ```
-With `git clone`, you will download a copy of a Git project that already exists. For example, you can take an url from a GitHub project that you want to contribute to, and clone it. This will create a new folder with all the project on it, in the current directory.
+With `git clone`, you will download a copy of a Git project that already exists. For example, you can take a url from a GitHub project that you want to contribute to, and clone it. This will create a new folder with all the project on it, in the current directory.
 
 
 #####MAKE CHANGES
