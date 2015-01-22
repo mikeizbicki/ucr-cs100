@@ -59,10 +59,7 @@ You'll be adding this feature in a later homework.
 Pay careful attention to how you parse the command string the user enters.
 There are many ways to mess this up and introduce bugs into your program.
 You will be adding more parsing features in future assignments, so it will make your life much easier if you do it right the first time!
-<<<<<<< HEAD
-I recommend using either the `strtok` function from the C standard libraries or the `Tokenizer` class provided in the [boost library](http://www.boost.org/doc/libs/1_36_0/libs/tokenizer/tokenizer.htm).
-Often students who don't do this section of the assignment well end up having to redo all of assignment one in order to complete the future assignments.
-=======
+
 I recommend using either the `strtok` function from the C standard libraries (see [this tutorial](../../../textbook/assignment-help/strtok/README.md) by former cs100 student Dave MacPherson) or the `Tokenizer` class provide in the [boost library](http://www.boost.org/doc/libs/1_36_0/libs/tokenizer/tokenizer.htm).
 Students often don't do this section of the assignment well and end up having to redo all of assignment one in order to complete the future assignments.
 >>>>>>> ef17adeb483d52e909e9917d9d35c0e2d80db314
