@@ -49,7 +49,7 @@ position | name | office hours (WCH 110)
 --- | --- | ---
 lecturer | Mike Izbicki | Tuesday 11-noon
 teaching assistant | Busra Celikkaya | Friday 2pm-3pm
-teaching assistant | Zachary Benavides | TBA
+teaching assistant | Zachary Benavides | Friday 1pm-2pm
 
 **IMPORTANT:**
 If you want to contact the instructors about the course, you should NOT do it via email.
