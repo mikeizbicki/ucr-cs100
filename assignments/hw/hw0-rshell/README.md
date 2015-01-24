@@ -73,7 +73,7 @@ Remember that tags and branches in git are case sensitive!
 To download and grade your homework, the TA will run the following commands from the `hammer` server:
 
 ```
-$ git clone  http://github.com/yourusername/rshell.git
+$ git clone  https://github.com/yourusername/rshell.git
 $ cd rshell
 $ git checkout hw0
 $ make
