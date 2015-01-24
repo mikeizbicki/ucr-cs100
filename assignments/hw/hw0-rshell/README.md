@@ -66,7 +66,7 @@ so please double check that the letters in your tag are lower case to avoid prob
 To download and grade your homework, the TA will run the following commands from the `hammer` server:
 
 ```
-$ git clone  http://github.com/yourusername/rshell.git
+$ git clone  https://github.com/yourusername/rshell.git
 $ cd rshell
 $ git checkout hw0
 $ make
