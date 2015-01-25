@@ -24,7 +24,7 @@ A good topic would be to extend this tutorial to cover more syscalls.
 If you choose a topic like this, make sure it stays nice and cohesive and is not just a list of examples.
 
 * [Antoine Guerrero's writeup of how he hacked git to change his grades in this course](https://github.com/aguerrero/Faking-Git-Commits).
-If you have a similarly engaging story about some cool programming trick you've done, that would make a good writeup.
+If you have a similarly engaging story about some cool programming trick you've done, that would make a good write-up.
 
 * [Brunna Amorim's git cheatsheet](../../lab/lab1-git/git-cheatsheet.md).
 A similar cheatsheet for `gdb` or `bash` would make a decent topic.
@@ -40,7 +40,7 @@ Some other ideas are:
 This will help future students master the topic.
 
 * What aspect of computer science do you wish you knew more about?
-Research it and writeup your findings.
+Research it and write-up your findings.
 
 * The STL and boost libraries have lots of cool features not covered in courses here.
 Pick two or three related topics and write them up in a guide.
@@ -55,7 +55,7 @@ Similarly, write a tutorial on some of the features in the recent C++ 11 or 14 s
 
 #### writing style
 
-Your writeup must be FUN and ENGAGING.
+Your write-up must be FUN and ENGAGING.
 Informal writing is encouraged.
 Imagine your favorite internet blog post and write like that.
 
@@ -64,7 +64,7 @@ Also, spll chck ur writing and dnt use txt spk b/c I hate tht 5|-|!7.
 
 I highly recommend you visit UCR's writing center.
 
-A short, clear writeup is MUCH better than a long wordy writeup.
+A short, clear write-up is MUCH better than a long wordy write-up.
 
 ### collaboration policy
 
@@ -111,10 +111,10 @@ I will evaluate the pull request the same as any other pull request into an open
 40 points for writing style
 
 Ultimately, grading is entirely subjective on my part.
-If I enjoyed reading your writeup, you will get a good score.
+If I enjoyed reading your write-up, you will get a good score.
 If I don't enjoy reading it, you will get a bad score.
 Therefore, I recommend you show me drafts of your progress.
-I'll give you advice on how to make your writeup more fun.
+I'll give you advice on how to make your write-up more fun.
 
 If you visit the writing center, I will give you +5 points of extra credit on this assignment.
 (You'll also get a much higher grade anyways.)
