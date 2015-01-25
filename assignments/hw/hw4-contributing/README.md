@@ -114,7 +114,7 @@ Ultimately, grading is entirely subjective on my part.
 If I enjoyed reading your write up, you will get a good score.
 If I don't enjoy reading it, you will get a bad score.
 Therefore, I recommend you show me drafts of your progress.
-I'll give you advice on how to make your writ eup more fun.
+I'll give you advice on how to make your write up more fun.
 
 If you visit the writing center, I will give you +5 points of extra credit on this assignment.
 (You'll also get a much higher grade anyways.)
