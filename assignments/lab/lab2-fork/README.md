@@ -4,7 +4,7 @@ You should complete this lab using pair programming with a new partner.
 
 ### coding instructions
 
-Write a program that uses `fork` to create 4 processes.  Each process should:
+Write a program that uses [`fork`](https://github.com/mikeizbicki/ucr-cs100/blob/2015winter/textbook/assignment-help/syscalls/exec.md) to create 4 processes.  Each process should:
 
 1.  Pick a letter in `ABCD` and print it 10000 times.  Each process should pick a different letter.  Flush the output after printing every character.
 
