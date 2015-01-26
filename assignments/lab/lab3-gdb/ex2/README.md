@@ -25,7 +25,7 @@ _Taken from the stat(2) manpage_
 
 Compile and run the program with:
 ```
-$ gdb -g ex2.cpp -o ex2
+$ g++ -g ex2.cpp -o ex2
 $ ./ex2 README.md ex2.cpp
 ```
 (The arguments to `ex2` specify which files to output information for.)
