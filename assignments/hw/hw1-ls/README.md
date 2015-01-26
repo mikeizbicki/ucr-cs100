@@ -2,17 +2,21 @@
 
 ### coding requirements
 
-Write a C++ program that implements a subset of the GNU `ls` command.  In particular, you must support: the `-a`, `-l` and `-R` optional flags; and the ability to pass in zero, one, or many files.  Notice that the GNU `ls` command handles files and folders differently, and you must reproduce this functionality exactly.  For a refresher on how to use the `ls` command effectively, you can watch [this video tutorial](https://izbicki.me/blog/videoguide-for-github-vim-bash.html#ls).
+Write a C++ program that implements a subset of the GNU `ls` command.
+In particular, you must support: the `-a`, `-l` and `-R` optional flags; and the ability to pass in zero, one, or many files.
+Notice that the GNU `ls` command handles files and folders differently, and you must reproduce this functionality exactly.
+For a refresher on how to use the `ls` command effectively, you can watch [this video tutorial](https://izbicki.me/blog/videoguide-for-github-vim-bash.html#ls).
 
-To implement `ls`, you must use the `readdir` and `stat` syscalls.  For details on the use of these functions, visit their man pages. After visiting their man pages, you may checkout this video guide on directories.
+To implement `ls`, you must use the `opendir`, `closedir`, `readdir` and `stat` syscalls.
+For details on the use of these functions, visit their man pages and the [syscalls tutorial](../../../textbook/assignment-help/syscalls).
 
-[![video guide on directories](http://i.imgur.com/U7s7bwA.jpg)](https://www.youtube.com/watch?v=ru3uxfknAMc).
-
-To get you started, the file `ls.cpp` contains code that reads the files in the current working directory.  
+To get you started, the file `ls.cpp` contains code that reads the files in the current working directory.
 
 ### submission instructions
 
-You will add this code to your `rshell` project on github.  Create a branch called `ls` and do all of your work under this branch.  When finished, merge with the `master` branch and create a tag called `hw1`.
+You will add this code to your `rshell` project on github.
+Create a branch called `ls` and do all of your work under this branch.
+When finished, merge with the `master` branch and create a tag called `hw1`.
 
 To download and grade your homework, the TA will run the following commands:
 
@@ -28,19 +32,27 @@ You should run them as well to verify that you've submitted your code successful
 
 ### project structure
 
-All source files created for this program should be in your project's `src` folder.  
+All source files created for this program should be in your project's `src` folder.
 
-You will have to modify the `Makefile` to include a target called `ls` which builds your `ls` program.  The `all` target should build *both* `rshell` and `ls`.  Both binaries should be placed in the `bin` folder.  Remember that binaries should not get added to your git repo, and you will be penalized if they are.
+You will have to modify the `Makefile` to include a target called `ls` which builds your `ls` program.
+The `all` target should build *both* `rshell` and `ls`.
+Both binaries should be placed in the `bin` folder.
+Remember that binaries should not get added to your git repo, and you will be penalized if they are.
 
 ### testing
 
-Again, the tests you choose will be the most important part of your grade.  
+Again, the tests you choose will be the most important part of your grade.
 
-Remember that the commands `ls -l -R`, `ls -R -l`, `ls -lR` and `ls -Rl` should all do the same thing.  You must consider how these flags interact with the `-a` flag and the optional file parameters.
+Remember that the commands `ls -l -R`, `ls -R -l`, `ls -lR` and `ls -Rl` should all do the same thing.
+You must consider how these flags interact with the `-a` flag and the optional file parameters.
 
-As with your previous assignments: Your `tests` directory will contain a file called `ls.script` that contains all of the test cases you tried. You will generate the file using the script command, and it must be succinct (i.e. it cannot have unnecessary commands in it). You should use comments in your script to document what you are testing with each test case.
+As with your previous assignments:
+Your `tests` directory will contain a file called `ls.script` that contains all of the test cases you tried.
+You will generate the file using the `script` command, and it must be succinct (i.e. it cannot have unnecessary commands in it).
+You should use comments in your script to document what you are testing with each test case.
 
-**IMPORTANT:** If you are unsure if your test cases are sufficient, ask one of the instructors to review them *before the deadline*.
+**IMPORTANT:**
+If you are unsure if your test cases are sufficient, ask one of the instructors to review them *before the deadline*.
 
 ### collaboration policy
 
@@ -71,6 +83,18 @@ In particular, you should print directories in blue; executables in green; and h
 These effects should be combinable.
 So if you have a hidden directory, it should be displayed as blue text on top of a gray background.
 
+## additional resources
+
+Here is a complete list of resources created by previous cs100 students that might help with this assignment:
+
+* [how to use syscalls](../../../textbook/assignment-help/syscalls)
+
+* video: [how to use the `ls` command](https://izbicki.me/blog/videoguide-for-github-vim-bash.html#ls).
+
+* video: [guide to directories](https://www.youtube.com/watch?v=ru3uxfknAMc).
+
+
+<!--
 #### lab 5 integration
 
 Everyone who showed up for lab 5 got full credit on the lab.
@@ -92,3 +116,4 @@ We will verify this by running `git blame` on your source code.
 It should show only your partner's name, and not yours.
 
 If you do not meet these requirements, you will lose up to 20 points of credit on this assignment.
+-->
