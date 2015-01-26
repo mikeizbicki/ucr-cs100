@@ -1,6 +1,6 @@
 ###Exercise 1: gdb basics
 
-The file [`ex1.cpp`](ex1.cpp) contains a function called `my_strcpy` (that is supposed to behave like the built-in `strcpt` function) and a simple test case.
+The file [`ex1.cpp`](ex1.cpp) contains a function called `my_strcpy` (that is supposed to behave like the built-in `strcpy` function) and a simple test case.
 Compile the program with the command:
 ```
 $ g++ -g ex1.cpp -o ex1
