@@ -329,7 +329,7 @@ Thus, `5 & 9 = 1`. Pretty simple right? Good! Now let's try it on the example fr
 ```
 Let's assume that `buf.st_mode` has a value of 0100644. Now, using what we know about `S_IFDIR`:
 ```
-    (buf.st_mode & S_IFDIR) == (0040644 & 0040000)
+    (buf.st_mode & S_IFDIR) == (0100644 & 0040000)
     001 000 000 110 100 100
   & 000 100 000 000 000 000
   ---------------------
