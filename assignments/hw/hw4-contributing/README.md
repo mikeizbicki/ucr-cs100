@@ -15,7 +15,7 @@ Here are some past assignments and some suggestions for extending their work:
 * [Rashid Goshtasbi and Kyler Rynear's video tutorials](https://izbicki.me/blog/videoguide-for-github-vim-bash.html).
 A good topic would be to provide similar video tutorials for another aspect of this class.
 
-* [William Coates's valgrind tutorial](../../../tutorials/valgrind).
+* [William Coates's `valgrind` tutorial](../../../tutorials/valgrind).
 A good topic would be to extend this tutorial to cover more of valgrind's features.
 A similar tutorial for `gdb` or `cppchecker` (or another tool) would also be nice.
 
@@ -42,7 +42,7 @@ This will help future students master the topic.
 * What aspect of computer science do you wish you knew more about?
 Research it and writeup your findings.
 
-* The stl and boost libraries have lots of cool features not covered in courses here.
+* The STL and boost libraries have lots of cool features not covered in courses here.
 Pick two or three related topics and write them up in a guide.
 
 * Templates are becoming more and more important in C++ programming.
@@ -59,7 +59,7 @@ Your writeup must be FUN and ENGAGING.
 Informal writing is encouraged.
 Imagine your favorite internet blog post and write like that.
 
-In particular, don't write long, drawn-out sentences that use sophisticated verbage because no one wants to read that, especially not cs100 students or random programmers on the internet be kind to us oh and use proper punctuation because reading this sentence totally sucks.
+In particular, don't write long, drawn-out sentences that use sophisticated verbiage because no one wants to read that, especially not cs100 students or random programmers on the internet be kind to us oh and use proper punctuation because reading this sentence totally sucks.
 Also, spll chck ur writing and dnt use txt spk b/c I hate tht 5|-|!7.
 
 I highly recommend you visit UCR's writing center.

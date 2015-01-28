@@ -16,9 +16,9 @@ This means that whenever the programmer enters `ARRAY_SIZE` in his code, it will
 
 ###Similarity to Constants
 
-Consider the statement `const int ARRAY_SIZE = 100`. It functions nearly the same way as an object macro. However there are many significant differences. Consts are properly scoped, and can be used in situations that require a pointer to be passed. Macros aren't error checked, and the compiler checks the code only after they are replaced. This occasionally results in errors that might cause unexpected runtime results, which is a problem consts do not have.
+Consider the statement `const int ARRAY_SIZE = 100`. It functions nearly the same way as an object macro. However there are many significant differences. `const`s are properly scoped, and can be used in situations that require a pointer to be passed. Macros aren't error checked, and the compiler checks the code only after they are replaced. This occasionally results in errors that might cause unexpected runtime results, which is a problem `const`s do not have.
 
-The main advantage to using a macro is that they are compatible with C, so any C standard library will use them. Also, no memory is used to store it in your program, since it's only replacing text with a literal value. That means there's no way to change this value by any means other than altering the macro definition. With consts, some compilers just allocate memory identified by the name, and you might be able to modify the memory with pointers. For example:
+The main advantage to using a macro is that they are compatible with C, so any C standard library will use them. Also, no memory is used to store it in your program, since it's only replacing text with a literal value. That means there's no way to change this value by any means other than altering the macro definition. With `const`s, some compilers just allocate memory identified by the name, and you might be able to modify the memory with pointers. For example:
 
 ```
 const int constant = 10;
@@ -47,14 +47,14 @@ You could use this macro with a statement like
 
 ###Multi-line Macros
 
-Macro definitions end at the end of the `#define` line, so to continue the definition onto multiple lines, you have to use a backslash-newline. However, when the macro expands it all appears on one line. This makes longer macros easier to read. For example,
+Macro definitions end at the end of the `#define` line, so to continue the definition onto multiple lines, you have to use a backslash-newline. However, when the macro expands, it all appears on one line. This makes longer macros easier to read. For example,
 
 ```
 #define ODDEVEN(x) cout << "The number is "; \
                         if (x % 2 == 0) cout << "EVEN\n";\
                         else cout << "ODD\n";
 int i = 5;
-ODDEVEN(j);
+ODDEVEN(i);
 //OUTPUT:The number is ODD
 ```
 
@@ -70,11 +70,11 @@ PRINT_GRADE(Kenneth_Huang);
 //Output:The grade for Kenneth_Huang is 85
 ```
 
-This can be useful when debugging, and if you wanted to know exactly the arguments being passed to the macro.
+This can be useful when debugging, and if you wanted to know the exact arguments being passed to the macro.
 
 ###Combining Macros
 
-Macros definitions can include previously defined macros. For example, if you had a macro that returns the larger of two numbers, and you also wanted to find the largest of 3 numbers.
+Macros definitions can include previously defined macros. For example, if you had a macro that returns the larger of two numbers and another to find the largest of 3 numbers.
 
 ```
 #define MAX(a,b)           ((a < b) ? (b) : (a))
@@ -122,7 +122,7 @@ int z = 20 / 3 + 2;
 // 20 / 3 evaluates first, and then + 2
 ```
 
-The way to avoid this problem is to force the arguments to be evaluated first, by surrounding them with parentheses. This is a good way to ensure the correct evaluation of replacement text and it makes it safer.
+The way to avoid this problem is to force the arguments to be evaluated first, by surrounding them with parentheses. This is a good way to ensure the correct evaluation of replacement text and to make it safer.
 
 ```
 #define DIVIDE(a, b) ((a) / (b))         
@@ -141,9 +141,9 @@ Consider the following macro.
 }
 ```
 
-A call to this macro might be `MACRO(2,4)` This call expands to a complete compound statement that doesn't require a semicolon to end it. However, since it looks like a function call, it makes it less confusing if you can use it like one, and write a semicolon afterward, as in `MACRO(2,4);`
+A call to this macro might be `MACRO(2,4)` This call expands to a complete compound statement that doesn't require a semicolon to end it. However, since it looks like a function call, it makes it less confusing if you can use it like one and write a semicolon afterward, as in `MACRO(2,4);`
 
-In this case the semicolon is redundant, and creates a null statement. This becomes an issue in if else statements.
+In this case, the semicolon is redundant and creates a null statement. This becomes an issue in if else statements.
 
 ```
 if ( x!= y )
@@ -161,11 +161,11 @@ do { cout << "1st arg is: " << (x) << endl; \
 } while (0)
 ```
 
-Now `MACRO(2,4);` expands into `do {...} while (0);` This is one statement, and the loop executes exactly once.
+Now `MACRO(2,4);` expands into `do {...} while (0);`. This counts as one statement as the loop executes exactly once.
 
 ###Duplication of Side Effects
 
-Another problem is that macros don't evaluate their arguments, and instead paste them into the text. This becomes an issue with the previous `MAX` macro if you pass in x++, y++.
+Another problem is that macros don't evaluate their arguments and, instead, pastes them into the text. This becomes an issue with the previous `MAX` macro if you pass in `x++` and `y++`.
 
 ```
 #define MAX(a,b) ((a) < (b) : (a))
@@ -176,11 +176,11 @@ int z = MAX(x++, y++);
 // int z = (x++ < y++ ? y++ : x++)
 ```
 
-The problem is that in this case y++ is evaluated twice, and y will have a value of 12 instead of what we expected, 11.
+The problem in this case is that `y++` is evaluated twice, which assigns `y` the value of 12 instead of what we expected, 11.
 
 ###Unusual Errors
 
-Macros have no namespace and aren't error checked, as the compiler only checks the code after the macro names are replaced. Because of this, it is easy to create errors that can be difficult to find. For example:
+Macros do not have namespace and aren't error checked, as the compiler only checks the code after the macro names are replaced. Because of this, it is easy to create errors that can be difficult to find. For example:
 
 ```
 #define begin() end()
@@ -195,4 +195,4 @@ for (vector<int>::iterator it = myvector.begin() ; it != myvector.end(); ++it)
 There won't be any compile errors, but the for loop won't output anything. Runtime errors like this are difficult to debug, because without looking at the macro definition, the code seems perfectly fine.
 
 ##Conclusion
-Preprocessor macros add powerful features and flexibility, and they can help reduce the amount of code you write. They can also increase performance by reducing function call overhead, since they're always expanded inline. However, they come with many drawbacks, as we have seen, and can be very difficult to debug. But while there now are alternatives like inline functions, which weren't standard prior to C99, macros can still be an incredibly useful tool if you are careful.
+Preprocessor macros add powerful features and flexibility, and can help to reduce the amount of code you write. They can also increase performance by reducing the function call overhead, since they're always expanded inline. However, they come with many drawbacks, as we have seen, and can be very difficult to debug. But while there are now alternatives like the inline functions, which weren't standard prior to C99, macros can still be an incredibly useful tool if you are careful.

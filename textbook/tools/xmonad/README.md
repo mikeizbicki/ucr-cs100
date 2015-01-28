@@ -115,7 +115,7 @@ On pressing *MOD-P*
 
 ###Cheatsheet
 
-Xmonad has a built in cheatsheat called xmessage. It displays the default keyboard bindings.
+Xmonad has a built in cheatsheet called xmessage. It displays the default keyboard bindings.
 It can be run by pressing **MOD-SHIFT-SLASH**
  
 On pressing *MOD-SHIFT-SLASH*
@@ -133,7 +133,7 @@ Ubuntu user should run `unity-control-center`.
 
 Xmonad is very flexible in personalizations. You can add many things including new keyboard shortcuts, add-ons etc.
 
-To configure you have to edit the `~/.xmonad/xmonad.hs` file. The configuration is not so easy as it has to be written in haskell. However, you can find many configurations online. A personal favorite of mine is [this](https://www.haskell.org/haskellwiki/Xmonad/Config_archive/John_Goerzen's_Configuration). This one will also teach you how to add your own keyboard bindings.
+To configure you have to edit the `~/.xmonad/xmonad.hs` file. The configuration is not as easy as it has to be written in haskell. However, you can find many configurations online. A personal favorite of mine is [this](https://www.haskell.org/haskellwiki/Xmonad/Config_archive/John_Goerzen's_Configuration). This one will also teach you how to add your own keyboard bindings.
 
 Report typos and/or broken links at ihund001@ucr.edu
 

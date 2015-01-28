@@ -186,7 +186,7 @@ Every version of our repo is called a "branch."  A project can have many branche
 $ git branch
 ```
 
-This should list just a single branch called "master."  This branch was created for you automatically when you ran the `git init` command.
+This should list just a single branch called `master`.  This branch was created for you automatically when you ran the `git init` command.
 
 One way to think of branches is as a nice label for your commit hashes.  Your "master" branch currently points to your commit with the message "modified the README."  That's why when we ran `git checkout master` above, it restored our project to the state of that commit.  We could also have used `git checkout [hash]`, if you replaced `[hash]` with the appropriate hash value.  But that's much less convenient.  When you use `git checkout` in the future, you will usually be using it on branch names.
 
@@ -469,7 +469,7 @@ We will not be using ilearn in this course.  We will be using git and github to 
 
 ### subscribing to the course
 
-If you do not already have a github account, you will need to create one.  Go to http://www.github.com and register an account.  Your github account does NOT need to be the same as your cs account.  For example, my account is just my full name `mikeizbicki`.  Feel free to get creative and pick something fun.  If you already have a github account, you do not need to register a new one.
+If you do not already have a github account, you will need to create one.  Go to http://www.github.com and register an account.  Your github account does NOT need to be the same as your CS account.  For example, my account is just my full name `mikeizbicki`.  Feel free to get creative and pick something fun.  If you already have a github account, you do not need to register a new one.
 
 Return to http://github.com/mikeizbicki/ucr-cs100. At the top of the page there is a button labeled `Watch`:
 
@@ -519,7 +519,7 @@ Click the button on the left hand side labeled `collaborators`:
 
 This should bring up a menu that lets you add collaborators.  Everyone you add here has full write access to the repo.  Add all of the course instructors as collaborators.  Our GitHub accounts are: `MikeIzbicki`, `busrac`, and `benavidz`.
 
-**IMPORTANT:** The file <a href="../../../GRADES.md">GRADES.md</a> in this repo contains detailed information about how your grades will be stored in this repo.  Finish completing this lab, then go back and read this file.
+**IMPORTANT:** The file <a href="https://github.com/mikeizbicki/gitlearn">README.md</a> in the gitlearn repo contains detailed information about how your grades will be stored in this repo.  Finish completing this lab, then go back and read this file.
 
 ### add your information to the course page
 
@@ -611,7 +611,7 @@ Once you issue your pull request, the TA will review your contribution and add i
 
 ## references
 
-We've only scratched the surface of what the git command has to offer.  You should be able to get by in this course using just these commands.  But if your looking for more info, here's some good links:
+We've only scratched the surface of what the git command has to offer.  You should be able to get by in this course using just these commands.  But if you’re looking for more info, here's some good links:
 
 This webpage is a reference for the most common and useful git commands.
 

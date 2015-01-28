@@ -2,15 +2,9 @@
 
 ### coding requirements
 
-Extend your `rshell` program so that it properly handles input redirection `<`, output redirection `>` and `>>`, and piping `|`.  
-This will require using the Unix functions `dup` and `pipe`.  
-The [syscalls tutorial from hw0](https://github.com/mikeizbicki/ucr-cs100/blob/cs100-2014fall/tutorials/syscalls/README.md) and the following videos should cover these functions.
-
-[![dup/fd](http://i.imgur.com/W21y1zMb.jpg)](https://www.youtube.com/watch?v=EqndHT606Tw)
-
-[![pipes](http://i.imgur.com/TeHSXo9.jpg)](https://www.youtube.com/watch?v=uHH7nHkgZ4w)
-
-Of course, you should also be consulting the man pages.
+Extend your `rshell` program so that it properly handles input redirection `<`, output redirection `>` and `>>`, and piping `|`.
+This will require using the Unix functions `dup` and `pipe`.
+You can find help on how to use these functions in the man pages and the [additional resources](#additional resources) section below.
 
 As an example, after this assignment, your program should be able to successfully handle the following command:
 
@@ -18,7 +12,9 @@ As an example, after this assignment, your program should be able to successfull
 $ cat < existingInputFile | tr A-Z a-z | tee newOutputFile1 | tr a-z A-Z > newOutputFile2
 ```
 
-**IMPORTANT:** This is a necessary but not sufficient test case.  You must come up with others on your own.
+**IMPORTANT:**
+This is a necessary but not sufficient test case.
+You must come up with others on your own.
 
 Bash has an extensive syntax for redirection, and you are not required to implement all of it.
 But if you're curious, see the [linux documentation project's bash io-redirection tutorial](http://www.tldp.org/LDP/abs/html/io-redirection.html) for details.
@@ -45,7 +41,7 @@ There are no changes to your project structure.
 
 ### testing
 
-Again, the tests you choose will be the most important part of your grade.  
+Again, the tests you choose will be the most important part of your grade.
 
 You should carefully consider: which redirections can be legally combined together, and which cannot? Does order matter?  Also make sure to test that you are parsing the command correctly.
 
@@ -74,7 +70,7 @@ You are ENCOURAGED to look at [bash's source code](https://www.gnu.org/software/
 
 #### extra credit 1
 
-The bash shell has an additional form of input redirection that let's you redirect from a string instead of a file.  For example, these two commands will give us the same output:
+The bash shell has an additional form of input redirection that lets you redirect from a string instead of a file.  For example, these two commands will give us the same output:
 
 ```
 $ echo extra credit rocks | cat
@@ -85,10 +81,21 @@ You can receive up to 20 points extra credit for implementing this functionality
 
 #### extra credit 2
 
-The bash shell let's you perform output redirection on whatever file descriptors you want by placing a number before the `>` command.
+The bash shell lets you perform output redirection on whatever file descriptors you want by placing a number before the `>` command.
 For example,
 ```
 $ g++ main.cpp 2> errors
 ```
 will direct stderr (which is where g++ prints error messages) to the file errors.
 If you implement this syntax for any file descriptor and both `>` and `>>`, you will get up to 20 points extra credit.
+
+## additional resources
+
+Here is a complete list of resources created by previous cs100 students that might help with this assignment:
+
+* [how to use syscalls](../../../textbook/assignment-help/syscalls/exec.md)
+
+* video: [how to duplicate file descriptors](https://www.youtube.com/watch?v=EqndHT606Tw)
+
+* video: [how to use pipes](https://www.youtube.com/watch?v=uHH7nHkgZ4w)
+
