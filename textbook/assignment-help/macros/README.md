@@ -54,7 +54,7 @@ Macro definitions end at the end of the `#define` line, so to continue the defin
                         if (x % 2 == 0) cout << "EVEN\n";\
                         else cout << "ODD\n";
 int i = 5;
-ODDEVEN(j);
+ODDEVEN(i);
 //OUTPUT:The number is ODD
 ```
 
