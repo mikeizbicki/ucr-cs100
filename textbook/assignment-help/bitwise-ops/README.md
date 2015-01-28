@@ -386,7 +386,7 @@ The truth table for the XOR operation is:
 	</TR>
 </TABLE>
 
-Looks like it's time for another example! Let’s perform the XOR operation on 015 and 023:
+Looks like it's time for another example! Let’s perform the XOR operation on octal values 015 and 023:
 ```
     015 ^ 023 //Ah yes, use their bit representations!
 
