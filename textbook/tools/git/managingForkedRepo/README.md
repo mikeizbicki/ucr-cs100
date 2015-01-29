@@ -169,9 +169,9 @@ Say you've made a commit to your forked repository that had A LOT of changes fro
 
 4. At this point, your local repository should now be reverted. Now you need to force push this change onto your repository on github.
 
-```
-  $ git push -f
-```
+  ```
+    $ git push -f
+  ```
 
 **NOTE**: `git reset --hard` is a very powerful command and cannot be undone. If you'd like to keep the changes you've made just in case, you should branch off a copy of your changes before resetting. If you'd like to learn more about `git reset`, there's a great article that explains it [here](http://git-scm.com/blog/2011/07/11/reset.html).
 
