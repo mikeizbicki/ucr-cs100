@@ -163,9 +163,9 @@ Say you've made a commit to your forked repository that had A LOT of changes fro
 2. Look up the commit number of the commit you want to revert to.
 3. Enter this command:
 
-```
-  $ git reset --hard OLD_COMMIT_NUMBER
-```
+  ```
+    $ git reset --hard OLD_COMMIT_NUMBER
+  ```
 
 4. At this point, your local repository should now be reverted. Now you need to force push this change onto your repository on github.
 
