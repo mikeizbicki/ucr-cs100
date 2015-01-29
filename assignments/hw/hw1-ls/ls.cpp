@@ -14,7 +14,7 @@ using namespace std;
 
 int main()
 {
-    char *dirName = ".";
+    char dirName[] = ".";
     DIR *dirp = opendir(dirName);
     dirent *direntp;
     while ((direntp = readdir(dirp)))
