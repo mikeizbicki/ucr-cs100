@@ -32,7 +32,7 @@ To sync changes you make in a fork with the original repository, you need to con
     $ git remote -v
   ```
 
-As you can see, `origin` refers to your forked repository, while `upstream` will refer to the original owner's repository.
+  As you can see, `origin` refers to your forked repository, while `upstream` will refer to the original owner's repository.
 
 5. To finally sync your forked repository, fetch the branches and their respective commits from the upstream repository.
 
