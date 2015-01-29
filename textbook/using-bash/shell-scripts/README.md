@@ -26,7 +26,7 @@ $ echo 'Hello world!!!' #Our first script!!!
 Hello world!!!
 ```
 
-* We can see that every shell script includes the first line. It looks like a comment since it starts with '#'. However, it is created on purpose because it tells the system which interpreter (such as bash, ruby, python, and others) should be used to execute the followed script. For this script, it runs in the bash shell. And '#!' is a special character construct called shebang.
+* We can see that every shell script includes the first line. It looks like a comment since it starts with '#', however, it is created on purpose because it tells the system which interpreter (such as bash, ruby, python, and others) should be used to execute the followed script. For this script, it runs in the bash shell. And '#!' is a special character construct called shebang.
 
 A shell script is a file containing a sequence of commands for a UNIX-based operating system. We also can consider each line of code of the script as a line of command in the terminal.
 
@@ -34,7 +34,7 @@ The following tutorial has two parts:
 
 ##Part 1: How to make your script become executable
 
-To successfully run our shell script, we need to make our script become executable. For the above "hello world" example, I save it as 'hello.sh'. For a shell script file, try to use the file extension as '.sh'. So it can be easily identified by us as shell script.
+To successfully run our shell script, we need to make our script become executable. For the above "hello world" example, I saved it as 'hello.sh'. For a shell script file, try to use the file extension as '.sh'. So it can be easily identified by us as a shell script.
 
 There are two ways to execute a shell script:
 
@@ -43,7 +43,7 @@ $ bash hello.sh
 $ ./hello.sh
 ```
 
-Here, I use the second way to run my script. However, the system is very picky about not treating any text files as a program. Then each time we create a shell script we may meet a problem about permission: 
+Here, I used the second way to run my script; however, the system is very picky about not treating any text files as a program. Whenever we create a shell script we may meet a problem about permission: 
 
 ```
 $ ./hello.sh
