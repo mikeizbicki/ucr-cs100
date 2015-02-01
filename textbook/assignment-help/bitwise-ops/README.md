@@ -166,7 +166,7 @@ Here's a table of corresponding values:
 		<TD>10</TD>
 		<TD>12</TD>
 		<TD>20</TD>
-		<TD>128</TD>
+		<TD>124</TD>
 		<TD>240</TD>
 		<TD>352</TD>
 		<TD>620</TD>
