@@ -57,7 +57,7 @@ The -f flag stands for 'force' referring to 'ignore nonexistent files, never pro
 
 ![Image of Help](http://buildmoneyonthenet.com/wp-content/uploads/2014/08/YOU-NEED-HELP-MY-FRIEND.jpg)
 
-It is not a shame to ask for help while using linux. Even for those experts using shell there will always be a flag or maybe a command that causes headaches into their brilliant minds. So one of the best tips we could give you is about getting the help you need.
+It is not a shame to ask for help while using linux. Even for those experts using shell, there will always be a flag or maybe a command that causes headaches into their brilliant minds. So one of the best tips we could give you is about getting the help you need.
 
 Let's pretend you want to use the 'mv' command, but you are afraid of losing files. Before you start you could type:
 
@@ -67,11 +67,11 @@ Let's pretend you want to use the 'mv' command, but you are afraid of losing fil
 
 	$ mv --h
 
-A lot of information will be displayed in the terminal, and that can be boring for you to go over everything. To simplify your life you could filter the output by piping it and using the 'grep' command. As you are afraid of losing files let's filter by "overwrite" word:
+A lot of information will be displayed in the terminal, and that can be boring for you to go over everything. To simplify your life you could filter the output by piping it and using the 'grep' command. As you are afraid of losing files, let's filter by "overwrite" word:
 
 	$ mv --help | grep overwrite
 
-Now you probably have only two sentences displayed on your screen. Now, use the commands with the appropriate flags and be happy!
+You probably have only two sentences displayed on your screen. Now, use the commands with the appropriate flags and be happy!
 
 
 Keeping the 'mv' command as example, another powerful way of getting help is through reading the manual. Often referred to as "man pages". You can find it easily on the internet. But in case some catastrophe happened with the internet and then you are no longer connected the easiest way to do it is typing:
@@ -91,7 +91,7 @@ Shell keeps track of all yours previous typed commands. Accessing and using it c
 
 	$ history
 
-It displays in your screen all your previous commands ordered by a sequential number. You can use this command just to remember something you typed days ago and now you need to run it again. Now, here is the trick. Once you know the number attached in your desired typed command or the position in the list you don't need to type it again. Just run:
+It displays on your screen all your previous commands ordered by a sequential number. You can use this command just to remember something you typed days ago and now you need to run it again. Now, here is the trick. Once you know the number attached in your desired typed command or the position in the list you don't need to type it again. Just run:
 
 	$ !622
 
