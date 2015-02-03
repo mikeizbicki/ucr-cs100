@@ -75,7 +75,7 @@ week | date | reading/quiz | topics
 4 | Jan26 | William Coates' [valgrind tutorial](textbook/tools/valgrind); Paul Graham's [how to be a good hacker](http://www.paulgraham.com/gh.html); Jeff Atwood's [how to become a better programmer](http://blog.codinghorror.com/how-to-become-a-better-programmer-by-not-programming/) | debugging tools (`valgrind`,`cppcheck`)
 4 | Jan28 | **quiz**; [bitwise operators](textbook/assignment-help/bitwise-ops); [macros](textbook/assignment-help/macros); the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls) | syscalls: managing directories (`readdir`,`stat`)
 5 | Feb02 | Ycombinator's [startup ideas we'd like to fund](http://old.ycombinator.com/ideas.html) and Paul Graham's [start up funding](http://paulgraham.com/startupfunding.html) | shell scripting: io redirection/piping
-5 | Feb04 | Patrick McKenzie [on salary negotiation for programmers](http://www.kalzumeus.com/2012/01/23/salary-negotiation/) | shell scripting: io redirection/piping
+5 | Feb04 | Patrick McKenzie [on salary negotiation for programmers](http://www.kalzumeus.com/2012/01/23/salary-negotiation/) (it's long; you don't have to read it all) | shell scripting: io redirection/piping
 6 | Feb09 | the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls) | syscalls: io redirection/piping (`pipe`,`dup`)
 6 | Feb11 | **quiz** | shell scripting: control flow with `if` and `for`
 7 | Feb16 | esr's thoughts on [using make](http://www.catb.org/esr/writings/taoup/html/ch15s04.html) | shell scripting: detailed makefiles
