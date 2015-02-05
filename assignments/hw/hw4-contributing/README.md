@@ -99,11 +99,11 @@ You MAY use images that you did not create yourself if the use conforms to the i
 
 There are three submissions for this assignment:
 
-The first is part is due at before class on **Wednesday, Feb 11**.
+The first is part is due before class on **Wednesday, Feb 11**.
 In this submission, you must create an issue on github describing what your tutorial will be about, and who will be on your team.
 I will use this submission to ensure your topic is appropriate.
 
-The second submission is due at before class on **Wednesday, Feb 25**.
+The second submission is due before class on **Wednesday, Feb 25**.
 This is a rough draft submission of your project.
 Create a folder in this repo called `/tutorials/yoursubject`.
 You should create a pull request through github on this repo showing the current status of your project.
