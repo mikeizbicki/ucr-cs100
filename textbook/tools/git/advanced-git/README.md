@@ -31,7 +31,7 @@ Now to the juicier parts of git! :]
 
 In the workplace, you might have to update your repository with the original repository to get the most current source code and other files that you are working with.
 
-To do update your repository, create a remote named `upstream`. Then fetch the `upstream` for any changes to the tracked repository. Finally, merge the contents of that repository to your forked repository, which updates your forked repository with the main tracked repository
+To update your repository, create a remote named `upstream`. Then fetch the `upstream` for any changes to the tracked repository. Finally, merge the contents of that repository to your forked repository, which updates your forked repository with the main tracked repository
 
 We will first check which remotes you have with:
 
