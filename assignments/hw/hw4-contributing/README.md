@@ -2,12 +2,30 @@
 
 ### requirements
 
-For this assignment, you must give something back to the open source community.  One common problem with open source software is a lack of documentation and easily accessible tutorials.  You will create some.  Future students of this class (and random strangers on the internet) will be using your tutorials to help them learn.
+For this assignment, you must give something back to the open source community.
+There are two ways you can do this: create your own project, or add documentation to an existing project.
 
+#### your own project
+
+If you have an idea you want to develop, now's your chance!
+It can be about anything you want.
+I'll help you spify it up and distribute it to the open source community.
+
+Here's some projects previous cs100 students have done:
+
+* Henry Garcia and Daniel Ramirez created [the git game](https://github.com/hgarc014/git-game): a game to help people learn git commands
+
+* Jamal Moon created [PacVim](https://github.com/jmoon018/PacVim): a game to help people learn vim commands
+
+* Thomas Liu and Adam Chao created [regexProgram](https://github.com/Liniarc/regexProgram): a tutorial to help students learn regular expression programming
+
+#### adding documentation
+
+One common problem with open source software is a lack of documentation and easily accessible tutorials.
+You will create some.
+Future students of this class (and random strangers on the internet) will be using your tutorials to help them learn.
 Your tutorial should be between 1000-2000 words.
 It should have plenty of code examples and/or pictures illustrating your topic.
-
-#### topic
 
 You are free to choose any topic that will be interesting to future cs100 students.
 Here are some past assignments and some suggestions for extending their work:
@@ -49,8 +67,6 @@ Pick two or three related topics and write them up in a guide.
 Write a tutorial on how to do template meta programming.
 Similarly, write a tutorial on some of the features in the recent C++ 11 or 14 standards.
 
-* Pick an entry in the [international obfuscated C code contest](http://ioccc.org) and give a writeup explaining how it works.
-
 <!--One simple way to format these tutorials is as a "top ten list."  For example, the project might be "the top ten most useful bash commands."  Then provide ten commands from bash and show how they work and why they're useful.-->
 
 #### writing style
@@ -58,13 +74,13 @@ Similarly, write a tutorial on some of the features in the recent C++ 11 or 14 s
 Your writeup must be FUN and ENGAGING.
 Informal writing is encouraged.
 Imagine your favorite internet blog post and write like that.
+A short, clear writeup is MUCH better than a long wordy writeup.
 
 In particular, don't write long, drawn-out sentences that use sophisticated verbiage because no one wants to read that, especially not cs100 students or random programmers on the internet be kind to us oh and use proper punctuation because reading this sentence totally sucks.
 Also, spll chck ur writing and dnt use txt spk b/c I hate tht 5|-|!7.
 
 I highly recommend you visit UCR's writing center.
-
-A short, clear writeup is MUCH better than a long wordy writeup.
+If you do, I will give you +5 points of extra credit.
 
 ### collaboration policy
 
