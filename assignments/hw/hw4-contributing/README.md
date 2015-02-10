@@ -9,7 +9,7 @@ There are two ways you can do this: create your own project, or add documentatio
 
 If you have an idea you want to develop, now's your chance!
 It can be about anything you want.
-I'll help you spify it up and distribute it to the open source community.
+I'll help you spiffy it up and distribute it to the open source community.
 
 Here's some projects previous cs100 students have done:
 
@@ -77,7 +77,8 @@ Imagine your favorite internet blog post and write like that.
 A short, clear writeup is MUCH better than a long wordy writeup.
 
 In particular, don't write long, drawn-out sentences that use sophisticated verbiage because no one wants to read that, especially not cs100 students or random programmers on the internet be kind to us oh and use proper punctuation because reading this sentence totally sucks.
-Also, spll chck ur writing and dnt use txt spk b/c I hate tht 5|-|!7.
+Also, spll chck ur writing and dnt use txt spk b/c I hate tht 5|-|!7. 
+(Translation: spell check your writing and don't use text speak because I hate that ****.)
 
 I highly recommend you visit UCR's writing center.
 If you do, I will give you +5 points of extra credit.
