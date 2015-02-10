@@ -82,7 +82,7 @@ The main purpose of this function is to assist in finding info about the group a
 
 Here’s a quick implementation of `getgrgid`, where s is a `stat struct`:
 ```
-struct passwd *gp;
+struct group *gp;
 if(!(gp = getgrgid(s.st_gid)))
    perror("there was an error in getgrgid. ");
 ```
