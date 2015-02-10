@@ -99,7 +99,7 @@ assignment | date
 [hw4](assignments/hw/hw4-contributing) - topic | Wednesday of week 6 (Feb 11th) before class
 [hw2](assignments/hw/hw2-piping) | Friday of week 7 (Feb 20th) @ 11:59 PM
 [hw4](assignments/hw/hw4-contributing) - draft | Wednesday of week 8 (Feb 25th) before class
-[hw3](assignments/hw/hw3-misc) | Friday of week 9 (Mar 6th) @ 11:59 PM
+[hw3](assignments/hw/hw3-signals) | Friday of week 9 (Mar 6th) @ 11:59 PM
 [hw4](assignments/hw/hw4-contributing) - final | Friday of week 10 (Mar 13th) @ 11:59 PM
 
 ### grades
