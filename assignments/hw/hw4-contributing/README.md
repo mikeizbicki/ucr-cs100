@@ -15,18 +15,18 @@ Here are some past assignments and some suggestions for extending their work:
 * [Rashid Goshtasbi and Kyler Rynear's video tutorials](https://izbicki.me/blog/videoguide-for-github-vim-bash.html).
 A good topic would be to provide similar video tutorials for another aspect of this class.
 
-* [William Coates's valgrind tutorial](../../../tutorials/valgrind).
+* [William Coates's valgrind tutorial](../../../textbook/tools/valgrind).
 A good topic would be to extend this tutorial to cover more of valgrind's features.
 A similar tutorial for `gdb` or `cppchecker` (or another tool) would also be nice.
 
-* [Daniel Ting and Katherine Gallaher's syscall tutorial](../../../tutorials/syscalls).
+* [Daniel Ting and Katherine Gallaher's syscall tutorial](../../../textbook/assignment-help/syscalls).
 A good topic would be to extend this tutorial to cover more syscalls.
 If you choose a topic like this, make sure it stays nice and cohesive and is not just a list of examples.
 
 * [Antoine Guerrero's writeup of how he hacked git to change his grades in this course](https://github.com/aguerrero/Faking-Git-Commits).
 If you have a similarly engaging story about some cool programming trick you've done, that would make a good writeup.
 
-* [Brunna Amorim's git cheatsheet](../../lab/lab1-git/git-cheatsheet.md).
+* [Brunna Amorim's git cheatsheet](../../../textbook/cheatsheets/git-cheatsheet.md).
 A similar cheatsheet for `gdb` or `bash` would make a decent topic.
 
 * [Kevin Nguyen clarified lab 1 by adding pictures to the README file](../../lab/lab1-git).
