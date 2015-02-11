@@ -33,18 +33,18 @@ Here are some past assignments and some suggestions for extending their work:
 * [Rashid Goshtasbi and Kyler Rynear's video tutorials](https://izbicki.me/blog/videoguide-for-github-vim-bash.html).
 A good topic would be to provide similar video tutorials for another aspect of this class.
 
-* [William Coates's `valgrind` tutorial](../../../tutorials/valgrind).
+* [William Coates's `valgrind` tutorial](../../../textbook/tools/valgrind).
 A good topic would be to extend this tutorial to cover more of valgrind's features.
 A similar tutorial for `gdb` or `cppchecker` (or another tool) would also be nice.
 
-* [Daniel Ting and Katherine Gallaher's syscall tutorial](../../../tutorials/syscalls).
+* [Daniel Ting and Katherine Gallaher's syscall tutorial](../../../textbook/assignment-help/syscalls).
 A good topic would be to extend this tutorial to cover more syscalls.
 If you choose a topic like this, make sure it stays nice and cohesive and is not just a list of examples.
 
 * [Antoine Guerrero's writeup of how he hacked git to change his grades in this course](https://github.com/aguerrero/Faking-Git-Commits).
 If you have a similarly engaging story about some cool programming trick you've done, that would make a good writeup.
 
-* [Brunna Amorim's git cheatsheet](../../lab/lab1-git/git-cheatsheet.md).
+* [Brunna Amorim's git cheatsheet](../../../textbook/cheatsheets/git-cheatsheet.md).
 A similar cheatsheet for `gdb` or `bash` would make a decent topic.
 
 * [Kevin Nguyen clarified lab 1 by adding pictures to the README file](../../lab/lab1-git).
@@ -77,7 +77,7 @@ Imagine your favorite internet blog post and write like that.
 A short, clear writeup is MUCH better than a long wordy writeup.
 
 In particular, don't write long, drawn-out sentences that use sophisticated verbiage because no one wants to read that, especially not cs100 students or random programmers on the internet be kind to us oh and use proper punctuation because reading this sentence totally sucks.
-Also, spll chck ur writing and dnt use txt spk b/c I hate tht 5|-|!7. 
+Also, spll chck ur writing and dnt use txt spk b/c I hate tht 5|-|!7.
 (Translation: spell check your writing and don't use text speak because I hate that ****.)
 
 I highly recommend you visit UCR's writing center.
