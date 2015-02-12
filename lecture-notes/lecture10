@@ -1920,4 +1920,2121 @@ vim pipe2.cpp
 [33m 15 [m    dup2(fd[[31m0[m],[31m2[m);
 [33m 16 [m    [33mreturn[m [31m0[m;
 [33m 17 [m[46m}[m
-[1m[34m~                                                                                                       [19;1H~                                                                                                       [20;1H~                                                                                                       [21;1H~                                                                                                       [22;1H~                                                                                                       [23;1H~                                                                                                       [24;1H~                                                                                                       [25;1H~                                                                                                       [26;1H~                                                                                                
+[1m[34m~                                                                                                       [19;1H~                                                                                                       [20;1H~                                                                                                       [21;1H~                                                                                                       [22;1H~                                                                                                       [23;1H~                                                                                                       [24;1H~                                                                                                       [25;1H~                                                                                                       [26;1H~                                                                                                       [27;1H~                                                                                                       [28;1H~                                                                                                       [m[29;87H17,1[10CAll[17;5H[?12l[?25h[?25l[29;87H[K[29;1H:[?12l[?25hwq[?25l"pipe2.cpp" 17L, 274C written]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes
+[?1l>[?12l[?25h[?1049l$ [K$ [K$ ex  ls
+1
+2
+[0m[01;32ma.out[0m
+bitwise-quiz.cpp
+check.cpp
+codereview-errors
+codereview.c
+codereview.o
+exec.cpp
+file1
+file2
+fileio.cpp
+[01;34mgittest[0m
+hw0testcases
+iotest.cpp
+jobs
+lecture1
+lecture10
+lecture2
+lecture4
+lecture5
+lecture7
+lecture8
+lecture9
+ls.cpp
+macros.cpp
+out
+out.stderr
+out.stdout
+pipe2.cpp
+segfault.cpp
+stat2.cpp
+[01;32mstderr[0m
+[01;32mstupidprogram[0m
+test
+tmp
+valgrind.cpp
+[01;32mwillfail[0m
+willfail.cpp
+[01;32mwillitfail[0m
+willitfail.cpp
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+$ git status
+# On branch grades
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#   (commit or discard the untracked or modified content in submodules)
+#
+#	modified:   ../gitlearn (new commits, modified content)
+#	modified:   gittest (untracked content)
+#	deleted:    ../people/students/kkimb003
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	1
+#	2
+#	codereview-errors
+#	codereview.c
+#	jobs
+#	lecture10
+#	out
+#	out.stderr
+#	out.stdout
+#	pipe2.cpp
+#	segfault.cpp
+#	stderr
+#	stupidprogram
+#	test
+#	willfail
+#	willitfail
+#	xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+#	../people/norshell/
+#	../scratch/
+no changes added to commit (use "git add" and/or "git commit -a")
+$ ls
+1
+2
+[0m[01;32ma.out[0m
+bitwise-quiz.cpp
+check.cpp
+codereview-errors
+codereview.c
+codereview.o
+exec.cpp
+file1
+file2
+fileio.cpp
+[01;34mgittest[0m
+hw0testcases
+iotest.cpp
+jobs
+lecture1
+lecture10
+lecture2
+lecture4
+lecture5
+lecture7
+lecture8
+lecture9
+ls.cpp
+macros.cpp
+out
+out.stderr
+out.stdout
+pipe2.cpp
+segfault.cpp
+stat2.cpp
+[01;32mstderr[0m
+[01;32mstupidprogram[0m
+test
+tmp
+valgrind.cpp
+[01;32mwillfail[0m
+willfail.cpp
+[01;32mwillitfail[0m
+willitfail.cpp
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+$ pwd
+/home/user/proj/ucr-cs100/lecture-notes
+$ git add *.cpp
+$ git add lecture*
+$ git status
+# On branch grades
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   lecture10
+#	new file:   pipe2.cpp
+#	new file:   segfault.cpp
+#
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#   (commit or discard the untracked or modified content in submodules)
+#
+#	modified:   ../gitlearn (new commits, modified content)
+#	modified:   gittest (untracked content)
+#	deleted:    ../people/students/kkimb003
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	1
+#	2
+#	codereview-errors
+#	codereview.c
+#	jobs
+#	out
+#	out.stderr
+#	out.stdout
+#	stderr
+#	stupidprogram
+#	test
+#	willfail
+#	willitfail
+#	xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+#	../people/norshell/
+#	../scratch/
+$ git commit -m lecture notes"[1@"
+[grades c8fc3f8] lecture notes
+ 3 files changed, 1959 insertions(+)
+ create mode 100644 lecture-notes/lecture10
+ create mode 100644 lecture-notes/pipe2.cpp
+ create mode 100644 lecture-notes/segfault.cpp
+$ git pull origin 2015winter
+remote: Counting objects: 26, done.[K
+remote: Compressing objects:   5% (1/19)   [Kremote: Compressing objects:  10% (2/19)   [Kremote: Compressing objects:  15% (3/19)   [Kremote: Compressing objects:  21% (4/19)   [Kremote: Compressing objects:  26% (5/19)   [Kremote: Compressing objects:  31% (6/19)   [Kremote: Compressing objects:  36% (7/19)   [Kremote: Compressing objects:  42% (8/19)   [Kremote: Compressing objects:  47% (9/19)   [Kremote: Compressing objects:  52% (10/19)   [Kremote: Compressing objects:  57% (11/19)   [Kremote: Compressing objects:  63% (12/19)   [Kremote: Compressing objects:  68% (13/19)   [Kremote: Compressing objects:  73% (14/19)   [Kremote: Compressing objects:  78% (15/19)   [Kremote: Compressing objects:  84% (16/19)   [Kremote: Compressing objects:  89% (17/19)   [Kremote: Compressing objects:  94% (18/19)   [Kremote: Compressing objects: 100% (19/19)   [Kremote: Compressing objects: 100% (19/19), done.[K
+Unpacking objects:   3% (1/26)   Unpacking objects:   7% (2/26)   Unpacking objects:  11% (3/26)   Unpacking objects:  15% (4/26)   Unpacking objects:  19% (5/26)   Unpacking objects:  23% (6/26)   Unpacking objects:  26% (7/26)   Unpacking objects:  30% (8/26)   Unpacking objects:  34% (9/26)   Unpacking objects:  38% (10/26)   Unpacking objects:  42% (11/26)   Unpacking objects:  46% (12/26)   Unpacking objects:  50% (13/26)   Unpacking objects:  53% (14/26)   Unpacking objects:  57% (15/26)   Unpacking objects:  61% (16/26)   Unpacking objects:  65% (17/26)   Unpacking objects:  69% (18/26)   Unpacking objects:  73% (19/26)   Unpacking objects:  76% (20/26)   Unpacking objects:  80% (21/26)   Unpacking objects:  84% (22/26)   Unpacking objects:  88% (23/26)   remote: Total 26 (delta 7), reused 21 (delta 7)[K
+Unpacking objects:  92% (24/26)   Unpacking objects:  96% (25/26)   Unpacking objects: 100% (26/26)   Unpacking objects: 100% (26/26), done.
+From https://github.com/mikeizbicki/ucr-cs100
+ * branch            2015winter -> FETCH_HEAD
+[?1049h[?1h=[1;29r[?12;25h[?12l[?25h[27m[m[37m[H[2J[?25l[29;1H".git/MERGE_MSG" 7L, 310C[>c[1;1H[33m  1 [m[37mMerge branch [38;5;36m'2015winter'[m[37m of https://github.cc[2;1H[33m    [m[37mom/mikeizbicki/ucr-cs100 into grades
+[33m  2 
+  3 [m[37m[38;5;103m# Please enter a commit message to explain whh[m[37m[5;1H[33m    [m[37m[38;5;103my this merge is necessary,[m[37m
+[33m  4 [m[37m[38;5;103m# especially if it merges an updated upstreamm[m[37m[7;1H[33m    [m[37m[38;5;103m into a topic branch.[m[37m
+[33m  5 [m[37m[38;5;103m# [m[37m
+[33m  6 [m[37m[38;5;103m# Lines starting with '#' will be ignored, ann[m[37m[10;1H[33m    [m[37m[38;5;103md an empty message aborts[m[37m
+[33m  7 [m[37m[38;5;103m# the commit.[m[37m
+[1m[34m~                                                [13;1H~                                                [14;1H~                                                [15;1H~                                                [16;1H~                                                [17;1H~                                                [18;1H~                                                [19;1H~                                                [20;1H~                                                [21;1H~                                                [22;1H~                                                [23;1H~                                                [24;1H~                                                [25;1H~                                                [26;1H~                                                [27;1H~                                                [28;1H~                                                [m[37m[29;32H1,1[11CAll]2;MERGE_MSG (~/proj/ucr-cs100/.git) - VIM]1;MERGE_MSG[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[29;1H[K[29;1H:[?12l[?25hq[?25l]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes[29;1H[K[29;1H[?1l>[?12l[?25h[?1049lMerge made by the 'recursive' strategy.
+ README.md                       |    2 +-
+ .../hw4-contributing/README.md  |    9 +++---
+ .../README.md                   |   12 ++++----
+ 3 files changed, 12 insertions(+), 11 deletions(-)
+$ git pull origin 2015winter$ git commit -m "lecture notes"$ git status[Kadd lecture*[3P*.cpplecture*$ git [6Pstatuscommit -m "lecture notes"$ git [3Ppull origin 2015winter$ [Kgit push origin 2015winter
+Username for 'https://github.com': mikeizbicki
+Password for 'https://mikeizbicki@github.com': 
+To https://github.com/mikeizbicki/ucr-cs100.git
+ ! [rejected]        2015winter -> 2015winter (non-fast-forward)
+error: failed to push some refs to 'https://github.com/mikeizbicki/ucr-cs100.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. Check out this branch and merge the remote changes
+hint: (e.g. 'git pull') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ [K$ git push origin 2015winter[K$ git push origin 2015winter$ git pull origin 2015winter
+From https://github.com/mikeizbicki/ucr-cs100
+ * branch            2015winter -> FETCH_HEAD
+Already up-to-date.
+$ git pull origin 2015winter$ git push origin 2015winter
+To https://github.com/mikeizbicki/ucr-cs100.git
+ ! [rejected]        2015winter -> 2015winter (non-fast-forward)
+error: failed to push some refs to 'https://github.com/mikeizbicki/ucr-cs100.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. Check out this branch and merge the remote changes
+hint: (e.g. 'git pull') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+$ git branch
+  2015winter
+  asand017-cs100-2014fall
+  cs100-2014fall
+  cs100-2014summer
+* grades
+  ikim025-2015winter
+  jinhangwang-2015winter
+  tristanzickovich-2015winter
+$ git diff 2015winter
+[?1h=diff --git a/README.md b/README.md[m
+index ffb6747..5d84d67 100644[m
+--- a/README.md[m
++++ b/README.md[m
+@@ -99,7 +99,7 @@ assignment | date[m
+ [hw4](assignments/hw/hw4-contributing) - topic | Wednesday of week 6 (Feb 11th) before class[m
+ [hw2](assignments/hw/hw2-piping) | Friday of week 7 (Feb 20th) @ 11:59 PM[m
+ [hw4](assignments/hw/hw4-contributing) - draft | Wednesday of week 8 (Feb 25th) before class[m
+-[hw3](assignments/hw/hw3-misc) | Friday of week 9 (Mar 6th) @ 11:59 PM[m
++[hw3](assignments/hw/hw3-signals) | Friday of week 9 (Mar 6th) @ 11:59 PM[m
+ [hw4](assignments/hw/hw4-contributing) - final | Friday of week 10 (Mar 13th) @ 11:59 PM[m
+ [m
+ ### grades[m
+diff --git a/assignments/hw/hw4-contributing/README.md b/assignments/hw/hw4-contributing/READ[m
+index 4954175..b2afa12 100644[m
+--- a/assignments/hw/hw4-contributing/README.md[m
++++ b/assignments/hw/hw4-contributing/README.md[m
+@@ -9,7 +9,7 @@ There are two ways you can do this: create your own project, or add documenta[m
+ [m
+ If you have an idea you want to develop, now's your chance![m
+ It can be about anything you want.[m
+-I'll help you spify it up and distribute it to the open source community.[m
++I'll help you spiffy it up and distribute it to the open source community.[m
+ [m
+ Here's some projects previous cs100 students have done:[m
+ [m
+@@ -33,18 +33,18 @@ Here are some past assignments and some suggestions for extending their w[m
+ * [Rashid Goshtasbi and Kyler Rynear's video tutorials](https://izbicki.me/blog/videoguide-f[m
+ A good topic would be to provide similar video tutorials for another aspect of this class.[m
+ [m
+-* [William Coates's `valgrind` tutorial](../../../tutorials/valgrind).[m
++* [William Coates's `valgrind` tutorial](../../../textbook/tools/valgrind).[m
+ A good topic would be to extend this tutorial to cover more of valgrind's features.[m
+ A similar tutorial for `gdb` or `cppchecker` (or another tool) would also be nice.[m
+ [m
+-* [Daniel Ting and Katherine Gallaher's syscall tutorial](../../../tutorials/syscalls).[m
++* [Daniel Ting and Katherine Gallaher's syscall tutorial](../../../textbook/assignment-help/[m
+ A good topic would be to extend this tutorial to cover more syscalls.[m
+ If you choose a topic like this, make sure it stays nice and cohesive and is not just a list[m
+:[K[K [KESCESC[K[[[K66[K~~[K [m
+ * [Antoine Guerrero's writeup of how he hacked git to change his grades in this course](http[m
+ If you have a similarly engaging story about some cool programming trick you've done, that w[m
+ [m
+-* [Brunna Amorim's git cheatsheet](../../lab/lab1-git/git-cheatsheet.md).[m
++* [Brunna Amorim's git cheatsheet](../../../textbook/cheatsheets/git-cheatsheet.md).[m
+ A similar cheatsheet for `gdb` or `bash` would make a decent topic.[m
+ [m
+ * [Kevin Nguyen clarified lab 1 by adding pictures to the README file](../../lab/lab1-git).[m
+@@ -78,6 +78,7 @@ A short, clear writeup is MUCH better than a long wordy writeup.[m
+ [m
+ In particular, don't write long, drawn-out sentences that use sophisticated verbiage because[m
+ Also, spll chck ur writing and dnt use txt spk b/c I hate tht 5|-|!7.[m
++(Translation: spell check your writing and don't use text speak because I hate that ****.)[m
+ [m
+ I highly recommend you visit UCR's writing center.[m
+ If you do, I will give you +5 points of extra credit.[m
+diff --git a/gitlearn b/gitlearn[m
+index ad1460d..6f12dd1 160000[m
+--- a/gitlearn[m
++++ b/gitlearn[m
+@@ -1 +1 @@[m
+-Subproject commit ad1460de18f7bf8fa772be53de6b76310a8849de[m
++Subproject commit 6f12dd184fc08cf53302e70b2f3052042a5938d8-dirty[m
+diff --git a/lecture-notes/gittest b/lecture-notes/gittest[m
+--- a/lecture-notes/gittest[m
++++ b/lecture-notes/gittest[m
+@@ -1 +1 @@[m
+-Subproject commit 9b5c88c93f239413d0dcf82b54afec4bf98f57f4[m
++Subproject commit 9b5c88c93f239413d0dcf82b54afec4bf98f57f4-dirty[m
+diff --git a/lecture-notes/lecture10 b/lecture-notes/lecture10[m
+new file mode 100644[m
+index 0000000..334eda5[m
+--- /dev/null[m
++++ b/lecture-notes/lecture10[m
+@@ -0,0 +1,2109 @@[m
++Script started on Wed Feb 11 15:35:30 2015[m
++bash: .profile: No such file or directory[m
++0;user@userland: ~/proj/ucr-cs100/lecture-notes[7m^G[27muser@userland:~/proj/ucr-cs100/lecture-note[m
+:[K[K [KESCESC[K[[[K66[K~~[K+$ clear[m
++$ [7m^M[27m$ [7m^M[27m$ [7m^M[27m$ [7m^M[27m$ pwd[m
++/home/user/proj/ucr-cs100/lecture-notes[m
++$ vim codereview.c[m
++[27m[m"codereview.c" [New File]c[33m  1 [m[m
++[1m[34m~                                                                   ~                       [m
++[33m  2 [m()2,1 {2,2All[m
++[33m  3 [m   }[46m{}[m3,2All2,2All[46m [m[m
++[33m  4 [m}{ 3,5/[34m//[m7[34m [m8[34md[m9[34mo[m10[34m [m1[34mn[m2[34mo[m3[34mt[m4[34mh[m5[34mi[m6[34mn[m7[34mg[m8[34m [m9[34mi[m20[34mf[m1[34m [m2[34mt[m3[34mh[m4[34me[m5[34m [m6[34mf[m7[34mi[m8[34ml[m9[34me[m30[34ms[m1[34m [m2[34ma[m3[34mr[m4[34me[m5[34m [m6[34mt[m7[34mh[m8[34me[m9[34m [m40[34ms[m1[34mm[m2[34ma[m3[34me[m4[m
++[33m  5 [m}4,8/65i[33mif[m78(4,9Allf10i1n23=4=56f7o8u9t20)[46m()[m4,21All [m
++[33m  6 [m}()5,9 r10e1t[33mreturn[m5;6 [m
++[33m  7 [m}6,9 8765 [m
++[33m  8 [m}7/[34m//[m7[34m [m8[34mi[m9[34mn[m10[34mi[m1[34mt[m2[34mi[m3[34ma[m4[34ml[m5[34mi[m6[34mz[m7[34me[m8[34m [m9[34mt[m20[34mh[m1[34me[m2[34m [m321019[34mf[m20[34mi[m1[34ml[m2[34me[m3[34ms[m43[34m [m4[34mr[m5[34me[m6[34ma[m7[34md[m8[34mi[m9[34mn[m30[34mg[m1    [34m// [m[m
++[33m  9 [m}8,8/65i6[32mint[m89f10d1i23=45o6p7e8n920(8,21Allf2i3n4,56O7_8R9D30R1W2)[46m()[m8,33All;()4 [m
++[33m 10 [m}9,5 s6t7r8[32mstruct[m12s3t4a5t67s8b9;20 [m
++[33m 11 [m}10,5f6s7t8a9t10(10,11Allf2d3i4,5&6s7b8)[46m()[m10,19All;()20 [m
++[33m 12 [m}1,5 c6h[32mchar[m910*1b2u3f4=5n6e7w89c20h[32mchar[m3[11,24Alls5b6.7s8t9_30s1i2z3e4][46m[][m11,35All;[]6 [m
++[33m 13 [m}2,5  [m
++[33m 14 [m}3/[34m//[m7[34m [m8[34mc[m9[34mo[m10[34mp[m1[34my[m2[34m [m3[34mt[m4[34mh[m5[34me[m6[34m [m7[34mf[m8[34mi[m9[34ml[m20[34me[m1    [34m// [m[m
++[33m 15 [m}4,8/65w6h7[33mwhile[m101(14,12Allr3e4a5d6(14,17Allf8d9i20,1b2u3f4,5s6i7z8[33msizeof[m1(14,32Allb3u4[m
++[33m 16 [m}{ }[46m{}[m15,6All{}4[46m{}[m14,40All[46m [m    }[m
++[33m 17 [m}{ 5,9 i10[32mint[m23f4d5o6=7o8p9e20n1921(15,22Allf3o4u5t6,78O9_30A1P2P3E4N5D6)[46m()[m15,37All;()8 [m
++[33m 18 [m}6,9 w10r1i2t3e4(16,15Allf6d7o8,9b20u1f2,3s4i5z[33msizeof[m9(16,30Allb1[46m([mbuf[46m)[m16,34All)[46m([m(buf)[46m)[m16[m
++[33m 19 [m}7,9 c10l1o2s3e4(17,15Allf6o[46m([mfout[46m)[m17,20All;(fout)117,20All:w[7m^M[27m"codereview.c" [New] 19L, [m
++[33m  2 [m{[m
++[33m  3 [m    [34m// do nothing if the files are the same[m[m
++[33m  4 [m    [33mif[m (fin == fout)[m
++[33m  5 return[m;[m
++[33m  6 [m
++  7 [m    [34m// initialize file reading[m[m
++[33m  8 [m    [32mint[m fdi = open (fin, O_RDRW);[m
++[33m  9 [m    [32mstruct[m stat sb;[m
++[33m 10 [m    fstat(fdi,&sb);[m
++[33m 11 [m    [32mchar[m *buf=new [32mchar[m[sb.st_size];[m
++[33m 12 [m
++ 13 [m    [34m// copy the file[m[m
++[33m 14 [m    [33mwhile[m (read(fdi,buf,[33msizeof[m(buf))) {[m
++[33m 15 [m[32mint[m fdo=open(fout, O_APPEND);[m
++[33m 16 [mwrite(fdo,buf,[33msizeof[m(buf));[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m 17 [mclose(fout);[m
++[33m 18 [m    }[m
++[33m 19 [m}[m
++[1m[34m~                                                                             ~             [m
++[33m  2 [m{[m
++[33m  3 [m    [34m// do nothing if the files are the same[m[m
++[33m  4 [m    [33mif[m (fin == fout)[m
++[33m  5 return[m;[m
++[33m  6 [m
++  7 [m    [34m// initialize file reading[m[m
++[33m  8 [m    [32mint[m fdi = open (fin, O_RDRW);[m
++[33m  9 [m    [32mstruct[m stat sb;[m
++[33m 10 [m    fstat(fdi,&sb);[m
++[33m 11 [m    [32mchar[m *buf=new [32mchar[m[sb.st_size];[m
++[33m 12 [m
++ 13 [m    [34m// copy the file[m[m
++[33m 14 [m    [33mwhile[m (read(fdi,buf,[33msizeof[m(buf))) {[m
++[33m 15 [m[32mint[m fdo=open(fout, O_APPEND);[m
++[33m 16 [mwrite(fdo,buf,[33msizeof[m(buf));[m
++[33m 17 [mclose(fout);[m
++[33m 18 [m    }[m
++[33m 19 [m}[m
++[1m[34m~                                                                                           [m
++[33m  2 [m{[m
++[33m  3 [m    [34m// do nothing if the files are the same[m[m
++[33m  4 [m    [33mif[m (fin == fout)[m
++[33m  5 return[m;[m
++[33m  6 [m
++  7 [m    [34m// initialize file reading[m[m
++[33m  8 [m    [32mint[m fdi = open (fin, O_RDRW);[m
++[33m  9 [m    [32mstruct[m stat sb;[m
++[33m 10 [m    fstat(fdi,&sb);[m
++[33m 11 [m    [32mchar[m *buf=new [32mchar[m[sb.st_size];[m
++[33m 12 [m
++ 13 [m    [34m// copy the file[m[m
++[33m 14 [m    [33mwhile[m (read(fdi,buf,[33msizeof[m(buf))) {[m
++[33m 15 [m[32mint[m fdo=open(fout, O_APPEND);[m
++[33m 16 [mwrite(fdo,buf,[33msizeof[m(buf));[m
++[33m 17 [mclose(fout);[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m 18 [m    }[m
++[33m 19 [m}[m
++[1m[34m~                                                                             ~             [m
++[33m  3 [m    [34m// do nothing if the files are  [m[33m    [m[34mthe same[m[m
++[33m  4 [m    [33mif[m (fin == fout)[m
++[33m  5 return[m;[m
++[33m  6 [m
++  7 [m    [34m// initialize file reading[m[m
++[33m  8 [m    [32mint[m fdi = open (fin, O_RDRW);[m
++[33m  9 [m    [32mstruct[m stat sb;[m
++[33m 10 [m    fstat(fdi,&sb);[m
++[33m 11 [m    [32mchar[m *buf=new [32mchar[m[sb.st_size];[33m 12 [m
++ 13 [m    [34m// copy the file[m[m
++[33m 14 [m    [33mwhile[m (read(fdi,buf,[33msizeof[m(buf))[33m    [m)) {[m
++[33m 15 [m[32mint[m fdo=open(fout, O_APPENDD[33m    [m);[m
++[33m 16 [mwrite(fdo,buf,[33msizeof[m(buf));[33m 17 [mclose(fout);[m
++[33m 18 [m    }[m
++[33m 19 [m}[m
++[1m[34m~                                      ~                                      ~             [m
++$ cp codereview.c [7m^G[27m^C[m
++$ vim codereview.c[m
++[27m[m"codereview.c"[7m^M[27m<review.c" 19L, 426Cc[33m  1 [m[32mvoid[m copyFile([32mchar[m *in, [32mchar[m *fout)[33m  2 [m{[m
++[33m  3 [m    [34m// do nothing if the files are  [m[33m    [m[34mthe same[m[m
++[33m  4 [m    [33mif[m (fin == fout)[m
++[33m  5 return[m;[m
++[33m  6 [m
++  7 [m    [34m// initialize file reading[m[m
++[33m  8 [m    [32mint[m fdi = open (fin, O_RDRW);[m
++[33m  9 [m    [32mstruct[m stat sb;[m
++[33m 10 [m    fstat(fdi,&sb);[m
++[33m 11 [m    [32mchar[m *buf=new [32mchar[m[sb.st_size];[33m 12 [m
++ 13 [m    [34m// copy the file[m[m
++[33m 14 [m    [33mwhile[m (read(fdi,buf,[33msizeof[m(buf))[33m    [m)) {[m
++[33m 15 [m[32mint[m fdo=open(fout, O_APPENDD[33m    [m);[m
++[33m 16 [mwrite(fdo,buf,[33msizeof[m(buf));[33m 17 [mclose(fout);[m
++[33m 18 [m    }[m
++[33m 19 [m}[m
++[1m[34m~                                      ~                                      ~             [m
++[33m  2 [m{[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m  3 [m    [34m// do nothing if the files are thh[m[33m    [m[34me same[m[m
++[33m  4 [m    [33mif[m (fin == fout)[m
++[33m  5 return[m;[m
++[33m  6 [m
++  7 [m    [34m// initialize file reading[m[m
++[33m  8 [m    [32mint[m fdi = open (fin, O_RDRW);[m
++[33m  9 [m    [32mstruct[m stat sb;[m
++[33m 10 [m    fstat(fdi,&sb);[m
++[33m 11 [m    [32mchar[m *buf=new [32mchar[m[sb.st_size];[m
++[33m 12 [m
++ 13 [m    [34m// copy the file[m[m
++[33m 14 [m    [33mwhile[m (read(fdi,buf,[33msizeof[m(buf))))[33m    [m {[m
++[33m 15 [m[32mint[m fdo=open(fout, O_APPEND);[33m 16 [mwrite(fdo,buf,[33msizeof[m(buf));[m
++[33m 17 [mclose(fout);[m
++[33m 18 [m    }[m
++[33m 19 [m}[m
++[1m[34m~                                        ~                                        ~         [m
++[33m  2 [m{[m
++[33m  3 [m    [34m// do nothing if the files are the  [m[33m    [m[34msame[m[m
++[33m  4 [m    [33mif[m (fin == fout)[m
++[33m  5 return[m;[m
++[33m  6 [m
++  7 [m    [34m// initialize file reading[m[m
++[33m  8 [m    [32mint[m fdi = open (fin, O_RDRW);[m
++[33m  9 [m    [32mstruct[m stat sb;[m
++[33m 10 [m    fstat(fdi,&sb);[m
++[33m 11 [m    [32mchar[m *buf=new [32mchar[m[sb.st_size];[m
++[33m 12 [m
++ 13 [m    [34m// copy the file[m[m
++[33m 14 [m    [33mwhile[m (read(fdi,buf,[33msizeof[m(buf))) {[33m 15 [m[32mint[m fdo=open(fout, O_APPEND);[m
++[33m 16 [mwrite(fdo,buf,[33msizeof[m(buf));[m
++[33m 17 [mclose(fout);[m
++[33m 18 [m    }[m
++[33m 19 [m}[m
++[1m[34m~                                          ~                                          ~     [m
++[33m  2 [m{[m
++[33m  3 [m    [34m// do nothing if the files are the samm[m[33m    [m[34me[m[m
++[33m  4 [m    [33mif[m (fin == fout)[m
++[33m  5 return[m;[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m  6 [m
++  7 [m    [34m// initialize file reading[m[m
++[33m  8 [m    [32mint[m fdi = open (fin, O_RDRW);[m
++[33m  9 [m    [32mstruct[m stat sb;[m
++[33m 10 [m    fstat(fdi,&sb);[m
++[33m 11 [m    [32mchar[m *buf=new [32mchar[m[sb.st_size];[m
++[33m 12 [m
++ 13 [m    [34m// copy the file[m[m
++[33m 14 [m    [33mwhile[m (read(fdi,buf,[33msizeof[m(buf))) {[m
++[33m 15 [m[32mint[m fdo=open(fout, O_APPEND);[m
++[33m 16 [mwrite(fdo,buf,[33msizeof[m(buf));[m
++[33m 17 [mclose(fout);[m
++[33m 18 [m    }[m
++[33m 19 [m}[m
++[1m[34m~                                             ~                                             [m
++[33m3[m    [34m// do nothing if files are the same[m[1m[34m~                                             [m3,22Al[m
++codereview.c: In function 'void copyFile(char*, char*)':[m
++codereview.c:4:9: error: 'fin' was not declared in this scope[m
++codereview.c:8:21: error: 'fin' was not declared in this scope[m
++codereview.c:8:26: error: 'O_RDRW' was not declared in this scope[m
++codereview.c:8:32: error: 'open' was not declared in this scope[m
++codereview.c:9:17: error: aggregate 'copyFile(char*, char*)::stat sb' has incomplete type an[m
++codereview.c:10:18: error: 'fstat' was not declared in this scope[m
++codereview.c:14:36: error: 'read' was not declared in this scope[m
++codereview.c:15:28: error: 'O_APPEND' was not declared in this scope[m
++codereview.c:16:34: error: 'write' was not declared in this scope[m
++codereview.c:17:19: error: 'close' was not declared in this scope[m
++$ g++ codereview.c [7m^M[27m$ vim codereview.c[m
++[27m[m"codereview.c" 19L, 422Cc[33m  1 [m[32mvoid[m copyFile([32mchar[m *in, [32mchar[m *fout)[m
++[33m  2 [m{[m
++[33m  3 [m    [34m// do nothing if files are the same[m[m
++[33m  4 [m    [33mif[m (fin == fout)[m
++[33m  5 return[m;[m
++[33m  6 [m
++  7 [m    [34m// initialize file reading[m[m
++[33m  8 [m    [32mint[m fdi = open (fin, O_RDRW);[m
++[33m  9 [m    [32mstruct[m stat sb;[m
++[33m 10 [m    fstat(fdi,&sb);[m
++[33m 11 [m    [32mchar[m *buf=new [32mchar[m[sb.st_size];[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m 12 [m
++ 13 [m    [34m// copy the file[m[m
++[33m 14 [m    [33mwhile[m (read(fdi,buf,[33msizeof[m(buf))) {[m
++[33m 15 [m[32mint[m fdo=open(fout, O_APPEND);[m
++[33m 16 [mwrite(fdo,buf,[33msizeof[m(buf));[m
++[33m 17 [mclose(fout);[m
++[33m 18 [m    }[m
++[33m 19 [m}[m
++[1m[34m~                                             ~                                             [m
++[33m 20 [m}2;codereview.c + (~...ecture-notes) - VIM[7m^G[27m1;codereview.c[7m^G[27m#2Alli3n4c5l6u7d8e910[35m#includ[m
++[33m 21 [m}2,1 #2i3n4c5l6u7d8e910[35m#include <[m1f2c3n4t5l6.7g87h8[31m<fcntl.h>[m9[32mvoid[m copyFile([32mchar[m *in, [32mcha[m
++[33m 22 [m}3,1 #2i3n4c5l6u7d8e910[35m#include <[m1s2t3d4i5o6.7h8[31m<stdio.h>[m9[32mvoid[m copyFile([32mchar[m *in, [32mchar[m *[m
++[33m 23 [m}4,1 4,0-1All:w[7m^M[27m"codereview.c"[7m^M[27m<eview.c" 23L, 481C written 4,0-1All2;codereview.c (~/p[m
++2;user@userland: ~/proj/ucr-cs100/lecture-notes[7m^G[27m1;user@userland: ~/proj/ucr-cs100/lecture-n[m
++[1]+  Stopped                 vim codereview.c[m
++$ vim codereview.c[m
++[27m[mE325: ATTENTION[7m^M[27m[m
++Found a swap file by the name ".codereview.c.[7m^M[27m[m
++swp"[7m^M[27m[m
++owned by: user   dated: Wed Feb 11[7m^M[27m[m
++15:50:37 2015[7m^M[27m[m
++file name: ~user/proj/ucr-cs100/lect[7m^M[27m[m
++ure-notes/codereview.c[7m^M[27m[m
++modified: no[7m^M[27m[m
++user name: user   host name: userlan[7m^M[27m[m
++d[m
++process ID: 5972 (still running)[7m^M[27m[m
++While opening file "codereview.c"[7m^M[27m[m
++dated: Wed Feb 11 15:50:37 2015[7m^M[27m[m
++[m
++(1) Another program may be editing the same f[7m^M[27m[m
++ile.  If this is the case,[7m^M[27m[m
++    be careful not to end up with two differe[7m^M[27m[m
++nt instances of the same[7m^M[27m[m
++    file when making changes.  Quit, or conti[7m^M[27m[m
++nue with caution.[7m^M[27m[m
++(2) An edit session for this file crashed.[7m^M[27m[m
++    If this is the case, use ":recover" or "v[7m^M[27m[m
++im -r codereview.c"[7m^M[27m[m
+:[K[K [KESCESC[K[[[K66[K~~[K+    to recover the changes (see ":help recove[7m^M[27m[m
++ry").[7m^M[27m[m
++    If you did this already, delete the swap[7m^M[27m[m
++file ".codereview.c.swp"[7m^M[27m[m
++    to avoid this message.[7m^M[27m[m
++-- More --[m
++Swap file ".codereview.c.swp" already exists![7m^M[27m[m
++[O]pen Read-Only, (E)dit anyway, (R)ecover, ([7m^M[27m[m
++Q)uit, (A)bort:[7m^M[27m[m
++$ vim codereview.c[7m^M[27m$ g++ codereview.c [7m^M[27m$ vim codereview.c[7m^M[27m$ g++ codereview.c [m
++codereview.c: In function 'void copyFile(char*, char*)':[m
++codereview.c:8:9: error: 'fin' was not declared in this scope[m
++codereview.c:12:21: error: 'fin' was not declared in this scope[m
++codereview.c:12:26: error: 'O_RDRW' was not declared in this scope[m
++codereview.c:14:18: error: 'fstat' was not declared in this scope[m
++codereview.c:21:19: error: invalid conversion from 'char*' to 'int' [-fpermissive][m
++In file included from codereview.c:1:0:[m
++/usr/include/unistd.h:350:12: error:   initializing argument 1 of 'int close(int)' [-fpermis[m
++$ fg[m
++vim codereview.c[m
++2;codereview.c (~/p...ecture-notes) - VIM[7m^G[27m1;codereview.c[7m^G[27m[27m[m[33m  1 [m[35m#include [m[31m<unistd.h>[m[m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m
++  5 [m[32mvoid[m copyFile([32mchar[m *in, [32mchar[m *fout)[m
++[33m  6 [m{[m
++[33m  7 [m    [34m// do nothing if files are the same[m[m
++[33m  8 [m    [33mif[m (fin == fout)[m
++[33m  9 return[m;[m
++[33m 10 [m
++ 11 [m    [34m// initialize file reading[m[m
++[33m 12 [m    [32mint[m fdi = open (fin, O_RDRW);[m
++[33m 13 [m    [32mstruct[m stat sb;[m
++[33m 14 [m    fstat(fdi,&sb);[m
++[33m 15 [m    [32mchar[m *buf=new [32mchar[m[sb.st_size];[m
++[33m 16 [m
++ 17 [m    [34m// copy the file[m[m
++[33m 18 [m    [33mwhile[m (read(fdi,buf,[33msizeof[m(buf))) {[m
++[33m 19 [m[32mint[m fdo=open(fout, O_APPEND);[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m 20 [mwrite(fdo,buf,[33msizeof[m(buf));[m
++[33m 21 [mclose(fout);[m
++[33m 22 [m    }[m
++[33m 23 [m}[m
++[1m[34m~                                             ~                                             [m
++$ g++ codereview.c [m
++codereview.c: In function 'void copyFile(char*, char*)':[m
++codereview.c:12:26: error: 'O_RDRW' was not declared in this scope[m
++codereview.c:14:18: error: 'fstat' was not declared in this scope[m
++codereview.c:21:19: error: invalid conversion from 'char*' to 'int' [-fpermissive][m
++In file included from codereview.c:1:0:[m
++/usr/include/unistd.h:350:12: error:   initializing argument 1 of 'int close(int)' [-fpermis[m
++$ [7m^M[27m$ fg[m
++bash: fg: current: no such job[m
++$ [7m^M[27m(reverse-i-search)`vim': [7m^M[27m$ [m
++[27m[m"codereview.c" 23L, 482Cc[33m  1 [m[35m#include [m[31m<unistd.h>[m[m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m
++  5 [m[32mvoid[m copyFile([32mchar[m *fin, [32mchar[m *fout)[m
++[33m  6 [m{[m
++[33m  7 [m    [34m// do nothing if files are the same[m[m
++[33m  8 [m    [33mif[m (fin == fout)[m
++[33m  9 return[m;[m
++[33m 10 [m
++ 11 [m    [34m// initialize file reading[m[m
++[33m 12 [m    [32mint[m fdi = open (fin, O_RDRW);[m
++[33m 13 [m    [32mstruct[m stat sb;[m
++[33m 14 [m    fstat(fdi,&sb);[m
++[33m 15 [m    [32mchar[m *buf=new [32mchar[m[sb.st_size];[m
++[33m 16 [m
++ 17 [m    [34m// copy the file[m[m
++[33m 18 [m    [33mwhile[m (read(fdi,buf,[33msizeof[m(buf))) {[m
++[33m 19 [m[32mint[m fdo=open(fout, O_APPEND);[m
++[33m 20 [mwrite(fdo,buf,[33msizeof[m(buf));[m
++[33m 21 [mclose(fout);[m
++[33m 22 [m    }[m
++[33m 23 [m}[m
++[1m[34m~                                                            ~                              [m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m 24 [m}2;codereview.c + (~/proj/...s100/lecture-notes) - VIM[7m^G[27m1;codereview.c[7m^G[27m[35m#include [m[31m<sys/ty[m
++[33m 25 [m}5,29All1 [35m#include [m[31m<sys/stat.h>[m[35m#include [m[31m<sys/stat.h>[m[35m#include [m[31m<sys/stat.h>[m[35m#include [m[31m<sys/s[m
++$ vim codereview.c[7m^M[27m$ g++ codereview.c [m
++codereview.c: In function 'void copyFile(char*, char*)':[m
++codereview.c:14:26: error: 'O_RDRW' was not declared in this scope[m
++codereview.c:23:19: error: invalid conversion from 'char*' to 'int' [-fpermissive][m
++In file included from codereview.c:1:0:[m
++/usr/include/unistd.h:350:12: error:   initializing argument 1 of 'int close(int)' [-fpermis[m
++$ fg[m
++bash: fg: current: no such job[m
++$ [7m^M[27m(reverse-i-search)`vim': [7m^M[27m$ [m
++[27m[m"codereview.c" 25L, 527Cc[33m  1 [m[35m#include [m[31m<unistd.h>[m[m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile([32mchar[m *fin, [32mchar[m *fout)[m
++[33m  8 [m{[m
++[33m  9 [m    [34m// do nothing if files are the same[m[m
++[33m 10 [m    [33mif[m (fin == fout)[m
++[33m 11 return[m;[m
++[33m 12 [m
++ 13 [m    [34m// initialize file reading[m[m
++[33m 14 [m    [32mint[m fdi = open (fin, O_RDRW);[m
++[33m 15 [m    [32mstruct[m stat sb;[m
++[33m 16 [m    fstat(fdi,&sb);[m
++[33m 17 [m    [32mchar[m *buf=new [32mchar[m[sb.st_size];[m
++[33m 18 [m
++ 19 [m    [34m// copy the file[m[m
++[33m 20 [m    [33mwhile[m (read(fdi,buf,[33msizeof[m(buf))) {[m
++[33m 21 [m[32mint[m fdo=open(fout, O_APPEND);[m
++[33m 22 [mwrite(fdo,buf,[33msizeof[m(buf));[m
++[33m 23 [mclose(fout);[m
++[33m 24 [m    }[m
++[33m 25 [m}[m
++[1m[34m~                                                            ~                              [m
++2;user@userland: ~/proj/ucr-cs100/lecture-notes[7m^G[27m1;user@userland: ~/proj/ucr-cs100/lecture-n[m
++[1]+  Stopped                 vim codereview.c[m
+:[K[K [KESCESC[K[[[K66[K~~[K+$ vim codereview.c[7m^M[27m$ g++ codereview.c [m
++codereview.c: In function 'void copyFile(char*, char*)':[m
++codereview.c:23:19: error: invalid conversion from 'char*' to 'int' [-fpermissive][m
++In file included from codereview.c:1:0:[m
++/usr/include/unistd.h:350:12: error:   initializing argument 1 of 'int close(int)' [-fpermis[m
++$ g++ codereview.c [7m^M[27m$ vim codereview.c[m
++[27m[mE325: ATTENTION[7m^M[27m[m
++Found a swap file by the name ".codereview.c.swp"[7m^M[27m[m
++owned by: user   dated: Wed Feb 11 15:52:24 2015[7m^M[27m[m
++file name: ~user/proj/ucr-cs100/lecture-notes/coder[7m^M[27m[m
++eview.c[7m^M[27m[m
++modified: no[7m^M[27m[m
++user name: user   host name: userland[7m^M[27m[m
++process ID: 6918 (still running)[7m^M[27m[m
++While opening file "codereview.c"[7m^M[27m[m
++dated: Wed Feb 11 15:52:24 2015[7m^M[27m[m
++[m
++(1) Another program may be editing the same file.  If this i[7m^M[27m[m
++sthe case,[7m^M[27m[m
++    be careful not to end up with two different instances of[7m^M[27m[m
++the same[7m^M[27m[m
++    file when making changes.  Quit, or continue with cautio[7m^M[27m[m
++n[m
++(2) An edit session for this file crashed.[7m^M[27m[m
++    If this is the case, use ":recover" or "vim -r coderevie[7m^M[27m[m
++w.c"[7m^M[27m[m
++    to recover the changes (see ":help recovery").[7m^M[27m[m
++    If you did this already, delete the swap file ".coderevi[7m^M[27m[m
++ew.c.swp"[7m^M[27m[m
++    to avoid this message.[7m^M[27m[m
++[m
++Swap file ".codereview.c.swp" already exists![7m^M[27m[m
++[O]pen Read-Only, (E)dit anyway, (R)ecover, (Q)uit, (A)bort:[7m^M[27m[m
++[7m^M[27m[m
++$ fg[m
++vim codereview.c[m
++2;codereview.c (~/proj/ucr-cs100/lecture-notes) - VIM[7m^G[27m1;codereview.c[7m^G[27m[27m[m[33m  1 [m[35m#include [m[31m<unistd.[m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile([32mchar[m *fin, [32mchar[m *fout)[m
++[33m  8 [m{[m
++[33m  9 [m    [34m// do nothing if files are the same[m[m
++[33m 10 [m    [33mif[m (fin == fout)[m
++[33m 11 return[m;[m
++[33m 12 [m
++ 13 [m    [34m// initialize file reading[m[m
++[33m 14 [m    [32mint[m fdi = open (fin, O_RDWR);[m
++[33m 15 [m    [32mstruct[m stat sb;[m
++[33m 16 [m    fstat(fdi,&sb);[m
++[33m 17 [m    [32mchar[m *buf=new [32mchar[m[sb.st_size];[m
++[33m 18 [m
++ 19 [m    [34m// copy the file[m[m
++[33m 20 [m    [33mwhile[m (read(fdi,buf,[33msizeof[m(buf))) {[m
++[33m 21 [m[32mint[m fdo=open(fout, O_APPEND);[m
++[33m 22 [mwrite(fdo,buf,[33msizeof[m(buf));[m
++[33m 23 [mclose(fout);[m
++[33m 24 [m    }[m
++[33m 25 [m}[m
++[1m[34m~                                                            ~                              [m
++2;user@userland: ~/proj/ucr-cs100/lecture-notes[7m^G[27m1;user@userland: ~/proj/ucr-cs100/lecture-n[m
++[1]+  Stopped                 vim codereview.c[m
++$ vim codereview.c[7m^M[27m$ g++ codereview.c [m
++/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 0 has i[m
++/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 1 has i[m
++/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 2 has i[m
++/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 3 has i[m
++/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 4 has i[m
++/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 5 has i[m
++/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 6 has i[m
++/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 7 has i[m
++/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 8 has i[m
++/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 9 has i[m
++/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 10 has [m
++/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 11 has [m
++/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 12 has [m
+:[K[K [KESCESC[K[[[K66[K~~[K+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 13 has [m
++/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 14 has [m
++/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 15 has [m
++/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 16 has [m
++/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 17 has [m
++/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 18 has [m
++/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 19 has [m
++/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 20 has [m
++/usr/lib/gcc/x86_64-linux-gnu/4.7/../../../x86_64-linux-gnu/crt1.o: In function `_start':[m
++(.text+0x20): undefined reference to `main'[m
++collect2: error: ld returned 1 exit status[m
++$ g++ codereview.[7m^M[27m$ g++ -c [m
++$ g++ -c codereview.c [7m^M[27m$ g++ codereview.c [7m^M[27m$ fg[m
++vim codereview.c[m
++2;codereview.c (~/proj/ucr-cs100/lecture-notes) - VIM[7m^G[27m1;codereview.c[7m^G[27m[27m[m[33m  1 [m[35m#include [m[31m<unistd.[m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile([32mchar[m *fin, [32mchar[m *fout)[m
++[33m  8 [m{[m
++[33m  9 [m    [34m// do nothing if files are the same[m[m
++[33m 10 [m    [33mif[m (fin == fout)[m
++[33m 11 return[m;[m
++[33m 12 [m
++ 13 [m    [34m// initialize file reading[m[m
++[33m 14 [m    [32mint[m fdi = open (fin, O_RDWR);[m
++[33m 15 [m    [32mstruct[m stat sb;[m
++[33m 16 [m    fstat(fdi,&sb);[m
++[33m 17 [m    [32mchar[m *buf=new [32mchar[m[sb.st_size];[m
++[33m 18 [m
++ 19 [m    [34m// copy the file[m[m
++[33m 20 [m    [33mwhile[m (read(fdi,buf,[33msizeof[m(buf))) {[m
++[33m 21 [m[32mint[m fdo=open(fout, O_APPEND);[m
++[33m 22 [mwrite(fdo,buf,[33msizeof[m(buf));[m
++[33m 23 [mclose(fdo);[m
++[33m 24 [m    }[m
++[33m 25 [m}[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[1m[34m~                                                            ~                              [m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile([32mchar[m *fin, [32mchar[m *fout)[m
++[33m  8 [m{[m
++[33m  9 [m    [34m// do nothing if files are the same[m[m
++[33m 10 [m    [33mif[m (fin == fout)[m
++[33m 11 return[m;[m
++[33m 12 [m
++ 13 [m    [34m// initialize file reading[m[m
++[33m 14 [m    [32mint[m fdi = open (fin, O_RDWR);[m
++[33m 15 [m    [32mstruct[m stat sb;[m
++[33m 16 [m    fstat(fdi,&sb);[m
++[33m 17 [m    [32mchar[m *buf=new [32mchar[m[sb.st_size];[m
++[33m 18 [m
++ 19 [m    [34m// copy the file[m[m
++[33m 20 [m    [33mwhile[m (read(fdi,buf,[33msizeof[m(buf))) {[m
++[33m 21 [m[32mint[m fdo=open(fout, O_APPEND);[m
++[33m 22 [mwrite(fdo,buf,[33msizeof[m(buf));[m
++[33m 23 [mclose(fdo);[m
++[33m 24 [m    }[m
++[33m 25 [m}[m
++[1m[34m~                                             ~                                             [m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile([32mchar[m *fin, [32mchar[m *fout)[m
++[33m  8 [m{[m
++[33m  9 [m    [34m// do nothing if files are the same[m[33m 10 [m    [33mif[m [46m([mstrcmp(fin,fout)==[31m0[m[46m)[m[m
++[33m 11 return[m;[m
++[33m 12 [m
++ 13 [m    [34m// initialize file reading[m[m
++[33m 14 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 15 [m    [32mstruct[m stat sb;[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m 16 [m    fstat(fdi,&sb);[m
++[33m 17 [m    [32mchar[m *buf=new [32mchar[m[sb.st_size];[m
++[33m 18 [m
++ 19 [m    [34m// copy the file[m[m
++[33m 20 [m    [33mwhile[m (read(fdi,buf,[33msizeof[m(buf))) {[33m 21 [m[32mint[m fdo=open(fout, O_APPEND);[m
++[33m 22 [mwrite(fdo,buf,[33msizeof[m(buf));[m
++[33m 23 [mclose(fdo);[m
++[33m 24 [m    }[m
++[33m 25 [m}[m
++[1m[34m~                                          ~                                          ~     [m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile([32mchar[m *fin, [32mchar[m *fout)[m
++[33m  8 [m{[m
++[33m  9 [m    [34m// do nothing if files are the saa[m[33m    [m[34mme[m[m
++[33m 10 [m    [33mif[m [46m([mstrcmp(fin,fout)==[31m0[m[46m)[m[m
++[33m 11 return[m;[m
++[33m 12 [m
++ 13 [m    [34m// initialize file reading[m[m
++[33m 14 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 15 [m    [32mstruct[m stat sb;[m
++[33m 16 [m    fstat(fdi,&sb);[m
++[33m 17 [m    [32mchar[m *buf=new [32mchar[m[sb.st_size];[m
++[33m 18 [m
++ 19 [m    [34m// copy the file[m[m
++[33m 20 [m    [33mwhile[m (read(fdi,buf,[33msizeof[m(buf))))[33m    [m {[m
++[33m 21 [m[32mint[m fdo=open(fout, O_APPEND);[33m 22 [mwrite(fdo,buf,[33msizeof[m(buf));[m
++[33m 23 [mclose(fdo);[m
++[33m 24 [m    }[m
++[33m 25 [m}[m
++[1m[34m~                                        [m10,28All[27m[m2;codereview.c (...ure-notes) - VIM[7m^G[27m1;code[m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
+:[K[K [KESCESC[K[[[K66[K~~[K+  7 [m[32mvoid[m copyFile([32mchar[m *fin, [32mchar[m *foutt[33m    [m)[m
++[33m  8 [m{[m
++[33m  9 [m    [34m// do nothing if files are the  [m[33m    [m[34msame[m[m
++[33m 10 [m    [33mif[m [46m([mstrcmp(fin,fout)==[31m0[m[46m)[m[m
++[33m 11 return[m;[m
++[33m 12 [m
++ 13 [m    [34m// initialize file reading[m[m
++[33m 14 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 15 [m    [32mstruct[m stat sb;[m
++[33m 16 [m    fstat(fdi,&sb);[m
++[33m 17 [m    [32mchar[m *buf=new [32mchar[m[sb.st_size];[33m 18 [m
++ 19 [m    [34m// copy the file[m[m
++[33m 20 [m    [33mwhile[m (read(fdi,buf,[33msizeof[m(buf))[33m    [m)) {[m
++[33m 21 [m[32mint[m fdo=open(fout, O_APPENDD[33m    [m);[m
++[33m 22 [mwrite(fdo,buf,[33msizeof[m(buf));[33m 23 [mclose(fdo);[m
++[33m 24 [m    }10,28Top[27m[m2;codereview.c...re-notes) - VIM[7m^G[27m1;codereview.c[7m^G[27m[33m  1 [m[35m#include [m[31m<unistd.h>[m[m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile([32mchar[m *fin, [32mchar[m *ff[33m    [mout)[m
++[33m  8 [m{[m
++[33m  9 [m    [34m// do nothing if files are tt[m[33m    [m[34mhe same[m[m
++[33m 10 [m    [33mif[m [46m([mstrcmp(fin,fout)==[31m0[m[46m)[m[m
++[33m 11 return[m;[m
++[33m 12 [m
++ 13 [m    [34m// initialize file reading[m[m
++[33m 14 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 15 [m    [32mstruct[m stat sb;[m
++[33m 16 [m    fstat(fdi,&sb);[m
++[33m 17 [m    [32mchar[m *buf=new [32mchar[m[sb.st_sizz[33m    [me];[m
++[33m 18 [m
++ 19 [m    [34m// copy the file[m[m
++[33m 20 [m    [33mwhile[m (read(fdi,buf,[33msizeof[m(bb[33m    [muf))) {[m
++[33m 21 [m[32mint[m fdo=open(fout, O_APPP[33m    [mEND);[m
++[33m 22 [mwrite(fdo,buf,[33msizeof[m(buff[33m    [m));10,28Top[27m[m2;codereview....e-notes) - VIM[7m^G[27m1;codereview.c[7m^G[27m[33m[m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile([32mchar[m *fin, [32mchar[m  [33m    [m*fout)[m
++[33m  8 [m{[m
++[33m  9 [m    [34m// do nothing if files aree[m[33m    [m[34m the same[m[m
++[33m 10 [m    [33mif[m [46m([mstrcmp(fin,fout)==[31m0[m[46m)[m[m
++[33m 11 return[m;[m
++[33m 12 [m
++ 13 [m    [34m// initialize file reading[m[33m 14 [m    [32mint[m fdi=open(fin, O_RDWR);[33m 15 [m    [32mstruct[m stat sb;[m
++[33m 16 [m    fstat(fdi,&sb);[m
++[33m 17 [m    [32mchar[m *buf=new [32mchar[m[sb.st_ss[33m    [mize];[m
++[33m 18 [m
++ 19 [m    [34m// copy the file[m[m
++[33m 20 [m    [33mwhile[m (read(fdi,buf,[33msizeoff    [m(buf))) {[m
++[33m 21 [m[32mint[m fdo=open(fout, O_AA[33m    [mPPEND);[m
++[33m 22 [mwrite(fdo,buf,[33msizeof[m(bb[33m    [muf));10,28Top[27m[m2;codereview...-notes) - VIM[7m^G[27m1;codereview.c[7m^G[27m[33m  [m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile([32mchar[m *fin, [32mchh[m[33m    [m[32mar[m *fout)[m
++[33m  8 [m{[m
++[33m  9 [m    [34m// do nothing if files  [m[33m    [m[34mare the same[m[m
++[33m 10 [m    [33mif[m [46m([mstrcmp(fin,fout)==[31m00[m[33m    [m[46m)[m[m
++[33m 11 return[m;[m
++[33m 12 [m
++ 13 [m    [34m// initialize file readd[m[33m    [m[34ming[m[m
++[33m 14 [m    [32mint[m fdi=open(fin, O_RDWW[33m    [mR);[m
++[33m 15 [m    [32mstruct[m stat sb;[m
++[33m 16 [m    fstat(fdi,&sb);[m
++[33m 17 [m    [32mchar[m *buf=new [32mchar[m[sb.ss[33m    [mt_size];[m
++[33m 18 [m
++ 19 [m    [34m// copy the file[m[m
++[33m 20 [m    [33mwhile[m (read(fdi,buf,[33msizz    eof[m(buf))) {[m
++[33m 21 [m[32mint[m fdo=open(fout,[7m^M[27m[1m[34m@                              [m10,28      Top[27m[m2;coderevie...notes) - [m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile([32mchar[m *fin,  [33m    [m[32mchar[m *fout)[m
++[33m  8 [m{[m
++[33m  9 [m    [34m// do nothing if filee[m[33m    [m[34ms are the same[m[m
++[33m 10 [m    [33mif[m [46m([mstrcmp(fin,fout)==[33m    [m=[31m0[m[46m)[m[m
++[33m 11 return[m;[m
++[33m 12 [m
++ 13 [m    [34m// initialize file ree[m[33m    [m[34mading[m[m
++[33m 14 [m    [32mint[m fdi=open(fin, O_RR[33m    [mDWR);[m
++[33m 15 [m    [32mstruct[m stat sb;[m
++[33m 16 [m    fstat(fdi,&sb);[m
++[33m 17 [m    [32mchar[m *buf=new [32mchar[m[sbb[33m    [m.st_size];[m
++[33m 18 [m
++ 19 [m    [34m// copy the file[m[m
++[33m 20 [m    [33mwhile[m (read(fdi,buf,[33mss    izeof[m(buf))) {[m
++[33m 21 [m[32mint[m fdo=open(fout[1m[34m@                            [m10,28     Top[27m[m2;codereview...-notes) - VIM[m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile([32mchar[m *fin, [32mchh[m[33m    [m[32mar[m *fout)[m
++[33m  8 [m{[m
++[33m  9 [m    [34m// do nothing if files  [m[33m    [m[34mare the same[m[m
++[33m 10 [m    [33mif[m [46m([mstrcmp(fin,fout)==[31m00[m[33m    [m[46m)[m[m
++[33m 11 return[m;[m
++[33m 12 [m
++ 13 [m    [34m// initialize file readd[m[33m    [m[34ming[m[m
++[33m 14 [m    [32mint[m fdi=open(fin, O_RDWW[33m    [mR);[m
++[33m 15 [m    [32mstruct[m stat sb;[m
++[33m 16 [m    fstat(fdi,&sb);[m
++[33m 17 [m    [32mchar[m *buf=new [32mchar[m[sb.ss[33m    [mt_size];[m
++[33m 18 [m
++ 19 [m    [34m// copy the file[m[m
++[33m 20 [m    [33mwhile[m (read(fdi,buf,[33msizz    eof[m(buf))) {[m
++[33m 21 [m[32mint[m fdo=open(fout,[7m^M[27m[1m[34m@                              [m10,28      Top[27m[m2;codereview....e-notes[m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile([32mchar[m *fin, [32mchar[m  [33m    [m*fout)[m
++[33m  8 [m{[m
++[33m  9 [m    [34m// do nothing if files aree[m[33m    [m[34m the same[m[m
++[33m 10 [m    [33mif[m [46m([mstrcmp(fin,fout)==[31m0[m[46m)[m[m
++[33m 11 return[m;[m
++[33m 12 [m
++ 13 [m    [34m// initialize file reading[m[33m 14 [m    [32mint[m fdi=open(fin, O_RDWR);[33m 15 [m    [32mstruct[m stat sb;[m
++[33m 16 [m    fstat(fdi,&sb);[m
++[33m 17 [m    [32mchar[m *buf=new [32mchar[m[sb.st_ss[33m    [mize];[m
++[33m 18 [m
++ 19 [m    [34m// copy the file[m[m
++[33m 20 [m    [33mwhile[m (read(fdi,buf,[33msizeoff    [m(buf))) {[m
++[33m 21 [m[32mint[m fdo=open(fout, O_AA[33m    [mPPEND);[m
++[33m 22 [mwrite(fdo,buf,[33msizeof[m(bb[33m    [muf));10,28Top[27m[m2;codereview.c...re-notes) - VIM[7m^G[27m1;codereview.c[m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile([32mchar[m *fin, [32mchar[m *ff[33m    [mout)[m
++[33m  8 [m{[m
++[33m  9 [m    [34m// do nothing if files are tt[m[33m    [m[34mhe same[m[m
++[33m 10 [m    [33mif[m [46m([mstrcmp(fin,fout)==[31m0[m[46m)[m[m
++[33m 11 return[m;[m
++[33m 12 [m
++ 13 [m    [34m// initialize file reading[m[m
++[33m 14 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 15 [m    [32mstruct[m stat sb;[m
++[33m 16 [m    fstat(fdi,&sb);[m
++[33m 17 [m    [32mchar[m *buf=new [32mchar[m[sb.st_sizz[33m    [me];[m
++[33m 18 [m
++ 19 [m    [34m// copy the file[m[m
++[33m 20 [m    [33mwhile[m (read(fdi,buf,[33msizeof[m(bb[33m    [muf))) {[m
++[33m 21 [m[32mint[m fdo=open(fout, O_APPP[33m    [mEND);[m
++[33m 22 [mwrite(fdo,buf,[33msizeof[m(buff[33m    [m));10,28Top[27m[m2;codereview.c (...ure-notes) - VIM[7m^G[27m1;coderevie[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile([32mchar[m *fin, [32mchar[m *foutt[33m    [m)[m
++[33m  8 [m{[m
++[33m  9 [m    [34m// do nothing if files are the  [m[33m    [m[34msame[m[m
++[33m 10 [m    [33mif[m [46m([mstrcmp(fin,fout)==[31m0[m[46m)[m[m
++[33m 11 return[m;[m
++[33m 12 [m
++ 13 [m    [34m// initialize file reading[m[m
++[33m 14 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 15 [m    [32mstruct[m stat sb;[m
++[33m 16 [m    fstat(fdi,&sb);[m
++[33m 17 [m    [32mchar[m *buf=new [32mchar[m[sb.st_size];[33m 18 [m
++ 19 [m    [34m// copy the file[m[m
++[33m 20 [m    [33mwhile[m (read(fdi,buf,[33msizeof[m(buf))[33m    [m)) {[m
++[33m 21 [m[32mint[m fdo=open(fout, O_APPENDD[33m    [m);[m
++[33m 22 [mwrite(fdo,buf,[33msizeof[m(buf));[33m 23 [mclose(fdo);[m
++[33m 24 [m    }10,28Top[27m[m2;codereview.c (...ture-notes) - VIM[7m^G[27m1;codereview.c[7m^G[27m[33m  1 [m[35m#include [m[31m<unistd.[m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile([32mchar[m *fin, [32mchar[m *fout)[m
++[33m  8 [m{[m
++[33m  9 [m    [34m// do nothing if files are the saa[m[33m    [m[34mme[m[m
++[33m 10 [m    [33mif[m [46m([mstrcmp(fin,fout)==[31m0[m[46m)[m[m
++[33m 11 return[m;[m
++[33m 12 [m
++ 13 [m    [34m// initialize file reading[m[m
++[33m 14 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 15 [m    [32mstruct[m stat sb;[m
++[33m 16 [m    fstat(fdi,&sb);[m
++[33m 17 [m    [32mchar[m *buf=new [32mchar[m[sb.st_size];[m
++[33m 18 [m
++ 19 [m    [34m// copy the file[m[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m 20 [m    [33mwhile[m (read(fdi,buf,[33msizeof[m(buf))))[33m    [m {[m
++[33m 21 [m[32mint[m fdo=open(fout, O_APPEND);[33m 22 [mwrite(fdo,buf,[33msizeof[m(buf));[m
++[33m 23 [mclose(fdo);[m
++[33m 24 [m    }[m
++[33m 25 [m}[m
++[1m[34m~                                        [m10,28All[27m[m2;codereview.c (~...cture-notes) - VIM[7m^G[27m1;c[m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile([32mchar[m *fin, [32mchar[m *fout)[m
++[33m  8 [m{[m
++[33m  9 [m    [34m// do nothing if files are the same[m[33m 10 [m    [33mif[m [46m([mstrcmp(fin,fout)==[31m0[m[46m)[m[m
++[33m 11 return[m;[m
++[33m 12 [m
++ 13 [m    [34m// initialize file reading[m[m
++[33m 14 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 15 [m    [32mstruct[m stat sb;[m
++[33m 16 [m    fstat(fdi,&sb);[m
++[33m 17 [m    [32mchar[m *buf=new [32mchar[m[sb.st_size];[m
++[33m 18 [m
++ 19 [m    [34m// copy the file[m[m
++[33m 20 [m    [33mwhile[m (read(fdi,buf,[33msizeof[m(buf))) {[33m 21 [m[32mint[m fdo=open(fout, O_APPEND);[m
++[33m 22 [mwrite(fdo,buf,[33msizeof[m(buf));[m
++[33m 23 [mclose(fdo);[m
++[33m 24 [m    }[m
++[33m 25 [m}[m
++[1m[34m~                                          ~                                          ~     [m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile([32mchar[m *fin, [32mchar[m *fout)[m
++[33m  8 [m{[m
++[33m  9 [m    [34m// do nothing if files are the same[m[m
++[33m 10 [m    [33mif[m [46m([mstrcmp(fin,fout)==[31m0[m[46m)[m[m
++[33m 11 return[m;[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m 12 [m
++ 13 [m    [34m// initialize file reading[m[m
++[33m 14 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 15 [m    [32mstruct[m stat sb;[m
++[33m 16 [m    fstat(fdi,&sb);[m
++[33m 17 [m    [32mchar[m *buf=new [32mchar[m[sb.st_size];[m
++[33m 18 [m
++ 19 [m    [34m// copy the file[m[m
++[33m 20 [m    [33mwhile[m (read(fdi,buf,[33msizeof[m(buf))) {[m
++[33m 21 [m[32mint[m fdo=open(fout, O_APPEND);[m
++[33m 22 [mwrite(fdo,buf,[33msizeof[m(buf));[m
++[33m 23 [mclose(fdo);[m
++[33m 24 [m    }[m
++[33m 25 [m}[m
++[1m[34m~                                             ~                                             [m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile([32mchar[m *fin, [32mchar[m *fout)[m
++[33m  8 [m{[m
++[33m  9 [m    [34m// do nothing if files are the same[m[m
++[33m 10 [m    [33mif[m [46m([mstrcmp(fin,fout)==[31m0[m[46m)[m[m
++[33m 11 return[m;[m
++[33m 12 [m
++ 13 [m    [34m// initialize file reading[m[m
++[33m 14 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 15 [m    [32mstruct[m stat sb;[m
++[33m 16 [m    fstat(fdi,&sb);[m
++[33m 17 [m    [32mchar[m *buf=new [32mchar[m[sb.st_size];[m
++[33m 18 [m
++ 19 [m    [34m// copy the file[m[m
++[33m 20 [m    [33mwhile[m (read(fdi,buf,[33msizeof[m(buf))) {[m
++[33m 21 [m[32mint[m fdo=open(fout, O_APPEND);[m
++[33m 22 [mwrite(fdo,buf,[33msizeof[m(buf));[m
++[33m 23 [mclose(fdo);[m
++[33m 24 [m    }[m
++[33m 25 [m}[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[1m[34m~                                               ~                                           [m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile([32mchar[m *fin, [32mchar[m *fout)[m
++[33m  8 [m{[m
++[33m  9 [m    [34m// do nothing if files are the same[m[m
++[33m 10 [m    [33mif[m [46m([mstrcmp(fin,fout)==[31m0[m[46m)[m[m
++[33m 11 return[m;[m
++[33m 12 [m
++ 13 [m    [34m// initialize file reading[m[m
++[33m 14 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 15 [m    [32mstruct[m stat sb;[m
++[33m 16 [m    fstat(fdi,&sb);[m
++[33m 17 [m    [32mchar[m *buf=new [32mchar[m[sb.st_size];[m
++[33m 18 [m
++ 19 [m    [34m// copy the file[m[m
++[33m 20 [m    [33mwhile[m (read(fdi,buf,[33msizeof[m(buf))) {[m
++[33m 21 [m[32mint[m fdo=open(fout, O_APPEND);[m
++[33m 22 [mwrite(fdo,buf,[33msizeof[m(buf));[m
++[33m 23 [mclose(fdo);[m
++[33m 24 [m    }[m
++[33m 25 [m}[m
++[1m[34m~                                             ~                                             [m
++ 10[m
++ 11[m
++ 12[m
++ 13[m
++ 14[m
++ 15[m
++ 16[m
++ 17[m
++ 18[m
++ 19[m
++ 20[m
++ 21[m
++ 22[m
+:[K[K [KESCESC[K[[[K66[K~~[K+ 23[m
++ 24[m
++ 25[m
++ 26[m[46m()[m8,1 [46m [m   ([32mconst[m [32mchar[m *fin, [32mconst[m [32mchar[m *[46mf[mout)    [46m([mfout[46m)[m58,6Al()12789201    , [32mconst[m [32mchar[m *[m
++[33m 27 [m}9,5 [46m()[m88,6All [32mconst[m [32mchar[m *fin()79[46m()[m9,24All3[46m [m    ){[34m// do nothing if files are the same[m[33mif[m[m
++[33m 28 [m}[46m)[m10,5()10,4All:w[7m^M[27m"codereview.c"[7m^M[27m<eview.c" 28L, 559C written 10,4All2;codereview.c (~/[m
++[33m 28 [m}5456[46m{}[m}[1m[34m~                                             [m{} close(fdo);[m
++[33m 28 [mclose(fdo);5[7m^G[27m:w[7m^M[27m"codereview.c"[7m^M[27m<eview.c" 28L, 551C written 27,5All2;codereview.c (~/p[m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile[m
++[33m  8 [m    ( [32mconst[m [32mchar[m *fin[m
++[33m  9 [m    , [32mconst[m [32mchar[m *fout[m
++[33m 10 [m    )[m
++[33m 11 [m{[m
++[33m 12 [m    [34m// do nothing if files are the same[m[33m 13 [m    [33mif[m (strcmp(fin,fout)==[31m0[m)[m
++[33m 14 return[m;[m
++[33m 15 [m
++ 16 [m    [34m// initialize file reading[m[m
++[33m 17 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 18 [m    [32mstruct[m stat sb;[m
++[33m 19 [m    fstat(fdi,&sb);[m
++[33m 20 [m    [32mchar[m buf[[31mBUFSIZ[m];[m
++[33m 21 [m
++ 22 [m    [34m// copy the file[m[m
++[33m 23 [m    [32mint[m fdo=open(fout, O_WRONLY|O_CREATT[33m    [m);[m
++[33m 24 [m    [32mint[m r;[m
++[33m 25 [m    [33mwhile[m (r=read(fdi,buf,[33msizeof[m(buf))))[33m    [m {[m
++[33m 26 [mwrite(fdo,buf,r);20,21Top[27m[m2;codereview.c (...ture-notes) - VIM[7m^G[27m1;codereview.c[7m^G[27m[33m  1 [m[35m#incl[m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile[m
++[33m  8 [m    ( [32mconst[m [32mchar[m *fin[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m  9 [m    , [32mconst[m [32mchar[m *fout[m
++[33m 10 [m    )[m
++[33m 11 [m{[m
++[33m 12 [m    [34m// do nothing if files are the saa[m[33m    [m[34mme[m[m
++[33m 13 [m    [33mif[m (strcmp(fin,fout)==[31m0[m)[m
++[33m 14 return[m;[m
++[33m 15 [m
++ 16 [m    [34m// initialize file reading[m[m
++[33m 17 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 18 [m    [32mstruct[m stat sb;[m
++[33m 19 [m    fstat(fdi,&sb);[m
++[33m 20 [m    [32mchar[m buf[[31mBUFSIZ[m];[m
++[33m 21 [m
++ 22 [m    [34m// copy the file[m[m
++[33m 23 [m    [32mint[m fdo=open(fout, O_WRONLY|O_CREE[33m    [mAT);[m
++[33m 24 [m    [32mint[m r;[m
++[33m 25 [m    [33mwhile[m (r=read(fdi,buf,[33msizeof[m(buf))[33m    [m)) {20,21Top[27m[m2;codereview.c (...ure-notes) - VI[m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile[m
++[33m  8 [m    ( [32mconst[m [32mchar[m *fin[m
++[33m  9 [m    , [32mconst[m [32mchar[m *fout[m
++[33m 10 [m    )[m
++[33m 11 [m{[m
++[33m 12 [m    [34m// do nothing if files are the  [m[33m    [m[34msame[m[m
++[33m 13 [m    [33mif[m (strcmp(fin,fout)==[31m0[m)[m
++[33m 14 return[m;[m
++[33m 15 [m
++ 16 [m    [34m// initialize file reading[m[m
++[33m 17 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 18 [m    [32mstruct[m stat sb;[m
++[33m 19 [m    fstat(fdi,&sb);[m
++[33m 20 [m    [32mchar[m buf[[31mBUFSIZ[m];[m
++[33m 21 [m
++ 22 [m    [34m// copy the file[m[m
++[33m 23 [m    [32mint[m fdo=open(fout, O_WRONLY|O_CC[33m    [mREAT);[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m 24 [m    [32mint[m r;[m
++[33m 25 [m    [33mwhile[m (r=read(fdi,buf,[33msizeof[m(buu[33m    [mf))) {20,21Top[27m[m2;codereview.c...re-notes) - VIM[7m^G[27m[m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile[m
++[33m  8 [m    ( [32mconst[m [32mchar[m *fin[m
++[33m  9 [m    , [32mconst[m [32mchar[m *fout[m
++[33m 10 [m    )[m
++[33m 11 [m{[m
++[33m 12 [m    [34m// do nothing if files are tt[m[33m    [m[34mhe same[m[m
++[33m 13 [m    [33mif[m (strcmp(fin,fout)==[31m0[m)[m
++[33m 14 return[m;[m
++[33m 15 [m
++ 16 [m    [34m// initialize file reading[m[m
++[33m 17 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 18 [m    [32mstruct[m stat sb;[m
++[33m 19 [m    fstat(fdi,&sb);[m
++[33m 20 [m    [32mchar[m buf[[31mBUFSIZ[m];[m
++[33m 21 [m
++ 22 [m    [34m// copy the file[m[m
++[33m 23 [m    [32mint[m fdo=open(fout, O_WRONLY||[33m    [mO_CREAT);[m
++[33m 24 [m    [32mint[m r;[m
++[33m 25 [m    [33mwhile[m (r=read(fdi,buf,[33msizeoff    [m(buf))) {20,21Top[27m[m2;codereview....e-notes) - VIM[7m^G[27m1;[m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile[m
++[33m  8 [m    ( [32mconst[m [32mchar[m *fin[m
++[33m  9 [m    , [32mconst[m [32mchar[m *fout[m
++[33m 10 [m    )[m
++[33m 11 [m{[m
++[33m 12 [m    [34m// do nothing if files aree[m[33m    [m[34m the same[m[m
++[33m 13 [m    [33mif[m (strcmp(fin,fout)==[31m0[m)[m
++[33m 14 return[m;[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m 15 [m
++ 16 [m    [34m// initialize file reading[m[33m 17 [m    [32mint[m fdi=open(fin, O_RDWR);[33m 18 [m    [32mstruct[m stat sb;[m
++[33m 19 [m    fstat(fdi,&sb);[m
++[33m 20 [m    [32mchar[m buf[[31mBUFSIZ[m];[m
++[33m 21 [m
++ 22 [m    [34m// copy the file[m[m
++[33m 23 [m    [32mint[m fdo=open(fout, O_WRONLL[33m    [mY|O_CREAT);[m
++[33m 24 [m    [32mint[m r;[m
++[33m 25 [m    [33mwhile[m (r=read(fdi,buf,[33msizee    of[m(buf))) {20,21Top[27m[m2;codereview...-notes) - VIM[7m^G[27m1;co[m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile[m
++[33m  8 [m    ( [32mconst[m [32mchar[m *fin[m
++[33m  9 [m    , [32mconst[m [32mchar[m *fout[m
++[33m 10 [m    )[m
++[33m 11 [m{[m
++[33m 12 [m    [34m// do nothing if files  [m[33m    [m[34mare the same[m[m
++[33m 13 [m    [33mif[m (strcmp(fin,fout)==[31m00[m[33m    [m)[m
++[33m 14 return[m;[m
++[33m 15 [m
++ 16 [m    [34m// initialize file readd[m[33m    [m[34ming[m[m
++[33m 17 [m    [32mint[m fdi=open(fin, O_RDWW[33m    [mR);[m
++[33m 18 [m    [32mstruct[m stat sb;[m
++[33m 19 [m    fstat(fdi,&sb);[m
++[33m 20 [m    [32mchar[m buf[[31mBUFSIZ[m];[m
++[33m 21 [m
++ 22 [m    [34m// copy the file[m[m
++[33m 23 [m    [32mint[m fdo=open(fout, O_WRR[33m    [mONLY|O_CREAT);20,21      Top[27m[m2;coderevie...notes) - VIM[7m^G[27m[m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile[m
++[33m  8 [m    ( [32mconst[m [32mchar[m *fin[m
++[33m  9 [m    , [32mconst[m [32mchar[m *fout[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m 10 [m    )[m
++[33m 11 [m{[m
++[33m 12 [m    [34m// do nothing if filee[m[33m    [m[34ms are the same[m[m
++[33m 13 [m    [33mif[m (strcmp(fin,fout)==[33m    [m=[31m0[m)[m
++[33m 14 return[m;[m
++[33m 15 [m
++ 16 [m    [34m// initialize file ree[m[33m    [m[34mading[m[m
++[33m 17 [m    [32mint[m fdi=open(fin, O_RR[33m    [mDWR);[m
++[33m 18 [m    [32mstruct[m stat sb;[m
++[33m 19 [m    fstat(fdi,&sb);[m
++[33m 20 [m    [32mchar[m buf[[31mBUFSIZ[m];[m
++[33m 21 [m
++ 22 [m    [34m// copy the file[m[m
++[33m 23 [m    [32mint[m fdo=open(fout, O__[33m    [mWRONLY|O_CREAT);20,21     Top[27m[m2;coderevi...otes) - VIM[7m^G[27m1;c[m
++[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile[m
++[33m  8 [m    ( [32mconst[m [32mchar[m *fin[m
++[33m  9 [m    , [32mconst[m [32mchar[m *fout[m
++[33m 10 [m    )[m
++[33m 11 [m{[m
++[33m 12 [m    [34m// do nothing if fii[m[33m    [m[34mles are the same[m[m
++[33m 13 [m    [33mif[m (strcmp(fin,foutt[33m    [m)==[31m0[m)[m
++[33m 14 return[m;[m
++[33m 15 [m
++ 16 [m    [34m// initialize file  [m[33m    [m[34mreading[m[m
++[33m 17 [m    [32mint[m fdi=open(fin, OO[33m    [m_RDWR);[m
++[33m 18 [m    [32mstruct[m stat sb;[m
++[33m 19 [m    fstat(fdi,&sb);[m
++[33m 20 [m    [32mchar[m buf[[31mBUFSIZ[m];[m
++[33m 21 [m
++ 22 [m    [34m// copy the file[m[m
++[33m 23 [m    [32mint[m fdo=open(fout,  [33m    [mO_WRONLY|O_CREAT);20,21    Top[27m[m2;coderev...tes) - VIM[7m^G[27m1;code[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types..[m[33m    [m[31mh>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.hh[m[33m    [m[31m>[m[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m  6 [m
++  7 [m[32mvoid[m copyFile[m
++[33m  8 [m    ( [32mconst[m [32mchar[m *fii[33m    [mn[m
++[33m  9 [m    , [32mconst[m [32mchar[m *foo[33m    [mut[m
++[33m 10 [m    )[m
++[33m 11 [m{[m
++[33m 12 [m    [34m// do nothing iff[m[33m    [m[34m files are the same[m[m
++[33m 13 [m    [33mif[m (strcmp(fin,ff[33m    [mout)==[31m0[m)[m
++[33m 14 return[m;[m
++[33m 15 [m
++ 16 [m    [34m// initialize fii[m[33m    [m[34mle reading[m[m
++[33m 17 [m    [32mint[m fdi=open(finn[33m    [m, O_RDWR);[m
++[33m 18 [m    [32mstruct[m stat sb;[m
++[33m 19 [m    fstat(fdi,&sb);[m
++[33m 20 [m    [32mchar[m buf[[31mBUFSIZ[m]][33m    [m;20,21   10%[27m[m2;coderevi...otes) - VIM[7m^G[27m1;codereview.c[7m^G[27m[33m  2 [m[35m#incl[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile[m
++[33m  8 [m    ( [32mconst[m [32mchar[m *fin[m
++[33m  9 [m    , [32mconst[m [32mchar[m *fout[m
++[33m 10 [m    )[m
++[33m 11 [m{[m
++[33m 12 [m    [34m// do nothing if fii[m[33m    [m[34mles are the same[m[m
++[33m 13 [m    [33mif[m (strcmp(fin,foutt[33m    [m)==[31m0[m)[m
++[33m 14 return[m;[m
++[33m 15 [m
++ 16 [m    [34m// initialize file  [m[33m    [m[34mreading[m[m
++[33m 17 [m    [32mint[m fdi=open(fin, OO[33m    [m_RDWR);[m
++[33m 18 [m    [32mstruct[m stat sb;[m
++[33m 19 [m    fstat(fdi,&sb);[m
++[33m 20 [m    [32mchar[m buf[[31mBUFSIZ[m];[m
++[33m 21 [m
++ 22 [m    [34m// copy the file[m[m
++[33m 23 [m    [32mint[m fdo=open(fout,  [33m    [mO_WRONLY|O_CREAT);[m
++[33m 24 [m    [32mint[m r;20,21    16%[27m[m2;coderevie...notes) - VIM[7m^G[27m1;codereview.c[7m^G[27m[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile[m
++[33m  8 [m    ( [32mconst[m [32mchar[m *fin[m
++[33m  9 [m    , [32mconst[m [32mchar[m *fout[m
++[33m 10 [m    )[m
++[33m 11 [m{[m
++[33m 12 [m    [34m// do nothing if filee[m[33m    [m[34ms are the same[m[m
++[33m 13 [m    [33mif[m (strcmp(fin,fout)==[33m    [m=[31m0[m)[m
++[33m 14 return[m;[m
++[33m 15 [m
++ 16 [m    [34m// initialize file ree[m[33m    [m[34mading[m[m
++[33m 17 [m    [32mint[m fdi=open(fin, O_RR[33m    [mDWR);[m
++[33m 18 [m    [32mstruct[m stat sb;[m
++[33m 19 [m    fstat(fdi,&sb);[m
++[33m 20 [m    [32mchar[m buf[[31mBUFSIZ[m];[m
++[33m 21 [m
++ 22 [m    [34m// copy the file[m[m
++[33m 23 [m    [32mint[m fdo=open(fout, O__[33m    [mWRONLY|O_CREAT);[m
++[33m 24 [m    [32mint[m r;20,21     16%[27m[m2;codereview...-notes) - VIM[7m^G[27m1;codereview.c[7m^G[27m[33m  2 [m[35m#include [m[31m<fcntl[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile[m
++[33m  8 [m    ( [32mconst[m [32mchar[m *fin[m
++[33m  9 [m    , [32mconst[m [32mchar[m *fout[m
++[33m 10 [m    )[m
++[33m 11 [m{[m
++[33m 12 [m    [34m// do nothing if files  [m[33m    [m[34mare the same[m[m
++[33m 13 [m    [33mif[m (strcmp(fin,fout)==[31m00[m[33m    [m)[m
++[33m 14 return[m;[m
++[33m 15 [m
++ 16 [m    [34m// initialize file readd[m[33m    [m[34ming[m[m
++[33m 17 [m    [32mint[m fdi=open(fin, O_RDWW[33m    [mR);[m
++[33m 18 [m    [32mstruct[m stat sb;[m
++[33m 19 [m    fstat(fdi,&sb);[m
++[33m 20 [m    [32mchar[m buf[[31mBUFSIZ[m];[m
++[33m 21 [m
+:[K[K [KESCESC[K[[[K66[K~~[K+ 22 [m    [34m// copy the file[m[m
++[33m 23 [m    [32mint[m fdo=open(fout, O_WRR[33m    [mONLY|O_CREAT);[m
++[33m 24 [m    [32mint[m r;20,21      16%[27m[m2;codereview....e-notes) - VIM[7m^G[27m1;codereview.c[7m^G[27m[33m  2 [m[35m#include [m[31m<fc[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile[m
++[33m  8 [m    ( [32mconst[m [32mchar[m *fin[m
++[33m  9 [m    , [32mconst[m [32mchar[m *fout[m
++[33m 10 [m    )[m
++[33m 11 [m{[m
++[33m 12 [m    [34m// do nothing if files aree[m[33m    [m[34m the same[m[m
++[33m 13 [m    [33mif[m (strcmp(fin,fout)==[31m0[m)[m
++[33m 14 return[m;[m
++[33m 15 [m
++ 16 [m    [34m// initialize file reading[m[33m 17 [m    [32mint[m fdi=open(fin, O_RDWR);[33m 18 [m    [32mstruct[m stat sb;[m
++[33m 19 [m    fstat(fdi,&sb);[m
++[33m 20 [m    [32mchar[m buf[[31mBUFSIZ[m];[m
++[33m 21 [m
++ 22 [m    [34m// copy the file[m[m
++[33m 23 [m    [32mint[m fdo=open(fout, O_WRONLL[33m    [mY|O_CREAT);[m
++[33m 24 [m    [32mint[m r;[m
++[33m 25 [m    [33mwhile[m (r=read(fdi,buf,[33msizee    of[m(buf))) {[m
++[33m 26 [mwrite(fdo,buf,r);20,2125%[27m[m2;codereview.c...re-notes) - VIM[7m^G[27m1;codereview.c[7m^G[27m[33m  2 [m[35m#include [m[31m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile[m
++[33m  8 [m    ( [32mconst[m [32mchar[m *fin[m
++[33m  9 [m    , [32mconst[m [32mchar[m *fout[m
++[33m 10 [m    )[m
++[33m 11 [m{[m
++[33m 12 [m    [34m// do nothing if files are tt[m[33m    [m[34mhe same[m[m
++[33m 13 [m    [33mif[m (strcmp(fin,fout)==[31m0[m)[m
++[33m 14 return[m;[m
++[33m 15 [m
++ 16 [m    [34m// initialize file reading[m[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m 17 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 18 [m    [32mstruct[m stat sb;[m
++[33m 19 [m    fstat(fdi,&sb);[m
++[33m 20 [m    [32mchar[m buf[[31mBUFSIZ[m];[m
++[33m 21 [m
++ 22 [m    [34m// copy the file[m[m
++[33m 23 [m    [32mint[m fdo=open(fout, O_WRONLY||[33m    [mO_CREAT);[m
++[33m 24 [m    [32mint[m r;[m
++[33m 25 [m    [33mwhile[m (r=read(fdi,buf,[33msizeoff    [m(buf))) {[m
++[33m 26 [mwrite(fdo,buf,r);20,2125%[27m[m2;codereview.c (...ure-notes) - VIM[7m^G[27m1;codereview.c[7m^G[27m[33m  2 [m[35m#inclu[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile[m
++[33m  8 [m    ( [32mconst[m [32mchar[m *fin[m
++[33m  9 [m    , [32mconst[m [32mchar[m *fout[m
++[33m 10 [m    )[m
++[33m 11 [m{[m
++[33m 12 [m    [34m// do nothing if files are the  [m[33m    [m[34msame[m[m
++[33m 13 [m    [33mif[m (strcmp(fin,fout)==[31m0[m)[m
++[33m 14 return[m;[m
++[33m 15 [m
++ 16 [m    [34m// initialize file reading[m[m
++[33m 17 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 18 [m    [32mstruct[m stat sb;[m
++[33m 19 [m    fstat(fdi,&sb);[m
++[33m 20 [m    [32mchar[m buf[[31mBUFSIZ[m];[m
++[33m 21 [m
++ 22 [m    [34m// copy the file[m[m
++[33m 23 [m    [32mint[m fdo=open(fout, O_WRONLY|O_CC[33m    [mREAT);[m
++[33m 24 [m    [32mint[m r;[m
++[33m 25 [m    [33mwhile[m (r=read(fdi,buf,[33msizeof[m(buu[33m    [mf))) {[m
++[33m 26 [mwrite(fdo,buf,r);20,2125%[27m[m2;codereview.c (...ture-notes) - VIM[7m^G[27m1;codereview.c[7m^G[27m[33m  2 [m[35m#incl[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m  8 [m    ( [32mconst[m [32mchar[m *fin[m
++[33m  9 [m    , [32mconst[m [32mchar[m *fout[m
++[33m 10 [m    )[m
++[33m 11 [m{[m
++[33m 12 [m    [34m// do nothing if files are the saa[m[33m    [m[34mme[m[m
++[33m 13 [m    [33mif[m (strcmp(fin,fout)==[31m0[m)[m
++[33m 14 return[m;[m
++[33m 15 [m
++ 16 [m    [34m// initialize file reading[m[m
++[33m 17 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 18 [m    [32mstruct[m stat sb;[m
++[33m 19 [m    fstat(fdi,&sb);[m
++[33m 20 [m    [32mchar[m buf[[31mBUFSIZ[m];[m
++[33m 21 [m
++ 22 [m    [34m// copy the file[m[m
++[33m 23 [m    [32mint[m fdo=open(fout, O_WRONLY|O_CREE[33m    [mAT);[m
++[33m 24 [m    [32mint[m r;[m
++[33m 25 [m    [33mwhile[m (r=read(fdi,buf,[33msizeof[m(buf))[33m    [m)) {[m
++[33m 26 [mwrite(fdo,buf,r);20,2125%[27m[m2;codereview.c (~...cture-notes) - VIM[7m^G[27m1;codereview.c[7m^G[27m[33m  2 [m[35m#in[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile[m
++[33m  8 [m    ( [32mconst[m [32mchar[m *fin[m
++[33m  9 [m    , [32mconst[m [32mchar[m *fout[m
++[33m 10 [m    )[m
++[33m 11 [m{[m
++[33m 12 [m    [34m// do nothing if files are the same[m[33m 13 [m    [33mif[m (strcmp(fin,fout)==[31m0[m)[m
++[33m 14 return[m;[m
++[33m 15 [m
++ 16 [m    [34m// initialize file reading[m[m
++[33m 17 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 18 [m    [32mstruct[m stat sb;[m
++[33m 19 [m    fstat(fdi,&sb);[m
++[33m 20 [m    [32mchar[m buf[[31mBUFSIZ[m];[m
++[33m 21 [m
++ 22 [m    [34m// copy the file[m[m
++[33m 23 [m    [32mint[m fdo=open(fout, O_WRONLY|O_CREATT[33m    [m);[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m 24 [m    [32mint[m r;[m
++[33m 25 [m    [33mwhile[m (r=read(fdi,buf,[33msizeof[m(buf))))[33m    [m {[m
++[33m 26 [mwrite(fdo,buf,r);[m
++[33m 27 [m    }20,2133%[27m[m2;codereview.c (~/p...ecture-notes) - VIM[7m^G[27m1;codereview.c[7m^G[27m[33m  2 [m[35m#include [m[31m<fc[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile[m
++[33m  8 [m    ( [32mconst[m [32mchar[m *fin[m
++[33m  9 [m    , [32mconst[m [32mchar[m *fout[m
++[33m 10 [m    )[m
++[33m 11 [m{[m
++[33m 12 [m    [34m// do nothing if files are the same[m[m
++[33m 13 [m    [33mif[m (strcmp(fin,fout)==[31m0[m)[m
++[33m 14 return[m;[m
++[33m 15 [m
++ 16 [m    [34m// initialize file reading[m[m
++[33m 17 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 18 [m    [32mstruct[m stat sb;[m
++[33m 19 [m    fstat(fdi,&sb);[m
++[33m 20 [m    [32mchar[m buf[[31mBUFSIZ[m];[m
++[33m 21 [m
++ 22 [m    [34m// copy the file[m[m
++[33m 23 [m    [32mint[m fdo=open(fout, O_WRONLY|O_CREAT);[m
++[33m 24 [m    [32mint[m r;[m
++[33m 25 [m    [33mwhile[m (r=read(fdi,buf,[33msizeof[m(buf))) {[m
++[33m 26 [mwrite(fdo,buf,r);[m
++[33m 27 [m    }[m
++[33m 28 [m    close(fdo);[m
++[33m 29 [m}20,21Bot[27m[m2;codereview.c (~/p...lecture-notes) - VIM[7m^G[27m1;codereview.c[7m^G[27m[33m  2 [m[35m#include [m[31m<fcntl[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile[m
++[33m  8 [m    ( [32mconst[m [32mchar[m *fin[m
++[33m  9 [m    , [32mconst[m [32mchar[m *fout[m
++[33m 10 [m    )[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m 11 [m{[m
++[33m 12 [m    [34m// do nothing if files are the same[m[m
++[33m 13 [m    [33mif[m (strcmp(fin,fout)==[31m0[m)[m
++[33m 14 return[m;[m
++[33m 15 [m
++ 16 [m    [34m// initialize file reading[m[m
++[33m 17 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 18 [m    [32mstruct[m stat sb;[m
++[33m 19 [m    fstat(fdi,&sb);[m
++[33m 20 [m    [32mchar[m buf[[31mBUFSIZ[m];[m
++[33m 21 [m
++ 22 [m    [34m// copy the file[m[m
++[33m 23 [m    [32mint[m fdo=open(fout, O_WRONLY|O_CREAT);[m
++[33m 24 [m    [32mint[m r;[m
++[33m 25 [m    [33mwhile[m (r=read(fdi,buf,[33msizeof[m(buf))) {[m
++[33m 26 [mwrite(fdo,buf,r);[m
++[33m 27 [m    }[m
++[33m 28 [m    close(fdo);[m
++[33m 29 [m}20,21Bot[27m[m2;codereview.c (~/pr.../lecture-notes) - VIM[7m^G[27m1;codereview.c[7m^G[27m[33m  2 [m[35m#include [m[31m<fcn[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile[m
++[33m  8 [m    ( [32mconst[m [32mchar[m *fin[m
++[33m  9 [m    , [32mconst[m [32mchar[m *fout[m
++[33m 10 [m    )[m
++[33m 11 [m{[m
++[33m 12 [m    [34m// do nothing if files are the same[m[m
++[33m 13 [m    [33mif[m (strcmp(fin,fout)==[31m0[m)[m
++[33m 14 return[m;[m
++[33m 15 [m
++ 16 [m    [34m// initialize file reading[m[m
++[33m 17 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 18 [m    [32mstruct[m stat sb;[m
++[33m 19 [m    fstat(fdi,&sb);[m
++[33m 20 [m    [32mchar[m buf[[31mBUFSIZ[m];[m
++[33m 21 [m
++ 22 [m    [34m// copy the file[m[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m 23 [m    [32mint[m fdo=open(fout, O_WRONLY|O_CREAT);[m
++[33m 24 [m    [32mint[m r;[m
++[33m 25 [m    [33mwhile[m (r=read(fdi,buf,[33msizeof[m(buf))) {[m
++[33m 26 [mwrite(fdo,buf,r);[m
++[33m 27 [m    }[m
++[33m 28 [m    close(fdo);[m
++[33m 29 [m}20,21Bot[27m[m2;codereview.c (~/proj...0/lecture-notes) - VIM[7m^G[27m1;codereview.c[7m^G[27m[33m  2 [m[35m#include [m[31m<[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile[m
++[33m  8 [m    ( [32mconst[m [32mchar[m *fin[m
++[33m  9 [m    , [32mconst[m [32mchar[m *fout[m
++[33m 10 [m    )[m
++[33m 11 [m{[m
++[33m 12 [m    [34m// do nothing if files are the same[m[m
++[33m 13 [m    [33mif[m (strcmp(fin,fout)==[31m0[m)[m
++[33m 14 return[m;[m
++[33m 15 [m
++ 16 [m    [34m// initialize file reading[m[m
++[33m 17 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 18 [m    [32mstruct[m stat sb;[m
++[33m 19 [m    fstat(fdi,&sb);[m
++[33m 20 [m    [32mchar[m buf[[31mBUFSIZ[m];[m
++[33m 21 [m
++ 22 [m    [34m// copy the file[m[m
++[33m 23 [m    [32mint[m fdo=open(fout, O_WRONLY|O_CREAT);[m
++[33m 24 [m    [32mint[m r;[m
++[33m 25 [m    [33mwhile[m (r=read(fdi,buf,[33msizeof[m(buf))) {[m
++[33m 26 [mwrite(fdo,buf,r);[m
++[33m 27 [m    }[m
++[33m 28 [m    close(fdo);[m
++[33m 29 [m}20,21Bot[27m[m2;codereview.c (~/pr.../lecture-notes) - VIM[7m^G[27m1;codereview.c[7m^G[27m[33m  2 [m[35m#include [m[31m<fcn[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m  8 [m    ( [32mconst[m [32mchar[m *fin[m
++[33m  9 [m    , [32mconst[m [32mchar[m *fout[m
++[33m 10 [m    )[m
++[33m 11 [m{[m
++[33m 12 [m    [34m// do nothing if files are the same[m[m
++[33m 13 [m    [33mif[m (strcmp(fin,fout)==[31m0[m)[m
++[33m 14 return[m;[m
++[33m 15 [m
++ 16 [m    [34m// initialize file reading[m[m
++[33m 17 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 18 [m    [32mstruct[m stat sb;[m
++[33m 19 [m    fstat(fdi,&sb);[m
++[33m 20 [m    [32mchar[m buf[[31mBUFSIZ[m];[m
++[33m 21 [m
++ 22 [m    [34m// copy the file[m[m
++[33m 23 [m    [32mint[m fdo=open(fout, O_WRONLY|O_CREAT);[m
++[33m 24 [m    [32mint[m r;[m
++[33m 25 [m    [33mwhile[m (r=read(fdi,buf,[33msizeof[m(buf))) {[m
++[33m 26 [mwrite(fdo,buf,r);[m
++[33m 27 [m    }[m
++[33m 28 [m    close(fdo);[m
++[33m 29 [m}20,21Bot[27m[m2;codereview.c (~/p...lecture-notes) - VIM[7m^G[27m1;codereview.c[7m^G[27m[33m  2 [m[35m#include [m[31m<fcntl[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile[m
++[33m  8 [m    ( [32mconst[m [32mchar[m *fin[m
++[33m  9 [m    , [32mconst[m [32mchar[m *fout[m
++[33m 10 [m    )[m
++[33m 11 [m{[m
++[33m 12 [m    [34m// do nothing if files are the same[m[m
++[33m 13 [m    [33mif[m (strcmp(fin,fout)==[31m0[m)[m
++[33m 14 return[m;[m
++[33m 15 [m
++ 16 [m    [34m// initialize file reading[m[m
++[33m 17 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 18 [m    [32mstruct[m stat sb;[m
++[33m 19 [m    fstat(fdi,&sb);[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m 20 [m    [32mchar[m buf[[31mBUFSIZ[m];[m
++[33m 21 [m
++ 22 [m    [34m// copy the file[m[m
++[33m 23 [m    [32mint[m fdo=open(fout, O_WRONLY|O_CREAT);[m
++[33m 24 [m    [32mint[m r;[m
++[33m 25 [m    [33mwhile[m (r=read(fdi,buf,[33msizeof[m(buf))) {[m
++[33m 26 [mwrite(fdo,buf,r);[m
++[33m 27 [m    }[m
++[33m 28 [m    close(fdo);[m
++[33m 29 [m}20,21Bot[27m[m2;codereview.c (~/p...ecture-notes) - VIM[7m^G[27m1;codereview.c[7m^G[27m[33m  2 [m[35m#include [m[31m<fcntl.[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile[m
++[33m  8 [m    ( [32mconst[m [32mchar[m *fin[m
++[33m  9 [m    , [32mconst[m [32mchar[m *fout[m
++[33m 10 [m    )[m
++[33m 11 [m{[m
++[33m 12 [m    [34m// do nothing if files are the same[m[m
++[33m 13 [m    [33mif[m (strcmp(fin,fout)==[31m0[m)[m
++[33m 14 return[m;[m
++[33m 15 [m
++ 16 [m    [34m// initialize file reading[m[m
++[33m 17 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 18 [m    [32mstruct[m stat sb;[m
++[33m 19 [m    fstat(fdi,&sb);[m
++[33m 20 [m    [32mchar[m buf[[31mBUFSIZ[m];[m
++[33m 21 [m
++ 22 [m    [34m// copy the file[m[m
++[33m 23 [m    [32mint[m fdo=open(fout, O_WRONLY|O_CREAT);[m
++[33m 24 [m    [32mint[m r;[m
++[33m 25 [m    [33mwhile[m (r=read(fdi,buf,[33msizeof[m(buf))) {[m
++[33m 26 [mwrite(fdo,buf,r);[m
++[33m 27 [m    }[m
++[33m 28 [m    close(fdo);[m
++[33m 29 [m}20,21Bot19,19[7m    fstat(fdi,&sb)[m;[7m [m[1m-- VISUAL LINE --[m19,19Bot[7m    [m[7m[32mstruct[m[7m stat sb;;[m8,20    [32mc[m
++[33m 28 [m    close(fdo);[33m 29 [m}18,19Bot2;codereview.c + (~...ecture-notes) - VIM[7m^G[27m1;codereview.c[7m^G[27m9[m
++2;user@userland: ~/proj/ucr-cs100/lecture-notes[7m^G[27m1;user@userland: ~/proj/ucr-cs100/lecture-n[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[1]+  Stopped                 vim codereview.c[m
++$ fg[m
++vim codereview.c[m
++2;codereview.c + (~...ecture-notes) - VIM[7m^G[27m1;codereview.c[7m^G[27m[27m[m[33m  2 [m[35m#include [m[31m<fcntl.h>[m[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mvoid[m copyFile[m
++[33m  8 [m    ( [32mconst[m [32mchar[m *fin[m
++[33m  9 [m    , [32mconst[m [32mchar[m *fout[m
++[33m 10 [m    )[m
++[33m 11 [m{[m
++[33m 12 [m    [34m// do nothing if files are the same[m[m
++[33m 13 [m    [33mif[m (strcmp(fin,fout)==[31m0[m)[m
++[33m 14 return[m;[m
++[33m 15 [m
++ 16 [m    [34m// initialize file reading[m[m
++[33m 17 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 18 [m    [32mstruct[m stat sb;[m
++[33m 19 [m    fstat(fdi,&sb);[m
++[33m 20 [m    [32mchar[m buf[[31mBUFSIZ[m];[m
++[33m 21 [m
++ 22 [m    [34m// copy the file[m[m
++[33m 23 [m    [32mint[m fdo=open(fout, O_WRONLY|O_CREAT);[m
++[33m 24 [m    [32mint[m r;[m
++[33m 25 [m    [33mwhile[m (r=read(fdi,buf,[33msizeof[m(buf))) {[m
++[33m 26 [mwrite(fdo,buf,r);[m
++[33m 27 [m    }[m
++[33m 28 [m    close(fdo);[m
++[33m 29 [m}19,19Bot2 fewer lin...3 seconds ago[32mchar[m buf[46m[[m[31mBUFSIZ[m[46m][m;[34m// copy the file[m[32mint[m fdo=open(fout, [m
++[33m 28 [m}2;codereview.c + (~...ecture-notes) - VIM[7m^G[27m1;codereview.c[7m^G[27m [m
++[33m 29 [m}8Botr6e7t8[33mreturn[m12[31m0[m3;428,13Bot:w[7m^M[27m"codereview.c"[7m^M[27m<eview.c" 29L, 522C written 28,13Bot2[m
++[33m  3 [m[35m#include [m[31m<stdio.h>[m[m
++[33m  4 [m[35m#include [m[31m<sys/types.h>[m[m
++[33m  5 [m[35m#include [m[31m<sys/stat.h>[m[m
++[33m  6 [m
++  7 [m[32mint[m copyFile[m
++[33m  8 [m    ( [32mconst[m [32mchar[m *fin[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m  9 [m    , [32mconst[m [32mchar[m *fout[m
++[33m 10 [m    )[m
++[33m 11 [m{[m
++[33m 12 [m    [34m// do nothing if files are the same[m[m
++[33m 13 [m    [33mif[m (strcmp(fin,fout)==[31m0[m)[m
++[33m 14 return[m;[m
++[33m 15 [m
++ 16 [m    [34m// initialize file reading[m[m
++[33m 17 [m    [32mint[m fdi=open(fin, O_RDWR);[m
++[33m 18 [m    [32mchar[m buf[[31mBUFSIZ[m];[m
++[33m 19 [m
++ 20 [m    [34m// copy the file[m[m
++[33m 21 [m    [32mint[m fdo=open(fout, O_WRONLY|O_CREAT);[m
++[33m 22 [m    [32mint[m r;[m
++[33m 23 [m    [33mwhile[m (r=read(fdi,buf,[33msizeof[m(buf))) {[m
++[33m 24 [mwrite(fdo,buf,r);[m
++[33m 25 [m    }[m
++[33m 26 [m    close(fdo);[m
++[33m 27 [m
++ 28 [m    [33mreturn[m [31m0[m;[m
++[33m 29 [m}28,13Bot:q[7m^M[27m2;user@userland: ~/proj/ucr-cs100/lecture-notes[7m^G[27m1;user@userland: ~/proj/uc[m
++$ vim segfault.cpp[m
++[27m[m"segfault.cpp" [New File]c[33m  1 [m[m
++[1m[34m~                                                                             ~             [m
++[33m  2 [m()2,1 {2,2All[m
++[33m  3 [m    3,5[1m[37m[41m][m3,6All5}[46m{}[m3,6All2,2All3,6All}[46m[7m^H[27m}[m}[46m[7m^H[27m}[m}[46m[7m^H[27m}[m}[46m[7m^H[27m}[m122,2All[46m [m[m
++[33m  4 [m}{ 3,5r6e7t8[33mreturn[m12[31m0[m3;4[46m{}[m2,2All[46m [m   [33mreturn[m [31m0[m;[m
++[33m  5 [m}{ 3,5w6h7[33mwhile[m10(3,11Allt2r[31mtrue[m[7m^H^H^H^H[27m[46m()[m3,16All;()73,16All:w[7m^M[27m"segfault.cpp" [New] 5L,[m
++[33m  2 [m{[m
++[33m  3 [m    [33mwhile[m([31mtrue[m);[m
++[33m  4 [m    [33mreturn[m [31m0[m;[m
++[33m  5 [m}[m
++[1m[34m~                               ~                               ~                           [m
++[33m  2 [m{[m
++[33m  3 [m    [33mwhile[m([31mtrue[m);[m
++[33m  4 [m    [33mreturn[m [31m0[m;[m
++[33m  5 [m}[m
++[1m[34m~                                             ~                                             [m
++[33m  6 [m}2;segfault.cpp + (~...ecture-notes) - VIM[7m^G[27m1;segfault.cpp[7m^G[27m[32mint[m main(){[33mwhile[m([31mtrue[m);    [33mr[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m  7 [m}2All1v2o[32mvoid[m56l7o8o9p10([1m[37m[41m{}[m1,11All){}[46m()[m1,12All[32mint[m main(){[33mwhile[m([31mtrue[m);    [33mreturn[m [31m0[m;[m
++[33m  8 [m}()2,1 {2,2All[32mint[m main(){[33mwhile[m([31mtrue[m);    [33mreturn[m [31m0[m;[m
++[33m  9 [m[1m}[0m[46m{}[m3,2All2,2All[46m [m}[32mint[m main(){[33mwhile[m([31mtrue[m);    [33mreturn[m [31m0[m;[m
++[33m 10 [m}{ 3,5l6o7o8p9[1m[37m[41m)[m3,10All9 (3,10Al[46m()[m3,11A()23,11All:w[7m^M[27m"segfault.cpp"[7m^M[27m<ault.cpp" 10L, 75C [m
++[33m 11 [m}l6Allo7o8p9(9,10Al[46m()[m9,11A()29,11All:w[7m^M[27m"segfault.cpp"[7m^M[27m<ault.cpp" 11L, 89C written 9,11[m
++[33m 12 [m}2;segfault.cpp + (~...ecture-notes) - VIM[7m^G[27m1;segfault.cpp[7m^G[27m5All[32mint[m main(){[34m//while(true)[m
++[33m 13 [m}6i2[32mint[m45f6i7b8([1m[37m[41m{}[m6,9Alli10[32mint[m23i4){}[46m()[m6,15All[32mint[m main(){[34m//while(true);[mloop();    [33mreturn[m[m
++[33m 14 [m}()7,1 {7,2All[32mint[m main(){[34m//while(true);[mloop();    [33mreturn[m [31m0[m;[m
++[33m 15 [m[1m}[0m[46m{}[m8,2All7,2All[46m [m}[32mint[m main(){[34m//while(true);[mloop();    [33mreturn[m [31m0[m;[m
++[33m 16 [m}{ 8,5r6e7t8[33mreturn[m[7m^H^H^H^H^H[27mretur09 8765i[33mif[m78i98(8,9Alli10=1=2[31m0[m[7m^H^H^H^H[27m[46m()[m8()5r6e7t8[33mretur[m
++[33m 17 [m}9,5 r6e7t8[33mreturn[m12f3i4b5(9,16Alli7-8[31m1[m[7m^H^H^H[27m[46m()[m9,()1f2i3b4(9,25Alli6-7[31m2[m[7m^H^H^H[27m[46m()[m9,()309,29[m
++[33m 18 [m}2;segfault.cpp + (~...ecture-notes) - VIM[7m^G[27m1;segfault.cpp[7m^G[27mc6Allh[32mchar[m910b1u2f3[[1m[37m[41m;[m16,14Al[m
++[33m 19 [m}2;segfault.cpp + (~...ecture-notes) - VIM[7m^G[27m1;segfault.cpp[7m^G[27mb6Allu7f8[[1m[37m[41m;[m17,9All[31m0[m10];[46m[][m17,[m
++[33m 16 [m    [32mchar[m buf[[31m1000000000[m];[33m 17 [m    buf[[31m0[m]=[31m0[m;[33m 18 [m    [33mreturn[m [31m0[m;[33m 19 [m}14,1All2;segfault.cpp (~[m
++$ vim pipe2.cpp[m
++[27m[m"pipe2.cpp" [New File]c[33m  1 [m[m
++[1m[34m~                                             ~                                             [m
++[33m  2 [m2,1 #2i3n4c5l6u7d8e910[35m#include <[m1f2c3n4t5l6.7h8[31m<fcntl.h>[m9[m
++[33m  3 [m3,1 [m
++[33m  4 [m4i2[32mint[m45m6a7i8n9(4,10Al[46m()[m4,11All[m
++[33m  5 [m()5,1 {5,2All[m
++[33m  6 [m   }[46m{}[m6,2All5,2All[46m [m[m
++[33m  7 [m}{ 6,5r6e7t8[33mreturn[m12[31m0[m3[31ml[m46,13All:w[7m^M[27m"pipe2.cpp"[7m^M[27m<cpp" [New] 7L, 69C written 6,13All2;pip[m
++2;user@userland: ~/proj/ucr-cs100/lecture-notes[7m^G[27m1;user@userland: ~/proj/ucr-cs100/lecture-n[m
++[1]+  Stopped                 vim pipe2.cpp[m
++$ vim pipe2.cpp[7m^M[27m$ vim segfault.cpp[m
++[27m[m"segfault.cpp" 19L, 211Cc[33m  1 [m[32mvoid[m loop()[m
++[33m  2 [m{[m
++[33m  3 [m    loop();[m
++[33m  4 [m}[m
++[33m  5 [m
++  6 [m[32mint[m fib([32mint[m i)[m
++[33m  7 [m{[m
++[33m  8 [m    [33mif[m (i==[31m0[m || i==[31m1[m) [33mreturn[m [31m1[m;[m
++[33m  9 [m    [33mreturn[m fib(i-[31m1[m)+fib(i-[31m2[m);[m
++[33m 10 [m}[m
++[33m 11 [m
++ 12 [m[32mint[m main()[m
++[33m 13 [m{[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m 14 [m    [33mwhile[m([31mtrue[m);[m
++[33m 15 [m    [34m//loop();[m[m
++[33m 16 [m    [32mchar[m buf[[31m1000000000[m];[m
++[33m 17 [m    buf[[31m0[m]=[31m0[m;[m
++[33m 18 [m    [33mreturn[m [31m0[m;[m
++[33m 19 [m}[m
++[1m[34m~                                             ~                                             [m
++2;user@userland: ~/proj/ucr-cs100/lecture-notes[7m^G[27m1;user@userland: ~/proj/ucr-cs100/lecture-n[m
++[2]+  Stopped                 vim segfault.cpp[m
++$ vim segfault.cpp[7m^M[27m$ vim pipe2.cpp[m
++[27m[mE325: ATTENTION[7m^M[27m[m
++Found a swap file by the name ".pipe2.cpp.swp[7m^M[27m[m
++"[m
++owned by: user   dated: Wed Feb 11[7m^M[27m[m
++16:39:17 2015[7m^M[27m[m
++file name: ~user/proj/ucr-cs100/lect[7m^M[27m[m
++ure-notes/pipe2.cpp[7m^M[27m[m
++modified: no[7m^M[27m[m
++user name: user   host name: userlan[7m^M[27m[m
++d[m
++process ID: 26404 (still running)[7m^M[27m[m
++While opening file "pipe2.cpp"[7m^M[27m[m
++dated: Wed Feb 11 16:39:13 2015[7m^M[27m[m
++[m
++(1) Another program may be editing the same f[7m^M[27m[m
++ile.  If this is the case,[7m^M[27m[m
++    be careful not to end up with two differe[7m^M[27m[m
++nt instances of the same[7m^M[27m[m
++    file when making changes.  Quit, or conti[7m^M[27m[m
++nue with caution.[7m^M[27m[m
++(2) An edit session for this file crashed.[7m^M[27m[m
++    If this is the case, use ":recover" or "v[7m^M[27m[m
++im -r pipe2.cpp"[7m^M[27m[m
++    to recover the changes (see ":help recove[7m^M[27m[m
++ry").[7m^M[27m[m
++    If you did this already, delete the swap[7m^M[27m[m
++file ".pipe2.cpp.swp"[7m^M[27m[m
++    to avoid this message.[7m^M[27m[m
++-- More --[m
+:[K[K [KESCESC[K[[[K66[K~~[K+Swap file ".pipe2.cpp.swp" already exists![7m^M[27m[m
++[O]pen Read-Only, (E)dit anyway, (R)ecover, ([7m^M[27m[m
++Q)uit, (A)bort:[7m^M[27m[m
++$ fg[m
++vim segfault.cpp[m
++2;segfault.cpp (~/p...ecture-notes) - VIM[7m^G[27m1;segfault.cpp[7m^G[27m[27m[m[33m  1 [m[32mvoid[m loop()[m
++[33m  2 [m{[m
++[33m  3 [m    loop();[m
++[33m  4 [m}[m
++[33m  5 [m
++  6 [m[32mint[m fib([32mint[m i)[m
++[33m  7 [m{[m
++[33m  8 [m    [33mif[m (i==[31m0[m || i==[31m1[m) [33mreturn[m [31m1[m;[m
++[33m  9 [m    [33mreturn[m fib(i-[31m1[m)+fib(i-[31m2[m);[m
++[33m 10 [m}[m
++[33m 11 [m
++ 12 [m[32mint[m main()[m
++[33m 13 [m{[m
++[33m 14 [m    [33mwhile[m([31mtrue[m);[m
++[33m 15 [m    [34m//loop();[m[m
++[33m 16 [m    [32mchar[m buf[[31m1000000000[m];[m
++[33m 17 [m    buf[[31m0[m]=[31m0[m;[m
++[33m 18 [m    [33mreturn[m [31m0[m;[m
++[33m 19 [m}[m
++[1m[34m~                                             ~                                             [m
++[33m  2 [m{[m
++[33m  3 [m    loop();[m
++[33m  4 [m}[m
++[33m  5 [m
++  6 [m[32mint[m fib([32mint[m i)[m
++[33m  7 [m{[m
++[33m  8 [m    [33mif[m (i==[31m0[m || i==[31m1[m) [33mreturn[m [31m1[m;[m
++[33m  9 [m    [33mreturn[m fib(i-[31m1[m)+fib(i-[31m2[m);[m
++[33m 10 [m}[m
++[33m 11 [m
++ 12 [m[32mint[m main()[m
++[33m 13 [m{[m
++[33m 14 [m    [33mwhile[m([31mtrue[m);[m
++[33m 15 [m    [34m//loop();[m[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m 16 [m    [32mchar[m buf[[31m1000000000[m];[m
++[33m 17 [m    buf[[31m0[m]=[31m0[m;[m
++[33m 18 [m    [33mreturn[m [31m0[m;[m
++[33m 19 [m}[m
++[1m[34m~                                          ~                                          ~     [m
++[33m  2 [m{[m
++[33m  3 [m    loop();[m
++[33m  4 [m}[m
++[33m  5 [m
++  6 [m[32mint[m fib([32mint[m i)[m
++[33m  7 [m{[m
++[33m  8 [m    [33mif[m (i==[31m0[m || i==[31m1[m) [33mreturn[m [31m1[m;[m
++[33m  9 [m    [33mreturn[m fib(i-[31m1[m)+fib(i-[31m2[m);[m
++[33m 10 [m}[m
++[33m 11 [m
++ 12 [m[32mint[m main()[m
++[33m 13 [m{[m
++[33m 14 [m    [33mwhile[m([31mtrue[m);[m
++[33m 15 [m    [34m//loop();[m[m
++[33m 16 [m    [32mchar[m buf[[31m1000000000[m];[m
++[33m 17 [m    buf[[31m0[m]=[31m0[m;[m
++[33m 18 [m    [33mreturn[m [31m0[m;[m
++[33m 19 [m}[m
++[1m[34m~                                        ~                                        ~         [m
++[33m  2 [m{[m
++[33m  3 [m    loop();[m
++[33m  4 [m}[m
++[33m  5 [m
++  6 [m[32mint[m fib([32mint[m i)[m
++[33m  7 [m{[m
++[33m  8 [m    [33mif[m (i==[31m0[m || i==[31m1[m) [33mreturn[m [31m1[m;[m
++[33m  9 [m    [33mreturn[m fib(i-[31m1[m)+fib(i-[31m2[m);[m
++[33m 10 [m}[m
++[33m 11 [m
++ 12 [m[32mint[m main()[m
++[33m 13 [m{[m
++[33m 14 [m    [33mwhile[m([31mtrue[m);[m
++[33m 15 [m    [34m//loop();[m[m
++[33m 16 [m    [32mchar[m buf[[31m1000000000[m];[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m 17 [m    buf[[31m0[m]=[31m0[m;[m
++[33m 18 [m    [33mreturn[m [31m0[m;[m
++[33m 19 [m}[m
++[1m[34m~                                      ~                                      ~             [m
++[33m  2 [m{[m
++[33m  3 [m    loop();[m
++[33m  4 [m}[m
++[33m  5 [m
++  6 [m[32mint[m fib([32mint[m i)[m
++[33m  7 [m{[m
++[33m  8 [m    [33mif[m (i==[31m0[m || i==[31m1[m) [33mreturn[m [31m1[m;[m
++[33m  9 [m    [33mreturn[m fib(i-[31m1[m)+fib(i-[31m2[m);[m
++[33m 10 [m}[m
++[33m 11 [m
++ 12 [m[32mint[m main()[m
++[33m 13 [m{[m
++[33m 14 [m    [33mwhile[m([31mtrue[m);[m
++[33m 15 [m    [34m//loop();[m[m
++[33m 16 [m    [32mchar[m buf[[31m1000000000[m];[m
++[33m 17 [m    buf[[31m0[m]=[31m0[m;[m
++[33m 18 [m    [33mreturn[m [31m0[m;[m
++[33m 19 [m}[m
++[1m[34m~                                   ~                                   ~                   [m
++[33m  2 [m{[m
++[33m  3 [m    loop();[m
++[33m  4 [m}[m
++[33m  5 [m
++  6 [m[32mint[m fib([32mint[m i)[m
++[33m  7 [m{[m
++[33m  8 [m    [33mif[m (i==[31m0[m || i==[31m1[m) [33mreturn[m [31m11[m[33m    [m;[m
++[33m  9 [m    [33mreturn[m fib(i-[31m1[m)+fib(i-[31m2[m);[m
++[33m 10 [m}[m
++[33m 11 [m
++ 12 [m[32mint[m main()[m
++[33m 13 [m{[m
++[33m 14 [m    [33mwhile[m([31mtrue[m);[m
++[33m 15 [m    [34m//loop();[m[m
++[33m 16 [m    [32mchar[m buf[[31m1000000000[m];[m
++[33m 17 [m    buf[[31m0[m]=[31m0[m;[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[33m 18 [m    [33mreturn[m [31m0[m;[m
++[33m 19 [m}[m
++[1m[34m~                                 ~                                 ~                       [m
++[33m  2 [m{[m
++[33m  3 [m    loop();[m
++[33m  4 [m}[m
++[33m  5 [m
++  6 [m[32mint[m fib([32mint[m i)[m
++[33m  7 [m{[m
++[33m  8 [m    [33mif[m (i==[31m0[m || i==[31m1[m) [33mreturr    n[m [31m1[m;[m
++[33m  9 [m    [33mreturn[m fib(i-[31m1[m)+fib(i-[31m22[m[33m    [m);[m
++[33m 10 [m}[m
++[33m 11 [m
++ 12 [m[32mint[m main()[m
++[33m 13 [m{[m
++[33m 14 [m    [33mwhile[m([31mtrue[m);[m
++[33m 15 [m    [34m//loop();[m[m
++[33m 16 [m    [32mchar[m buf[[31m1000000000[m];[m
++[33m 17 [m    buf[[31m0[m]=[31m0[m;[m
++[33m 18 [m    [33mreturn[m [31m0[m;[m
++[33m 19 [m}[m
++[1m[34m~                              ~                              ~                             [m
++[33m  2 [m{[m
++[33m  3 [m    loop();[m
++[33m  4 [m}[m
++[33m  5 [m
++  6 [m[32mint[m fib([32mint[m i)[m
++[33m  7 [m{[m
++[33m  8 [m    [33mif[m (i==[31m0[m || i==[31m1[m) [33mrett    urn[m [31m1[m;[m
++[33m  9 [m    [33mreturn[m fib(i-[31m1[m)+fib(ii[33m    [m-[31m2[m);[m
++[33m 10 [m}[m
++[33m 11 [m
++ 12 [m[32mint[m main()[m
++[33m 13 [m{[m
++[33m 14 [m    [33mwhile[m([31mtrue[m);[m
++[33m 15 [m    [34m//loop();[m[m
++[33m 16 [m    [32mchar[m buf[[31m1000000000[m];[33m 17 [m    buf[[31m0[m]=[31m0[m;[m
++[33m 18 [m    [33mreturn[m [31m0[m;[m
++[33m 19 [m}[m
+:[K[K [KESCESC[K[[[K66[K~~[K+[1m[34m~                            ~                            ~                            ~    [m
++[33m  2 [m{[m
++[33m  3 [m    loop();[m
++[33m  4 [m}[m
++[33m  5 [m
++  6 [m[32mint[m fib([32mint[m i)[m
++[33m  7 [m{[m
++[33m  8 [m    [33mif[m (i==[31m0[m || i==[31m1[m) [33mreturr    n[m [31m1[m;[m
++[33m  9 [m    [33mreturn[m fib(i-[31m1[m)+fib(i-[31m22[m[33m    [m);[m
++[33m 10 [m}[m
++[33m 11 [m
++ 12 [m[32mint[m main()[m
++[33m 13 [m{[m
++[33m 14 [m    [33mwhile[m([31mtrue[m);[m
++[33m 15 [m    [34m//loop();[m[m
++[33m 16 [m    [32mchar[m buf[[31m1000000000[m];[m
++[33m 17 [m    buf[[31m0[m]=[31m0[m;[m
++[33m 18 [m    [33mreturn[m [31m0[m;[m
++[33m 19 [m}[m
++[1m[34m~                              ~                              ~                             [m
++[33m  2 [m{[m
++[33m  3 [m    loop();[m
++[33m  4 [m}[m
++[33m  5 [m
++  6 [m[32mint[m fib([32mint[m i)[m
++[33m  7 [m{[m
++[33m  8 [m    [33mif[m (i==[31m0[m || i==[31m1[m) [33mreturn[m [31m11[m[33m    [m;[m
++[33m  9 [m    [33mreturn[m fib(i-[31m1[m)+fib(i-[31m2[m);[m
++[33m 10 [m}[m
++[33m 11 [m
++ 12 [m[32mint[m main()[m
++[33m 13 [m{[m
++[33m 14 [m    [33mwhile[m([31mtrue[m);[m
++[33m 15 [m    [34m//loop();[m[m
++[33m 16 [m    [32mchar[m buf[[31m1000000000[m];[m
++[33m 17 [m    buf[[31m0[m]=[31m0[m;[m
++[33m 18 [m    [33mreturn[m [31m0[m;[m
++[33m 19 [m}[m
++[1m[34m~                                 ~                                 ~                       [m
+:[K[K[?1l>$ git diff 2015winter --name-only
+[?1h=README.md[m
+assignments/hw/hw4-contributing/README.md[m
+gitlearn[m
+lecture-notes/gittest[m
+lecture-notes/lecture10[m
+lecture-notes/pipe2.cpp[m
+lecture-notes/segfault.cpp[m
+people/students/kkamg001[m
+people/students/kkimb003[m
+textbook/bestpractices/TestDrivenDevelopment/README.md[m
+[K[?1l>$ git checkout 2015winter
+error: Your local changes to the following files would be overwritten by checkout:
+	lecture-notes/lecture10
+Please, commit your changes or stash them before you can switch branches.
+Aborting
+$ it stat2.cpp $ [1@git stat2.cpp lecture10
+git: 'stat2.cpp' is not a git command. See 'git --help'.
+$ git stat2.cpp lecture10[1P[1P[1P[1Pp[1P[1P[1@t[1@u[1@s
+# On branch grades
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   lecture10
+#
+no changes added to commit (use "git add" and/or "git comm
