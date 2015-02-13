@@ -29,14 +29,17 @@ Many of these data structures exist in the Boost library and I would highly reco
 
 ####TL;DR
 
-*Maps are REALLY useful and your professor will attest to their use. Stacks and Queues are less common, but in certain situations they can make your job immensely easier and, therefore, reign supreme. Yes, lists can be a pain to deal with if you hate pointers, but if you get comfortable with using pointers and the rules associated with them, you will find lists can be useful as well. Do not rely only on arrays and vectors just because you're used to them; sometimes they aren't the answer you're looking for. And yes, you will use data structures in your life beyond schooling:* 
+*Maps are REALLY useful and your professor will attest to their use. Stacks and Queues are less common, but in certain situations they can make your job immensely easier and, therefore, reign supreme.*
+
+*Yes, lists can be a pain to deal with if you hate pointers, but if you get comfortable with using pointers and the rules associated with them, you will find lists can be useful as well. Do not rely only on arrays and vectors just because you're used to them; sometimes they aren't the answer you're looking for. And yes, you will use data structures in your life beyond schooling:* 
  [Use of data structures in your life?](http://stackoverflow.com/questions/389216/advanced-data-structures-in-practice)
 
 ### Map
 
-A map is a container filled with Pairs made out of a Key, used to reference/retrieve data, and the actual data itself. An important piece of information to remember about maps are that they are implemented as a binary tree so when iterating through a map the iterator traverses the tree in order based on your comparison operator. To create a map you must decide what you want to store, and how you wish to reference that data. If your
- `pair<const Key, data_type data>` was `pair<int, string>`, you would have a
-  map of int values which referenced some data of type string. Basically, at each index of the `map (m[int])` you would have a string value.
+A map is a container filled with Pairs made out of a Key, used to reference/retrieve data, and the actual data itself. An important piece of information to remember about maps is that they are implemented as a binary tree. So when the code is iterating through a map, the iterator traverses the tree in order based on your comparison operator. 
+
+To create a map, you must decide what you want to store and how you wish to reference that data. If your
+ `pair<const Key, data_type data>` was `pair<int, string>`, you would have a map of int values that referenced some data of type string. Basically, at each index of the `map (m[int])` you would have a string value.
 
 ```
 #include <map>
@@ -56,11 +59,11 @@ int main(){
 
 That's a pretty boring idea as there is nothing actually DONE with the information, but it at least shows assignment and access of data.
 
-Now maps, by default, are ordered. There also exists the unordered version which has a faster access time if the key is known. Unordered maps are implemented through the use of hash tables to allow said fast access time. Creating your own `hash<Key>` function is also allowed if you so desire. The interesting part of unordered maps is that they implement the bucket style hash table where each hashed value is allowed to contain more than one piece of data.
+Now maps, by default, are ordered. There is also the unordered version, which has a faster access time if the key is known. Unordered maps are implemented through the use of hash tables to allow the said fast access time. Creating your own `hash<Key>` function is also allowed if you desire so. The interesting part of unordered maps is that they implement the bucket style hash table, where each hashed value is allowed to contain more than one piece of data.
 
 ### Lists
 
-Linked lists are made up of nodes containing the data and a pointer to the next position in the list. This gives lists an advantage over vectors when inserting and deleting since it only requires changing the pointers as opposed to shifting the entire vector over. It should be mentioned as well that a list maintains an advantage over vectors in that vector expansion is costly while lists only need to dynamically allocate a new node. What you lose for this advantage is run-time for iterating through the list (Reference: [List iteration](http://stackoverflow.com/questions/1402483/why-is-it-so-slow-iterating-over-a-big-stdlist) ).
+Linked lists are made up of nodes containing the data and a pointer to the next position in the list. This gives lists an advantage over vectors when inserting and deleting, since it only requires changing the pointers as opposed to shifting the entire vector over. By using that vector expansion, a list maintains a costly advantage over vectors, while other lists only need to dynamically allocate a new node. What you lose for this advantage is run-time for iterating through the list (Reference: [List iteration](http://stackoverflow.com/questions/1402483/why-is-it-so-slow-iterating-over-a-big-stdlist) ).
 
 ```
 #include <list>
@@ -84,7 +87,7 @@ The default linked list is a doubly linked list (it contains pointers to the pre
 
 (First In Last Out)
 
-Stacks are interesting in that access involves only the topmost element. Either you push to the top or pop off the top. One way to use a stack is to use it to reverse the order of something. When you push, say a set of strings, to the stack after popping all of the elements off of the stack, the sentence of strings would be in reverse.
+Stacks are interesting in the fact that access involves only the topmost element. Either you push to the top or pop off the top. One way to use a stack is to use it to reverse the order of something. When you push, say a set of strings, to the stack after popping all of the elements off of the stack, the sentence of strings would be in reverse.
 
 ```
 #include <stack>
@@ -111,7 +114,7 @@ Stacks are used mostly in compilers and operating systems. If that type of thing
 
 (First In First Out)
 
-Queues can be thought of as a tunnel. What goes into the tunnel first is going to be the first thing to come out of the tunnel. The most common use of this is for job scheduling (just think of a login queue for a game. Those who enter the queue first are those who get logged in first). Just like a stack, the main two operations for a queue are push and pop. You could use this in the case where you had a set of operations you wanted to execute sequentially. By putting them into a queue and just operating on the item popped off the queue you could iterate through said operations.
+Queues can be thought of as a tunnel. What goes into the tunnel first is going to be the first thing that comes out of the tunnel. The most common use of this is for job scheduling (just think of a login queue for a game. Those who enter the queue first are those who get logged in first). Just like a stack, the main two operations for a queue are push and pop. You could use this in the cases where you have a set of operations you want to execute sequentially. By putting them into a queue and just operating on the item popped off the queue, you could iterate through said operations.
 
 ```
 #include <queue>
@@ -132,11 +135,11 @@ int main(){
 }
 ```
 
-There also exist priority queues (still `#include <queue>` but declared as `priority_queue<Typename> pq;`) which instead of just pushing to the back, `push()` calls the function `push_back()` of the object being pushed then calls `push_heap` (all inside of the original `push()` function) to reorder the priority queue. So instead of popping the very first thing pushed, what is popped is the item with the highest priority based on the container. So for an example where the container is an `int` the object with the highest priority would be the highest number. Much like stacks, queues are used in operating systems. Except queues are used more with process scheduling.
+There also exist priority queues (still `#include <queue>` but declared as `priority_queue<Typename> pq;`) which instead of just pushing to the back, `push()` calls the function `push_back()` of the object being pushed then calls `push_heap` (all inside of the original `push()` function) to reorder the priority queue. So instead of popping the very first thing pushed, what is popped is the item with the highest priority based on the container. So, for an example where the container is an `int`, the object with the highest priority would be the highest number. Much like stacks, queues are used in operating systems. Except queues are used more often with process scheduling.
 
 ### Vector
 
-Vectors are the go-to answer whenever a simple array is needed but the size is not known at initialization. Internally, a vector is a dynamically allocated array that reallocates more memory when a new element is pushed but requires more space. As stated above in the "List" section, vectors perform efficiently with random access but inefficiently when inserting or removing items. One thing to note with vectors are their ability to change their size or capacity. Capacity refers to the amount of memory allocated to the array; size refers to the number of elements in the vector. Vectors are nice in their simplicity and that they cover the basic needs of many situations.
+Vectors are the go-to answer whenever a simple array is needed but the size is not known at initialization. Internally, a vector is a dynamically allocated array that reallocates more memory when a new element is pushed but requires more space. As stated above in the "List" section, vectors perform efficiently with random access but inefficiently when they are inserting or removing items. One thing to note with vectors are their ability to change their size or capacity. Capacity refers to the amount of memory allocated to the array and size refers to the number of elements in the vector. Vectors are nice in their simplicity and that they cover the basic needs of many situations.
 
 ```
 #include <vector>    //vector example is a bit too easy, just treat it as
@@ -151,7 +154,9 @@ int main(){          //an out of bounds item
 }
 ```
 
-However, vectors can be overused when you rely on them too heavily. For example, I have been in the situation where I thought I needed a `vector<vector<string> >`. What I really wanted to do, however, was map `int` values to said `vector<string>`. Getting too caught up with vectors, I confused myself and overcomplicated things by trying to force something simple into something complex. Simple solutions should be preferred over complex solutions.
+However, vectors can be overused when you rely on them too heavily. 
+
+For example, I have been in the situation where I thought I needed a `vector<vector<string> >`. What I really wanted to do, however, was map `int` values to said `vector<string>`. Getting too caught up with vectors, I confused myself and overcomplicated things by trying to force something simple into something complex. Simple solutions should be preferred over complex solutions.
 
 
 
