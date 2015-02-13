@@ -23,7 +23,8 @@ If a compiler supports C++11 features, it likely supports initialization lists. 
 
 ###What is an initialization list?  
 
-An initialization list is exactly what it sounds like--an explicitly stated list of values to initialize a containing object with. Initialization lists were accepted prior to C++11 when initializing arrays, but now, the mechanism for accepting curly-bracket-enclosed lists is a function, often a constructor, accepting an argument of a new template class type `std::initializer_list<T>`, where `T` is a simple data type. `T` represents the same simple data type that makes up the data type of each element within the curly brackets, and the elements that make up the initializer list are separated by commas. The initializer list can be empty. 
+An initialization list is exactly what it sounds like--an explicitly stated list of values to initialize a containing object with. Initialization lists were accepted prior to C++11 when initializing arrays, but now the mechanism for accepting curly-bracket-enclosed lists is a function, often a constructor, accepting an argument of a new template class type `std::initializer_list<T>`, where `T` is a simple data type. `T` represents the same simple data type that makes up the data type of each element within the curly brackets, and the elements that make up the initializer list that are separated by commas. The initializer list can be empty. 
+
 In C++11, the STL containers and string class contain initializer-list constructors and support initialization lists. So, with the convenience of C++11 initialization lists, we can now initialize a vector of strings without repetitive calls to the vector `push_back` member function. This code is accepted in C++11:  
 
 ```  
@@ -61,15 +62,22 @@ You should consider using a range-based for statement whenever your for statemen
 
 ###Syntax for a Range-For Statement  
 
-A range-for statement can come in one of two forms:    
+A range-for statement can come in one of two forms:   
+ 
 `for ( for-range-declaration : range-expression ) loop-statement`  
+
 and    
-`for ( for-range-declaration : braced-init-list ) loop-statement`  
+
+`for ( for-range-declaration : braced-init-list ) loop-statement`.
 
 In both forms, the for-range-declaration consists of a declaration of a variable of the same data type or of a reference of the same data type as the data type of each element in the range-expression (and can also be specified as `const` if desired).  
+
 For example, if the for statement involves iterating through a vector of `int`s, then, if each element of the vector is to be read but not changed, the for-range-declaration could be a declaration of a variable of type `int`, such as `int elem`, or of a constant reference of type `int`, such as `const int &elem`  
+
 In this same example, if the purpose of the `for` statement is to manipulate the data of the `int` elements, the for-range-declaration would be declared as a reference to an `int`, such as `int& elem`.  
+
 If providing an explicit list of elements to index consecutively, use the second form of the range-for statement by providing the explicit list in curly brackets, much like the syntax for initialized lists.  
+
 An example of a for-range statement with a braced-init-list:  
 
 ``` 
@@ -88,6 +96,7 @@ will produce the following output:
 `0 4 8 16 32 64`  
 
 Otherwise, if dealing with a range expression, ensure the range expression is valid, in that it has a defined range for the compiler to interpret. Valid range expressions include iterable data structures, such as STL containers (e.g. vectors and lists), strings (class string), and arrays. If the range expression does not have a well-defined range, the program is ill-informed and the range-based for statement will not implement as expected.  
+
 Let us look at the previous example code, but with a valid range expression instead of a braced-init-list:  
 
 ```  
@@ -131,7 +140,8 @@ Now notice a call to the vector member `size` was not necessary when using the r
 ###Huh?  
 
 Auto? As in the storage class specifier? Am I missing something here? Auto is nothing new...?  
-Okay, so `auto` may not be a new term to the C++ language, but with C++11, the previous definition of auto is thrown out, no longer recognized, and if you continue using auto as before, you will be met with compilation errors.  
+
+Okay, so `auto` may not be a new term to the C++ language, but with C++11, the previous definition of auto is thrown out, no longer recognized, and if you continue using auto as before, you will be greeted with compilation errors.  
 
 ###How can I use the C++11 auto?  
 
@@ -140,8 +150,11 @@ The auto feature is accessible by standard compilers that accept C++11 features.
 ###So, what is auto in C++11?  
 
 In C++11, auto is a type-inferred data type, in that the data type of the variable is deduced by the compiler upon initialization or upon later inspection (e.g., when used as a function return type, which we will address soon.)  
+
 A general definition of `auto` can be explained as:  
+
 `auto x = expression;`  
+
 here, `auto` infers the resulting data type from `expression` and initializes the variable `x` with the same value and data type returned by `expression`.  
 
 Let us look at some simple uses for auto to better understand how this type works. Looking at the sample initializations, we can see cases where auto is used correctly and incorrectly:  
@@ -160,12 +173,14 @@ auto i = { 2,3.0,4 }; // error, cannot determine which data type to deduce
 
 ###What are some limitations of `auto`?  
 
-First, the name of the variable being declared with `auto` cannot appear anywhere in the initializer expression--a type cannot be deduced from a variable with no yet-assigned type.  Also, auto is limited to being used when declaring variables in namespace scope, in block scope, and in for-init-statements, as talked about in range-based for statements.  Also, as seen in the example code above, auto cannot be used for class member variables.  
+First, the name of the variable being declared with `auto` cannot appear anywhere in the initializer expression--a type cannot be deduced from a variable with no yet-assigned type.  Also, `auto` is limited to being used when declaring variables in namespace scope, block scope, and for-init-statements, as stated in range-based for statements.  Additionally, as seen in the example code above, `auto` cannot be used for class member variables.  
 
-###What are the advantages of using auto?  
+###What are the advantages of using `auto`?  
 
 So, why and when should you prefer `auto` to explicit data types?  
+
 First, one should be ensured that `auto` is a secure data type, in that `auto` can be trusted to be just as strongly typed as other data types--once a variable is initialized with `auto`, the type is deduced, and the variable cannot be used as another type from then on.  
+
 A common use for `auto` is writing code that is easy to read, and therefore, easy to maintain. This is especially true when declaring variables with long, complicated data types--an occurrence often encountered when using maps and iterators. For instance, take a look at this common C++ declaration prior to C++11:  
 
 ```
@@ -195,6 +210,7 @@ Speaking of function return types, what if we wanted to determine our return typ
 **Note:** `decltype` is a recently added C++11 feature and relies on GCC 4.8.1 version and later.  
 
 Our analysis of the C++11 auto type now brings us to the discussion of trailing return types and `decltype`. Prior to C++11, the return type of a function had to be declared right away in the beginning of the function declaration--whatever type is returned from a function must be explicitly stated. This is no longer true with C++11, so long as the function incorporates correct syntax for a trailing return type to be deduced.  
+
 To get a better understanding of the need for trailing return type syntax and `decltype`, let us look at a simple function with no trailing return type syntax and transform the function to allow type deduction of the return type. Consider the following function declaration:  
 
 `double add(double dbl1, int int1);`  
@@ -203,10 +219,12 @@ Now say we want to deduce the return type using `auto`:
 
 `auto add(double dbl1, int int1);`  
 
-Here, we have a problem because the compiler cannot infer the type of auto. If we want to be able to use `auto` here, we have to inform the compiler of our returning type by using trailing return syntax. For our example, this is the syntax for adding a trailing return type our `add` function:  
+Here, we have a problem because the compiler cannot infer the type of `auto`. If we want to be able to use `auto` here, we have to inform the compiler of our returning type by using trailing return syntax. For our example, this is the syntax for adding a trailing return type our `add` function:  
 
-`auto add(double db1, int int1) -> double;`  
+`auto add(double db1, int int1) -> double;` 
+ 
 Now, we have specified `double` as our return type. But this does not make good use of our `auto` type, as we are explicitly defining our type to `double`.  
+
 Now, we can introduce `decltype`. Like `auto`, `decltype` is a type specifier that deduces its type by a given expression, and acts very much like auto. Let us now incorporate `decltype` into our example function, this time presenting the function body:  
 
 ```  
@@ -216,11 +234,11 @@ auto add(double dbl1, int int1) -> decltype(dbl1 + int1)
 }  
 ```  
 
-Now, this code will work perfectly fine in C++11. Keep in mind that `->decltype(dbl1 + int1)` makes up the trailing return type, and note that when using a trailing return type in a function, the return type of the function must be `auto`, and similarly, if `auto` is the return type of a function, a trailing return type is necessary.  
+This code will now work perfectly fine in C++11. Keep in mind that `->decltype(dbl1 + int1)` makes up the trailing return type and note that when using a trailing return type in a function, the return type of the function must be `auto`, and similarly, if `auto` is the return type of a function, a trailing return type is necessary.  
 
 ##Sum it Up  
 
-Ok, so maybe C++11 features take a little getting used to, but it would not be C++ otherwise! I believe one can save themselves quite a few headaches down the road if one relies on good practice of utilizing safe C++11 features when coding, and with repetitive use of these features, they can become almost second nature, as any other well-practiced coding style. A computer scientist must always be looking to learn and adapt to maintain their level of excellence as a programmer, and taking on new C++11 features is not a bad start. 
+Ok, so maybe C++11 features take a little getting used to, but it would not be C++ otherwise! I believe one can save themselves quite a few headaches down the road if one relies on good practice of utilizing safe C++11 features when coding, with repetitive use of these features, they can become almost second nature, as any other well-practiced coding style. A computer scientist must always be looking to learn and adapt to maintain their level of excellence as a programmer. And taking on the new C++11 features is not a bad start. 
 
 ##Credit  
 
