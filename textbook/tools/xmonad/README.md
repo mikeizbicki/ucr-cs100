@@ -1,6 +1,6 @@
 #XMonad Basics
 
-Xmonad is a tiling manager that automatically resizes or moves you current open windows to make efficient use of screen space. I would cover its basic usage in this tutorial.
+Xmonad is a tiling manager that automatically resizes or moves your current open windows to make efficient use of screen space. I will cover its basic usage in this tutorial.
 
 ##Installation
 
