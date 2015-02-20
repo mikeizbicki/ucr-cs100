@@ -93,7 +93,7 @@ If you implement this syntax for any file descriptor and both `>` and `>>`, you 
 
 Here is a complete list of resources created by previous cs100 students that might help with this assignment:
 
-* [how to use syscalls](../../../textbook/assignment-help/syscalls/exec.md)
+* [how to use syscalls](../../../textbook/assignment-help/syscalls/io.md)
 
 * video: [how to duplicate file descriptors](https://www.youtube.com/watch?v=EqndHT606Tw)
 
