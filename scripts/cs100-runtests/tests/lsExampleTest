@@ -1,0 +1,8 @@
+# test regular ls
+bin/ls
+# test ls -a
+bin/ls -a
+# test ls -l
+bin/ls -l
+# test ls -R
+bin/ls -R

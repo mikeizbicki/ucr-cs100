@@ -1,0 +1,44 @@
+**************************
+* tests/execExampleTest1 *
+**************************
+================================================================================
+user@localhost$ # this is a comment
+user@localhost$ # testing one command:
+user@localhost$ ls
+bin LICENSE  Makefile  README.md  src  tests
+user@localhost$ # testing with one parameter:
+user@localhost$ ls -a
+.  ..  bin  .git  LICENSE  Makefile  README.md  src  tests
+user@localhost$ # testing with two parameters:
+user@localhost$ ls -a -l
+total 36
+drwxrwxr-x. 6 mevans mevans 4096 Feb 10 23:47 .
+drwxrwxr-x. 8 mevans mevans 4096 Feb 21 14:30 ..
+drwxrwxr-x. 2 mevans mevans 4096 Feb 20 09:13 bin
+drwxrwxr-x. 8 mevans mevans 4096 Feb 20 09:13 .git
+-rw-rw-r--. 1 mevans mevans 1081 Feb  6 18:11 LICENSE
+-rw-rw-r--. 1 mevans mevans  478 Feb 10 23:47 Makefile
+-rw-rw-r--. 1 mevans mevans 1678 Feb  9 04:19 README.md
+drwxrwxr-x. 2 mevans mevans 4096 Feb 10 23:47 src
+drwxrwxr-x. 2 mevans mevans 4096 Feb 10 23:47 tests
+user@localhost$ # testing with three parameters:
+user@localhost$ ls -a -l -h
+total 36K
+drwxrwxr-x. 6 mevans mevans 4.0K Feb 10 23:47 .
+drwxrwxr-x. 8 mevans mevans 4.0K Feb 21 14:30 ..
+drwxrwxr-x. 2 mevans mevans 4.0K Feb 20 09:13 bin
+drwxrwxr-x. 8 mevans mevans 4.0K Feb 20 09:13 .git
+-rw-rw-r--. 1 mevans mevans 1.1K Feb  6 18:11 LICENSE
+-rw-rw-r--. 1 mevans mevans  478 Feb 10 23:47 Makefile
+-rw-rw-r--. 1 mevans mevans 1.7K Feb  9 04:19 README.md
+drwxrwxr-x. 2 mevans mevans 4.0K Feb 10 23:47 src
+drwxrwxr-x. 2 mevans mevans 4.0K Feb 10 23:47 tests
+user@localhost$ 
+user@localhost$ # test &&
+user@localhost$ true && echo true
+true
+user@localhost$ # test ||
+user@localhost$ false || echo false
+false
+user@localhost$ 
+================================================================================

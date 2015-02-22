@@ -1,0 +1,10 @@
+# test commented exit
+#exit
+# test spaces before commented exit
+    #exit
+# exit with parameters
+exit with parameters and -flags and stuff
+
+# none of this stuff will get passed!
+foo -a
+bar "hello world"
