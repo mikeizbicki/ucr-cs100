@@ -1,0 +1,31 @@
+# test cd
+pwd
+cd ..
+pwd
+cd rshell
+pwd
+
+# commands from different directories
+# from /usr/bin:
+md5sum --help >/dev/null
+# from /usr/sbin:
+ifconfig >/dev/null
+# from /bin:
+ls >/dev/null
+# from /sbin:
+mkfs --help >/dev/null
+
+# test Ctrl+C
+cat
+^C
+
+# test Ctrl+C again
+ls -R /
+^C
+
+# a case for some extra credit:
+cat
+^Z
+ps
+fg
+^C
