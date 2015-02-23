@@ -1,3 +1,7 @@
+
+Bitwise Operator Tutorial
+===
+
 ### Table of Contents
  **[Introduction](#introduction)**
 
@@ -19,7 +23,7 @@
 
  **[Left-Shift](#bitwise-left\-shift)**
 
-Bitwise Operator Tutorial
+Introduction
 ===
 
 Hey you! Yea, you! Do you want to learn about bitwise operators? Well, it doesn't matter what you want because you're going to learn them anyway! And do you know why? It's so you can do stuff like this:
