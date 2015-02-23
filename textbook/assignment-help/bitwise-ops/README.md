@@ -5,8 +5,9 @@ Bitwise Operator Tutorial
 ### Contents
   - [Introduction](#introduction)
   - [Practical Uses](#practical-uses)
-  - [Octal](#octal)
-  - [Hexadecimal](#hexadecimal)
+  - Binary Basics
+    - [Octal](#octal)
+    - [Hexadecimal](#hexadecimal)
   - Bitwise Operators:
     - [OR](#bitwise-or)
     - [AND](#bitwise-and)
