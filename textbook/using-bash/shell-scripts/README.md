@@ -84,7 +84,7 @@ The following line of command shows how to define a variable:
 x="Hello"
 ```
 
-bash does not allow us to leave a space on either side of '=' sign. The following will gives an error message:
+Bash does not allow us to leave a space on either side of '=' sign. The following will gives an error message:
 
 ```
 x = "Hello"
@@ -106,7 +106,7 @@ echo $2
 echo $#
 ```
 
-we save our script as 'showargv.sh' and change the permission for it, then we run the script:
+We saved our script as 'showargv.sh' and changed the permission for it, then we ran the script:
 
 ```
 $ ./showargv.sh first second
@@ -192,7 +192,7 @@ We can see that only the first command is successful and it returns zero(0).
 
 ###read
 
-The read statement can get input from the keyboard and stored to variable, the following is an example script:
+The read statement can get a line from standard input and store it into a variable, the following is an example script:
 
 ```
 #!/bin/bash
@@ -211,13 +211,13 @@ For more details, you can check this link: http://www.lehman.cuny.edu/cgi-bin/ma
 $ convert image.jpg image.png
 ```
 
-we just changed the format of the image from '.jpg' to '.png'.
+The above line changed the format of the image from '.jpg' to '.png'.
 
 For more details, please check this link: http://linux.die.net/man/1/convert
 
 ###test
 
-Before starting to introduce the 'if' statement, I want to introduce the 'test' statement first, because it is often used with the 'if' statement to perform true/false decisions. The following example tests whether there are arguments provided:
+Before I introduce the 'if' statement, I want to introduce the 'test' statement first, because it is often used with the 'if' statement to perform true/false decisions. The following example tests whether there are arguments provided:
 
 ```
 #!/bin/bash
@@ -237,7 +237,7 @@ exit 1
 fi
 ```
 
-'-eq' is a test operator which means equal to. There is a summary for test operators in the main page, here is the link: http://linux.die.net/man/1/test
+'-eq' is a test operator which means equal to. There is a summary for test operators in the man page, here is the link: http://linux.die.net/man/1/test
 
 ###if
 
@@ -301,7 +301,7 @@ For more details, please check this link: http://bash.cyberciti.biz/guide/Until_
 
 ####for
 
-I will give a example for converting the format of images in the current directory from '.jpg' to '.png':
+I will give an example for converting the format of images in the current directory from '.jpg' to '.png':
 
 ```
 #!/bin/bash
