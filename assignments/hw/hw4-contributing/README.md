@@ -114,7 +114,7 @@ I will use this submission to make sure that your project will actually provide 
 Your third submission is due at midnight on **Friday, March 13**.
 This will be the final submission for your project.
 You must submit your tutorial as a pull request on this repository through github.
-Use the same folder from above called `/tutorials/yoursubject`.
+Use the same folder from above called `/textbook/yoursubject`.
 Inside the folder should be at least a file called `README.md` that contains the contents of your tutorial.
 You may include other files in this folder, such as images or cpp files, if they are relevant to the tutorial.
 I will evaluate the pull request the same as any other pull request into an open source project.
