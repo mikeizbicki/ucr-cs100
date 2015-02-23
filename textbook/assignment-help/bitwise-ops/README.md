@@ -12,8 +12,8 @@ Bitwise Operator Tutorial
     - [AND](#bitwise-and)
     - [NOT](#bitwise-not)
     - [XOR](#bitwise-xor)
-    - [Left-Shift](#bitwise-left-shift)
-    - [Right-Shift](#bitwise-right-shift)
+    - [Left-Shift](#bitwise left-shift)
+    - [Right-Shift](#bitwise right-shift)
 
 Introduction
 ===
