@@ -12,8 +12,8 @@ Bitwise Operator Tutorial
     - [AND](#bitwise-and)
     - [NOT](#bitwise-not)
     - [XOR](#bitwise-xor)
-    - [Left-Shift](#'bitwise left-shift')
-    - [Right-Shift](#"bitwise right-shift")
+    - [Left-Shift](#bitwise-leftshift)
+    - [Right-Shift](#bitwise-rightshift)
 
 Introduction
 ===
@@ -408,7 +408,7 @@ There isn't much daily use for the `XOR` operator. However, as far as we've foun
 ```
 We got the same value as before! If you use `XOR` with the same value twice, you'll receive the value you originally had! So we could potentially `XOR` a value with many different numbers to encrypt them and then `XOR` them again to decrypt them! However, security systems generally use number encryptions instead of bit encryptions, so you won't find much use. But it's still good information to have!
 
-Bitwise Left-shift
+Bitwise Leftshift
 ---
 
 The left-shift operator shifts the bits of the operand a number of times to the left. This number is determined by the value the user passes in. Sounds a little bit confusing right? Don't worry, it's not actually that complicated! Also, we'll provide some visual examples later in this section.
@@ -445,7 +445,7 @@ There we go. Super simple! Also notice how that values are doubling? That's what
 
 If you're tired, don't worry! You're on the home stretch!
 
-Bitwise Right-Shift
+Bitwise Rightshift
 ---
 
 The right-shift operator works in the same way the left-shift operator does, only in the complete opposite direction! That means, you guessed it, it shifts all the bits to the right! And, since it's shifted the other way, it means that the values get divided by two! Bring out the examples!
