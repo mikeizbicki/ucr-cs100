@@ -1,4 +1,10 @@
-#Macros
+Macros
+===
+
+###Contents
+  - [What is a macro?](#what-is-a-macro)
+
+---
 
 ###What is a macro?
 A macro (short for macroinstruction) is a fragment of code that is given a name. The C preprocessor examines the code before it is compiled, and manipulates it in various ways. We might not have known it, but we have encountered this procedure before in include statements. The preprocessor sees and replaces the line `#include <iostream>` with the text of the file 'iostream'. In the same way, whenever the name of the macro is used, it is replaced by the contents of that macro. 
