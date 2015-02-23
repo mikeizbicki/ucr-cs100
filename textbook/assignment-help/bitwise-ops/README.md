@@ -478,4 +478,4 @@ Conclusion
 
 You've finally made it! You now know about all the bitwise operators! While you may not be comfortable with octal, hexadecimal, and the operators yet, don't worry! There's a lot of time to get used to them through practice, such as doing sample calculations like we did in our examples. Also, test a lot of these operators in whatever IDE you'd like and output them! That way you can see them in action yourself! (Don't forget that the output is usually in decimal though!)
 
-Hope you enjoyed this tutorial! If you didn't, oh well too bad!
+Hope you enjoyed this tutorial! 
