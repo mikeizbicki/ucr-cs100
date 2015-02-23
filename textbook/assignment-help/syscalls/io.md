@@ -96,7 +96,7 @@ else if(pid == 0)//when pid is 0 you are in the first child process
    //write to the pipe
    if(-1 == dup2(fd[PIPE_WRITE],1))//make stdout the write end of the pipe
       perror("There was an error with dup2. ");
-   if(-1 == close(fd[PIPE_READ])//close the read end of the pipe because we're not doing anything with it right now
+   if(-1 == close(fd[PIPE_READ]))//close the read end of the pipe because we're not doing anything with it right now
       perror("There was an error with close. ");
 
    if(-1 == execvp(argv[0], argv))
