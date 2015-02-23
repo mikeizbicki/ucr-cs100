@@ -106,7 +106,7 @@ I will use this submission to ensure your topic is appropriate.
 
 The second submission is due before class on **Wednesday, Feb 25**.
 This is a rough draft submission of your project.
-Create a folder in this repo called `/tutorials/yoursubject`.
+Create a folder in this repo called `/textbook/yoursubject`.
 You should create a pull request through github on this repo showing the current status of your project.
 You should be approximately 75% complete with your project's content at this point.
 I will use this submission to make sure that your project will actually provide benefit to future cs100 students.
