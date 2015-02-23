@@ -1,18 +1,5 @@
-Bitwise Operator Tutorial
-===
-
-Hey you! Yea, you! Do you want to learn about bitwise operators? Well, it doesn't matter what you want because you're going to learn them anyway! And do you know why? It's so you can do stuff like this:
-
-```
- int fd = open("filename", O_WRONLY | O_APPEND, S_IRUSR | S_IWUSR);
-```
-Whoa what's the vertical bar thing? That's the bitwise `OR` operator, one of the bitwise operators you will learn about! Here, we pass in multiple flags to the `open` [system call](http://linux.die.net/man/2/open). "But it only takes in 2 `int` values. How did you pass in more than one flag/macro each?" The secret is the `OR` operator: the `OR` operator combines the flags into one value that we then pass in. 
-
-But wait! Did you notice how `open` had `int` parameters? That's right, these flags and macros are nothing more than a bunch of integers! This means that we could actually just memorize the number for every single flag combination in every library. Then we wouldn't need to use bitwise operators! Of course, that's super impractical, which is why we have the bitwise operators. We just need to look up the macro names, and the bitwise operators can take care of the rest, no memorization needed. Let's get started!
-
-For bitwise operators, you're going to need more than just the regular decimal counting system. We'll assume you already know binary, but if you need a guide or refresher on binary, [click on me!](http://www.mathisfun.com/binary-number-system.html) However, binary is also rarely used in these bit calculations. Thus, we'll need to learn the octal and the hexadecimal number systems too. Don't worry, we'll teach you those!
-
 ### Table of Contents
+ **[Introduction](#introduction)**
 
  **[Practical Uses](#practical-uses)**
 
@@ -31,6 +18,21 @@ For bitwise operators, you're going to need more than just the regular decimal c
  **[XOR](#bitwise-xor)**
 
  **[Left-Shift](#bitwise-left\-shift)**
+
+Bitwise Operator Tutorial
+===
+
+Hey you! Yea, you! Do you want to learn about bitwise operators? Well, it doesn't matter what you want because you're going to learn them anyway! And do you know why? It's so you can do stuff like this:
+
+```
+ int fd = open("filename", O_WRONLY | O_APPEND, S_IRUSR | S_IWUSR);
+```
+Whoa what's the vertical bar thing? That's the bitwise `OR` operator, one of the bitwise operators you will learn about! Here, we pass in multiple flags to the `open` [system call](http://linux.die.net/man/2/open). "But it only takes in 2 `int` values. How did you pass in more than one flag/macro each?" The secret is the `OR` operator: the `OR` operator combines the flags into one value that we then pass in. 
+
+But wait! Did you notice how `open` had `int` parameters? That's right, these flags and macros are nothing more than a bunch of integers! This means that we could actually just memorize the number for every single flag combination in every library. Then we wouldn't need to use bitwise operators! Of course, that's super impractical, which is why we have the bitwise operators. We just need to look up the macro names, and the bitwise operators can take care of the rest, no memorization needed. Let's get started!
+
+For bitwise operators, you're going to need more than just the regular decimal counting system. We'll assume you already know binary, but if you need a guide or refresher on binary, [click on me!](http://www.mathisfun.com/binary-number-system.html) However, binary is also rarely used in these bit calculations. Thus, we'll need to learn the octal and the hexadecimal number systems too. Don't worry, we'll teach you those!
+
 
 Practical Uses
 ---
