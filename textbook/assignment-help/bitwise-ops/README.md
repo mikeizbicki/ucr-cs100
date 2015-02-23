@@ -15,6 +15,7 @@ Bitwise Operator Tutorial
     - [XOR](#bitwise-xor)
     - [Left-Shift](#bitwise-leftshift)
     - [Right-Shift](#bitwise-rightshift)
+  - [Conclusion](#conclusion)
 
 ---
 
