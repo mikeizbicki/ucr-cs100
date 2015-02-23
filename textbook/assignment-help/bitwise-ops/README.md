@@ -95,7 +95,7 @@ And would you look at that! They're octal values! Good thing we know how octal v
 Hexadecimal
 ---
 
-Hexadecimal is a little more difficult to see, compared to decimal, octal, and binary. Hexadecimal is the base-16 number system. Now, you might be wondering what we use to to represent values past 9. Well it's simple really - hexadecimal values range from 0-F. That's right! We use the first 6 letters of the alphabet! Here are a couple of examples of hex math:
+Hexadecimal is a little more difficult to see, compared to decimal, octal, and binary. Hexadecimal is the base-16 number system. Now, you might be wondering what we use to represent values past 9. Well it's simple really - hexadecimal values range from 0-F. That's right! We use the first 6 letters of the alphabet! Here are a couple of examples of hex math:
 
 Note that to represent a hexadecimal value in C++, we precede it with `0x`!
 ```
@@ -125,7 +125,7 @@ Looking back at the two examples we gave for `OR` and `AND`, you can see we util
 ```
 [Take a look at the other values!](http://unix.superglobalmegacorp.com/Net2/newsrc/sys/fcntl.h.html) 
 
-Right away, we've seen that there was a point to learning these number systems. We can read the bits of these values! This sets us up to be to able to do the bitwise operations on these values, and we'll finally be able to know the full picture behind the two examples.
+Right away, we've seen that there was a point to learning these number systems. We can read the bits of these values! This sets us up to be able to do the bitwise operations on these values, and we'll finally be able to know the full picture behind the two examples.
 
 Here's a table of corresponding values:
 
@@ -166,7 +166,7 @@ Here's a table of corresponding values:
 		<TD>10</TD>
 		<TD>12</TD>
 		<TD>20</TD>
-		<TD>128</TD>
+		<TD>124</TD>
 		<TD>240</TD>
 		<TD>352</TD>
 		<TD>620</TD>
@@ -327,9 +327,9 @@ Thus, `5 & 9 = 1`. Pretty simple right? Good! Now let's try it on the example fr
 ```
  if (buf.st_mode & S_IFDIR)
 ```
-Let's assume that buf.st_mode has a value of 0100644. Now, using what we know about S_IFDIR:
+Let's assume that `buf.st_mode` has a value of 0100644. Now, using what we know about `S_IFDIR`:
 ```
-    (buf.st_mode & S_IFDIR) == (0040644 & 0040000)
+    (buf.st_mode & S_IFDIR) == (0100644 & 0040000)
     001 000 000 110 100 100
   & 000 100 000 000 000 000
   ---------------------
@@ -386,7 +386,7 @@ The truth table for the XOR operation is:
 	</TR>
 </TABLE>
 
-Looks like it's time for another example! Lets perform the XOR operation on 015 and 023:
+Looks like it's time for another example! Let’s perform the XOR operation on 015 and 023:
 ```
     015 ^ 023 //Ah yes, use their bit representations!
 
@@ -477,4 +477,4 @@ Conclusion
 
 You've finally made it! You now know about all the bitwise operators! While you may not be comfortable with octal, hexadecimal, and the operators yet, don't worry! There's a lot of time to get used to them through practice, such as doing sample calculations like we did in our examples. Also, test a lot of these operators in whatever IDE you'd like and output them! That way you can see them in action yourself! (Don't forget that the output is usually in decimal though!)
 
-Hope you enjoyed this tutorial! If you didn't, oh well too bad! 
+Hope you enjoyed this tutorial! If you didn't, oh well too bad!

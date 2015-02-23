@@ -7,9 +7,9 @@
 using namespace std;
 
 /*
- * This is a BARE BONES example of how to use opendir/readdir/closedir.  Notice
- * that there is no error checking on these functions.  You MUST add error 
- * checking yourself.
+ * This is a BARE BONES example of how to use opendir/readdir/closedir.
+ * Notice that there is no error checking on these functions.
+ * You MUST add error checking yourself.
  */
 
 int main()

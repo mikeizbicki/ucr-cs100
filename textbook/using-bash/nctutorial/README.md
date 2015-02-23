@@ -22,7 +22,7 @@ A short tutorial, on a very complicated and versatile tool.
  opens up a terminal-link prompt for the user to use. `netcat` does not, so you can automate tasks and make your life easier by using I/O redirection as well as piping
  with `netcat`.
 
- `netcat` and `telnet` both rely on the usage of computer networking ports. These are not physical ports on the compter (like USB or ethernet), but they are virtual
+ `netcat` and `telnet` both rely on the usage of computer networking ports. These are not physical ports on the computer (like USB or Ethernet), but they are virtual
  ports. Ports in computer networking allow programs on the computer to share
  information with each other, or with someone else over the internet. Think of it like a bucket with two people on each side. One person puts something in the bucket, and
  the other person takes the thing out. These explanations are vastly oversimplified, but they will do for our purposes. However, if you are interested in ports and their
@@ -40,7 +40,7 @@ browsing (HTTP over SSL), and a fun one is 3724 for Xbox Live.
 
 If you type `nc localhost 32981` you probably will not see anything in the output. This is because `netcat` is going to that port, checking if anything is there, and
 returning. It will output what is on that port on the standard output. However, if you type `nc -l localhost 32981` it will appear as though your terminal has frozen. Let it 
-go! It is fine. What you told `netcat` to do is to go to port 32981 and wait there until someone or somthing gives it some data. `-l` tells `netcat` to listen to a port, rather than try to connect to it. You cannot use this with the -p option. As soon as it recieves the data, `netcat`
+go! It is fine. What you told `netcat` to do is to go to port 32981 and wait there until someone or something gives it some data. `-l` tells `netcat` to listen to a port, rather than try to connect to it. You cannot use this with the -p option. As soon as it receives the data, `netcat`
 will close. Now we can start looking at some optional features of `netcat` as well as some examples to illustrate them. When using the `-l` option, `netcat` will default
 to your default interfaces as shown by the `ifconfig` command.
 
@@ -59,7 +59,7 @@ This is a VERY simple system, where you can talk to another terminal session ope
  ```
  nc -l 32981 # Or any port number you prefer above 32768!
  ```
- What this does is it tells `netcat` to listen to port 32981 (Or whatever) and it will print what it recieves.
+ What this does is it tells `netcat` to listen to port 32981 (Or whatever) and it will print what it receives.
 
  On the other window, we will connect to the server:
  ```
@@ -109,7 +109,7 @@ nc -z localhost 80
 ```
 `-z` makes `netcat` scan for listeners. This cannot be used with the -l option. You must specify a port, or range of ports to scan. 
 This command checks to see if anything is listening on port 80, however the output can get a little tricky. First of all, the command will not print anything if there is
-nothing listening on the port. This might confuse new users. If something IS listening, then you will get a message like the folowing:
+nothing listening on the port. This might confuse new users. If something IS listening, then you will get a message like the following:
 ```
 Connection to localhost port 32981 [tcp/*] succeeded!
 ```
@@ -158,7 +158,7 @@ nc -l 32981 | nc www.amazon.com 80
 ```
 What we are doing is making a `netcat` server on port 32981. Requests to that port will be piped (or forwarded) to the amazon.com webserver on port 80. Now if we go to a
 web browser and type `localhost:32981` in the address bar, nothing will happen! Why? Well, the first call to `netcat` makes the server, and the second one redirects the 
-request, but we are not doing anything with the repy from amazon! We can fix this with a two way pipe, or "named pipe". If you would like some more information on named
+request, but we are not doing anything with the reply from amazon! We can fix this with a two way pipe, or "named pipe". If you would like some more information on named
 pipes, I recommend you check out this [article](http://www.tldp.org/LDP/lpg/node15.html).
 
 This time, do this:
@@ -178,7 +178,7 @@ The key is that your computer does not make the web request directly. It request
 output. This is an incredibly basic proxy, but of course with some work and added code, you can build your very own proxy server, and now you have the knowledge to do so.
 
 The same thing can be done, but instead of websites, with ports. If your company or school blocks a port for outgoing requests, then you can forward requests to that pipe to
-go through a different pipe. For example, port 80 is blocked. No matter! simply use:
+go through a different pipe. For example, port 80 is blocked. No matter! Simply use:
 ```
 nc -l 80 | nc localhost 32981
 ```
@@ -187,7 +187,7 @@ Now any requests made to port 80 will be forwarded to port 32981. Yay for you!
 ### Further Reading
 
 As I mentioned back in the beginning, `netcat` is referred to as a "swiss army knife" by many. It is a great little tool for many things, but it is not always the best tool.
-You would not cut a tree down with a spoon, right? We saw in the port scanning section that there are better tools, like nmap, and netstat. Also, many system administrators
+You would not cut a tree down with a spoon, right? We saw in the port scanning section that there are better tools, like `nmap`, and `netstat`. Also, many system administrators
 might block usage of `netcat` because of the possibility of malicious actions with it. You might want a prompt to play around with rather than sending one whole chunk of
 commands to the server. In that case, you are probably better off using `telnet`. With named pipes and redirections running wild, the syntax for `netcat` might be a little
 too crazy for you, so you might be better off with a different version of `netcat` like `ncat`. Maybe you are more interested in breaking into systems and nothing else, then
@@ -203,3 +203,4 @@ Here is a link dump if you are interested in learning more about `netcat` or som
 * [Metasploit Project](http://en.wikipedia.org/wiki/Metasploit_Project)
 * [Wireshark](http://en.wikipedia.org/wiki/Wireshark)
 * [Wiki for Packet Analyzers](http://en.wikipedia.org/wiki/Packet_analyzer)
+

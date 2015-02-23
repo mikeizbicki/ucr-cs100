@@ -1,6 +1,6 @@
 Permission
 ===
-This tutorial will introduce the basic permssion in the file system. 
+This tutorial will introduce the basic permission in the file system. 
 
 The big advantage that Linux has is its multi-user concept- the idea will allow one or more users use or log into same computer to do a specific or different jobs. Although there are already a lot of good security features built into Linux-based systems, one very important potential vulnerability can exist when local access is granted - - that is file permission based on issues resulting from a user not assigning the correct permissions to files and directories. So I will go over some simple concepts about the permission and how to manage the file-permission.
 
@@ -13,7 +13,7 @@ To see the permission settings for a file, we can use the `ls -l` command as fol
 
 We can decide the file permission type by this information:
 
-* The file `test` is owned by user `jinsongwei` which is my usrname.
+* The file `test` is owned by user `jinsongwei` which is my username.
 
 * User `jinsongwei` has the right to read and write this file
 
@@ -30,7 +30,7 @@ In the diagram below, we see how the first portion of the listing is interpreted
 picture provided by [© 2000-2014, William E. Shotts, Jr](http://linuxcommand.org/lts0070.php)
 
 
-follow by `-rw-r--r--` the first `jinsongwei` is the usrname who own this file, and the second `csgrads` is group name, usually user and group name are same in the personal computer.
+follow by `-rw-r--r--` the first `jinsongwei` is the username who own this file, and the second `csgrads` is group name, usually user and group name are same in the personal computer.
 
 It is easy to think of permission setting as a series of bits:
 
@@ -50,7 +50,7 @@ It is easy to think of permission setting as a series of bits:
 
 ` and so on`
 
-Therefore, there is a table about permsiion setting in binary:
+Therefore, there is a table about permission setting in binary:
 
 ![permssion binary](https://cloud.githubusercontent.com/assets/9039778/5337629/93c29134-7e7f-11e4-98d7-8e5979a68a66.png)
 
@@ -58,24 +58,24 @@ Therefore, there is a table about permsiion setting in binary:
 
 ## simple file system
 
-Let's talk about a little file system briefly. This is what file system looks like below. This picture may be in your computer, or a server(just like you login into the computer in the lab.) 
+Let's talk about a little file system briefly. This is what file system looks like below. This picture may be in your computer, or a server (just like you login into the computer in the lab.) 
 
 ![fs-layout](https://cloud.githubusercontent.com/assets/9039778/5335933/7a337768-7e68-11e4-9288-d82c3f90ba52.png)
 
 [Copyright (c) 2002-2007, Machtelt Garrels](http://tldp.org/LDP/intro-linux/html/intro_07.html)
 
-On the left "/" means root direcotry, which is the top level directory on a system. That is, it is the directory in which all other directories, including their subdirectories, and files reside. The root directory is designated by a forward slash ( / ). Usually, the permission of root directory's files is owned by **root** which is superuser.
+On the left "/" means root directory, which is the top level directory on a system. That is, it is the directory in which all other directories, including their subdirectories, and files reside. The root directory is designated by a forward slash ( / ). Usually, the permission of root directory's files is owned by **root** which is superuser.
 ![screenshot-sjin010 tango-18 -](https://cloud.githubusercontent.com/assets/9039778/5391515/cf552a56-80d0-11e4-9bae-eeaf495f3cce.png)
 
 
 You are a member of root group, so you have right to access and execute the file, but do not have right to change the file. 
 
-In the diagram of filesystem, you will see `home` directory which is a group directory. In this directory in the picture, there is four usernames: rick, anna, emmy and bob -- in the lab, you will see `csgrads csmajs grads` in the `home` directory. In this group of members, you don't have right access thoes directories, but for me, I only have right access to the /home/csgrads/sjin010 which is my account.
+In the diagram of filesystem, you will see `home` directory which is a group directory. In this directory in the picture, there is four usernames: rick, anna, emmy and bob -- in the lab, you will see `csgrads csmajs grads` in the `home` directory. In this group of members, you don't have right access those directories, but for me, I only have right access to the /home/csgrads/sjin010 which is my account.
 ![screenshot-sjin010 tango-18](https://cloud.githubusercontent.com/assets/9039778/5337107/992c241a-7e79-11e4-9ed3-2019375cd4fb.png)
 
 So this is how to protect the users from each other in the one server. In the personal computer, usually there is only one group and one user in the `home` directory.
 
-##Changing permisson
+##Changing permission
 
 ###umask
 
@@ -101,9 +101,9 @@ The new file's permission changed.
 
 
 ###chmod - modify file access rights
-Use this command to change file's permssion which is created by owner. Just simply type `chmod 600 file`
+Use this command to change file's permission which is created by owner. Just simply type `chmod 600 file`
 
-The 600 is the file's permission setting. Just like mentioned before, the machine thinks the permission setting as a serires of bits.
+The 600 is the file's permission setting. Just like mentioned before, the machine thinks the permission setting as a series of bits.
 
 ![screenshot-sjin010 tango-18 -hw4-1](https://cloud.githubusercontent.com/assets/9039778/5392292/580b3f04-80d9-11e4-85ea-723411b89cc6.png)
 
@@ -124,7 +124,7 @@ Let's bring an example.
 
 if you run a command `su - guest1 - c "touch guest1.txt"` which create `guest1.txt` owned by `guest1`. 
 
-run another command `su - guest2 - c "touch guest2.txt"` whihc create `guest2.txt` owned by `guest2`.
+run another command `su - guest2 - c "touch guest2.txt"` which create `guest2.txt` owned by `guest2`.
 
 if `guest2` wants delete `guest1.txt` which owned by `guest1`
 
@@ -136,7 +136,7 @@ There will be an error.
 
 `rm: cannot remove 'guest1.txt': Operation not permitted`
 
-So, how do we set sticky bit to a file or directory? There is several ways to do that, the easy understandable way is just simply using `chmod` command, `chmod +t <filename>`
+So, how do we set sticky bit to a file or directory? There is several ways to do that; the easy understandable way is just simply using `chmod` command, `chmod +t <filename>`
 
 ![screenshot-sjin010 tango-18 -hw4](https://cloud.githubusercontent.com/assets/9039778/5393035/d0480f9e-80e1-11e4-82da-a69243008fd6.png)
 
@@ -144,7 +144,8 @@ So, how do we set sticky bit to a file or directory? There is several ways to do
 
 ##Security
 
-When you write into a read-only file in vim, you will be noticed as warnning - "this file is read-only". However, it also has a tip on the next "using `!` can override this file. " This is because, you are actually writing a temp file into system, then the system will delete the original file and create a new one. So you have permission to make the file read-only, but you don't have actual permission to change the permission setting under the system level. Many application delete and create new files when edits are made, if you directory permissions are not secure. This can be a security concern. Therefore, the permission setting will be very important on the security system.
+When you write into a read-only file in vim, you will be noticed as warning - "this file is read-only". However, it also has a tip on the next "using `!` can override this file. " This is because, you are actually writing a temp file into system, then the system will delete the original file and create a new one. So you have permission to make the file read-only, but you don't have actual permission to change the permission setting under the system level. Many application delete and create new files when edits are made, if you directory permissions are not secure. This can be a security concern. Therefore, the permission setting will be very important on the security system.
+
 
 
 

@@ -23,7 +23,7 @@ Make sure to actually do the exercises!!!
 
 **IMPORTANT:**
 The key to mastering `vim` is practice.
-Therefore, you are required to use `vim` for all lab and homeworks assignments in this course.
+Therefore, you are required to use `vim` for all lab and homework assignments in this course.
 **Using any editor other than `vim` will result in a 0 on the assignment.**
 
 ### part 2: the vim-adventures game
