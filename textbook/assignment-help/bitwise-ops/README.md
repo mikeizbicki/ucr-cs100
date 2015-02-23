@@ -2,26 +2,17 @@
 Bitwise Operator Tutorial
 ===
 
-### Table of Contents
- **[Introduction](#introduction)**
-
- **[Practical Uses](#practical-uses)**
-
- **[Octal](#octal)**
-
- **[Hexadecimal](#hexadecimal)**
-
-#####Bitwise Operators:
-
- **[OR](#bitwise-or)**
-
- **[AND](#bitwise-and)**
-
- **[NOT](#bitwise-not)**
-
- **[XOR](#bitwise-xor)**
-
- **[Left-Shift](#bitwise-left\-shift)**
+### Contents
+  -[Introduction](#introduction)
+  -[Practical Uses](#practical-uses)
+  - [Octal](#octal)
+  - [Hexadecimal](#hexadecimal)
+  - Bitwise Operators:
+    - [OR](#bitwise-or)
+    - [AND](#bitwise-and)
+    - [NOT](#bitwise-not)
+    - [XOR](#bitwise-xor)
+    - [Left-Shift](#bitwise-left\-shift)
 
 Introduction
 ===
