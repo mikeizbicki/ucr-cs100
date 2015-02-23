@@ -3,8 +3,8 @@ Bitwise Operator Tutorial
 ===
 
 ### Contents
-  -[Introduction](#introduction)
-  -[Practical Uses](#practical-uses)
+  - [Introduction](#introduction)
+  - [Practical Uses](#practical-uses)
   - [Octal](#octal)
   - [Hexadecimal](#hexadecimal)
   - Bitwise Operators:
