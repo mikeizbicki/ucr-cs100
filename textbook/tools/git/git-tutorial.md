@@ -4,26 +4,18 @@ called git that is used to manage the source code of various projects.
 Note: All text with <TEXT> means to replace TEXT with the proper text/path/name
 For these examples we will be using github.com, which you can create an account for free at.
 
-* History 
-  * Section A: A brief history
-* Installation:
-  * Section B:  Install from package manage
 * Usage:
-  * Section C: Git basics
-  * Section D: Git push
+  * Section A: Git basics
+  * Section B: Git remote
+  * Section G: Git push
+  * Section C: Git fetch
+  * Section D: Git merge
   * Section E: Git pull
-  * Section F: Git merge
   * Section F: Git rebase
-  * Section G: Git workflows 
-
-##SECTION B: Install from package manger
-All systems will install from the command line 
-
-	Debian-based: 
-	$ sudo apt-get install git-core
+  * Section H: Git workflows 
 
 
-#Section C: Git basics
+###Section A: Git basics
 After git is installed you should setup a couple of setting
 
 	$ git config --global user.name "<your name>"
@@ -31,7 +23,7 @@ After git is installed you should setup a couple of setting
 
 Try not to think of git as a complex program but as many simple programs 
 rolled into one, each with there own purpose. Almost all of Git's commands 
-are prefixed by.... you guessed it, $git.
+are prefixed by.... you guessed it, git.
 
 So to start of lets get an already created git repository or "repo".
 
@@ -52,7 +44,7 @@ is created we will then initialize the repo.
 	$ git init
 
 Now that the repo is initialized we can add some files to repository.  We add files to git 
-repository by first creating a file then using 'git add <files>'. Here I am telling git to 
+repository by first creating a file then using 'git add \<file name\>'. Here I am telling git to 
 include all the files the are in the current working directory, optionally you can individually 
 specify which files to include.
 	
@@ -72,7 +64,10 @@ prepare a message for the commit.
 	or
 	$ git commit -m'<message>'
 
-###Uploading and downloading changes
+Note: If a branch hasnt been created prior to first commiting git will create one called the
+'master' branch
+
+##Uploading and downloading changes
 Now that we have created the git repository and commited some files we probaly want to upload 
 or 'push' the changes to a semi-central location github.com. Assuming that you used github.com 
 to create the repoistory to push to and is the repo is called GitGuides then the URL I would use is
@@ -86,30 +81,41 @@ command
 
 	$ git remote
 
+
 Notice their is not much information in this output. Just the names of the remotes. To get a little 
-more detail about the remote use the -v flag
+more detail about the remote use the -v flag. On our newly initialized repo there is no remotes to display. 
+
+Now Lets add a remote so that we can push to our remote reposity. This can be done by telling "git remote" 
+to add a remote. we do this by passing the 'add' argument to git remote. After that argument we pass the 
+name of the remote to add and the url to associate with
+that remote name. git remote add \<remote name\> \<url\>
+
+	$ git remote add origin https://github.com/<your username>/ucr-cs100.git
+
+Lets view our remote again. 
+	
+	$ git remote
+
+This doesnt give us much information, just the names. To get a little more detail about the remote use
+ the -v flag
 
 	$ git remote -v
 
 This gives both the remote names as well as their push/push url associated with that remote. Why is their
-a seprate url for both push and pull. That is because each can be set seperate for a remote. Now Lets add
-a remote. This can be done by telling "git remote" to add a remote. we do this by passing the "add" argument
-to git remote. After that argument we pass the name of the remote to add and the url to associate with
-that remote name. git remote add <remote name> <url>
+a seprate url for both push and pull. That is because each can be set seperate for a remote.
 
-	$ git remote add origin https://github.com/<your username>/ucr-cs100.git
+###SECTION ?: Git push
 
-Well now that we have a git repository and are tracking changes made from main project what do we do. Its time 
-
-Optionally you specify what branch that 'git push' will push to without arguments by specifying the upstream 
-branch to track with. From the current branch we issue the set-upstream subcommand. Since we are on the master 
-branch this set the master branch to track the master branch from the remote.
-
-	$ git branch  –set-upstream origin/master
+Now that our repository has a remote we can now push the changes to github using 'git push'
 	
-With the upstream set we can now push the changes to github using
-	
-	$ git push
+	$ git push <remote> <branch>
+	ours would be
+	$ git push origin master
+
+This does not set up tracking of the remote branch though. To do that you can set the remote tracking
+branch during the push
+
+	$ git push -u origin master
 
 Now you may be asking why you didnt have to add the remote when you cloned the first repo. Well when you clone 
 a repository using git clone, a tracking branch is set up automatically called master that tracks origin/master.
@@ -118,7 +124,7 @@ There you go, now you can get a already created repo, create a repo yourself and
 You may be wondering, 'How do I get changes from others that commited on the project'. Since that can be a little more 
 tricky it will be covered in the next section
 
-#SECTION D: Git fetch and Git Pull
+###SECTION D: Git fetch and Git Pull
 Now that you can create, and push changes to a git repo its time to learn how create a branch and grab external changes. 
 Assuming that you have been fallowing the guide up to this point, you have commited to your non-cloned repo, you have 
 added a remote and set up a traking branch. I will now show how to pull in changes that others have commited while you
@@ -128,7 +134,7 @@ repo.
 	git remote add upstream https://github.com/mikeizbicki/ucr-cs100.git
 
 So no we have two remotes. One to our own repository and one to the original repository. Lets get a copy of the upstream 
-version but let's not make any changes to ours just yet. This is done using the 'fetch' git command. git fetch <repo>
+version but let's not make any changes to ours just yet. This is done using the 'fetch' git command. git fetch \<repo\>
 
 	$ git fetch upstream 
 
