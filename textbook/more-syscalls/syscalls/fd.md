@@ -14,7 +14,7 @@ As it is the most important system call to ensure that such file descriptors mai
 
 **declaration:** `int close(int fd);`
 
-**returns:** Returns a -1 if an error occured, or 0 if the file descriptor was successfully closed.
+**returns:** Returns a -1 if an error occured, or a 0 if the file descriptor was successfully closed.
 
 [man page](http://linux.die.net/man/2/close)
 
@@ -35,8 +35,8 @@ In this code the file descriptor attached to the variable `fd` is closed. The va
 **includes:** `#include <sys/types.h>, `#include <sys/stat.h>`, `#include <fcntl.h>`
 
 **declaration:** `int open(const char *pathname, int flags);`
-			`int open(const char *pathname, int flags, mode_t mode);
-			`int creat(const char *pathname, mode_t mode);
+			`int open(const char *pathname, int flags, mode_t mode);`
+			`int creat(const char *pathname, mode_t mode);`
 
 **returns:** Returns the value of the new file descriptor, or -1 if an error occurred.
 
@@ -103,7 +103,7 @@ open(//file descriptor, O_CREAT | O_WRONLY | O_TRUNC, //modes)
 
 **includes:** `#include <unistd.h>`
 
-**declaration:** `ssize_t read(int fd, void *buf, size_t count);
+**declaration:** `ssize_t read(int fd, void *buf, size_t count);`
 
 **returns:** Returns a -1 if no bytes are read, and returns the number of bytes read on success. Will also return a 0 if no bytes are read, indicating the end of a file.
 
@@ -140,9 +140,9 @@ if(-1 == close(fd)) //Close the file descriptor to conserve resources/solidify c
 
 **includes:** `#include <unistd.h>`
 
-**declaration:** `ssize_t write(int fd, const void *buf, size_t count);
+**declaration:** `ssize_t write(int fd, const void *buf, size_t count);`
 
-**returns:** Returns a -1 if an error occured. Otherwise, returns the number of bytes successfully written or 0 if nothing was written.
+**returns:** Returns a -1 if an error occured. Otherwise, returns the number of bytes successfully written or a 0 if nothing was written.
 
 [man page](http://linux.die.net/man/2/write)
 

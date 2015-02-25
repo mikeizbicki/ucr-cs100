@@ -32,7 +32,7 @@ All system calls will be described in their respective files, but there will be 
 
 `getgrgid`: gets information about a group which matches a passed in group ID
 
-`open`: creates a file descriptor
+`open`: creates a file descriptor to a file
 
 `read`: adds to a file descriptor or buffer the contents of a passed in file descriptor
 

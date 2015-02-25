@@ -4,7 +4,7 @@ This file contains information on the system calls needed to gather information 
 
 **IMPORTANT:**
 These system calls return information in data types and binary values that are ideal for computers, but not for humans, To get the information from the `stat` system call to become readable for human eyes, refer to the system calls tutorial made by past cs100 students below.
-* [Obtaining info from processes](/getinfo.md)
+* [Obtaining info from processes](./getinfo.md)
 
 ##opendir
 
@@ -33,7 +33,7 @@ if(NULL == (dirp = opendir(dirName)))
 
 **includes:** `#include <dirent,h>`
 
-**declaration:** `struct dirent *readdir(DIR *dirp); *`
+**declaration:** `struct dirent *readdir(DIR *dirp);`
 			`int readdir_r(DIR *dirp, struct dirent *entry, struct dirent **result);`
 
 **returns:** Returns a pointer to the next directory entry within the DIR stream that was passed in. Returns a NULL if the function has reached the end of a directory stream or if an error occurred.

@@ -10,7 +10,7 @@ In this lab, you will implement a version of the `cp` command line program that 
 
 2. Use the Unix system calls `read()` and `write()` to copy the input file to the output file one character at a time. To be able to use `read()` or `write()`, you must use `open()` to create a file descriptor for the input and output file.
   
-3. Use the Unix system calls `read()` and `write()` to copy the` input file to the output file one buffer at a time.  To be able to use `read()` or `write()`, you must use `open()` to create a file descriptor for the input and output file. The buffer should be of size `BUFSIZ`, which is declared in the `stdio.h` include file.
+3. Use the Unix system calls `read()` and `write()` to copy the input file to the output file one buffer at a time.  To be able to use `read()` or `write()`, you must use `open()` to create a file descriptor for the input and output file. The buffer should be of size `BUFSIZ`, which is declared in the `stdio.h` include file.
 
 Your final program should have two required arguments (the input and output file) and one optional argument.  If the optional argument is not given, then copy the files using the most efficient of the three methods above.  
 
