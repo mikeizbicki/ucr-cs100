@@ -1,0 +1,16 @@
+List of errors:
+
+strcmp
+const
+error checking
+new without delete
+open without close
+open outside while loop
+flags in 2nd open
+flags in 1st open
+write correct num bytes
+read sizeof wrong
+allocate BUFSIZ memory
+allocate buf on stack
+delete fstat
+return for success

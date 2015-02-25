@@ -51,17 +51,17 @@ With `git init`, you will create a new Git repository on the project that you ar
 ```
 $ git clone [url]
 ```
-With `git clone`, you will download a copy of a Git project that already exists. For example, you can take a url from a GitHub project that you want to contribute to, and clone it. This will create a new folder with all the project on it, in the current directory.
+With `git clone`, you will download a copy of a Git project that already exists. For example, you can take a url from a GitHub project that you want to contribute to, and clone it. This will create a new folder with all the projects on it, in the current directory.
 
 
 #####MAKE CHANGES
 
-After creating a new repository, you can start doing your project. To keep the repository up to date, you have to commit the changes that you made on your local machine.
+After creating a new repository, you can start doing your project. To keep the repository up to date, you have to commit the changes that you've made on your local machine.
 
 ```
 $ git status
 ```
-This command will list for you all the files that were modified since the last time you commit something. For example, you made some changes in a `main.cpp` file of your project. If you have not committed yet, the command `git status` will show it for you.
+This command will list for you all the files that were modified since the last time you committed something, for example, you made some changes in a `main.cpp` file of your project. If you have not committed yet, the command `git status` will show it for you.
 
 
 ```
@@ -84,7 +84,7 @@ $ git diff
 ```
 $ git commit -m [descriptive message]
 ```
-You will use this command to commit the changes that you made and staged. After using `git add` on the files that you wanted to add, you will use `git commit -m "..."` to commit it. The `-m` flag will set the commit message.
+You will use this command to commit the changes that you've made and staged. After using `git add` on the files that you want to add, you will use `git commit -m "..."` to commit it. The `-m` flag will set the commit message.
 
 
 ```
@@ -96,23 +96,23 @@ If you want to use the command `git commit` without the `-m` flag, the editor of
 ```
 $ git tag [tag name]
 ```
-The git tag command will give a name (tag) to the last commit that you made. This is helpful because you can access this commit later, even if you already commit something else.
+The git tag command will give a name (tag) to the last commit that you made. This is helpful because you can access this commit later, even if you've already commit something else.
 
 
 #####GROUP CHANGES
 Name a series of commits and combine completed efforts. 
 
-Using Git, you can work with multiple versions of the same project at the same time. This is called branching. Every project can have many branches (versions) and they can be completely different from each other. This is very useful when you want to add a new feature to a project that is already working, and to not ruin it, you can just make another branch, work on your new feature in it, and when the feature is ready you merge the new branch with the origin.
+Using Git, you can work with multiple versions of the same project at the same time. This is called branching. Every project can have many branches (versions) and they can be completely different from each other. This is very useful when you want to add a new feature to a project that is already working, and not ruin it. You can just make another branch, work on your new feature in it, and when the feature is ready, you merge the new branch with the origin.
 
 ```
 $ git branch
 ```
-The command `git branch` will list every branch that you project has, and it will mark the branch that you are currently in with a `*` sign. The main branch (that every project has) is called `master`. 
+The command `git branch` will list every branch that your project has, and it will mark the branch that you are currently in with a `*` sign. The main branch (that every project has) is called `master`. 
 
 ```
 $ git branch [branch-name]
 ```
-Using `git branch` with a name as 3rd parameter will create a new branch. This branch will point to the spot on the project that you are at the moment. For example, If I call `git branch test` with the repository up-to-date on the `master` branch, my new branch (`test`) will point to the last commit of the `master` branch. This means that everything that the branch `master` has, the branch `test` will have too.
+Using `git branch` with a name as 3rd parameter will create a new branch. This branch will point to the spot on the project that you are at the moment. For example, If I call `git branch test` with the repository up-to-date on the `master` branch, my new branch (`test`) will point to the last commit of the `master` branch. This means that everything that the branch `master` has, the branch `test` will have as well.
 
 ```
 $ git checkout [branch-name]
@@ -127,8 +127,8 @@ You can use the `-b` flag to create the new branch and switch to it at the same 
 ```
 $ git merge [branch]
 ```
-To merge branches, you will checkout to the branch that you want to add the modifications. For example, now that I am done with the `test` branch, I want to merge it with the `master` branch. So I have to run `git checkout master` and then run `git merge test`. This will merge what is in the `test` branch with the `master` branch.
-But this command can create a conflict problem. The conflict will happen if we change the same file in different branches. For example, I made changes in the file `main.cpp` in the `test` branch. Then, I went back to the `master branch` and made more changes there, in the same `main.cpp` file. When you try to merge the branches, you will get an error message. To solve this problem you have to open the file that has the conflict and manually merge the different lines of code. The lines between `<<<<<<< HEAD` and `=======` are from the `master` branch, while the lines between `=======` and `>>>>>>> test` are from the `test` branch.
+To merge branches, you will checkout to the branch that you want to add the modifications to. For example, now that I am done with the `test` branch, I want to merge it with the `master` branch, so I have to run `git checkout master` and then run `git merge test`. This will merge what is in the `test` branch with the `master` branch,
+but this command can create a conflict problem. The conflict will happen if we change the same file in different branches. For example, I made changes in the file `main.cpp` in the `test` branch. Then, I went back to the `master branch` and made more changes there, in the same `main.cpp` file. When you try to merge the branches, you will get an error message. To solve this problem you have to open the file that has the conflict and manually merge the different lines of code. The lines between `<<<<<<< HEAD` and `=======` are from the `master` branch, while the lines between `=======` and `>>>>>>> test` are from the `test` branch.
 
 
 ```
@@ -159,7 +159,7 @@ Keep your local repository and your project on GitHub the same.
 ```
 $ git push
 ```
-With `git push`, you will send all the commits you made in your local repository to GitHub.
+With `git push`, you will send all the commits you've made in your local repository to GitHub.
 
 
 ```
