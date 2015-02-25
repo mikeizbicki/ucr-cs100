@@ -89,6 +89,8 @@ Here is a complete list of resources created by previous cs100 students that mig
 
 * [how to use syscalls](../../../textbook/assignment-help/syscalls)
 
+* [STL Map](../../../textbook/map)
+
 * video: [how to use the `ls` command](https://izbicki.me/blog/videoguide-for-github-vim-bash.html#ls).
 
 * video: [guide to directories](https://www.youtube.com/watch?v=ru3uxfknAMc).
