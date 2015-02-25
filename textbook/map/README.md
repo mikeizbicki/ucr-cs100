@@ -119,11 +119,11 @@ So what is the gain from this?
 We now have a place to see all the available flags neatly displayed in our code.
 We have also condensed our if-else statement from 52 statements down to 26.
 
-The 'if-else' conditionals are still very wordy.
+The ```if-else``` conditionals are still very wordy.
 This is where we introduce 'map'\'s best friend: 'switch'.
 Now instead of the lengthy 'if-else' statements from above, we can have the nice and clean switch statement below.
 
-'''c++
+```c++
 int main() {
 	//of course a real ls program won't have prompts
 	//or be this simple,
@@ -154,6 +154,6 @@ int main() {
 			cout << "invalid flag" << endl; break; 
 	}
 }
-'''
+```
 
 For more information, you can look at the [relevant page on CPlusPlus.com](http://www.cplusplus.com/reference/map/map/).
