@@ -3,7 +3,7 @@
 ### coding requirements
 
 Write a C++ program that implements a subset of the GNU `ls` command.
-In particular, you must support: the `-a`, `-l` and `-R` optional flags; and the ability to pass in zero, one, or many files.
+In particular, you must support: the `-a`, `-l` and `-R` optional flags and the ability to pass in zero, one, or many files.
 Notice that the GNU `ls` command handles files and folders differently, and you must reproduce this functionality exactly.
 For a refresher on how to use the `ls` command effectively, you can watch [this video tutorial](https://izbicki.me/blog/videoguide-for-github-vim-bash.html#ls).
 
@@ -88,6 +88,8 @@ So if you have a hidden directory, it should be displayed as blue text on top of
 Here is a complete list of resources created by previous cs100 students that might help with this assignment:
 
 * [how to use syscalls](../../../textbook/assignment-help/syscalls)
+
+* [STL Map](../../../textbook/map)
 
 * video: [how to use the `ls` command](https://izbicki.me/blog/videoguide-for-github-vim-bash.html#ls).
 
