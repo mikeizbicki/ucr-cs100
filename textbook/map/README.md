@@ -1,6 +1,6 @@
 # Using Maps from the standard template library
 
-In this guide you will learn about maps and several ways to implement them.
+In this guide you will learn about maps and how to implement them.
 
 ##  What is a Map and how do they work?
 
@@ -20,51 +20,53 @@ This guide will walk you through the process.
 
 ### Declaration
 
-Maps are declared as such:
+The generic declaration for ```map``` is as such:
 
-'map<const key, T> var_name'
+```c++
+map<const key, T> var_name;
+```
 
 You declare the types of variables that you want to use between the brackets.
-For example, if we wanted a strings as keys and ints as return values, we declare
+For example, if we wanted strings as keys and ints as return values, we declare
 
-'''c++
+```c++
 map<string, int> example_map;
-'''
+```
 
 ### Adding and Accessing Elements
 
 Added and accessing elements are very similar in process.
-Let\'s say that you have declared 'example_map' from above.
+Let's say that you have declared ```example_map``` from above.
 Adding a new element is easy.
 
-'''c++
+```c++
 example_map["Hello"] = 42;
-'''
+```
 
 Here, our key is "Hello" and we assigned that space to the number 3.
 Lets access it shall we?
 
-'''c++
+```c++
 int the_ultimate_answer;
 the_ultimate_answer = example_map["Hello"];
-'''
+```
 
-Here, we accessed example map and gave it the key "Hello".
+Here, we gave ```example_map``` the key "Hello".
 A bunch of monkeys then looked through your map and found the room holding the answer.
 They opened the room with the key and brought you back your answer.
-We now know for sure that 'the_ultimate_answer' is 42, but everyone knows that.
+We now know for sure that ```the_ultimate_answer``` is ```42```, but everyone knows that.
 
 ## Using a Map
 
 All this information is nice and all, but where is it useful?
-First, let\'s picture a scenario.
-Suppose that your evil professor assigned you with the task of replicating the 'ls' program from bash.
-'ls' has a **lot** of flags to consider.
-Some flags even do exactly the same thing (such as '-a' and '--all').
+First, let's picture a scenario.
+Suppose that your evil professor assigned you with the task of replicating the ```ls``` program from bash.
+```ls``` has a **lot** of flags to consider.
+Some flags even do exactly the same thing (such as ```-a``` and ```--all```).
 
-We could use a bunch of 'if' statements as such:
+We could use a bunch of ```if-else``` statements as such:
 
-'''c++
+```c++
 int main() {
 	//of course a real ls program won't have prompts
 	//or be this simple,
@@ -74,21 +76,21 @@ int main() {
 	cin >> flag;
 	cout << endl;
 	
-	if(command == "--all") //do stuff
-	else if(command == "-a") // do the same thing
-	else if (command == "--long")//do things
-	else if (command == "-l") //even more things
+	if(flag == "--all") //do stuff
+	else if(flag == "-a") // do the same thing
+	else if (flag == "--long")//do things
+	else if (flag == "-l") //even more things
 	//...
 	//...
 	else cout << "invalid flag" << endl;
 }
-'''
+```
 
-Those 'if-else' statements could get lengthy.
-if you had to implement 26 shorthand flags and 26 longhand flags, that makes 52 'if' statements, many of which are just repeats.
-Let\'s try jamming in a map.
+Those ```if-else``` statements could get lengthy.
+If you had to implement 26 shorthand flags and 26 longhand flags, that makes 52 ```if-else``` statements, many of which are just repeats.
+Let's try jamming in a map.
 
-'''c++
+```c++
 int main() {
 	//of course a real ls program won't have prompts
 	//or be this simple,
@@ -113,15 +115,15 @@ int main() {
 	//...
 	else cout << "invalid flag" << endl;
 }
-'''
+```
 
 So what is the gain from this?
-We now have a place to see all the available flags neatly displayed in our code.
+Well, now have a place to see all the available flags neatly displayed in our code.
 We have also condensed our if-else statement from 52 statements down to 26.
 
 The ```if-else``` conditionals are still very wordy.
-This is where we introduce 'map'\'s best friend: 'switch'.
-Now instead of the lengthy 'if-else' statements from above, we can have the nice and clean switch statement below.
+This is where we introduce ```map```'s best friend: ```switch```.
+Now instead of the lengthy ```if-else``` statements from above, we can have the nice and clean ```switch``` statement below.
 
 ```c++
 int main() {
