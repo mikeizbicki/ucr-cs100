@@ -1,0 +1,70 @@
+#C++14 New Language Features                                                                                               
+                                                                                                                           
+Known formally as the International standard ISO/IEC 14882:2014 Programming Language C++, C++14 is only a minor revision
+of the C++ Standard adding small improvements to the standard.                                                             
+Of those improvements emphasis will be placed on:                                                                          
+    - Return Type Deduction                                                                                                
+    - Binary Literals                                                                                                      
+    - Digit Separators                                                                                                     
+    - Variable Templates                                                                                                   
+    - tuple addressing via type                                                                                            
+                                                                                                                           
+1. Return type deduction                                                                                                   
+    Return type deduction has been now been extended to functions                                                          
+                                                                                                                           
+2. Binary Literals                                                                                                         
+    previosly c++ had support for Binary, Hexidecimal, and Octal                                                           
+    binary literals specified using the prefixes 0b or 0B                                                                  
+                                                                                                                           
+        int x= 0b11111100;                                                                                                 
+                                                                                                                           
+    evaluates to the number 252                                                                                            
+                                                                                                                           
+3. Digit Separators                                                                                                        
+    the ' Digit separator has been added to improve readability                                                            
+                                                                                                                           
+        int x = 10000;   // (1)                                                                                            
+        int y = 10'000; // (2), C++14                                                                                      
+                                                                                                                           
+    Both x and y evaluate to the number ten thousand.                                                                      
+    This syntax can be extended to Binary Literals as well as octal and hexidecimal literals                               
+                                                                                                                           
+4. Variable Templates                                                                                                      
+    C++14 Allows for the creation of templated variables.                                                                  
+    A popular example:                                                                                                     
+                                                                                                                           
+        template<class T>                                                                                                  
+        constexpr T pi = T(3.1415926535897932385);  // variable template                                                   
+                                                                                                                           
+        template<class T>                                                                                                  
+        T circular_area(T r) // function template                                                                          
+        {                                                                                                                  
+            return pi<T> * r * r; // pi<T> is a variable template instantiation                                            
+        }                                                                                                                  
+                                                                                                                           
+5. Tuple Addressing via type                                                                                               
+                                                                                                                           
+    #include <iostream>                                                                                                     
+    #include <tuple>                                                                                                        
+    #include <algorithm>                                                                                                    
+                                                                                                                                   
+    using namespace std;                                                                                                    
+                                                                                                                            
+    int main(int argc, const char **argv)                                                                                   
+    {                                                                                                                       
+        //I - declaration to fuple using initializer list                                                                   
+        std::tuple<bool, int, string> myTuple(1,2,"myString");                                                              
+                                                                                                                                            
+        //II - getting tuple element value by argument number (like in C++11)                                               
+        cout << "First tuple int: " << std::get<0>(myTuple) << endl;                                                        
+        cout << "Second tuple int: " << std::get<1>(myTuple) << endl;                                                       
+        cout << "Tuple string: " << std::get<2>(myTuple) << endl;                                                           
+                                                                                                                               
+        //III - getting tuple element via type name (new in C++14)                                                          
+        cout << "Get tuple string element by type: " << std::get<string>(myTuple) << endl;                                  
+                                                                                                                               
+        //VI - unable to get tuple int element by type because it is ambiguous                                              
+        cout << "First tuple int by type: " << std::get<int>(myTuple) << endl;                                              
+                                                                                                                               
+        return 0;                                                                                                           
+    } 
