@@ -64,7 +64,7 @@ Also, spll chck ur writing and dnt use txt spk b/c I hate tht 5|-|!7.
 
 I highly recommend you visit UCR's writing center.
 
-A short, clear writeup is MUCH better than a long wordy write-up.
+A short, clear writeup is MUCH better than a long wordy writeup.
 
 ### collaboration policy
 
