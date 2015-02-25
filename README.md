@@ -39,7 +39,7 @@ and you will collaborate with each other at various points.
 
 2. Your last homework assignment is to contribute to the open source community by improving the documentation on a project of your choice.
 Many of the required readings for this course were written by former cs100 students.
-If you do a good job on this project, future cs 100 students will be learning from you for years to come!
+If you do a good job on this project, future cs100 students will be learning from you for years to come!
 
 **By the end of the course, you should be comfortable running your own open source projects and contributing to other people's projects.**
 
