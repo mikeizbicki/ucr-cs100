@@ -2,7 +2,7 @@
 
 Within this folder, you will find tutorials on functions that will be useful when programming your own shell.  These functions are called system calls, or syscalls, and they differ from regular functions because a syscall requests a specific service from the operating system’s kernel.
 
-All system calls will be described in their respective files, but there will be a brief description of what each does here. exec.md will explain system calls relating to `exec` and includes `fork`, `wait`, and `exec`. io.md will include system calls that relate to input and output redirection and include `dup` and `pipe`. Lastly, getinfo.md will include system calls that retrieve information about a process or environment variable. These include `getcwd`, `getpwuid`, and `getgrgid`.
+All system calls will be described in their respective files, but there will be a brief description of what each does here. exec.md will explain system calls relating to `exec` and includes `fork`, `wait`, and `exec`. io.md will include system calls that relate to input and output redirection and include `dup` and `pipe`. stat.md will explain the system calls related to gathering all the collective info on a file, including `opendir`, `readdir`, `closedir`, `stat`, `fstat`, `lstat`. getinfo.md will include system calls that retrieve information about a process or environment variable. These include `getcwd`, `getpwuid`, and `getgrgid`. Lastly, the file `fd.md` covers files related to manipulating file descriptors: `open`, `read`, `write`, and `close`.
 
 `exec`: will execute a file
 
@@ -14,11 +14,31 @@ All system calls will be described in their respective files, but there will be 
 
 `pipe`: creates a pipe, or data channel for communication
 
+`opendir`: creates a pointer to a stream of a directory's entries
+
+`readdir`: access a directory's entries' properties
+
+`closedir`: close the stream to a directory's entries
+
+`stat`: gets information about a passed in file
+
+`fstat`: gets information about a file passed in by a file descriptor
+
+`lstat`: gets information about a passed in file or symbolic link, depending on what was passed in
+
 `getcwd`: gets the current working directory
 
 `getpwuid`: gets information about a passed in username
 
 `getgrgid`: gets information about a group which matches a passed in group ID
+
+`open`: creates a file descriptor to a file
+
+`read`: adds to a file descriptor or buffer the contents of a passed in file descriptor
+
+`write`: adds to a file descriptor the contents of another file descriptor or buffer
+
+`close`: closes the passed in file descriptor, sealing all changes made to it
 
 The only function we will discuss in this README will be `perror`, an error checking function which should be used with every system call.
 
