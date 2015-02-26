@@ -1,6 +1,6 @@
 ###Exercise 1: gdb basics
 
-The file [`ex1.cpp`](ex1.cpp) contains a function called `my_strcpy` (that is supposed to behave like the built-in `strcpt` function) and a simple test case.
+The file [`ex1.cpp`](ex1.cpp) contains a function called `my_strcpy` (that is supposed to behave like the built-in `strcpy` function) and a simple test case.
 Compile the program with the command:
 ```
 $ g++ -g ex1.cpp -o ex1
@@ -28,8 +28,8 @@ Second: hello
 This is incorrect.
 If you look at the source code, you can figure out that the result after `COPY DONE` should read:
 ```
-First: hello
-Second: hello
+First: goodbye
+Second: goodbye
 ```
 So our `my_strcpy` function has a bug.
 And we're going to use `gdb` to find it!

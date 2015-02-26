@@ -25,7 +25,7 @@ In order to understand exactly what the program should ultimately do, we should 
 
 A neuron is defined as an electrically excitable cell that can process and transmit information through electrical or chemical signals. The membrane of the neuron contains specialized proteins
 that generate differences in ion concentrations between the external and internal parts of the neuron. This imbalance in ion concentrations between the external and internal parts of the neuron
-leads to a charge difference across the membrane called the membrane potential. When the neuron is at rest, ie. not receiving or transmitting signals, the membrane potential is negative. The neuron
+leads to a charge difference across the membrane called the membrane potential. When the neuron is at rest, i.e. not receiving or transmitting signals, the membrane potential is negative. The neuron
 becomes excited when the membrane potential becomes less negative. Neurons tap in to the energy stored in the ion concentration gradients in order to send electrical pulses to neighboring cells, thereby
 transmitting information from one cell to another. A single neuron can receive input from thousands of other neurons, and in turn output information onto thousands of other cells. For the purposes
 of this model, we focus on local connections between 2 neurons.
@@ -34,14 +34,14 @@ Neurons form specialized connections called synapses which allow them to receive
 the activity of the receiving (or postsynaptic) neuron. At excitatory synapses, the postsynaptic neuron is excited by the release of excitatory chemicals (or neurotransmitters) from the presynaptic neuron. When the
 excitatory neurotransmitter, glutamate for example, is released from the presynaptic neuron into the synapse, it will bind to glutamate receptor proteins, AMPA receptors for example, on the postsynaptic neuron and allow positive ions to
 rush into the neuron. This sudden influx of positive ions will cause the membrane potential to become more positive thereby exciting the cell. At inhibitory synapses, the postsynaptic neuron will become
-inhibitied by the release of inhibitory neurotransmitters (ie. GABA) by the presynaptic neuron. The inhibitory neurotransmitter GABA will cross the synapse and bind to GABA receptors on the postsynatpic
-neuron resulting in the influx of negativly charged ions. This influx of negatively charged ions will make the membrane potential more negative and prevent the neuron from sending electrical signals.
+inhibited by the release of inhibitory neurotransmitters (i.e. GABA) by the presynaptic neuron. The inhibitory neurotransmitter GABA will cross the synapse and bind to GABA receptors on the postsynaptic
+neuron resulting in the influx of negatively charged ions. This influx of negatively charged ions will make the membrane potential more negative and prevent the neuron from sending electrical signals.
 Below is a cartoon showing the synaptic connection between two neurons:
 
 ![Output sample](https://github.com/ogonz007/neuron/blob/master/synapse.gif)
 
 
-Based on the brief description of some neuronal properties, we will generate code that models a small network of two neurons. Neuron 1 will receive a breif excitatory sine wave stimulus.
+Based on the brief description of some neuronal properties, we will generate code that models a small network of two neurons. Neuron 1 will receive a brief excitatory sine wave stimulus.
 Neuron 1 will then send an electrical pulse to Neuron 2. This signal will result in the excitation of Neuron 2 which will then send a signal back to Neuron 1. In this sense, the two neurons will form
 recurrent connections with each other. A cartoon representation of the small neural circuit is shown below:
 
@@ -66,7 +66,7 @@ Rules:
   1. Write so it is easy for others to understand
   2. Write so you can walk away from this project, pick it up another day and be able to understand your plan
   3. Write related ideas without blank line between them, put blank lines between ideas that are less/not related
-  4. Start your pseudocode with what your code is suppose to accomplish
+  4. Start your pseudocode with what your code is supposed to accomplish
   5. Indent if using flow control (loops, if/else...)
 
 
@@ -114,7 +114,7 @@ Rules:
     * input and output of the program
     * assignment of a value to a variable, constant, or parameter
     * a point where a decision is made
-    * beginning of a repitition
+    * beginning of a repetition
     * algorithms specified outside of the program
     * direction and order of execution (I prefer arrows for this)
   
@@ -175,7 +175,7 @@ When looking at this code consider how we used our pseudocode to develop it and 
 
   * How would this code break if we had more than one cell for each cell type?
   * How would this code break if we had different numbers of cell type 1 and cell type 2?
-  * Based on our pseudocode how could we have broken up our function fun() even more?
+  * Based on our pseudocode how could we have broken up our function `fun()` even more?
 
 ```C++
 void fun(int t, RS (&cellType1)[ncellType1], RS (&cellType2)[ncellType2], bool (&C_CT1CT2)[nCT1][nCT2], 
@@ -211,12 +211,13 @@ void fun(int t, RS (&cellType1)[ncellType1], RS (&cellType2)[ncellType2], bool (
 }
 
 ```
-For the full neuron code, see the file simple_model.cxx. To run the model yourself download simple_model.cxx and the Makefile, then use make run to complie and run the executable.
+For the full neuron code, see the file simple_model.cxx. To run the model yourself download simple_model.cxx and the Makefile, then use make run to compile and run the executable.
 
 Our Code Output plotted in MATLAB and made into a gif
 -----------------------------------------------------
 Here is an example of the data generated by the modeled neurons:
 
 ![Output sample](https://github.com/ogonz007/neuron/blob/master/Neuron.gif)
+
 
 

@@ -1,4 +1,4 @@
-#Tutorial: Simple Syntaxs For Bash Script
+#Tutorial: Simple Syntaxes For Bash Script
 
 ##All begin with a simple example
 
@@ -72,9 +72,9 @@ $ ./hello.sh
 Hello world!!!
 ```
 
-Tip: there is an alterative way to change permission. If you want to learn more about it, you can go to this link: http://linuxcommand.org/lts0070.php 
+Tip: there is an alternative way to change permission. If you want to learn more about it, you can go to this link: http://linuxcommand.org/lts0070.php 
 
-##Part 2: More syntaxs about shell scripts
+##Part 2: More syntax about shell scripts
 
 ###Variables
 
@@ -84,7 +84,7 @@ The following line of command shows how to define a variable:
 x="Hello"
 ```
 
-bash does not allow us to leave a space on either side of '=' sign. The following will gives an error message:
+Bash does not allow us to leave a space on either side of '=' sign. The following will gives an error message:
 
 ```
 x = "Hello"
@@ -154,7 +154,7 @@ $ expr 30 % 7
 $ echo `expr 30 % 7`
 ```
 
-Do not use single or double quotes, it only works in the back quote. If you want to perform mathmetic operations to assign value to a variable, you can look at the following example:
+Do not use single or double quotes, it only works in the back quote. If you want to perform mathematic operations to assign value to a variable, you can look at the following example:
 
 ```
 #!/bin/bash
@@ -168,7 +168,7 @@ After a shell script is executed, it returns two types of exit statuses:
 
 * If the command is successful, it returns value zero(0)
 
-* If the command is not successful, it returns a nonzero value in the range between 1 to 255;
+* If the command is not successful, it returns a nonzero value in the range between 1 and 255;
 
 We can examine the exit status of your last command by using parameter '$?':
 
@@ -192,7 +192,7 @@ We can see that only the first command is successful and it returns zero(0).
 
 ###read
 
-The read statement can get input from the keyboard and stored to variable, the following is an example script:
+The read statement can get a line from standard input and store it into a variable, the following is an example script:
 
 ```
 #!/bin/bash
@@ -211,13 +211,13 @@ For more details, you can check this link: http://www.lehman.cuny.edu/cgi-bin/ma
 $ convert image.jpg image.png
 ```
 
-we just changed the format of the image from '.jpg' to '.png'.
+The above line changed the format of the image from '.jpg' to '.png'.
 
 For more details, please check this link: http://linux.die.net/man/1/convert
 
 ###test
 
-Before starting to introduce the 'if' statement, I want to introduce the 'test' statement first, because it is often used with the 'if' statement to perform true/false decisions. The following example tests whether there are arguments provided:
+Before I introduce the 'if' statement, I want to introduce the 'test' statement first, because it is often used with the 'if' statement to perform true/false decisions. The following example tests whether there are arguments provided:
 
 ```
 #!/bin/bash
@@ -237,7 +237,7 @@ exit 1
 fi
 ```
 
-'-eq' is a test operator which means equal to. There is a summary for test operators in the main page, here is the link: http://linux.die.net/man/1/test
+'-eq' is a test operator which means equal to. There is a summary for test operators in the man page, here is the link: http://linux.die.net/man/1/test
 
 ###if
 
@@ -259,7 +259,7 @@ echo "$1 is negative"
 fi
 ```
 
-For the first 'if', I already introduced that it decides whether there are provided arguments. For the second 'if', the condition is if the first provided argument is great than 0, then the command is echo "$1 is positive". then 'elif' represents 'else if'. Finally, we use 'fi' to end this 'if/else' statement.
+For the first 'if', I already introduced that it decides whether there are provided arguments. For the second 'if', the condition is: if the first provided argument is greater than 0, then the command is echo "$1 is positive". Then 'elif' represents 'else if'. Finally, we use 'fi' to end this 'if/else' statement.
 
 For more details, please check this link: http://ss64.com/bash/if.html
 
@@ -301,7 +301,7 @@ For more details, please check this link: http://bash.cyberciti.biz/guide/Until_
 
 ####for
 
-I will give a example for converting the format of images in the current directory from '.jpg' to '.png':
+I will give an example for converting the format of images in the current directory from '.jpg' to '.png':
 
 ```
 #!/bin/bash
@@ -313,7 +313,8 @@ done
 For more details, please check this link: http://www.cyberciti.biz/faq/bash-for-loop/
 
 ##Conclusion
-By writing shell scripts and gaining more knowledge about shell scripts, it helps us to have a better understanding about cs100 and the unix system. If you want to learn more advanced skills and more details about shell script, here is the link: http://linux.die.net/man/1/bash or http://linuxcommand.org/lc3_writing_shell_scripts.php
+By writing shell scripts and gaining more knowledge about shell scripts, it helps us to have a better understanding about cs100 and the Unix system. If you want to learn more advanced skills and more details about shell script, here is the link: http://linux.die.net/man/1/bash or http://linuxcommand.org/lc3_writing_shell_scripts.php
 
 Thank you for reading and have fun in cs100! :)
+
 

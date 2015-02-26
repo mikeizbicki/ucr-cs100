@@ -18,9 +18,9 @@
 This tutorial is meant to be a refresher for the data structures taught in CS14, covering the basic usage of a few `stl` data structures. Considering you just finished a quarter of implementing data structures based off of the `stl` implementations you should know the majority of what is presented here. The most important part of this tutorial is the reminder that these structures exist and have practical uses ([Uses of data structures](http://stackoverflow.com/questions/1539069/practical-uses-of-different-data-structures)).
 
 If you are searching for a specific data structure or algorithm to suit your needs:
-[Dictionary of  algorithms and data structures](http://xlinux.nist.gov/dads//).
- There also exist some lesser known data structures that might interest you: 
-[Interesting lesser known data structures](http://stackoverflow.com/questions/500607/what-are-the-lesser-known-but-useful-data-structures?rq=1).
+[Dictionary of algorithms and data structures](http://xlinux.nist.gov/dads//).
+ There also exist some lesser-known data structures that might interest you: 
+[Interesting lesser-known data structures](http://stackoverflow.com/questions/500607/what-are-the-lesser-known-but-useful-data-structures?rq=1).
 
 Within this folder there exists folders including examples of basic usage for the covered data structures. If you would like to see more about Trees and Hash functions which are used in the Map and Priority_Queue classes respectively: 
 [Nice basic tutorial, solid example programs included](http://www.cs.fsu.edu/~jestes/cop3330/notes/datastruct.html). Scroll down to the textbook examples section and there are examples of Trees and Hash functions.
@@ -78,7 +78,7 @@ int main(){
 }
 ```
 
-The default linked list is a doubly linked list (it contains pointers to the previous node as well as the next). If you want a singly linked list, then use stl `<forward_list>`.
+The default linked list is a doubly linked list (it contains pointers to the previous node as well as the next). If you want a singly linked list, then use STL `<forward_list>`.
 
 ### Stack
 
@@ -132,7 +132,7 @@ int main(){
 }
 ```
 
-There also exist priority queues (still `#include <queue>` but declared as `priority_queue<Typename> pq;`) which instead of just pushing to the back, `push()` calls the function `push_back()` of the object being pushed then calls `push_heap` (all inside of the original `push()` function) to reorder the priority queue. So instead of popping the very first thing pushed, what is popped is the item with the highest priority based on the container. So for an example where the container is an int the object with the highest priority would be the highest number. Much like stacks, queues are used in operating systems. Except queues are used more with process scheduling.
+There also exist priority queues (still `#include <queue>` but declared as `priority_queue<Typename> pq;`) which instead of just pushing to the back, `push()` calls the function `push_back()` of the object being pushed then calls `push_heap` (all inside of the original `push()` function) to reorder the priority queue. So instead of popping the very first thing pushed, what is popped is the item with the highest priority based on the container. So for an example where the container is an `int` the object with the highest priority would be the highest number. Much like stacks, queues are used in operating systems. Except queues are used more with process scheduling.
 
 ### Vector
 
@@ -152,6 +152,7 @@ int main(){          //an out of bounds item
 ```
 
 However, vectors can be overused when you rely on them too heavily. For example, I have been in the situation where I thought I needed a `vector<vector<string> >`. What I really wanted to do, however, was map `int` values to said `vector<string>`. Getting too caught up with vectors, I confused myself and overcomplicated things by trying to force something simple into something complex. Simple solutions should be preferred over complex solutions.
+
 
 
 

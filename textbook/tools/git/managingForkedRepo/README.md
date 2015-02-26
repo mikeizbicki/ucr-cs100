@@ -17,40 +17,40 @@ To sync changes you make in a fork with the original repository, you need to con
 1. Open your terminal and go into your forked repository
 2. List the current configured remote repository for your fork:
 
-```
-  $ git remote -v
-```
+  ```
+    $ git remote -v
+  ```
 
 3. Specify a new remote *upstream* repository that will be synced with the fork:
 
-```
-  $ git remote add *upstream* https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
-```
+  ```
+    $ git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+  ```
 4. Check that the new *upstream* repository you've specified for your fork:
 
-```
-  $ git remove -v
-```
+  ```
+    $ git remote -v
+  ```
 
 As you can see, `origin` refers to your forked repository, while `upstream` will refer to the original owner's repository.
 
 5. To finally sync your forked repository, fetch the branches and their respective commits from the upstream repository.
 
-```
-  $ git fetch upstream
-```
+  ```
+    $ git fetch upstream
+  ```
 
 6. From here there are two methods through git which you can use: `git merge` and `git rebase`. The differences are explained on [stackoverflow](http://stackoverflow.com/questions/16666089/whats-the-difference-between-git-merge-and-git-rebase), but `git rebase` is generally what most developers prefer. So we'll use `git rebase` to sync our local forked repository with our *upstream*:
 
-```
-  $ git rebase upstream/MASTER_BRANCH
-```
+  ```
+    $ git rebase upstream/MASTER_BRANCH
+  ```
 
 7. At this point, our local repository should be completely synced up. Now we just have to push these changes to our forked repository on github.
 
-```
-  $ git push
-```
+  ```
+    $ git push
+  ```
 
 ##Merging multiple commits into one
 
@@ -125,7 +125,7 @@ Fixed grammar errors
 # width '#' will be ignored, and an empty message aborts the commit.
 # Explicit paths specified without -i nor -o; assuming --only paths...
 # Not currently on any branch.
-# Changes to be commited:
+# Changes to be committed:
 #   (use "git reset HEAD <file>..." to unstage)
 #       modified: README.md
 #
@@ -146,7 +146,7 @@ hint: 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
-This error occured because after you merged your commits, git thinks that you're local repository is behind the repository on github. To get your merged commit onto your github, you need to force push this change onto your forked repository on github.
+This error occurred because after you merged your commits, git thinks that you're local repository is behind the repository on github. To get your merged commit onto your github, you need to force push this change onto your forked repository on github.
 
 ```
   $ git push -f
@@ -174,3 +174,4 @@ Say you've made a commit to your forked repository that had A LOT of changes fro
 ```
 
 **NOTE**: `git reset --hard` is a very powerful command and cannot be undone. If you'd like to keep the changes you've made just in case, you should branch off a copy of your changes before resetting. If you'd like to learn more about `git reset`, there's a great article that explains it [here](http://git-scm.com/blog/2011/07/11/reset.html).
+
