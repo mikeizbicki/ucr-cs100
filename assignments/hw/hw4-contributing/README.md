@@ -106,7 +106,7 @@ I will use this submission to ensure your topic is appropriate.
 
 The second submission is due before class on **Wednesday, Feb 25**.
 This is a rough draft submission of your project.
-Create a folder in this repo called `/textbook/yoursubject`.
+Create a folder in this repo called `/textbook/yoursubject` or put your writeup in whatever subfolder of `textbook` that is appropriate.
 You should create a pull request through github on this repo showing the current status of your project.
 You should be approximately 75% complete with your project's content at this point.
 I will use this submission to make sure that your project will actually provide benefit to future cs100 students.
@@ -114,7 +114,7 @@ I will use this submission to make sure that your project will actually provide 
 Your third submission is due at midnight on **Friday, March 13**.
 This will be the final submission for your project.
 You must submit your tutorial as a pull request on this repository through github.
-Use the same folder from above called `/textbook/yoursubject`.
+Use the same folder from above.
 Inside the folder should be at least a file called `README.md` that contains the contents of your tutorial.
 You may include other files in this folder, such as images or cpp files, if they are relevant to the tutorial.
 I will evaluate the pull request the same as any other pull request into an open source project.
