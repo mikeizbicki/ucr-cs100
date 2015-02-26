@@ -1,11 +1,18 @@
-#Output Formatting in C++
+
+
+Introduction
+===
+
 In this tutorial, we are going to explore some of the obscure text formatting tools that are available in C++. By the end, you will understand how to print lists into columns, print integers in multiple bases, and manipulate various attributes of your terminal's font using ANSI codes.
 
-##iomanip
-*iomanip* is a library dedicated to miscellaneous input and output manipulations. Let's get into some of them.
+iomanip
+===
 
-###setbase()
-`setbase()` is a function that allows the user to pick what number system is used to output integers. Specifically, it can be set to decimal, octal, or hexadecimal. Here's an example.
+*iomanip* is a library dedicated to input and output manipulations. In this document we will cover four aspects of I/O manipulation: Base changes, text organization, text alignment, and filling empty space.
+
+####Changing Base
+
+`setbase()` allows you to display numbers in decimal, octal, or hexadecimal. Here's an example.
 
 code:
 ```
@@ -19,10 +26,10 @@ output:
 26
 32
 ```
-The above code will output the number 26 three times. Once in hexadecimal, once in decimal, and once in octal. This is a really simple function that might not be screaming usefulness, but does come in handy every now and then. For example, when dealing with bitwise shifting, it can be helpful to display the integer that is being shifted in octal or hexadecimal. Another common use is file permission manipulation. File permissions are stored in integers but they aren't really useful unless they are represented in octal.
+The above code will output the number 26 three times. Once in hexadecimal, once in decimal, and once in octal. This function is especially useful when dealing with bitwise operations, because you can change your output to display in hex or octal. A common use for setbase is file permission manipulation. File permissions are stored in integers but they aren't understandable unless they are represented in octal.
 
-###setw()
-`setw()` is a really useful function when dealing with columns of output. In terms of a spreadsheet, `setw()` essentially sets the width of a cell. Here's an example.
+####Organizing Text
+`setw()` is a useful function when dealing with columns of output. `setw()` sets the width of a cell, so you can easily create a spreadsheet or other types of formatted text. Here's an example.
 
 code:
 ```
@@ -38,9 +45,11 @@ output:
      apple    orange    cherry
       plum   pumpkin     grape
 ```
-The above code prints out a table of six elements into two rows and three columns. Each element can be up to 10 characters long. If any element is longer than 10 characters, it will cause the rest of the line to shift. `setw()` does not permanently set the new width. It is only set for the next bit of text being printed. That is why it is called before every line of output in the given code.
+The above code prints out a table of six elements into two rows and three columns. Each element can be up to 10 characters long. If any element is longer than 10 characters, it will cause the rest of the line to shift. `setw()` does not permanently set the new width. It only applies to the next string passed into the output stream. That is why it is called before every line of output in the given code.
 
-There are a couple more things you can do with `setw()`. First of all, you can set the justification. This is also wonderfully simple. Here's how you would left justify the last example:
+####Text Alignment
+
+You can also alter the alignment of text using the *iomanip* library. To adjust the alignment of text, you have to set the justification. Here's an example of left justification:
 
 code:
 ```
@@ -57,9 +66,11 @@ output:
 apple     orange    cherry    
 plum      pumpkin   grape     
 ```
-All I had to do was add `cout << left;` before the text I wanted to justify. Unlike, `setw()` the justification only has to be set once and all of the following output will adhere to it until it is set to something else. The three justification options are `left`, `right`, and `internal`. The first two are pretty obvious. `internal`, on the other hand left justifies the signs of numbers and right justifies the magnitude of number. For example, `cout setw(5) << internal << -57` could output `-  57`. According to the documentation, this is apparently useful for accounting documents. So here's to you, accountants out there!
+Adding `cout << left;` aligns the text to the left side of the screen. Unlike, `setw()` the justification only has to be set once and all of the following output will adhere to it until it is set to something else. There are three justification options, `left`, `right`, and `internal`. The first two self-explanatory. `internal` left justifies the signs of numbers and right justifies the magnitude of number. For example, `cout setw(5) << internal << -57` could output `-  57`. This is useful for making a long list of numerical operations, for example in accounting. 
 
-The last thing I want to discuss regarding `setw()` is `setfill()`. `setfill()` allows you to set what character is used in the empty spaces that appear when using `setw()`.
+####Filling Empty Space
+
+The last tool from *iomanip* that I will cover is `setfill()`. `setfill()` allows you to change the character in the empty spaces that appear when using `setw()`.
 
 code:
 ```
@@ -80,10 +91,13 @@ Pretty straight forward again, just pick a character and that's what `setw()` wi
 
 *iomanip* has a few more interesting functions that I'm just going to skip for now. Feel free to look them up in the C++ documentation for [*iomanip*](http://www.cplusplus.com/reference/iomanip/).
 
-##ANSI
-Now I'm going to get into using ANSI codes to further format our output. After this, you will be able to set the foreground and background colors of, underline, and bold your output.
+ANSI Escape Codes
+===
 
-###Colors
+ANSI escape codes are another tool for I/O manipulation. Using ANSI escape codes, you will be able to alter the foreground or background colors your text, and underline, or bold your output.
+
+####Altering Text Color
+
 Using ANSI codes in C++ is pretty funky so let's start with an example.
 ```
 cout << "\033[41;33mHello World!" << endl";
@@ -126,7 +140,7 @@ string redFont(string in){
 ```
 The function returns `in` with the ANSI code for red added to its beginning and the ANSI code for resetting the terminal colors to its end. Once again, this concept can be extended to any of the ANSI formatting options.
 
-###Misc Formatting
+####Underlining And Bolding 
 Some other attributes you can set with ANSI codes include underlining and bolding. These are just as simple to set as the colors are. The number 4 corresponds to underlining and 1 corresponds to bolding. So, to add these to colored and highlighted text, we simply add two new strings to hold the new ANSI codes, `underline` and `bold`. Here's what that will look like:
 ```
 string red = "\033[31m";
