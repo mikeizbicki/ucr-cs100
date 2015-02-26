@@ -1,6 +1,6 @@
 # quiz 2: data structures review
 
-Pick any program you want.  Print out a screenshot.  On the back of the printout list 20 examples of data structures, abstract data types (ADTs), or algorithms that might be used internally in the program.  Your examples must be present in the screenshot.  You are only allowed to pick examples from the following lists, and you must provide at least one example for each entry in the list.
+Pick any program you want and print out a screenshot.  On the back of the printout, list 20 examples of data structures, abstract data types (ADTs), or algorithms that might be used internally in the program.  Your examples must be present in the screenshot.  You are only allowed to pick examples from the following lists, and you must provide at least one example for each entry in the list.
 
 Abstract data types and data structures:
 
