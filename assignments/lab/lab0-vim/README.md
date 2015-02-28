@@ -49,6 +49,8 @@ For some good ideas on what options to use, you can look at these examples:
 
 * [A vim configuration prepared by previous cs100 students](https://github.com/atan009/vimrc)
 
+* [Vimrc1234567](https://github.com/Anthony1234567/Vimrc1234567)
+
 You may also find the following links useful:
 
 * [stackoverflow: what is your most productive shortcut with vim?](http://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim)
