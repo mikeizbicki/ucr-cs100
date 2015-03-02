@@ -1,0 +1,14 @@
+# this is a comment
+# testing one command:
+ls
+# testing with one parameter:
+ls -a
+# testing with two parameters:
+ls -a -l
+# testing with three parameters:
+ls -a -l -h
+
+# test &&
+true && echo true
+# test ||
+false || echo false

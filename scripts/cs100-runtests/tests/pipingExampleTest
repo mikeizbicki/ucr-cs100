@@ -1,0 +1,24 @@
+# test output
+ls > file
+echo "hello world!" > input
+
+# test input
+cat < file
+cat < input
+
+# test appending output
+ls > app
+ls >> app
+ls >> app
+cat app
+
+#test piping
+echo "this is a pipe test" > pipeTest
+cat < pipeTest | grep -v Hello | grep pipe > output && cat output
+
+# cleanup
+rm app
+rm file
+rm input
+rm output
+rm pipeTest
