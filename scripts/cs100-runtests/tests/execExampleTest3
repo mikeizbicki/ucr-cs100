@@ -1,0 +1,2 @@
+# test exit with parameters
+exit --flag -a num 12345
