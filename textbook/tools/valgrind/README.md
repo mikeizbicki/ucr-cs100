@@ -13,7 +13,7 @@ Checking for problems
 ---------------------
 
 
-let's start with a code example from the program example1.cpp:
+Let's start with a code example from the program example1.cpp:
 
 ```
     int main()
@@ -98,9 +98,9 @@ This information will help you find where your leaks are at in your program.
 ### Fix all leaks and rerun
 
 
-If we take our old program example1.cpp, and add a ```delete``` right under the ```new``` statement, our problem should be fixed!
+If we take our old program example1.cpp and add a ```delete``` right under the ```new``` statement, our problem should be fixed!
 
-This is an important problem to fix because if you never free up your memory when you run programs, it could cause you to run out of memory for your computer. This is not a very good situation to be in.
+This is an important problem to fix because if you never free up your memory when you run programs, it could cause you to run out of memory in your computer. This is not a very good situation to be in.
 
 
 ```
@@ -140,7 +140,7 @@ Now if we recompile and run Valgrind with Memcheck we get:
 
 If we look at the ```HEAP SUMMARY``` section, we can see that our change worked and that for 1 allocation we have 1 free.
 
-We just looked at a very simple example that only has 6 lines of code, of course there will be more complicated programs and now I will demonstrate Valgrind and Memcheck with more complex program, example2.cpp.
+We just looked at a very simple example that only has 6 lines of code, of course there will be more complicated programs and now I will demonstrate Valgrind and Memcheck with a more complex program, example2.cpp.
 
 Using Valgrind on a more difficult example
 ------------------------------------------
@@ -345,7 +345,7 @@ When we compile and run this program through Valgrind using Memcheck, we get:
     Segmentation fault (core dumped)
 ```
 
-We can see right under ```Command:``` that we have the statement ```Use of uninitialized value of size 8```, this statement implies that we tried to use memory that we have not allocated which would cause a segmentation fault. This segmentation fault is shown at the end of the output.
+We can see right under ```Command:``` that we have the statement ```Use of uninitialized value of size 8```. This statement implies that we tried to use memory, that we have not allocated, which would cause a segmentation fault. This segmentation fault is shown at the end of the output.
 
 We also see that below the line ```Process terminating with default action of signal 11(SIGSEGV)``` we get the message ```Bad permissions for mapped region at address 0x400AC0```. The ```Bad permission``` statement also states that we have not allocated the memory that we want to access.
 

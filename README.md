@@ -49,7 +49,7 @@ position | name | office hours (WCH 110)
 --- | --- | ---
 lecturer | Mike Izbicki | Tuesday 11-noon
 teaching assistant | Busra Celikkaya | Friday 2pm-3pm
-teaching assistant | Zachary Benavides | TBA
+teaching assistant | Zachary Benavides | Friday 1pm-2pm
 
 **IMPORTANT:**
 If you want to contact the instructors about the course, you should NOT do it via email.
@@ -73,9 +73,9 @@ week | date | reading/quiz | topics
 3 | Jan19 | Lucas Xu's [Makefile tutorial](textbook/tools/Makefiles); Alexander Ortiz's [how to write a README file](textbook/bestpractices/WritingREADMEs); esr's thoughts on [unix documentation part I](http://www.catb.org/esr/writings/taoup/html/ch18s02.html) and [part II](http://www.catb.org/esr/writings/taoup/html/ch18s06.html) | syscalls: managing files (`open`,`close`,`read`,`write`)
 3 | Jan21 | Kenley Arai's tutorial on [test driven development](textbook/bestpractices/TestDrivenDevelopment); Gabriel Ruiz's [tutorial on how to design test cases](textbook/bestpractices/WritingGoodTestCases);  | debugging tools (`gdb`)
 4 | Jan26 | William Coates' [valgrind tutorial](textbook/tools/valgrind); Paul Graham's [how to be a good hacker](http://www.paulgraham.com/gh.html); Jeff Atwood's [how to become a better programmer](http://blog.codinghorror.com/how-to-become-a-better-programmer-by-not-programming/) | debugging tools (`valgrind`,`cppcheck`)
-4 | Jan28 | **quiz**; the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls) | syscalls: managing directories (`readdir`,`stat`)
+4 | Jan28 | **quiz**; [bitwise operators](textbook/assignment-help/bitwise-ops); [macros](textbook/assignment-help/macros); the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls) | syscalls: managing directories (`readdir`,`stat`)
 5 | Feb02 | Ycombinator's [startup ideas we'd like to fund](http://old.ycombinator.com/ideas.html) and Paul Graham's [start up funding](http://paulgraham.com/startupfunding.html) | shell scripting: io redirection/piping
-5 | Feb04 | Patrick McKenzie [on salary negotiation for programmers](http://www.kalzumeus.com/2012/01/23/salary-negotiation/) | shell scripting: io redirection/piping
+5 | Feb04 | Patrick McKenzie [on salary negotiation for programmers](http://www.kalzumeus.com/2012/01/23/salary-negotiation/) (it's long; you don't have to read it all) | shell scripting: io redirection/piping
 6 | Feb09 | the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls) | syscalls: io redirection/piping (`pipe`,`dup`)
 6 | Feb11 | **quiz** | shell scripting: control flow with `if` and `for`
 7 | Feb16 | esr's thoughts on [using make](http://www.catb.org/esr/writings/taoup/html/ch15s04.html) | shell scripting: detailed makefiles
@@ -95,11 +95,11 @@ The assignments are due on the following days:
 assignment | date
 --- | ---
 [hw0](assignments/hw/hw0-rshell) | Friday of week 3 (Jan 23rd) @ 11:59 PM
-[hw1](assignments/hw/hw1-ls) | Friday of week 5 (Feb 6th) @ 11:59 PM
+[hw1](assignments/hw/hw1-ls) | Sunday of week 6 (Feb 8th) @ 11:59 PM
 [hw4](assignments/hw/hw4-contributing) - topic | Wednesday of week 6 (Feb 11th) before class
-[hw2](assignments/hw/hw2-redirection) | Friday of week 7 (Feb 20th) @ 11:59 PM
+[hw2](assignments/hw/hw2-piping) | Sunday of week 8 (Feb 22th) @ 11:59 PM
 [hw4](assignments/hw/hw4-contributing) - draft | Wednesday of week 8 (Feb 25th) before class
-[hw3](assignments/hw/hw3-misc) | Friday of week 9 (Mar 6th) @ 11:59 PM
+[hw3](assignments/hw/hw3-signals) | Sunday of week 10 (Mar 8th) @ 11:59 PM
 [hw4](assignments/hw/hw4-contributing) - final | Friday of week 10 (Mar 13th) @ 11:59 PM
 
 ### grades

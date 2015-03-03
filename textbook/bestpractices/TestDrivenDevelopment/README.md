@@ -11,9 +11,9 @@
 
 
 # Introduction
-When I began coding my process consisted of:
+When I began coding, my process consisted of:
 
-  * Writing down the problem (homework/or personal project)
+  * Writing down the problem (homework or personal project)
   * Thinking of some useful functions that might help me
   * Deciding what objects to use
   * Opening up my editor and just start programming
@@ -44,7 +44,7 @@ TDD's development cycle is simple:
 TDD is not a magic bullet. Even though quality of code is higher, TDD can still lead to its own
 [problems](http://blog.james-carr.org/2006/11/03/tdd-anti-patterns/). Also it has known issues for not being sufficient testing for interfaces such as UI, databases, or networking.
 
-Because a test was written and passed, does not mean that it is bug free. A programmer may not think of every situation.
+Because a test was written and passed does not mean that it is bug free. A programmer may not think of every situation.
 
 TDD is meant to test and verify your own code. It's not necessary to test libraries that are included in your code. An example of an unnecessary test would be to test std::string `std::string("test") == "test"`. 
 
@@ -89,7 +89,7 @@ tests/test_project_euler.cpp(12): error in "euler_test": check find_mult(3, 5, 1
 *** 1 failure detected in test suite "EulerTest"
 ```
 
-Our test failed like we wanted it to. Now that we have our test lets implement some code to pass our test.
+Our test failed like we wanted it to. Now that we have our test, lets implement some code to pass our test.
 
 ```
 int find_mult(const int &first_num, const int& second_num, const int &upper_bound)
@@ -176,7 +176,7 @@ tests/test_string_tok.cpp(11): error in "string_tok_test": check tok_string(test
 
 Good, our test failed. Now we can begin implementing code to try and pass the test.
 
-Now let us implement some basic code to make sure our code will pass our test.
+Now, let us implement some basic code to make sure our code will pass our test.
 
 ```
 // ./src/string_tok.cpp
@@ -197,7 +197,7 @@ Running 1 test case...
 *** No errors detected
 ```
 
-This is a pitfall I wanted to point out. Our code does pass the test, however the code was implemented to only pass that one test. If the test was slightly adjusted at all the test would immediately fail.  
+This is a pitfall I wanted to point out. Our code does pass the test, however the code was implemented to only pass that one test. If the test was slightly adjusted at all, the test would immediately fail.  
 
 Now we need to begin refractoring our implementation. 
 
