@@ -62,7 +62,7 @@ output:
 apple     orange    cherry    
 plum      pumpkin   grape     
 ```
-Adding `cout << left;` aligns the text to the left side of the screen. Unlike, `setw()` the justification only has to be set once and all of the following output will adhere to it until it is set to something else. There are three justification options, `left`, `right`, and `internal`. The first two self-explanatory. `internal` left justifies the signs of numbers and right justifies the magnitude of number. For example, `cout setw(5) << internal << -57` could output `-  57`. This is useful for making a long list of numerical operations, for example in accounting. 
+Adding `cout << left;` aligns the text to the left side of the screen. Unlike, `setw()` the justification only has to be set once and all of the following output will adhere to it until it is set to something else. There are three justification options, `left`, `right`, and `internal`. The first two are self-explanatory. `internal` left justifies the signs of numbers and right justifies the magnitude of said number. For example, `cout setw(5) << internal << -57` could output `-  57`. This is useful for making a long list of numerical operations, for example in accounting. 
 
 ####Filling Empty Space
 
@@ -89,7 +89,7 @@ Pretty straight forward again, just pick a character and that's what `setw()` wi
 
 ###ANSI Escape Codes
 
-ANSI escape codes are another tool for I/O manipulation. Using ANSI escape codes, you will be able to alter the foreground or background colors your text, and underline, or bold your output.
+ANSI escape codes are another tool for I/O manipulation. Using ANSI escape codes, you can alter the foreground or background colors and underline or bold your output.
 
 ####Altering Text Color
 
@@ -99,7 +99,7 @@ cout << "\033[41;33mHello World!" << endl";
 ```
 This code outputs "Hello World!" with yellow font and red highlighting.
 
-The important part is `\033[41;33m`. This is how ANSI codes are formatted. First, `\033[` must always start your ANSI code. Next comes a list of numbers separated by semicolons. In this case, 41 and 33 mean red highlighting and yellow font. This list is the fun part. You can implement any of the ANSI formatting options by simply inserting the corresponding numbers into it. In this example, only two options are used, but you can add as many as you want. Finally, `m` ends the ANSI code. After the ANSI code, everything prints according to the new formatting until a new ANSI code is encountered.
+The important part is `\033[41;33m`. This is how ANSI codes are formatted. First, `\033[` must always start your ANSI code. Next comes a list of numbers separated by semicolons. In this case, 41 and 33 mean red highlighting and yellow font. You can implement any of the ANSI formatting options by simply inserting specific numbers in the ANSI code. In this example, only two options are used, but you can add as many as you want. Finally, `m` ends the ANSI code. After the ANSI code, everything prints according to the new formatting until a new ANSI code is encountered.
 
 Font color can be set using codes 30 - 37. Highlighting can be set using codes 40 - 47. Other formatting options, such as underlining, bolding, etc. each have a corresponding number that can be added to the list. For a full list, check out this [table](http://ascii-table.com/ansi-escape-sequences.php).
 
@@ -125,7 +125,7 @@ cout << purple << "Hello World!" << reset << endl;
 cout << teal << "Hello World!" << reset << endl;
 cout << white << "Hello World!" << reset << endl;
 ```
-This code prints "Hello World!" in every color available in ANSI. Storing the codes in string makes them much more readable. This can be done for any of the other formatting setting. Another useful option is to make functions that take strings as parameters and return the same strings with ANSI codes added.
+This code prints "Hello World!" in every color available in ANSI. Storing the code in strings makes them much more readable. This can be done for any of the other formatting settings. Another useful option is to make functions that take strings as parameters and return the same strings with ANSI codes attached.
 ```
 string redFont(string in){
 	string red = "\033[31m";
@@ -133,10 +133,10 @@ string redFont(string in){
 	return red + in + reset;
 }
 ```
-The function returns `in` with the ANSI code for red added to its beginning and the ANSI code for resetting the terminal colors to its end. Once again, this concept can be extended to any of the ANSI formatting options.
+The function returns the ANSI code for `red`, concatenated with the now formatted text `in` and the ANSI code for `reset`. `reset` is added at the end in order to reset the formatting of output back to its default. Once again, this concept can be extended to any of the ANSI formatting options.
 
 ####Underlining And Bolding 
-Some other attributes you can set with ANSI codes include underlining and bolding. These are just as simple to set as the colors are. The number 4 corresponds to underlining and 1 corresponds to bolding. So, to add these to colored and highlighted text, we simply add two new strings to hold the new ANSI codes, `underline` and `bold`. Here's what that will look like:
+Some other attributes you can set with ANSI codes include underlining and bolding. These are just as simple to set as the colors are. The 4 corresponds to underlining and the 1 corresponds to bolding. So, to add these to colored and highlighted text, we simply add two new strings to hold the new ANSI codes, `underline` and `bold`. Here's what that will look like:
 ```
 string red = "\033[31m";
 string yellowHL = "\033[43m";
