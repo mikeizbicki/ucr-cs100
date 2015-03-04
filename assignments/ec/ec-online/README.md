@@ -21,6 +21,8 @@ If you have a stackoverflow account with more than 1000 points, you will get an 
 You do not need to have created the account or earned the points during this quarter.
 
 3. If you submit something to the front page of [/r/programming](http://www.reddit.com/r/programming) that gets more than 200 upvotes, you will get 10 points extra credit.
+You can recieve this extra credit once.
 
 4. If you submit something to the front page of [hacker news](http://news.ycombinator.com) that gets more than 30 upvotes, you will get 10 points extra credit.
+You can recieve this extra credit once.
 
