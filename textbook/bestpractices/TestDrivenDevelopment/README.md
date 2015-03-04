@@ -60,7 +60,7 @@ solve I will be using the first problem on
 
 `Find the sum of all the multiples of 3 or 5 below 1000.`
 
-First let's write our test in `test/test_project_euler.cpp`.
+First, let's write our test in `test/test_project_euler.cpp`.
 
 ```
 #define BOOST_TEST_MODULE "EulerTest"
@@ -132,7 +132,7 @@ vector<string> v = some_tok_func(s)
 // v should contain `["Today", "is", "a", "nice", "day!"]`.
 ```
 
-First let's write our test in `tests/test_string_tok.cpp`. The test should be designed such that the first time they are ran they will fail.
+First, let's write our test in `tests/test_string_tok.cpp`. The test should be designed such that the first time they are ran they will fail.
 
 ```
 #define BOOST_TEST_MODULE "C++ Unit Tests for StrTok"
@@ -151,7 +151,7 @@ BOOST_AUTO_TEST_CASE(string_tok_test)
 }
 ```
 
-Now we implement a prototype of `tok_string` in `src/string_tok.cpp`, so our test can run and fail.
+Now, we implement a prototype of `tok_string` in `src/string_tok.cpp`, so our test can run and fail.
 
 ```
 vector<string> tok_string(const string& input)
@@ -174,9 +174,9 @@ tests/test_string_tok.cpp(11): error in "string_tok_test": check tok_string(test
 *** 1 failure detected in test suite "C++ Unit Tests for StrTok"
 ```
 
-Good, our test failed. Now we can begin implementing code to try and pass the test.
+Good, our test failed. Now, we can begin implementing code to try and pass the test.
 
-Now, let us implement some basic code to make sure our code will pass our test.
+Let's implement some basic code to make sure our code will pass our test.
 
 ```
 // ./src/string_tok.cpp
@@ -199,7 +199,7 @@ Running 1 test case...
 
 This is a pitfall I wanted to point out. Our code does pass the test, however the code was implemented to only pass that one test. If the test was slightly adjusted at all, the test would immediately fail.  
 
-Now we need to begin refractoring our implementation. 
+Now, we need to begin refractoring our implementation. 
 
 ```
 vector<string> tok_string(const string& input)
