@@ -2,7 +2,7 @@
 
 Participating in online programming communities is a fun way to expand your programming knowledge.
 I want to encourage you to participate.
-Here are four ways you can get extra credit from participation:
+Here are four ways you can get extra credit from participation and you can recieve each extra credit only once:
 
 1. Every programmer should have a webpage.
 If you create a webpage showing off your portfolio,
