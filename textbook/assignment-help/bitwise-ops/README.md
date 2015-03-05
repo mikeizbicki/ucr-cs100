@@ -1,5 +1,4 @@
-Bitwise Operator Tutorial
-===
+##Introduction to Bitwise Operators
 
 Hey you! Yea, you! Do you want to learn about bitwise operators? Well, it doesn't matter what you want because you're going to learn them anyway! And do you know why? It's so you can do stuff like this:
 
@@ -12,28 +11,8 @@ But wait! Did you notice how `open` had `int` parameters? That's right, these fl
 
 For bitwise operators, you're going to need more than just the regular decimal counting system. We'll assume you already know binary, but if you need a guide or refresher on binary, [click on me!](http://www.mathisfun.com/binary-number-system.html) However, binary is also rarely used in these bit calculations. Thus, we'll need to learn the octal and the hexadecimal number systems too. Don't worry, we'll teach you those!
 
-### Table of Contents
 
- **[Practical Uses](#practical-uses)**
-
- **[Octal](#octal)**
-
- **[Hexadecimal](#hexadecimal)**
-
-#####Bitwise Operators:
-
- **[OR](#bitwise-or)**
-
- **[AND](#bitwise-and)**
-
- **[NOT](#bitwise-not)**
-
- **[XOR](#bitwise-xor)**
-
- **[Left-Shift](#bitwise-left\-shift)**
-
-Practical Uses
----
+##Practical Uses
 
 The two most used bitwise operator in C/C++ are the `OR` and `AND` operators, as the others are simply not as useful for accessing information. But we will still cover them just in case!
 
@@ -57,8 +36,9 @@ Here, we want to check if `filename` is a directory or not, which we can used th
 
 Of course, we'll go more into detail on `AND` later on, but hopefully you've grasped that bitwise operators aren't something that you'll stop using. As long as you're coding in C/C++, you're bound to use these operators often!
 
-Octal
----
+##Binary Formats
+
+####Octal
 
 Octal is the base-8 number system, which means its digits can only have 8 different values, ranging from 0 to 7. This means that whenever a digit exceeds 7, we must carry over the value to the next digit. 
 
@@ -92,8 +72,7 @@ Quick! Recall the example we showed with `AND`. Remember that it involved us usi
 
 And would you look at that! They're octal values! Good thing we know how octal values work! And now, we understand how to read some of the flags set in our previous examples! But we have to learn about hexadecimal first, so let's put octal on hold.
 
-Hexadecimal
----
+####Hexadecimal
 
 Hexadecimal is a little more difficult to see, compared to decimal, octal, and binary. Hexadecimal is the base-16 number system. Now, you might be wondering what we use to represent values past 9. Well it's simple really - hexadecimal values range from 0-F. That's right! We use the first 6 letters of the alphabet! Here are a couple of examples of hex math:
 
@@ -185,8 +164,9 @@ Here's a table of corresponding values:
 	</TR>
 </TABLE>
 
-Bitwise OR
----
+##Bitwise Operators
+
+####Bitwise OR
 
 The bitwise OR operator is a single pipe: `|`. Bitwise OR functions in the same way logical OR does, only it compares each bit between the two values.
 
@@ -273,8 +253,7 @@ So, as our calculations show, we could actually rewrite our example as:
 ```
 Like we mentioned earlier, we could just pass in these numbers. But that's a huge hassle, since we can just look up the names associated with each value and use `OR`. But now you've seen how the bitwise `OR` truly works with the flags! 
 
-Bitwise AND
----
+####Bitwise AND
 
 The bitwise AND operator is a single ampersand: `&`. Bitwise AND works the same way the logical AND works! However, rather than operating only two boolean variables, the bitwise AND operates on every bit pair between the two given values! 
 
@@ -349,8 +328,7 @@ Would you look at that? The resulting value was not 0, meaning `buf.st_mode` con
 
 Phew, that's a lot of learning. I know what you're thinking. "This is really exciting and I can't wait to keep learning more about bitwise operations!" That's really great to hear because we still have four more operators. Woohoo the fun doesn't end!
 
-Bitwise XOR
----
+####Bitwise XOR
 
 The bitwise exclusive OR operator `^` - get it? EXclusive OR. XOR! - compares each bit between the two given operands, returning 1 only when one of the compared bits equals 1.
 
@@ -410,8 +388,7 @@ There isn't much daily use for the `XOR` operator. However, as far as we've foun
 ```
 We got the same value as before! If you use `XOR` with the same value twice, you'll receive the value you originally had! So we could potentially `XOR` a value with many different numbers to encrypt them and then `XOR` them again to decrypt them! However, security systems generally use number encryptions instead of bit encryptions, so you won't find much use. But it's still good information to have!
 
-Bitwise Left-shift
----
+####Bitwise Leftshift
 
 The left-shift operator shifts the bits of the operand a number of times to the left. This number is determined by the value the user passes in. Sounds a little bit confusing right? Don't worry, it's not actually that complicated! Also, we'll provide some visual examples later in this section.
 
@@ -447,8 +424,7 @@ There we go. Super simple! Also notice how that values are doubling? That's what
 
 If you're tired, don't worry! You're on the home stretch!
 
-Bitwise Right-Shift
----
+####Bitwise Rightshift
 
 The right-shift operator works in the same way the left-shift operator does, only in the complete opposite direction! That means, you guessed it, it shifts all the bits to the right! And, since it's shifted the other way, it means that the values get divided by two! Bring out the examples!
 
@@ -472,9 +448,8 @@ And here's some right-shift in action:
  128>>7 = 0000 0001 (1)
 ```
 
-Conclusion
----
+##Conclusion
 
 You've finally made it! You now know about all the bitwise operators! While you may not be comfortable with octal, hexadecimal, and the operators yet, don't worry! There's a lot of time to get used to them through practice, such as doing sample calculations like we did in our examples. Also, test a lot of these operators in whatever IDE you'd like and output them! That way you can see them in action yourself! (Don't forget that the output is usually in decimal though!)
 
-Hope you enjoyed this tutorial! If you didn't, oh well too bad!
+Hope you enjoyed this tutorial! 
