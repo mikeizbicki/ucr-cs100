@@ -3,7 +3,7 @@ GDB Cheatsheet
 
 ###Starting GDB
 
-After you finish up your sweet program, you should generally compile it with your standard flags, but also with the `-g` flag. The `-g` flag lets gdb debug our executable and gives us a bunch of helpful feedback. Without it, gdb will still run your program, but it won't allow you to step through to see if there are any errors, and where they occur. 
+After you finish up your sweet program, you should generally compile it with your standard flags, but also with the `-g` flag. The `-g` flag lets gdb debug our executable and gives us a bunch of helpful feedbacks. Without it, gdb will still run your program, but it won't allow you to step through to see if there are any errors, and where they occur. 
 
 ```
   $ g++ -g -Werror -Wall -ansi -pedantic moo.cpp
@@ -23,7 +23,7 @@ Doing it this way is the quickest way to start debugging. You can also just run 
 ```
 
 
-`file` is the command that tells gdb that the following argument is the program to be debugged. If there is already a current executable in gdb, then you can use `file` to a new executable, instead of restarting gdb. This is useful whenever you have multiple executable that you need to debug.
+`file` is the command that tells gdb that the following argument is the program to be debugged. If there is already a current executable in gdb, then you can use `file` to a new executable, instead of restarting gdb. This is useful whenever you have multiple executables that you need to debug.
 
 ###GDB Flags
 
@@ -33,7 +33,7 @@ There are many GDB flags, but most of them aren't too useful. The most useful so
   $ gdb --args <program> <arguments>
 ```
 
-This allows us to pass command line arguments into our program which is run through gdb. This is like program-caption. 
+This allows us to pass command line arguments into our program which runs through gdb. This is like program-caption. 
 This argument can only be used once, and anything after the program will be considered an argument, even successive flags
 . Anything before it will act normally. 
 
@@ -109,7 +109,7 @@ where any errors or outputs occur.
 
 `run` runs the program until it ends, accepts input, or until it reaches a breakpoint. Any runs before the program
 finishes prompts a restart, which keeps all breakpoints or any other commands. Any runs after the program finishes 
-will still keep any breakpoints or commands as well.
+will still keep its breakpoints or commands as well.
 
 ###Using GDB
 
@@ -210,7 +210,7 @@ This is extremely useful in tracking your variables. With gdb you don't have to 
   (gdb) disp <variable name>
 ```
 
-`display` prints out `<variable name>` after every `step` or `next` so you can see what value is contained in the variable. You can use `display` to keep track of multiple variables and only have to declare it once within gdb, unlike `print`. Similarly to print, you can only display variables in your current scope. That means, whenever you leave that scope, it will automatically undisplay your variable. Display is useful for finding scoping errors, so if you display a variable, and it disappears, you know you've had a bad time.
+`display` prints out `<variable name>` after every `step` or `next` so you can see what value is contained in the variable. You can use `display` to keep track of multiple variables and only have to declare it once within gdb, unlike `print`. Similarly to print, you can only display variables in your current scope. That means, whenever you leave that scope, it will automatically undisplay your variable. Display is useful for finding scoping errors, so if you display a variable and it disappears, you know you've had a bad time.
 
 ```
   (gdb) undisplay <variable name>
