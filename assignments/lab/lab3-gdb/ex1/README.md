@@ -86,10 +86,10 @@ Breakpoint 1 at 0x4008aa: file ex1/ex1.cpp, line 25.
 
 Now, let's rerun our program:
 ```
-(gdb) r goodbye hello
-Starting program: /class/classes/cmanj001/cs100/GDB-Tutorial/a.out goodbye hello
-First: goodbye
-Second: hello
+(gdb) r hello goodbye
+Starting program: /class/classes/cmanj001/cs100/GDB-Tutorial/a.out hello goodbye
+First: hello
+Second: goodbye
 
 Breakpoint 1, my_strcpy (dst=0x7fffffffd1ec "hello", src=0x7fffffffd1f2 "goodbye") at
 ex1/ex1.cpp:25
