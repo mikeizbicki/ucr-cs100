@@ -380,13 +380,13 @@ $
 
 Some limits of cppcheck include user ignorance and lack of knowledge.
 Ok, joking aside, the use of cppcheck is to limit the amount of false positive errors given by other compilers and checkers.
-What this means is with general usage, cppcheck will not check much but what it does check, it checks extremely well.
+What this means is with general usage, cppcheck will not check much, but what it does check, it checks extremely well.
 Similar to a crafting NPC in a game, cppcheck will tell you only what it can tell you for sure.
 Given the right ingredients, or in cppcheck's case, configurations and flags, it will give you errors that are almost guaranteed to be errors.
 
-cppcheck works in a way where it trues to avoid false positives so many of the bugs listed will be actual bugs.
-this being said, there will be many things that cppcheck will not catch such as [stylistic errors](#styleuse), syntax, and [runtime](#overflowing) bugs.
+cppcheck works in a way where it's trues avoid false positives, so that many of the bugs listed will be actual bugs.
+This being said, there will be many things that cppcheck will not catch such as [stylistic errors](#styleuse), syntax, and [runtime](#overflowing) bugs.
 
-*tl;dr: cppcheck is good at what it does, but use a variety of tools to fully debug your programs.*              
+*tl;dr: cppcheck is good at what it does, but remember to use a variety of tools to fully debug your programs.*              
 
 
