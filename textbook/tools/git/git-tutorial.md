@@ -5,67 +5,14 @@ Note: All text with <TEXT> means to replace TEXT with the proper text/path/name
 For these examples we will be using github.com, which you can create an account for free at.
 
 * Usage:
-  * Section A: Git basics
-  * Section B: Git remote
-  * Section G: Git push
-  * Section C: Git fetch
-  * Section D: Git merge
-  * Section E: Git pull
-  * Section F: Git rebase
-  * Section H: Git workflows 
+  * Git remote
+  * Git push
+  * Git fetch
+  * Git merge
+  * Git pull
+  * Git rebase
+  * Git workflows 
 
-
-###Section A: Git basics
-After git is installed you should setup a couple of setting
-
-	$ git config --global user.name "<your name>"
-	$ git config --global user.email "<your email>"
-
-Try not to think of git as a complex program but as many simple programs 
-rolled into one, each with there own purpose. Almost all of Git's commands 
-are prefixed by.... you guessed it, git.
-
-So to start of lets get an already created git repository or "repo".
-
-	$ git clone https://github.com/mikeizbicki/ucr-cs100.git
-
-This shell command means invoke the git command and create a git repo called ucr-cs100
-using the information from the url to grab the data. This is the most basic of commands.
- Optionally you can specify the directory to clone into is called by adding it after the URL.
-	
-	$ git clone https://github.com/mikeizbicki/ucr-cs100.git CS100
-
-Now lets say you whant to create a new git repo from scratch. We create a 
-new clean git directory by first creating a empty directory. After the directory 
-is created we will then initialize the repo.
-
-	$ mkdir <name>
-	$ cd <name>
-	$ git init
-
-Now that the repo is initialized we can add some files to repository.  We add files to git 
-repository by first creating a file then using 'git add \<file name\>'. Here I am telling git to 
-include all the files the are in the current working directory, optionally you can individually 
-specify which files to include.
-	
-	$ touch README
-	$ git add .
-		Or
-	$ git add <path_to_file_in_git_repo>
-
-Once the files are added we can then 'commit' them to the repo. 'Committing' means that 
-we want to include that file in the repository and track the changes that are made to that file. 
-Commits are the saved state of the repo. Commits take a message that allows them to be looked over 
-with a title and message so that users can tell what has happened.  If 'git commit' is used
- without passing the -m flag, or message flag, the default text editor will be brought up to 
-prepare a message for the commit. 
-
-	$ git commit
-	or
-	$ git commit -m'<message>'
-
-Note: If a branch hasnt been created prior to first commiting git will create one called the
-'master' branch
 
 ##Uploading and downloading changes
 Now that we have created the git repository and commited some files we probaly want to upload 
