@@ -39,7 +39,7 @@ These examples will be covering `run`, `quit`, `help`, `breakpoint`, `info break
 
 
 
-By practicing with these examples, you will be able to debug your future programs more efficiently rather than going through your code, line by line and trying to find bugs. You will save time by using `gdb`.
+By practicing with these examples, you will be able to debug your future programs more efficiently rather than going through your code, line by line, trying to find bugs. You will save time by using `gdb`.
 
 
 
