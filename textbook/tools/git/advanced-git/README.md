@@ -70,17 +70,17 @@ If you want to combine all his files with your repository, you can try to merge 
 
 `your_branch_name` is the branch that you would like to merge all the files that you just fetched from `fetched_remote_name` into the branch on your current repository.
     
-You should fix any merge conflicts if you have any. If you don't have any, then the merge should automatically complete.
+You should fix any merge conflicts if you have any. If you don't have any, then git merge should automatically execute.
 This updates your branch with the remote repositories that you have just fetched the data from.
 
-In a big group project, several versions of the same repository can be floating around. Therefore, it's important to have the updated versions of the repository, as bugs can be squashed, and fixes will have been completed.
+In a big group project, several versions of the same repository can be floating around. Therefore, it's important to have the updated versions of the repository, as bugs can be squashed, and completed fixes.
 
 #git rebase
 `git rebase` allows you to do many things, but the main feature we will cover in this tutorial is squashing commits.
 Squashing commits cleans up your commit history. Instead of having 15 commits, you can have 3 or 4 commits that focus more on features that were added or removed.
 This allows you to find the point in time where you added or removed major portions of your code, and fix them if you need to, or revert back to an older version to negate some changes.
 
-You can use the command
+You can use the commanp
 
     git rebase -i HEAD~<number_of_commits>
     
@@ -88,7 +88,7 @@ You can use the command
 
 `HEAD` is the pointer that your repository is currently at. You can think of this like the current pointer in a list that points to the item in the list that you are currently working with.
 
-`number_of_commits` is the number of commits that you wish to go back by. If you have 10 commits that you want to squash, you can type in 10, and git will start at the head, and traverse back 10 commits.
+`number_of_commits` is the number of commits that you wish to go back by. If you have 10 commits that you want to squash, you type in 10, and git will start at the head and traverse back 10 commits.
 
 
 A window in your preferred text-editor should open with "pick" proceeded by the commit numbers.
@@ -97,12 +97,12 @@ If you use "squash", you proceed to merge that commit with the previous commit w
 When you are doing picking and squashing the commits, exit from the text-editor.
 
 After you exit out of the window, git will automatically try to rebase your repository. 
-You should solve any merge conflicts that you get, and when it finishes completely, your project should reflect the commits that you have picked and squashed.
+You should solve any merge conflicts that you get and when it finishes, your project should reflect the commits that you have picked and squashed.
 
 #git reset
 `git reset` reverses the HEAD pointer to the specified commit or state.
 
-If you accidently changed your repository, and added a bunch of empty commits with git rebase, then you can use git reset to revert the repo to the commit number of your choosing. The command is:
+If you accidently changed your repository and added a bunch of empty commits with git rebase, then you can use git reset to revert the repo to the commit number of your choosing. The command is:
 
     git reset <mode> <commit>
 
@@ -112,22 +112,22 @@ There are two `mode` values that are pretty important to know.
 The first one is `--hard`. 
 This resets the pointer back to the commit number that you wish to reset to.
 
-##NOTE: THIS WILL RESET YOUR HEAD POINTER, AND YOU WILL LOSE YOUR WORK.
+##NOTE: THIS WILL RESET YOUR HEAD POINTER, WHICH MEANS THAT YOU WILL LOSE YOUR WORK!!!
 You should only do this if you really need to reset your repository back to it's original format.
 
-The second one is `--soft`. This mode will reset your repository to the state at that time, and keeps your changes as `changes to be committed`.
+The second one is `--soft`. This mode will reset your repository to the state at that time and keeps your changes as `changes to be committed`.
 
  
  #git diff
  `git diff` allows you to check the differences between the branches or commits.
  If you type it out automatically, you can checkout the differences between your last commit and the current changes that you have.
- You need to make sure that the two that you are comparing should be the same, so two branches, or two different commits.
+ You need to make sure that the two that you are comparing should be the same, as in two branches, or two different commits.
  
- To use, type in the command:
+ To use this, type in the command:
  
     git diff <branch_or_commit_name> <second_branch_or_commit>
     
-It can tell you the differences in the files that you have, or the files that you need to add in your next commit.
+It can tell you the differences in the files that you have or the files that you want to add in your next commit.
  
  #git blame 
  `git blame` is a cool little feature in git that allows you to see who wrote what in the repository. The command to use this feature is:
@@ -136,7 +136,7 @@ It can tell you the differences in the files that you have, or the files that yo
 
 `filename` is the file that you would like to run `git blame` on.
 
-This will pull up the contents of the file, along with the commit number that the line was changed in, as well as the person who changed it, and at what time it was changed at.
+This will pull up the contents of the file along with the commit number the changed line, the person who changed it, and what time it was changed at.
 
 If you want to know who changed certain lines, you can use the -L flag to figure out who changed those lines. You can use the command:
 
@@ -146,10 +146,10 @@ If you want to know who changed certain lines, you can use the -L flag to figure
 
 `ending-linenumber` is the line you wish to end at.
 
-This will tell you who edit the file within those line numbers on the command line instead of pulling up a text-editor.
+This will tell you who edited the file within those line numbers on the command line instead of pulling up a text-editor.
  
  #git stash
-`git stash` is another cool feature that allows you to save your changes without making any commits. You can `git stash` several times, and later apply those changes when you see fit.
+`git stash` is another cool feature that allows you to save your changes without making any commits. You can `git stash` several times and apply those later changes when you see fit.
  
  You can run a `git status` to check what changes you have on the project. This allows you run a `git stash` if you need to.
  
@@ -157,9 +157,9 @@ This will tell you who edit the file within those line numbers on the command li
  
     git stash
 
-This will save your changes all the way back to the previous commit. This allows you to modify or add anything that you might need prior to committing your older changes.
+This will save your changes all the way back to the previous commit and will allow you to modify or add anything that you might need, prior to committing your older changes.
 
-To replace your changes you can use the following command:
+To replace your changes, you can use the following command:
 
     git stash pop
     
@@ -177,7 +177,7 @@ To choose the one that you want to use, use:
 `number-in-list` should be the number in the stash list that you would like to apply the changes that you have stashed. 
 This allows you to continue working on that portion of the project.
 
-If you apply without putting a number, then you apply the most current one in the stash.
+If you apply without putting in a number, then you apply the most current one in the stash.
 
 ---------------------------
 #more information
@@ -187,9 +187,9 @@ If you need more information on git, here are some resources that you can checko
 This website is really helpful for other advanced techniques, and gives plenty of examples to help you with more flags and other commands. All the man pages are on this website.
 
 [atlassian](https://www.atlassian.com/git/tutorials/setting-up-a-repository) - 
-This guide is very helpful for learning how to set up the repo, and making commits.
+This guide is very helpful for learning how to set up the repo and making commits.
 It does belong to a private git hosting website, so some of the git remotes will be pointing to that website.
 
 [git for ages 4 and up](https://www.youtube.com/watch?v=1ffBJ4sVUb4) -
-This was a really handy tutorial video on YouTube which helped me out a lot. He goes over a lot of git features, but the video is about 1 1/2 hours long. It's great if you have some free time, and you want to learn more about git.
+This was a really handy tutorial video on YouTube which helped me out a lot. He goes over a lot of git features, but the video is about 1 1/2 hours long. It's great if you have some free time and want to learn more about git.
 
