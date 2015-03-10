@@ -1,0 +1,103 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[margin=.8in]{geometry}
+
+\title{CS100 Syscall Cheatsheet}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\large This document contains interfaces, libraries, descriptions, and errors for 
+syscalls used in CS100. Errors will be listed on the back. For your linux's safety and 
+your grade's safety, please use perror() with every syscall.
+
+\medskip
+\begin{tabular}{llll}
+    \bf Function & \bf Interface & \bf Include & \bf Description\\
+    perror() & void perror(const char* s) &  errno.h &  prints error message\\
+    &&& based on global int\it errno \rm
+\end{tabular}
+\normalsize
+
+\section{Syscall interface and libraries}
+\begin{tabular}{llll}
+    \bf Function & \bf Interface & \bf Include & \bf Description
+    \\
+    close() & int close(int fd) & unistd.h & close a file descriptor
+    \\
+    \hline
+    dup() & int dup(int oldfd) & unistd.h & creates copy of file descriptor in lowest 
+    \\ 
+    & & &unused descriptor 
+    \\ \hline
+    dup2() & int dup2(int oldfd, int newfd) & unistd.h & creates copy of oldfd in newfd, 
+    \\
+    & & &closes newfd if it exists already 
+    \\ \hline
+    execv() & int execv(const char* path, & unistd.h & executes programs and 
+        passes arguments, 
+    \\ \hline
+    &  \ \ \ \ \ \ \ \ \ \ \ char *const argv\textbf{[]}) & &requires full path name of program
+    \\ \hline
+    execvp() & int execvp(const char* file, & unistd.h & executes programs and 
+        passes arguments, 
+    \\
+    &  \ \ \ \ \ \ \ \ \ \ \ char *const argv\textbf{[]}) & &finds program file automatically
+    \\ \hline
+    fork() & pid\_t fork(void) & unistd.h & creates child process
+    \\
+    & & & 0 $\rightarrow$ child
+    \\
+    & & & $(+) \rightarrow$ parent
+    \\ \hline
+    getcwd() & char* getcwd(char*buf, size\_t size)& unistd.h & get current working directory
+    \\ \hline
+    getgrgid() & struct group* getgrgid(gid\_t gid) & sys/types.h & get struct with group info,
+    \\
+    & &grp.h  &requires group id
+    \\ \hline
+    getpwuid & struct passwd* getpwuid(uid\_t uid) & sys/types.h & get struct with user info,
+    \\
+    & & pwd.h &requires user id
+    \\ \hline
+    ioctl() & int ioctl(int d, int request, ...) & sys/ioctl.h & send request to file descriptor d,
+    \\
+    & & & used to manipulate devices and terminals
+    \\ \hline
+    open() & int open(const char* pathname, int flags) & sys/types.h & opens file and gives file descriptor
+    \\
+    & int open(const char* pathname, int flags, & sys/stat.h & which can be used, with flags,
+    \\
+    & \ \ \ \ \ \ \ \ \ \ mod\_t mode) & fcntl.h & to read/write/create file
+    \\ \hline
+    opendir() & DIR* opendir(const char* name) & sys/types.h & opens directory stream and returns
+    \\
+    & & dirent.h & pointer to it's first entry
+    \\ \hline
+    pipe() & int pipe(int pipefd\textbf{[}2\textbf{]}) & unistd.h & gives two file descriptors through pipefd,
+    \\
+    & & & pipefd\textbf{[}0\textbf{]} $\rightarrow$ read
+    \\
+    & & & pipefd\textbf{[}1\textbf{]} $\rightarrow$ write
+    \\ \hline
+    readdir() & struct dirent* readdir(DIR* dirp) & dirent.h & means "read directory",
+    \\
+    & & & returns pointer to struct dirent of next 
+    \\
+    & & & item in directory or null (end of dir/error)
+    \\ \hline
+    stat() & int stat(const char* path, & sys/types.h & gives information about a file
+    \\
+    & \ \ \ \ \ \ \ \ \ \ struct stat* buf) & sys/stat.h
+    \\
+    & & unistd.h
+    \\ \hline
+    wait() & pid\_t wait(int* status) & sys/types.h & waits for child process to terminate, get 
+    \\
+    & & sys/wait.h & stopped by a signal or started by a signal
+\end{tabular}
+\end{document}
