@@ -4,17 +4,14 @@ called git that is used to manage the source code of various projects.
 Note: All text with <TEXT> means to replace TEXT with the proper text/path/name
 For these examples we will be using github.com, which you can create an account for free at.
 
-* Usage: 
+* Usage:
   * Git remote
   * Git push
   * Git fetch
   * Git merge
   * Git pull
   * Git rebase
-
-In this guide we will go through creating a blank repo, that way we can set up all the branches,
-and remotes ourselves. Using the commands listed above we can create a workflow that can keep our
-local repository up to date with the remote repositories that we desire. 
+  * Git workflows 
 
 
 ##Uploading and downloading changes
@@ -24,7 +21,7 @@ to create the repoistory to push to and is the repo is called GitGuides then the
 https://github.com/mikeizbicki/ucr-cs100.git 
 We might also want to download changes that others have made. This is called 'pulling'
 
-##Git Remote
+##SECTION ?: Git Remote
 First to push to a location you will have to add a remote,
 a place to download/upload changes from. To view the current remotes for the repo issues the "git remote"
 command
@@ -54,7 +51,7 @@ This doesnt give us much information, just the names. To get a little more detai
 This gives both the remote names as well as their push/push url associated with that remote. Why is their
 a seprate url for both push and pull. That is because each can be set seperate for a remote.
 
-###Git push
+###SECTION ?: Git push
 
 Now that our repository has a remote we can now push the changes to github using 'git push'
 	
@@ -74,7 +71,7 @@ There you go, now you can get a already created repo, create a repo yourself and
 You may be wondering, 'How do I get changes from others that commited on the project'. Since that can be a little more 
 tricky it will be covered in the next section
 
-###Git fetch
+###SECTION D: Git fetch
 Now that you can create, and push changes to a git repo its time to learn how create a branch and grab external changes. 
 Assuming that you have been fallowing the guide up to this point, you have commited to your non-cloned repo, you have 
 added a remote and set up a traking branch. I will now show how to pull in changes that others have commited while you
@@ -126,7 +123,7 @@ Lets go ahead and do it the little checkout message is preciesly the command we 
 
 	git checkout -b 2015winter
 
-###Git merge
+###SECTION ?: Git merge
 Now that you know how to use fetch to get remote branches into you repo lets update our local branch. 
 Before you update the local branch its a good idea to check for changes make upstream against your 
 own branch. To do that we will use git log again, this time passing a revision instead of a single
@@ -173,7 +170,7 @@ You should get a message similar to
 
 Last time you saw a merge conflict you dealt with it manually this time lets use some tools to help us along.
 
-###Git mergetool
+###Section ?: Git mergetool
 
 	
 With our repository waiting to have the merge conflct fixed we can run git mergetool. This starts a test editor
