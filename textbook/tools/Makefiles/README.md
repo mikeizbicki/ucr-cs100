@@ -29,7 +29,7 @@ In this case, we run the command `cc` to compile a program.
 `cc` stands for "C Compiler" and is the default system compiler for C source code.
 If you're compiling C++ code, then you would use `g++` instead.
 
-You should never trust `Makefile`s you download from the internet.
+You should never trust the `Makefile`s you download from the internet.
 `Makefile`s can execute arbitrary commands.
 If you run
 ```
@@ -171,7 +171,7 @@ Example 5: Directories
 
 Files are sometimes organized by their type. One setup is to put all the source code files in a directory called ```src```, object files in a directory called ```obj```, and binary executable in a directory called ```bin```.
 
-```VPATH``` is a variable that tells make which directories to search for target and prerequisite files in addition to the working directory. In this example, make will search ```src/``` in addition to the working directory.
+```VPATH``` is a variable that tells make which directories to search for the target and prerequisite files, in addition to the working directory. In this example, make will search ```src/``` in addition to the working directory.
 
 Multiple directories are delimited by ```:```. For example, ```VPATH = src1:src2:../src3``` tells make to search ```src1/```, ```src2/```, and ```../src3``` in addition to the working directory.
 
