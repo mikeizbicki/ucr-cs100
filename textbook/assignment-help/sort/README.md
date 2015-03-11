@@ -1,0 +1,77 @@
+We often encounter situations that requires us to sort an array in a particular order in daily life. As is known, in CS 100, we are required to sort our file display alphabetacially in "ls" function. Instead of writing it ourselves, we could use the C++ Standard Library `sort` with less codes and higher efficiency.
+
+It takes two random-access iterators, the start and the end, as arguments and performs a comparison sort on the range of elements between the two iterators, front-inclusive and end-exclusive: [start, end). The sort function is included from the algorithm header of the C++ Standard Library, and carries three arguments: start value, end value and  Compare function. The third argument has default value - the "less-than" (<) operator to compare elements.
+
+Sort is define as:
+```
+default (1)	
+template <class RandomAccessIterator>
+  void sort (RandomAccessIterator first, RandomAccessIterator last);
+custom (2)	
+template <class RandomAccessIterator, class Compare>
+  void sort (RandomAccessIterator first, RandomAccessIterator last, Compare comp);
+```
+# Default(1)
+Here is a basic example for the 1st:
+```
+#include <iostream>
+#include <algorithm>
+using namespace std; 
+int main() 
+{
+	int array[] = { 23, 5, -10, 0};//This is the array need to be sorted
+	int elements = sizeof(array) / sizeof(array[0]);//There are 4 intergers in the array 
+	sort(array, array + elements);//The array is sorted and stored in the origin space
+					// If you also want to keep the origin one, do not forget to store it first!
+	for (int i = 0; i < elements; ++i) 
+		cout << array[i] << ' ';
+	cout<<endl;
+	return 0;
+}
+$10, 0, 5, 23
+ ```
+In fact, sort function sorts the successive array from the start address to the end address. Thus, it could be usde to sort only part of an array.
+```
+#include <iostream>
+#include <algorithm>
+#include <string.h>
+using namespace std; 
+int main()
+{
+	char array[] = { 'a', 'p', 's', 'd', 'k', 'b', 'c'};
+	int elements = 3; 
+	sort(&array[3], &array[3] + elements);//This case only d, k, b are sorted, and others remain the same.
+	for (int i = 0; i < strlen(array); ++i) 
+		cout << array[i] << ' ';
+	cout<<endl;
+	return 0;
+}
+$a, p, s, b, d, k, c
+```
+#custom (2)
+Sort is powerful because we could use it to get a sequence by any particular rule. It accepts two elements in the range as arguments, and returns a value convertible to bool which indicates the order. This can either be a function pointer or a function object. 
+```
+#include <iostream>
+#include <algorithm>
+#include <string.h>
+using namespace std; 
+
+bool compare(char p1,char p2)//sort alphabetically
+{
+	if (p1<p2) return false;
+	else return true;
+}
+
+int main() 
+{
+	char array[] = { 'a', 'p', 's', 'd', 'k', 'b', 'c'};
+	int elements = 3; 
+	sort(&array[3], &array[3] + elements,compare);//This case only d, k, b are sorted, and others remain the same.
+	for (int i = 0; i < strlen(array); ++i) 
+		cout << array[i] << ' ';
+	cout<<endl;
+	return 0;
+}
+$a, p, s, k, d, b, c
+```
+not only from an array, but also a vector or struct.
