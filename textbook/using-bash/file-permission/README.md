@@ -58,7 +58,7 @@ Therefore, there is a table about permission setting in binary:
 
 ## simple file system
 
-Let's talk about a little file system briefly. This is what file system looks like below. This picture may be in your computer, or a server (just like you login into the computer in the lab.) 
+Let's talk about a little file system briefly. This is what file system looks like below. This picture may be in your computer, or a server (just like you login into the computer in the lab).
 
 ![fs-layout](https://cloud.githubusercontent.com/assets/9039778/5335933/7a337768-7e68-11e4-9288-d82c3f90ba52.png)
 
@@ -70,16 +70,16 @@ On the left "/" means root directory, which is the top level directory on a syst
 
 You are a member of root group, so you have right to access and execute the file, but do not have right to change the file. 
 
-In the diagram of filesystem, you will see `home` directory which is a group directory. In this directory in the picture, there is four usernames: rick, anna, emmy and bob -- in the lab, you will see `csgrads csmajs grads` in the `home` directory. In this group of members, you don't have right access those directories, but for me, I only have right access to the /home/csgrads/sjin010 which is my account.
+In the diagram of filesystem, you will see `home` directory which is a group directory. In this directory in the picture, there is four usernames: rick, anna, emmy and bob -- in the lab, you will see `csgrads csmajs grads` in the `home` directory. In this group of members, you don't have right access those directories, only I have right access to the /home/csgrads/sjin010, which is my account.
 ![screenshot-sjin010 tango-18](https://cloud.githubusercontent.com/assets/9039778/5337107/992c241a-7e79-11e4-9ed3-2019375cd4fb.png)
 
-So this is how to protect the users from each other in the one server. In the personal computer, usually there is only one group and one user in the `home` directory.
+So this is how users protect themselves from each other in a server. In a personal computer, there is usually only one group and one user in the `home` directory.
 
 ##Changing permission
 
 ###umask
 
-When a user creates a file or directory, they are set of default permission. For example, if a text file has `666` same as `rw-rw-rw` permission, it grants read and write permission to everyone. Similarly a directory with `777` permissions gives user read, write, and execute permission to everyone. The user file-creation mask(umask) is used to determine the file permission for newly created files. It can control the default file permission for new files. It is a four-digit octal number. A umask can be set or expressed using **Symbolic values** and **Octal values**.
+When a user creates a file or directory, there are a set of default permissions. For example, if a text file has `666` (which is the same as the `rw-rw-rw` permission), it grants read and write permission to everyone. Similarly a directory with `777` permissions, it gives the user read, write, and execute permission to everyone. The user file-creation mask(umask) is used to determine the file permission for newly created files. It can control the default file permission for new files. It is a four-digit octal number. A umask can be set or expressed using **Symbolic values** and **Octal values**.
 
 Here is table of Octal values:
 
@@ -95,7 +95,7 @@ Now, let's change the default permission setting for new file to `027`, which is
 
 ![screenshot-sjin010 tango-18 -hw4](https://cloud.githubusercontent.com/assets/9039778/5392126/ebe71682-80d7-11e4-90f0-39dabe72c83b.png)
 
-The new file's permission changed. 
+The new file's permissions changed. 
 
 
 
@@ -103,30 +103,30 @@ The new file's permission changed.
 ###chmod - modify file access rights
 Use this command to change file's permission which is created by owner. Just simply type `chmod 600 file`
 
-The 600 is the file's permission setting. Just like mentioned before, the machine thinks the permission setting as a series of bits.
+The 600 is the file's permission setting. As mentioned before, the machine thinks the permission settings as a series of bits.
 
 ![screenshot-sjin010 tango-18 -hw4-1](https://cloud.githubusercontent.com/assets/9039778/5392292/580b3f04-80d9-11e4-85ea-723411b89cc6.png)
 
-Or you can type the permission by characters that you want to change. `chmod u=r,g=rx,o=rwx file2`
+Or you can type the permission changes by characters that you want to change. `chmod u=r,g=rx,o=rwx file2`
 
 ![screenshot-sjin010 tango-18 -hw4](https://cloud.githubusercontent.com/assets/9039778/5392365/1037afb8-80da-11e4-98c6-0944cd6ea2f2.png)
 
-If you are willing to your files as private in the lab, you can change all the directories setting in your account as `700` that only you can read, write and execute the files.
+If you are willing to set your files as private in the lab, you can change all the directories setting in your account as `700` that only you can read, write and execute the files.
 
 ####Sticky bit
-As in a directory `/tmp`, where any user can store files in `/tmp` but only the owner of the file has the rights to modify or delete the file from `/tmp`.
+In the directory `/tmp`, any user can store files in `/tmp` but only the owner of the file has the rights to modify or delete the file from `/tmp`.
 
 ![screenshot-sjin010 tango-18 -](https://cloud.githubusercontent.com/assets/9039778/5392828/95942aba-80df-11e4-9af4-1c65a4d05b7a.png)
 
-The end of permission expression there is a `t`, that is sticky bit which tells you can create any file in this directory, but cannot delete any other files which is not owned by you.
+At end of the permission expression, there is a `t`, which is the sticky bit that says that you can create any file in this directory, but cannot delete any other files that you do not own.
 
 Let's bring an example. 
 
-if you run a command `su - guest1 - c "touch guest1.txt"` which create `guest1.txt` owned by `guest1`. 
+If you run a command `su - guest1 - c "touch guest1.txt"`, which creates `guest1.txt` owned by `guest1` and
 
-run another command `su - guest2 - c "touch guest2.txt"` which create `guest2.txt` owned by `guest2`.
+run another command `su - guest2 - c "touch guest2.txt"` that creates `guest2.txt` owned by `guest2`.
 
-if `guest2` wants delete `guest1.txt` which owned by `guest1`
+And if `guest2` wants delete `guest1.txt` which owned by `guest1`
 
 `su - guest2 - c "rm guest1.txt"`.
 
@@ -136,7 +136,7 @@ There will be an error.
 
 `rm: cannot remove 'guest1.txt': Operation not permitted`
 
-So, how do we set sticky bit to a file or directory? There is several ways to do that; the easy understandable way is just simply using `chmod` command, `chmod +t <filename>`
+So, how do we set the sticky bit to a file or directory? There is several ways to do that; the easy, understandable way is to just simply use the `chmod` command, `chmod +t <filename>`
 
 ![screenshot-sjin010 tango-18 -hw4](https://cloud.githubusercontent.com/assets/9039778/5393035/d0480f9e-80e1-11e4-82da-a69243008fd6.png)
 
@@ -144,7 +144,7 @@ So, how do we set sticky bit to a file or directory? There is several ways to do
 
 ##Security
 
-When you write into a read-only file in vim, you will be noticed as warning - "this file is read-only". However, it also has a tip on the next "using `!` can override this file. " This is because, you are actually writing a temp file into system, then the system will delete the original file and create a new one. So you have permission to make the file read-only, but you don't have actual permission to change the permission setting under the system level. Many application delete and create new files when edits are made, if you directory permissions are not secure. This can be a security concern. Therefore, the permission setting will be very important on the security system.
+When you write into a read-only file in vim, you will be given a warning - "this file is read-only". However, it also has a tip on the next "using `!` can override this file. " This is because, you are actually writing a temp file into the system, then the system will delete the original file and create a new one. So you have permission to make the file read-only, but you don't have actual permission to change the permission settings under the system level. Many applications delete and create new files when edits are made, if your directory permissions are not secure. This can be a security concern. Therefore, the permission settings will be very important on the security system.
 
 
 
