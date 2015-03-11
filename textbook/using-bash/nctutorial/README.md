@@ -24,22 +24,22 @@ A short tutorial, on a very complicated and versatile tool.
 
  `netcat` and `telnet` both rely on the usage of computer networking ports. These are not physical ports on the computer (like USB or Ethernet), but they are virtual
  ports. Ports in computer networking allow programs on the computer to share
- information with each other, or with someone else over the internet. Think of it like a bucket with two people on each side. One person puts something in the bucket, and
- the other person takes the thing out. These explanations are vastly oversimplified, but they will do for our purposes. However, if you are interested in ports and their
+ information with each other or with someone else over the internet. Think of it like a bucket with two people on each side. One person puts something in the bucket and
+ the other person takes the thing out. This explanation is vastly oversimplified, but it will do for our purposes. However, if you are interested in ports and their
  role in the internet, you should look at these articles on [TCP](http://en.wikipedia.org/wiki/Transmission_Control_Protocol) and 
- [IP](http://en.wikipedia.org/wiki/Internet_Protocol). Another important note is port assignment. Many ports
+ [IP](http://en.wikipedia.org/wiki/Internet_Protocol). Another important note is the port assignment. Many ports
  are registered for specific programs, so we should not use them for our tests. Luckily most Linux kernels allow the ports in the range 32768 to 61000 to be used for a wide 
- variety of things, and are not bound to one program or process.
+ variety of things and are not bound to one program or process.
 
 ### Basic Usage
 
 To use the `netcat` command all you have to do is type `nc IPADDRESS PORT` at a terminal, where IPADDRESS is the IP you want to connect to, and PORT is the port number you
 want to connect to. For most of this tutorial, we will connect to our own computers. The IP address of our own computer is `127.0.0.1`, or more simply `localhost`. The port
 can be anything less than 2^16. Some common ports are are 22 for file transfers (SSH), 80 for internet browsers (HTTP), 443 for secure internet
-browsing (HTTP over SSL), and a fun one is 3724 for Xbox Live.
+browsing (HTTP over SSL), and, a fun one, 3724 for Xbox Live.
 
 If you type `nc localhost 32981` you probably will not see anything in the output. This is because `netcat` is going to that port, checking if anything is there, and
-returning. It will output what is on that port on the standard output. However, if you type `nc -l localhost 32981` it will appear as though your terminal has frozen. Let it 
+returning what it finds; It will output what is on that port on the standard output. However, if you type `nc -l localhost 32981` it will appear as though your terminal has frozen. Let it 
 go! It is fine. What you told `netcat` to do is to go to port 32981 and wait there until someone or something gives it some data. `-l` tells `netcat` to listen to a port, rather than try to connect to it. You cannot use this with the -p option. As soon as it receives the data, `netcat`
 will close. Now we can start looking at some optional features of `netcat` as well as some examples to illustrate them. When using the `-l` option, `netcat` will default
 to your default interfaces as shown by the `ifconfig` command.
@@ -49,25 +49,25 @@ to your default interfaces as shown by the `ifconfig` command.
 #### Chat System
 
 This is a VERY simple system, where you can talk to another terminal session open on your computer. What is the point of that you may ask? Well read on, and you just might
- learn how to do this with other computers on your network. However, I must tell you this is not encrypted. You are sending your mail unsealed through the internet, so
+ learn how to do this with other computers on your network. However, I must tell you that this is not encrypted. You are sending your mail unsealed through the internet, so
  anyone that wants to read it, and knows how, can do what they want.
 
- The first thing you will want to do is open up two terminal windows. One will act as the listener, and the other one will send the data. After the connection is
- established it will not matter who types; whatever is typed on the server will be sent to both computers.
+ The first thing you will want to do is open up two terminal windows. One will act as the listener, and the other will send the data. After the connection is
+ established it doesn't not matter who types it, whatever is typed on the server will be sent to both computers.
 
  Set up one window as the listener:
  ```
  nc -l 32981 # Or any port number you prefer above 32768!
  ```
- What this does is it tells `netcat` to listen to port 32981 (Or whatever) and it will print what it receives.
+ What this does is it tells `netcat` to listen to port 32981 (Or whatever) and print what it receives.
 
  On the other window, we will connect to the server:
  ```
  nc localhost 32981
  ```
 
- This window is now connected to the port, and you are free to transfer text between the two windows. You have a simple chat system! Yay! If you want to end the system, go
- ahead and just type CTRL-D on any window. CTRL-D sends an EOF character to `netcat`s standard input, which closes the standard input. Since there is no input to the server, it gets closed, and closes the connections to it. This is cool and all, but why not try it with different computers? This requires one more step. You need to [find](http://lifehacker.com/5833108/how-to-find-your-local-and-external-ip-address) the local IP of the listening computer. Once you have it, go ahead and do the following commands.
+ This window is now connected to the port and you are free to transfer text between the two windows. You now have a simple chat system! Yay! If you want to end the system, go
+ ahead and just type CTRL-D on any window. CTRL-D sends an EOF character to `netcat`s standard input, which closes the standard input. Since there is no input to the server, once it gets closed, it closes the connections to it. This is cool and all, but why not try it with different computers? This requires one more step. You need to [find](http://lifehacker.com/5833108/how-to-find-your-local-and-external-ip-address) the local IP of the listening computer. Once you have it, go ahead and do the following commands.
  ```
  nc -l 32981 # This should be on the same computer as the two window experiment
  ```
@@ -75,11 +75,11 @@ This is a VERY simple system, where you can talk to another terminal session ope
  ```
  nc LISTENERS-LOCAL-IP 32981
  ```
- And voila! You have a super dangerous to use, but still cool chat system. The only thing to remember is that the computers must be on the same network for this to work.
+ And voila! You have a super dangerous-to-use-but-still-cool chat system. The only thing to remember is that the computers must be on the same network for this to work.
 
 #### File Transfer
 
-This is another simple system that will show you how to transfer files with `netcat` as well as show you a little of piping with `netcat`. You will need two windows or two
+This is another simple system that will show you how to transfer files with `netcat` along with a little of bit of piping with `netcat`. You will need two windows or two
 computers like before. On one terminal, enter this:
 ```
 cat file | nc -l 32981
@@ -89,11 +89,11 @@ and waits until he sees someone else. Now the other window or computer will run 
 ```
 nc localhost 32981 > file # Where localhost can be the local IP address of the listener, if you are using two computers.
 ```
-With this command, you connect to port 32981 on the server computer, and you redirect what you find there into a file. A man shows up, takes what is in the bucket, and both
+With this command, you connect to port 32981 on the server computer and you redirect what you find there into a file. A man shows up, takes what is in the bucket, and both
 men leave. This command will close `netcat` on the server because we did not specify to keep the connection open. In order to keep the connection open, you would have to use
 the `-k` option. This option cannot be used with `-l`.
 This is a simple, but powerful example; you now know
-that you can "load up" the server, and that you can redirect the output to files. Of course if we did not redirect the output, the contents of the file would have been
+that you can "load up" the server and that you can redirect the output to files. Of course if we did not redirect the output, the contents of the file would have been
 printed to standard output instead.
 
 #### Port Scanning
@@ -117,7 +117,7 @@ Connection to localhost port 32981 [tcp/*] succeeded!
 You can also use the -v flag to get better output. 
 `-v` gives `netcat` verbose (lots of big words) output. 
 But you would know that if you read the flag section, right? So if nothing is listening on port 80, you can run your
-web server. But if you get output, that means something is running on that port, and you should close it before trying to make a web server.
+web server. But if you get output, that means something is running on that port and you should close it before trying to make a web server.
 
 Port scanning also works on domain names! Here is an example:
 ```
@@ -134,7 +134,7 @@ found 1 connections:
 Connection to google.com port 80 [tcp/http] succeeded!
 abarb014@nctutorial$ 
 ```
-`-w` specifies a timeout for `netcat`, and it has no purpose with the -l option. It must be immediately followed by a wait time in seconds. 
+`-w` specifies a timeout for `netcat` and it has no purpose with the -l option. It must be immediately followed by a wait time in seconds. 
 From the output, you can see the source IP and port, as well as the destination IP and
 port. I covered my IP and port for some security, but notice at the bottom it said the connection to google was a success! Yay! This is not as useful as checking your own
 ports, but you might be able to check for some open ports on the computers that serve a website you do not particularly like. You can find out more about that on some shadier
@@ -147,8 +147,8 @@ ahead and run a nice, quick `netcat`.
 #### Proxying and Port Forwarding
 
 Your internet router has one IP address that the
-world can use to talk to it. It assigns local IP addresses (like the one we found earlier) to the devices on your network, and it routes the internet traffic to whatever 
-device is requesting it, or being requested. Regular port forwarding means redirecting the requested port to a machine on the local network.
+world can use to talk to it. It assigns local IP addresses (like the one we found earlier) to the devices on your network and routes the internet traffic to whatever 
+device is requesting it or being requested. Regular port forwarding means redirecting the requested port to a machine on the local network.
 
 In this example, we will redirect requests from a port on our computer to a website.
 
@@ -157,7 +157,7 @@ This is done with the following command:
 nc -l 32981 | nc www.amazon.com 80
 ```
 What we are doing is making a `netcat` server on port 32981. Requests to that port will be piped (or forwarded) to the amazon.com webserver on port 80. Now if we go to a
-web browser and type `localhost:32981` in the address bar, nothing will happen! Why? Well, the first call to `netcat` makes the server, and the second one redirects the 
+web browser and type `localhost:32981` in the address bar, nothing will happen! Why? Well, the first call to `netcat` makes the server and the second one redirects the 
 request, but we are not doing anything with the reply from amazon! We can fix this with a two way pipe, or "named pipe". If you would like some more information on named
 pipes, I recommend you check out this [article](http://www.tldp.org/LDP/lpg/node15.html).
 
@@ -170,12 +170,12 @@ This time if you refresh the browser, we get output! Woo! This is because we red
 output from amazon to the pipe. We can read and write from this pipe, so not only do we get output from the browser, but we can send more input to get new webpages. Using
 this technique along with some crafty BASH scripting skills, you can make a small, very insecure webserver.
 
-This idea of sending web requests to one server, and having it make the request for you is called proxying. Say your favorite website was blocked at work, and you knew this
-trick. With some port forwarding on your router you could run this command using your favorite website (probably not amazon) on your home computer, and get access to it 
+This idea of sending web requests to one server and having it make the request for you is called proxying. Say your favorite website was blocked at work, and you know this
+trick. With some port forwarding on your router you could run this command using your favorite website (probably not amazon) on your home computer and get access to it 
 from work or school. For example, your school might block the hacking website [phrack.org](http://www.phrack.org), but you have access to it at home. It is no longer a
 problem for you with your newfound knowledge.
-The key is that your computer does not make the web request directly. It requests that another server make the request, and in the end you get the same 
-output. This is an incredibly basic proxy, but of course with some work and added code, you can build your very own proxy server, and now you have the knowledge to do so.
+The key is that your computer does not make the web request directly. It requests that another server make the request and, in the end, you get the same 
+output. This is an incredibly basic proxy, but with some work and added code, you can build your very own proxy server, and now you have the knowledge to do so.
 
 The same thing can be done, but instead of websites, with ports. If your company or school blocks a port for outgoing requests, then you can forward requests to that pipe to
 go through a different pipe. For example, port 80 is blocked. No matter! Simply use:
@@ -191,7 +191,7 @@ You would not cut a tree down with a spoon, right? We saw in the port scanning s
 might block usage of `netcat` because of the possibility of malicious actions with it. You might want a prompt to play around with rather than sending one whole chunk of
 commands to the server. In that case, you are probably better off using `telnet`. With named pipes and redirections running wild, the syntax for `netcat` might be a little
 too crazy for you, so you might be better off with a different version of `netcat` like `ncat`. Maybe you are more interested in breaking into systems and nothing else, then
-you might be interested in the Metasploit framework, or Wireshark to read those unencrypted chat sessions I taught you to make!
+you might be interested in the Metasploit framework or Wireshark to read those unencrypted chat sessions I taught you to make!
 
 Here is a link dump if you are interested in learning more about `netcat` or some of these other tools:
 
@@ -203,4 +203,3 @@ Here is a link dump if you are interested in learning more about `netcat` or som
 * [Metasploit Project](http://en.wikipedia.org/wiki/Metasploit_Project)
 * [Wireshark](http://en.wikipedia.org/wiki/Wireshark)
 * [Wiki for Packet Analyzers](http://en.wikipedia.org/wiki/Packet_analyzer)
-
