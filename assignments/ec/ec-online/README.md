@@ -24,3 +24,4 @@ You do not need to have created the account or earned the points during this qua
 
 4. If you submit something to the front page of [hacker news](http://news.ycombinator.com) that gets more than 30 upvotes, you will get 10 points extra credit.
 
+**IMPORTANT:** You may receive each extra credit only once.
