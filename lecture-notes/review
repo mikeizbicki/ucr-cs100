@@ -1,0 +1,31 @@
+what we've learned
+    * git / version control subversion, mercurial, darcs
+        * git not just for source code
+    * linux programming
+        * syscalls
+        * reading manpages
+    * other tools
+        * Makefiles
+        * gdb, valgrind, cppcheck
+
+
+what you need to do before graduating
+    * know 5 different programming languages
+        * imperative programming / procedural languages
+            * c/c++, Java, python, ruby, php, perl
+        * scripting languages
+            * python, ruby, php, perl, bash, matlab
+        * functional programming languages
+            * lisp, scheme, haskell
+        * web based languages:
+            * html/css/javascript, elm, coffeescript
+        * different
+            * SQL, VHDL
+        * AVOID AT ALL COSTS:
+            * languages not open source, swift, objective c
+
+    * resumes are not important
+        * what is your portfolio?
+        * what have actually done/built?
+
+
