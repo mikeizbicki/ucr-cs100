@@ -84,7 +84,7 @@ The result is:
 a, p, s, k, d, b, c
 ```
 ##default comparison function
-There are lots of default comparison function, such as greater<Type>、less<Type>. The 4th example is about how to sort a char array:
+There are lots of default comparison function, such as greater、less. The 4th example is about how to sort a char array by default comparison:
 ```
 #include <iostream>
 #include <algorithm>
@@ -103,19 +103,13 @@ int main()
 	for (int i = 0; i < strlen(array); ++i) 
 		cout << array[i] << ' ';
 	cout<<endl;
-	sort(array, array + elements,less_equal<char>());
-	for (int i = 0; i < strlen(array); ++i) 
-		cout << array[i] << ' ';
-	cout<<endl;
 	return 0;
 }
 ```
 The result is not in alphabetacally order, however.
 ```
 0 1 D Z a b c d k p s 
-s p k d c b a Z D 1 0 
-0 1 D Z a b c d k p s 
-
+s p k d c b a Z D 1 0
 ```
 ##write your own comparison function
 To get desired sequence, we need to write comparison function ourselves. Fistly, we look at comparison function in the 3rd example.
@@ -126,7 +120,8 @@ bool compare(const char p1, const char p2)//sort descendingly
 	else return false;
 }
 ```
-As is seen above, comparison function is a bool function that give an order between two inputs. Its return value is bool type. It returns true when the first input should be in the front in the sorted sequence. Otherwise, it returns false. In addition, valid comparison requires two const inputs. If you try to change their value, it could not pass compiler.
+As is seen above, comparison function is a bool function that give an order between two inputs. Its return value is bool type. It returns true when the first input should be in front of the second one in the sorted sequence. Otherwise, it returns false.
+The default less comparison function compares the ascii numbers of the two inputs and it returns true when the first one has a smaller ascii number than the second. In order to sort alphabetacally, we need to convert uppercase letter into lowercase. However, valid comparison requires two const inputs. If you try to change their value, it could not pass compiler.
 ```
 bool compare(char p1,char p2)
 {
@@ -144,7 +139,47 @@ tst.cpp: In function ‘bool compare(char, char)’:
 tst.cpp:10:5: error: invalid conversion from ‘const char*’ to ‘char’ [-fpermissive]
    p1="z";
      ^
-
 ```
+Thus, to change its value, you need to pass it to a new variable first.
+```
+#include <iostream>
+#include <algorithm>
+#include <string.h>
+using namespace std; 
 
+bool compare(const char p1,const char p2)
+{
+	char p3=p1;//p3 is not const
+	char p4=p2;//p4 is not const
+	if(p3>='A'&&p3<='Z')
+	{
+		p3=p3+'a'-'A';//change uppercase letter into lowercase letter
+	}
+	if(p4>='A'&&p4<='Z')
+	{
+		p4=p4+'a'-'A';
+	}
+	if (p3<p4) 
+		return true;
+	else 
+		return false;
+}
+
+int main() 
+{
+	char array[] = { 'a', 'p', 's', 'd', 'k', 'b', 'c','D','Z'};
+	int elements = strlen(array); 
+	sort(array, array + elements,compare);
+	for (int i = 0; i < strlen(array); ++i) 
+		cout << array[i] << ' ';
+	cout<<endl;
+	return 0;
+}
+```
+When you compare p3 and 'A', you compare the ascii numbers of 'p3' and 'A'. It is also true when you add or subtract between 'p3' and 'A'. After conversion, we compare 'p3' and 'p4'. The result looks like:
+```
+a b c d D k p s Z
+```
+##compare char array
+In our homework, we are required to compare two file names, which is char arrays. As is known, C or C++ use pointers to pass array.
  not only from an array, but also a vector or struct.
