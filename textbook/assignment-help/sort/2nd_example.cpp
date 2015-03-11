@@ -6,7 +6,7 @@ int main()
 {
 	char array[] = { 'a', 'p', 's', 'd', 'k', 'b', 'c'};
 	int elements = 3; 
-	sort(&array[3], &array[3] + elements);//This case only d, k, b are sorted, and others remain the same.
+	sort(&array[3], &array[3] + elements);//This case only d, k, b are sorted.
 	for (int i = 0; i < strlen(array); ++i) 
 		cout << array[i] << ' ';
 	cout<<endl;
