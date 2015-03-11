@@ -155,7 +155,7 @@ This error occurred because after you merged your commits, git thinks that you'r
 The `-f` flag stands for force. It's the same as a normal `git push` except the push is forced even if it results in a non-fast-forward merge.
 
 ##Resetting your forked repository when things go **BAD**
-Say you've made a commit to your forked repository that had A LOT of changes from the previous commit. And you realize later that your latest commit actually broke the program. Or say that while you were trying to squash commits, you made a mistake, and now you have even more commits or you didn't merge the commits you wanted. It can get really tricky to try to solve these types of problems. Sometimes, things just don't turn out the way you expect them to, and you want to go back to an earlier commit where things were nice and working. That's where the `git reset --hard` command comes in.
+Say you've made a commit to your forked repository that had A LOT of changes from the previous commit. And you realize later that your latest commit actually broke the program. Or say that while you were trying to squash commits, you made a mistake, and you now have even more commits or you didn't merge the commits you wanted. It can get really tricky to try to solve these types of problems. Sometimes, things just don't turn out the way you expect them to and you want to go back to an earlier commit where things were nice and working. That's where the `git reset --hard` command comes in.
 
 `git reset` by itself resets the commit history, but not the files. With the `--hard` option the files in the repository are also reset. If you want to revert your whole repository to an older commit, here are the steps:
 
