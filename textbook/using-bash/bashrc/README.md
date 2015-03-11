@@ -24,14 +24,14 @@ Customizing .bashrc for Fun and Profit
 
 <code>.bashrc</code> refers to the file that allows customization of [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29), and is located at <code>~/.bashrc</code> on Linux systems. Customizing <code>.bashrc</code> will allow you to be a more efficient programmer in the Unix environment, since you can easily create and modify your own custom commands, variables, and functions to your taste. 
 
-`.bashrc` is simply a Bash script that will run when Bash is started interactively. Its definitions will remain persistent throughout the existence of that shell. This guide will explore the process of customizing Bash through `.bashrc`, in order to create not just a workable, but enjoyable programming environment. 
+`.bashrc` is simply a Bash script that will run when Bash is started interactively. Its definitions will remain persistent throughout the existence of that shell. This guide will explore the process of customizing Bash through `.bashrc`, in order to create, not just a workable, but enjoyable programming environment. 
 
 Note: If you would rather not read a guide, and instead ~~steal~~ examine a custom `.bashrc` file that has been created with CS100 functionality in mind, check out the example `.bashrc` file located in this folder.
 
 <a name="basics"/>
 <h2>Syntax and Basics</h2>
 
-Before we delve into the possibilities, we should go over some basics of what we can user in `.bashrc` to create the file that we want. `~/.bashrc` is written in the Bash syntax. This language is very powerful, and is full of simple tools that will allow you to express complex commands succinctly. In the language, we find there are some constructs that will be useful to you in understanding and, more importantly, creating your own useful tools in Bash. Note that the `#` character denotes the comment symbol. Everything after a `#` will be ignored when entered as a command.
+Before we delve into the possibilities, we should go over some basics of what we can use in `.bashrc` to create the file that we want. `~/.bashrc` is written in the Bash syntax. This language is very powerful and is full of simple tools that will allow you to express complex commands succinctly. In the language, we find some constructs that will be useful to you in understanding and, more importantly, in creating your own useful tools in Bash. Note that the `#` character denotes the comment symbol. Everything after a `#` will be ignored when entered as a command.
 
 <a name="vars"/>
 <h4>Variables</h4>
@@ -46,7 +46,7 @@ Note that there are no spaces around `=` in the first statement. To assign varia
 
 Variables will be useful when we wish to work within our <code>.bashrc</code> file, as well as in the terminal itself. Variable substitution will always be of the form <code>#{var}</code>. There are many more syntactical options in Bash, which are covered quickly and succinctly [here](http://www.cheat-sheets.org/saved-copy/shellcheatsheet.pdf).
 
-Variables in <code>.bashrc</code> are also important since some are predefined to interact with your shell. For instance, <code>echo $HOME</code> in the terminal will show you what the tilde is interpreted to - that is - your home directory. To make Bash always feel like <code>$HOME</code>, you can simply change the value of the environment variable on the command line, in this form:
+Variables in <code>.bashrc</code> are also important since some are predefined to interact with your shell. For instance, <code>echo $HOME</code> in the terminal will show you what the tilde is interpreted to - that is - your home directory. To make Bash always feel like <code>$HOME</code>, you can simply change the value of the environment variable on the command line into this form:
 
     $ HOME=/your/proffered/path
     $ echo $HOME                    # prints /your/preferred/path
@@ -56,12 +56,12 @@ Note that this lasts only for the duration of the shell.
 
 <a name="funcs"/>
 <h4>Functions</h4>
-[Functions](http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-8.html) in bash scripts can help break up code logically. They follow a simple syntax. Consider the following code, which will change the current working directory to the specified directory on Bash startup:
+[Functions](http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-8.html) in bash scripts can help to split up code,logically. They follow a simple syntax. Consider the following code, which will change the current working directory into the specified directory on Bash startup:
 
     take_me_home () { cd /your/preferred/path; }
     take_me_home
 
-`take_me_home` is a function. Functions in Bash are similar to those in programming languages you may have used before already, such as C or Java. After defining the function, you can call it wherever you like within the file simply by invoking its title, as above. Should you wish to use arguments passed to the function, call them in order with `$1, $2, $3`, and so on. In this particular code, Bash will, on startup, take you directly to the directory you specify in <code>take_me_home()</code>.  What's more, you can now call `take_me_home` anywhere in your shell, and it will always take you to the specified directory!
+`take_me_home` is a function. Functions in Bash are similar to those in programming languages you may have used before already, such as C or Java. After defining the function, you can call it wherever you like within the file simply by invoking its title, as above. Should you wish to use the arguments passed into the function, call them in order with `$1, $2, $3`, and so on. In this particular code, Bash will, on startup, take you directly to the directory you specify in <code>take_me_home()</code>.  What's more, you can now call `take_me_home` anywhere in your shell and it will always take you to the specified directory!
 
 <a name="finally"/>
 <h2>The Point of All This</h2>
@@ -77,7 +77,7 @@ Now that you know a few things about Bash scripting syntax, it's time to get int
     me $ PS1="$ "
     $                                # a very minimal example
     
-In `.bashrc`, we can alter `PS1` and all spawned instances of Bash by writing `export PS1="\$ ";` in `.bashrc`. Since it will run on Bash startup, your user prompt will always be whatever you set it to in that line.
+In `.bashrc`, we can alter `PS1` and all spawned instances of Bash by writing `export PS1="\$ ";` in `.bashrc`. Since it will run on Bash startup, your user prompt will always be whatever you set it to be in that line.
 
 Particularly useful escape sequences to use for `PS1` customization include:
 
@@ -152,7 +152,7 @@ Bash has color features based on [ANSI escape codes](http://en.wikipedia.org/wik
     
     NC="\e[m"               # Color Reset
     
-Using these, we may more easily use colors, without having to think in terms of confusing brackets and numbers. Consider, for example, constructing this function, which reminds you, in haiku form, of your frailty:
+Using these, we may have an easier time useing colors, without having to think in terms of confusing brackets and numbers. Consider, for example, constructing this function, which reminds you, in haiku form, of your frailty:
 
     function _exit
     {
@@ -165,7 +165,7 @@ This function will be called when we exit Bash, since we trap the `EXIT` signal 
     $ /bin/bash
     $ exit              # enlightenment awaits
     
-These colors can be similarly used on the command line, or in any scripts you may write. Let us say, for instance, that you wished to color the output of the `pwd` command. You could simply define a function, and call it whenever you wish to have the altered output. For instance:
+These colors can be similarly used on the command line, or in any scripts you may write. Let us say, for instance, that you wished to color the output of the `pwd` command. You could simply define a function and call it whenever you wish to have the altered output. For instance:
 
     red_pwd {
         echo -e "${Red}`pwd`${NC}"
@@ -198,12 +198,12 @@ This concept is extensible to many more useful customizations. The following, mo
         tar -cvzf $1 $files
     }
     
-The first function finds and extracts all `.tgz` files in the current directory. The second function tars all files in the current directory, and gives them a name specified by the first argument to the function `$1`. Here you can see the power of functions. With just a few lines of code, you can create functions of huge timesaving value.
+The first function finds and extracts all `.tgz` files in the current directory. The second function tars all files in the current directory and gives them a name specified by the first argument to the function `$1`. Here you can see the power of functions. With just a few lines of code, you can create functions of huge timesaving value.
 
 <a name="git"/>
 <h2>Git Branch Prompt Information</h2>
 
-If you are familiar with the `hammer` server within UCR's CS department, you may have noticed that the prompt behaves a certain way when inside of a git repository, by displaying the current branch information. It turns out that doing that is actually fairly simple, and can even be expanded to be slightly cooler! Consider the following additions to `.bashrc`:
+If you are familiar with the `hammer` server within UCR's CS department, you may have noticed that the prompt behaves a certain way when inside of a git repository, by displaying the current branch information. It turns out that doing that is actually fairly simple and can even be expanded to be slightly cooler! Consider the following additions to `.bashrc`:
 
     # print the branch name for git
     function git_branch_pun_intended {
@@ -214,11 +214,11 @@ If you are familiar with the `hammer` server within UCR's CS department, you may
     export GIT_PS1_SHOWDIRTYSTATE=yes
     export PS1="\$(git_branch_pun_intended)${PS1}";
     
-The function definition simply gets the name of the branch and formats it slightly, such that it lies flush with the terminal window edge. The next segment sets a variable called `GIT_PS1_SHOWDIRTYSTATE` which appends a `*` to the branch name if there are changes in the repository, and a `+` to the branch name if there are additions staged and ready for commit within the repository. This works for all folders and subfolders in any git repository. Note: If you happen to work with other version control systems, such as Mercurial, Subversion, or Bazaar, check out [this](http://blog.grahampoulter.com/2011/09/show-current-git-bazaar-or-mercurial.html) guide to get the same effect.
+The function definition simply gets the name of the branch and formats it slightly, such that it lies flush with the terminal window edge. The next segment sets a variable called `GIT_PS1_SHOWDIRTYSTATE` which appends a `*` to the branch name if there are changes in the repository and a `+` to the branch name if there are additions staged and ready for commit within the repository. This works for all folders and subfolders in any git repository. Note: If you happen to work with other version control systems, such as Mercurial, Subversion, or Bazaar, check out [this](http://blog.grahampoulter.com/2011/09/show-current-git-bazaar-or-mercurial.html) guide to get the same effect.
 
 <a name="conclusion"/>
 <h2>Conclusion</h2>
-Hopefully seeing this small primer has inspired you with some ideas of your own functionality to add to your Bash shell via `.bashrc`. To see an example Bash customization file (and hopefully add to it!), please look at the `.bashrc` file located in this directory, or start your own. Good luck!
+Hopefully seeing this small primer has inspired you with some ideas of your own functionality to add to your Bash shell via `.bashrc`. To see an example Bash customization file (and hopefully add to it!), please look at the `.bashrc` file located in this directory. Or, start your own file. Good luck!
 
 <a name="moar"/>
 <h2>Useful Resources</h2>
