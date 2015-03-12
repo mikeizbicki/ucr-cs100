@@ -494,7 +494,7 @@ It looks fine. Also, we have the same result as before:
 abc b bac dfp DFq ktw pab slm Z
 ```
 ##diffrence about these two versions
-These two versions have the same result. The first one calls the memory space `q2' and `q4` is just a nickname for us to operate the char array. The second reminds the system that although `q4` is just a pointer, nickname, it is allocated memory space manully by `malloc`, leading to necessarity to `free` the space at last. They both use same amout space to store the message.
+These two versions have the same result. The first one calls the memory space `q2` and `q4` is just a nickname for us to operate the char array. The second reminds the system that although `q4` is just a pointer, nickname, it is allocated memory space manully by `malloc`, leading to necessarity to `free` the space at last. They both use same amout space to store the message.
 
 The advantage of first version is that you do not need to free it. Therefore, you do not need to consider when to free. The advantage of second version is that you could allocate memory dynamically to save memory. To be more detailed, it looks alike:
 ```
