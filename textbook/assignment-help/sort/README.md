@@ -500,6 +500,6 @@ The advantage of first version is that you do not need to free it. Therefore, yo
 ```
 char *q4=(char*)malloc(strlen(p2)*sizeof(char));
 ```
-The disadvantages is the opposite.
+The disadvantages are the opposite.
 
 In conclusion, `malloc` and `free` makes system work efficient while you need to consider when to free memory carefully. Using only char array without `malloc` is easy to use but inefficient. As the program increases, dynamic memory allocation saves lots of space. But it is also more difficult for you to decide when to free. Just like the olding saying that every coin has two sides, it is up to you which version to use.
