@@ -1,6 +1,5 @@
-We often encounter situations that requires us to sort an array in a particular order in daily life. As is known, in CS 100, we are required to sort our file display alphabetacially in "ls" function. Instead of writing it ourselves, we could use the C++ Standard Library `sort` with less codes and higher efficiency.
-
-It takes two random-access iterators, the start and the end, as arguments and performs a comparison sort on the range of elements between the two iterators, front-inclusive and end-exclusive: [start, end). The sort function is included from the algorithm header of the C++ Standard Library, and carries three arguments: start value, end value and  Compare function. The third argument has default value - the "less-than" (<) operator to compare elements.
+We often encounter situations that requires us to sort an array in a particular order in daily life. As is known, in CS 100, we are required to sort our file display alphabetacially in "ls" function. Instead of writing it ourselves, we could use the C++ Standard Library `sort` with less codes and higher efficiency. Besides that, we would have some discussion about when to allocate char array pointer memory.
+`sort` takes two random-access iterators, the start and the end, as arguments and performs a comparison sort on the range of elements between the two iterators, front-inclusive and end-exclusive: [start, end). `sort` function is included from the algorithm header of the C++ Standard Library, and carries three arguments: start value, end value and  Compare function. The third argument has default value - the "less-than" (<) operator to compare elements.
 
 Sort is define as:
 ```
@@ -181,5 +180,89 @@ When you compare p3 and 'A', you compare the ascii numbers of 'p3' and 'A'. It i
 a b c d D k p s Z
 ```
 ##compare char array
-In our homework, we are required to compare two file names, which is char arrays. As is known, C or C++ use pointers to pass array.
+In our homework, we are required to compare two file names, which is char arrays.
+###accept char array
+Initial gusses seems like:
+```
+#include <iostream>
+#include <algorithm>
+#include <string.h>
+using namespace std; 
+int main() 
+{
+	char array[][10] = { "abc", "pab", "slm", "dfp", "ktw", "b", "bac","DFq","Z"};
+	int elements = 10; //number of example char array
+	sort(array, array+elements);
+	for (int i = 0; i < elements; ++i) 
+		cout << array[i] << ' ';
+	cout<<endl;
+	return 0;
+}
+```
+However, it would not pass compiler. In order to pass char array to compare, we need to use char array pointer. This is the 6th example. 
+```
+#include <iostream>
+#include <algorithm>
+#include <string.h>
+using namespace std; 
+
+int main() 
+{
+	char array[][10] = { "abc", "pab", "slm", "dfp", "ktw", "b", "bac","DFq","Z"};
+	int elements = 10; 
+	char *p[10];
+	for(int i=0;i<10;i++)
+	{
+		p[i]=array[i];
+	}
+	sort(p, p+elements);
+	for (int i = 0; i < elements; ++i) 
+		cout << array[i] << ' ';
+	cout<<endl;
+	return 0;
+}
+```
+The output looks like:
+```
+abc pab slm dfp ktw b bac DFq Z
+```
+The difference between initial guess and our 6th example is that we pass the pointer storing address in our example 6. sort accepts our char array, but there is no default comparison function to do that.
+###write comparison function
+Therefore, we try to write comparison function for alphabetacal order. At first, we should convert two arguments both into lowercase letters or uppercase letters. In order to do that we must assign them to two new char arrays, as two inputs are constant values.
+```
+bool compare(const char *p1, const char *p2)//sort alphabetically
+{
+	char q1[MAXLINE];
+	char q2[MAXLINE];
+	strcpy(q1,p1);
+	strcpy(q2,p2);
+	
+	char *q3;
+	q3=convert(q1);//convert q1 to lowercase letter
+
+	char *q4;
+	q4=convert(q2);//convert q1 to lowercase letter
+
+	if (strcmp(q3,q4)<0) //char array compare
+		return true;
+	else 
+		return false;
+}
+```
+Inside 'convert', we convert all the uppercase letters into lowercase letters by operating on elements' ascii number.
+```
+char* convert(char a[])
+{
+	for(int k=0;k<strlen(a);k++)
+	{
+		if((a[k]>='A'&&a[k]<='Z'))
+		{
+			a[k]=a[k]+'a'-'A';
+		}
+	}
+	char *q=&a[0];
+	return q;
+}
+```
+As is known, C or C++ use pointers to pass array. We return array pointer instead of array itself. 
  not only from an array, but also a vector or struct.
