@@ -11,7 +11,7 @@ custom (2)
 template <class RandomAccessIterator, class Compare>
   void sort (RandomAccessIterator first, RandomAccessIterator last, Compare comp);
 ```
-# Default(1) form
+#Sort default(1) form
 Here is a basic example for the 1st form:
 ```
 #include <iostream>
@@ -54,7 +54,7 @@ The result looks like:
 ```
 a, p, s, b, d, k, c
 ```
-#Custom (2) form
+#Sort custom (2) form
 Sort is powerful because we could use it to get a sequence by any particular rule. It accepts two elements in the range as arguments, and returns a value convertible to bool which indicates the order. This can either be a function pointer or a function object.
 ```
 #include <iostream>
@@ -273,16 +273,17 @@ As is known, C or C++ use pointers to pass array. We return array pointer instea
 #define MAXLINE 10
 using namespace std; 
 
-char* convert(char a[])//remain only a~z and 0~9
+char* convert(char *a)//remain only a~z and 0~9
 {
-	for(int k=0;k<strlen(a);k++)
-	{
-		if((a[k]>='A'&&a[k]<='Z'))
-		{
-			a[k]=a[k]+'a'-'A';
-		}
-	}
 	char *q=&a[0];
+	while(strcmp(a,"\0")!=0)
+	{
+		if((*a>='A'&&*a<='Z'))
+		{
+			*a=*a+'a'-'A';
+		}
+		a++;
+	}
 	return q;
 }
 
@@ -341,3 +342,133 @@ int main()
 	return 0;
 }
 ```
+This needs c++11 standard to compile. Use command like this:
+```
+$g++ -g -std=c++11 8_example.cpp 
+```
+The output is
+```
+5 10 100
+```
+We could also use `sort` to deal with struct. Initialization involves with standard c++11 features.
+```
+#include <iostream>
+#include <algorithm>
+using namespace std;
+struct data
+{
+	int a;
+	int b;
+	int c;
+}; 
+bool cmp(data x,data y)
+{
+	if(x.a!=y.a) return x.a<y.a;
+	if(x.b!=y.b) return x.b>y.b;
+	if(x.c!=y.c) return x.c>y.c;
+}
+void output(struct data tst)
+{
+	cout<<"a="<<tst.a<<" b="<<tst.b<<" c="<<tst.c<<endl;
+}
+int main()
+{
+	struct data tst[4];
+	tst[0]={3,4,2};
+	tst[1]={2,4,5};
+	tst[2]={2,5,5};
+	tst[3]={2,5,6};
+	cout<<"Before sort:"<<endl;
+	for(int i=0;i<4;i++)
+		output(tst[i]);
+	sort(tst,tst+4,cmp);
+	cout<<"After sort:"<<endl;
+	for(int i=0;i<4;i++)
+		output(tst[i]);
+	return 0;
+}
+```
+The result looks like:
+```
+Before sort:
+a=3 b=4 c=2
+a=2 b=4 c=5
+a=2 b=5 c=5
+a=2 b=5 c=6
+After sort:
+a=2 b=5 c=6
+a=2 b=5 c=5
+a=2 b=4 c=5
+a=3 b=4 c=2
+```
+#Char array memory allocation instruction
+Let us look at 7th example's comparison function again.
+```
+bool compare(const char *p1,const char *p2)//sort alphabetically
+{
+	char q1[MAXLINE];
+	char q2[MAXLINE];
+	strcpy(q1,p1);
+	strcpy(q2,p2);
+	
+	char *q3;
+	q3=convert(q1);
+
+	char *q4;
+	q4=convert(q2);
+
+	if (strcmp(q3,q4)<0) return true;
+	else return false;
+}
+```
+We use char arrray pointer without memory allocation and there is also no memory leak. Because the message that char array pointer points at is stored at its origin char array, there is no need to allocate another space for the pointer. In some sence, origin char array seems like a container. The message has already had a container for itself, and then it does not require new place for storage.
+##no origin char array
+What if there is no origin container? It means there is no origin char array. Then, you need to allocate some memory space to store the message and free it when you finish. Look at the 10th example to compare:
+```
+bool compare(const char *p1,const char *p2)//sort alphabetically
+{
+	char q1[MAXLINE];
+	//char q2[MAXLINE];
+	strcpy(q1,p1);
+	//strcpy(q2,p2);
+	
+	char *q3;
+	q3=convert(q1);
+
+	char *q4=(char*)malloc(MAXLINE*sizeof(char));//allocate memory to char array pointer
+	*q4=*p2;//pass p2 value to q4
+	q4=convert(q4);
+
+	if (strcmp(q3,q4)<0) 
+	{
+		free(q4);
+		return true;
+	}
+	else 
+	{
+		free(q4);
+		return false;
+	}
+}
+```
+We use `valgrind` to test:
+```
+==24216== HEAP SUMMARY:
+==24216==     in use at exit: 0 bytes in 0 blocks
+==24216==   total heap usage: 31 allocs, 31 frees, 310 bytes allocated
+==24216== 
+==24216== All heap blocks were freed -- no leaks are possible
+```
+It looks fine. Also, we have the same result as before:
+```
+abc b bac dfp DFq ktw pab slm Z
+```
+##diffrence about these two versions
+These two versions have the same result. The first one calls the memory space `q2' and `q4` is just a nickname for us to operate the char array. The second reminds the system that although `q4` is just a pointer, like nickname, it is allocated memory space manully by `malloc`, leading to necessarity to `free` the space at last. They both use same amout space to store the message.
+The advantage of first version is that you do not need to free it. Therefore, you do not need to consider when to free. The advantage of second version is that you could allocate memory dynamically to save memory. To be more detailed, it looks alike:
+```
+char *q4=(char*)malloc(strlen(p2)*sizeof(char));
+```
+The disadvantages is the opposite.
+
+In conclusion, `malloc` and `free` makes system work efficient while you need to consider when to free memory carefully. Using only char array without `malloc` is easy to use but inefficient.
