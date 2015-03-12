@@ -9,9 +9,18 @@ struct data
 }; 
 bool cmp(data x,data y)
 {
-	if(x.a!=y.a) return x.a<y.a;
-	if(x.b!=y.b) return x.b>y.b;
-	if(x.c!=y.c) return x.c>y.c;
+	if(x.a!=y.a)
+	{
+		return x.a<y.a;
+	}
+	else if(x.b!=y.b)
+	{
+		return x.b>y.b;
+	}
+	else
+	{
+		return x.c>y.c;
+	}
 }
 void output(struct data tst)
 {
