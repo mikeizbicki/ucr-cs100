@@ -1,4 +1,5 @@
 We often encounter situations that requires us to sort an array in a particular order in daily life. As is known, in CS 100, we are required to sort our file display alphabetacially in "ls" function. Instead of writing it ourselves, we could use the C++ Standard Library `sort` with less codes and higher efficiency. Besides that, we would have some discussion about when to allocate char array pointer memory.
+
 `sort` takes two random-access iterators, the start and the end, as arguments and performs a comparison sort on the range of elements between the two iterators, front-inclusive and end-exclusive: [start, end). `sort` function is included from the algorithm header of the C++ Standard Library, and carries three arguments: start value, end value and  Compare function. The third argument has default value - the "less-than" (<) operator to compare elements.
 
 Sort is define as:
@@ -30,9 +31,9 @@ int main()
 ```
 The output is:
 ```
-10, 0, 5, 23
+-10, 0, 5, 23
  ```
-In fact, sort function sorts the successive array from the start address to the end address. Thus, it could be usde to sort only part of an array.
+In fact, sort function sorts the successive array from the start address to the end address. Thus, it could be used to sort only part of an array.
 ```
 #include <iostream>
 #include <algorithm>
@@ -71,7 +72,7 @@ int main()
 {
 	char array[] = { 'a', 'p', 's', 'd', 'k', 'b', 'c'};
 	int elements = 3;
-	sort(&array[3], &array[3] + elements,compare);
+	sort(&array[3], &array[3] + elements,compare);//This case only d, k, b are sorted.
 	for (int i = 0; i < strlen(array); ++i)
 		cout << array[i] << ' ';
 	cout<<endl;
@@ -179,7 +180,7 @@ When you compare p3 and 'A', you compare the ascii numbers of 'p3' and 'A'. It i
 ```
 a b c d D k p s Z
 ```
-##compare char array
+##compare char arrays
 In our homework, we are required to compare two file names, which is char arrays.
 ###accept char array
 Initial gusses seems like:
@@ -249,7 +250,7 @@ bool compare(const char *p1, const char *p2)//sort alphabetically
 		return false;
 }
 ```
-Inside 'convert', we convert all the uppercase letters into lowercase letters by operating on elements' ascii number.
+Inside `convert`, we convert all the uppercase letters into lowercase letters by operating on elements' ascii number.
 ```
 char* convert(char a[])
 {
@@ -264,5 +265,79 @@ char* convert(char a[])
 	return q;
 }
 ```
-As is known, C or C++ use pointers to pass array. We return array pointer instead of array itself. 
- not only from an array, but also a vector or struct.
+As is known, C or C++ use pointers to pass array. We return array pointer instead of array itself. Thus, our final sort function looks like:
+```
+#include <iostream>
+#include <algorithm>
+#include <string.h>
+#define MAXLINE 10
+using namespace std; 
+
+char* convert(char a[])//remain only a~z and 0~9
+{
+	for(int k=0;k<strlen(a);k++)
+	{
+		if((a[k]>='A'&&a[k]<='Z'))
+		{
+			a[k]=a[k]+'a'-'A';
+		}
+	}
+	char *q=&a[0];
+	return q;
+}
+
+bool compare(const char *p1,const char *p2)//sort alphabetically
+{
+	char q1[MAXLINE];
+	char q2[MAXLINE];
+	strcpy(q1,p1);
+	strcpy(q2,p2);
+	
+	char *q3;
+	q3=convert(q1);
+
+	char *q4;
+	q4=convert(q2);
+
+	if (strcmp(q3,q4)<0) return true;
+	else return false;
+}
+
+
+int main() 
+{
+	char array[][10] = { "abc", "pab", "slm", "dfp", "ktw", "b", "bac","DFq","Z"};
+	int elements = 9; 
+	char *p[10];
+	for(int i=0;i<9;i++)
+	{
+		p[i]=array[i];
+	}
+	sort(p, p+elements,compare);
+	for (int i = 0; i < elements; ++i) 
+		cout << p[i] << ' ';
+	cout<<endl;
+	return 0;
+}
+```
+After you run it, the result seems like:
+```
+abc b bac dfp DFq ktw pab slm Z 
+```
+##sort other types
+`sort` not only applies to an array or arrays, but also a vector or struct. This is an example rewrited from wikipedia:
+```
+#include <iostream>
+#include <algorithm>
+#include <vector>
+using namespace std;
+int main() 
+{
+	vector<int> vec {10, 5, 100};
+	sort(vec.begin(), vec.end());
+	for (int i = 0; i < vec.size(); ++i) 
+		cout << vec[i] << ' ';
+	cout<<endl;
+	return 0;
+}
+```
