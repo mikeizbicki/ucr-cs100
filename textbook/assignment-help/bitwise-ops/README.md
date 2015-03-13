@@ -1,11 +1,12 @@
 ##Introduction to Bitwise Operators
 
-Hey you! Yea, you! Do you want to learn about bitwise operators? Well, it doesn't matter what you want because you're going to learn them anyway! And do you know why? It's so you can do stuff like this:
+Hey you! Yea, you! Do you want to learn about bitwise operators? Well, it doesn't matter what you want because you're going to learn them anyway! And do you know why? It's so you can use system calls like this:
 
 ```
  int fd = open("filename", O_WRONLY | O_APPEND, S_IRUSR | S_IWUSR);
 ```
-Whoa what's the vertical bar thing? That's the bitwise `OR` operator, one of the bitwise operators you will learn about! Here, we pass in multiple flags to the `open` [system call](http://linux.die.net/man/2/open). "But it only takes in 2 `int` values. How did you pass in more than one flag/macro each?" The secret is the `OR` operator: the `OR` operator combines the flags into one value that we then pass in. 
+
+Whoa what's the vertical bar thing? That's the bitwise `OR` operator, one of the bitwise operators you will learn about! Here, we pass in multiple flags to the `open` [system call](http://linux.die.net/man/2/open). While we won't cover more than just its argument flags in this tutorial, some cs100 students have done so already [here](../syscalls/fd.md)! Back to the observation! "But it only takes in 2 `int` values. How did you pass in more than one flag/macro each?" The secret is the `OR` operator: the `OR` operator combines the flags into one value that we then pass in. 
 
 But wait! Did you notice how `open` had `int` parameters? That's right, these flags and macros are nothing more than a bunch of integers! This means that we could actually just memorize the number for every single flag combination in every library. Then we wouldn't need to use bitwise operators! Of course, that's super impractical, which is why we have the bitwise operators. We just need to look up the macro names, and the bitwise operators can take care of the rest, no memorization needed. Let's get started!
 
