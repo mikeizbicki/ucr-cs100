@@ -27,3 +27,11 @@ In order to determine which method is fastest, you'll need to test them on a lar
 The deliverables for this lab are more complicated than for previous labs.  We want your `cp` program added to your `rshell` project on github.  Source code should go in the `src` folder, and the `Makefile` needs to be modified to build the `cp` program and put it in the `bin` folder.  This is the same setup we had for the `ls` command you wrote for homework. 
 
 There is one catch though: you are not allowed to commit the code to your own repository.  Your partner must fork your repo, commit the code, and issue a pull request making all the changes.  I want you to get practice contributing to other people's open source projects and having other people contribute to your own projects.
+
+##additional resources
+Read the man pages on `open()`, `read()`, `write()`, and `close()` for further information on manipulating file descriptors and buffers.
+
+Here is a complete list of resources created by previous cs100 students that might help with this lab:
+
+* [Syscalls on file descriptors](../../../textbook/assignment-help/syscalls/fd.md)
+* [Bitwise Operators](../../../textbook/assignment-help/bitwise-ops/README.md)
