@@ -241,16 +241,16 @@ NULL, 0, NULL)  = 13141
 ```
 
 The execution time is printed before each system call line `<#.######>`. 
-This can be useful in that you can distinguish between the same system calls, and pinpoint problems. For example, let's say one `open` oddly takes much longer than other `open`'s which could help you find a starting point for debugging a program.
+This can be useful in that you can distinguish between the same system calls, and pinpoint problems. For example, let's say one `open` oddly takes much longer than other `open`'s, which could help you find a starting point for debugging a program.
 
 
 We will next demonstrate how to isolate problems using strace.
 
 ###Using strace to find errors
 
-Let's try to use what we've learned so far to debug this really simple program, example2.cpp!
+Let's try to use what we've learned so far to debug this really simple program: example2.cpp!
 
-We compile the program and there are no errors. Awesome. But wait, when we run the program, it tells us something went wrong when it tried to open the input file.
+We compile the program and there are no errors. Awesome. But wait... when we run the program, the output tells us something went wrong when the terminal tried to open the input file.
 
 Let's try to debug it using strace:
 
@@ -259,7 +259,7 @@ $ g++ main.cpp  -o main.out
 $ strace ./main.out
 ```
 
-The output comes out to:
+The output comes out to be:
 
 ```
 execve("./main.out", ["./main.out"], [/* 68 vars */]) = 0
@@ -309,7 +309,7 @@ write(1, "Could not open input file.\n", 27Could not open input file.) = 27exit_
 +++ exited with 1 +++
 ```
 
-Since we know the program is having problems with opening our file, let's use `strace -e open` to pinpoint the open system call.
+Since we know the program is having problems with opening our file "data.dat", let's use `strace -e open` to pinpoint the open system call.
 
 ```
 $ strace -e open ./main.out
@@ -347,7 +347,7 @@ Could not open input file.
 ```
 
 So it turns out the program couldn't open the file because there was no "data.dat" to begin with!
-Let's say that we fix this by adding "data.dat", and compile the program with no problems. We run it, and there are no errors! 
+Let's say that we fix this by adding "data.dat" and compile the program with no problems. We run it, and there are no errors! 
 
 Even though the program works now, let's run strace to see the difference:
 
@@ -389,4 +389,6 @@ $ strace -o output.txt ./main.out
 
 If the output file does not already exist, then it will be created. If the file already exists, the contents of the file will be overwritten with the output of strace.
 
+#So... why strace?
 
+Because strace provides system call details, it is useful if a program is behaving unexpectedly (i.e. continually crashing, performance issues). For instance, in the example in which we were trying to open a program that didn't exist, strace is also much easier to use than code debuggers and is useful to system administrators.
