@@ -6,40 +6,6 @@ strace is a debugging tool that helps you trace the system calls of an executabl
 ###Using strace
 Let's first run strace without any flags to see what the output will typically look like.
 
-We'll use this example code:
-
-```
-#include <errno.h>
-#include <sys/types.h>
-#include <sys/wait.h>
-#include <iostream>
-
-using namespace std;
-
-int main() {
-	int pid = fork();
-
-	if(pid == -1) {
-		perror("fork");
-		exit(1);
-	}
-	else if(pid == 0) {
-		cout << "Hello, I am a child!" << endl;
-		exit(1);
-	}
-	else {
-		if(wait(0) == -1) {
-			perror("wait");
-			exit(1);
-		}
-		cout << "Hello, I am a parent!" << endl;
-	}
-
-	cout << endl;
-	return 0;
-}
-```
-
 In the terminal, run strace with this command:
 
 ```
@@ -274,39 +240,15 @@ NULL, 0, NULL)  = 13141
      0.000075 exit_group(0)             = ?
 ```
 
+The execution time is printed before each system call line `<#.######>`. 
+This can be useful in that you can distinguish between the same system calls, and pinpoint problems. For example, let's say one `open` oddly takes much longer than other `open`'s which could help you find a starting point for debugging a program.
+
 
 We will next demonstrate how to isolate problems using strace.
 
 ###Using strace to find errors
 
-Let's try to use what we've learned so far to debug this really simple program!
-
-```
-int main()
-{
-    string input = "data.dat";
-    string output = "output.dat";
-    
-    ifstream fin;
-    fin.open(input.c_str());
-    if (!fin)
-    {
-        cout << "Could not open input file." << endl;
-        return 1;
-    }
-    
-    ofstream fout;
-    fout.open(output.c_str());
-    if(!fout)
-    {
-        cout << "Could not open output file." << endl;
-        return 1;
-    }
-    fin.close();
-    fout.close();
-    return 0;
-}
-```
+Let's try to use what we've learned so far to debug this really simple program, example2.cpp!
 
 We compile the program and there are no errors. Awesome. But wait, when we run the program, it tells us something went wrong when it tried to open the input file.
 
@@ -342,125 +284,11 @@ mprotect(0x7f2e9c8e2000, 2093056, PROT_NONE) = 0
 mmap(0x7f2e9cae1000, 40960, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe5000) = 0x7f2e9cae1000
 mmap(0x7f2e9caeb000, 82976, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f2e9caeb000
 close(3)                                = 0
-open("~/.c9/local/lib/tls/x86_64/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-open("~/.c9/local/lib/tls/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-open("~/.c9/local/lib/x86_64/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-open("~/.c9/local/lib/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
-open("/lib/x86_64-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
-read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260*\0\0\0\0\0\0"..., 832) = 832
-fstat(3, {st_mode=S_IFREG|0644, st_size=90080, ...}) = 0
-mmap(NULL, 2185952, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f2e9c5e6000
-mprotect(0x7f2e9c5fc000, 2093056, PROT_NONE) = 0
-mmap(0x7f2e9c7fb000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x15000) = 0x7f2e9c7fb000
-close(3)                                = 0
-open("~/.c9/local/lib/tls/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-open("~/.c9/local/lib/tls/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-open("~/.c9/local/lib/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-open("~/.c9/local/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
-open("/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
-read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\320\37\2\0\0\0\0\0"..., 832) = 832
-fstat(3, {st_mode=S_IFREG|0755, st_size=1845024, ...}) = 0
-mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f2e9cd10000
-mmap(NULL, 3953344, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f2e9c220000
-mprotect(0x7f2e9c3dc000, 2093056, PROT_NONE) = 0
-mmap(0x7f2e9c5db000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bb000) = 0x7f2e9c5db000
-mmap(0x7f2e9c5e1000, 17088, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f2e9c5e1000
-close(3)                                = 0
-open("~/.c9/local/lib/tls/x86_64/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-open("~/.c9/local/lib/tls/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-open("~/.c9/local/lib/x86_64/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-open("~/.c9/local/lib/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
-open("/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
-read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\20V\0\0\0\0\0\0"..., 832) = 832
-fstat(3, {st_mode=S_IFREG|0644, st_size=1071552, ...}) = 0
-mmap(NULL, 3166568, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f2e9bf1a000
-mprotect(0x7f2e9c01f000, 2093056, PROT_NONE) = 0
-mmap(0x7f2e9c21e000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x104000) = 0x7f2e9c21e000
-close(3)                                = 0
-mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f2e9cd0f000
-mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f2e9cd0d000
-arch_prctl(ARCH_SET_FS, 0x7f2e9cd0d780) = 0
-mprotect(0x7f2e9c5db000, 16384, PROT_READ) = 0
-mprotect(0x7f2e9c21e000, 4096, PROT_READ) = 0
-mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f2e9cd0c000
-mprotect(0x7f2e9cae1000, 32768, PROT_READ) = 0
-mprotect(0x601000, 4096, PROT_READ)     = 0
-mprotect(0x7f2e9cd22000, 4096, PROT_READ) = 0
-munmap(0x7f2e9cd11000, 58676)           = 0
-brk(0)                                  = 0x15b7000
-brk(0x15d8000)                          = 0x15d8000
-open("data.dat", O_RDONLY)              = -1 ENOENT (No such file or directory)
-fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 1), ...}) = 0
-mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f2e9cd1f000
-write(1, "Could not open input file.\n", 27Could not open input file.
-) = 27
-exit_group(1)                           = ?
-+++ exited with 1 +++
-valeriechiou@cs12_assighnments:/home/ubuntu/workspace/assignment7 $ g++ main.cpp
-valeriechiou@cs12_assighnments:/home/ubuntu/workspace/assignment7 $ strace ./a.out
-execve("./a.out", ["./a.out"], [/* 68 vars */]) = 0
-brk(0)                                  = 0x12dd000
-access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
-mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f51b9be0000
-access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
-open("~/.c9/local/lib/tls/x86_64/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-open("~/.c9/local/lib/tls/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-open("~/.c9/local/lib/x86_64/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-open("~/.c9/local/lib/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
-fstat(3, {st_mode=S_IFREG|0644, st_size=58676, ...}) = 0
-mmap(NULL, 58676, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f51b9bd1000
-close(3)                                = 0
-access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
-open("/usr/lib/x86_64-linux-gnu/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = 3
-read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300\265\5\0\0\0\0\0"..., 832) = 832
-fstat(3, {st_mode=S_IFREG|0644, st_size=979056, ...}) = 0
-mmap(NULL, 3159072, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f51b96bc000
-mprotect(0x7f51b97a2000, 2093056, PROT_NONE) = 0
-mmap(0x7f51b99a1000, 40960, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe5000) = 0x7f51b99a1000
-mmap(0x7f51b99ab000, 82976, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f51b99ab000
-close(3)                                = 0
-open("~/.c9/local/lib/tls/x86_64/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-open("~/.c9/local/lib/tls/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-open("~/.c9/local/lib/x86_64/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-open("~/.c9/local/lib/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
-open("/lib/x86_64-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
-read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260*\0\0\0\0\0\0"..., 832) = 832
-fstat(3, {st_mode=S_IFREG|0644, st_size=90080, ...}) = 0
-mmap(NULL, 2185952, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f51b94a6000
-mprotect(0x7f51b94bc000, 2093056, PROT_NONE) = 0
-mmap(0x7f51b96bb000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x15000) = 0x7f51b96bb000
-close(3)                                = 0
-open("~/.c9/local/lib/tls/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-open("~/.c9/local/lib/tls/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-open("~/.c9/local/lib/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-open("~/.c9/local/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
-open("/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
-read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\320\37\2\0\0\0\0\0"..., 832) = 832
-fstat(3, {st_mode=S_IFREG|0755, st_size=1845024, ...}) = 0
-mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f51b9bd0000
-mmap(NULL, 3953344, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f51b90e0000
-mprotect(0x7f51b929c000, 2093056, PROT_NONE) = 0
-mmap(0x7f51b949b000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bb000) = 0x7f51b949b000
-mmap(0x7f51b94a1000, 17088, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f51b94a1000
-close(3)                                = 0
-open("~/.c9/local/lib/tls/x86_64/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-open("~/.c9/local/lib/tls/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-open("~/.c9/local/lib/x86_64/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-open("~/.c9/local/lib/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
-access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
-open("/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
-read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\20V\0\0\0\0\0\0"..., 832) = 832
-fstat(3, {st_mode=S_IFREG|0644, st_size=1071552, ...}) = 0
-mmap(NULL, 3166568, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f51b8dda000
-mprotect(0x7f51b8edf000, 2093056, PROT_NONE) = 0
-mmap(0x7f51b90de000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x104000) = 0x7f51b90de000
-close(3)                                = 0
+
+...
+...
+...
+
 mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f51b9bcf000
 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f51b9bcd000
 arch_prctl(ARCH_SET_FS, 0x7f51b9bcd780) = 0
@@ -551,7 +379,7 @@ open("output.dat", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 4
 +++ exited with 0 +++
 ```
 
-###Other Useful Flags
+###A Useful Flag
 
 Say that we want to save the strace output. To do this, all we need to do is run strace with the `-o` flag, followed by the name of the file to store the contents, and then the program.
 

@@ -5,19 +5,24 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
 	int pid = fork();
 
-	if(pid == -1) {
+	if(pid == -1)
+	{
 		perror("fork");
 		exit(1);
 	}
-	else if(pid == 0) {
+	else if(pid == 0)
+	{
 		cout << "Hello, I am a child!" << endl;
 		exit(1);
 	}
-	else {
-		if(wait(0) == -1) {
+	else
+	{
+		if(wait(0) == -1)
+		{
 			perror("wait");
 			exit(1);
 		}
