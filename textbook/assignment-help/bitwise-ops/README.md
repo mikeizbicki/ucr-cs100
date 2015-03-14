@@ -5,11 +5,14 @@ Hey you! Yea, you! Do you want to learn about bitwise operators? Well, it doesn'
 ```
  int fd = open("filename", O_WRONLY | O_APPEND, S_IRUSR | S_IWUSR);
 ```
-Whoa what's the vertical bar thing? That's the bitwise `OR` operator, one of the bitwise operators you will learn about! Here, we pass in multiple flags to the `open` [system call](http://linux.die.net/man/2/open). "But it only takes in 2 `int` values. How did you pass in more than one flag/macro each?" The secret is the `OR` operator: the `OR` operator combines the flags into one value that we then pass in. 
+Whoa what's the vertical bar thing? That's the bitwise `OR` operator, one of the bitwise operators you will learn about! Here, we pass in multiple flags to the `open` [system call](http://linux.die.net/man/2/open). "But it only takes in 2 `int` values. How did you pass in more than one flag/macro each?" The secret is the `OR` operator: the `OR` operator combines the flags into one value that we then pass in.
 
 But wait! Did you notice how `open` had `int` parameters? That's right, these flags and macros are nothing more than a bunch of integers! This means that we could actually just memorize the number for every single flag combination in every library. Then we wouldn't need to use bitwise operators! Of course, that's super impractical, which is why we have the bitwise operators. We just need to look up the macro names, and the bitwise operators can take care of the rest, no memorization needed. Let's get started!
 
-For bitwise operators, you're going to need more than just the regular decimal counting system. We'll assume you already know binary, but if you need a guide or refresher on binary, [click on me!](http://www.mathisfun.com/binary-number-system.html) However, binary is also rarely used in these bit calculations. Thus, we'll need to learn the octal and the hexadecimal number systems too. Don't worry, we'll teach you those!
+For bitwise operators, you're going to need more than just the regular decimal
+counting system. We'll assume you already know binary, but if you need a guide
+or refresher on binary, click  [here!](http://www.mathisfun.com/binary-number-system.html) or [here](https://github.com/Anthony1234567/Cplusplus14-standard/blob/master/examples/src/binaryliteralsexample.cpp)
+Although, binary is used in these bit calculations,  we'll need to learn the octal and the hexadecimal number systems too. Don't worry, we'll teach you those!
 
 
 ##Practical Uses
@@ -20,7 +23,7 @@ Earlier, we learned that `OR` is able to store multiple flags into a single valu
 
 ```
  #include <fcntl.h>
- #include <sys/stat.h> 
+ #include <sys/stat.h>
 
  struct stat buf;
  int fd = open("filename", O_RDONLY);
@@ -31,8 +34,8 @@ Earlier, we learned that `OR` is able to store multiple flags into a single valu
 		cout << "filename is a directory" << endl;
 	}
  }
-``` 
-Here, we want to check if `filename` is a directory or not, which we can used the macro `S_IFDIR` to do. Utilizing bitwise `AND`, we are able to see if the value holding all the flags, `buf.st_mode`, contains `S_IFDIR`. If it does, then we know it's a directory! 
+```
+Here, we want to check if `filename` is a directory or not, which we can used the macro `S_IFDIR` to do. Utilizing bitwise `AND`, we are able to see if the value holding all the flags, `buf.st_mode`, contains `S_IFDIR`. If it does, then we know it's a directory!
 
 Of course, we'll go more into detail on `AND` later on, but hopefully you've grasped that bitwise operators aren't something that you'll stop using. As long as you're coding in C/C++, you're bound to use these operators often!
 
@@ -40,9 +43,9 @@ Of course, we'll go more into detail on `AND` later on, but hopefully you've gra
 
 ####Octal
 
-Octal is the base-8 number system, which means its digits can only have 8 different values, ranging from 0 to 7. This means that whenever a digit exceeds 7, we must carry over the value to the next digit. 
+Octal is the base-8 number system, which means its digits can only have 8 different values, ranging from 0 to 7. This means that whenever a digit exceeds 7, we must carry over the value to the next digit.
 
-For example: 
+For example:
 
 ```
    17
@@ -78,13 +81,13 @@ Hexadecimal is a little more difficult to see, compared to decimal, octal, and b
 
 Note that to represent a hexadecimal value in C++, we precede it with `0x`!
 ```
-	  0x9		  0xA		  0x1F 
+	  0x9		  0xA		  0x1F
 	+ 0x1		+ 0x3		+ 0x11
 	----		----		-----
 	  0xA		  0xD		  0x30
 ```
 
-And to convert it to a decimal number, we use the same method as in octal, only we multiply by 16<sup>n</sup> instead! 
+And to convert it to a decimal number, we use the same method as in octal, only we multiply by 16<sup>n</sup> instead!
 
 ```
  Given 0x26
@@ -102,7 +105,7 @@ Looking back at the two examples we gave for `OR` and `AND`, you can see we util
  #define O_APPEND	0x0008
  #define O_CREAT	0x0200
 ```
-[Take a look at the other values!](http://unix.superglobalmegacorp.com/Net2/newsrc/sys/fcntl.h.html) 
+[Take a look at the other values!](http://unix.superglobalmegacorp.com/Net2/newsrc/sys/fcntl.h.html)
 
 Right away, we've seen that there was a point to learning these number systems. We can read the bits of these values! This sets us up to be able to do the bitwise operations on these values, and we'll finally be able to know the full picture behind the two examples.
 
@@ -204,19 +207,38 @@ The truth table for the OR operation is:
 
 Now, let's use the bitwise OR operator on a pair of octal values!
 
+We'll separate the digits using the newly added C++14 digit separators in order to make the numbers easier to read.
+More on digit separators can be found [here](https://github.com/Anthony1234567/Cplusplus14-standard/blob/master/examples/src/digitseparatorsexample.cpp).
+
 ```
-    074 | 064 
+    074 | 064
 
-    First, let's use the bit representations:
+    First, let's use the binary representations:
 
-    111 100
-  | 110 100		
+    111'100
+  | 110'100
   ---------
-    111 100
+    111'100
 
     //Now, converting it back to octal:
     = 074
     Therefore, 074 | 064 = 074
+```
+
+Here is the smame calculation on different Binary values
+```
+		0b110110 | 0b111100
+
+		In this case the number is in the form we want it:
+
+		  110'110
+    | 111'100
+    --------
+			111'110
+
+			//Now, converting it to octal we get
+			= 076
+			Therefore, 066 | 074 = 076
 ```
 
 That's the basics of Bitwise OR! Now, with that understood, let's look back at the very first line we gave you:
@@ -235,27 +257,27 @@ Using the macros defined earlier (We'll rewrite them):
   ------
     1001
     = 0x0009
- 
+
  #define S_IRUSR 0000400
  #define S_IWUSR 0000200
 
     (S_IRUSR | S_IWUSR) == (0000400 | 0000200)
-    100 000 000
-  | 010 000 000
+    100'000'000
+  | 010'000'000
   -------------
-    110 000 000
-    = 0000600 
+    110'000'000
+    = 0000600
 ```
 
 So, as our calculations show, we could actually rewrite our example as:
 ```
  int fd = open("filename", 0x0009, 0000600);
 ```
-Like we mentioned earlier, we could just pass in these numbers. But that's a huge hassle, since we can just look up the names associated with each value and use `OR`. But now you've seen how the bitwise `OR` truly works with the flags! 
+Like we mentioned earlier, we could just pass in these numbers. But that's a huge hassle, since we can just look up the names associated with each value and use `OR`. But now you've seen how the bitwise `OR` truly works with the flags!
 
 ####Bitwise AND
 
-The bitwise AND operator is a single ampersand: `&`. Bitwise AND works the same way the logical AND works! However, rather than operating only two boolean variables, the bitwise AND operates on every bit pair between the two given values! 
+The bitwise AND operator is a single ampersand: `&`. Bitwise AND works the same way the logical AND works! However, rather than operating only two boolean variables, the bitwise AND operates on every bit pair between the two given values!
 
 The usage of bitwise AND is:
 
@@ -265,7 +287,7 @@ expression & expression
 
 The truth table for the AND operation is:
 
-			
+
 <TABLE ALIGN="center">
 	<TR>
 		<TH>a</TH>
@@ -289,11 +311,11 @@ The truth table for the AND operation is:
 		<TD>1</TD>
 	</TR>
 </TABLE>
-			
+
 For example, lets bitwise AND the decimal values 5 and 9:
 
 ```
-    5 & 9 //Use & on their bit representations
+    5 & 9 //Use & on their binary representations
 
     0101  // 5
  &  1001  // 9
@@ -309,17 +331,17 @@ Thus, `5 & 9 = 1`. Pretty simple right? Good! Now let's try it on the example fr
 Let's assume that `buf.st_mode` has a value of 0100644. Now, using what we know about `S_IFDIR`:
 ```
     (buf.st_mode & S_IFDIR) == (0100644 & 0040000)
-    001 000 000 110 100 100
-  & 000 100 000 000 000 000
+    001'000'000'110'100'100
+  & 000'100'000'000'000'000
   ---------------------
-    000 000 000 000 000
+    000'000'000'000'000
     = 0000000
 ```
 We receive a resulting value of 0, our file is NOT a directory! However, can we determine what kind of file this is? Let's try a different macro this time:
 ```
     (buf.st_mode & S_IFREG) == (0100644 & 0100000)
-    001 000 000 110 100 100
-  & 001 000 000 000 000 000
+    001'000'000'110'100'100
+  & 001'000'000'000'000'000
   -------------------------
     001 000 000 000 000 000
     = 0100000
@@ -366,12 +388,12 @@ The truth table for the XOR operation is:
 
 Looks like it's time for another example! Let’s perform the XOR operation on 015 and 023:
 ```
-    015 ^ 023 //Ah yes, use their bit representations!
+    015 ^ 023 //Ah yes, use their binary representations!
 
-    001 101
-  ^ 010 011
+    001'101
+  ^ 010'011
   ---------
-    011 110 //And convert it back! Woohoo!
+    011'110 //And convert it back! Woohoo!
     = 036
 
     Therefore, 015 ^ 023 = 036!
@@ -380,10 +402,10 @@ There isn't much daily use for the `XOR` operator. However, as far as we've foun
 ```
     036 ^ 023
 
-    011 110
-  ^ 010 011
+    011'110
+  ^ 010'011
   ---------
-    001 101
+    001'101
     = 015
 ```
 We got the same value as before! If you use `XOR` with the same value twice, you'll receive the value you originally had! So we could potentially `XOR` a value with many different numbers to encrypt them and then `XOR` them again to decrypt them! However, security systems generally use number encryptions instead of bit encryptions, so you won't find much use. But it's still good information to have!
@@ -401,23 +423,23 @@ expression<<value
 Now, let's do the operations on the 8-bit representation of 1! Remember what the 8-bit representation for 1 is? That's okay you can scroll all the way back up to find out! But because we're nice guys, we'll show it right here: '0000 0001'. You're welcome. Anyway, let's see what shifting left once looks like:
 
 ```
- Given 0000 0001 (1)
+ Given 0000'0001 (1)
  1<<1 evaluates to
- 0000 0010 (2)
+ 0000'0010 (2)
 ```
 
 Notice how that one bit on the far right moved to the left? And then a 0 was added to where it once was? That's how left shifting works! Let's do some more examples!
 
 ```
  Base Value: 1 = 0000 0001
- 1<<0 = 0000 0001 (1) That's right! You can still left-shift by 0! 
- 1<<2 = 0000 0100 (4)
- 1<<3 = 0000 1000 (8)
- 1<<4 = 0001 0000 (16)
+ 1<<0 = 0000'0001 (1) That's right! You can still left-shift by 0!
+ 1<<2 = 0000'0100 (4)
+ 1<<3 = 0000'1000 (8)
+ 1<<4 = 0001'0000 (16)
  .
  .
  .
- 1<<7 = 1000 0000 (128)
+ 1<<7 = 1000'0000 (128)
 ```
 
 There we go. Super simple! Also notice how that values are doubling? That's what left-shifting essentially does! It doubles the size of your value! Of course, this operator doesn't have much value in C++, as we can just multiply by two. But it's nice to have in mind!
@@ -438,18 +460,18 @@ And here's some right-shift in action:
 
 ```
  Base Value: 128 = 1000 0000
- 128>>0 = 1000 0000 (128)
- 128>>1 = 0100 0000 (64)
- 128>>2 = 0010 0000 (32)
- 128>>3 = 0001 0000 (16)
+ 128>>0 = 1000'0000 (128)
+ 128>>1 = 0100'0000 (64)
+ 128>>2 = 0010'0000 (32)
+ 128>>3 = 0001'0000 (16)
  .
  .
  .
- 128>>7 = 0000 0001 (1)
+ 128>>7 = 0000'0001 (1)
 ```
 
 ##Conclusion
 
 You've finally made it! You now know about all the bitwise operators! While you may not be comfortable with octal, hexadecimal, and the operators yet, don't worry! There's a lot of time to get used to them through practice, such as doing sample calculations like we did in our examples. Also, test a lot of these operators in whatever IDE you'd like and output them! That way you can see them in action yourself! (Don't forget that the output is usually in decimal though!)
 
-Hope you enjoyed this tutorial! 
+Hope you enjoyed this tutorial!
