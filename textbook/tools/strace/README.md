@@ -389,6 +389,6 @@ $ strace -o output.txt ./main.out
 
 If the output file does not already exist, then it will be created. If the file already exists, the contents of the file will be overwritten with the output of strace.
 
-#So... why strace?
+###So... why strace?
 
 Because strace provides system call details, it is useful if a program is behaving unexpectedly (i.e. continually crashing, performance issues). For instance, in the example in which we were trying to open a program that didn't exist, strace is also much easier to use than code debuggers and is useful to system administrators.
