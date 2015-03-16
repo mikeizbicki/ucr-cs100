@@ -1,8 +1,8 @@
-We often encounter situations that requires us to sort an array in a particular order in daily life. As is known, in CS 100, we are required to sort our file display alphabetacially in "ls" function. Instead of writing it ourselves, we could use the C++ Standard Library `sort` with less codes and higher efficiency. Besides that, we would have some discussion about char array pointer memory allocation.
+We often encounter situations that require us to sort an array in a particular order. In CS 100, we are required to sort our file display alphabetacially by "ls" function. Instead of writing it ourselves, we could use the C++ Standard Library `sort` with less codes and higher efficiency. Besides, we can have some discussions about the char array pointer memory allocation.
 
-`sort` takes two random-access iterators, the start and the end, as arguments and it performs a compare sort on the range of elements between the two iterators, front-inclusive and end-exclusive: [start, end). `sort` function is included from the algorithm header of the C++ Standard Library, and carries three arguments: start value, end value and  Compare function. The third argument has default value - the "less-than" (<) operator to compare elements.
+`sort` takes two random-access iterators, the start and the end. As arguments and it performs a compare sort on the range of elements between the two iterators, front-inclusive and end-exclusive: [start, end). `sort` function is included from the algorithm header of the C++ Standard Library, and carries three arguments: the start value, the end value, and  the compare function. The third argument has a default value - the "less-than" (<) operator to compare elements.
 
-`sort` is define as:
+`sort` is defined as:
 ```
 default (1)
 template <class RandomAccessIterator>
@@ -33,7 +33,7 @@ The output is:
 ```
 -10, 0, 5, 23
  ```
-It sorts all the elemets between the start and end. In fact, `sort` sorts all successive array from the start address to the end address. Thus, it could be used to sort only part of an array.
+It sorts all the elements between from start to end. In fact, `sort` goes over all successive arraries from the start address to the end address. Thus, it could be used to sort only some parts of an array.
 ```
 #include <iostream>
 #include <algorithm>
@@ -54,8 +54,8 @@ The result looks like:
 ```
 a, p, s, b, d, k, c//This case only d, k, b are sorted.
 ```
-#Sort(2)- custom form
-`sort` is powerful because we could have any particular order with compare function, which can either be a function pointer or a function object. Compare function accepts two elements in the range as arguments and returns a value convertible to bool which indicates the order. This is example 3, partial sort with compare function: 
+#Sort(2)- custom forms
+`sort` is powerful because we can have any particular orders with compare function. It can be either a function pointer or a function object. Compare function accepts two elements in the range as arguments and returns a value convertible to boolen which indicates the order. This is the example 3, partial sort with compare function: 
 ```
 #include <iostream>
 #include <algorithm>
@@ -84,7 +84,7 @@ The result is:
 a, p, s, k, d, b, c
 ```
 ##default compare function
-There are lots of default compare function in standard library, such as greater、less with different types. The 4th example is about how to sort a char array by default:
+There are lots of default compare functions in standard library, such as greater、less with different types. The 4th example is about how to sort a char array by default:
 ```
 #include <iostream>
 #include <algorithm>
@@ -112,7 +112,7 @@ The result is not in alphabetacally order but acsii order, however.
 s p k d c b a Z D 1 0
 ```
 ##write your own alphabetacal compare function
-To get desired sequence, we need to write compare function ourselves. Fistly, we look at compare function. The default `<` compares the ascii numbers of the two inputs and it returns true when the first one has a smaller ascii number than the second.
+To get desired sequence, we need to write compare functions ourselves. Fistly, we should look at compare function. The default `<` compares the ascii numbers with the two inputs and it returns true when the first one has a smaller ascii number than the second one.
 ```
 bool compare(const char p1, const char p2)//sort descendingly
 {
@@ -120,9 +120,9 @@ bool compare(const char p1, const char p2)//sort descendingly
 	else return false;
 }
 ```
-It returns true when the first input should be put in front of the second one in the sorted sequence. Otherwise, it returns false.
+It returns true when the first input should be put in the front of the second one in the sorted sequence. Otherwise, it returns false.
 ###convert input
-In order to sort alphabetacally, we need to convert uppercase letter into lowercase. However, valid compare requires two const inputs. If you try to change their value, it could not pass compiler.
+In order to sort alphabetacally, we need to convert uppercase letter into lowercase. However, valid comparation requires two const inputs. If you try to change their value, it could not pass compiler.
 ```
 bool compare(char p1,char p2)
 {
@@ -141,7 +141,7 @@ tst.cpp:10:5: error: invalid conversion from ‘const char*’ to ‘char’ [-f
    p1="z";
      ^
 ```
-Although we do not anounce input arguments constant, `sort` makes it default. Thus, to change its value, you need to pass it to a new variable first.
+Although we do not announce input arguments constant, `sort` makes it default. Thus, in order to change its value, you need to pass it to a new variable first.
 ```
 bool compare(const char p1,const char p2)
 {
@@ -150,7 +150,7 @@ bool compare(const char p1,const char p2)
 	...
 }
 ```
-When you compare p3 and 'A', you compare the ascii numbers of 'p3' and 'A'. It is also true when you add or subtract between 'p3' and 'A'.
+When you look at p3 and 'A', you should compare the ascii numbers with 'p3' and 'A'. It is also true when 'p3' plus or minus 'A'.
 ```
 bool compare(const char p1,const char p2)
 {
@@ -210,7 +210,7 @@ The result looks like:
 a b c d D k p s Z
 ```
 ##Sort char arrays
-In our homework, we are required to compare two file names, which is char arrays.
+In our homework, we are required to compare two file names, which are char arrays.
 ###pass char array
 Initial gusses seems like:
 ```
@@ -222,7 +222,7 @@ int main()
 	...
 }
 ```
-However, it would not pass compiler. In order to pass char array to compare, we need to give char addres to char array pointer. This is the 6th example:
+However, it would not pass compiler. In order to pass char array to compare function, we need to give char address to char array pointer. This is the 6th example:
 ```
 #include <iostream>
 #include <algorithm>
@@ -245,14 +245,14 @@ int main()
 	return 0;
 }
 ```
-The difference between initial guess and our 6th example is that we pass the pointer storing address in our example 6. sort accepts our char array.
+The difference between initial guess and our 6th example are the ones we passed the pointer storing address in our example 6. sort accepts our char array.
 The output looks like:
 ```
 abc pab slm dfp ktw b bac DFq Z
 ```
-It seems that there is no default compare function to sort char arrays, so we write one ourselves.
+It seems that there are no default compare functions to sort char arrays, so we write one ourselves.
 ###char arrays compare function
-We try to write compare function for alphabetacal order. At first, we should convert two arguments both into lowercase letters or uppercase letters. In order to do that we must assign them to two new char arrays, as input arguments are constant values.
+We try to write compare function for alphabetacal order. At first, we should convert both two arguments into lowercase or uppercase letters. In order to do that, we must assign them to two new char arrays; at the time the input arguments are constant values.
 ```
 bool compare(const char *p1, const char *p2)//sort alphabetically
 {
@@ -271,7 +271,7 @@ bool compare(const char *p1, const char *p2)//sort alphabetically
 		return false;
 }
 ```
-Inside `convert`, we convert all the uppercase letters into lowercase letters by operating on elements' ascii number.
+Inside `convert`, we convert all the uppercase letters into lowercase ones by operating on elements' ascii number.
 ```
 char* convert(char a[])
 {
@@ -286,7 +286,7 @@ char* convert(char a[])
 	return q;
 }
 ```
-As is known, C or C++ use pointers to pass array. We return array pointer instead of array itself. Thus, our final sort function looks like:
+As we can see, C or C++ use pointers to pass array. We return the array pointer instead of the array itself. Thus, our final sort function looks like:
 ```
 #include <iostream>
 #include <algorithm>
@@ -363,7 +363,7 @@ int main()
 	return 0;
 }
 ```
-This needs c++11 standard to compile. Use command like this:
+This needs c++11 standard to compile. Use the command like this:
 ```
 $g++ -g -std=c++11 8_example.cpp 
 ```
@@ -371,7 +371,7 @@ The output is
 ```
 5 10 100
 ```
-For struct, we have another example. Initialization involves with standard c++11 features, so compile it with `-std=c++11`.
+For struct, we now have another example. Initialization involves standard c++11 features, so compile it with `-std=c++11`.
 ```
 #include <iostream>
 #include <algorithm>
@@ -451,7 +451,7 @@ bool compare(const char *p1,const char *p2)//sort alphabetically
 	else return false;
 }
 ```
-We use char arrray pointer without memory allocation and there is no memory leak. Because the message is stored at its origin char array, there is no need to allocate another space for the pointer. In some sence, origin char array seems like a container. The message has already had a container for itself, and then it does not require new place for storage.
+We use char arrray pointers without memory allocation and there is no memory leak. Because the message is stored at its origin char array, there is no need to allocate another space for the pointer. In some sence, origin char array seems like a container. The message already had a container for itself, and then it does not require new place for storage.
 ##no origin char array
 What if there is no origin container? It means there is no origin char array. Then, you need to allocate some memory space to store the message and free it when you finish. Look at the 10th example to compare:
 ```
@@ -494,12 +494,12 @@ It looks fine. Also, we have the same result as before:
 abc b bac dfp DFq ktw pab slm Z
 ```
 ##diffrence about these two versions
-These two versions have the same result. The first one calls the memory space `q2` and `q4` is just a nickname for us to operate the char array. The second reminds the system that although `q4` is just a pointer, nickname, it is allocated memory space manully by `malloc`, leading to necessarity to `free` the space at last. They both use same amout space to store the message.
+These two versions have the same result. In the first program, `q4` is just a nickname for us to operate the char array, and `q2`stores it . In the second one, `q4` is allocated memory space manully by `malloc` to store it. The `malloc` would necessarily come with the `free` at last. They both use the same amount of space to store the message.
 
-The advantage of first version is that you do not need to free it. Therefore, you do not need to consider when to free. The advantage of second version is that you could allocate memory dynamically to save memory. To be more detailed, it looks alike:
+The advantage of first version is that you do not need to free it. Therefore, you do not need to consider when to free it. The advantage of second version is that you could allocate memory dynamically to save memory. To be more detailed, it looks like:
 ```
 char *q4=(char*)malloc(strlen(p2)*sizeof(char));
 ```
 The disadvantages are the opposite.
 
-In conclusion, `malloc` and `free` makes system work efficient while you need to consider when to free memory carefully. Using only char array without `malloc` is easy to use but inefficient. As the program increases, dynamic memory allocation saves lots of space. But it is also more difficult for you to decide when to free. Just like the olding saying that every coin has two sides, it is up to you which version to use.
+In conclusion, `malloc` and `free` make the system work efficient while you need to consider when to free memory carefully. Using only char array without `malloc` is easy but inefficient. As the data increases, dynamic memory allocation saves lots of spac, but it also makes it more difficult for you to decide when to free memory. Just like the olding saying goes: "every coin has two sides". It is up to you to descide which version to use.
