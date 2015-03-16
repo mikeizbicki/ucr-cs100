@@ -1,6 +1,6 @@
-We often encounter situations that require us to sort an array in a particular order. In CS 100, we are required to sort our file display alphabetacially by "ls" function. Instead of writing it ourselves, we could use the C++ Standard Library `sort` with less codes and higher efficiency. Besides, we can have some discussions about the char array pointer memory allocation.
+We often encounter situations that require us to sort an array in a particular order. In CS 100, we are required to sort our file display alphabetacially by "ls" function. Instead of writing it ourselves, we could use the C++ Standard Library `sort` with less codes and higher efficiency. Besides, we discusses the char array pointer memory allocation.
 
-`sort` takes two random-access iterators, the start and the end. As arguments and it performs a compare sort on the range of elements between the two iterators, front-inclusive and end-exclusive: [start, end). `sort` function is included from the algorithm header of the C++ Standard Library, and carries three arguments: the start value, the end value, and  the compare function. The third argument has a default value - the "less-than" (<) operator to compare elements.
+`sort` takes two random-access iterators, the start and the end. It performs a sort on the range of elements between the two iterators, front-inclusive and end-exclusive: [start, end). `sort` function is included from the algorithm header of the C++ Standard Library, and carries three arguments: the start value, the end value, and  the compare function. The third argument has a default value - the "less-than" (<) operator to compare elements.
 
 `sort` is defined as:
 ```
