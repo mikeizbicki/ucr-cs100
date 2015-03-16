@@ -50,7 +50,7 @@ int main()
 	return 0;
 }
 ```
-The result looks like:
+The result may look like:
 ```
 a, p, s, b, d, k, c//This case only d, k, b are sorted.
 ```
@@ -245,7 +245,6 @@ int main()
 	return 0;
 }
 ```
-The difference between initial guess and our 6th example are the ones we passed the pointer storing address in our example 6. sort accepts our char array.
 The output looks like:
 ```
 abc pab slm dfp ktw b bac DFq Z
