@@ -14,20 +14,8 @@ template <class RandomAccessIterator, class Compare>
 #Sort(1)- default form
 Here is a basic example for default form:
 ```
-#include <iostream>
-#include <algorithm>
-using namespace std;
-int main()
-{
 	int array[] = { 23, 5, -10, 0};//This is the array need to be sorted
-	int elements = sizeof(array) / sizeof(array[0]);//There are 4 intergers in the array
-	sort(array, array + elements);//The array is sorted and stored in the origin space
-					// If you also want to keep the origin one, do not forget to store it first!
-	for (int i = 0; i < elements; ++i)
-		cout << array[i] << ' ';
-	cout<<endl;
-	return 0;
-}
+	sort(array, array + 4);//The array is sorted and stored in the origin space
 ```
 The output is:
 ```
@@ -35,20 +23,9 @@ The output is:
  ```
 It sorts all the elements between from start to end. In fact, `sort` goes over all successive arraries from the start address to the end address. Thus, it could be used to sort only some parts of an array.
 ```
-#include <iostream>
-#include <algorithm>
-#include <string.h>
-using namespace std;
-int main()
-{
 	char array[] = { 'a', 'p', 's', 'd', 'k', 'b', 'c'};
 	int elements = 3;
 	sort(&array[3], &array[3] + elements);//sort between the 4th element and the 6th
-	for (int i = 0; i < 7; ++i)
-		cout << array[i] << ' ';
-	cout<<endl;
-	return 0;
-}
 ```
 The result may look like:
 ```
@@ -57,11 +34,6 @@ a, p, s, b, d, k, c//This case only d, k, b are sorted.
 #Sort(2)- custom forms
 `sort` is powerful because we can have any particular orders with compare function. It can be either a function pointer or a function object. Compare function accepts two elements in the range as arguments and returns a value convertible to boolen which indicates the order. This is the example 3, partial sort with compare function: 
 ```
-#include <iostream>
-#include <algorithm>
-#include <string.h>
-using namespace std;
-//partial sort with compare function
 bool compare(const char p1,const char p2)//sort descendingly
 {
 	if (p1>p2) return true;
