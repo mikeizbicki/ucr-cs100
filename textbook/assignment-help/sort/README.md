@@ -32,51 +32,23 @@ The result may look like:
 a, p, s, b, d, k, c//This case only d, k, b are sorted.
 ```
 #Sort(2)- custom forms
-`sort` is powerful because we can have any particular orders with compare function. It can be either a function pointer or a function object. Compare function accepts two elements in the range as arguments and returns a value convertible to boolen which indicates the order. This is the example 3, partial sort with compare function: 
+`sort` is powerful because we can have any particular orders with compare function. It can be either a function pointer or a function object. Compare function accepts two elements in the range as arguments and returns a value convertible to boolen which indicates the order. This is the example of compare function: 
 ```
 bool compare(const char p1,const char p2)//sort descendingly
 {
 	if (p1>p2) return true;
 	else return false;
 }
-
-int main()
-{
-	char array[] = { 'a', 'p', 's', 'd', 'k', 'b', 'c'};
-	int elements = 3;
-	sort(&array[3], &array[3] + elements,compare);//This case only d, k, b are sorted.
-	for (int i = 0; i < 7; ++i)
-		cout << array[i] << ' ';
-	cout<<endl;
-	return 0;
-}
-```
-The result is:
-```
-a, p, s, k, d, b, c
 ```
 ##default compare function
-There are lots of default compare functions in standard library, such as greater、less with different types. The 4th example is about how to sort a char array by default:
-```
-#include <iostream>
-#include <algorithm>
-#include <string.h>
-using namespace std; 
+There are lots of default compare functions in standard library, such as greater、less with different types. 
 
-int main() 
-{
+The 4th example is about how to sort a char array by default:
+```
 	char array[] = { 'a', 'p', 's', 'd', 'k', 'b', 'c', 'D','Z','1','0'}; 
-	cout <<elements<<endl;
-	sort(array, array + elements,less<char>());
-	for (int i = 0; i < 7; ++i) 
-		cout << array[i] << ' ';
-	cout<<endl;
-	sort(array, array + elements,greater<char>());
-	for (int i = 0; i < 7; ++i) 
-		cout << array[i] << ' ';
-	cout<<endl;
-	return 0;
-}
+	sort(array, array + 11,less<char>());//default compare function with less char 
+	...
+	sort(array, array + 11,greater<char>());//default compare function with less char
 ```
 The result is not in alphabetacally order but acsii order, however.
 ```
@@ -84,7 +56,9 @@ The result is not in alphabetacally order but acsii order, however.
 s p k d c b a Z D 1 0
 ```
 ##write your own alphabetacal compare function
-To get desired sequence, we need to write compare functions ourselves. Fistly, we should look at compare function. The default `<` compares the ascii numbers with the two inputs and it returns true when the first one has a smaller ascii number than the second one.
+To get desired sequence, we need to write compare functions ourselves. 
+
+Fistly, we should look at compare function. The default `<` compares the ascii numbers with the two inputs and it returns true when the first one has a smaller ascii number than the second one.
 ```
 bool compare(const char p1, const char p2)//sort descendingly
 {
@@ -98,12 +72,9 @@ In order to sort alphabetacally, we need to convert uppercase letter into lowerc
 ```
 bool compare(char p1,char p2)
 {
-	if (p1>p2)
-	{
-		p1="z";//p1 is changed, which is incompatible with compiler.
-		return true;
-	}
-	else return false;
+	...
+	p1="z";//p1 is changed, which is incompatible with compiler.
+	...
 }
 ```
 When you compile, it looks like:
@@ -128,61 +99,16 @@ bool compare(const char p1,const char p2)
 {
 	...
 	if(p3>='A'&&p3<='Z')
-		{
-			p3=p3+'a'-'A';//change uppercase letter into lowercase letter
-		}
-		if(p4>='A'&&p4<='Z')
-		{
-			p4=p4+'a'-'A';
-		}
-		if (p3<p4) 
-			return true;
-		else 
-			return false;
-}
-```
-
-To conclude, the whole program looks like:
-```
-#include <iostream>
-#include <algorithm>
-#include <string.h>
-using namespace std; 
-
-bool compare(const char p1,const char p2)
-{
-	char p3=p1;//p3 is not const
-	char p4=p2;//p4 is not const
-	if(p3>='A'&&p3<='Z')
 	{
 		p3=p3+'a'-'A';//change uppercase letter into lowercase letter
 	}
-	if(p4>='A'&&p4<='Z')
-	{
-		p4=p4+'a'-'A';
-	}
-	if (p3<p4) 
-		return true;
-	else 
-		return false;
+	...
 }
+```
 
-int main() 
-{
-	char array[] = { 'a', 'p', 's', 'd', 'k', 'b', 'c','D','Z'};
-	int elements = strlen(array); 
-	sort(array, array + elements,compare);
-	for (int i = 0; i < 7; ++i) 
-		cout << array[i] << ' ';
-	cout<<endl;
-	return 0;
-``` 
-The result looks like:
-```
-a b c d D k p s Z
-```
 ##Sort char arrays
 In our homework, we are required to compare two file names, which are char arrays.
+
 ###pass char array
 Initial gusses seems like:
 ```
@@ -196,25 +122,15 @@ int main()
 ```
 However, it would not pass compiler. In order to pass char array to compare function, we need to give char address to char array pointer. This is the 6th example:
 ```
-#include <iostream>
-#include <algorithm>
-#include <string.h>
-using namespace std; 
-
-int main() 
-{
 	char array[][10] = { "abc", "pab", "slm", "dfp", "ktw", "b", "bac","DFq","Z"};
 	int elements = 10; 
 	char *p[10];
-	for(int i=0;i<10;i++)
+	for(int i=0;i<10;i++)//give array address to pointer
 	{
 		p[i]=array[i];
 	}
 	sort(p, p+elements);
-	for (int i = 0; i < elements; ++i) 
-		cout << array[i] << ' ';
-	cout<<endl;
-	return 0;
+	...
 }
 ```
 The output looks like:
@@ -222,117 +138,48 @@ The output looks like:
 abc pab slm dfp ktw b bac DFq Z
 ```
 It seems that there are no default compare functions to sort char arrays, so we write one ourselves.
+
 ###char arrays compare function
-We try to write compare function for alphabetacal order. At first, we should convert both two arguments into lowercase or uppercase letters. In order to do that, we must assign them to two new char arrays; at the time the input arguments are constant values.
+
+We try to write compare function for alphabetacal order. 
+
+At first, we should convert both two arguments into lowercase or uppercase letters. In order to do that, we must assign them to two new char arrays.
 ```
 bool compare(const char *p1, const char *p2)//sort alphabetically
 {
 	char q1[MAXLINE];
-	char q2[MAXLINE];
-	strcpy(q1,p1);
-	strcpy(q2,p2);
+	strcpy(q1,p1);//copy input array p1 into another argument q1
 	char *q3;
 	q3=convert(q1);//convert q1 to lowercase letter
-	char *q4;
-	q4=convert(q2);//convert q1 to lowercase letter
-
-	if (strcmp(q3,q4)<0) //char array compare
-		return true;
-	else 
-		return false;
+	...
 }
 ```
 Inside `convert`, we convert all the uppercase letters into lowercase ones by operating on elements' ascii number.
 ```
-char* convert(char a[])
-{
-	for(int k=0;k<strlen(a);k++)
+	if((a[k]>='A'&&a[k]<='Z'))
 	{
-		if((a[k]>='A'&&a[k]<='Z'))
-		{
-			a[k]=a[k]+'a'-'A';
-		}
+		a[k]=a[k]+'a'-'A';
 	}
-	char *q=&a[0];
-	return q;
-}
 ```
-As we can see, C or C++ use pointers to pass array. We return the array pointer instead of the array itself. Thus, our final sort function looks like:
+As we can see, C or C++ use pointers to pass array. We return the array pointer instead of the array itself:
 ```
-#include <iostream>
-#include <algorithm>
-#include <string.h>
-#define MAXLINE 10
-using namespace std; 
-
 char* convert(char *a)//remain only a~z and 0~9
 {
 	char *q=&a[0];
-	while(strcmp(a,"\0")!=0)
-	{
-		if((*a>='A'&&*a<='Z'))
-		{
-			*a=*a+'a'-'A';
-		}
-		a++;
-	}
+	...
 	return q;
 }
-
-bool compare(const char *p1,const char *p2)//sort alphabetically
-{
-	char q1[MAXLINE];
-	char q2[MAXLINE];
-	strcpy(q1,p1);
-	strcpy(q2,p2);
-	
-	char *q3;
-	q3=convert(q1);
-
-	char *q4;
-	q4=convert(q2);
-
-	if (strcmp(q3,q4)<0) return true;
-	else return false;
-}
-
-
-int main() 
-{
-	char array[][10] = { "abc", "pab", "slm", "dfp", "ktw", "b", "bac","DFq","Z"};
-	int elements = 9; 
-	char *p[10];
-	for(int i=0;i<9;i++)
-	{
-		p[i]=array[i];
-	}
-	sort(p, p+elements,compare);
-	for (int i = 0; i < elements; ++i) 
-		cout << p[i] << ' ';
-	cout<<endl;
-	return 0;
-}
 ```
-After you run it, the result seems like:
+After you run  `"abc", "pab", "slm", "dfp", "ktw", "b", "bac","DFq","Z"`, the result seems like:
 ```
 abc b bac dfp DFq ktw pab slm Z 
 ```
+
 ##sort other types
 `sort` not only applies to an array or arrays, but also vectors or structs. This is an example of vector rewrited from wikipedia:
 ```
-#include <iostream>
-#include <algorithm>
-#include <vector>
-using namespace std;
-int main() 
-{
 	vector<int> vec {10, 5, 100};
 	sort(vec.begin(), vec.end());
-	for (int i = 0; i < vec.size(); ++i) 
-		cout << vec[i] << ' ';
-	cout<<endl;
-	return 0;
-}
 ```
 This needs c++11 standard to compile. Use the command like this:
 ```
@@ -344,9 +191,6 @@ The output is
 ```
 For struct, we now have another example. Initialization involves standard c++11 features, so compile it with `-std=c++11`.
 ```
-#include <iostream>
-#include <algorithm>
-using namespace std;
 struct data
 {
 	int a;
@@ -368,28 +212,23 @@ bool cmp(data x,data y)
 		return x.c>y.c;
 	}
 }
-void output(struct data tst)
-{
-	cout<<"a="<<tst.a<<" b="<<tst.b<<" c="<<tst.c<<endl;
-}
 int main()
 {
 	struct data tst[4];
+	sort(tst,tst+4,cmp);
+	cout<<"After sort:"<<endl;
+	...
+}
+```
+In this example, we sort struct by `.a` ascending order first, `.b` descending second and `.c` descending third. 
+We run our program on data 
+```
 	tst[0]={3,4,2};
 	tst[1]={2,4,5};
 	tst[2]={2,5,5};
 	tst[3]={2,5,6};
-	cout<<"Before sort:"<<endl;
-	for(int i=0;i<4;i++)
-		output(tst[i]);
-	sort(tst,tst+4,cmp);
-	cout<<"After sort:"<<endl;
-	for(int i=0;i<4;i++)
-		output(tst[i]);
-	return 0;
-}
 ```
-In this example, we sort struct by `.a` ascending order first, `.b` descending second and `.c` descending third. The result looks like:
+The result looks like:
 ```
 Before sort:
 a=3 b=4 c=2
@@ -408,18 +247,9 @@ Let us look at 7th example's compare function again.
 bool compare(const char *p1,const char *p2)//sort alphabetically
 {
 	char q1[MAXLINE];
-	char q2[MAXLINE];
 	strcpy(q1,p1);
-	strcpy(q2,p2);
-	
 	char *q3;
-	q3=convert(q1);
-
-	char *q4;
-	q4=convert(q2);
-
-	if (strcmp(q3,q4)<0) return true;
-	else return false;
+	...
 }
 ```
 We use char arrray pointers without memory allocation and there is no memory leak. Because the message is stored at its origin char array, there is no need to allocate another space for the pointer. In some sence, origin char array seems like a container. The message already had a container for itself, and then it does not require new place for storage.
@@ -428,28 +258,10 @@ What if there is no origin container? It means there is no origin char array. Th
 ```
 bool compare(const char *p1,const char *p2)//sort alphabetically
 {
-	char q1[MAXLINE];
-	//char q2[MAXLINE];
-	strcpy(q1,p1);
-	//strcpy(q2,p2);
-	
-	char *q3;
-	q3=convert(q1);
-
+	...
 	char *q4=(char*)malloc(MAXLINE*sizeof(char));//allocate memory to char array pointer
 	*q4=*p2;//pass p2 value to q4
-	q4=convert(q4);
-
-	if (strcmp(q3,q4)<0) 
-	{
-		free(q4);
-		return true;
-	}
-	else 
-	{
-		free(q4);
-		return false;
-	}
+	...
 }
 ```
 We use `valgrind` to test:
@@ -460,7 +272,7 @@ We use `valgrind` to test:
 ==24216== 
 ==24216== All heap blocks were freed -- no leaks are possible
 ```
-It looks fine. Also, we have the same result as before:
+It looks fine. Also, we may have the same result if we run it on the same char arrays:
 ```
 abc b bac dfp DFq ktw pab slm Z
 ```
