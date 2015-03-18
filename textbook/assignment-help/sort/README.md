@@ -216,7 +216,6 @@ int main()
 {
 	struct data tst[4];
 	sort(tst,tst+4,cmp);
-	cout<<"After sort:"<<endl;
 	...
 }
 ```
