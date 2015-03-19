@@ -503,7 +503,7 @@ done
 2. `chmod +x mk2`
 3. `cp mk2 /usr/bin/`
 
-Now all you have to do to run your newly created command is enter `mk2` [file] [directory 1] [directory 2]...
+Now all you have to do to run your newly created command is enter `mk2 [file] [directory 1] [directory 2]...`
 
 ##Conclusion
 By writing shell scripts and gaining more knowledge about shell scripts, it helps us to have a better understanding about cs100 and the Unix system. If you want to learn more advanced skills and more details about shell script, here is the link: http://linux.die.net/man/1/bash or http://linuxcommand.org/lc3_writing_shell_scripts.php
