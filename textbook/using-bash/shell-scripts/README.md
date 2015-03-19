@@ -12,21 +12,21 @@ echo 'Hello world!!!'
 
 There are three lines of code in the above script:
 
-* The last line is an echo command to show 'Hello world!!!'. It also works on the command line in the terminal:
+* The last line is an echo command to show `Hello world!!!`. It also works on the command line in the terminal:
 
 ```
 $ echo 'Hello world!!!'
 Hello world!!!
 ```
 
-* The second line is a comment, because it begins with '#'. Everything after '#' in the current command line will be ignored:
+* The second line is a comment, because it begins with `#`. Everything after `#` in the current command line will be ignored:
 
 ```
 $ echo 'Hello world!!!' #Our first script!!!
 Hello world!!!
 ```
 
-* We can see that every shell script includes the first line. It looks like a comment since it starts with '#'. However, it is created on purpose because it tells the system which interpreter (such as bash, ruby, python, and others) should be used to execute the followed script. For this script, it runs in the bash shell. And '#!' is a special character construct called shebang.
+* We can see that every shell script includes the first line. It looks like a comment since it starts with `#`. However, it is created on purpose because it tells the system which interpreter (such as bash, ruby, python, and others) should be used to execute the followed script. For this script, it runs in the bash shell. And `#!` is a special character construct called shebang.
 
 A shell script is a file containing a sequence of commands for a UNIX-based operating system. We also can consider each line of code of the script as a line of command in the terminal.
 
@@ -34,7 +34,7 @@ The following tutorial has two parts:
 
 ##Part 1: How to make your script become executable
 
-To successfully run our shell script, we need to make our script become executable. For the above "hello world" example, I save it as 'hello.sh'. For a shell script file, try to use the file extension as '.sh'. So it can be easily identified by us as shell script.
+To successfully run our shell script, we need to make our script become executable. For the above "hello world" example, I save it as `hello.sh`. For a shell script file, try to use the file extension as `.sh`. So it can be easily identified by us as shell script.
 
 There are two ways to execute a shell script:
 
@@ -50,14 +50,14 @@ $ ./hello.sh
 bash: ./hello.sh: Permission denied
 ```
 
-Here, if we want to check the permission of the file, we can use 'ls -l' command to check the details of the file:
+Here, if we want to check the permission of the file, we can use `ls -l` command to check the details of the file:
 
 ```
 $ ls -l hello.sh
 -rw------- 1 user group 35 Dec  4 04:40 hello.sh
 ```
 
-We can see that we only have 'rw', which means a reading and writing permission for the user. How do we add executing permission for the user? Luckily, we have the 'chmod' command to change the permission of the files:
+We can see that we only have `rw`, which means a reading and writing permission for the user. How do we add executing permission for the user? Luckily, we have the `chmod` command to change the permission of the files:
 
 ```
 $ chmod u+x hello.sh
@@ -65,7 +65,7 @@ $ ls -l hello.sh
 -rwx------ 1 user group 35 Dec  4 04:40 hello.sh
 ```
 
-Now we have 'x' added, which means executing permission has been given to the user. Let us execute this shell script again:
+Now we have `x` added, which means executing permission has been given to the user. Let us execute this shell script again:
 
 ```
 $ ./hello.sh
@@ -84,7 +84,7 @@ The following line of command shows how to define a variable:
 x="Hello"
 ```
 
-Bash does not allow us to leave a space on either side of '=' sign. The following will gives an error message:
+Bash does not allow us to leave a space on either side of `=` sign. The following will gives an error message:
 
 ```
 x = "Hello"
@@ -96,7 +96,7 @@ And we can access it as follows:
 $x
 ```
 
-We can also access our argument variables by using '$0', '$1', '$2',... The following script will show the value for those variables:
+We can also access our argument variables by using `$0`, `$1`, `$2`,... The following script will show the value for those variables:
 
 ```
 #!/bin/bash
@@ -123,7 +123,7 @@ d
 5
 ```
 
-'$#' represents the number of the total arguments. '$0' represents the first argument which is script itself. '$1' represents your first provided argument. Likewise, '$2' represents the second provided argument, '$3' represents the third provided argument, and etc.
+`$#` represents the number of the total arguments. `$0` represents the first argument which is script itself. `$1` represents your first provided argument. Likewise, `$2` represents the second provided argument, `$3` represents the third provided argument, and etc.
 
 There are also some preset variables in Unix, and you can use those variables in any other programs:
 
@@ -170,7 +170,7 @@ After a shell script is executed, it returns two types of exit statuses:
 
 * If the command is not successful, it returns a nonzero value in the range between 1 and 255;
 
-We can examine the exit status of your last command by using parameter '$?':
+We can examine the exit status of your last command by using parameter `$?`:
 
 ```
 $ true; echo $?
@@ -205,19 +205,19 @@ For more details, you can check this link: http://www.lehman.cuny.edu/cgi-bin/ma
 
 ###convert
 
-'convert' between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more. For example:
+`convert` between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more. For example:
 
 ```
 $ convert image.jpg image.png
 ```
 
-The above line changed the format of the image from '.jpg' to '.png'.
+The above line changed the format of the image from `.jpg` to `.png`.
 
 For more details, please check this link: http://linux.die.net/man/1/convert
 
 ###test
 
-Before I introduce the 'if' statement, I want to introduce the 'test' statement first, because it is often used with the 'if' statement to perform true/false decisions. The following example tests whether there are arguments provided:
+Before I introduce the `if` statement, I want to introduce the `test` statement first, because it is often used with the 'if' statement to perform true/false decisions. The following example tests whether there are arguments provided:
 
 ```
 #!/bin/bash
@@ -227,7 +227,7 @@ exit 1
 fi
 ```
 
-or you can just use "[ $# -eq 0 ]" instead of "test $# -eq 0":
+or you can just use `[ $# -eq 0 ]` instead of `test $# -eq 0`:
 
 ```
 #!/bin/bash
@@ -237,11 +237,11 @@ exit 1
 fi
 ```
 
-'-eq' is a test operator which means equal to. There is a summary for test operators in the man page, here is the link: http://linux.die.net/man/1/test
+`-eq` is a test operator which means equal to. There is a summary for test operators in the man page, here is the link: http://linux.die.net/man/1/test
 
 ###if
 
-Based on the exit status of the commands in the 'if' condition, the system can decide which commands to run. For example:
+Based on the exit status of the commands in the `if` condition, the system can decide which commands to run. For example:
 
 ```
 #!/bin/bash
@@ -259,13 +259,13 @@ echo "$1 is negative"
 fi
 ```
 
-For the first 'if', I already introduced that it decides whether there are provided arguments. For the second 'if', the condition is: if the first provided argument is greater than 0, then the command is echo "$1 is positive". Then 'elif' represents 'else if'. Finally, we use 'fi' to end this 'if/else' statement.
+For the first `if`, I already introduced that it decides whether there are provided arguments. For the second `if`, the condition is: if the first provided argument is greater than 0, then the command is echo "$1 is positive". Then `elif` represents `else if`. Finally, we use `fi` to end this `if/else` statement.
 
 For more details, please check this link: http://ss64.com/bash/if.html
 
 ###Loops
 
-There are three types of loops: 'while', 'until', and 'for'.
+There are three types of loops: `while`, `until`, and `for`.
 
 ####while
 
@@ -280,13 +280,13 @@ while [ $x -le 10 ]; do
 done
 ```
 
-At first, I set variable 'X' equal to 0; the condition of the 'while' loop is $X if it is less than or equal to 10. Then 'do' the commands. We use 'done' to finish the loop.
+At first, I set variable `X` equal to 0; the condition of the `while` loop is $X if it is less than or equal to 10. Then `do` the commands. We use `done` to finish the loop.
 
 For more details, please check this link: http://linux.die.net/man/1/while
 
 ####until
 
-In order to do the same work as 'while', the condition of 'until' is the reverse condition of 'while'. For example:
+In order to do the same work as `while`, the condition of `until` is the reverse condition of `while`. For example:
 
 ```
 #!/bin/bash
@@ -301,7 +301,7 @@ For more details, please check this link: http://bash.cyberciti.biz/guide/Until_
 
 ####for
 
-I will give an example for converting the format of images in the current directory from '.jpg' to '.png':
+I will give an example for converting the format of images in the current directory from `.jpg` to `.png`:
 
 ```
 #!/bin/bash
