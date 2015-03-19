@@ -288,19 +288,24 @@ This means that it doesn't  contain either changes from the local or remote repo
 These programs generally let you view all the files at once letting you visually inspect the code between them simultaneously.
 
 In this case vimdiff opens four windows with the bottom one being the actual file we are working on, the one we will want to save.
+
 ![vimdiff picture](images/vimdiff-squashed.png)
 
 You can see that this is the changes that we want to merge into our branch.
+
 ![vimdiff remote](images/vimdiff-remote.png)
 
 This is our current change we have in our repository.
+
 ![vimdiff local](images/vimdiff-local.png)
 
 This is what is common to both of the previous two.
+
 ![vimdiff base](images/vimdiff-base.png)
 
 This is the file we will want to save. 
 This file is the file that is being tracked by git already and we have modified.
+
 ![vimdiff save](images/vimdiff-save.png)
 
 Once you resolve these merge conflicts save the files and run git commit to finish the commit
