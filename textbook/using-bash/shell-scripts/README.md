@@ -499,9 +499,9 @@ do
 done
 ```
 
-1) Save this file
-2) `chmod +x yourScript`
-3) `cp yourScript /usr/bin/`
+1. Save this file
+2. `chmod +x yourScript`
+3. `cp yourScript /usr/bin/`
 
 Now all you have to do to run your newly created command is enter `yourScript`.
 
