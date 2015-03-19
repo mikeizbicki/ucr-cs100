@@ -478,8 +478,8 @@ To save our alias we open `~/.bashrc` file and add the line `alias open_it=cd /h
 #####What if I want to add arguments to my custom command?
 Well this is where our newfound knowledge about bash scripts comes in. For this example we are going to create a simple command `mk2` that:
 
-1) creates directories whose names we choose (arguments 2-n)
-2) creates a text file in each of those directories, with a name of our choosing (argument 1)
+1. creates directories whose names we choose (arguments 2-n)
+2. creates a text file in each of those directories, with a name of our choosing (argument 1)
 
 ```
 #!/bin/bash
