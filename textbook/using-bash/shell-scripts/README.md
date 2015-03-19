@@ -106,7 +106,7 @@ echo $2
 echo $#
 ```
 
-we save our script as 'showargv.sh' and change the permission for it, then we run the script:
+we save our script as `showargv.sh` and change the permission for it, then we run the script:
 
 ```
 $ ./showargv.sh first second
