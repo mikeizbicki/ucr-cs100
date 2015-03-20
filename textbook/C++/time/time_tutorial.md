@@ -63,23 +63,23 @@ time1->tm_mday = 25   // Changing the day of month to 25th
 
 
 ##Useful time.h functions
-
+Here are some of the commonly used `time.h` functions that will help you on your journey as a programmer.
+The file `time_example.cpp` is an example program that utilize the functions below to correctly output the current time and show the elapsed time of the program.
 
 * `time_t time(time_t *timer)`
   * Takes a `time_t*` as input and returns the seconds since Epoch in `time_t`
   * `time()` is used to initialize `time_t` variables
-  * Example:
+  * Let's try using `time()` to initialize a `time_t` with the current time:
   ```
   time_t startTime;
   time(&startTime);
   // startTime represent the number of seconds since Epoch
   ```
-  Now `startTime` is initialized with the current seconds since Epoch.
 
 * `clock_t clock(void)`
   * Takes no input and returns the number of processor ticks since the start of the program in `clock_t`
   * `clock()` is used to initialize `clock_t` variables
-  * Example:
+  * Let's try to use `clock()` to find the elapsed time of a program:
     ```
     clock_t startClock, endClock;
     double elapsedSec;
@@ -90,12 +90,11 @@ time1->tm_mday = 25   // Changing the day of month to 25th
     // elapsedSec represent the elapsed time in seconds
     ```
   
-  * Here we calculated the time we used to run this program in terms of processor ticks
 
 * `char *ctime(const time_t *timer)`
   * Takes a `const time_t*` as input and returns a formatted `char*`
   * `ctime()` is used as a way to make sense of `time_t` variables
-  * Example:
+  * Let's use `ctime()` to output a nicely formatted `time_t`:
   ```
   time_t time1;
   time(&time1);
@@ -106,7 +105,7 @@ time1->tm_mday = 25   // Changing the day of month to 25th
 * `struct tm *localtime(const time_t *timer)`
   * Takes a `const time_t*` as input and returns a `struct tm*` in the local timezone
   * `localtime()` is used to initialize a `struct tm` using an initialized `time_t` variable
-  * Example:
+  * Let's initialize a `struct tm` in the local timezone with a `time_t`:
   ```
   time_t time1;
   struct tm *time2;
@@ -120,7 +119,7 @@ time1->tm_mday = 25   // Changing the day of month to 25th
   * Takes a `const time_t*` as input and returns an equivalent `struct tm*` in the GMT timezone
   * `gmtime()` is used to initialize a `struct tm` using an initialized `time_t` variable
   * If the local timezone is GMT `localtime()` returns the same output as `gmtime()`
-  * Example:
+  * Let's initialize a `struct tm` in the GMT timezone with a `time_t`:
   ```
   time_t time1;
   struct tm *time2;
@@ -133,6 +132,7 @@ time1->tm_mday = 25   // Changing the day of month to 25th
 * `char *asctime(const struct tm *timeptr)`
   * Takes a `const struct tm*` as input and returns a formatted `char*`
   * `asctime()` is very similar to `ctime()`, the difference is that `asctime()` takes a `struct tm*` as argument
+  * Let's use `asctime()` to output a nicely formatted `struct tm`:
   ```
   time_t time1;
   struct tm *time2;
@@ -145,22 +145,22 @@ time1->tm_mday = 25   // Changing the day of month to 25th
 * `time_t mktime(struct tm *timeptr)`
   * Takes a `struct tm*` as input and returns a `const time_t*` in the local timezone
   * `mktime()` is used to initialize a `time_t` using an initialized `struct tm` variable
-  * `mktime()` is basically the reverse of `localtime()` and `gmtime()`
-  * Example:
+  * `mktime()` is basically the reverse of `localtime()`
+  * Let's try initializing a `time_t` with a `struct tm`:
   ```
-  time_t time1;
+  time_t time1, time3;
   struct tm *time2;
   time(&time1);
   time2 = localtime(&time1);
   time3 = mktime(time2);  
   ```
-  * Here we initialized `struct tm*``time2` using the `time_t` `time1` and then using  `struct tm*``time2` to initialize `time_t` `time3`
+  * Here we initialized `struct tm*` `time2` using the `time_t` `time1` and then using  `struct tm*` `time2` to initialize `time_t` `time3`
   * `time1`, `time2`, and `time3` all represent the same time
   
 * `double difftime(time_t endTime, time_t startTime)`
   * Takes two `time_t` and returns the difference in seconds between `endTime` and `startTime` in `double`
   * `difftime` is only useful for finding time difference between periods of time greater than 1 second
-  * Example:
+  * Let's calculate the elapsed time of our program using two `time_t`:
   ```
   time_t startTime, endTime;
   double diff;
@@ -170,15 +170,27 @@ time1->tm_mday = 25   // Changing the day of month to 25th
   diff = difftime(endTime, startTime);
   // diff represent elapsed seconds
   ```
-  * Here we calculated the time we used to run this program in terms of seconds
-  
-##time_example.cpp
-The `time_example.cpp` is an example program that utilize the above functions to correctly output the current time and show the elapsed time of the program.
+  * Here we calculated the time we used to run this program in number of seconds
+
+When using a `time_t` variable to deal with current time, it is esstenial to use `time()` to initialize the variable.
+While using a `clock_t` variable, you should use `CLOCKS_PER_SEC` to make sense of the processor ticks number.
+If are using `struct tm` to denote a specific time, you should assign the `struct tm` members individually instead of using functions.
+While if you are using `struct tm` to denote current time, you should use `localtime()` or `gmtime()` with an initialized `time_t` variable to convert the time.
+
+##Timezones and Leap Seconds
+Time in Unix is always calculated in terms of the UTC timezone.
+When we choose to display time in another timezone, an offset is applied to the time variable to correctly calculate the time.
+For example, when we use `localtime()` the function first look up our timezone, then it look up the offset of that timezone, the offset is then applied to the `time_t` argument, and then it returns a `struct tm` that corresponds to the same time as `time_t` argument but in our local timezone.
+
+When a leap second occurs in Unix, the second at the time of the leap second is two seconds.
+In other words, two seconds pass while one second is counted by the Unix clock.
+This task is accomplished by jumping back one second after the leap second passed.
+`time_t` on the other hand counts both of the seconds, because it represents the absolute seconds since Epoch.
 
 ##Tips for Handling Time in lab5
 The [cp lab](../../../assignments/lab/lab5-cp/) requires you to time the elapsed time for each of the three copying method when the optional flag is passed in.
-There are, of course, multiple ways to accomplish this part of the lab.
-For methods that takes less than 1 seconds, I suggest you use `clock()` as it is very accurate for handling microscopic passage of time.
+Instead of using `Timer.h`, you could use `time.h` to complete the lab.
+For methods that takes less than 1 seconds, I suggest you use `clock()` with `CLOCKS_PER_SEC` as it is very accurate for handling microscopic passage of time.
 For methods that takes more than 1 seconds, you could use `difftime()` as `time_t` increment slower than `clock_t`, preventing `clock_t` from reaching `DBL_MAX` in case of a large file such as `/usr/share/dict/linux.words`.
 
 One possible implementation:
