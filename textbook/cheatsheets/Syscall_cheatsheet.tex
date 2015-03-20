@@ -11,6 +11,7 @@
 \usepackage{tabu}
 \usepackage{longtable}
 \usepackage{microtype}
+\usepackage{booktabs}
 %\usepackage{arydshln}
 
 %\makeatletter % To make function descriptions indent when they're long
@@ -38,8 +39,8 @@ language=C++ % For font size
 \end{center}
 
 \normalsize
-\begin{longtabu}{|p{.9in}p{6.3in}<{\strut}|} 
-\hline\endhead\hline\endfoot
+\begin{longtabu}{|[1pt]p{.9in}|p{6.3in}<{\strut}|[1pt]} 
+\hline\hline\endhead \hline\hline\endfoot
     \texttt{perror()} & \indenth\texttt{void perror(const char* s)} --- Prints \texttt{s} and syscall's error message as defined by global int \texttt{errno} to \texttt{stderr}. If syscall has error, \texttt{errno} is changed. Technically not a syscall.
         %
         \\ 
@@ -75,7 +76,7 @@ language=C++ % For font size
     % opendir
         \\ \hline
     Directories and Files & \indenth Note: When these functions require a directory or file name, they only require a \itshape relative path\rm. This means that if your process was called in directory \texttt{bin/foo/bar/}, instead of using \texttt{bin/foo/bar/p.cpp}, the \itshape absolute path\rm,  you can use \texttt{p.cpp} or \texttt{./p.cpp} instead. \par
-        \\
+        \\ %\tabucline[.3pt]{2-2}
     \texttt{opendir()} & \indenth\texttt{DIR* opendir(const char* name)} --- Opens directory stream to directory \texttt{name} and returns pointer to its first entry. Returns \texttt{NULL} on error. 
         \\
     & \hspace{.5in}\it Include: \rm\texttt{dirent.h}
@@ -182,4 +183,5 @@ language=C++ % For font size
 \end{longtabu}
 
 \end{document}
+
 
