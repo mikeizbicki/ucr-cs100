@@ -82,12 +82,12 @@ Common flags | Description
 [See regex tutorial](../../textbook/using-bash/regex)
 ###sed
 The `sed` command is a stream editor that performs text transformations on an input. <br>
-Common use of this command is to replace expressions which takes the form `s/regexp/replacement/`
+Common use of this command is to replace expressions which takes the form `s/regexp/replacement/g`
 For example, the following replaces all occurrences of the phrase "Hello" with "Hi".
 ```
   $ cat test.txt
   Hello World
-  $ sed 's/Hello/Hi/' test.txt
+  $ sed 's/Hello/Hi/g' test.txt
   Hi World
 ```
 [See sed tutorial](../../textbook/using-bash/sed)
@@ -183,7 +183,7 @@ For example, the following sends the output of `ls` into the file instead of pri
 ```
 If the file isn't already in your working directory, the file gets created.
 If the file already exists, then the contents of the command overwrites what is already in the file. <br>
-To avoid overwriting a file, the `>>>` command appends to the end of the file instead.
+To avoid overwriting a file, the `>>` command appends to the end of the file instead.
 ###Input Redirection
 Standard input redirection uses the symbol `<`. <br>
 For example, the following causes `sort` to access its input from the file instead of the keyboard.
