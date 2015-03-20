@@ -39,8 +39,8 @@ language=C++ % For font size
 \end{center}
 
 \normalsize
-\begin{longtabu}{|[1pt]p{.9in}|p{6.3in}<{\strut}|[1pt]} 
-\hline\hline\endhead \hline\hline\endfoot
+\begin{longtabu}{|p{.9in}|p{6.3in}<{\strut}|} 
+\hline\endhead
     \texttt{perror()} & \indenth\texttt{void perror(const char* s)} --- Prints \texttt{s} and syscall's error message as defined by global int \texttt{errno} to \texttt{stderr}. If syscall has error, \texttt{errno} is changed. Technically not a syscall.
         %
         \\ 
