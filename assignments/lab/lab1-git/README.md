@@ -13,7 +13,7 @@ The second exercise will introduce you to some more advanced `git` commands as w
 The third exercise will enroll you in the course.
 You are not officially enrolled in this course until you finish that portion of the lab.
 
- 1. (Required) [Exercise 1:](using-git.md) And introduction to `git`
+ 1. (Required) [Exercise 1:](using-git.md) An introduction to `git`
 
  2. (Optional) [Exercise 2:](Advanced.md) Advanced usage of `git`
 
