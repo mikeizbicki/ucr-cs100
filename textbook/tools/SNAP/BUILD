@@ -2,6 +2,8 @@
 
 rm total.csv
 
+./start/infomake
+
 for name in $(cat < ./start/info);
 do
     echo $name | sed 's/,.*//' >> total.csv
