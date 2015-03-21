@@ -97,4 +97,4 @@ Future Plans
 --
 SNAP has some very cool possibilites but it's lacking in two big ways. Low student count means low confidence in the data. Also, very few paramaters makes it hard to represent every aspect of a website.
 
-Trying SNAP on more students solves our first issue, it's my hope that SNAP is easy enough to add to that other people might want to get involved. I think if you could accurately estimate a grade from the data, there'd be  
+Trying SNAP on more students solves our first issue, it's my hope that SNAP is easy enough to add to that other people might want to get involved. I think if you could accurately estimate a grade from the data, there'd be   
