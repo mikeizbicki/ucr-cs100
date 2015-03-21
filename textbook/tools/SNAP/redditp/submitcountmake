@@ -1,0 +1,9 @@
+#!/bin/bash
+count=0
+
+for Buff in $(cat < ./redditp/res/$1 | grep 'submitted&')
+do
+    let count=count+1
+done
+
+echo ,$count

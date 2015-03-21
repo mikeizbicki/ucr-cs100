@@ -1,0 +1,9 @@
+#!/bin/bash
+lame=0
+
+for huh in $(echo $1 | grep '[a-z].*[0-9].*');
+do
+     let lame=1
+done
+
+echo ,$lame

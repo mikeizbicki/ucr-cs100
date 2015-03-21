@@ -1,0 +1,8 @@
+#!/bin/bash
+
+calcgrade.sh $1 > BUFFER
+grad=$(calcgrade.sh $1 | grep 'running total' | sed 's/.*[0-9] =//' |  sed 's/\.[0-9][0-9]/&~/' | sed 's/~.*//' | sed 's/.*m//' | sed 's/ //')
+# | sed 's/.*~//' | sed 's/.[0-9][0-9]/&~/' | sed 's/~.*// ')
+echo ,$grad
+rm -r --interactive=never ../.gitlearn/ucr-cs100/ucr-cs100-$1
+rm BUFFER

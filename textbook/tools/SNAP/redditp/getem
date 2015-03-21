@@ -1,0 +1,5 @@
+#!/bin/bash
+rm ./redditp/res/$1
+wget http://www.reddit.com/user/$1/ -P ./redditp/res
+cp ./redditp/res/index.html ./redditp/res/$1
+rm ./redditp/res/index.html

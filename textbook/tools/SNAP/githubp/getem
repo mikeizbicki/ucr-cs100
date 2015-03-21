@@ -1,0 +1,5 @@
+#!/bin/bash
+rm ./github/res/$1?tab=repositories
+./githubp/res/reposmake $1
+rm ./github/res/$1
+./githubp/res/mainmake $1

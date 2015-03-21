@@ -1,0 +1,13 @@
+#!/bin/bash
+
+./redditp/commentcountmake $1
+./redditp/commentkarmamake $1
+./redditp/compscicountmake $1
+./redditp/gamingcountmake $1
+./redditp/ismodmake $1
+
+./redditp/lamenamemake $1
+./redditp/linkkarmamake $1
+./redditp/sizeofmain $1
+./redditp/submitcountmake $1
+./redditp/isemptymake $1

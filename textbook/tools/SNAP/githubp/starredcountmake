@@ -1,0 +1,5 @@
+#!/bin/bash
+west=$(cat < ./githubp/res/$1 | grep -A1 '/stars/' | grep 'strong' | sed 's/.*">//' | sed 's/<.*//')
+
+echo ,$west
+

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+COUNTER=0
+for empty in $( cat < ./githubp/res/$1?tab=repositories | grep 'octicon octicon-repo-forked"' | sed 's/pan.*//' )
+do
+    let COUNTER=COUNTER+1
+done
+
+echo ,$COUNTER

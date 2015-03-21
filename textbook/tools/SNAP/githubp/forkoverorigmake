@@ -1,0 +1,8 @@
+#!/bin/bash
+
+A=$(./githubp/forkedcountmake $1 | sed 's/,//')
+B=$(./githubp/repocountmake $1 | sed 's/,//')
+
+C=$(expr $A / $B)
+
+echo ,$C

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+west=$(cat < ./githubp/res/$1 | grep -A1 'last year' | sed 's/.*last.*//g' | sed 's/.*number">//' | sed 's/ total.*//' |  grep '[0-9]*')
+echo ,$west  | sed 's/ //'
+
+

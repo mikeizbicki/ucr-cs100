@@ -1,0 +1,6 @@
+#!/bin/bash
+
+west=$(cat < ./githubp/res/$1 | grep -A1 'Current' | sed 's/.*Current.*//g' | sed 's/.*number">//' | sed 's/ day.*//' |  grep '[0-9]*')
+echo ,$west  | sed 's/ //'
+
+
