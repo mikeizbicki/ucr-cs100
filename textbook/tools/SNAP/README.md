@@ -1,8 +1,8 @@
 S.N.A.P.
 ---
 SNAP is a tree of bash scripts that gather and present student social networking information. SNAP also gathers grade information so we can compare the two. **Social Networking Analysis Program.
-**
-What can it do?
+
+**What can it do?**
 Even though SNAP is just a young program, SNAP can provide very intresting/powerful data. Maybe I'm a sucker for data, but there's some really fun possiblilities!
 
 These are some of my favourite examples. 
@@ -14,34 +14,37 @@ Student grade vs.  # of repositories tied to their account
 
 
 Student grade vs. # of repositories tied to their account that are forks
-![](http://i.imgur.com/wmvG0Ua.jpg)
+![](http://i.imgur.com/uNcCegK.png)
 
 
-Sudent grade vs. ratio of (repositories that are forks/all repositories)
-![](http://i.imgur.com/wmvG0Ua.jpg)
+Sudent grade vs. # of stars on every repository linked to their account
+![](http://i.imgur.com/0evv6QA.png)
 
 
 Student grade vs. their profile has their real name (1 means yes, 0 means no)
-![](http://i.imgur.com/wmvG0Ua.jpg)
+![](http://i.imgur.com/lmxokVZ.png)
 
 
 Student grade vs. their username is some combination of letters then numbers (eg. dimitri001) (1 means yes, 0 means no)
-![](http://i.imgur.com/wmvG0Ua.jpg)
+![](http://i.imgur.com/nd2F3R4.png)
 
 
 Student grade vs. size of website file 
-
+![](http://i.imgur.com/rj09s7z.png)
 
 Student grade vs. # of times their username was mentioned
-
+![](http://i.imgur.com/MOZ3AkO.png)
 
 **Reddit**
 
 Student grade vs. comment karma
+![](http://i.imgur.com/S1gv6T1.png)
 
 Student grade vs. link karma
+![](http://i.imgur.com/h3IbAm1.png)
 
 Student grade vs. Student grade vs. their username is some combination of letters then numbers (eg. dimitri001) (1 means yes, 0 means no)
+![](http://i.imgur.com/1aKnNTw.png)
 
 
 You can look at more of the examples [here].(http://imgur.com/a/KOzDP#0). 
