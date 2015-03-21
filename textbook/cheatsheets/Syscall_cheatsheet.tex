@@ -89,7 +89,7 @@ language=C++ % For font size
         \\ %\tabucline[.3pt]{2-2}
     \texttt{chdir()} & \indenth\texttt{int chdir(const char* path)} --- Change directory of calling process to \texttt{path}. Returns \texttt{0} on success, \texttt{-1} if error.
         \\
-    & \hspace{.5in}\it Include: \rm\texttt{sys/stat.h}, \texttt{unistd.h}
+    & \hspace{.5in}\it Include: \rm\texttt{sys/stat.h}, \texttt{unistd.h} 
         %
         \\ %\tabucline[.3pt]{2-2}
     \texttt{stat()} & \indenth\texttt{int stat(const char* path,  struct stat* buf)} --- Gives information about a file in \texttt{struct stat}, e.g. permissions, type of file, time created. See \texttt{ls -l} for example of provided information. Macros are also provided that take \texttt{mode\_t st\_mode} in \texttt{struct stat} and returns \texttt{true}/\texttt{false} (e.g. \texttt{S\_ISDIR(st\_mode)}, \texttt{S\_REG(st\_mode)}). Returns \texttt{0} on success, \texttt{-1} if error.
