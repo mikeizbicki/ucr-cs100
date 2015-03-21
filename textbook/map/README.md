@@ -78,7 +78,7 @@ That could get pretty lengthy.
 If we have 26 shorthand flags and 26 longhand flags, 
 we would have to make 52 if-else statements PLUS CODE.
 This is where we bring out our inner mad (computer) scientist.
-What if we created a map with function pointers as elements?
+What if we created a map with [function pointers](http://www.cprogramming.com/tutorial/function-pointers.html) as elements?
 
 ```c++
 #include <iostream>
