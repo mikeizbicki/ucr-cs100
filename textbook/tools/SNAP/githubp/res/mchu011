@@ -19,7 +19,6 @@
       <meta content="GitHub" property="og:site_name" /><meta content="profile" property="og:type" /><meta content="https://avatars3.githubusercontent.com/u/5579282?v=3&amp;s=400" property="og:image" /><meta content="mchu011" property="og:title" /><meta content="https://github.com/mchu011" property="og:url" /><meta content="mchu011 has 6 repositories written in C++, Shell, and C. Follow their code on GitHub." property="og:description" /><meta content="mchu011" property="profile:username" />
       <meta name="browser-stats-url" content="/_stats">
     <link rel="assets" href="https://assets-cdn.github.com/">
-    <link rel="conduit-xhr" href="https://ghconduit.com:25035">
     
     <meta name="pjax-timeout" content="1000">
     
@@ -29,7 +28,7 @@
     <meta name="selected-link" value="/mchu011" data-pjax-transient>
       <meta name="google-analytics" content="UA-3769691-2">
 
-    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="A9EB1F48:56A8:8CAFEA9:550750CB" name="octolytics-dimension-request_id" />
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="A9EB1F48:4D96:1774054:550D0239" name="octolytics-dimension-request_id" />
     
     <meta content="Rails, view, users#show" name="analytics-event" />
 
@@ -38,15 +37,15 @@
 
 
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="asSqgyJNev0qrIjshz7dOisSObc+5F0nk6iiQhu2Oa6exawOVCnBPfMXJmPmO5mMto9A2opbyljoWNELgqdcxQ==" name="csrf-token" />
+<meta content="8/l8IypivSXmB6s0XQCI3wU2UAIKj6gccMx6vvYoqywIYtMsxsdg3kdswrKcGcJnNjSngc+LsPQvzqfzVuHVsw==" name="csrf-token" />
 
-    <link href="https://assets-cdn.github.com/assets/github-bb40a9aebece4c9c4c663b86dcbdfa070b4fb344f46e953335ac78df8770e3de.css" media="all" rel="stylesheet" />
-    <link href="https://assets-cdn.github.com/assets/github2-ae36cc71a72fed68b82385c0102c3d9cc27ecae12313b5b0941a71cda59f9cd2.css" media="all" rel="stylesheet" />
+    <link href="https://assets-cdn.github.com/assets/github-099e0ecc2851c8aca89ef6dafa191df3b0f2a2c8ad34e134c5473ca1ba0a59b2.css" media="all" rel="stylesheet" />
+    <link href="https://assets-cdn.github.com/assets/github2-1171344316fc088255ee2a06c271d14240f1a4e06985fe9e897762947872e858.css" media="all" rel="stylesheet" />
     
     
 
 
-    <meta http-equiv="x-pjax-version" content="2ed88b7728309642c568f886345f2d85">
+    <meta http-equiv="x-pjax-version" content="c0f32272c66bfb10ed7d46b7c88c6299">
 
         <link href="/mchu011.atom" rel="alternate" title="atom" type="application/atom+xml">
   <meta name="description" content="mchu011 has 6 repositories written in C++, Shell, and C. Follow their code on GitHub.">
@@ -72,8 +71,8 @@
     </a>
 
     <div class="header-actions" role="navigation">
-        <a class="button primary" href="/join" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign up</a>
-      <a class="button" href="/login?return_to=%2Fmchu011" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign in</a>
+        <a class="btn btn-primary" href="/join" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign up</a>
+      <a class="btn" href="/login?return_to=%2Fmchu011" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign in</a>
     </div>
 
     <div class="site-search  js-site-search" role="search">
@@ -160,10 +159,10 @@
 
 
       <div class="tabnav">
-          <div class="tabnav-right">
+          <div class="right">
               <span class="user-following-container">
     <span class="follow">
-      <a href="/login?return_to=%2Fmchu011" class="minibutton primary">
+      <a href="/login?return_to=%2Fmchu011" class="btn btn-sm btn-primary">
         <span class="octicon octicon-person"></span>
         Follow
       </a>
@@ -172,26 +171,20 @@
 
           </div>
 
-        <ul class="tabnav-tabs" data-pjax role="navigation">
-          <li data-tab="contributions">
-            <a href="/mchu011" class="tabnav-tab selected">
-              <span class="octicon octicon-diff-added"></span>
-              Contributions
-            </a>
-          </li>
-          <li data-tab="repo">
-            <a href="/mchu011?tab=repositories" class="tabnav-tab ">
-              <span class="octicon octicon-repo"></span>
-              Repositories
-            </a>
-          </li>
-          <li data-tab="activity">
-            <a href="/mchu011?tab=activity" class="tabnav-tab ">
-              <span class="octicon octicon-rss"></span>
-              Public activity
-            </a>
-          </li>
-        </ul>
+        <nav class="tabnav-tabs" data-pjax role="navigation">
+          <a href="/mchu011" class="tabnav-tab selected" data-tab="contributions">
+            <span class="octicon octicon-diff-added"></span>
+            Contributions
+          </a>
+          <a href="/mchu011?tab=repositories" class="tabnav-tab " data-tab="repo">
+            <span class="octicon octicon-repo"></span>
+            Repositories
+          </a>
+          <a href="/mchu011?tab=activity" class="tabnav-tab " data-tab="activity">
+            <span class="octicon octicon-rss"></span>
+            Public activity
+          </a>
+        </nav>
       </div>
 
       <div class="tab-content js-repo-filter">
@@ -284,7 +277,7 @@
         <span class="owner css-truncate-target" title="mikeizbicki">mikeizbicki</span>/<span class="repo" title="ucr-cs100">ucr-cs100</span>
       </span>
       <span class="stars">
-        104
+        110
         <span class="octicon octicon-star"></span>
       </span>
       <span class="repo-description css-truncate-target">open source software construction course</span>
@@ -368,8 +361,8 @@
 
         <div class="contrib-column contrib-column-first table-column">
           <span class="text-muted">Contributions in the last year</span>
-          <span class="contrib-number">107 total</span>
-          <span class="text-muted">Mar 16, 2014 &ndash; Mar 16, 2015</span>
+          <span class="contrib-number">109 total</span>
+          <span class="text-muted">Mar 20, 2014 &ndash; Mar 20, 2015</span>
         </div>
         <div class="contrib-column table-column">
           <span class="text-muted">Longest streak</span>
@@ -382,7 +375,7 @@
         <div class="contrib-column table-column">
           <span class="text-muted">Current streak</span>
             <span class="contrib-number">0 days</span>
-            <span class="text-muted">Last contributed <time datetime="2015-03-13T07:00:00Z" is="time-ago">Mar 13, 2015</time></span>
+            <span class="text-muted">Last contributed <time datetime="2015-03-20T07:00:00Z" is="time-ago">Mar 20, 2015</time></span>
         </div>
     </div>
   </div>
@@ -390,7 +383,7 @@
   <div class="activity-listing contribution-activity js-contribution-activity">
     
 <div class="select-menu right js-menu-container js-select-menu js-period-container">
-  <span class="minibutton select-menu-button js-menu-target" role="button" aria-haspopup="true">
+  <span class="btn btn-sm select-menu-button js-menu-target" role="button" aria-haspopup="true">
     <i>Period:</i>
     <span class="js-select-button">1 week</span>
   </span>
@@ -432,142 +425,26 @@
 <div class="contribution-activity-listing">
 
 
-    <h3 class="conversation-list-heading">
-      <div class="inner">
-        <span class="octicon octicon-git-commit"></span>
-        <span class="text-emphasized">9</span> commits
-      </div>
-    </h3>
 
-    <ul class="simple-conversation-list">
-      <li>
-          <a href="/mchu011/labs/commits?author=mchu011" class="title">
-          Pushed 1 commit to mchu011/labs</a>
-            Mar 12
-      </li>
-      <li>
-          <a href="/mikeizbicki/ucr-cs100/commits?author=mchu011" class="title">
-          Pushed 3 commits to mikeizbicki/ucr-cs100</a>
-            Mar 11
-      </li>
-      <li>
-          <a href="/mchu011/rshell/commits?author=mchu011" class="title">
-          Pushed 5 commits to mchu011/rshell</a>
-            Mar 10
-      </li>
-    </ul>
-
-  <h3 class="conversation-list-heading">
-    <div class="inner">
-      <span class="octicon octicon-git-pull-request"></span>
-      <span class="text-emphasized">10</span> Pull Requests
-    </div>
-  </h3>
-  <ol class="contribution-pulls-list simple-conversation-list varied-states">
-    <li class="contribution">
-      <span class="state state-merged">Merged</span>
-      <span class="num">#1133</span>
-      <a href="/mikeizbicki/ucr-cs100/pull/1133" class="title">Fixed punctuation</a>
-      <time datetime="2015-03-12T00:59:42Z" is="relative-time">Mar 12, 2015</time>
-      <span class="cmeta">
-        <a href="/mikeizbicki/ucr-cs100">mikeizbicki/ucr-cs100</a>
-      </span>
-    </li>
-    <li class="contribution">
-      <span class="state state-merged">Merged</span>
-      <span class="num">#1132</span>
-      <a href="/mikeizbicki/ucr-cs100/pull/1132" class="title">Fixed text</a>
-      <time datetime="2015-03-11T19:44:53Z" is="relative-time">Mar 11, 2015</time>
-      <span class="cmeta">
-        <a href="/mikeizbicki/ucr-cs100">mikeizbicki/ucr-cs100</a>
-      </span>
-    </li>
-    <li class="contribution">
-      <span class="state state-merged">Merged</span>
-      <span class="num">#1131</span>
-      <a href="/mikeizbicki/ucr-cs100/pull/1131" class="title">Fixed text</a>
-      <time datetime="2015-03-11T18:43:37Z" is="relative-time">Mar 11, 2015</time>
-      <span class="cmeta">
-        <a href="/mikeizbicki/ucr-cs100">mikeizbicki/ucr-cs100</a>
-      </span>
-    </li>
-    <li class="contribution">
-      <span class="state state-closed">Closed</span>
-      <span class="num">#1130</span>
-      <a href="/mikeizbicki/ucr-cs100/pull/1130" class="title">Fixed text</a>
-      <time datetime="2015-03-11T06:41:56Z" is="relative-time">Mar 11, 2015</time>
-      <span class="cmeta">
-        <a href="/mikeizbicki/ucr-cs100">mikeizbicki/ucr-cs100</a>
-      </span>
-    </li>
-    <li class="contribution">
-      <span class="state state-closed">Closed</span>
-      <span class="num">#1113</span>
-      <a href="/mikeizbicki/ucr-cs100/pull/1113" class="title">Fixed grammar</a>
-      <time datetime="2015-03-10T17:28:23Z" is="relative-time">Mar 10, 2015</time>
-      <span class="cmeta">
-        <a href="/mikeizbicki/ucr-cs100">mikeizbicki/ucr-cs100</a>
-      </span>
-    </li>
-    <li class="contribution">
-      <span class="state state-closed">Closed</span>
-      <span class="num">#1112</span>
-      <a href="/mikeizbicki/ucr-cs100/pull/1112" class="title">Fixed grammar and sentence structures</a>
-      <time datetime="2015-03-10T16:43:24Z" is="relative-time">Mar 10, 2015</time>
-      <span class="cmeta">
-        <a href="/mikeizbicki/ucr-cs100">mikeizbicki/ucr-cs100</a>
-      </span>
-    </li>
-    <li class="contribution">
-      <span class="state state-closed">Closed</span>
-      <span class="num">#1111</span>
-      <a href="/mikeizbicki/ucr-cs100/pull/1111" class="title">Fixed grammar</a>
-      <time datetime="2015-03-10T15:46:37Z" is="relative-time">Mar 10, 2015</time>
-      <span class="cmeta">
-        <a href="/mikeizbicki/ucr-cs100">mikeizbicki/ucr-cs100</a>
-      </span>
-    </li>
-    <li class="contribution">
-      <span class="state state-closed">Closed</span>
-      <span class="num">#1110</span>
-      <a href="/mikeizbicki/ucr-cs100/pull/1110" class="title">Clarification and grammar</a>
-      <time datetime="2015-03-10T15:43:27Z" is="relative-time">Mar 10, 2015</time>
-      <span class="cmeta">
-        <a href="/mikeizbicki/ucr-cs100">mikeizbicki/ucr-cs100</a>
-      </span>
-    </li>
-    <li class="contribution">
-      <span class="state state-closed">Closed</span>
-      <span class="num">#1109</span>
-      <a href="/mikeizbicki/ucr-cs100/pull/1109" class="title">Fixed grammar</a>
-      <time datetime="2015-03-10T15:27:57Z" is="relative-time">Mar 10, 2015</time>
-      <span class="cmeta">
-        <a href="/mikeizbicki/ucr-cs100">mikeizbicki/ucr-cs100</a>
-      </span>
-    </li>
-    <li class="contribution">
-      <span class="state state-merged">Merged</span>
-      <span class="num">#1105</span>
-      <a href="/mikeizbicki/ucr-cs100/pull/1105" class="title">Fixed grammar</a>
-      <time datetime="2015-03-09T22:42:46Z" is="relative-time">Mar 9, 2015</time>
-      <span class="cmeta">
-        <a href="/mikeizbicki/ucr-cs100">mikeizbicki/ucr-cs100</a>
-      </span>
-    </li>
-  </ol>
 
   <h3 class="conversation-list-heading">
     <div class="inner">
       <span class="octicon octicon-issue-opened"></span>
-      <span class="text-emphasized">1</span> Issue reported
+      <span class="text-emphasized">2</span> Issues reported
     </div>
   </h3>
   <ul class="simple-conversation-list varied-states">
       <li>
         <span class="state state-closed">Closed</span>
-        <span class="num">#1148</span>
-        <a href="/mikeizbicki/ucr-cs100/issues/1148" class="title">HW 4 video check</a>
-        <time datetime="2015-03-13T12:18:55Z" is="relative-time">Mar 13, 2015</time>
+        <span class="num">#1234</span>
+        <a href="/mikeizbicki/ucr-cs100/issues/1234" class="title">video sample</a>
+        <time datetime="2015-03-21T04:35:55Z" is="relative-time">Mar 21, 2015</time>
+      </li>
+      <li>
+        <span class="state state-closed">Closed</span>
+        <span class="num">#1173</span>
+        <a href="/mikeizbicki/ucr-cs100/issues/1173" class="title">extra credit webpage completed</a>
+        <time datetime="2015-03-18T00:49:19Z" is="relative-time">Mar 18, 2015</time>
       </li>
   </ul>
 </div>
@@ -602,7 +479,7 @@
       <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
 </a>
     <ul class="site-footer-links">
-      <li>&copy; 2015 <span title="0.13596s from github-fe116-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+      <li>&copy; 2015 <span title="0.12058s from github-fe127-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
         <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
         <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
         <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
@@ -644,8 +521,8 @@
     </div>
 
 
-      <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-d2f4f76d6a05f07ed67ef9f94d3823b34f98232770518bc7f8f40de8846ec511.js"></script>
-      <script async="async" crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github-0e3e19f715c6bd6502b27729ec6b1576e834311df9990480a5186f016818b9e0.js"></script>
+      <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-d22b59d0085e83b7549ba4341ec9e68f80c2f29c8e49213ee182003dc8d568c6.js"></script>
+      <script async="async" crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github-0bc0f45c838b5d9d25bc071d2a4b0abe759a093392087dce55cd2caa00ea4f36.js"></script>
       
       
 
