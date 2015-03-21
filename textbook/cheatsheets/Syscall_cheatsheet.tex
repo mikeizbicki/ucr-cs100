@@ -44,7 +44,7 @@ language=C++ % For font size
     \texttt{perror()} & \indenth\texttt{void perror(const char* s)} --- Prints \texttt{s} and syscall's error message as defined by global int \texttt{errno} to \texttt{stderr}. If syscall has error, \texttt{errno} is changed. Technically not a syscall.
         %
         \\ 
-    & \hspace{.5in}\it Include: \rm\texttt{stdio.h}, \texttt{errno.h}
+    & \hspace{.5in}\it Include: \rm\texttt{stdio.h}, \texttt{errno.h} 
         \\ \hline%\cline{1-1}\tabucline[2pt]{-}
     % fork
     \texttt{fork()} &  \indenth\texttt{pid\_t fork()} --- Creates child process. Returns \texttt{0} to child process and child's process id to parent process or \texttt{-1} if error. No child process made if error occurs.
