@@ -1,0 +1,9 @@
+#!/bin/bash
+count=0
+for west in $(cat < ./githubp/res/$1 | grep '<title>' | grep '(.*)')
+do
+    count=1
+done
+
+echo ,$count
+

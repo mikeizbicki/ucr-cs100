@@ -1,0 +1,22 @@
+#!/bin/bash
+
+./githubp/repocountmake $1
+./githubp/starcountmake $1
+./githubp/forkcountmake $1
+./githubp/sizeofrepo $1
+./githubp/lastyearmake $1
+./githubp/longestmake $1
+./githubp/currentmake $1
+./githubp/hasnamemake $1
+./githubp/starredcountmake $1
+./githubp/starredcountmake $1
+./githubp/sizeofmain $1
+./githubp/followersmake $1
+./githubp/followingmake $1
+./githubp/hasemailmake $1
+./githubp/hasurlmake $1
+./githubp/lamenamemake $1
+./githubp/forkedcountmake $1
+./githubp/forkoverorigmake $1
+./githubp/namecountmake $1
+./githubp/yearjoinedmake $1

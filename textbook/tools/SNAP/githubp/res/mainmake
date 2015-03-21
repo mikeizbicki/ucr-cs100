@@ -1,0 +1,4 @@
+#!/bin/bash
+
+wget https://github.com/$1 -P ./githubp/res
+

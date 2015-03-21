@@ -1,0 +1,25 @@
+#!/bin/bash
+rm info
+
+./res/namesmake
+
+for student in $(cat < res/names);
+do
+    echo $student >>info
+    echo , | cat >> info
+    cat < res/$student | grep 'js-file-line">github' | sed 's/.*=//g' | sed 's/<.*//g' | cat >> info
+    echo , | cat >> info
+    cat < res/$student | grep 'stack' | sed 's/.*=//g' | sed 's/<.*//g' | cat >> info
+    echo , | cat >> info
+    cat < res/$student | grep 'slashdot' | sed 's/.*=//g' | sed 's/<.*//g' | cat >> info
+    echo , | cat >> info
+    cat < res/$student | grep 'reddit' | sed 's/.*=//g' | sed 's/<.*//g' | cat >> info
+    echo , | cat >> info
+    cat < res/$student | grep 'hack' | sed 's/.*=//g' | sed 's/<.*//g' | cat >> info
+    echo ?~!~endl~!~? | cat >> info
+
+done
+
+cat < info | sed ':a;N;$!ba;s/\n//g' | cat > info
+cat < info | sed 's/?~!~endl~!~?/\n/g' | cat > info
+cat < info | sed 's/ //g' | cat > info

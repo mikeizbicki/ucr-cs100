@@ -1,0 +1,5 @@
+#!/bin/bash
+
+year=$( cat < ./githubp/res/$1 |  grep 'Joined on' | sed 's/.*datetime="//' | sed 's/-.*//g')
+
+echo ,$year

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for snames in $(cat < names);
+do
+    wget https://github.com/mikeizbicki/ucr-cs100/blob/2015winter/people/students/$snames
+
+done

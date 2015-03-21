@@ -1,0 +1,6 @@
+#!/bin/bash
+
+rm students
+wget https://github.com/mikeizbicki/ucr-cs100/tree/2015winter/people/students
+
+cat < students | grep blob/2015winter | sed 's/.*title="//g' | sed 's/">.*//g' > names

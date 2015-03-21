@@ -1,0 +1,9 @@
+#!/bin/bash
+
+COUNTER=0
+for empty in $( cat < ./githubp/res/$1?tab=repositories |  grep -A1 ' octicon-star' | sed 's/.*octicon-star.*//g' | sed 's/--//g' | sed 's/,//g' )
+do
+    let COUNTER=COUNTER+10#$empty
+done
+
+echo ,$COUNTER

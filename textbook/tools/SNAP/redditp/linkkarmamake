@@ -1,0 +1,5 @@
+#!/bin/bash
+
+comment=$(cat < ./redditp/res/$1 | grep '\-karma"' | sed 's/.*\-karma">//' | sed 's/<.*//' | sed 's/,//g')
+
+echo ,$comment

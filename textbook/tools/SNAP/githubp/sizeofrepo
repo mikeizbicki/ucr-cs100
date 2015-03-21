@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sizeo=$(stat --printf="%s" ./githubp/res/$1?tab=repositories)
+echo ,$sizeo

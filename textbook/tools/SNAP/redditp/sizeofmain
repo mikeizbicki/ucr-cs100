@@ -1,0 +1,5 @@
+#!/bin/bash
+
+size=$(stat --printf="%s" ./redditp/res/$1 )
+
+echo ,$size

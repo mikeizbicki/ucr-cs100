@@ -1,0 +1,8 @@
+#!/bin/bash
+
+mod=0
+for buff in $(cat < ./redditp/res/$1 | grep 'there doesn' )
+do
+   let mod=1
+done
+echo ,$mod

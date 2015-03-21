@@ -1,0 +1,1348 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+
+
+    <title>ucr-cs100/people/students at 2015winter · mikeizbicki/ucr-cs100 · GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="mikeizbicki/ucr-cs100" name="twitter:title" /><meta content="ucr-cs100 - open source software construction course" name="twitter:description" /><meta content="https://avatars3.githubusercontent.com/u/1052630?v=3&amp;s=400" name="twitter:image:src" />
+      <meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://avatars3.githubusercontent.com/u/1052630?v=3&amp;s=400" property="og:image" /><meta content="mikeizbicki/ucr-cs100" property="og:title" /><meta content="https://github.com/mikeizbicki/ucr-cs100" property="og:url" /><meta content="ucr-cs100 - open source software construction course" property="og:description" />
+      <meta name="browser-stats-url" content="/_stats">
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    <link rel="conduit-xhr" href="https://ghconduit.com:25035">
+
+    <meta name="pjax-timeout" content="1000">
+
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_source" data-pjax-transient>
+      <meta name="google-analytics" content="UA-3769691-2">
+
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="A9EB1F48:51F7:4FEA444:550689CC" name="octolytics-dimension-request_id" />
+
+    <meta content="Rails, view, files#disambiguate" name="analytics-event" />
+
+
+    <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="YZHyZ0FPde35F/VeYGb6+mPt3D6IH4N/94lYhaAeo6u5uzxoODN+oQqS1lJ7afX8JWnMyr/ZAYLrTCPoYcgaVA==" name="csrf-token" />
+
+    <link href="https://assets-cdn.github.com/assets/github-85e4ac99403eefa73664d9b122f27095fee8b7333e67f34fa34480ae497f7555.css" media="all" rel="stylesheet" />
+    <link href="https://assets-cdn.github.com/assets/github2-901780fdaaa6b0f56b2004899a7a24194bf4217cc7864291a9f68fa3a9264fdf.css" media="all" rel="stylesheet" />
+
+
+
+
+    <meta http-equiv="x-pjax-version" content="8060cc7a9543870628764b4fdb4264ea">
+
+
+  <meta name="description" content="ucr-cs100 - open source software construction course">
+  <meta name="go-import" content="github.com/mikeizbicki/ucr-cs100 git https://github.com/mikeizbicki/ucr-cs100.git">
+
+  <meta content="1052630" name="octolytics-dimension-user_id" /><meta content="mikeizbicki" name="octolytics-dimension-user_login" /><meta content="21252548" name="octolytics-dimension-repository_id" /><meta content="mikeizbicki/ucr-cs100" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="21252548" name="octolytics-dimension-repository_network_root_id" /><meta content="mikeizbicki/ucr-cs100" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/mikeizbicki/ucr-cs100/commits/2015winter.atom" rel="alternate" title="Recent Commits to ucr-cs100:2015winter" type="application/atom+xml">
+
+  </head>
+
+
+  <body class="logged_out  env-production  vis-public">
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+    <div class="wrapper">
+
+
+
+
+
+
+        <div class="header header-logged-out" role="banner">
+  <div class="container clearfix">
+
+    <a class="header-logo-wordmark" href="https://github.com/" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
+      <span class="mega-octicon octicon-logo-github"></span>
+    </a>
+
+    <div class="header-actions" role="navigation">
+        <a class="button primary" href="/join" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign up</a>
+      <a class="button" href="/login?return_to=%2Fmikeizbicki%2Fucr-cs100%2Ftree%2F2015winter%2Fpeople%2Fstudents" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign in</a>
+    </div>
+
+    <div class="site-search repo-scope js-site-search" role="search">
+      <form accept-charset="UTF-8" action="/mikeizbicki/ucr-cs100/search" class="js-site-search-form" data-global-search-url="/search" data-repo-search-url="/mikeizbicki/ucr-cs100/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+  <input type="text"
+    class="js-site-search-field is-clearable"
+    data-hotkey="s"
+    name="q"
+    placeholder="Search"
+    data-global-scope-placeholder="Search GitHub"
+    data-repo-scope-placeholder="Search"
+    tabindex="1"
+    autocapitalize="off">
+  <div class="scope-badge">This repository</div>
+</form>
+    </div>
+
+      <ul class="header-nav left" role="navigation">
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="/explore" data-ga-click="(Logged out) Header, go to explore, text:explore">Explore</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="/features" data-ga-click="(Logged out) Header, go to features, text:features">Features</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://enterprise.github.com/" data-ga-click="(Logged out) Header, go to enterprise, text:enterprise">Enterprise</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="/blog" data-ga-click="(Logged out) Header, go to blog, text:blog">Blog</a>
+          </li>
+      </ul>
+
+  </div>
+</div>
+
+
+
+      <div id="start-of-content" class="accessibility-aid"></div>
+          <div class="site" itemscope itemtype="http://schema.org/WebPage">
+    <div id="js-flash-container">
+
+    </div>
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+
+<ul class="pagehead-actions">
+
+  <li>
+      <a href="/login?return_to=%2Fmikeizbicki%2Fucr-cs100"
+    class="minibutton with-count tooltipped tooltipped-n"
+    aria-label="You must be signed in to watch a repository" rel="nofollow">
+    <span class="octicon octicon-eye"></span>
+    Watch
+  </a>
+  <a class="social-count" href="/mikeizbicki/ucr-cs100/watchers">
+    68
+  </a>
+
+  </li>
+
+  <li>
+      <a href="/login?return_to=%2Fmikeizbicki%2Fucr-cs100"
+    class="minibutton with-count tooltipped tooltipped-n"
+    aria-label="You must be signed in to star a repository" rel="nofollow">
+    <span class="octicon octicon-star"></span>
+    Star
+  </a>
+
+    <a class="social-count js-social-count" href="/mikeizbicki/ucr-cs100/stargazers">
+      104
+    </a>
+
+  </li>
+
+    <li>
+      <a href="/login?return_to=%2Fmikeizbicki%2Fucr-cs100"
+        class="minibutton with-count tooltipped tooltipped-n"
+        aria-label="You must be signed in to fork a repository" rel="nofollow">
+        <span class="octicon octicon-repo-forked"></span>
+        Fork
+      </a>
+      <a href="/mikeizbicki/ucr-cs100/network" class="social-count">
+        149
+      </a>
+    </li>
+</ul>
+
+        <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+          <span class="mega-octicon octicon-repo"></span>
+          <span class="author"><a href="/mikeizbicki" class="url fn" itemprop="url" rel="author"><span itemprop="title">mikeizbicki</span></a></span><!--
+       --><span class="path-divider">/</span><!--
+       --><strong><a href="/mikeizbicki/ucr-cs100" class="js-current-repository" data-pjax="#js-repo-pjax-container">ucr-cs100</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </span>
+
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+      <div class="repository-with-sidebar repo-container new-discussion-timeline  ">
+        <div class="repository-sidebar clearfix">
+
+<nav class="sunken-menu repo-nav js-repo-nav js-sidenav-container-pjax js-octicon-loaders"
+     role="navigation"
+     data-pjax="#js-repo-pjax-container"
+     data-issue-count-url="/mikeizbicki/ucr-cs100/issues/counts">
+  <ul class="sunken-menu-group">
+    <li class="tooltipped tooltipped-w" aria-label="Code">
+      <a href="/mikeizbicki/ucr-cs100" aria-label="Code" class="selected js-selected-navigation-item sunken-menu-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /mikeizbicki/ucr-cs100">
+        <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+        <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+</a>    </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Issues">
+        <a href="/mikeizbicki/ucr-cs100/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /mikeizbicki/ucr-cs100/issues">
+          <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+          <span class="js-issue-replace-counter"></span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+</a>      </li>
+
+    <li class="tooltipped tooltipped-w" aria-label="Pull Requests">
+      <a href="/mikeizbicki/ucr-cs100/pulls" aria-label="Pull Requests" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g p" data-selected-links="repo_pulls /mikeizbicki/ucr-cs100/pulls">
+          <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
+          <span class="js-pull-replace-counter"></span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+</a>    </li>
+
+
+  </ul>
+  <div class="sunken-menu-separator"></div>
+  <ul class="sunken-menu-group">
+
+    <li class="tooltipped tooltipped-w" aria-label="Pulse">
+      <a href="/mikeizbicki/ucr-cs100/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-selected-links="pulse /mikeizbicki/ucr-cs100/pulse">
+        <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+        <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+</a>    </li>
+
+    <li class="tooltipped tooltipped-w" aria-label="Graphs">
+      <a href="/mikeizbicki/ucr-cs100/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-selected-links="repo_graphs repo_contributors /mikeizbicki/ucr-cs100/graphs">
+        <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+        <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+</a>    </li>
+  </ul>
+
+
+</nav>
+
+              <div class="only-with-full-nav">
+
+<div class="clone-url open"
+  data-protocol-type="http"
+  data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone">
+  <h3><span class="text-emphasized">HTTPS</span> clone URL</h3>
+  <div class="input-group js-zeroclipboard-container">
+    <input type="text" class="input-mini input-monospace js-url-field js-zeroclipboard-target"
+           value="https://github.com/mikeizbicki/ucr-cs100.git" readonly="readonly">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+
+<div class="clone-url "
+  data-protocol-type="subversion"
+  data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone">
+  <h3><span class="text-emphasized">Subversion</span> checkout URL</h3>
+  <div class="input-group js-zeroclipboard-container">
+    <input type="text" class="input-mini input-monospace js-url-field js-zeroclipboard-target"
+           value="https://github.com/mikeizbicki/ucr-cs100" readonly="readonly">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+
+
+<p class="clone-options">You can clone with
+  <a href="#" class="js-clone-selector" data-protocol="http">HTTPS</a> or <a href="#" class="js-clone-selector" data-protocol="subversion">Subversion</a>.
+  <a href="https://help.github.com/articles/which-remote-url-should-i-use" class="help tooltipped tooltipped-n" aria-label="Get help on which URL is right for you.">
+    <span class="octicon octicon-question"></span>
+  </a>
+</p>
+
+
+
+                <a href="/mikeizbicki/ucr-cs100/archive/2015winter.zip"
+                   class="minibutton sidebar-button"
+                   aria-label="Download the contents of mikeizbicki/ucr-cs100 as a zip file"
+                   title="Download the contents of mikeizbicki/ucr-cs100 as a zip file"
+                   rel="nofollow">
+                  <span class="octicon octicon-cloud-download"></span>
+                  Download ZIP
+                </a>
+              </div>
+        </div><!-- /.repository-sidebar -->
+
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
+
+<div class="file-navigation">
+
+<div class="select-menu js-menu-container js-select-menu left">
+  <span class="minibutton select-menu-button js-menu-target css-truncate" data-hotkey="w"
+    data-master-branch="2015winter"
+    data-ref="2015winter"
+    title="2015winter"
+    role="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <span class="octicon octicon-git-branch"></span>
+    <i>branch:</i>
+    <span class="js-select-button css-truncate-target">2015winter</span>
+  </span>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Switch branches/tags</span>
+        <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" data-filter-placeholder="Filter branches/tags" class="js-select-menu-tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab">Tags</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open selected"
+               href="/mikeizbicki/ucr-cs100/tree/2015winter/people/students"
+               data-name="2015winter"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="2015winter">
+                2015winter
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/mikeizbicki/ucr-cs100/tree/cs100-2014fall/people/students"
+               data-name="cs100-2014fall"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="cs100-2014fall">
+                cs100-2014fall
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/mikeizbicki/ucr-cs100/tree/cs100-2014summer/people/students"
+               data-name="cs100-2014summer"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="cs100-2014summer">
+                cs100-2014summer
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/mikeizbicki/ucr-cs100/tree/revert-770-2015winter/people/students"
+               data-name="revert-770-2015winter"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <span class="select-menu-item-text css-truncate-target" title="revert-770-2015winter">
+                revert-770-2015winter
+              </span>
+            </a>
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+  <div class="button-group right">
+    <a href="/mikeizbicki/ucr-cs100/find/2015winter" data-pjax data-hotkey="t" class="js-show-file-finder minibutton empty-icon tooltipped tooltipped-s" aria-label="Quickly jump between files">
+      <span class="octicon octicon-list-unordered"></span>
+    </a>
+    <a href="/mikeizbicki/ucr-cs100/commits/2015winter/people/students" class="minibutton empty-icon tooltipped tooltipped-s" aria-label="Browse commits for this branch">
+      <span class="octicon octicon-history"></span>
+    </a>
+  </div>
+
+  <div class="breadcrumb"><span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/mikeizbicki/ucr-cs100" class="" data-branch="2015winter" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">ucr-cs100</span></a></span></span><span class="separator">/</span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/mikeizbicki/ucr-cs100/tree/2015winter/people" class="" data-branch="2015winter" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">people</span></a></span><span class="separator">/</span><strong class="final-path">students</strong><span class="separator">/</span><a aria-label="You must be signed in to make or propose changes" class="octicon-button disabled tooltipped tooltipped-e" href="#"><span class="octicon octicon-plus"></span></a></div>
+
+</div>
+
+
+
+
+  <div class="commit commit-tease js-details-container" >
+    <p class="commit-title ">
+        <a href="/mikeizbicki/ucr-cs100/commit/4b0275536f50754ca5a674c33167e86ad21292c5" class="message" data-pjax="true" title="fixed file">fixed file</a>
+
+    </p>
+    <div class="commit-meta">
+      <button aria-label="Copy SHA" class="js-zeroclipboard zeroclipboard-link" data-clipboard-text="4b0275536f50754ca5a674c33167e86ad21292c5" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+      <a href="/mikeizbicki/ucr-cs100/commit/4b0275536f50754ca5a674c33167e86ad21292c5" class="sha-block" data-pjax>latest commit <span class="sha">4b0275536f</span></a>
+
+      <div class="authorship">
+        <img alt="Mike Izbicki" class="avatar" data-user="1052630" height="20" src="https://avatars1.githubusercontent.com/u/1052630?v=3&amp;s=40" width="20" />
+        <span class="author-name"><a href="/mikeizbicki" rel="author">mikeizbicki</a></span>
+        authored <time class="updated" datetime="2015-02-11T23:13:01Z" is="relative-time">Feb 11, 2015</time>
+
+      </div>
+    </div>
+  </div>
+
+
+<div class="file-wrap">
+
+  <table class="files" data-pjax>
+      <tr class="up-tree">
+        <td></td>
+        <td><a href="/mikeizbicki/ucr-cs100/tree/2015winter/people" rel="nofollow" title="Go to parent directory">..</a></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+
+    <tbody>
+      <tr class="warning include-fragment-error">
+        <td class="icon"><span class="octicon octicon-alert"></span></td>
+        <td class="content" colspan="3">Failed to load latest commit information.</td>
+      </tr>
+
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/aben001" class="js-directory-link" id="fa3c8a7b520b0956523d6bfd611d6627-48e62d3e4f6fc573447bfdf2ae07ebafe5253c6a" title="aben001">aben001</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/ee94467a8e58d86615115223541d4091fe5d0839" class="message" data-pjax="true" title="new userfile">new userfile</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T17:41:27Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/amart088" class="js-directory-link" id="5bd0113be90acc42f0835a374c791e03-33b428ed6df8e873026ba677ff5bbf21816f83c8" title="amart088">amart088</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/fde078ae446730149cc69b4fa457590665bd40d5" class="message" data-pjax="true" title="created file amart088 to directory">created file amart088 to directory</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T21:02:45Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/athio001" class="js-directory-link" id="ef14d78cacb3f1f7b95f8c41322843c3-f0f37e65934e1abba6dd94aadc38f8f41b78fcde" title="athio001">athio001</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/aec8c991809bef634bb14cae3f1097c1eca0c8a9" class="message" data-pjax="true" title="enrolled athio001 in CS-100">enrolled athio001 in CS-100</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T20:13:17Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/ccali003" class="js-directory-link" id="ca3f99f07b7c5012fc0bd1b704e6fc16-824ef5cfb5150490eac9b57f0b4a9a7f7e65f1b9" title="ccali003">ccali003</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/7231bb5a50ab27c975bc4127ed37aec5a0398ff2" class="message" data-pjax="true" title="Added ccali003, Chelsey Calingo">Added ccali003, Chelsey Calingo</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T19:58:23Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/cfan002" class="js-directory-link" id="b06e878474eb8d57c80b53f233e54556-c21e3ad9404fb08a8623783800d0d77063213824" title="cfan002">cfan002</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/f22f1717252e2d109804468fcf9b5e12aca825ea" class="message" data-pjax="true" title="updating github information
+
+Numerous attempts at using the terminal and git to squash previous commits have so far failed, hopefully this will be a simpler method of updating 2 lines of information.">updating github information</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-23T01:19:13Z" is="time-ago">Jan 22, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/cibar007" class="js-directory-link" id="5ee728f69b1a3a3d0eec1c62370b1330-0bf535aaf329094a747c25118074bea6f02997bd" title="cibar007">cibar007</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/60296e10400b0b04bc2c65132f8276d959be64d9" class="message" data-pjax="true" title="added cibar007">added cibar007</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T20:21:56Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/cyang032" class="js-directory-link" id="44ab87c025724ca752032cc125a09dc7-1905298fc6983a9bc22d457d08c164fed6c110c6" title="cyang032">cyang032</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/1e9099b63db61e07f549c84e63e73a597cad9f6a" class="message" data-pjax="true" title="added cyang032 to students">added cyang032 to students</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T20:37:46Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/dhand002" class="js-directory-link" id="cd677e6464b4f18d3fe787087ba8e6a1-a2e3c3499aa3803d47d2fa9d8039547abe14c977" title="dhand002">dhand002</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/3aebde1b4f49a3c493a8eddbab9bc1afb45842c4" class="message" data-pjax="true" title="dhand002 added">dhand002 added</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T20:36:35Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/dshe001" class="js-directory-link" id="d5979f45029a567ecb969416feaf1348-fbf879b8d5a201060c64093e6e372d594fc8433b" title="dshe001">dshe001</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/8205d6463bd9e4012b4a602f47112aa0846bff17" class="message" data-pjax="true" title="Update dshe001
+
+fix a user name typo">Update dshe001</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-28T19:16:17Z" is="time-ago">Jan 28, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/eneva002" class="js-directory-link" id="e76da3ac539f8670a87eaf8a287cfae2-f4bfe04c4ccb59e037fd7bee027678b3c9564177" title="eneva002">eneva002</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/5cba0eba88473531aabb4f0c934f24219aaeb722" class="message" data-pjax="true" title="added myself">added myself</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T20:33:41Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/hdorn001" class="js-directory-link" id="f0f3162ba73d20dd94b9721cde2e7903-d2734a505953e9f6f958abc8ba4d8f80e30f5844" title="hdorn001">hdorn001</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/0100c4c26e513c530fcf13f052fa0643e4164846" class="message" data-pjax="true" title="added hdorn001 student file">added hdorn001 student file</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-15T09:25:38Z" is="time-ago">Jan 15, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/ikim025" class="js-directory-link" id="8d6d9d818f6f9d9d0a4fc0db6f2449ee-1cb15a7b04de2e5cd08ad256621d3a31769302e2" title="ikim025">ikim025</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/3fd3b35b6c143a72adb84dc017a15b91daceee67" class="message" data-pjax="true" title="deleted everything except for mine">deleted everything except for mine</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-13T20:09:41Z" is="time-ago">Jan 13, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/jcand003" class="js-directory-link" id="dc9e972f3e666aec66123c4c3a9ce3a0-87a4d07e12e61e30d215f309a3b0e4bfc6d7466c" title="jcand003">jcand003</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/d94811cdbab83f1886faaa94f819e90a67196a18" class="message" data-pjax="true" title="added student info">added student info</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T20:22:32Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/jduga002" class="js-directory-link" id="5218ea69d3da7b462b639f3cd702d2b2-b4de0523b4923e9264fee2c2982396a4705cc402" title="jduga002">jduga002</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/5a0feae644a3a80e895652fae74f3df00392b1f6" class="message" data-pjax="true" title="Added my student info">Added my student info</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T20:15:44Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/jfu006" class="js-directory-link" id="ee90363f513a57dada3468a760a638b2-b705da72925830c41bc2cdb74f5630c58d05d080" title="jfu006">jfu006</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/e3a2b5664c4533eaeb9a4e9c840f66f4f579ac3d" class="message" data-pjax="true" title="enrolled">enrolled</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-08T23:46:56Z" is="time-ago">Jan 8, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/jkinc002" class="js-directory-link" id="eba84985e470e3ee82917a0550675643-5d120ef444d79a8cc4c65c2b38fc54d7c7a25614" title="jkinc002">jkinc002</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/d719093240f2ba7077ec5a834942427d188168f6" class="message" data-pjax="true" title="enrolling in cs100">enrolling in cs100</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T20:07:17Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/jlu019" class="js-directory-link" id="230afdb947ccd92e050c994e664443b2-6b6936bdc773e05aae61a0b002b150ecd980fe03" title="jlu019">jlu019</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/fd4b89ca6ed342fd5dc654bfa88e122c4d4a6441" class="message" data-pjax="true" title="Update jlu019">Update jlu019</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-28T05:12:22Z" is="time-ago">Jan 27, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/jng017" class="js-directory-link" id="9680c55e9be36cf8f07df24d31773803-a9ec3f57b8cb60b8f396dfe744819d8f4492d012" title="jng017">jng017</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/381a371bbafee7a2667a4e620befa43aa4cf2cd0" class="message" data-pjax="true" title="fixed mistakes in student info files">fixed mistakes in student info files</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-14T01:20:04Z" is="time-ago">Jan 13, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/jsun031" class="js-directory-link" id="261610943db659cb921d2233e90dea30-4ede780ab3f87a55ba1955d4300ba57f0f47eede" title="jsun031">jsun031</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/e5e23a20ecf4a8552f497010341e608414c31999" class="message" data-pjax="true" title="enroll in cs100">enroll in cs100</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-14T09:22:09Z" is="time-ago">Jan 14, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/jwang096" class="js-directory-link" id="4d7a124ea9fce4fedf5981b38da2b775-03a8f2974ca2441b9d1fd51367eba0babcd408c5" title="jwang096">jwang096</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/a96ec57e4c432836c7a8282006db811eb024d8dd" class="message" data-pjax="true" title="fixed the name of the file">fixed the name of the file</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-13T01:31:26Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/jweyr001" class="js-directory-link" id="4f7cde0b1ada36a4567d2db4aac906ff-c4b4e528d316f9efac9e2f3f370ca75e3a86f50d" title="jweyr001">jweyr001</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/0d8de6f4970eb3eeb694cacdc8010c7e4b99d349" class="message" data-pjax="true" title="Add student information for jweyr001">Add student information for jweyr001</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-17T22:27:18Z" is="time-ago">Jan 17, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/kkamg001" class="js-directory-link" id="86fe61fb51479c7c009ae91dd9b5c8d4-7bff8fe8308d9a4b7c75c69550c535e89bd5315b" title="kkamg001">kkamg001</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/4b0275536f50754ca5a674c33167e86ad21292c5" class="message" data-pjax="true" title="fixed file">fixed file</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-02-11T23:13:01Z" is="time-ago">Feb 11, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/kkimb003" class="js-directory-link" id="1e2f08e2b89aea1815a3d96346300df6-5f9a7cbe163667a01f1cf05e01516ef2ce5875c2" title="kkimb003">kkimb003</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/2c0f32e8722591b56e59b0ede57b909c9437ee87" class="message" data-pjax="true" title="Create kkimb003">Create kkimb003</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T20:42:16Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/ljomo001" class="js-directory-link" id="62e12b49003013979a6fa7fa272135af-12f0909bab397c035915a2a02531a3ec94b7df0d" title="ljomo001">ljomo001</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/7e9f5c0d67a67a44b2281fdec8e60da922c44a5a" class="message" data-pjax="true" title="added ljomo001">added ljomo001</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T20:15:14Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/makba002" class="js-directory-link" id="a0ea9c1b0ccc859a792c2fbd1fb3d317-b9a81ad645000d5e957a832063245a3058b02a44" title="makba002">makba002</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/232c656e007313ec327394ac314e116ed6794a34" class="message" data-pjax="true" title="Update makba002
+
+changed gitur1 to giturl in student info">Update makba002</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-27T08:07:43Z" is="time-ago">Jan 27, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/mchu011" class="js-directory-link" id="98a2d185f1d7292fdb968bf0431d06fc-1e95306da3b2af5a369de501fd8e463c1cca6b64" title="mchu011">mchu011</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/f197519b57312627f5121ad270eaa97be31ac5a5" class="message" data-pjax="true" title="added Murphy Chu information">added Murphy Chu information</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T20:58:16Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/mevan003" class="js-directory-link" id="7fe02e932222db045fe7ea554453940e-cebeeacbfa278e3f617cd4b93ce9148fcaf8655c" title="mevan003">mevan003</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/381a371bbafee7a2667a4e620befa43aa4cf2cd0" class="message" data-pjax="true" title="fixed mistakes in student info files">fixed mistakes in student info files</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-14T01:20:04Z" is="time-ago">Jan 14, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/mmore019" class="js-directory-link" id="fe978f812ebe5483b44a5e45f837f4e6-ff29919abac81ee3dec058a89ddb9acc6f88c9c0" title="mmore019">mmore019</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/a76bd337fbfba6868f18c1ff9b6594f6c0a4592b" class="message" data-pjax="true" title="added mmore019">added mmore019</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T21:35:15Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/monti004" class="js-directory-link" id="1a788caff5ca15243c5c83870736bf24-c9677b236edb52222410358837ac0d03642752b9" title="monti004">monti004</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/efb345888a55aeadf3526699a791add6b07aba02" class="message" data-pjax="true" title="update info">update info</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T20:58:34Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/muy003" class="js-directory-link" id="3f1033f49d93e32388088f6a507c306a-5c2c27ec4378541c9c62dd88b0570aa2d508ec00" title="muy003">muy003</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/4f308ceadeec940389a28bedc28cf0148e5444cb" class="message" data-pjax="true" title="adding Michael Uy&#39;s muy003 file">adding Michael Uy's muy003 file</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T20:56:44Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/nfarh002" class="js-directory-link" id="061bf7b2ad86df58f1b8ca215c6ea83b-f2f6065eca35fee6d1fec00cbb6b44986ecb4030" title="nfarh002">nfarh002</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/88c08e4efb671235e713c8f8400333ec6ee9f673" class="message" data-pjax="true" title="made user file">made user file</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T20:08:19Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/rfeng001" class="js-directory-link" id="f7e738aa1ea807151c73fc01b22e415c-7414811115dc11f454683e12ddc717ca2f9e7039" title="rfeng001">rfeng001</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/f123fdf134ceef207e81a645a38a461e96bceb22" class="message" data-pjax="true" title="new student
+
+enrolled into cs100">new student</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T18:15:46Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/rpasi001" class="js-directory-link" id="f9c47abeb54bed7ebb414356b20c88d9-e0e9a8efe730b9862f53cbc577986cf1e0145a4a" title="rpasi001">rpasi001</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/a863515e8c2d1e8bd0b612e853a0e8e11d434bed" class="message" data-pjax="true" title="Registerefor CS100">Registerefor CS100</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-15T22:47:51Z" is="time-ago">Jan 15, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/ryama008" class="js-directory-link" id="9bbe70ad13417a52efe65d9dd36585ae-7d1397e6f13bd3155c25421daec7eb3adbfa2111" title="ryama008">ryama008</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/6295b246385bfcd7d5ab5a172cdcf1f882ad9e9e" class="message" data-pjax="true" title="added my student profile">added my student profile</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T20:41:28Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/santo003" class="js-directory-link" id="883b9baa2c43fcefc6a033ad0880423a-15bab56be8f4b07ff6ce5e8d93c8b054cff67fd0" title="santo003">santo003</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/45d785f2f837531536f56810f8135480874f6a39" class="message" data-pjax="true" title="my user acct&#39;s">my user acct's</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-14T20:49:37Z" is="time-ago">Jan 14, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/sbala003" class="js-directory-link" id="6bb142a7f5a85e2e9e4e79bd34efafd7-fdd030eeb9f769542e9d52d886f98dcbf589afe7" title="sbala003">sbala003</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/2d16c114d30b7dfa8c31640a7c525ed19101a148" class="message" data-pjax="true" title="added student sbala003">added student sbala003</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T17:38:05Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/scohe001" class="js-directory-link" id="1950a52053eb8a9e597e556b90d85801-df84c4f8556fa16c0a1322e7955ea374b79da09f" title="scohe001">scohe001</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/c17f6999aedd926693720297d30c95fbb9ad1483" class="message" data-pjax="true" title="added my student info">added my student info</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T17:12:15Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/skuo004" class="js-directory-link" id="d47ff813ca77aa64e12682cb483d4cef-19c01dfba855cc78e071a8ddcbe71325a6f3407e" title="skuo004">skuo004</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/73eeed7883ba0e5db82a3dd39c3a320fdfeb00cf" class="message" data-pjax="true" title="added my info">added my info</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T19:44:48Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/slee208" class="js-directory-link" id="d4a2eb4cb0db43fcf8b44bbeb30dd01b-87be2f088742f0ce678e7876d2ec3de2be964fa2" title="slee208">slee208</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/9ff431fd34357c79d07410d25e01eed90d6d120e" class="message" data-pjax="true" title="Enrolling in CS100">Enrolling in CS100</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-09T10:30:13Z" is="time-ago">Jan 9, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/tzick002" class="js-directory-link" id="882834baaf41a8f13b48115e9d076e49-c436cf094a261d210570d5383d05860fabe4196b" title="tzick002">tzick002</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/55a82143ddf43bd3e1316738043c6f2b793eb126" class="message" data-pjax="true" title="enrolling in cs100">enrolling in cs100</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-13T20:03:51Z" is="time-ago">Jan 13, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/vchio001" class="js-directory-link" id="3002fe3ccfc215da063dbac5a24a8625-3ccdc7eadf2e51a39e07a3200d5335140cdafe1b" title="vchio001">vchio001</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/381a371bbafee7a2667a4e620befa43aa4cf2cd0" class="message" data-pjax="true" title="fixed mistakes in student info files">fixed mistakes in student info files</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-14T01:20:04Z" is="time-ago">Jan 14, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/vgarc018" class="js-directory-link" id="5542a099b9bc55e3db3c01b39bf52d57-e127c5a1f284ac6dca09e0f35c0ba5b7146b84e3" title="vgarc018">vgarc018</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/998005d48c2e39cfc480ec86b054c2561fc14d5f" class="message" data-pjax="true" title="added student info">added student info</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T20:20:29Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/vhall001" class="js-directory-link" id="b9f972bcef85b8b3ab3142d1d0dab3f4-6ea46c2df44403a0c962a4f003fd196862fa5cec" title="vhall001">vhall001</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/3032225841f6d28e7e98b12d3fdc93a64a7f70fc" class="message" data-pjax="true" title="created student information">created student information</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T17:33:00Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/wfink001" class="js-directory-link" id="03a9788fb3270c0905bc77ae7baab595-5248ef6b39de6ed79cd1b68955ac64071705665f" title="wfink001">wfink001</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/33562acb6f2c0e07f314e0a7e4bf2335617ba79a" class="message" data-pjax="true" title="Included wfink001">Included wfink001</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T17:55:56Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/wlee030" class="js-directory-link" id="83b8178d23c715ed38cf34c9b05477bb-0a7a2f7ce994d9042fd48be80be9a2db615aad6f" title="wlee030">wlee030</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/eeabac99ebae6c504e9f593e6db98afd152d94ee" class="message" data-pjax="true" title="add myself to class">add myself to class</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T20:10:36Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/yli066" class="js-directory-link" id="babdc6df10cb7013e1b4716a78ae1b92-0464d1a9f058dd580fc52a0be36d691739f2ff2b" title="yli066">yli066</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/2048d8d3c2a97428ed9179e877d690eb9610e9a5" class="message" data-pjax="true" title="added my name">added my name</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T21:10:32Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/yliu075" class="js-directory-link" id="9cce271db96f9a119e91d3f23e8c1300-93bd5dc7127f93a8a39cdf2f337066ea4dc23823" title="yliu075">yliu075</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/868edefd55353d8eb163c1bfaa28d3c6b70c4385" class="message" data-pjax="true" title="Added Student Info">Added Student Info</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-12T19:58:56Z" is="time-ago">Jan 12, 2015</time></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="icon">
+            <span class="octicon octicon-file-text"></span>
+            <img alt="" class="spinner" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
+          </td>
+          <td class="content">
+            <span class="css-truncate css-truncate-target"><a href="/mikeizbicki/ucr-cs100/blob/2015winter/people/students/yliu127" class="js-directory-link" id="205fb23d024e94aa8d61fa5efef337c9-1246e280c1aa427f85056b314465df7054939808" title="yliu127">yliu127</a></span>
+          </td>
+          <td class="message">
+            <span class="css-truncate css-truncate-target">
+              <a href="/mikeizbicki/ucr-cs100/commit/db423150b26ea76e5f95c9b6e47ca14a575bdc47" class="message" data-pjax="true" title="added yliu127 info">added yliu127 info</a>
+            </span>
+          </td>
+          <td class="age">
+            <span class="css-truncate css-truncate-target"><time datetime="2015-01-14T01:07:30Z" is="time-ago">Jan 13, 2015</time></span>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+
+
+
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div><!-- /.container -->
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links right">
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+      <li><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+
+    </ul>
+
+    <a href="https://github.com" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+</a>
+    <ul class="site-footer-links">
+      <li>&copy; 2015 <span title="0.05492s from github-fe123-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-suggester-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="fullscreen-contents js-fullscreen-contents" placeholder=""></textarea>
+      <div class="suggester-container">
+        <div class="suggester fullscreen-suggester js-suggester js-navigation-container"></div>
+      </div>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped tooltipped-w" aria-label="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped tooltipped-w"
+      aria-label="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="#" class="octicon octicon-x flash-close js-ajax-error-dismiss" aria-label="Dismiss error"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+
+      <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-70c417717c6c19f325c76c40de062c2e005f8cfec564283d7818b5b0fe8c0d27.js"></script>
+      <script async="async" crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github-9adb85255293205044bdded05300662b60a3fe712cb26ee7e5ca313a9f2ce3f7.js"></script>
+
+
+
+  </body>
+</html>
+
