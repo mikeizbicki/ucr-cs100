@@ -1,6 +1,6 @@
 S.N.A.P.
 ---
-SNAP is a tree of bash scripts that gather and present student social networking information. SNAP also gathers grade information so we can compare the two. **Social Networking Analysis Program.
+**SNAP** is a tree of bash scripts that gather and present student social networking information. SNAP also gathers grade information so we can compare the two. **Social Networking Analysis Program.
 
 **What can it do?**
 
