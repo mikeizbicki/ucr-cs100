@@ -1,4 +1,4 @@
-# the `vim` text editor
+# The vim text editor
 
 *You will need to be comfortable with the bash terminal in order to complete this lab.
 Some previous cs100 students created a [short tutorial](./terminal.md) you can work through if you need a refresher.
@@ -11,7 +11,7 @@ The purpose of this lab is to introduce you to `vim`.
 It will seem weird at first.
 But with practice, you will find `vim` much more powerful than either the `geany` or `Cloud9` editors you are already familiar with.
 
-### part 1: vimtutor
+### Part 1: vimtutor
 
 Open up a terminal and type the command:
 ```
@@ -26,30 +26,81 @@ The key to mastering `vim` is practice.
 Therefore, you are required to use `vim` for all lab and homework assignments in this course.
 **Using any editor other than `vim` will result in a 0 on the assignment.**
 
-### part 2: the vim-adventures game
+### Part 2: The vim-adventures game
 
-Once you have finished `vimtutor`, start playing the game: http://vim-adventures.com.
+Once you have finished `vimtutor`, start playing [vim-adventures](http://vim-adventures.com).
 The first three levels are free (and that's all you're required to do).
 You're welcome to pay for the full game if you want, but I'm not requiring you to do so.
 
-### part 3: the `.vimrc` file
+### Part 3: The .vimrc file
 
-`vim` stores its settings in a file called `.vimrc` located in your home directory.
-Your task is to add ten customizations of your choice to this file.
+#### Configuring vim
+Part of Vim's power is that it can be extensively customized.
+The `vim` runtime configuration file or `.vimrc`, located in your home directory, holds the startup information for `vim`.
+The `vim` editor can be configured by altering the `.vimrc` file.
 
 To edit your `.vimrc` file, run the command:
 ```
 $ vim ~/.vimrc
 ```
 The `~` is a shortcut name for your home directory.
+The command above opens the `.vimrc` file in the `vim` editor.
+Now add the following lines to your `.vimrc` file:
+```vim
+set number
+colorscheme darkblue
+```
+Save and quit the file using the `:wq` command in Normal mode.
+Then, reload the `vim` editor to see the you've changes made.
+Vim will default to these settings every time you open up the editor so long as these two lines exist in the `.vimrc`.
 
+#### Plugins
+Vim plugins allow you to enhance, change, or add to Vim's existing behaviors.
+Though don't just add every plugin available.
+Too many plugins can clutter your .vimrc file and essentially cause ambiguity.
+It is important to think first about what you need from them.
+For example, you might need a plugin that [highlights syntax errors](https://github.com/tpope/vim-markdown) in code or one that [completes words using the `<Tab>` key](https://github.com/ervandew/supertab).
+More `vim` plugins can be found [here](http://vimawesome.com/).
+
+ Managing plugins is difficult without the use of plugin managers like [Vundle](https://github.com/gmarik/Vundle.vim), [NeoBundle](https://github.com/Shougo/neobundle.vim), [VimPlug](https://github.com/junegunn/vim-plug), and [Pathogen](https://github.com/tpope/vim-pathogen).
+Plugin managers make it easier to modify your `.vimrc` file without you having to move files around yourself.
+They do the work for you.
+
+### Part 4: The task at hand
+
+For this lab we will be using a configuration prepared by a former CS100 student.
+This will also give us a small taste of the power of `vim`. (Its real power lies in the productivity boost one gains when effectively using vim but will take a lot of practice)
+
+We will start by taking a look at the repository for the [vim configuration](https://github.com/Anthony1234567/Vimrc1234567).
+Since we have not yet gone over Git and git commands in lecture, the commands needed to download the file are provided below.
+
+Type the command below into the terminal to download the configuration along with the plugin manager used in the configuration:
+```
+cd
+git clone https://github.com/Anthony1234567/Vimrc1234567
+cd Vimrc1234567
+mv -f .vimrc ..
+cd
+mkdir -p .vim/bundle
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
+```
+Your task is to add (or remove) customizations of your choice to this file.
+After making your changes to the `.vimrc` file save and quit the file.
+Then, reload `vim` to see the applied configurations.
 For some good ideas on what options to use, you can look at these examples:
 
-* [Mike Izbicki's (the instructor's) personal `.vimrc` file](https://github.com/mikeizbicki/dotfiles/blob/master/.vimrc)
+* [Mike Izbicki's (the instructor's) personal .vimrc file](https://github.com/mikeizbicki/dotfiles/blob/master/.vimrc)
 
 * [A vim configuration prepared by previous cs100 students](https://github.com/atan009/vimrc)
 
-You may also find the following links useful:
+#### In General
+Personalizing your `.vimrc` is a good way to improve your knowledge of the `vim` editor but that alone wont make you and expert.
+Practicing and learning the commands although, can seem difficult at first, help make `vim` the powerful tool that it is.
+Once you've mastered `vim` less of your time will be spent navigating your code and typing up your program and more of it can be spent actually thinking about your program.
+
+You may find the following links useful:
+* [Doug Black: A Good Vimrc](http://dougblack.io/words/a-good-vimrc.html)
 
 * [stackoverflow: what is your most productive shortcut with vim?](http://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim)
 
