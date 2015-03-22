@@ -66,6 +66,16 @@ This command allows us to traverse backwards within gdb and change the programs 
 <a href="https://www.youtube.com/watch?v=Yq6XFl-u00o" target="_blank"><img src="https://i.ytimg.com/vi/Yq6XFl-u00o/2.jpg?time=1427006544555" 
 alt="GDB_Commands" width="480" height="280" border="10" /></a>
 
+GDB with fork()
+---------------
+If you're new to system programming and using system calls, GDB has got your back.
+In this video, we'll look at a particular function that apparently forgot how many children it had.
+We'll use GDB to fix that. 
+
+<a href="https://www.youtube.com/watch?v=FHjK7E0XCUY" target="_blank"><img src="https://i.ytimg.com/vi/FHjK7E0XCUY/2.jpg?time=1427055731015" 
+alt="GDB_fork" width="480" height="280" border="10" /></a>
+
+
 Using GDB
 =========
 Now that you have some familiarity of GDB, I hope you incorporate using bit of awesomeness in your future projects!
