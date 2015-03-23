@@ -1,13 +1,13 @@
 #Introduction to git
 
-The version control system(VCS) `git` is one of VCS tools used ofr tracking changes in your project.
+The version control system(VCS) `git` is one of VCS tools used for tracking changes in your project.
 This tool is developed by Linus Torvaldus.
 
 If you have ever made a change to a project and wish that you could go back before you made that change, a VCS can help.
 A VCS tracks changes you make to a project and will allow you to return to a saved point.
 
 
-This lab contains three excercises. 
+This lab contains three exercises. 
 The first exercise will introduce you to `git` and will step you through some basic git commands.
 The second exercise will introduce you to some more advanced `git` commands as well as more options for the ones learned in exercise one.
 The third exercise will enroll you in the course.
