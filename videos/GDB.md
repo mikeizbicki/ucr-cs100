@@ -35,26 +35,47 @@ Keep in mind though, there are a lot more.
 | `set var` | `(gdb) set var x = #` | Sets variable x to value right of `=`|
 | `backtrace(bt)`| `(gdb) bt` | |outputs summary of calls to current location|
 | `list(l)` | `(gdb) l 20` | lists lines centered around #,where # is a line number |
+| `record full` | `(gdb) record full` | This command allows us to record gdb and it's execution|
 |`set follow-fork-mode`| `(gdb)set follow-fork-mode w`| follow `w` process, `w` is (child/parent)|
+| `reverse-step` | `(gdb) rs` | This command allows us to step back within gdb (must have enabled record)|
 
 
-GDB Introduction
+GDB Intro/Segfaults
 ----------------
 In this introduction video, we'll go over setting up GDB, as well as using some very basic GDB commands.
-You should be able to follow along fairly easily with this tutorial and see why gdb is so useful.
+In Particular, we'll look at how we can go about finding and fixing segfaults.
+Finding and fixing segfaults is one of the best features that GDB offers.
+You should be able to follow along fairly easily with this tutorial and see just why gdb is so useful.
 Remember there are much more commands.
-This video just scratches the surface of how vital GDB is 
+This video just scratches the surface of how vital GDB is. 
 
-<a href="https://www.youtube.com/watch?v=opJGK9OQ9wg&feature=youtu.be" target="_blank"><img src="https://i.ytimg.com/vi/opJGK9OQ9wg/1.jpg?time=1426903782848" 
-alt="GDB_Intro" width="480" height="280" border="10" /></a>
+<a href="https://www.youtube.com/watch?v=vcVmWbYEIsk" target="_blank"><img src="https://i.ytimg.com/vi/vcVmWbYEIsk/2.jpg?time=1427005811814" 
+alt="GDB_Segfault" width="480" height="280" border="10" /></a>
 
+
+GDB with watch/Record/Reverse
+---------------
+In this video, we'll go over a few of the commands you likely have seen before.
+We'll also introduce commands that may be new to you. 
+The `watch` command allows you to see what a variable has changed to.
+It's actually not too difficult to implement.
+We'll also be looking at the `record full` command, which allows you to record gdb as you go.
+Now, if we have `record` set, we can use the command `rs`.
+This command allows us to traverse backwards within gdb and change the programs data.
+
+<a href="https://www.youtube.com/watch?v=Yq6XFl-u00o" target="_blank"><img src="https://i.ytimg.com/vi/Yq6XFl-u00o/2.jpg?time=1427006544555" 
+alt="GDB_Commands" width="480" height="280" border="10" /></a>
 
 GDB with fork()
 ---------------
-If you're new to system calls or if you just have a hard time understanding them, this might help.
-Using GDB to debug large scale programs is made a whole lot easier with GDB.
-In this video we'll look at some more advanced commands that can help you with finding out which process is
-currently being executed.
+If you're new to system programming and using system calls, GDB has got your back.
+In this video, we'll look at a particular function that apparently forgot how many children it had.
+We'll use GDB to fix that. 
 
-<a href="https://www.youtube.com/watch?v=kMGg2t-sfik" target="_blank"><img src="https://i.ytimg.com/vi/kMGg2t-sfik/1.jpg?time=1426904433834" 
-alt="GDB_Intro" width="480" height="280" border="10" /></a>
+<a href="https://www.youtube.com/watch?v=FHjK7E0XCUY" target="_blank"><img src="https://i.ytimg.com/vi/FHjK7E0XCUY/2.jpg?time=1427055731015" 
+alt="GDB_fork" width="480" height="280" border="10" /></a>
+
+
+Using GDB
+=========
+Now that you have some familiarity of GDB, I hope you incorporate using bit of awesomeness in your future projects!
