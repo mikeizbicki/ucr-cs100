@@ -70,7 +70,10 @@ root@debian:/blah# nice
 ```
 If you try to make something really nice, it will go to the highest possible value of 19.
 ```
-nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice
+nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice 
+nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice 
+nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice 
+nice nice nice
 19``
 
 In the other direction, the minimum niceness is -20.
