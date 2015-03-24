@@ -133,7 +133,7 @@ Each script expression in "sed.sh" will make a pass through "numbers" and make i
 
 ###<a name="Substitution"></a>Substitution
 
-The meat and potatoes of `sed` is the `s` command (s for substitution)
+The meat and potatoes of `sed` is the `s` command (s for substitution).
 
 Here is a simple example of `sed` substitution in action:
 
