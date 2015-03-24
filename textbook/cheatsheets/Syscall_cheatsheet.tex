@@ -39,12 +39,12 @@ language=C++ % For font size
 \end{center}
 
 \normalsize
-\begin{longtabu}{|[1pt]p{.9in}|p{6.3in}<{\strut}|[1pt]} 
-\hline\hline\endhead \hline\hline\endfoot
+\begin{longtabu}{|p{.9in}|p{6.3in}<{\strut}|} 
+\hline\endhead
     \texttt{perror()} & \indenth\texttt{void perror(const char* s)} --- Prints \texttt{s} and syscall's error message as defined by global int \texttt{errno} to \texttt{stderr}. If syscall has error, \texttt{errno} is changed. Technically not a syscall.
         %
         \\ 
-    & \hspace{.5in}\it Include: \rm\texttt{stdio.h}, \texttt{errno.h} 
+    & \hspace{.5in}\it Include: \rm\texttt{stdio.h}, \texttt{errno.h}
         \\ \hline%\cline{1-1}\tabucline[2pt]{-}
     % fork
     \texttt{fork()} &  \indenth\texttt{pid\_t fork()} --- Creates child process. Returns \texttt{0} to child process and child's process id to parent process or \texttt{-1} if error. No child process made if error occurs.
@@ -52,7 +52,7 @@ language=C++ % For font size
     & \hspace{.5in}\it Include: \rm\texttt{unistd.h}
     %
     % exec
-        \\ \tabucline[.3pt]{2-2}%\hline
+        \\ %\tabucline[.3pt]{2-2}%\hline
     \texttt{exec} & \indenth\texttt{Exec} note: If \texttt{exec} succeeds, the current process will end and \texttt{exec} will not return. It returns \texttt{-1} if it fails (e.g. program file not found). \texttt{char *const argv} must be \texttt{NULL} terminated. \par
         \\ 
     \texttt{execv()} & \indenth\texttt{int execv(const char* path, char *const argv[])} --- Executes program \texttt{path} and passes arguments \texttt{argv}. Requires full path name of program.
@@ -64,7 +64,7 @@ language=C++ % For font size
     & \hspace{.5in}\it Include: \rm\texttt{unistd.h}
     %
     % wait
-        \\ \tabucline[.3pt]{2-2}%\cline{2-2}%\hline
+        \\ %\tabucline[.3pt]{2-2}%\cline{2-2}%\hline
     \texttt{wait()} & \indenth\texttt{pid\_t wait(int* status)} --- Waits for child process to terminate. \texttt{int* status} stores exit status of child process. Use \texttt{NULL} if not needed. Returns child pid if succeeds, \texttt{-1} if fails (e.g. no child). 
         \\
     & \hspace{.5in}\it Include: \rm\texttt{sys/wait.h}
@@ -75,7 +75,7 @@ language=C++ % For font size
     & \hspace{.5in}\it Include: \rm\texttt{sys/wait.h}
     % opendir
         \\ \hline
-    Directories and Files & \indenth Note: When these functions require a directory or file name, they only require a \itshape relative path\rm. This means that if your process was called in directory \texttt{bin/foo/bar/}, instead of using \texttt{bin/foo/bar/p.cpp}, the \itshape absolute path\rm,  you can use \texttt{p.cpp} or \texttt{./p.cpp} instead. \par
+    Directories and Files & \indenth Note: When these functions require a directory or file name, they only require a \itshape relative path\rm. This means that if your process was called in directory \texttt{/bin/foo/bar/}, instead of using \texttt{/bin/foo/bar/p.cpp}, the \itshape absolute path\rm,  you can use \texttt{p.cpp} or \texttt{./p.cpp} instead. \par
         \\ %\tabucline[.3pt]{2-2}
     \texttt{opendir()} & \indenth\texttt{DIR* opendir(const char* name)} --- Opens directory stream to directory \texttt{name} and returns pointer to its first entry. Returns \texttt{NULL} on error. 
         \\
@@ -86,12 +86,12 @@ language=C++ % For font size
         \\
     & \hspace{.5in}\it Include: \rm\texttt{dirent.h}
         %
-        \\ \tabucline[.3pt]{2-2}
+        \\ %\tabucline[.3pt]{2-2}
     \texttt{chdir()} & \indenth\texttt{int chdir(const char* path)} --- Change directory of calling process to \texttt{path}. Returns \texttt{0} on success, \texttt{-1} if error.
         \\
-    & \hspace{.5in}\it Include: \rm\texttt{sys/stat.h}, \texttt{unistd.h}
+    & \hspace{.5in}\it Include: \rm\texttt{sys/stat.h}, \texttt{unistd.h} 
         %
-        \\ \tabucline[.3pt]{2-2}
+        \\ %\tabucline[.3pt]{2-2}
     \texttt{stat()} & \indenth\texttt{int stat(const char* path,  struct stat* buf)} --- Gives information about a file in \texttt{struct stat}, e.g. permissions, type of file, time created. See \texttt{ls -l} for example of provided information. Macros are also provided that take \texttt{mode\_t st\_mode} in \texttt{struct stat} and returns \texttt{true}/\texttt{false} (e.g. \texttt{S\_ISDIR(st\_mode)}, \texttt{S\_REG(st\_mode)}). Returns \texttt{0} on success, \texttt{-1} if error.
         \\
     & \hspace{.5in}\it Include: \rm\texttt{sys/types.h}, \texttt{sys/stat.h}, \texttt{unistd.h}
@@ -138,14 +138,14 @@ language=C++ % For font size
         \\
     & \hspace{.5in}\it Include: \rm\texttt{signal.h}
         %
-        \\ \tabucline[.3pt]{2-2}
+        \\ %\tabucline[.3pt]{2-2}
     \texttt{sigaction()} & \indenth\texttt{int sigaction(int signum, const struct sigaction *act, struct sigaction *oldact)} 
         \\ 
     & \indenth\hspace{.5in}Similar to \texttt{signal()}, but is more portable and conforms to POSIX. Not needed for CS100 projects. Sets signal handler of signal \texttt{signum} to handler specified in members \texttt{sa\_handler} or \texttt{sa\_sigaction} of \texttt{struct sigaction act} and saves old handler struct to \texttt{oldact}.  You can leave \texttt{act} or \texttt{old} \texttt{NULL}.
         \\
     & \hspace{.5in}\it Include: \rm\texttt{signal.h}
         %
-        \\ \tabucline[.3pt]{2-2}
+        \\ %\tabucline[.3pt]{2-2}
     \texttt{kill()} & \indenth\texttt{int kill(pid\_t pid, int sig)} --- Sends any signal to process or proccess group. Returns \texttt{0} on success, \texttt{-1} if error.
         \\
     & \hspace{.5in}\it Include: \rm\texttt{sys/types.h}, \texttt{signal.h}
