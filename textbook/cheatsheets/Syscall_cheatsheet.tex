@@ -1,0 +1,187 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[document]{ragged2e}
+\usepackage[margin=.5in]{geometry}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{tabu}
+\usepackage{longtable}
+\usepackage{microtype}
+\usepackage{booktabs}
+%\usepackage{arydshln}
+
+%\makeatletter % To make function descriptions indent when they're long
+%\newcommand*\indenth[2]{%
+%  \@hangfrom{#1}%
+%  {#2}%
+%} 
+%\makeatother
+
+%Indent w/ static #
+\newcommand{\indenth}[1][.5]{\hangindent=#1in
+                         \hangafter=1 }
+
+\lstset{ % For lstinline, not used for now
+language=C++ % For font size
+}
+
+%\renewcommand{\arraystretch}{1.02} % To make table newlines match paragraph newlines (used strut instead)
+
+\begin{document}
+\begin{center}
+\huge CS100 Syscall Cheatsheet
+
+\bigskip\it\large Read your man pages, and sleep once in a while, k?\rm
+\end{center}
+
+\normalsize
+\begin{longtabu}{|[1pt]p{.9in}|p{6.3in}<{\strut}|[1pt]} 
+\hline\hline\endhead \hline\hline\endfoot
+    \texttt{perror()} & \indenth\texttt{void perror(const char* s)} --- Prints \texttt{s} and syscall's error message as defined by global int \texttt{errno} to \texttt{stderr}. If syscall has error, \texttt{errno} is changed. Technically not a syscall.
+        %
+        \\ 
+    & \hspace{.5in}\it Include: \rm\texttt{stdio.h}, \texttt{errno.h}
+        \\ \hline%\cline{1-1}\tabucline[2pt]{-}
+    % fork
+    \texttt{fork()} &  \indenth\texttt{pid\_t fork()} --- Creates child process. Returns \texttt{0} to child process and child's process id to parent process or \texttt{-1} if error. No child process made if error occurs.
+        \\
+    & \hspace{.5in}\it Include: \rm\texttt{unistd.h}
+    %
+    % exec
+        \\ \tabucline[.3pt]{2-2}%\hline
+    \texttt{exec} & \indenth\texttt{Exec} note: If \texttt{exec} succeeds, the current process will end and \texttt{exec} will not return. It returns \texttt{-1} if it fails (e.g. program file not found). \texttt{char *const argv} must be \texttt{NULL} terminated. \par
+        \\ 
+    \texttt{execv()} & \indenth\texttt{int execv(const char* path, char *const argv[])} --- Executes program \texttt{path} and passes arguments \texttt{argv}. Requires full path name of program.
+        \\
+    & \hspace{.5in}\it Include: \rm\texttt{unistd.h}
+        \\
+    \texttt{execvp()} & \indenth\texttt{int execvp(const char* file, char *const argv[])} --- Executes program \texttt{path} and passes arguments \texttt{argv}. Finds file automatically by checking directories in environmental variable \texttt{PATH}.
+        \\
+    & \hspace{.5in}\it Include: \rm\texttt{unistd.h}
+    %
+    % wait
+        \\ \tabucline[.3pt]{2-2}%\cline{2-2}%\hline
+    \texttt{wait()} & \indenth\texttt{pid\_t wait(int* status)} --- Waits for child process to terminate. \texttt{int* status} stores exit status of child process. Use \texttt{NULL} if not needed. Returns child pid if succeeds, \texttt{-1} if fails (e.g. no child). 
+        \\
+    & \hspace{.5in}\it Include: \rm\texttt{sys/wait.h}
+    %
+        \\
+    \texttt{waitpid()} & \indenth\texttt{pid\_t waitpid(pid\_t pid, int* status, int options)} --- Similar to \texttt{wait()}. Can specify \texttt{pid} to wait for specific child; use 0 for any child. Can also wait for stopped processes by adding option \texttt{WUNTRACED} and check immediately instead of waiting with \texttt{WNOHANG} (Bitwise OR to combine: '\texttt{WUNTRACED | WNOHANG}'). Returns child pid if succeeds, \texttt{-1} if fails (e.g. invalid pid).
+        \\
+    & \hspace{.5in}\it Include: \rm\texttt{sys/wait.h}
+    % opendir
+        \\ \hline
+    Directories and Files & \indenth Note: When these functions require a directory or file name, they only require a \itshape relative path\rm. This means that if your process was called in directory \texttt{bin/foo/bar/}, instead of using \texttt{bin/foo/bar/p.cpp}, the \itshape absolute path\rm,  you can use \texttt{p.cpp} or \texttt{./p.cpp} instead. \par
+        \\ %\tabucline[.3pt]{2-2}
+    \texttt{opendir()} & \indenth\texttt{DIR* opendir(const char* name)} --- Opens directory stream to directory \texttt{name} and returns pointer to its first entry. Returns \texttt{NULL} on error. 
+        \\
+    & \hspace{.5in}\it Include: \rm\texttt{dirent.h}
+        %
+        \\
+    \texttt{closedir()} & \indenth\texttt{int closedir(DIR* dirp)} --- Closes  directory. returns \texttt{0} on success, \texttt{-1} if error.
+        \\
+    & \hspace{.5in}\it Include: \rm\texttt{dirent.h}
+        %
+        \\ \tabucline[.3pt]{2-2}
+    \texttt{chdir()} & \indenth\texttt{int chdir(const char* path)} --- Change directory of calling process to \texttt{path}. Returns \texttt{0} on success, \texttt{-1} if error.
+        \\
+    & \hspace{.5in}\it Include: \rm\texttt{sys/stat.h}, \texttt{unistd.h}
+        %
+        \\ \tabucline[.3pt]{2-2}
+    \texttt{stat()} & \indenth\texttt{int stat(const char* path,  struct stat* buf)} --- Gives information about a file in \texttt{struct stat}, e.g. permissions, type of file, time created. See \texttt{ls -l} for example of provided information. Macros are also provided that take \texttt{mode\_t st\_mode} in \texttt{struct stat} and returns \texttt{true}/\texttt{false} (e.g. \texttt{S\_ISDIR(st\_mode)}, \texttt{S\_REG(st\_mode)}). Returns \texttt{0} on success, \texttt{-1} if error.
+        \\
+    & \hspace{.5in}\it Include: \rm\texttt{sys/types.h}, \texttt{sys/stat.h}, \texttt{unistd.h}
+        %
+        \\ \hline
+    \texttt{open()} & \texttt{int open(const char* pathname, int flags)}
+        \\
+    & \texttt{int open(const char* pathname, int flags, mod\_t mode)}
+        \\
+    & \indenth\hspace{.5in}Opens file and returns file descriptor which can be used, with flags, to read/write/create file. 
+    \newline\textbf{Flags:} Must use either \texttt{O\_RDONLY} (read file), \texttt{O\_WRONLY} (write to file), or \texttt{O\_RDWR} (both) in call. These can be bitwise \texttt{OR}'d ('\texttt{O\_WRONLY | O\_CREAT}') with other flags such as:  \texttt{O\_CREAT} creates file if it doesn't exist. \texttt{O\_TRUNC} overwrites contents of file when writing, \texttt{O\_APPEND} writes at the end of file instead. 
+    \newline\textbf{Modes:} When creating files, \texttt{mode} arguments can be added to specify permissions of new file, such as \texttt{S\_IRWXU} - user has read/write/execute permission, \texttt{S\_IRUSR} - user has read permission, or \texttt{S\_IWUSR} - user has read permission.
+    \newline\textbf{Warning:} Every call to \texttt{open()} must have a corresponding \texttt{close()} or else file descriptors will be left open (similar to memory leaks with \texttt{new} and \texttt{delete}).
+        \\
+    & \hspace{.5in}\it Include: \rm\texttt{sys/types.h}, \texttt{sys/stat.h}, \texttt{fcntl.h}
+        %
+        \\
+    \texttt{close()} & \indenth\texttt{int close(int fd)} --- Close file descriptor. Returns \texttt{0} on success, \texttt{-1} if error (e.g. invalid fd).
+        \\
+    & \hspace{.5in}\it Include: \rm\texttt{unistd.h}
+        %
+        \\ \hline
+    \texttt{dup()} & \indenth\texttt{int dup(int oldfd)} --- Copies file descriptor \texttt{oldfd} to the next lowest unused descriptor, returns new file descriptor on success, \texttt{-1} if error.
+    \newline\hspace{.5in}\textbf{Warning:} be sure to close copies after you finish using them. File descriptors are limited.
+        \\
+    & \hspace{.5in}\it Include: \rm\texttt{unistd.h}
+        %
+        \\
+    \texttt{dup2()} & \indenth\texttt{int dup2(int oldfd, int newfd)} --- Copies file descriptor \texttt{oldfd} in \texttt{newfd}. Closes \texttt{newfd} if it already exists. Returns new file descriptor on success, \texttt{-1} if error
+        \\
+    & \hspace{.5in}\it Include: \rm\texttt{unistd.h}
+        %
+        \\
+    \texttt{pipe()} & \indenth\texttt{int pipe(int pipefd[2])} --- Returns two file descriptors in \texttt{pipefd} for reading from and writing to. The file descriptors are one way pipes only, hence the need for two. Data written to \texttt{pipefd[1]} can be read from \texttt{pipefd[0]}. \texttt{pipe} is usually associated with piping in bash. 
+    \newline\hspace{.5in}e.g. \texttt{ls | grep .cpp}. 
+        \\
+    & \hspace{.5in}\it Include: \rm\texttt{unistd.h}
+        %
+        \\ \hline
+    Useful Signals & \texttt{SIGINT} to interrupt (\texttt{Ctrl+c}), \texttt{SIGTSTP} to temporarily stop (\texttt{Ctrl+z}), or \texttt{SIGQUIT} to quit (\texttt{Ctrl+\textbackslash}). \par
+        \\
+    \texttt{signal()} & \indenth\texttt{sighandler\_t signal(int signum, sighandler\_t handler)} --- Sets signal handler for signal \texttt{signum} to function \texttt{handler}.  For signal handlers: \texttt{SIG\_IGN} ignores signal and \texttt{SIG\_DFL} uses default handler. You can also use a user-defined handler as an argument. \texttt{sighandler\_t} is a pointer to a void function that has an int parameter: \texttt{void myhandler(int sig)}
+    \newline\hspace{.5in}e.g. \texttt{signal(SIGINT, myhandler);}
+        \\
+    & \hspace{.5in}\it Include: \rm\texttt{signal.h}
+        %
+        \\ \tabucline[.3pt]{2-2}
+    \texttt{sigaction()} & \indenth\texttt{int sigaction(int signum, const struct sigaction *act, struct sigaction *oldact)} 
+        \\ 
+    & \indenth\hspace{.5in}Similar to \texttt{signal()}, but is more portable and conforms to POSIX. Not needed for CS100 projects. Sets signal handler of signal \texttt{signum} to handler specified in members \texttt{sa\_handler} or \texttt{sa\_sigaction} of \texttt{struct sigaction act} and saves old handler struct to \texttt{oldact}.  You can leave \texttt{act} or \texttt{old} \texttt{NULL}.
+        \\
+    & \hspace{.5in}\it Include: \rm\texttt{signal.h}
+        %
+        \\ \tabucline[.3pt]{2-2}
+    \texttt{kill()} & \indenth\texttt{int kill(pid\_t pid, int sig)} --- Sends any signal to process or proccess group. Returns \texttt{0} on success, \texttt{-1} if error.
+        \\
+    & \hspace{.5in}\it Include: \rm\texttt{sys/types.h}, \texttt{signal.h}
+        %
+        \\ \hline
+    \texttt{getcwd()} & \indenth\texttt{char* getcwd(char*buf, size\_t size)} --- Returns pointer to current working directory string on success and copies to \texttt{buf} of size \texttt{size} if not \texttt{NULL}.  Returns \texttt{NULL} if error.
+        \\
+    & \hspace{.5in}\it Include: \rm\texttt{unistd.h}
+        %
+        \\
+    \texttt{gethostname()} & \indenth\texttt{int gethostname(char* name, size\_t len)} --- Writes hostname (\texttt{hammer.cs.ucr.edu}) to char array \texttt{name} with size \texttt{len}.  According to the man page, the guaranteed maximum value for \texttt{len} is \texttt{HOST\_NAME\_MAX = 64}, which is in \texttt{limits.h}. Returns \texttt{0} on success, \texttt{-1} if error. \newline\hspace{.5in}Note: \texttt{char} array must be large enough to hold hostname and \texttt{NULL} char.
+        \\
+    & \hspace{.5in}\it Include: \rm\texttt{unistd.h}
+        %
+        \\ 
+    \texttt{getlogin()} & \indenth\texttt{char* getlogin()} --- Returns pointer to current user's username on success, NULL if error. Do not \texttt{delete} pointer as string is static. This also means changing the string will change return value of subsequent calls to \texttt{getlogin()}.
+        \\
+    & \hspace{.5in}\it Include: \rm\texttt{unistd.h}
+        %
+        \\ 
+    \texttt{getgrgid()} & \indenth\texttt{struct group* getgrgid(gid\_t gid)} --- Returns pointer to struct with group information on success, NULL on not finding group id \texttt{gid} or error (set \texttt{errno} to \texttt{0} before syscall, then check \texttt{errno} to tell which). 
+        \\
+    & \hspace{.5in}\it Include: \rm\texttt{sys/types.h}, \texttt{grp.h}
+        %
+        \\
+    \texttt{getpwuid()} & \indenth\texttt{struct passwd* getpwuid(uid\_t uid)} --- Returns pointer to struct with user information associated with \texttt{uid} or \texttt{NULL} if error occurs or \texttt{uid} not found (set \texttt{errno} to \texttt{0} before syscall, then check \texttt{errno} to tell which).
+        \\
+    & \hspace{.5in}\it Include: \rm\texttt{sys/types.h}, \texttt{pwd.h}
+        %
+        \\ \hline
+    \texttt{ioctl()} & \indenth\texttt{int ioctl(int d, int request, ...)} --- Sends request to file descriptor \texttt{d}.  Used to manipulate devices and terminals. Returns \texttt{0} on success usually (some devices use return as output value), \texttt{-1} on error. Request codes are different for each device and so no example is listed here. The third parameter is traditionally a \texttt{char* argp}. 
+        \\ 
+    & \hspace{.5in}\it Include: \rm\texttt{sys/ioctl.h}
+        \\ \hline
+\end{longtabu}
+
+\end{document}
+
+

@@ -16,7 +16,7 @@ This means that whenever the programmer enters `ARRAY_SIZE` in his code, it will
 
 ####Similarity to Constants
 
-Consider the statement `const int ARRAY_SIZE = 100`. It functions nearly the same way as an object macro. However there are many significant differences. `const`s are properly scoped, and can be used in situations that require a pointer to be passed. Macros aren't error checked, and the compiler checks the code only after they are replaced. This occasionally results in errors that might cause unexpected runtime results, which is a problem `const`s do not have.
+Consider the statement `const int ARRAY_SIZE = 100`. It functions nearly the same way as an object macro. However, there are many significant differences. `const`s are properly scoped, and can be used in situations that require a pointer to be passed. Macros aren't error checked, and the compiler checks the code only after they are replaced. This occasionally results in errors that might cause unexpected runtime results, which is a problem `const`s do not have.
 
 The main advantage to using a macro is that they are compatible with C, so any C standard library will use them. Also, no memory is used to store it in your program, since it's only replacing text with a literal value. That means there's no way to change this value by any means other than altering the macro definition. With `const`s, some compilers just allocate memory identified by the name, and you might be able to modify the memory with pointers. For example:
 
@@ -37,17 +37,17 @@ They follow this form:
 
 `#define MACRO_NAME(arguments, separated by commas) [code to expand]`
 
-A simple commonly used example would be a macro that determines which argument is smaller.
+A simple commonly used example would be a macro that determines which argument is smaller:
 
 `#define MIN(x, y) ((x < y) ? x : y)`
 
-You could use this macro with a statement like
+You could use this macro with a statement like:
 
 `int z = MIN(4, 10); // z = 4`
 
 ####Multi-line Macros
 
-Macro definitions end at the end of the `#define` line, so to continue the definition onto multiple lines, you have to use a backslash-newline. However, when the macro expands, it all appears on one line. This makes longer macros easier to read. For example,
+Macro definitions end at the end of the `#define` line, so to continue the definition onto multiple lines, you have to use a backslash-newline. However, when the macro expands, it all appears on one line. This makes longer macros easier to read. For example:
 
 ```
 #define ODDEVEN(x) cout << "The number is "; \
@@ -74,7 +74,7 @@ This can be useful when debugging, and if you wanted to know the exact arguments
 
 ####Combining Macros
 
-Macros definitions can include previously defined macros. For example, if you had a macro that returns the larger of two numbers and another to find the largest of 3 numbers.
+Macros definitions can include previously defined macros. For example, if you had a macro that returns the larger of two numbers and another to find the largest of 3 numbers, as shown here:
 
 ```
 #define MAX(a,b)           ((a < b) ? (b) : (a))
@@ -107,7 +107,7 @@ More predefined macros can be found at the [GCC website](https://gcc.gnu.org/onl
 
 ####Operator Precedence
 
-This is a fairly common error that isn't immediately obvious. Consider the following macro.
+This is a fairly common error that isn't immediately obvious. Consider the following macro:
 
 ```
 #define DIVIDE(a, b) a / b
@@ -115,14 +115,14 @@ This is a fairly common error that isn't immediately obvious. Consider the follo
 int z = DIVIDE(20, 3 + 2);
 ```
 
-You might think the value of z would be 4, but z would actually be 8. While this macro looks a lot like a function call, you have to remember that the exact text of the argument is put in. The preprocessor will expand it like this.
+You might think the value of z would be 4, but z would actually be 8. While this macro looks a lot like a function call, you have to remember that the exact text of the argument is put in. The preprocessor will expand it like this:
 
 ```
 int z = 20 / 3 + 2;        
 // 20 / 3 evaluates first, and then + 2
 ```
 
-The way to avoid this problem is to force the arguments to be evaluated first, by surrounding them with parentheses. This is a good way to ensure the correct evaluation of replacement text and to make it safer.
+The way to avoid this problem is to force the arguments to be evaluated first, by surrounding them with parentheses. This is a good way to ensure the correct evaluation of replacement text and to make it safer, as shown here:
 
 ```
 #define DIVIDE(a, b) ((a) / (b))         
@@ -131,7 +131,7 @@ The way to avoid this problem is to force the arguments to be evaluated first, b
 
 ####Semicolon Issues
 
-Consider the following macro.
+Consider the following macro:
 
 ```
 #define MACRO(x,y) {\
@@ -143,7 +143,7 @@ Consider the following macro.
 
 A call to this macro might be `MACRO(2,4)` This call expands to a complete compound statement that doesn't require a semicolon to end it. However, since it looks like a function call, it makes it less confusing if you can use it like one and write a semicolon afterward, as in `MACRO(2,4);`
 
-In this case, the semicolon is redundant and creates a null statement. This becomes an issue in if else statements.
+In this case, the semicolon is redundant and creates a null statement. This becomes an issue in if else statements, as shown here:
 
 ```
 if ( x!= y )
@@ -151,7 +151,7 @@ if ( x!= y )
 else ... 
 ```
 
-Since there are two statements between the `if` and the `else`, this becomes invalid C code. A way to fix this problem is to change the macro definition with a `do ... while` statement.
+Since there are two statements between the `if` and the `else`, this becomes invalid C code. A way to fix this problem is to change the macro definition with a `do ... while` statement, as shown here:
 
 ```
 #define MACRO(x,y) \
@@ -165,7 +165,7 @@ Now `MACRO(2,4);` expands into `do {...} while (0);`. This counts as one stateme
 
 ####Duplication of Side Effects
 
-Another problem is that macros don't evaluate their arguments and, instead, pastes them into the text. This becomes an issue with the previous `MAX` macro if you pass in `x++` and `y++`.
+Another problem is that macros don't evaluate their arguments and, instead, pastes them into the text. This becomes an issue with the previous `MAX` macro if you pass in `x++` and `y++`. For example:
 
 ```
 #define MAX(a,b) ((a) < (b) : (a))
@@ -180,7 +180,7 @@ The problem in this case is that `y++` is evaluated twice, which assigns `y` the
 
 ####Unusual Errors
 
-Macros do not have namespace and aren't error checked, as the compiler only checks the code after the macro names are replaced. Because of this, it is easy to create errors that can be difficult to find. For example:
+Macros do not have a namespace and aren't error checked, as the compiler only checks the code after the macro names are replaced. Because of this, it is easy to create errors that can be difficult to find. For example:
 
 ```
 #define begin() end()

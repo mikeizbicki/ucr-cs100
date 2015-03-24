@@ -10,7 +10,8 @@ For a refresher on how to use the `ls` command effectively, you can watch [this 
 To implement `ls`, you must use the `opendir`, `closedir`, `readdir` and `stat` syscalls.
 For details on the use of these functions, visit their man pages and the [syscalls tutorial](../../../textbook/assignment-help/syscalls).
 
-To get you started, the file `ls.cpp` contains code that reads the files in the current working directory.
+Previous cs100 students have written up code that reads the files in the current working directory, with documentation explaining the process. 
+The code may be found [here](../../../textbook/assignment-help/syscalls/dir_code.cpp), within the [syscalls tutorial](../../../textbook/assignment-help/syscalls).
 
 ### submission instructions
 
@@ -88,6 +89,8 @@ So if you have a hidden directory, it should be displayed as blue text on top of
 Here is a complete list of resources created by previous cs100 students that might help with this assignment:
 
 * [how to use syscalls](../../../textbook/assignment-help/syscalls)
+
+* [STL Map](../../../textbook/map)
 
 * video: [how to use the `ls` command](https://izbicki.me/blog/videoguide-for-github-vim-bash.html#ls).
 
