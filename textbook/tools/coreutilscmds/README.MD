@@ -3,14 +3,16 @@
 `chroot [-u    user] [-g group] [-G group,group,...] newroot [command]`
 
 
-Following this basic syntax is likely to end with an error like 
+Following this basic syntax is likely to end with an error like
+
 ```root@debian:/blah# chroot ./lib/
 chroot: failed to run command \`/bin/bash': No such file or directory.```
+
 To run `chroot` from `bash`, you must first copy the folder containing the `bash` executable and those containing its dependencies to the new root path. This can be accomplished by first finding all executable paths using `$PATH`, then using `cp -r  newRootFolder`  for each colon delimited path in the environment variable `$PATH`. If you aren’t sure of the location of a specific executable, it can be found with `which [command]` where `[command]` can simply be replaced with the command name. A chrooted process can still access file descriptors that fall outside of the new root tree.
 
 `env` run on its own in a shell will print out a list of environment variables associated with the current user. Simply typing `env` is equivalent to `printenv`, which brings up a complete list of environment variables. 
-```
-SSH_AUTH_SOCK=/home/kav/.cache/keyring-Ql1NO5/ssh
+
+```SSH_AUTH_SOCK=/home/kav/.cache/keyring-Ql1NO5/ssh
 USERNAME=kav
 SESSION_MANAGER=local/debian:@/tmp/.ICE-unix/3126,unix/debian:/tmp/.ICE-unix/3126
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
@@ -30,8 +32,8 @@ WINDOWPATH=7
 DISPLAY=:0.0
 XAUTHORITY=/var/run/gdm3/auth-for-kav-Dg0L9n/database
 COLORTERM=gnome-terminal
-_=/usr/bin/env
-```
+_=/usr/bin/env```
+
 These can each be set or unset using their respective names. If the variable is already defined, the `$` should be left off. There should be no spaces between the variable name, `=`, and new value. For example starting from the same terminal.
 LOGNAME=Batman
 `env` now returns the name Batman in the list. I always figured he was a Linux user.
