@@ -10,27 +10,28 @@ To run `chroot` from `bash`, you must first copy the folder containing the `bash
 
 `env` run on its own in a shell will print out a list of environment variables associated with the current user. Simply typing `env` is equivalent to `printenv`, which brings up a complete list of environment variables. 
 
-`SSH_AUTH_SOCK=/home/kav/.cache/keyring-Ql1NO5/ssh
-USERNAME=kav
-SESSION_MANAGER=local/debian:@/tmp/.ICE-unix/3126,unix/debian:/tmp/.ICE-unix/3126
-PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
-DESKTOP_SESSION=gnome
-PWD=/home/kav
-GNOME_KEYRING_PID=3108
-LANG=en_US.utf8
-GDM_LANG=en_US.utf8
-GDMSESSION=gnome
-SHLVL=1
-HOME=/home/kav
-GNOME_DESKTOP_SESSION_ID=this-is-deprecated
-LOGNAME=kav
-XDG_DATA_DIRS=/usr/share/gnome:/usr/local/share/:/usr/share/
-DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-cv5ACjXLpb,guid=b957a96ef583c9f617a322e3550f2df3
-WINDOWPATH=7
-DISPLAY=:0.0
-XAUTHORITY=/var/run/gdm3/auth-for-kav-Dg0L9n/database
-COLORTERM=gnome-terminal
-_=/usr/bin/env`
+`SSH_AUTH_SOCK=/home/kav/.cache/keyring-Ql1NO5/ssh`
+`USERNAME=kav`
+`SESSION_MANAGER=local/debian:@/tmp/.ICE-unix/3126,unix/debian:/tmp/.ICE-unix/3126`
+`PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games`
+`DESKTOP_SESSION=gnome`
+`PWD=/home/kav`
+`GNOME_KEYRING_PID=3108`
+`LANG=en_US.utf8`
+`GDM_LANG=en_US.utf8`
+`GDMSESSION=gnome`
+`SHLVL=1`
+`HOME=/home/kav`
+`GNOME_DESKTOP_SESSION_ID=this-is-deprecated`
+`LOGNAME=kav`
+`XDG_DATA_DIRS=/usr/share/gnome:/usr/local/share/:/usr/share/`
+`DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-cv5ACjXLpb,guid=b957a96ef583c9f617a322e3550f2df3`
+`WINDOWPATH=7`
+`DISPLAY=:0.0`
+`XAUTHORITY=/var/run/gdm3/auth-for-kav-Dg0L9n/database`
+`COLORTERM=gnome-terminal`
+`_=/usr/bin/env`
+
 These can each be set or unset using their respective names. If the variable is already defined, the `$` should be left off. There should be no spaces between the variable name, `=`, and new value. For example starting from the same terminal.
 LOGNAME=Batman
 `env` now returns the name Batman in the list. I always figured he was a Linux user.
