@@ -6,7 +6,7 @@
 Following this basic syntax is likely to end with an error like 
 ```
 root@debian:/blah# chroot ./lib/
-chroot: failed to run command \`/bin/bash': No such file or directory.```
+chroot: failed to run command \`/bin/bash': No such file or directory.``
 
 To run `chroot` from `bash`, you must first copy the folder containing the `bash` executable and those containing its dependencies to the new root path. This can be accomplished by first finding all executable paths using `$PATH`, then using `cp -r  newRootFolder`  for each colon delimited path in the environment variable `$PATH`. If you aren’t sure of the location of a specific executable, it can be found with `which [command]` where `[command]` can simply be replaced with the command name. A chrooted process can still access file descriptors that fall outside of the new root tree.
 
