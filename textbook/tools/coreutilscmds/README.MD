@@ -1,10 +1,12 @@
 `chroot` requires a privileged process to run. It is not reversible by a given process, yet that process still needs access to any executables that will run on that process. This is indicated by `CAP_SYS_CHROOT`. 
 
-chroot [-u    user] [-g group] [-G group,group,...] newroot [command]
+`chroot [-u    user] [-g group] [-G group,group,...] newroot [command]`
+
 
 Following this basic syntax is likely to end with an error like 
-`root@debian:/blah# chroot ./lib/`
-`chroot: failed to run command `/bin/bash': No such file or directory.
+```
+root@debian:/blah# chroot ./lib/
+chroot: failed to run command `/bin/bash': No such file or directory.``
 
 To run `chroot` from `bash`, you must first copy the folder containing the `bash` executable and those containing its dependencies to the new root path. This can be accomplished by first finding all executable paths using `$PATH`, then using `cp -r  newRootFolder`  for each colon delimited path in the environment variable `$PATH`. If you aren’t sure of the location of a specific executable, it can be found with `which [command]` where `[command]` can simply be replaced with the command name. A chrooted process can still access file descriptors that fall outside of the new root tree.
 
@@ -95,8 +97,8 @@ Data is buffered on input or output. This can cause problems with things that mu
 
 `timeout` places a limit on the maximum amount of time a command may run prior to exiting. This defaults to seconds, but can be specified by appending a one letter suffix to the duration.
 
-‘s’   for seconds (same as default)
-‘m’ for minutes
+‘s’  for seconds (same as default)
+‘m’  for minutes
 ‘h’  for hours
 ‘d’  for days
 
