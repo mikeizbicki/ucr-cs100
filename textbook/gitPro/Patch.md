@@ -1,9 +1,8 @@
 #Patch
 
-When a software or a system releases a new version, we can download all the code and then install it. 
-While huge projects like the Linux kernel can be over 70MB even after compressing. 
-Meanwhile, the new version of the code may change less than 1MB compared with the previous version. 
-Git has offered us a powerful tool, ```patch```, that we can update the projects under extremely low cost.
+When an organization releases a new version for software or a system, we can download all the code and then install it. However, huge projects like the Linux kernel can be over 70MB even after compressing. The new version of the code may change less than 1MB compared with the previous version.
+ 
+Git has offered us a powerful tool, ```patch```, that we can use to update projects at low cost.
 
 ###Create patch with git diff
 First, let's clone a repo and make some change:
@@ -35,11 +34,15 @@ $ ls
 README.md patch
 ```
 
-Now we are at the branch `master` and get the file `patch` which contains the diff information.
+Now we are at the branch `master` and have the file `patch` which contains the diff information.
+
 We'll use `git apply` to utilize this patch.
-In fact, we barely create a patch at the branch and apply it in another branch (you can simply `merge` it).
-Now we assume the branch `fix_empty_README.md` doesn't exist.
-Normally, we are supposed to create a branch to handle the branches which commit new patches:
+
+To do so, we create a patch at the branch and apply it in another branch (you can simply `merge` it). Assume the branch `fix_empty_README.md` doesn't exist.
+
+In practice, you should create a branch to handle the branches which commit new patches:
+
+
 ```
 $ git checkout -b PATCH
 Switched to a new branch 'PATCH'
@@ -48,8 +51,11 @@ $ git commit -a -m "Patch Apply"
 [PATCH 15695e4] Patch Apply
  1 file changed, 1 insertion(+)
 ```
-Now `patch` has been applied to  the branch ```PATCH```.
-We can use `git diff` to check the difference between the branch of ```PATCH``` and ```fix_empty_README.md```, they will be absolutely same.
+Now `patch` has been applied to the branch ```PATCH```.
+
+
+
+If we use `git diff` to check the difference between the branch of ```PATCH``` and ```fix_empty_README.md```, they will be absolutely same.
 
 
 ###Create patch with git format patch
@@ -130,9 +136,4 @@ $ cat README.md
 Add a new line in READMEgit checkout -b fix_empty_README.md!
 One more line
 ```
-Attention, if there are several commits between `master` and `fix`, it will create patch files for every commit.
-
-
-
-
-
+**WARNING:** if there are several commits between `master` and `fix`, it will create patch files for every commit.
