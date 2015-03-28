@@ -1,6 +1,6 @@
 #System calls pertaining to getting information about a process
 
-This document is for system calls that are used to get information about a process, or an environment variable. The system calls described here will be `getcwd`, `getpwuid`, and `getgrgid`.
+This document is for system calls that we use to get information about a process, or an environment variable. The system calls will be `getcwd`, `getpwuid`, and `getgrgid`.
 
 ##getcwd:
 
@@ -8,11 +8,15 @@ This document is for system calls that are used to get information about a proce
 
 **declaration:** `char *getcwd(char *buf, size_t size);`
 
-**returns:** When successful, the function returns a pointer to a `string` containing the pathname of the current working directory. On error, it returns `NULL`.
+**returns:** When successful, the function returns a pointer to a `string` containing the pathname of the current working directory. 
+On error, it returns `NULL`.
 
 [man page](http://linux.die.net/man/3/getcwd)
 
-As stated above, getcwd gets the c-string containing the current working directory. It inserts the c-string into `buf` to be used later. The parameter size is the length of the `char*` you pass in as the first parameters. For example, if you created `char directory[250]`, you’d pass in `directory, 250`.
+getcwd gets the c-string containing the current working directory. 
+It inserts the c-string into `buf` to be used later. 
+The parameter size is the length of the `char*` you pass in as the first parameters. 
+For example, if you create `char directory[250]`, you would pass in `directory, 250`.
 
 Notes: This function is useful when implementing bash commands such as `cd`, and you need to display the current working directory the user is in.
 
@@ -23,7 +27,8 @@ if(!getcwd(buf,1024))
    perror(“problem with getcwd.”);
 ```
 
-`buf` now contains the path to the current directory you're in, you can output it before your command line prompt to simulate the real bash shell. When you create your own bash shell you will have to implement `cd` with `getcwd` instead of using `exec`.
+`buf` now contains the path to the current directory you're in, you can output it before your command line prompt to simulate the real bash shell. 
+When you create your own bash shell you will have to implement `cd` with `getcwd` instead of using `exec`.
 
 ##getpwuid:
 **includes:** `#include <pwd.h>`
@@ -35,7 +40,9 @@ if(!getcwd(buf,1024))
 
 [man page](http://linux.die.net/man/3/getpwuid)
 
-Notes: As you can probably see, `getpwuid` is a bit different from the other syscalls previously mentioned. It takes in the  user’s ID, which is in a numerical form. After that, it will return a pointer to a structure, which contains these fields:
+Notes: As you can probably see, `getpwuid` is a bit different from the other syscalls previously mentioned. 
+It takes in the user’s ID, which is in a numerical form. 
+After that, it will return a pointer to a structure, which contains these fields:
 ```
 struct passwd {
     char   *pw_name;       /* username */
@@ -48,7 +55,8 @@ struct passwd {
 };
 ```
 
-The main purpose of this function is  to assist in finding info about the user, and their info. This is particularly useful when implementing things such as `ls` (an assignment in cs-100), and is necessary to implement the `-l` flag for `ls`.
+The main purpose of this function is to assist in finding info about the user, and their info. 
+This is particularly useful when implementing things such as `ls` (an assignment in cs-100), and is necessary to implement the `-l` flag for `ls`.
 
 Here’s a quick implementation of `getpwuid`, where `s` is a `stat struct`:
 ```
@@ -78,11 +86,12 @@ struct group {
 };
 ```
 
-The main purpose of this function is  to assist in finding info about the group and its info, and much like `getpwuid`, is particularly useful  when implementing things such as `ls` (an assignment in cs-100), and is necessary to implement the `-l` flag for `ls`.
+The main purpose of this function is to assist in finding info about the group and its info, and much like `getpwuid`, is particularly useful  when implementing things such as `ls` (an assignment in cs-100), and is necessary to implement the `-l` flag for `ls`.
 
-Here’s a quick implementation of `getgrgid`, where s is a `stat struct`:
+This is a quick implementation of `getgrgid`, where s is a `stat struct`:
 ```
-struct passwd *gp;
+struct group *gp;
 if(!(gp = getgrgid(s.st_gid)))
    perror("there was an error in getgrgid. ");
 ```
+

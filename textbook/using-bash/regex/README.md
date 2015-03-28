@@ -7,20 +7,14 @@ This tutorial will cover the basics of regex, but more specifically, **POSIX reg
 
 If you would like to practice regex, we have developed a tool for you to use. Check [down below](#practice).
 
-<a name="top"/>
-##Table of Contents
-[1. What is it?](#what)    
-[2. Regex Practice program](#practice)    
-[3. Basic characters/Literal characters](#literal)    
-[4. Special/Metacharacters](#meta)    
-[5. Escaped literals](#escaped)    
-[6. POSIX specific syntax](#posix)    
-[7. Additional resources](#resources)    
-
 <a name="what"/>
 ###What is Regex?
 
-A regular expression is a pattern of letters and symbols which can represent a search pattern. The most common usage is using this search pattern to search through strings in a document or files. For example, if you wanted to find all the emails in a webpage, regex would be a good solution to use to quickly parse all the text on the page. Depending on the environment these strings are parsed in, you can match multiple instances or a single instance of a pattern. Regular regex returns the **first** matching string that it finds. Regex is most commonly used for searching and replacing string patterns, and while this may not be the only use, it is very powerful because of the syntax behind regex.
+A regular expression is a pattern of letters and symbols which can represent a search pattern. 
+The most common usage is using this search pattern to search through strings in a document or files. 
+For example, if you wanted to find all the emails in a webpage, regex would be a good solution to use to quickly parse all the text on the page. 
+Depending on the environment these strings are parsed in, you can match multiple instances or a single instance of a pattern. Regular regex returns the **first** matching string that it finds. 
+Regex is most commonly used for searching and replacing string patterns, and while this may not be the only use, it is very powerful because of the syntax behind regex.
 
 One of the many uses of regex is pattern matching for `sed` and `grep`, two Linux commands for which are used for searching and replacing text or just searching for strings respectively.
 
@@ -28,14 +22,16 @@ One of the many uses of regex is pattern matching for `sed` and `grep`, two Linu
 
 <a name="practice"/>
 ##Regex Practice
-Our practice program is [located here](http://github.com/Liniarc/regexProgram). Instructions for running this practice program is located in that repository.
+Our practice program is [located here](http://github.com/Liniarc/regexProgram). 
+Instructions for running this practice program is located in that repository.
 
 [Back to table of contents](#top)
 
 <a name="literal"/>
 ###Basic Characters aka Literal Characters
 
-Any letter or character `a-z`, `A-Z`, `0-9` by itself will match a single instance of that character. There are a few extra symbols which do not follow this rule but we'll get to that in a bit.
+Any letter or character `a-z`, `A-Z`, `0-9` by itself will match a single instance of that character. 
+There are a few extra symbols which do not follow this rule but we'll get to that in a bit.
 
 ####Example
 <table>
@@ -53,9 +49,10 @@ See also: [Literal Characters](http://www.regular-expressions.info/characters.ht
 [Back to table of contents](#top)
 
 <a name="meta"/>
-###Special Characters aka Metacharacters
 
-These characters are special and cannot be used to match for that character. However, if you need to match the literal character you need to use an escape character, `\`, in front of the metacharacter.
+###Special Characters aka Metacharacters
+These characters are special and cannot be used to match for that character. 
+However, if you need to match the literal character you need to use an escape character, `\`, in front of the metacharacter.
 
 See also: [Special Characters](http://www.regular-expressions.info/characters.html)
 
@@ -93,7 +90,8 @@ Here are all the metacharacters:
   </tr>
 </table> 
 
-+ `\` - The escape character. You'll need it if you want to match the literal character for all of the next few symbols.
++ `\` - The escape character. 
+You'll need it if you want to match the literal character for all of the next few symbols.
 
 + `[ ]` - Indicates a group of characters to match. Adding a `^` in front of the characters indicates not those characters.
 
@@ -147,7 +145,8 @@ See also: [Character classes](http://www.regular-expressions.info/charclass.html
 
 See also: [The dot](http://www.regular-expressions.info/dot.html)
 
-+ `^` - The caret matches at the beginning of a string or line.  `$` - The dollar sign matches at the end of a string or line.
++ `^` - The caret matches at the beginning of a string or line.  
+`$` - The dollar sign matches at the end of a string or line.
 
 <table>
   <tr>
@@ -168,7 +167,8 @@ successful suc<strong><em>cess</em></strong></code></pre>
 
 See also: [Anchors](http://www.regular-expressions.info/anchors.html)
 
-+ `*` - Indicates **zero or more repetitions** of a character (or group). `+` - Indicates **one or more repetitions** of a character (or group).
++ `*` - Indicates **zero or more repetitions** of a character (or group). 
+`+` - Indicates **one or more repetitions** of a character (or group).
 
 <table>
   <tr>
@@ -189,7 +189,9 @@ hi th<strong><em>is</em></strong> h<strong><em>iss</em></strong></code></pre>
 
 See also: [Repeating character classes](http://www.regular-expressions.info/charclass.html)
 
-+ `?` - Indicates an optional character (or group). It is extended posix only. Use `\{0,1\}` in standard posix.
++ `?` - Indicates an optional character (or group). 
+It is extended posix only. 
+Use `\{0,1\}` in standard posix.
 
 <table>
   <tr>
@@ -205,7 +207,10 @@ See also: [Repeating character classes](http://www.regular-expressions.info/char
 
 See also: [Repeating character classes](http://www.regular-expressions.info/charclass.html)
 
-+ `|` - The pipe. Or logical OR. Best used inside of `(` and `)`. You must escape these in standard Posix, but not in extended Posix.
++ `|` - The pipe. 
+Or logical OR. 
+Best used inside of `(` and `)`. 
+You must escape these in standard Posix, but not in extended Posix.
 <table>
   <tr>
     <th>Posix</th>
@@ -274,7 +279,8 @@ The parenthesis must be escaped in standard Posix
 
 See also: [Grouping](http://www.regular-expressions.info/brackets.html)
 
-+ `\n` - refers back to the nth capture group. This does not exist in Extended Regex.
++ `\n` - refers back to the nth capture group. 
+This does not exist in Extended Regex.
 
 <table>
   <tr>
@@ -311,9 +317,11 @@ See also: [Backreferences](http://www.regular-expressions.info/backref.html)
 [Back to table of contents](#top)
 
 <a name="escaped"/>
+
 ###Table of Character classes
 
-These are used to indicate special characters or characteristics. They work in conjunction with bracket expressions, so you need to add a second set of bracket around them. **These are POSIX specific.**
+These are used to indicate special characters or characteristics. 
+They work in conjunction with bracket expressions, so you need to add a second set of bracket around them. **These are POSIX specific.**
 
    Symbol     | Explanation
 --------------|-------------
@@ -349,7 +357,9 @@ These are used to indicate special characters or characteristics. They work in c
 <a name="posix"/>
 ##POSIX Specific Syntax
 
-There are a few key differences  POSIX standard says that the **longest** match is returned. Normal regex usually stops with the **first** match found. However, it will still match the **leftmost** result.
+There are a few key differences POSIX standard says that the **longest** match is returned. 
+Normal regex usually stops with the **first** match found. 
+However, it will still match the **leftmost** result.
 
 <table>
   <tr>
@@ -375,13 +385,11 @@ Result: Set <strong><em>SetStatus</em></strong>
 
 See also: [POSIX](http://www.regular-expressions.info/posix.html)
 
-[Back to table of contents](#top)
-
 <a name="resources"/>
 ##Additional Resources
 http://regexone.com is an excellent learning tool which provides an interactive tutorial which walks through the basics of regex.    
-http://www.regular-expressions.info has many pages dedicated to both quickly learning regex and POSIX specific regex. This resource has also been linked throughout this document.
+http://www.regular-expressions.info has many pages dedicated to both quickly learning regex and POSIX specific regex. 
+This resource has also been linked throughout this document.
 
-[Back to table of contents](#top)
 
 

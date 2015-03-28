@@ -1,4 +1,4 @@
-cppcheckTutorial
+cppcheck Tutorial
 ================
 
 As a fair warning to readers, this tutorial was written with Linux users in mind.
@@ -7,8 +7,10 @@ As a fair warning to readers, this tutorial was written with Linux users in mind
 Quick Info
 ==========
 
-<a href="http://cppcheck.sourceforge.net/" target="_blank">Cppcheck</a> is a static code analysis tool for the C/C++ programming languages. It is a versatile tool that can check non-standard code. 
-The creator and lead developer is Daniel Marjamäki. Unlike C/C++ compilers and many other analysis tools it does not detect syntax errors in the code. 
+<a href="http://cppcheck.sourceforge.net/" target="_blank">Cppcheck</a> is a static code analysis tool for the C/C++ programming languages. 
+It is a versatile tool that can check non-standard code. 
+The creator and lead developer is Daniel Marjamäki. 
+Unlike C/C++ compilers and many other analysis tools it does not detect syntax errors in the code. 
 Cppcheck primarily detects the types of bugs that the compilers normally do not detect. 
 The goal is to detect only real errors in the code. 
 
@@ -22,13 +24,13 @@ A download can be found <a href="http://sourceforge.net/projects/cppcheck/" targ
 
 What cppcheck can and can't do
 =============================
-##Capabilites of cppcheck
+##Capabilities of cppcheck
 
 * out of bounds error check as seen [below](#outofbounds)
 * class code checks
 * code exception checking
 * [memory leak checking](#memoryhole) to a certain extent
-* obselete function usage warning
+* obsolete function usage warning
 * invalid usage of STL
 * usage of [uninitialized variables](#randomvariable) and [unused functions](#uselessfunction)
 
@@ -39,11 +41,11 @@ What cppcheck can and can't do
 How To Use cppcheck
 ===================
 
-Alright, enough introductions lets get to what you are really interested in; how do you actually use this debugger?
+Alright, enough introductions let's get to what you are really interested in; how do you actually use this debugger?
 
 <a name="outofbounds"></a>
 In the code below, the user initializes a char array of size 10 and then assigns 0 to slot #10.
-This seems ok at first glance, however the user forgot that by declaring an array of size 10, the array indicies go from 0 to 9.
+This seems ok at first glance, however the user forgot that by declaring an array of size 10, the array indices go from 0 to 9.
 What this means is that in the code line `a[10] = 0;` the `[10]` would go out of bounds.
 
 ```
@@ -98,7 +100,7 @@ $
 ####Why?
 In this example, we see some stylistic problems with this code. 
 While it may not cause any problems in the program, it is good practice to not have unnecessary code.
-Although, cppcheck does not normally display these style isses.
+Although, cppcheck does not normally display these style issues.
 In order to display the style issues, we run the command `--enable=style`.
 At the same time, enabling style will also enable warning, performance, and portability issues.
 
@@ -144,7 +146,8 @@ $
 ```
 ####Why?
 Because you wrote a function when it wasn't even needed. Sheesh what a waste of time.
-Ok, fine heres what this code is and does. We added the main function and we still get the same as errors for not using variables i, but now we also get errors for an unused function `greaterThanZero`.
+Ok, fine here's what this code is and does. 
+We added the main function and we still get the same as errors for not using variables i, but now we also get errors for an unused function `greaterThanZero`.
 _l2Code_
 To fix the problems listed above in the cppcheck report would be to remove the unused function and to remove the variables that were not used.
 What we will be left with will be the `main()` function and the `foo(int x, int y)` function.
@@ -153,6 +156,7 @@ By removing the `greaterThanZero(int x)` function, we fix the errors stating how
 
 <a name="memoryhole"></a>
 ##Memory Leaks
+
 ```
 int main()
 {
@@ -168,10 +172,13 @@ Checking memleak.cpp...
 [memleak.cpp:11]: (error) Memory leak: a
 $
 ```
+
 ####Sheesh a leak in this code... why??
+
 Since the code allocated memory of 10 for a, there should have been followup code at the end calling `delete []a;`.
 However since this was not done, a memory leak occurs where dynamically allocated memory was never freed.
 Ideally the code should look like the following:
+
 ```
 int main()
 {
@@ -204,6 +211,7 @@ Checking leaky.cpp...
 $
 ```
 ####Why is there memory vegetable?!?
+
 Aside from using bad coding practices like using `malloc` instead of `a = new float[somenumber]`, this code is similar to the one prior to this.
 By not using the `free` call to free the allocated memory, the leak will occur when the pointer called "a" goes out of scope.
 Ideally the code should looks something like this:
@@ -220,7 +228,7 @@ int main(void)
 }
 ```
 By calling `free(a);` the program will free the allocated memory.
-This works similarily to the c++ call of `delete []a;`.
+This works similarly to the c++ call of `delete []a;`.
 
 
 Bugs that cppcheck does not find
@@ -230,9 +238,6 @@ With beginner programmers, these kind of mistakes happen often.
 The following code is a great example of a mistake that beginner programmers might make.
 ##Unused function return value
 ```
-#include<iostream>
-
-using namespace std;
 
 int TestReturn(int &x, int &y)
 {
@@ -308,8 +313,6 @@ Using the visual studio static debugger <a href="http://www.viva64.com/en/pvs-st
 This example was made to show that cppcheck does not cover all out of bounds on arrays.
 The difference in this code from the earlier one is that the index is passed in through an argument of a function.
 ```
-#include<iostream>
-using namespace std;
 void f(char c)
 {
         char *p = new char[10];
@@ -330,9 +333,13 @@ Checking TrickyArray.cpp...
 $
 ```
 ####But didn't you say it checked array bounds?
-Yes, it does check array bounds, but not if its index is passed in through an argument. Currently, cppcheck does not check functions with respect of the parameter.
-Cppcheck checks the body of the code but does not evaluate the whole function with the argument included. Thus, it does not give us a message about it being out of bounds.
-Remember, one of the goals of cppcheck is to have little to no false positives. This is an example where cppcheck fails where other static debugger succeed.         
+
+Yes, it does check array bounds, but not if its index is passed in through an argument. 
+Currently, cppcheck does not check functions with respect of the parameter.
+Cppcheck checks the body of the code but does not evaluate the whole function with the argument included. 
+Thus, it does not give us a message about it being out of bounds.
+Remember, one of the goals of cppcheck is to have little to no false positives. 
+This is an example where cppcheck fails where other static debugger succeed.         
 
 
 An Example of a Cppcheck Feature
@@ -388,4 +395,5 @@ cppcheck works in a way where it trues to avoid false positives so many of the b
 this being said, there will be many things that cppcheck will not catch such as [stylistic errors](#styleuse), syntax, and [runtime](#overflowing) bugs.
 
 *tl;dr: cppcheck is good at what it does, but use a variety of tools to fully debug your programs.*              
+
 
