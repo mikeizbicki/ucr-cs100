@@ -1,894 +1,0 @@
-Script started on Wed Jan  7 15:35:48 2015
-bash: .profile: No such file or directory
-]0;user@userland: ~/proj/ucr-cs100/lecture-notesuser@userland:~/proj/ucr-cs100/lecture-notes$ export PS1="$ "
-$ clear
-[H[2J$ pwd
-/home/user/proj/ucr-cs100/lecture-notes
-$ ls
-lecture1  lecture2  tmp
-$ git status
-# On branch 2015winter
-# Changes not staged for commit:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	modified:   ../gitlearn (new commits)
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	./
-no changes added to commit (use "git add" and/or "git commit -a")
-$ pwd
-/home/user/proj/ucr-cs100/lecture-notes
-$ clear
-[H[2J$ [K$ [K$ [K$ [K$ [K$ git     pwf d
-/home/user/proj/ucr-cs100/lecture-notes
-$ script     \  git init          mkdir gittest\ 
-$ cd te  gittest/
-$ git init
-Initialized empty Git repository in /home/user/proj/ucr-cs100/lecture-notes/gittest/.git/
-$ ls
-$ ls -a
-[0m[01;34m.[0m  [01;34m..[0m  [01;34m.git[0m
-$ pwd
-/home/user/proj/ucr-cs100/lecture-notes/gittest
-$ cd .
-$ pwd
-/home/user/proj/ucr-cs100/lecture-notes/gittest
-$ cd ..
-$ pwd
-/home/user/proj/ucr-cs100/lecture-notes
-$ cd gittest/
-$ clear
-[H[2J$ git init        vim README
-[?1049h[?1h=[1;21r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[21;1H"README" [New File][>c[1;1H[33m  1 [m
-[1m[34m~                                                       [3;1H~                                                       [4;1H~                                                       [5;1H~                                                       [6;1H~                                                       [7;1H~                                                       [8;1H~                                                       [9;1H~                                                       [10;1H~                                                       [11;1H~                                                       [12;1H~                                                       [13;1H~                                                       [14;1H~                                                       [15;1H~                                                       [16;1H~                                                       [17;1H~                                                       [18;1H~                                                       [19;1H~                                                       [20;1H~                                                       [m[21;39H0,0-1[9CAll]2;README (~/proj/ucr-cs...re-notes/gittest) - VIM]1;README[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[21;1H[1m-- INSERT --[m[21;13H[K[21;39H0,1[11CAll[1;5H[?12l[?25h[?25lT[21;39H1,2]2;README + (~/proj/ucr-...re-notes/gittest) - VIM]1;README[1;6H[?12l[?25h[?25lh[21;41H3[1;7H[?12l[?25h[?25li[21;41H4[1;8H[?12l[?25h[?25ls[21;41H5[1;9H[?12l[?25h[?25l[21;41H6[1;10H[?12l[?25h[?25li[21;41H7[1;11H[?12l[?25h[?25ls[21;41H8[1;12H[?12l[?25h[?25l[21;41H9[1;13H[?12l[?25h[?25la[21;41H10[1;14H[?12l[?25h[?25l[21;42H1[1;15H[?12l[?25h[?25lt[21;42H2[1;16H[?12l[?25h[?25le[21;42H3[1;17H[?12l[?25h[?25ls[21;42H4[1;18H[?12l[?25h[?25lt[21;42H5[1;19H[?12l[?25h[?25l[21;42H6[1;20H[?12l[?25h[?25lo[21;42H7[1;21H[?12l[?25h[?25lf[21;42H8[1;22H[?12l[?25h[?25l[21;42H9[1;23H[?12l[?25h[?25lg[21;41H20[1;24H[?12l[?25h[?25li[21;42H1[1;25H[?12l[?25h[?25lt[21;42H2[1;26H[?12l[?25h[?25l.[21;42H3[1;27H[?12l[?25h[21;1H[K[1;26H[?25l[21;39H1,22[10CAll[1;26H[?12l[?25h[?25l[21;39H[K[21;1H:[?12l[?25hwq[?25l"README" [New] 1L, 23C written]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes
-[?1l>[?12l[?25h[?1049l$ ls
-README
-$ ls -a
-[0m[01;34m.[0m  [01;34m..[0m  [01;34m.git[0m  README
-$ git status
-# On branch master
-#
-# Initial commit
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	README
-nothing added to commit but untracked files present (use "git add" to track)
-$ git add README
-$ git status
-# On branch master
-#
-# Initial commit
-#
-# Changes to be committed:
-#   (use "git rm --cached <file>..." to unstage)
-#
-#	new file:   README
-#
-$ git commit 
-[?1049h[?1h=[1;21r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[21;1H".git/COMMIT_EDITMSG" 12L, 277C[>c[1;1H[33m  1 
-  2 [m[34m# Please enter the commit message for your changes.  [m[3;1H[33m    [m[34mLines starting[m
-[33m  3 [m[34m# with '#' will be ignored, and an empty message aboo[m[5;1H[33m    [m[34mrts the commit.[m
-[33m  4 [m[34m# On branch [m[35mmaster[m
-[33m  5 [m[34m#[m
-[33m  6 [m[34m# Initial commit[m
-[33m  7 [m[34m#[m
-[33m  8 [m[34m# [m[35mChanges to be committed:[m
-[33m  9 [m[34m#   (use "git rm --cached <file>..." to unstage)[m
-[33m 10 [m[34m#[m
-[33m 11 [m[34m#   [m[32mnew file[m[34m: [m[31m  README[m
-[33m 12 [m[34m#[m
-[1m[34m~                                                       [16;1H~                                                       [17;1H~                                                       [18;1H~                                                       [19;1H~                                                       [20;1H~                                                       [m[21;39H1,0-1[9CAll]2;COMMIT_EDITMSG (~/pro...tes/gittest/.git) - VIM]1;COMMIT_EDITMSG[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[21;1H[1m-- INSERT --[m[21;13H[K[21;39H1,1[11CAll[1;5H[?12l[?25h[?25l[33mC[m[21;41H2]2;COMMIT_EDITMSG + (~/p...tes/gittest/.git) - VIM]1;COMMIT_EDITMSG[1;6H[?12l[?25h[?25l[33mr[m[21;41H3[1;7H[?12l[?25h[?25l[33me[m[21;41H4[1;8H[?12l[?25h[?25l[33ma[m[21;41H5[1;9H[?12l[?25h[?25l[33mt[m[21;41H6[1;10H[?12l[?25h[?25l[33me[m[21;41H7[1;11H[?12l[?25h[?25l[33md[m[21;41H8[1;12H[?12l[?25h[?25l[33m [m[21;41H9[1;13H[?12l[?25h[?25l[33ma[m[21;41H10[1;14H[?12l[?25h[?25l[33m [m[21;42H1[1;15H[?12l[?25h[?25l[33mR[m[21;42H2[1;16H[?12l[?25h[?25l[33mE[m[21;42H3[1;17H[?12l[?25h[?25l[33mA[m[21;42H4[1;18H[?12l[?25h[?25l[33mD[m[21;42H5[1;19H[?12l[?25h[?25l[33mM[m[21;42H6[1;20H[?12l[?25h[?25l[33mE[m[21;42H7[1;21H[?12l[?25h[?25l[4m[33mREADME[m[33m [m[21;42H8[1;22H[?12l[?25h[?25l[33mf[m[21;42H9[1;23H[?12l[?25h[?25l[33mi[m[21;41H20[1;24H[?12l[?25h[?25l[33ml[m[21;42H1[1;25H[?12l[?25h[?25l[33me[m[21;42H2[1;26H[?12l[?25h[?25l[33m [m[21;42H3[1;27H[?12l[?25h[?25l[33mf[m[21;42H4[1;28H[?12l[?25h[?25l[33mo[m[21;42H5[1;29H[?12l[?25h[?25l[33mr[m[21;42H6[1;30H[?12l[?25h[?25l[33m [m[21;42H7[1;31H[?12l[?25h[?25l[33mt[m[21;42H8[1;32H[?12l[?25h[?25l[33mh[m[21;42H9[1;33H[?12l[?25h[?25l[33me[m[21;41H30[1;34H[?12l[?25h[?25l[33m [m[21;42H1[1;35H[?12l[?25h[?25l[33mr[m[21;42H2[1;36H[?12l[?25h[?25l[33me[m[21;42H3[1;37H[?12l[?25h[?25l[33mp[m[21;42H4[1;38H[?12l[?25h[?25l[33mo[m[21;42H5[1;39H[?12l[?25h[?25l[4m[33mrepo[m[33m.[m[21;42H6[1;40H[?12l[?25h[21;1H[K[1;39H[?25l[21;39H1,35[10CAll[1;39H[?12l[?25h[?25l[21;39H[K[21;1H:[?12l[?25hw[?25l".git/COMMIT_EDITMSG"<it/COMMIT_EDITMSG" 12L, 312C written 1,35[10CAll]2;COMMIT_EDITMSG (~/pro...tes/gittest/.git) - VIM]1;COMMIT_EDITMSG[21;39H[K[21;39H1,35[10CAll[1;39H[?12l[?25h[?25l[21;1H[K[21;1H:[?12l[?25hq[?25l]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes[21;1H[K[21;1H[?1l>[?12l[?25h[?1049l[master (root-commit) 98bf7e5] Created a README file for the repo.
- 1 file changed, 1 insertion(+)
- create mode 100644 README
-$ clear
-[H[2J$ ls
-README
-$ vim main.cpp
-[?1049h[?1h=[1;21r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[21;1H"main.cpp" [New File][>c[1;1H[33m  1 [m
-[1m[34m~                                                       [3;1H~                                                       [4;1H~                                                       [5;1H~                                                       [6;1H~                                                       [7;1H~                                                       [8;1H~                                                       [9;1H~                                                       [10;1H~                                                       [11;1H~                                                       [12;1H~                                                       [13;1H~                                                       [14;1H~                                                       [15;1H~                                                       [16;1H~                                                       [17;1H~                                                       [18;1H~                                                       [19;1H~                                                       [20;1H~                                                       [m[21;39H0,0-1[9CAll]2;main.cpp (~/proj/ucr-...re-notes/gittest) - VIM]1;main.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[21;1H[1m-- INSERT --[m[21;13H[K[21;39H0,1[11CAll[1;5H[?12l[?25h[?25l#[21;39H1,2]2;main.cpp + (~/proj/uc...re-notes/gittest) - VIM]1;main.cpp[1;6H[?12l[?25h[?25l[1;5H[K[21;41H1[1;5H[?12l[?25h[?25l#[21;41H2[1;6H[?12l[?25h[?25li[21;41H3[1;7H[?12l[?25h[?25ln[21;41H4[1;8H[?12l[?25h[?25lc[21;41H5[1;9H[?12l[?25h[?25ll[21;41H6[1;10H[?12l[?25h[?25lu[21;41H7[1;11H[?12l[?25h[?25ld[21;41H8[1;12H[?12l[?25h[?25le[21;41H9[1;13H[?12l[?25h[?25l[21;41H10[1;14H[?12l[?25h[?25l[1;5H[35m#include <[m[21;42H1[1;15H[?12l[?25h[?25li[21;42H2[1;16H[?12l[?25h[?25lo[21;42H3[1;17H[?12l[?25h[?25ls[21;42H4[1;18H[?12l[?25h[?25lt[21;42H5[1;19H[?12l[?25h[?25lr[21;42H6[1;20H[?12l[?25h[?25le[21;42H7[1;21H[?12l[?25h[?25la[21;42H8[1;22H[?12l[?25h[?25lm[21;42H9[1;23H[?12l[?25h[?25l[1;14H[31m<iostream>[m[21;41H20[1;24H[?12l[?25h[?25l
-[33m  2 [m[2;5H[K[21;39H2,1 [2;5H[?12l[?25h[?25lu[21;41H2[2;6H[?12l[?25h[?25ls[21;41H3[2;7H[?12l[?25h[?25li[21;41H4[2;8H[?12l[?25h[?25ln[21;41H5[2;9H[?12l[?25h[?25l[33musing[m[21;41H6[2;10H[?12l[?25h[?25l[21;41H7[2;11H[?12l[?25h[?25ln[21;41H8[2;12H[?12l[?25h[?25la[21;41H9[2;13H[?12l[?25h[?25lm[21;41H10[2;14H[?12l[?25h[?25le[21;42H1[2;15H[?12l[?25h[?25ls[21;42H2[2;16H[?12l[?25h[?25lp[21;42H3[2;17H[?12l[?25h[?25la[21;42H4[2;18H[?12l[?25h[?25lc[21;42H5[2;19H[?12l[?25h[?25l[2;11H[32mnamespace[m[21;42H6[2;20H[?12l[?25h[?25l[21;42H7[2;21H[?12l[?25h[?25ls[21;42H8[2;22H[?12l[?25h[?25lt[21;42H9[2;23H[?12l[?25h[?25ld[21;41H20[2;24H[?12l[?25h[?25l;[21;42H1[2;25H[?12l[?25h[?25l
-[33m  3 [m[3;5H[K[21;39H3,1 [3;5H[?12l[?25h[?25l
-[33m  4 [m[4;5H[K[21;39H4[4;5H[?12l[?25h[?25li[21;41H2[4;6H[?12l[?25h[?25ln[21;41H3[4;7H[?12l[?25h[?25l[32mint[m[21;41H4[4;8H[?12l[?25h[?25l[21;41H5[4;9H[?12l[?25h[?25lm[21;41H6[4;10H[?12l[?25h[?25la[21;41H7[4;11H[?12l[?25h[?25ln[21;41H8[4;12H[?12l[?25h[?25li[21;41H9[4;13H[?12l[?25h[?25l[4;12H[K[21;41H8[4;12H[?12l[?25h[?25l[4;11H[K[21;41H7[4;11H[?12l[?25h[?25li[21;41H8[4;12H[?12l[?25h[?25ln[21;41H9[4;13H[?12l[?25h[?25l([21;39H[K[21;39H4,10[10CAll[4;14H[?12l[?25h[?25l)[46m()[m[21;39H[K[21;39H4,11[10CAll[4;15H[?12l[?25h[?25l
-[33m  5 [m[5;5H[K[4;13H()[21;39H5,1 [5;5H[?12l[?25h[?25l{[21;39H[K[21;39H5,2[11CAll[5;6H[?12l[?25h[?25l
-[33m  6 [m    [6;9H[K[21;39H6,5[6;9H[?12l[?25h[?25l}[5;5H[46m{[6;5H}[m[21;39H[K[21;39H6,2[11CAll[6;6H[?12l[?25h[?25l[21;39H[K[21;39H5,2[11CAll[5;6H[?12l[?25h[?25l[6;5H[46m [m
-[33m  7 [m}[7;6H[K[5;5H{[6;5H [21;39H6,5[6;9H[?12l[?25h[?25lr[21;41H6[6;10H[?12l[?25h[?25le[21;41H7[6;11H[?12l[?25h[?25lt[21;41H8[6;12H[?12l[?25h[?25lu[21;41H9[6;13H[?12l[?25h[?25lr[21;41H10[6;14H[?12l[?25h[?25l[33mreturn[m[21;42H1[6;15H[?12l[?25h[?25l[21;42H2[6;16H[?12l[?25h[?25l[31m0[m[21;42H3[6;17H[?12l[?25h[?25l;[21;42H4[6;18H[?12l[?25h[?25l[5;5H[46m{[7;5H}[m[21;39H[K[21;39H5,2[11CAll[5;6H[?12l[?25h[?25l[6;9H[K[7;5H[46m [m   [33mreturn[m [31m0[m;
-[33m  8 [m}[8;6H[K[5;5H{[7;5H [21;39H6,5[6;9H[?12l[?25h[?25lc[21;41H6[6;10H[?12l[?25h[?25le[21;41H7[6;11H[?12l[?25h[?25lr[21;41H8[6;12H[?12l[?25h[?25lr[21;41H9[6;13H[?12l[?25h[?25l[21;41H10[6;14H[?12l[?25h[?25l<[21;42H1[6;15H[?12l[?25h[?25l<[21;42H2[6;16H[?12l[?25h[?25l[21;42H3[6;17H[?12l[?25h[?25l[31m"[m[21;42H4[6;18H[?12l[?25h[?25l[31mh[m[21;42H5[6;19H[?12l[?25h[?25l[31me[m[21;42H6[6;20H[?12l[?25h[?25l[31ml[m[21;42H7[6;21H[?12l[?25h[?25l[31ml[m[21;42H8[6;22H[?12l[?25h[?25l[31mo[m[21;42H9[6;23H[?12l[?25h[?25l[31m [m[21;41H20[6;24H[?12l[?25h[?25l[31mw[m[21;42H1[6;25H[?12l[?25h[?25l[31mo[m[21;42H2[6;26H[?12l[?25h[?25l[31mr[m[21;42H3[6;27H[?12l[?25h[?25l[31ml[m[21;42H4[6;28H[?12l[?25h[?25l[31md[m[21;42H5[6;29H[?12l[?25h[?25l[31m![m[21;42H6[6;30H[?12l[?25h[?25l[31m"[m[21;42H7[6;31H[?12l[?25h[?25l[21;42H8[6;32H[?12l[?25h[?25l<[21;42H9[6;33H[?12l[?25h[?25l<[21;41H30[6;34H[?12l[?25h[?25l[21;42H1[6;35H[?12l[?25h[?25le[21;42H2[6;36H[?12l[?25h[?25ln[21;42H3[6;37H[?12l[?25h[?25ld[21;42H4[6;38H[?12l[?25h[?25l;[21;42H5[6;39H[?12l[?25h[21;1H[K[6;38H[?25l[21;39H6,34[10CAll[6;38H[?12l[?25h[?25l[21;1H[1m-- INSERT --[m[21;39H[K[21;39H6,34[10CAll[6;38H[?12l[?25h[?25l;;[21;42H5[6;39H[?12l[?25h[?25l[6;39H[K[21;42H4[6;38H[?12l[?25h[?25ll;[21;42H5[6;39H[?12l[?25h[21;1H[K[6;38H[?25l[21;39H6,34[10CAll[6;38H[?12l[?25h[?25l[21;39H[K[21;1H:[?12l[?25hw[?25l"main.cpp" [New] 8L, 107C written     6,34[10CAll]2;main.cpp (~/proj/ucr-...re-notes/gittest) - VIM]1;main.cpp[21;39H[K[21;39H6,34[10CAll[6;38H[?12l[?25h[?25l[?12l[?25h[?25l[21;1H[K[21;1H:[?12l[?25hwq[?25l"main.cpp" 8L, 107C written]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes
-[?1l>[?12l[?25h[?1049l$ g++ main.cpp 
-$ ./a.out 
-hello world!
-$ ls
-README  [0m[01;32ma.out[0m  main.cpp
-$ vim README 
-[?1049h[?1h=[1;21r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[21;1H"README" 1L, 23C[>c[1;1H[33m  1 [mThis is a test of git.
-[1m[34m~                                                       [3;1H~                                                       [4;1H~                                                       [5;1H~                                                       [6;1H~                                                       [7;1H~                                                       [8;1H~                                                       [9;1H~                                                       [10;1H~                                                       [11;1H~                                                       [12;1H~                                                       [13;1H~                                                       [14;1H~                                                       [15;1H~                                                       [16;1H~                                                       [17;1H~                                                       [18;1H~                                                       [19;1H~                                                       [20;1H~                                                       [m[21;39H1,1[11CAll]2;README (~/proj/ucr-cs...re-notes/gittest) - VIM]1;README[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[21;1H[1m-- INSERT --[m[21;14H[K[21;39H2,1[11CAll[2;1H[33m  2 [m[2;5H[K]2;README + (~/proj/ucr-...re-notes/gittest) - VIM]1;README[2;5H[?12l[?25h[?25lo[21;41H2[2;6H[?12l[?25h[?25l[2;5H[K[21;41H1[2;5H[?12l[?25h[?25l
-[33m  3 [m[3;5H[K[21;39H3[3;5H[?12l[?25h[?25lI[21;41H2[3;6H[?12l[?25h[?25l'[21;41H3[3;7H[?12l[?25h[?25lm[21;41H4[3;8H[?12l[?25h[?25l[21;41H5[3;9H[?12l[?25h[?25lc[21;41H6[3;10H[?12l[?25h[?25lh[21;41H7[3;11H[?12l[?25h[?25la[21;41H8[3;12H[?12l[?25h[?25ln[21;41H9[3;13H[?12l[?25h[?25li[21;41H10[3;14H[?12l[?25h[?25ln[21;42H1[3;15H[?12l[?25h[?25l[3;14H[K[21;42H0[3;14H[?12l[?25h[?25l[3;13H[K[21;41H9 [3;13H[?12l[?25h[?25lg[21;41H10[3;14H[?12l[?25h[?25li[21;42H1[3;15H[?12l[?25h[?25ln[21;42H2[3;16H[?12l[?25h[?25lg[21;42H3[3;17H[?12l[?25h[?25l[21;42H4[3;18H[?12l[?25h[?25lt[21;42H5[3;19H[?12l[?25h[?25lh[21;42H6[3;20H[?12l[?25h[?25li[21;42H7[3;21H[?12l[?25h[?25ls[21;42H8[3;22H[?12l[?25h[?25l[21;42H9[3;23H[?12l[?25h[?25ld[21;41H20[3;24H[?12l[?25h[?25li[21;42H1[3;25H[?12l[?25h[?25l[3;24H[K[21;42H0[3;24H[?12l[?25h[?25l[3;23H[K[21;41H19[3;23H[?12l[?25h[?25lf[21;41H20[3;24H[?12l[?25h[?25li[21;42H1[3;25H[?12l[?25h[?25ll[21;42H2[3;26H[?12l[?25h[?25le[21;42H3[3;27H[?12l[?25h[?25l.[21;42H4[3;28H[?12l[?25h[21;1H[K[3;27H[?25l[21;39H3,23[10CAll[3;27H[?12l[?25h[?25l[21;39H[K[21;1H:[?12l[?25hwq[?25l"README" 3L, 48C written]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes
-[?1l>[?12l[?25h[?1049l$ git status
-# On branch master
-# Changes not staged for commit:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	modified:   README
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	a.out
-#	main.cpp
-no changes added to commit (use "git add" and/or "git commit -a")
-$ [K$ [K$ clear
-[H[2J$ clear$ git status
-# On branch master
-# Changes not staged for commit:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	modified:   README
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	a.out
-#	main.cpp
-no changes added to commit (use "git add" and/or "git commit -a")
-$ git add[K$ git add README
-$ git add README main.cpp
-$ git add *         gits  status
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#	modified:   README
-#	new file:   main.cpp
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	a.out
-$ git commit 
-[?1049h[?1h=[1;25r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[25;1H".git/COMMIT_EDITMSG" 14L, 374C[>c[1;1H[33m  1 
-  2 [m[34m# Please enter the commit message for your changes. Lines startii[m[3;1H[33m    [m[34mng[m
-[33m  3 [m[34m# with '#' will be ignored, and an empty message aborts the commm[m[5;1H[33m    [m[34mit.[m
-[33m  4 [m[34m# On branch [m[35mmaster[m
-[33m  5 [m[34m# [m[35mChanges to be committed:[m
-[33m  6 [m[34m#   (use "git reset HEAD <file>..." to unstage)[m
-[33m  7 [m[34m#[m
-[33m  8 [m[34m#   [m[32mmodified[m[34m: [m[31m  README[m
-[33m  9 [m[34m#   [m[32mnew file[m[34m: [m[31m  main.cpp[m
-[33m 10 [m[34m#[m
-[33m 11 [m[34m# [m[35mUntracked files:[m
-[33m 12 [m[34m#   (use "git add <file>..." to include in what will be committee[m[15;1H[33m    [m[34md)[m
-[33m 13 [m[34m#[m
-[33m 14 [m[34m#   [m[31ma.out[m
-[1m[34m~                                                                   [19;1H~                                                                   [20;1H~                                                                   [21;1H~                                                                   [22;1H~                                                                   [23;1H~                                                                   [24;1H~                                                                   [m[25;51H1,0-1[9CAll]2;COMMIT_EDITMSG (~/proj/ucr...re-notes/gittest/.git) - VIM]1;COMMIT_EDITMSG[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[25;1H[K[25;1H:[?12l[?25hq[?25l]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes[25;1H[K[25;1H[?1l>[?12l[?25h[?1049lAborting commit due to empty commit message.
-$ git commit [1Pstatus
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#	modified:   README
-#	new file:   main.cpp
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	a.out
-$ git statuscommit -m "This is my second commit."
-[master e674211] This is my second commit.
- 2 files changed, 10 insertions(+)
- create mode 100644 main.cpp
-$ clear
-[H[2J$ git loh g
-[?1h=commit e674211254baba383d98e2f03ea217a8ec36365b[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 15:58:05 2015 -0800[m
-[m
-    This is my second commit.[m
-[m
-commit 98bf7e5a29d75952295b7628958bd49a20808cfe[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 15:49:13 2015 -0800[m
-[m
-    Created a README file for the repo.[m
-[K[?1l>$ git checkout 98bf7e5a29d75952295b7628958bd49a20808cfe
-Note: checking out '98bf7e5a29d75952295b7628958bd49a20808cfe'.
-
-You are in 'detached HEAD' state. You can look around, make experimental
-changes and commit them, and you can discard any commits you make in this
-state without impacting any branches by performing another checkout.
-
-If you want to create a new branch to retain commits you create, you may
-do so (now or later) by using -b with the checkout command again. Example:
-
-  git checkout -b new_branch_name
-
-HEAD is now at 98bf7e5... Created a README file for the repo.
-$ ls
-README  [0m[01;32ma.out[0m
-$ vim README 
-[?1049h[?1h=[1;25r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[25;1H"README" 1L, 23C[>c[1;1H[33m  1 [mThis is a test of git.
-[1m[34m~                                                                   [3;1H~                                                                   [4;1H~                                                                   [5;1H~                                                                   [6;1H~                                                                   [7;1H~                                                                   [8;1H~                                                                   [9;1H~                                                                   [10;1H~                                                                   [11;1H~                                                                   [12;1H~                                                                   [13;1H~                                                                   [14;1H~                                                                   [15;1H~                                                                   [16;1H~                                                                   [17;1H~                                                                   [18;1H~                                                                   [19;1H~                                                                   [20;1H~                                                                   [21;1H~                                                                   [22;1H~                                                                   [23;1H~                                                                   [24;1H~                                                                   [m[25;51H1,1[11CAll]2;README (~/proj/ucr-cs100/lecture-notes/gittest) - VIM]1;README[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[25;1H[K[25;1H:[?12l[?25hq[?25l]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes[25;1H[K[25;1H[?1l>[?12l[?25h[?1049l$ git checkout master
-Previous HEAD position was 98bf7e5... Created a README file for the repo.
-Switched to branch 'master'
-$ ls
-README  [0m[01;32ma.out[0m  main.cpp
-$ cat README 
-This is a test of git.
-
-I'm changing this file.
-$ clear
-[H[2J$ git log
-[?1h=commit e674211254baba383d98e2f03ea217a8ec36365b[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 15:58:05 2015 -0800[m
-[m
-    This is my second commit.[m
-[m
-commit 98bf7e5a29d75952295b7628958bd49a20808cfe[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 15:49:13 2015 -0800[m
-[m
-    Created a README file for the repo.[m
-[K[?1l>$ vim Makefile
-[?1049h[?1h=[1;25r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[25;1H"Makefile" [New File][>c[1;1H[33m  1 [m
-[1m[34m~                                                                   [3;1H~                                                                   [4;1H~                                                                   [5;1H~                                                                   [6;1H~                                                                   [7;1H~                                                                   [8;1H~                                                                   [9;1H~                                                                   [10;1H~                                                                   [11;1H~                                                                   [12;1H~                                                                   [13;1H~                                                                   [14;1H~                                                                   [15;1H~                                                                   [16;1H~                                                                   [17;1H~                                                                   [18;1H~                                                                   [19;1H~                                                                   [20;1H~                                                                   [21;1H~                                                                   [22;1H~                                                                   [23;1H~                                                                   [24;1H~                                                                   [m[25;51H0,0-1[9CAll]2;Makefile (~/proj/ucr-cs100/lecture-notes/gittest) - VIM]1;Makefile[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[25;1H[1m-- INSERT --[m[25;13H[K[25;51H0,1[11CAll[1;5H[?12l[?25h[?25la[25;51H1,2]2;Makefile + (~/proj/ucr-cs100/lecture-notes/gittest) - VIM]1;Makefile[1;6H[?12l[?25h[?25ll[25;53H3[1;7H[?12l[?25h[?25ll[25;53H4[1;8H[?12l[?25h[?25l[36mall:[m[25;53H5[1;9H[?12l[?25h[?25l
-[33m  2 [m[2;5H[K[25;51H2,1[2;5H[?12l[?25h[?25l[31m    [m[25;53H2-5[2;9H[?12l[?25h[?25l[31mg[m[25;53H3-6[2;10H[?12l[?25h[?25l[31m+[m[25;53H4-7[2;11H[?12l[?25h[?25l[31m+[m[25;53H5-8[2;12H[?12l[?25h[?25l[31m [m[25;53H6-9[2;13H[?12l[?25h[?25l[31mm[m[25;53H7-10[2;14H[?12l[?25h[?25l[31ma[m[25;53H8-11[2;15H[?12l[?25h[?25l[31mi[m[25;53H9-12[2;16H[?12l[?25h[?25l[31mn[m[25;53H10-13[2;17H[?12l[?25h[?25l[31m.[m[25;54H1-14[2;18H[?12l[?25h[?25l[31mc[m[25;54H2-15[2;19H[?12l[?25h[?25l[31mp[m[25;54H3-16[2;20H[?12l[?25h[?25l[31mp[m[25;54H4-17[2;21H[?12l[?25h[25;1H[K[2;20H[?25l[25;51H2,13-16[7CAll[2;20H[?12l[?25h[?25l[25;51H[K[25;1H:[?12l[?25hwq[?25l"Makefile" [New] 2L, 19C written]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes
-[?1l>[?12l[?25h[?1049l$ make
-g++ main.cpp
-$ ls
-Makefile  README  [0m[01;32ma.out[0m  main.cpp
-$ git status
-# On branch master
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	Makefile
-#	a.out
-nothing added to commit but untracked files present (use "git add" to track)
-$ git add Makefile
-$ git status
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#	new file:   Makefile
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	a.out
-$ git commit -m "Add e  ed a Makefile"
-[master 2e79a25] Added a Makefile
- 1 file changed, 2 insertions(+)
- create mode 100644 Makefile
-$ gi  clear
-[H[2J$ git log
-[?1h=commit 2e79a25e40d948f6f4adaebf8f0bd8ea78ed1d52[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 16:06:02 2015 -0800[m
-[m
-    Added a Makefile[m
-[m
-commit e674211254baba383d98e2f03ea217a8ec36365b[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 15:58:05 2015 -0800[m
-[m
-    This is my second commit.[m
-[m
-commit 98bf7e5a29d75952295b7628958bd49a20808cfe[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 15:49:13 2015 -0800[m
-[m
-    Created a README file for the repo.[m
-[K[?1l>$ git checkout e674211254baba383d98e2f03ea217a8ec36365b
-Note: checking out 'e674211254baba383d98e2f03ea217a8ec36365b'.
-
-You are in 'detached HEAD' state. You can look around, make experimental
-changes and commit them, and you can discard any commits you make in this
-state without impacting any branches by performing another checkout.
-
-If you want to create a new branch to retain commits you create, you may
-do so (now or later) by using -b with the checkout command again. Example:
-
-  git checkout -b new_branch_name
-
-HEAD is now at e674211... This is my second commit.
-$ ls
-README  [0m[01;32ma.out[0m  main.cpp
-$ clear
-[H[2J$ git log
-[?1h=commit e674211254baba383d98e2f03ea217a8ec36365b[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 15:58:05 2015 -0800[m
-[m
-    This is my second commit.[m
-[m
-commit 98bf7e5a29d75952295b7628958bd49a20808cfe[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 15:49:13 2015 -0800[m
-[m
-    Created a README file for the repo.[m
-[K[?1l>$ git checkout 98bf7e5a29d75952295b7628958bd49a20808cfe
-Previous HEAD position was e674211... This is my second commit.
-HEAD is now at 98bf7e5... Created a README file for the repo.
-$ ls
-README  [0m[01;32ma.out[0m
-$ git checkout master
-Previous HEAD position was 98bf7e5... Created a README file for the repo.
-Switched to branch 'master'
-$ ks  ls
-Makefile  README  [0m[01;32ma.out[0m  main.cpp
-$ clear
-[H[2J$ git log
-[?1h=commit 2e79a25e40d948f6f4adaebf8f0bd8ea78ed1d52[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 16:06:02 2015 -0800[m
-[m
-    Added a Makefile[m
-[m
-commit e674211254baba383d98e2f03ea217a8ec36365b[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 15:58:05 2015 -0800[m
-[m
-    This is my second commit.[m
-[m
-commit 98bf7e5a29d75952295b7628958bd49a20808cfe[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 15:49:13 2015 -0800[m
-[m
-    Created a README file for the repo.[m
-[K[?1l>$ ls
-Makefile  README  [0m[01;32ma.out[0m  main.cpp
-$ vim main.cpp 
-[?1049h[?1h=[1;25r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[25;1H"main.cpp" 8L, 107C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
-[33m  2 using[m [32mnamespace[m std;
-[33m  3 
-  4 [m[32mint[m main()
-[33m  5 [m{
-[33m  6 [m    cerr << [31m"hello world!"[m << endl;
-[33m  7 [m    [33mreturn[m [31m0[m;
-[33m  8 [m}
-[1m[34m~                                                                   [10;1H~                                                                   [11;1H~                                                                   [12;1H~                                                                   [13;1H~                                                                   [14;1H~                                                                   [15;1H~                                                                   [16;1H~                                                                   [17;1H~                                                                   [18;1H~                                                                   [19;1H~                                                                   [20;1H~                                                                   [21;1H~                                                                   [22;1H~                                                                   [23;1H~                                                                   [24;1H~                                                                   [m[25;51H1,1[11CAll]2;main.cpp (~/proj/ucr-cs100/lecture-notes/gittest) - VIM]1;main.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[25;51H2[2;5H[?12l[?25h[?25l[25;51H3,0-1[3;5H[?12l[?25h[?25l[25;51H4,1  [4;5H[?12l[?25h[?25l[25;51H3,0-1[3;5H[?12l[?25h[?25l[25;51H4,1  [4;5H[?12l[?25h[?25l[5;5H[46m{[8;5H}[m[25;51H5[5;5H[?12l[?25h[?25l{[8;5H}[25;51H6[6;5H[?12l[?25h[?25l[25;53H5[6;9H[?12l[?25h[?25l << [31m"hello world!"[m << endl;[6;36H[K]2;main.cpp + (~/proj/ucr-cs100/lecture-notes/gittest) - VIM]1;main.cpp[6;9H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;13H[K[25;51H6,5[11CAll[6;9H[?12l[?25h[?25lc << [31m"hello world!"[m << endl;[25;53H6[6;10H[?12l[?25h[?25lo << [31m"hello world!"[m << endl;[25;53H7[6;11H[?12l[?25h[?25lu << [31m"hello world!"[m << endl;[25;53H8[6;12H[?12l[?25h[?25lt << [31m"hello world!"[m << endl;[25;53H9[6;13H[?12l[?25h[25;1H[K[6;12H[?25l[25;51H6,8[11CAll[6;12H[?12l[?25h[?25l[25;51H[K[25;1H:[?12l[?25hwq[?25l"main.cpp" 8L, 107C written]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes
-[?1l>[?12l[?25h[?1049l$ git status
-# On branch master
-# Changes not staged for commit:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	modified:   main.cpp
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	a.out
-no changes added to commit (use "git add" and/or "git commit -a")
-$ git add main.cpp
-$ git commit -m "changes d cou  err to cout"
-[master 494eef7] changed cerr to cout
- 1 file changed, 1 insertion(+), 1 deletion(-)
-$ clear
-[H[2J$ ls
-Makefile  README  [0m[01;32ma.out[0m  main.cpp
-$ mv main.cpp hello.cpp
-$ git status
-# On branch master
-# Changes not staged for commit:
-#   (use "git add/rm <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	deleted:    main.cpp
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	a.out
-#	hello.cpp
-no changes added to commit (use "git add" and/or "git commit -a")
-$ git add hello.cpp
-$ git status
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#	new file:   hello.cpp
-#
-# Changes not staged for commit:
-#   (use "git add/rm <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	deleted:    main.cpp
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	a.out
-$ git     rm  git rm main.cpp               ls
-Makefile  README  [0m[01;32ma.out[0m  hello.cpp
-$ rm mani  in.cpp
-rm: cannot remove `main.cpp': No such file or directory
-$ git rm main.cpp
-rm 'main.cpp'
-$ git commit -m "rename  d main.  n.cpp"
-[master 886f1bf] renamed main.cpp
- 1 file changed, 0 insertions(+), 0 deletions(-)
- rename main.cpp => hello.cpp (100%)
-$ mv    git mv hello.cpp main.cpp
-$ git status
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#	renamed:    hello.cpp -> main.cpp
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	a.out
-$ git commit -m "moved file back"
-[master 320524d] moved file back
- 1 file changed, 0 insertions(+), 0 deletions(-)
- rename hello.cpp => main.cpp (100%)
-$ git status 
-# On branch master
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	a.out
-nothing added to commit but untracked files present (use "git add" to track)
-$ clear
-[H[2J$ git log
-[?1h=commit 320524d42c15a0df83e7688fbdb8274a38f9e5da[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 16:17:44 2015 -0800[m
-[m
-    moved file back[m
-[m
-commit 886f1bf4b554dc3da4413d61f62bb9fd66c2ac33[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 16:16:39 2015 -0800[m
-[m
-    renamed main.cpp[m
-[m
-commit 494eef777252d98d356515efac4a096566df49d4[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 16:11:58 2015 -0800[m
-[m
-    changed cerr to cout[m
-[m
-commit 2e79a25e40d948f6f4adaebf8f0bd8ea78ed1d52[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 16:06:02 2015 -0800[m
-[m
-    Added a Makefile[m
-[m
-:[K[K [KESCESC[KOO[KBB[Kcommit e674211254baba383d98e2f03ea217a8ec36365b[m
-:[K[K [KESCESC[KOO[KBB[KAuthor: Mike Izbicki <mike@izbicki.me>[m
-:[K[K [KESCESC[KOO[KBB[KDate:   Wed Jan 7 15:58:05 2015 -0800[m
-:[K[K [KESCESC[KOO[KBB[K[m
-:[K[K [KESCESC[KOO[KBB[K    This is my second commit.[m
-:[K[K [KESCESC[KOO[KBB[K[m
-:[K[K [KESCESC[KOO[KBB[Kcommit 98bf7e5a29d75952295b7628958bd49a20808cfe[m
-:[K[K [KESCESC[KOO[KBB[KAuthor: Mike Izbicki <mike@izbicki.me>[m
-:[K[K [KESCESC[KOO[KBB[KDate:   Wed Jan 7 15:49:13 2015 -0800[m
-:[K[K [KESCESC[KOO[KBB[K[m
-:[K[K [KESCESC[KOO[KBB[K    Created a README file for the repo.[m
-:[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KAA[K[HM    renamed main.cpp[m
-[25;1H[K:[K[K [KESCESC[KOO[KAA[K[HM[m
-[25;1H[K:[K[K [KESCESC[KOO[KAA[K[HMDate:   Wed Jan 7 16:16:39 2015 -0800[m
-[25;1H[K:[K[K [KESCESC[KOO[KAA[K[HMAuthor: Mike Izbicki <mike@izbicki.me>[m
-[25;1H[K:[K[K [KESCESC[KOO[KAA[K[HMcommit 886f1bf4b554dc3da4413d61f62bb9fd66c2ac33[m
-[25;1H[K:[K[K [KESCESC[KOO[KAA[K[HM[m
-[25;1H[K:[K[K [KESCESC[KOO[KAA[K[HM    moved file back[m
-[25;1H[K:[K[K [KESCESC[KOO[KAA[K[HM[m
-[25;1H[K:[K[K [KESCESC[KOO[KAA[K[HMDate:   Wed Jan 7 16:17:44 2015 -0800[m
-[25;1H[K:[K[K [KESCESC[KOO[KAA[K[HMAuthor: Mike Izbicki <mike@izbicki.me>[m
-[25;1H[K:[K[K [KESCESC[KOO[KAA[K[HMcommit 320524d42c15a0df83e7688fbdb8274a38f9e5da[m
-[25;1H[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K[K:[K[K:[K[K[?1l>$ git checkout 886f1bf4b554dc3da4413d61f62bb9fd66c2ac33
-Note: checking out '886f1bf4b554dc3da4413d61f62bb9fd66c2ac33'.
-
-You are in 'detached HEAD' state. You can look around, make experimental
-changes and commit them, and you can discard any commits you make in this
-state without impacting any branches by performing another checkout.
-
-If you want to create a new branch to retain commits you create, you may
-do so (now or later) by using -b with the checkout command again. Example:
-
-  git checkout -b new_branch_name
-
-HEAD is now at 886f1bf... renamed main.cpp
-$ ls
-Makefile  README  [0m[01;32ma.out[0m  hello.cpp
-$ git log
-[?1h=commit 886f1bf4b554dc3da4413d61f62bb9fd66c2ac33[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 16:16:39 2015 -0800[m
-[m
-    renamed main.cpp[m
-[m
-commit 494eef777252d98d356515efac4a096566df49d4[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 16:11:58 2015 -0800[m
-[m
-    changed cerr to cout[m
-[m
-commit 2e79a25e40d948f6f4adaebf8f0bd8ea78ed1d52[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 16:06:02 2015 -0800[m
-[m
-    Added a Makefile[m
-[m
-commit e674211254baba383d98e2f03ea217a8ec36365b[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 15:58:05 2015 -0800[m
-[m
-    This is my second commit.[m
-[m
-:[K[K [KESCESC[KOO[KBB[Kcommit 98bf7e5a29d75952295b7628958bd49a20808cfe[m
-:[K[K [KESCESC[KOO[KBB[KAuthor: Mike Izbicki <mike@izbicki.me>[m
-:[K[K [KESCESC[KOO[KBB[KDate:   Wed Jan 7 15:49:13 2015 -0800[m
-:[K[K [KESCESC[KOO[KBB[K[m
-:[K[K [KESCESC[KOO[KBB[K    Created a README file for the repo.[m
-:[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K[?1l>$ git checkout 98bf7e5a29d75952295b7628958bd49a20808cfe
-Previous HEAD position was 886f1bf... renamed main.cpp
-HEAD is now at 98bf7e5... Created a README file for the repo.
-$ ls
-README  [0m[01;32ma.out[0m
-$ git checkout master
-Previous HEAD position was 98bf7e5... Created a README file for the repo.
-Switched to branch 'master'
-$ git log
-[?1h=commit 320524d42c15a0df83e7688fbdb8274a38f9e5da[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 16:17:44 2015 -0800[m
-[m
-    moved file back[m
-[m
-commit 886f1bf4b554dc3da4413d61f62bb9fd66c2ac33[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 16:16:39 2015 -0800[m
-[m
-    renamed main.cpp[m
-[m
-commit 494eef777252d98d356515efac4a096566df49d4[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 16:11:58 2015 -0800[m
-[m
-    changed cerr to cout[m
-[m
-commit 2e79a25e40d948f6f4adaebf8f0bd8ea78ed1d52[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 16:06:02 2015 -0800[m
-[m
-    Added a Makefile[m
-[m
-:[K[K [KESCESC[KOO[KBB[Kcommit e674211254baba383d98e2f03ea217a8ec36365b[m
-:[K[K [KESCESC[KOO[KBB[KAuthor: Mike Izbicki <mike@izbicki.me>[m
-:[K[K [KESCESC[KOO[KBB[KDate:   Wed Jan 7 15:58:05 2015 -0800[m
-:[K[K [KESCESC[KOO[KBB[K[m
-:[K[K [KESCESC[KOO[KBB[K    This is my second commit.[m
-:[K[K [KESCESC[KOO[KBB[K[m
-:[K[K [KESCESC[KOO[KBB[Kcommit 98bf7e5a29d75952295b7628958bd49a20808cfe[m
-:[K[K [KESCESC[KOO[KAA[K[HMcommit 886f1bf4b554dc3da4413d61f62bb9fd66c2ac33[m
-[25;1H[K:[K[K [KESCESC[KOO[KBB[Kcommit 98bf7e5a29d75952295b7628958bd49a20808cfe[m
-:[K[K [KESCESC[KOO[KBB[KAuthor: Mike Izbicki <mike@izbicki.me>[m
-:[K[K [KESCESC[KOO[KBB[KDate:   Wed Jan 7 15:49:13 2015 -0800[m
-:[K[K [KESCESC[KOO[KBB[K[m
-:[K[K [KESCESC[KOO[KBB[K    Created a README file for the repo.[m
-:[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K[?1l>$ git checkout e674211254baba383d98e2f03ea217a8ec36365b
-Note: checking out 'e674211254baba383d98e2f03ea217a8ec36365b'.
-
-You are in 'detached HEAD' state. You can look around, make experimental
-changes and commit them, and you can discard any commits you make in this
-state without impacting any branches by performing another checkout.
-
-If you want to create a new branch to retain commits you create, you may
-do so (now or later) by using -b with the checkout command again. Example:
-
-  git checkout -b new_branch_name
-
-HEAD is now at e674211... This is my second commit.
-$ ls
-README  [0m[01;32ma.out[0m  main.cpp
-$ clear
-[H[2J$ git log
-[?1h=commit e674211254baba383d98e2f03ea217a8ec36365b[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 15:58:05 2015 -0800[m
-[m
-    This is my second commit.[m
-[m
-commit 98bf7e5a29d75952295b7628958bd49a20808cfe[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 15:49:13 2015 -0800[m
-[m
-    Created a README file for the repo.[m
-[K[?1l>$ git checkout master
-Previous HEAD position was e674211... This is my second commit.
-Switched to branch 'master'
-$ git log
-[?1h=commit 320524d42c15a0df83e7688fbdb8274a38f9e5da[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 16:17:44 2015 -0800[m
-[m
-    moved file back[m
-[m
-commit 886f1bf4b554dc3da4413d61f62bb9fd66c2ac33[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 16:16:39 2015 -0800[m
-[m
-    renamed main.cpp[m
-[m
-commit 494eef777252d98d356515efac4a096566df49d4[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 16:11:58 2015 -0800[m
-[m
-    changed cerr to cout[m
-[m
-commit 2e79a25e40d948f6f4adaebf8f0bd8ea78ed1d52[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 16:06:02 2015 -0800[m
-[m
-    Added a Makefile[m
-[m
-:[K[K [KESCESC[KOO[KBB[Kcommit e674211254baba383d98e2f03ea217a8ec36365b[m
-:[K[K [KESCESC[KOO[KBB[KAuthor: Mike Izbicki <mike@izbicki.me>[m
-:[K[K [KESCESC[KOO[KBB[KDate:   Wed Jan 7 15:58:05 2015 -0800[m
-:[K[K [KESCESC[KOO[KBB[K[m
-:[K[K [KESCESC[KOO[KBB[K    This is my second commit.[m
-:[K[K [KESCESC[KOO[KBB[K[m
-:[K[K [KESCESC[KOO[KBB[Kcommit 98bf7e5a29d75952295b7628958bd49a20808cfe[m
-:[K[K [KESCESC[KOO[KBB[KAuthor: Mike Izbicki <mike@izbicki.me>[m
-:[K[K [KESCESC[KOO[KBB[KDate:   Wed Jan 7 15:49:13 2015 -0800[m
-:[K[K [KESCESC[KOO[KBB[K[m
-:[K[K [KESCESC[KOO[KBB[K    Created a README file for the repo.[m
-:[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K [KESCESC[KOO[KBB[K[K[7m(END)[27m[K[K[?1l>$ git branch
-* master
-$ git     git branch newbranch
-$ git branch
-* master
-  newbranch
-$ git checkout newbranch 
-Switched to branch 'newbranch'
-$ git branch
-  master
-* newbranch
-$ ls
-Makefile  README  [0m[01;32ma.out[0m  main.cpp
-$ mkdir src
-$ git mv main.cpp src/
-$ git status
-# On branch newbranch
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#	renamed:    main.cpp -> src/main.cpp
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	a.out
-$ git commit -m "moved code into srx c"
-[newbranch 54990d6] moved code into src
- 1 file changed, 0 insertions(+), 0 deletions(-)
- rename main.cpp => src/main.cpp (100%)
-$ git log
-[?1h=commit 54990d6c9730af71fa9326f4966d66f995d74060[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 16:36:27 2015 -0800[m
-[m
-    moved code into src[m
-[m
-commit 320524d42c15a0df83e7688fbdb8274a38f9e5da[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 16:17:44 2015 -0800[m
-[m
-    moved file back[m
-[m
-commit 886f1bf4b554dc3da4413d61f62bb9fd66c2ac33[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 16:16:39 2015 -0800[m
-[m
-    renamed main.cpp[m
-[m
-commit 494eef777252d98d356515efac4a096566df49d4[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 16:11:58 2015 -0800[m
-[m
-    changed cerr to cout[m
-[m
-:[K[K[?1l>$ clear
-[H[2J$ gi  git checkout master
-Switched to branch 'master'
-$ ls
-Makefile  README  [0m[01;32ma.out[0m  main.cpp
-$ git checkout newbranch 
-Switched to branch 'newbranch'
-$ ls
-Makefile  README  [0m[01;32ma.out[0m  [01;34msrc[0m
-$ git checkout master
-Switched to branch 'master'
-$ ls
-Makefile  README  [0m[01;32ma.out[0m  main.cpp
-$ git branch
-* master
-  newbranch
-$ git rm MA akefile
-rm 'Makefile'
-$ git status
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#	deleted:    Makefile
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	a.out
-$ git commit -m "removed Makefile"
-[master 07d876d] removed Makefile
- 1 file changed, 2 deletions(-)
- delete mode 100644 Makefile
-$ g ls
-README  [0m[01;32ma.out[0m  main.cpp
-$ git branch
-* master
-  newbranch
-$ c git log
-[?1h=commit 07d876dbafdef1ca26e3e32efced5b8b7d87520b[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 16:39:04 2015 -0800[m
-[m
-    removed Makefile[m
-[m
-commit 320524d42c15a0df83e7688fbdb8274a38f9e5da[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 16:17:44 2015 -0800[m
-[m
-    moved file back[m
-[m
-commit 886f1bf4b554dc3da4413d61f62bb9fd66c2ac33[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 16:16:39 2015 -0800[m
-[m
-    renamed main.cpp[m
-[m
-commit 494eef777252d98d356515efac4a096566df49d4[m
-Author: Mike Izbicki <mike@izbicki.me>[m
-Date:   Wed Jan 7 16:11:58 2015 -0800[m
-[m
-    changed cerr to cout[m
-[m
-:[K[K[?1l>$ git checkout newbranch 
-Switched to branch 'newbranch'
-$ ls
-Makefile  README  [0m[01;32ma.out[0m  [01;34msrc[0m
-$ gi  git rm README
-rm 'README'
-$ git commit -m "rm READEME"
-[newbranch c1d6715] rm READEME
- 1 file changed, 3 deletions(-)
- delete mode 100644 README
-$ ls
-Makefile  [0m[01;32ma.out[0m  [01;34msrc[0m
-$ ls Makefile             git checkout newbranch ^C
-$ lls
-bash: lls: command not found
-$ ls
-Makefile  [0m[01;32ma.out[0m  [01;34msrc[0m
-$ git branch
-  master
-* newbranch
-$ git branch testbranch          newerbranch
-$ git branch
-  master
-* newbranch
-  newerbranch
-$ git checkout newerbranch 
-Switched to branch 'newerbranch'
-$ git branch
-  master
-  newbranch
-* newerbranch
-$ git checkout newestbranch
-error: pathspec 'newestbranch' did not match any file(s) known to git.
-$ git checkout newestbranch -b
-error: switch `b' requires a value
-usage: git checkout [options] <branch>
-   or: git checkout [options] [<branch>] -- <file>...
-
-    -q, --quiet           suppress progress reporting
-    -b <branch>           create and checkout a new branch
-    -B <branch>           create/reset and checkout a branch
-    -l                    create reflog for new branch
-    --detach              detach the HEAD at named commit
-    -t, --track           set upstream info for new branch
-    --orphan <new branch>
-                          new unparented branch
-    -2, --ours            checkout our version for unmerged files
-    -3, --theirs          checkout their version for unmerged files
-    -f, --force           force checkout (throw away local modifications)
-    -m, --merge           perform a 3-way merge with the new branch
-    --overwrite-ignore    update ignored files (default)
-    --conflict <style>    conflict style (merge or diff3)
-    -p, --patch           select hunks interactively
-
-$ git checkout newestbranch -b   [1@-[1@b[1@ 
-Switched to a new branch 'newestbranch'
-$ git branch
-  master
-  newbranch
-  newerbranch
-* newestbranch
-$ clear
-[H[2J$ git remote add origin https://github.com/mikeizbicki/cs100test.git [A$ git remote add origin https://github.com/mikeizbicki/cs100test.gi[Kt
-$ git push -u origin master
-Username for 'https://github.com': mikeizbicki
-Password for 'https://mikeizbicki@github.com': 
-Counting objects: 18, done.
-Delta compression using up to 4 threads.
-Compressing objects:   7% (1/14)   Compressing objects:  14% (2/14)   Compressing objects:  21% (3/14)   Compressing objects:  28% (4/14)   Compressing objects:  35% (5/14)   Compressing objects:  42% (6/14)   Compressing objects:  50% (7/14)   Compressing objects:  57% (8/14)   Compressing objects:  64% (9/14)   Compressing objects:  71% (10/14)   Compressing objects:  78% (11/14)   Compressing objects:  85% (12/14)   Compressing objects:  92% (13/14)   Compressing objects: 100% (14/14)   Compressing objects: 100% (14/14), done.
-Writing objects:   5% (1/18)   Writing objects:  16% (3/18)   Writing objects:  22% (4/18)   Writing objects:  27% (5/18)   Writing objects:  33% (6/18)   Writing objects:  38% (7/18)   Writing objects:  44% (8/18)   Writing objects:  50% (9/18)   Writing objects:  55% (10/18)   Writing objects:  61% (11/18)   Writing objects:  66% (12/18)   Writing objects:  72% (13/18)   Writing objects:  77% (14/18)   Writing objects:  83% (15/18)   Writing objects:  88% (16/18)   Writing objects:  94% (17/18)   Writing objects: 100% (18/18)   Writing objects: 100% (18/18), 1.71 KiB, done.
-Total 18 (delta 3), reused 0 (delta 0)
-To https://github.com/mikeizbicki/cs100test.git
- * [new branch]      master -> master
-Branch master set up to track remote branch master from origin.
-$ git push origin newbranch 
-Counting objects: 6, done.
-Delta compression using up to 4 threads.
-Compressing objects:  25% (1/4)   Compressing objects:  50% (2/4)   Compressing objects:  75% (3/4)   Compressing objects: 100% (4/4)   Compressing objects: 100% (4/4), done.
-Writing objects:  20% (1/5)   Writing objects:  40% (2/5)   Writing objects:  60% (3/5)   Writing objects:  80% (4/5)   Writing objects: 100% (5/5)   Writing objects: 100% (5/5), 574 bytes, done.
-Total 5 (delta 0), reused 0 (delta 0)
-To https://github.com/mikeizbicki/cs100test.git
- * [new branch]      newbranch -> newbranch
-$ cd src/
-$ ls
-main.cpp
-$ vim main.cpp 
-[?1049h[?1h=[1;25r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[25;1H"main.cpp" 8L, 107C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
-[33m  2 using[m [32mnamespace[m std;
-[33m  3 
-  4 [m[32mint[m main()
-[33m  5 [m{
-[33m  6 [m    cout << [31m"hello world!"[m << endl;
-[33m  7 [m    [33mreturn[m [31m0[m;
-[33m  8 [m}
-[1m[34m~                                                                   [10;1H~                                                                   [11;1H~                                                                   [12;1H~                                                                   [13;1H~                                                                   [14;1H~                                                                   [15;1H~                                                                   [16;1H~                                                                   [17;1H~                                                                   [18;1H~                                                                   [19;1H~                                                                   [20;1H~                                                                   [21;1H~                                                                   [22;1H~                                                                   [23;1H~                                                                   [24;1H~                                                                   [m[25;51H1,1[11CAll]2;main.cpp (~/proj/ucr-cs100...ure-notes/gittest/src) - VIM]1;main.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[25;1H[K[25;1H:[?12l[?25hq[?25l]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes[25;1H[K[25;1H[?1l>[?12l[?25h[?1049l$ git pull origin newbrance   h 
-HEAD        master      newbranch   
-$ git pull origin newbranch 
-remote: Counting objects: 4, done.[K
-remote: Compressing objects:  33% (1/3)   [Kremote: Compressing objects:  66% (2/3)   [Kremote: Compressing objects: 100% (3/3)   [Kremote: Compressing objects: 100% (3/3), done.[K
-remote: Total 4 (delta 1), reused 0 (delta 0)[K
-Unpacking objects:  25% (1/4)   Unpacking objects:  50% (2/4)   Unpacking objects:  75% (3/4)   Unpacking objects: 100% (4/4)   Unpacking objects: 100% (4/4), done.
-From https://github.com/mikeizbicki/cs100test
- * branch            newbranch  -> FETCH_HEAD
-Updating c1d6715..9b5c88c
-Fast-forward
- src/main.cpp |    2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-$ (reverse-i-search)`': v': vim main.cpp [1@i': [1@m': [23P$ 
-[?1049h[?1h=[1;25r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[25;1H"main.cpp" 8L, 108C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
-[33m  2 using[m [32mnamespace[m std;
-[33m  3 
-  4 [m[32mint[m main()
-[33m  5 [m{
-[33m  6 [m    cout << [31m"hello [m[4m[31mgithub[m[31m!"[m << endl;
-[33m  7 [m    [33mreturn[m [31m0[m;
-[33m  8 [m}
-[1m[34m~                                                                   [10;1H~                                                                   [11;1H~                                                                   [12;1H~                                                                   [13;1H~                                                                   [14;1H~                                                                   [15;1H~                                                                   [16;1H~                                                                   [17;1H~                                                                   [18;1H~                                                                   [19;1H~                                                                   [20;1H~                                                                   [21;1H~                                                                   [22;1H~                                                                   [23;1H~                                                                   [24;1H~                                                                   [m[25;51H1,1[11CAll]2;main.cpp (~/proj/ucr-cs100...ure-notes/gittest/src) - VIM]1;main.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[27m[m[H[2J]2;main.cpp (~/proj/ucr-cs100/lecture-notes/gittest/src) - VIM]1;main.cpp[?25l[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
-[33m  2 using[m [32mnamespace[m std;
-[33m  3 
-  4 [m[32mint[m main()
-[33m  5 [m{
-[33m  6 [m    cout << [31m"hello [m[4m[31mgithub[m[31m!"[m << endl;
-[33m  7 [m    [33mreturn[m [31m0[m;
-[33m  8 [m}
-[1m[34m~                                                                                         [10;1H~                                                                                         [11;1H~                                                                                         [12;1H~                                                                                         [13;1H~                                                                                         [14;1H~                                                                                         [15;1H~                                                                                         [16;1H~                                                                                         [17;1H~                                                                                         [18;1H~                                                                                         [19;1H~                                                                                         [20;1H~                                                                                         [21;1H~                                                                                         [22;1H~                                                                                         [23;1H~                                                                                         [24;1H~                                                                                         [m[25;73H1,1[11CAll[1;5H[?12l[?25h[?25l[25;73H[K[25;1H:[?12l[?25hq[?25l]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes[25;1H[K[25;1H[?1l>[?12l[?25h[?1049l$ exit
-exit
-
-Script done on Wed Jan  7 20:13:06 2015

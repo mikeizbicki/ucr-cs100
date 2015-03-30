@@ -1,1140 +1,0 @@
-Script started on Mon Feb  2 15:37:08 2015
-bash: .profile: No such file or directory
-]0;user@userland: ~/proj/ucr-cs100/lecture-notesuser@userland:~/proj/ucr-cs100/lecture-notes$ [24P(reverse-i-search)`': e': exit[1@x': p': export PS1="$ "[1@o': ]0;user@userland: ~/proj/ucr-cs100/lecture-notesuser@userland:~/proj/ucr-cs100/lecture-notes$ export PS1="$ "
-$ clear
-[H[2J$ man [K$ man [K$ man [K$ man stat
-man: can't set the locale; make sure $LC_* and $LANG are correct
-[?1049h[?1h=STAT(1)                    User Commands                   STAT(1)[m
-[m
-[1mNAME[0m[m
-       stat - display file or file system status[m
-[m
-[1mSYNOPSIS[0m[m
-       [1mstat[0m [[4mOPTION[24m]... [4mFILE[24m...[m
-[m
-[1mDESCRIPTION[0m[m
-       Display file or file system status.[m
-[m
-       [1m-L[0m, [1m--dereference[0m[m
-              follow links[m
-[m
-       [1m-f[0m, [1m--file-system[0m[m
-              display file system status instead of file status[m
-[m
-       [1m-c[0m  [1m--format[0m=[4mFORMAT[24m[m
-              use  the  specified  FORMAT  instead of the default;[m
-              output a newline after each use of FORMAT[m
-[m
-       [1m--printf[0m=[4mFORMAT[24m[m
-              like [1m--format[0m, but interpret backslash escapes,  and[m
-              do  not output a mandatory trailing newline.  If you[m
-[7m Manual page stat(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ man stat[1@2[1@ 
-man: can't set the locale; make sure $LC_* and $LANG are correct
-[?1049h[?1h=STAT(2)              Linux Programmer's Manual             STAT(2)[m
-[m
-[1mNAME[0m[m
-       stat, fstat, lstat - get file status[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<sys/types.h>[0m[m
-       [1m#include[0m [1m<sys/stat.h>[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mint[0m [1mstat(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mstruct[0m [1mstat[0m [1m*[0m[4mbuf[24m[1m);[0m[m
-       [1mint[0m [1mfstat(int[0m [4mfd[24m[1m,[0m [1mstruct[0m [1mstat[0m [1m*[0m[4mbuf[24m[1m);[0m[m
-       [1mint[0m [1mlstat(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mstruct[0m [1mstat[0m [1m*[0m[4mbuf[24m[1m);[0m[m
-[m
-   Feature   Test   Macro   Requirements   for   glibc  (see  [1mfea-[0m[m
-   [1mture_test_macros[0m(7)):[m
-[m
-       [1mlstat[0m():[m
-           _BSD_SOURCE || _XOPEN_SOURCE >= 500 ||[m
-           _XOPEN_SOURCE && _XOPEN_SOURCE_EXTENDED[m
-           || /* Since glibc 2.10: */ _POSIX_C_SOURCE >= 200112L[m
-[m
-[1mDESCRIPTION[0m[m
-       These  functions  return information about a file.  No per-[m
-[7m Manual page stat(2) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       missions are required on the file itself, but--in the  case[m
-[7m Manual page stat(2) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       of  [1mstat[0m()  and  [1mlstat[0m()  -- execute (search) permission is[m
-[7m Manual page stat(2) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       required on all of the directories in [4mpath[24m that lead to the[m
-[7m Manual page stat(2) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       file.[m
-[7m Manual page stat(2) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page stat(2) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mstat[0m() stats the file pointed to by [4mpath[24m and fills in [4mbuf[24m.[m
-[7m Manual page stat(2) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page stat(2) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mlstat[0m()  is  identical  to [1mstat[0m(), except that if [4mpath[24m is a[m
-[7m Manual page stat(2) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       symbolic link, then the link itself  is  stat-ed,  not  the[m
-[7m Manual page stat(2) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       file that it refers to.[m
-[7m Manual page stat(2) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page stat(2) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mfstat[0m()  is identical to [1mstat[0m(), except that the file to be[m
-[7m Manual page stat(2) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       stat-ed is specified by the file descriptor [4mfd[24m.[m
-[7m Manual page stat(2) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page stat(2) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       All of these system calls return a  [4mstat[24m  structure,  which[m
-[7m Manual page stat(2) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       contains the following fields:[m
-[7m Manual page stat(2) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page stat(2) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           struct stat {[m
-[7m Manual page stat(2) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               dev_t     st_dev;     /* ID of device containing file[m [7m Manual page stat(2) line 22 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ pwd
-/home/user/proj/ucr-cs100/lecture-notes
-$ ls -l
-total 728
--rwxr-xr-x 1 user user  10302 Jan 28 16:32 [0m[01;32ma.out[0m
--rw-r--r-- 1 user user    355 Jan 28 15:56 bitwise-quiz.cpp
--rw-r--r-- 1 user user    597 Jan 14 16:49 exec.cpp
--rw-r--r-- 1 user user   1922 Jan 12 16:44 file1
--rw-r--r-- 1 user user   1940 Jan 12 16:49 file2
--rw-r--r-- 1 user user    493 Jan 26 16:32 fileio.cpp
-drwxr-xr-x 4 user user   4096 Jan  7 16:41 [01;34mgittest[0m
--rw-r--r-- 1 user user    114 Jan 21 16:38 hw0testcases
--rw-r--r-- 1 user user    597 Jan 28 13:16 lecture1
--rw-r--r-- 1 user user  64158 Jan  7 20:13 lecture2
--rw-r--r-- 1 user user 344064 Jan 28 13:16 lecture4
--rw-r--r-- 1 user user 229376 Jan 21 17:24 lecture5
--rw-r--r-- 1 user user   4096 Feb  2 15:45 lecture7
--rw-r--r-- 1 user user    257 Jan 26 16:37 ls.cpp
--rw-r--r-- 1 user user    750 Jan 28 16:29 macros.cpp
--rwxr-xr-x 1 user user   8718 Jan 14 16:21 [01;32mstupidprogram[0m
--rw-r--r-- 1 user user     32 Jan 26 16:30 test
--rw-r--r-- 1 user user    118 Jan  5 16:43 tmp
--rwxr-xr-x 1 user user   6866 Jan 14 16:02 [01;32mwillfail[0m
--rw-r--r-- 1 user user     29 Jan 14 16:02 willfail.cpp
--rwxr-xr-x 1 user user   6868 Jan 14 16:01 [01;32mwillitfail[0m
--rw-r--r-- 1 user user     29 Jan 14 16:01 willitfail.cpp
--rw-r--r-- 1 user user      0 Jan 26 16:39 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-$ ls  /bin/ls
-a.out		  lecture7
-bitwise-quiz.cpp  ls.cpp
-exec.cpp	  macros.cpp
-file1		  stupidprogram
-file2		  test
-fileio.cpp	  tmp
-gittest		  willfail
-hw0testcases	  willfail.cpp
-lecture1	  willitfail
-lecture2	  willitfail.cpp
-lecture4	  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-lecture5
-$ ls
-[0m[01;32ma.out[0m             lecture7
-bitwise-quiz.cpp  ls.cpp
-exec.cpp          macros.cpp
-file1             [01;32mstupidprogram[0m
-file2             test
-fileio.cpp        tmp
-[01;34mgittest[0m           [01;32mwillfail[0m
-hw0testcases      willfail.cpp
-lecture1          [01;32mwillitfail[0m
-lecture2          willitfail.cpp
-lecture4          xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-lecture5
-$ bin/ls  rshell      ls
-bash: bin/ls: No such file or directory
-$ clear
-[H[2J$ ls
-[0m[01;32ma.out[0m             lecture7
-bitwise-quiz.cpp  ls.cpp
-exec.cpp          macros.cpp
-file1             [01;32mstupidprogram[0m
-file2             test
-fileio.cpp        tmp
-[01;34mgittest[0m           [01;32mwillfail[0m
-hw0testcases      willfail.cpp
-lecture1          [01;32mwillitfail[0m
-lecture2          willitfail.cpp
-lecture4          xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-lecture5
-$ ls -l
-total 732
--rwxr-xr-x 1 user user  10302 Jan 28 16:32 [0m[01;32ma.out[0m
--rw-r--r-- 1 user user    355 Jan 28 15:56 bitwise-quiz.cpp
--rw-r--r-- 1 user user    597 Jan 14 16:49 exec.cpp
--rw-r--r-- 1 user user   1922 Jan 12 16:44 file1
--rw-r--r-- 1 user user   1940 Jan 12 16:49 file2
--rw-r--r-- 1 user user    493 Jan 26 16:32 fileio.cpp
-drwxr-xr-x 4 user user   4096 Jan  7 16:41 [01;34mgittest[0m
--rw-r--r-- 1 user user    114 Jan 21 16:38 hw0testcases
--rw-r--r-- 1 user user    597 Jan 28 13:16 lecture1
--rw-r--r-- 1 user user  64158 Jan  7 20:13 lecture2
--rw-r--r-- 1 user user 344064 Jan 28 13:16 lecture4
--rw-r--r-- 1 user user 229376 Jan 21 17:24 lecture5
--rw-r--r-- 1 user user   8192 Feb  2 15:55 lecture7
--rw-r--r-- 1 user user    257 Jan 26 16:37 ls.cpp
--rw-r--r-- 1 user user    750 Jan 28 16:29 macros.cpp
--rwxr-xr-x 1 user user   8718 Jan 14 16:21 [01;32mstupidprogram[0m
--rw-r--r-- 1 user user     32 Jan 26 16:30 test
--rw-r--r-- 1 user user    118 Jan  5 16:43 tmp
--rwxr-xr-x 1 user user   6866 Jan 14 16:02 [01;32mwillfail[0m
--rw-r--r-- 1 user user     29 Jan 14 16:02 willfail.cpp
--rwxr-xr-x 1 user user   6868 Jan 14 16:01 [01;32mwillitfail[0m
--rw-r--r-- 1 user user     29 Jan 14 16:01 willitfail.cpp
--rw-r--r-- 1 user user      0 Jan 26 16:39 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-$ man 2 stat
-man: can't set the locale; make sure $LC_* and $LANG are correct
-[?1049h[?1h=STAT(2)              Linux Programmer's Manual             STAT(2)[m
-[m
-[1mNAME[0m[m
-       stat, fstat, lstat - get file status[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<sys/types.h>[0m[m
-       [1m#include[0m [1m<sys/stat.h>[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mint[0m [1mstat(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mstruct[0m [1mstat[0m [1m*[0m[4mbuf[24m[1m);[0m[m
-       [1mint[0m [1mfstat(int[0m [4mfd[24m[1m,[0m [1mstruct[0m [1mstat[0m [1m*[0m[4mbuf[24m[1m);[0m[m
-       [1mint[0m [1mlstat(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mstruct[0m [1mstat[0m [1m*[0m[4mbuf[24m[1m);[0m[m
-[m
-   Feature   Test   Macro   Requirements   for   glibc  (see  [1mfea-[0m[m
-   [1mture_test_macros[0m(7)):[m
-[m
-       [1mlstat[0m():[m
-           _BSD_SOURCE || _XOPEN_SOURCE >= 500 ||[m
-           _XOPEN_SOURCE && _XOPEN_SOURCE_EXTENDED[m
-           || /* Since glibc 2.10: */ _POSIX_C_SOURCE >= 200112L[m
-[m
-[1mDESCRIPTION[0m[m
-       These  functions  return information about a file.  No per-[m
-[7m Manual page stat(2) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[K[[[K66[K~~[K       missions are required on the file itself, but--in the  case[m
-       of  [1mstat[0m()  and  [1mlstat[0m()  -- execute (search) permission is[m
-       required on all of the directories in [4mpath[24m that lead to the[m
-       file.[m
-[m
-       [1mstat[0m() stats the file pointed to by [4mpath[24m and fills in [4mbuf[24m.[m
-[m
-       [1mlstat[0m()  is  identical  to [1mstat[0m(), except that if [4mpath[24m is a[m
-       symbolic link, then the link itself  is  stat-ed,  not  the[m
-       file that it refers to.[m
-[m
-       [1mfstat[0m()  is identical to [1mstat[0m(), except that the file to be[m
-       stat-ed is specified by the file descriptor [4mfd[24m.[m
-[m
-       All of these system calls return a  [4mstat[24m  structure,  which[m
-       contains the following fields:[m
-[m
-           struct stat {[m
-               dev_t     st_dev;     /* ID of device containing file[m  */[m
-               ino_t     st_ino;     /* inode number */[m
-               mode_t    st_mode;    /* protection */[m
-               nlink_t   st_nlink;   /* number of hard links */[m
-               uid_t     st_uid;     /* user ID of owner */[m
-[7m Manual page stat(2) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               gid_t     st_gid;     /* group ID of owner */[m
-[7m Manual page stat(2) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               dev_t     st_rdev;    /* device ID (if special file) [m [7m Manual page stat(2) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K*/[m
-[7m Manual page stat(2) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               off_t     st_size;    /* total size, in bytes */[m
-[7m Manual page stat(2) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               blksize_t st_blksize; /* blocksize for file system I/[m [7m Manual page stat(2) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[KO */[m
-[7m Manual page stat(2) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               blkcnt_t  st_blocks;  /* number of 512B blocks alloca[m [7m Manual page stat(2) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[Kted */[m
-[7m Manual page stat(2) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               time_t    st_atime;   /* time of last access */[m
-[7m Manual page stat(2) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               time_t    st_mtime;   /* time of last modification */[m
-[7m Manual page stat(2) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K               time_t    st_ctime;   /* time of last status change *[m [7m Manual page stat(2) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K/[m
-[7m Manual page stat(2) line 39 (press h for help or q to quit)[27m[K[H[2J[H       stat-ed is specified by the file descriptor [4mfd[24m.[m
-[m
-       All of these system calls return a  [4mstat[24m  structure,  which[m
-       contains the following fields:[m
-[m
-           struct stat {[m
-               dev_t     st_dev;     /* ID of device containing file */[m
-               ino_t     st_ino;     /* inode number */[m
-               mode_t    st_mode;    /* protection */[m
-               nlink_t   st_nlink;   /* number of hard links */[m
-               uid_t     st_uid;     /* user ID of owner */[m
-               gid_t     st_gid;     /* group ID of owner */[m
-               dev_t     st_rdev;    /* device ID (if special file) */[m
-               off_t     st_size;    /* total size, in bytes */[m
-               blksize_t st_blksize; /* blocksize for file system I/O */[m
-               blkcnt_t  st_blocks;  /* number of 512B blocks allocated */[m
-               time_t    st_atime;   /* time of last access */[m
-               time_t    st_mtime;   /* time of last modification */[m
-               time_t    st_ctime;   /* time of last status change */[m
-           };[m
-[m
-       The  [4mst_dev[24m  field  describes the device on which this file[m
-       resides.  (The [1mmajor[0m(3) and [1mminor[0m(3) macros may  be  useful[m
-       to decompose the device ID in this field.)[m
-[m
-       The  [4mst_rdev[24m  field  describes  the  device  that this file[m
-       (inode) represents.[m
-[m
-[7m Manual page stat(2) line 39 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ ls    man 2 stat
-man: can't set the locale; make sure $LC_* and $LANG are correct
-[?1049h[?1h=STAT(2)                   Linux Programmer's Manual                  STAT(2)[m
-[m
-[1mNAME[0m[m
-       stat, fstat, lstat - get file status[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<sys/types.h>[0m[m
-       [1m#include[0m [1m<sys/stat.h>[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mint[0m [1mstat(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mstruct[0m [1mstat[0m [1m*[0m[4mbuf[24m[1m);[0m[m
-       [1mint[0m [1mfstat(int[0m [4mfd[24m[1m,[0m [1mstruct[0m [1mstat[0m [1m*[0m[4mbuf[24m[1m);[0m[m
-       [1mint[0m [1mlstat(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mstruct[0m [1mstat[0m [1m*[0m[4mbuf[24m[1m);[0m[m
-[m
-   Feature Test Macro Requirements for glibc (see [1mfeature_test_macros[0m(7)):[m
-[m
-       [1mlstat[0m():[m
-           _BSD_SOURCE || _XOPEN_SOURCE >= 500 ||[m
-           _XOPEN_SOURCE && _XOPEN_SOURCE_EXTENDED[m
-           || /* Since glibc 2.10: */ _POSIX_C_SOURCE >= 200112L[m
-[m
-[1mDESCRIPTION[0m[m
-       These functions return information about a file.  No permissions  are[m
-       required  on  the file itself, but--in the case of [1mstat[0m() and [1mlstat[0m()[m
-       -- execute (search) permission is required on all of the  directories[m
-       in [4mpath[24m that lead to the file.[m
-[m
-       [1mstat[0m() stats the file pointed to by [4mpath[24m and fills in [4mbuf[24m.[m
-[7m Manual page stat(2) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[K[[[K66[K~~[K[m
-       [1mlstat[0m()  is  identical  to  [1mstat[0m(), except that if [4mpath[24m is a symbolic[m
-       link, then the link itself is stat-ed, not the file  that  it  refers[m
-       to.[m
-[m
-       [1mfstat[0m() is identical to [1mstat[0m(), except that the file to be stat-ed is[m
-       specified by the file descriptor [4mfd[24m.[m
-[m
-       All of these system calls return a [4mstat[24m structure, which contains the[m
-       following fields:[m
-[m
-           struct stat {[m
-               dev_t     st_dev;     /* ID of device containing file */[m
-               ino_t     st_ino;     /* inode number */[m
-               mode_t    st_mode;    /* protection */[m
-               nlink_t   st_nlink;   /* number of hard links */[m
-               uid_t     st_uid;     /* user ID of owner */[m
-               gid_t     st_gid;     /* group ID of owner */[m
-               dev_t     st_rdev;    /* device ID (if special file) */[m
-               off_t     st_size;    /* total size, in bytes */[m
-               blksize_t st_blksize; /* blocksize for file system I/O */[m
-               blkcnt_t  st_blocks;  /* number of 512B blocks allocated */[m
-               time_t    st_atime;   /* time of last access */[m
-               time_t    st_mtime;   /* time of last modification */[m
-               time_t    st_ctime;   /* time of last status change */[m
-           };[m
-[m
-       The  [4mst_dev[24m  field  describes  the device on which this file resides.[m
-[7m Manual page stat(2) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[K[[[K66[K~~[K       (The [1mmajor[0m(3) and [1mminor[0m(3) macros may  be  useful  to  decompose  the[m
-       device ID in this field.)[m
-[m
-       The  [4mst_rdev[24m field describes the device that this file (inode) repre-[m
-       sents.[m
-[m
-       The [4mst_size[24m field gives the size of the file (if it is a regular file[m
-       or  a  symbolic  link)  in bytes.  The size of a symbolic link is the[m
-       length of the pathname it contains, without a terminating null byte.[m
-[m
-       The [4mst_blocks[24m field indicates the number of blocks allocated  to  the[m
-       file, 512-byte units.  (This may be smaller than [4mst_size[24m/512 when the[m
-       file has holes.)[m
-[m
-       The [4mst_blksize[24m field gives the "preferred"  blocksize  for  efficient[m
-       file  system  I/O.  (Writing to a file in smaller chunks may cause an[m
-       inefficient read-modify-rewrite.)[m
-[m
-       Not all of the Linux file systems implement all of the  time  fields.[m
-       Some  file system types allow mounting in such a way that file and/or[m
-       directory accesses do not cause an  update  of  the  [4mst_atime[24m  field.[m
-       (See  [4mnoatime[24m,  [4mnodiratime[24m,  and  [4mrelatime[24m  in  [1mmount[0m(8), and related[m
-       information in [1mmount[0m(2).)  In addition, [4mst_atime[24m is not updated if  a[m
-       file is opened with the [1mO_NOATIME[0m; see [1mopen[0m(2).[m
-[m
-       The  field  [4mst_atime[24m  is  changed  by  file accesses, for example, by[m
-       [1mexecve[0m(2), [1mmknod[0m(2), [1mpipe[0m(2), [1mutime[0m(2) and [1mread[0m(2) (of more than zero[m
-       bytes).   Other  routines,  like  [1mmmap[0m(2),  may  or  may  not  update[m
-[7m Manual page stat(2) line 59 (press h for help or q to quit)[27m[K[K [KESCESC[K[[[K55[K~~[K[HM       The  [4mst_dev[24m  field  describes  the device on which this file resides.[m
-[HM[m
-[HM           };[m
-[HM               time_t    st_ctime;   /* time of last status change */[m
-[HM               time_t    st_mtime;   /* time of last modification */[m
-[HM               time_t    st_atime;   /* time of last access */[m
-[HM               blkcnt_t  st_blocks;  /* number of 512B blocks allocated */[m
-[HM               blksize_t st_blksize; /* blocksize for file system I/O */[m
-[HM               off_t     st_size;    /* total size, in bytes */[m
-[HM               dev_t     st_rdev;    /* device ID (if special file) */[m
-[HM               gid_t     st_gid;     /* group ID of owner */[m
-[HM               uid_t     st_uid;     /* user ID of owner */[m
-[HM               nlink_t   st_nlink;   /* number of hard links */[m
-[HM               mode_t    st_mode;    /* protection */[m
-[HM               ino_t     st_ino;     /* inode number */[m
-[HM               dev_t     st_dev;     /* ID of device containing file */[m
-[HM           struct stat {[m
-[HM[m
-[HM       following fields:[m
-[HM       All of these system calls return a [4mstat[24m structure, which contains the[m
-[HM[m
-[HM       specified by the file descriptor [4mfd[24m.[m
-[HM       [1mfstat[0m() is identical to [1mstat[0m(), except that the file to be stat-ed is[m
-[HM[m
-[HM       to.[m
-[HM       link, then the link itself is stat-ed, not the file  that  it  refers[m
-[HM       [1mlstat[0m()  is  identical  to  [1mstat[0m(), except that if [4mpath[24m is a symbolic[m
-[HM[m
-[29;1H[K[7m Manual page stat(2) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[K[[[K66[K~~[K       (The [1mmajor[0m(3) and [1mminor[0m(3) macros may  be  useful  to  decompose  the[m
-       device ID in this field.)[m
-[m
-       The  [4mst_rdev[24m field describes the device that this file (inode) repre-[m
-       sents.[m
-[m
-       The [4mst_size[24m field gives the size of the file (if it is a regular file[m
-       or  a  symbolic  link)  in bytes.  The size of a symbolic link is the[m
-       length of the pathname it contains, without a terminating null byte.[m
-[m
-       The [4mst_blocks[24m field indicates the number of blocks allocated  to  the[m
-       file, 512-byte units.  (This may be smaller than [4mst_size[24m/512 when the[m
-       file has holes.)[m
-[m
-       The [4mst_blksize[24m field gives the "preferred"  blocksize  for  efficient[m
-       file  system  I/O.  (Writing to a file in smaller chunks may cause an[m
-       inefficient read-modify-rewrite.)[m
-[m
-       Not all of the Linux file systems implement all of the  time  fields.[m
-       Some  file system types allow mounting in such a way that file and/or[m
-       directory accesses do not cause an  update  of  the  [4mst_atime[24m  field.[m
-       (See  [4mnoatime[24m,  [4mnodiratime[24m,  and  [4mrelatime[24m  in  [1mmount[0m(8), and related[m
-       information in [1mmount[0m(2).)  In addition, [4mst_atime[24m is not updated if  a[m
-       file is opened with the [1mO_NOATIME[0m; see [1mopen[0m(2).[m
-[m
-       The  field  [4mst_atime[24m  is  changed  by  file accesses, for example, by[m
-       [1mexecve[0m(2), [1mmknod[0m(2), [1mpipe[0m(2), [1mutime[0m(2) and [1mread[0m(2) (of more than zero[m
-       bytes).   Other  routines,  like  [1mmmap[0m(2),  may  or  may  not  update[m
-[7m Manual page stat(2) line 59 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [4mst_atime[24m.[m
-[7m Manual page stat(2) line 60 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page stat(2) line 61 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The field [4mst_mtime[24m is changed by file modifications, for example,  by[m
-[7m Manual page stat(2) line 62 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mmknod[0m(2),  [1mtruncate[0m(2),  [1mutime[0m(2)  and  [1mwrite[0m(2)  (of  more than zero[m
-[7m Manual page stat(2) line 63 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       bytes).  Moreover, [4mst_mtime[24m of a directory is changed by the creation[m
-[7m Manual page stat(2) line 64 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       or  deletion  of  files in that directory.  The [4mst_mtime[24m field is [4mnot[24m[m
-[7m Manual page stat(2) line 65 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       changed for changes in owner, group, hard link count, or mode.[m
-[7m Manual page stat(2) line 66 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page stat(2) line 67 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The field [4mst_ctime[24m is changed by writing or by setting inode informa-[m
-[7m Manual page stat(2) line 68 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       tion (i.e., owner, group, link count, mode, etc.).[m
-[7m Manual page stat(2) line 69 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page stat(2) line 70 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The  following  POSIX macros are defined to check the file type using[m
-[7m Manual page stat(2) line 71 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       the [4mst_mode[24m field:[m
-[7m Manual page stat(2) line 72 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page stat(2) line 73 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_ISREG[0m(m)  is it a regular file?[m
-[7m Manual page stat(2) line 74 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page stat(2) line 75 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_ISDIR[0m(m)  directory?[m
-[7m Manual page stat(2) line 76 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page stat(2) line 77 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_ISCHR[0m(m)  character device?[m
-[7m Manual page stat(2) line 78 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page stat(2) line 79 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_ISBLK[0m(m)  block device?[m
-[7m Manual page stat(2) line 80 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page stat(2) line 81 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_ISFIFO[0m(m) FIFO (named pipe)?[m
-[7m Manual page stat(2) line 82 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page stat(2) line 83 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_ISLNK[0m(m)  symbolic link?  (Not in POSIX.1-1996.)[m
-[7m Manual page stat(2) line 84 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page stat(2) line 85 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_ISSOCK[0m(m) socket?  (Not in POSIX.1-1996.)[m
-[7m Manual page stat(2) line 86 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page stat(2) line 87 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The following flags are defined for the [4mst_mode[24m field:[m
-[7m Manual page stat(2) line 88 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page stat(2) line 89 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_IFMT[0m     0170000   bit mask for the file type bit fields[m
-[7m Manual page stat(2) line 90 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_IFSOCK[0m   0140000   socket[m
-[7m Manual page stat(2) line 91 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_IFLNK[0m    0120000   symbolic link[m
-[7m Manual page stat(2) line 92 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_IFREG[0m    0100000   regular file[m
-[7m Manual page stat(2) line 93 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_IFBLK[0m    0060000   block device[m
-[7m Manual page stat(2) line 94 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_IFDIR[0m    0040000   directory[m
-[7m Manual page stat(2) line 95 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_IFCHR[0m    0020000   character device[m
-[7m Manual page stat(2) line 96 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_IFIFO[0m    0010000   FIFO[m
-[7m Manual page stat(2) line 97 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_ISUID[0m    0004000   set UID bit[m
-[7m Manual page stat(2) line 98 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_ISGID[0m    0002000   set-group-ID bit (see below)[m
-[7m Manual page stat(2) line 99 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_ISVTX[0m    0001000   sticky bit (see below)[m
-[7m Manual page stat(2) line 100 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_IRWXU[0m    00700     mask for file owner permissions[m
-[7m Manual page stat(2) line 101 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_IRUSR[0m    00400     owner has read permission[m
-[7m Manual page stat(2) line 102 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_IWUSR[0m    00200     owner has write permission[m
-[7m Manual page stat(2) line 103 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_IXUSR[0m    00100     owner has execute permission[m
-[7m Manual page stat(2) line 104 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
-[7m Manual page stat(2) line 105 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_IRWXG[0m    00070     mask for group permissions[m
-[7m Manual page stat(2) line 106 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_IRGRP[0m    00040     group has read permission[m
-[7m Manual page stat(2) line 107 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_IWGRP[0m    00020     group has write permission[m
-[7m Manual page stat(2) line 108 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_IXGRP[0m    00010     group has execute permission[m
-[7m Manual page stat(2) line 109 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_IRWXO[0m    00007     mask for permissions for others (not in group)[m
-[7m Manual page stat(2) line 110 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_IROTH[0m    00004     others have read permission[m
-[7m Manual page stat(2) line 111 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K           [1mS_IWOTH[0m    00002     others have write permission[m
-[7m Manual page stat(2) line 112 (press h for help or q to quit)[27m[K[K [KESCESC[KESCESC[K[7m Manual page stat(2) line 112 (press h for help or q to quit)[27m[K[K [K::[Kqq[K[?1l>[?1049l$ 
-$ ckea   lear
-[H[2J$ [K$ vim stat2.cpp
-[?1049h[?1h=[1;25r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[25;1H"stat2.cpp" [New File][>c[1;1H[33m  1 [m
-[1m[34m~                                                                   [3;1H~                                                                   [4;1H~                                                                   [5;1H~                                                                   [6;1H~                                                                   [7;1H~                                                                   [8;1H~                                                                   [9;1H~                                                                   [10;1H~                                                                   [11;1H~                                                                   [12;1H~                                                                   [13;1H~                                                                   [14;1H~                                                                   [15;1H~                                                                   [16;1H~                                                                   [17;1H~                                                                   [18;1H~                                                                   [19;1H~                                                                   [20;1H~                                                                   [21;1H~                                                                   [22;1H~                                                                   [23;1H~                                                                   [24;1H~                                                                   [m[25;51H0,0-1[9CAll]2;stat2.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[25;1H[1m-- INSERT --[m[25;13H[K[25;51H0,1[11CAll[1;5H[?12l[?25h[?25l#[25;51H1,2]2;stat2.cpp + (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[1;6H[?12l[?25h[?25li[25;53H3[1;7H[?12l[?25h[?25ln[25;53H4[1;8H[?12l[?25h[?25lc[25;53H5[1;9H[?12l[?25h[?25ll[25;53H6[1;10H[?12l[?25h[?25lu[25;53H7[1;11H[?12l[?25h[?25ld[25;53H8[1;12H[?12l[?25h[?25le[25;53H9[1;13H[?12l[?25h[?25l[1;5H[35m#include<[m[25;53H10[1;14H[?12l[?25h[?25l[1;5H#include[1;13H[K[25;53H9 [1;13H[?12l[?25h[?25l[25;53H10[1;14H[?12l[?25h[?25l[1;5H[35m#include <[m[25;54H1[1;15H[?12l[?25h[?25li[25;54H2[1;16H[?12l[?25h[?25lo[25;54H3[1;17H[?12l[?25h[?25ls[25;54H4[1;18H[?12l[?25h[?25lt[25;54H5[1;19H[?12l[?25h[?25lr[25;54H6[1;20H[?12l[?25h[?25le[25;54H7[1;21H[?12l[?25h[?25la[25;54H8[1;22H[?12l[?25h[?25lm[25;54H9[1;23H[?12l[?25h[?25l[1;14H[31m<iostream>[m[25;53H20[1;24H[?12l[?25h[?25l
-[33m  2 [m[2;5H[K[25;51H2,1 [2;5H[?12l[?25h[?25lu[25;53H2[2;6H[?12l[?25h[?25ls[25;53H3[2;7H[?12l[?25h[?25li[25;53H4[2;8H[?12l[?25h[?25ln[25;53H5[2;9H[?12l[?25h[?25l[33musing[m[25;53H6[2;10H[?12l[?25h[?25l[25;53H7[2;11H[?12l[?25h[?25ln[25;53H8[2;12H[?12l[?25h[?25la[25;53H9[2;13H[?12l[?25h[?25lm[25;53H10[2;14H[?12l[?25h[?25le[25;54H1[2;15H[?12l[?25h[?25ls[25;54H2[2;16H[?12l[?25h[?25lp[25;54H3[2;17H[?12l[?25h[?25la[25;54H4[2;18H[?12l[?25h[?25lc[25;54H5[2;19H[?12l[?25h[?25l[2;11H[32mnamespace[m[25;54H6[2;20H[?12l[?25h[?25l[25;54H7[2;21H[?12l[?25h[?25ls[25;54H8[2;22H[?12l[?25h[?25lt[25;54H9[2;23H[?12l[?25h[?25ld[25;53H20[2;24H[?12l[?25h[?25l;[25;54H1[2;25H[?12l[?25h[?25l
-[33m  3 [m[3;5H[K[25;51H3,1 [3;5H[?12l[?25h[?25l
-[33m  4 [m[4;5H[K[25;51H4[4;5H[?12l[?25h[?25li[25;53H2[4;6H[?12l[?25h[?25ln[25;53H3[4;7H[?12l[?25h[?25l[32mint[m[25;53H4[4;8H[?12l[?25h[?25l[25;53H5[4;9H[?12l[?25h[?25lm[25;53H6[4;10H[?12l[?25h[?25la[25;53H7[4;11H[?12l[?25h[?25li[25;53H8[4;12H[?12l[?25h[?25ln[25;53H9[4;13H[?12l[?25h[?25l([25;51H[K[25;51H4,10[10CAll[4;14H[?12l[?25h[?25l)[46m()[m[25;51H[K[25;51H4,11[10CAll[4;15H[?12l[?25h[?25l{()[25;51H[K[25;51H4,12[10CAll[4;16H[?12l[?25h[?25l[4;15H[K[4;13H[46m()[m[25;51H[K[25;51H4,11[10CAll[4;15H[?12l[?25h[?25l
-[33m  5 [m[5;5H[K[4;13H()[25;51H5,1 [5;5H[?12l[?25h[?25l{[25;51H[K[25;51H5,2[11CAll[5;6H[?12l[?25h[?25l
-[33m  6 [m    [6;9H[K[25;51H6,5[6;9H[?12l[?25h[?25l}[5;5H[46m{[6;5H}[m[25;51H[K[25;51H6,2[11CAll[6;6H[?12l[?25h[?25l[25;51H[K[25;51H5,2[11CAll[5;6H[?12l[?25h[?25l[6;5H[46m [m
-[33m  7 [m}[7;6H[K[5;5H{[6;5H [25;51H6,5[6;9H[?12l[?25h[?25ls[25;53H6[6;10H[?12l[?25h[?25lt[25;53H7[6;11H[?12l[?25h[?25la[25;53H8[6;12H[?12l[?25h[?25lt[25;53H9[6;13H[?12l[?25h[?25l[5;5H[46m{[7;5H}[m[25;51H[K[25;51H5,2[11CAll[5;6H[?12l[?25h[?25l{[7;5H}[25;51H6,9[6;13H[?12l[?25h[?25l[25;53H5[6;9H[?12l[?25h[?25lsstat[25;53H6[6;10H[?12l[?25h[?25ltstat[25;53H7[6;11H[?12l[?25h[?25lrstat[25;53H8[6;12H[?12l[?25h[?25lustat[25;53H9[6;13H[?12l[?25h[?25lcstat[25;53H10[6;14H[?12l[?25h[?25ltstat[25;54H1[6;15H[?12l[?25h[?25l[32mstruct[m stat[25;54H2[6;16H[?12l[?25h[?25l[25;54H6[6;20H[?12l[?25h[?25l[25;54H7[6;21H[?12l[?25h[?25ls[25;54H8[6;22H[?12l[?25h[?25l;[25;54H9[6;23H[?12l[?25h[?25l[7;5H 
-[33m  8 [m}[8;6H[K[25;51H7,5 [7;9H[?12l[?25h[?25ls[25;53H6[7;10H[?12l[?25h[?25lt[25;53H7[7;11H[?12l[?25h[?25la[25;53H8[7;12H[?12l[?25h[?25lt[25;53H9[7;13H[?12l[?25h[?25l([25;51H[K[25;51H7,10[10CAll[7;14H[?12l[?25h[?25l[31m"[8;5H}[m[25;54H1[7;15H[?12l[?25h[?25l[31ms[m[25;54H2[7;16H[?12l[?25h[?25l[31mt[m[25;54H3[7;17H[?12l[?25h[?25l[31ma[m[25;54H4[7;18H[?12l[?25h[?25l[31mt[m[25;54H5[7;19H[?12l[?25h[?25l[31m2[m[25;54H6[7;20H[?12l[?25h[?25l[4m[31mstat2[m[31m.[m[25;54H7[7;21H[?12l[?25h[?25l[31mc[m[25;54H8[7;22H[?12l[?25h[?25l[31mp[m[25;54H9[7;23H[?12l[?25h[?25l[31mp[m[25;53H20[7;24H[?12l[?25h[?25l[4m[31mcpp[m[31m"[m[8;5H}[25;54H1[7;25H[?12l[?25h[?25l,[25;54H2[7;26H[?12l[?25h[?25l&[25;54H3[7;27H[?12l[?25h[?25ls[25;54H4[7;28H[?12l[?25h[?25l;[25;54H5[7;29H[?12l[?25h[?25l[8;5H 
-[33m  9 [m}[9;6H[K[25;51H8,5 [8;9H[?12l[?25h[?25l[25;51H7[7;9H[?12l[?25h[?25l[25;51H6[6;9H[?12l[?25h[?25l[25;53H19[6;23H[?12l[?25h[?25l[25;51H7,25[7;29H[?12l[?25h[?25l[25;54H4[7;28H[?12l[?25h[?25l);[7;13H[46m([14C)[m[25;51H[K[25;51H7,25[10CAll[7;29H[?12l[?25h[?25l[7;13H([14C)[25;51H8,1 [8;5H[?12l[?25h[?25l[25;53H5[8;9H[?12l[?25h[?25lc[25;53H6[8;10H[?12l[?25h[?25lo[25;53H7[8;11H[?12l[?25h[?25lu[25;53H8[8;12H[?12l[?25h[?25lt[25;53H9[8;13H[?12l[?25h[?25l[25;53H10[8;14H[?12l[?25h[?25l<[25;54H1[8;15H[?12l[?25h[?25l<[25;54H2[8;16H[?12l[?25h[?25l[25;54H3[8;17H[?12l[?25h[?25ls[25;54H4[8;18H[?12l[?25h[?25l.[25;54H5[8;19H[?12l[?25h[?25ls[25;54H6[8;20H[?12l[?25h[?25lt[25;54H7[8;21H[?12l[?25h[?25l_[25;54H8[8;22H[?12l[?25h[?25lm[25;54H9[8;23H[?12l[?25h[?25lo[25;53H20[8;24H[?12l[?25h[?25ld[25;54H1[8;25H[?12l[?25h[?25le[25;54H2[8;26H[?12l[?25h[?25l[25;54H3[8;27H[?12l[?25h[?25l<[25;54H4[8;28H[?12l[?25h[?25l<[25;54H5[8;29H[?12l[?25h[?25l[25;54H6[8;30H[?12l[?25h[?25le[25;54H7[8;31H[?12l[?25h[?25ln[25;54H8[8;32H[?12l[?25h[?25ld[25;54H9[8;33H[?12l[?25h[?25ll[25;53H30[8;34H[?12l[?25h[?25l;[25;54H1[8;35H[?12l[?25h[25;1H[K[8;34H[?25l[25;51H8,30[10CAll[8;34H[?12l[?25h[?25l[25;51H[K[25;1H:[?12l[?25hw[?25l"stat2.cpp" [New] 9L, 133C written[16C8,30[10CAll]2;stat2.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[25;51H[K[25;51H8,30[10CAll[8;34H[?12l[?25h[?25l[25;51H7,25[7;29H[?12l[?25h[?25l[25;51H6,18[6;22H[?12l[?25h[?25l[5;5H[46m{[9;5H}[m[25;51H5,1 [5;5H[?12l[?25h[?25l[4;13H[46m()[m[5;5H{[9;5H}[25;51H4,10[4;14H[?12l[?25h[?25l()[25;51H3,0-1[3;5H[?12l[?25h[?25l[25;51H2,20 [2;24H[?12l[?25h[?25l[25;51H1,19[1;23H[?12l[?25h[25;1H
-[?1l>[?1049l]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes
-[1]+  Stopped                 vim stat2.cpp
-$ man 2 stat
-man: can't set the locale; make sure $LC_* and $LANG are correct
-[?1049h[?1h=STAT(2)              Linux Programmer's Manual             STAT(2)[m
-[m
-[1mNAME[0m[m
-       stat, fstat, lstat - get file status[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<sys/types.h>[0m[m
-       [1m#include[0m [1m<sys/stat.h>[0m[m
-       [1m#include[0m [1m<unistd.h>[0m[m
-[m
-       [1mint[0m [1mstat(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mstruct[0m [1mstat[0m [1m*[0m[4mbuf[24m[1m);[0m[m
-       [1mint[0m [1mfstat(int[0m [4mfd[24m[1m,[0m [1mstruct[0m [1mstat[0m [1m*[0m[4mbuf[24m[1m);[0m[m
-       [1mint[0m [1mlstat(const[0m [1mchar[0m [1m*[0m[4mpath[24m[1m,[0m [1mstruct[0m [1mstat[0m [1m*[0m[4mbuf[24m[1m);[0m[m
-[m
-   Feature   Test   Macro   Requirements   for   glibc  (see  [1mfea-[0m[m
-   [1mture_test_macros[0m(7)):[m
-[m
-       [1mlstat[0m():[m
-           _BSD_SOURCE || _XOPEN_SOURCE >= 500 ||[m
-           _XOPEN_SOURCE && _XOPEN_SOURCE_EXTENDED[m
-           || /* Since glibc 2.10: */ _POSIX_C_SOURCE >= 200112L[m
-[m
-[1mDESCRIPTION[0m[m
-       These  functions  return information about a file.  No per-[m
-[7m Manual page stat(2) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ fg
-vim stat2.cpp
-]2;stat2.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[?1049h[?1h=[?12;25h[?12l[?25h[27m[m[H[2J[?25l[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
-[33m  2 using[m [32mnamespace[m std;
-[33m  3 
-  4 [m[32mint[m main()
-[33m  5 [m{
-[33m  6 [m    [32mstruct[m stat s;
-[33m  7 [m    stat([31m"[m[4m[31mstat2[m[31m.[m[4m[31mcpp[m[31m"[m,&s);
-[33m  8 [m    cout << s.st_mode << endl;
-[33m  9 [m}
-[1m[34m~                                                                   [11;1H~                                                                   [12;1H~                                                                   [13;1H~                                                                   [14;1H~                                                                   [15;1H~                                                                   [16;1H~                                                                   [17;1H~                                                                   [18;1H~                                                                   [19;1H~                                                                   [20;1H~                                                                   [21;1H~                                                                   [22;1H~                                                                   [23;1H~                                                                   [24;1H~                                                                   [m[25;51H1,19[10CAll[1;23H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;51H[K[25;51H2,1[11CTop[2;5H[K[3;5H[33musing[m [32mnamespace[m std;[4;5H[K[5;5H[32mint[m main()[6;5H{[6;9H[K[7;9H[32mstruct[m stat s;[7;23H[K[8;9Hstat([31m"[m[4m[31mstat2[m[31m.[m[4m[31mcpp[m[31m"[m,&s);[8;30H[K[9;5H    cout << s.st_mode << endl;
-[33m 10 [m}[10;6H[K]2;stat2.cpp + (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[2;5H[?12l[?25h[25;1H[K[2;5H[?25l[25;51H2,0-1[9CAll[2;5H[?12l[?25h[?25l[35m       #include [m[31m<sys/types.h>[m[3;5H[35m       #include [m[31m<sys/stat.h>[m[4;5H[35m       #include [m[31m<unistd.h>[m[5;5H[33musing[m [32mnamespace[m std;[6;5H[K[7;5H[32mint[m main()[7;16H[K[8;5H{[8;9H[K[9;9H[32mstruct[m stat s;[9;23H[K[10;5H    stat([31m"[m[4m[31mstat2[m[31m.[m[4m[31mcpp[m[31m"[m,&s);
-[33m 11 [m    cout << s.st_mode << endl;[11;35H[K[12;1H[33m 12 [m}[12;6H[K[25;53H1  [2;5H[?12l[?25h[?25l[1C[7m[35m      #include [m[7m[31m<sys/types.h>[m[7m [m[25;1H[1m-- VISUAL LINE --[m[25;51H[K[25;51H2,1[11CAll[2;5H[?12l[?25h[?25l[7m[35m [3;6H      #include [m[7m[31m<sys/stat.h>[m[7m [m[25;51H3[3;5H[?12l[?25h[?25l[7m[35m [4;6H      #include [m[7m[31m<unistd.h>[m[7m [m[25;51H4[4;5H[?12l[?25h[?25l[25;1H3 lines <ed 2 times[25;51H[K[2;5H[35m#include [m[31m<sys/types.h>[m[2;27H[K[3;5H[35m#include [m[31m<sys/stat.h>[m[3;26H[K[4;5H[35m#include [m[31m<unistd.h>[m[4;24H[K[25;51H2,1[11CAll[2;5H[?12l[?25h[?25l[25;1H[K[25;1H:[?12l[?25hw[?25l"stat2.cpp" 12L, 198C written[21C2,1[11CAll]2;stat2.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[25;51H[K[25;51H2,1[11CAll[2;5H[?12l[?25h[?25l[25;51H3[3;5H[?12l[?25h[?25l[25;51H4[4;5H[?12l[?25h[?25l[25;51H5[5;5H[?12l[?25h[?25l[25;51H6,0-1[6;5H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;13H[K[25;51H7,1[11CTop[7;5H[K[8;5H[32mint[m main()[9;5H{[9;9H[K[10;9H[32mstruct[m stat s;[10;23H[K[11;9Hstat([31m"[m[4m[31mstat2[m[31m.[m[4m[31mcpp[m[31m"[m,&s);[11;30H[K[12;5H    cout << s.st_mode << endl;
-[33m 13 [m}[13;6H[K]2;stat2.cpp + (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[7;5H[?12l[?25h[?25l[25;51H6[13CAll[6;5H[?12l[?25h[?25l[8;5H[K[9;5H[32mint[m main()[10;5H{[10;9H[K[11;9H[32mstruct[m stat s;[11;23H[K[12;9Hstat([31m"[m[4m[31mstat2[m[31m.[m[4m[31mcpp[m[31m"[m,&s);[12;30H[K[13;5H    cout << s.st_mode << endl;
-[33m 14 [m}[14;6H[K[25;51H7[7;5H[?12l[?25h[?25l[31m"[m[25;53H2[7;6H[?12l[?25h[?25l[31m*[m[25;53H3[7;7H[?12l[?25h[?25l[31mp[m[25;53H4[7;8H[?12l[?25h[?25l[4m[31mp[m[25;51H8,1[8;5H[?12l[?25h[?25l[9;5H[K[10;5H[32mint[m main()[11;5H{[11;9H[K[12;9H[32mstruct[m stat s;[12;23H[K[13;9Hstat([31m"[m[4m[31mstat2[m[31m.[m[4m[31mcpp[m[31m"[m,&s);[13;30H[K[14;5H    cout << s.st_mode << endl;
-[33m 15 [m}[15;6H[K[25;51H9[9;5H[?12l[?25h[?25l[25;51H8[8;5H[?12l[?25h[?25l[31m"[m[25;53H2[8;6H[?12l[?25h[?25l[31m*[m[25;53H3[8;7H[?12l[?25h[?25l[31my[m[25;53H4[8;8H[?12l[?25h[25;1H[K[8;7H[?25l[4m[31my[m[25;51H8,3[11CAll[8;7H[?12l[?25h[?25l[7m[31m"*[m[1C[7m [m[25;1H[1m-- VISUAL LINE --[m[25;51H[K[25;51H8,3[11CAll[8;7H[?12l[?25h[?25l[7;5H[7m[31m"*[m[1C[7m [m[8;7H[4m[7m[31my[m[25;51H7[7;7H[?12l[?25h[?25l[4m[7m[31mp[m[25;51H6,0-1[6;5H[?12l[?25h[?25l[25;1H3 fewer lines[1mE[m[25;14H[K[7;5H[32mint[m main()[8;5H{[8;6H[K[9;9H[32mstruct[m stat s;[10;5H    stat([31m"[m[4m[31mstat2[m[31m.[m[4m[31mcpp[m[31m"[m,&s);[11;5H    cout << s.st_mode << endl;[12;5H}[12;9H[K[13;1H[1m[34m~                                                                   [14;1H~                                                                   [15;1H~                                                                   [m[25;51H6,0-1[9CAll[25;51H[K[25;51H6,0-1[9CAll[6;5H[?12l[?25h[?25l[?12l[?25h[?25l[25;51H7,1  [7;5H[?12l[?25h[?25l[25;53H5[7;9H[?12l[?25h[?25l[25;53H1[7;5H[?12l[?25h[?25l[8;5H[46m{[12;5H}[m[25;51H8[8;5H[?12l[?25h[?25l{[12;5H}[25;51H9[9;5H[?12l[?25h[?25l[25;53H5[9;9H[?12l[?25h[?25l[25;51H10,5[10;9H[?12l[?25h[?25l[25;52H1[11;9H[?12l[?25h[?25l[25;1H[K[25;1H:[?12l[?25hwq[?25l"stat2.cpp" 12L, 198C written]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes
-[?1l>[?12l[?25h[?1049l$ g++ stat2.cpp 
-$ ./a.out 
-33188
-$ ./a.out $ g++ stat2.cpp $ fg[Kg++ stat2.cpp $ [6P./a.out $ [K./a.out $ g++ stat2.cpp $ fg[Kman 2 stat$ fg[K
-bash: fg: current: no such job
-$ (reverse-i-search)`': v': vim stat2.cpp[1@i': [1@m': [23P$ 
-[?1049h[?1h=[1;25r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[25;1H"stat2.cpp" 12L, 198C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
-[33m  2 [m[35m#include [m[31m<sys/types.h>[m
-[33m  3 [m[35m#include [m[31m<sys/stat.h>[m
-[33m  4 [m[35m#include [m[31m<unistd.h>[m
-[33m  5 using[m [32mnamespace[m std;
-[33m  6 
-  7 [m[32mint[m main()
-[33m  8 [m{
-[33m  9 [m    [32mstruct[m stat s;
-[33m 10 [m    stat([31m"[m[4m[31mstat2[m[31m.[m[4m[31mcpp[m[31m"[m,&s);
-[33m 11 [m    cout << s.st_mode << endl;
-[33m 12 [m}
-[1m[34m~                                                                   [14;1H~                                                                   [15;1H~                                                                   [16;1H~                                                                   [17;1H~                                                                   [18;1H~                                                                   [19;1H~                                                                   [20;1H~                                                                   [21;1H~                                                                   [22;1H~                                                                   [23;1H~                                                                   [24;1H~                                                                   [m[25;51H1,1[11CAll]2;stat2.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[25;51H2[2;5H[?12l[?25h[?25l[25;51H3[3;5H[?12l[?25h[?25l[25;51H4[4;5H[?12l[?25h[?25l[25;51H5[5;5H[?12l[?25h[?25l[25;51H6,0-1[6;5H[?12l[?25h[?25l[25;51H7,1  [7;5H[?12l[?25h[?25l[8;5H[46m{[12;5H}[m[25;51H8[8;5H[?12l[?25h[?25l{[12;5H}[25;51H9[9;5H[?12l[?25h[?25l[25;51H10,1[10;5H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;13H[K[25;51H11,5[10CTop[11;9H[K[12;5H    cout << s.st_mode << endl;
-[33m 13 [m}[13;6H[K]2;stat2.cpp + (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[11;9H[?12l[?25h[?25lc[25;54H6[10CAll[11;10H[?12l[?25h[?25lo[25;54H7[11;11H[?12l[?25h[?25lu[25;54H8[11;12H[?12l[?25h[?25lt[25;54H9[11;13H[?12l[?25h[?25l[25;54H10[11;14H[?12l[?25h[?25l<[25;55H1[11;15H[?12l[?25h[?25l<[25;55H2[11;16H[?12l[?25h[?25l[25;55H3[11;17H[?12l[?25h[?25ls[25;55H4[11;18H[?12l[?25h[?25lt[25;55H5[11;19H[?12l[?25h[?25l[11;18H[K[25;55H4[11;18H[?12l[?25h[?25l[11;17H[K[25;55H3[11;17H[?12l[?25h[?25lh[25;55H4[11;18H[?12l[?25h[?25le[25;55H5[11;19H[?12l[?25h[?25lx[25;55H6[11;20H[?12l[?25h[?25l[25;55H7[11;21H[?12l[?25h[?25l<[25;55H8[11;22H[?12l[?25h[?25l<[25;55H9[11;23H[?12l[?25h[?25l[11;22H[K[25;55H8[11;22H[?12l[?25h[?25l[11;21H[K[25;55H7[11;21H[?12l[?25h[?25l[25;55H6[11;20H[?12l[?25h[?25l;[25;55H7[11;21H[?12l[?25h[25;1H[K[11;20H[?25l[25;51H11,16[9CAll[11;20H[?12l[?25h[?25l[25;51H[K[25;1H:[?12l[?25hw[?25l[25;1H[K[25;51H11,16[9CAll[11;20H[?12l[?25h[?25l[25;55H5[11;19H[?12l[?25h[?25l[25;55H4[11;18H[?12l[?25h[?25l[25;55H3[11;17H[?12l[?25h[?25l;[11;18H[K[11;17H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;51H[K[25;51H11,13[9CAll[11;17H[?12l[?25h[?25lo;[25;55H4[11;18H[?12l[?25h[?25lc;[25;55H5[11;19H[?12l[?25h[?25lt;[25;55H6[11;20H[?12l[?25h[25;1H[K[11;19H[?25l[25;51H11,15[9CAll[11;19H[?12l[?25h[?25l[25;51H[K[25;1H:[?12l[?25hwq[?25l"stat2.cpp" 13L, 215C written]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes
-[?1l>[?12l[?25h[?1049l$ vim stat2.cpp$ fg[K./a.out $ g++ stat2.cpp && ./a.out 
-100644
-$ g++ stat2.cpp && ./a.out $ [12Pvim stat2.cpp$ g++ stat2.cpp && ./a.out $ [Kg++ stat2.cpp && ./a.out $ [12Pvim stat2.cpp
-[?1049h[?1h=[1;25r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[25;1H"stat2.cpp" 13L, 215C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
-[33m  2 [m[35m#include [m[31m<sys/types.h>[m
-[33m  3 [m[35m#include [m[31m<sys/stat.h>[m
-[33m  4 [m[35m#include [m[31m<unistd.h>[m
-[33m  5 using[m [32mnamespace[m std;
-[33m  6 
-  7 [m[32mint[m main()
-[33m  8 [m{
-[33m  9 [m    [32mstruct[m stat s;
-[33m 10 [m    stat([31m"[m[4m[31mstat2[m[31m.[m[4m[31mcpp[m[31m"[m,&s);
-[33m 11 [m    cout << oct;
-[33m 12 [m    cout << s.st_mode << endl;
-[33m 13 [m}
-[1m[34m~                                                                   [15;1H~                                                                   [16;1H~                                                                   [17;1H~                                                                   [18;1H~                                                                   [19;1H~                                                                   [20;1H~                                                                   [21;1H~                                                                   [22;1H~                                                                   [23;1H~                                                                   [24;1H~                                                                   [m[25;51H1,1[11CAll]2;stat2.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[25;51H2[2;5H[?12l[?25h[?25l[25;51H3[3;5H[?12l[?25h[?25l[25;51H4[4;5H[?12l[?25h[?25l[25;51H5[5;5H[?12l[?25h[?25l[25;51H6,0-1[6;5H[?12l[?25h[?25l[25;51H7,1  [7;5H[?12l[?25h[?25l[8;5H[46m{[13;5H}[m[25;51H8[8;5H[?12l[?25h[?25l{[13;5H}[25;51H9[9;5H[?12l[?25h[?25l[25;51H10,1[10;5H[?12l[?25h[?25l[25;52H1[11;5H[?12l[?25h[?25l[25;52H2[12;5H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;13H[K[25;51H13,5[10CTop[13;5H 
-[33m 14 [m}[14;6H[K]2;stat2.cpp + (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[13;9H[?12l[?25h[?25l[14;5H 
-[33m 15 [m}[15;6H[K[25;52H4[12CAll[14;9H[?12l[?25h[?25l[25;52H3,1[13;5H[?12l[?25h[?25l[25;52H2,5[12;9H[?12l[?25h[?25l[25;52H3,1[13;5H[?12l[?25h[?25l[25;52H4[14;5H[?12l[?25h[?25l[25;54H5[14;9H[?12l[?25h[?25li[25;54H6[14;10H[?12l[?25h[?25l[33mif[m[25;54H7[14;11H[?12l[?25h[?25l[25;54H8[14;12H[?12l[?25h[?25l([25;51H[K[25;51H14,9[10CAll[14;13H[?12l[?25h[?25ls[25;54H10[14;14H[?12l[?25h[?25l.[25;55H1[14;15H[?12l[?25h[?25ls[25;55H2[14;16H[?12l[?25h[?25lt[25;55H3[14;17H[?12l[?25h[?25l_[25;55H4[14;18H[?12l[?25h[?25lm[25;55H5[14;19H[?12l[?25h[?25lo[25;55H6[14;20H[?12l[?25h[?25ld[25;55H7[14;21H[?12l[?25h[?25le[25;55H8[14;22H[?12l[?25h[?25l[25;55H9[14;23H[?12l[?25h[?25l&[25;54H20[14;24H[?12l[?25h[?25l[25;55H1[14;25H[?12l[?25h[?25lS[25;55H2[14;26H[?12l[?25h[?25l_[25;55H3[14;27H[?12l[?25h[?25lI[25;55H4[14;28H[?12l[?25h[?25lR[25;55H5[14;29H[?12l[?25h[?25lU[25;55H6[14;30H[?12l[?25h[?25lS[25;55H7[14;31H[?12l[?25h[?25lR[25;55H8[14;32H[?12l[?25h[?25l)[14;12H[46m([19C)[m[25;51H[K[25;51H14,29[9CAll[14;33H[?12l[?25h[?25l[14;12H([19C)[25;54H30[14;34H[?12l[?25h[?25lc[25;55H1[14;35H[?12l[?25h[?25lo[25;55H2[14;36H[?12l[?25h[?25lu[25;55H3[14;37H[?12l[?25h[?25lt[25;55H4[14;38H[?12l[?25h[?25l[25;55H5[14;39H[?12l[?25h[?25l<[25;55H6[14;40H[?12l[?25h[?25l<[25;55H7[14;41H[?12l[?25h[?25l[25;55H8[14;42H[?12l[?25h[?25l[31m"[m[25;55H9[14;43H[?12l[?25h[?25l[31mr[m[25;54H40[14;44H[?12l[?25h[?25l[4m[31mr[m[31m"[m[25;55H1[14;45H[?12l[?25h[?25l;[25;55H2[14;46H[?12l[?25h[?25l[15;5H 
-[33m 16 [m}[16;6H[K[25;52H5,5 [15;9H[?12l[?25h[?25le[25;54H6[15;10H[?12l[?25h[?25ll[25;54H7[15;11H[?12l[?25h[?25ls[25;54H8[15;12H[?12l[?25h[?25l[33melse[m[25;54H9[15;13H[?12l[?25h[?25l[25;54H10[15;14H[?12l[?25h[?25lc[25;55H1[15;15H[?12l[?25h[?25lo[25;55H2[15;16H[?12l[?25h[?25lu[25;55H3[15;17H[?12l[?25h[?25lt[25;55H4[15;18H[?12l[?25h[?25l[25;55H5[15;19H[?12l[?25h[?25l<[25;55H6[15;20H[?12l[?25h[?25l<[25;55H7[15;21H[?12l[?25h[?25l[25;55H8[15;22H[?12l[?25h[?25l[31m"[m[25;55H9[15;23H[?12l[?25h[?25l[31m-[m[25;54H20[15;24H[?12l[?25h[?25l[31m"[m[25;55H1[15;25H[?12l[?25h[?25l;[25;55H2[15;26H[?12l[?25h[25;1H[K[15;25H[?25l[25;51H15,21[9CAll[15;25H[?12l[?25h[?25l[25;51H[K[25;1H:[?12l[?25h:[?25l[25;1H[K[25;51H15,21[9CAll[15;25H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;51H[K[25;51H16,5[10CTop[16;5H 
-[33m 17 [m}[17;6H[K[16;9H[?12l[?25h[?25l[17;5H 
-[33m 18 [m}[18;6H[K[25;52H7[12CAll[17;9H[?12l[?25h[?25lc[25;54H6[17;10H[?12l[?25h[?25lo[25;54H7[17;11H[?12l[?25h[?25lu[25;54H8[17;12H[?12l[?25h[?25lt[25;54H9[17;13H[?12l[?25h[?25l[25;54H10[17;14H[?12l[?25h[?25l<[25;55H1[17;15H[?12l[?25h[?25l<[25;55H2[17;16H[?12l[?25h[?25l[25;55H3[17;17H[?12l[?25h[?25le[25;55H4[17;18H[?12l[?25h[?25ln[25;55H5[17;19H[?12l[?25h[?25ld[25;55H6[17;20H[?12l[?25h[?25ll[25;55H7[17;21H[?12l[?25h[?25l;[25;55H8[17;22H[?12l[?25h[25;1H[K[17;21H[?25l[25;51H17,17[9CAll[17;21H[?12l[?25h[?25l[25;51H[K[25;1H:[?12l[?25hw[?25l"stat2.cpp" 18L, 299C written[21C17,17[9CAll]2;stat2.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[25;51H[K[25;51H17,17[9CAll[17;21H[?12l[?25h[?25l[25;52H6,0-1[16;5H[?12l[?25h[?25l[25;52H5,17 [15;21H[?12l[?25h[?25l[25;52H4[14;21H[?12l[?25h[?25l[14;12H[46m([19C)[m[25;54H8 [14;12H[?12l[?25h[?25l([19C)[25;54H19[14;23H[?12l[?25h[?25l[14;12H[46m([19C)[m[25;54H8 [14;12H[?12l[?25h[?25l[25;1H[K[25;1H:[?12l[?25hwq[?25l"stat2.cpp" 18L, 299C written]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes
-[?1l>[?12l[?25h[?1049l$ vim stat2.cpp$ g++ stat2.cpp && ./a.out 
-100644
-r
-$ ls -l stat2.cpp 
--rw-r--r-- 1 user user 299 Feb  2 16:12 stat2.cpp
-$ ls -l stat2.cpp $ g++ stat2.cpp && ./a.out $ [9Pls -l stat2.cpp $ g++ stat2.cpp && ./a.out $ [12Pvim stat2.cpp
-[?1049h[?1h=[1;25r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[25;1H"stat2.cpp" 18L, 299C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
-[33m  2 [m[35m#include [m[31m<sys/types.h>[m
-[33m  3 [m[35m#include [m[31m<sys/stat.h>[m
-[33m  4 [m[35m#include [m[31m<unistd.h>[m
-[33m  5 using[m [32mnamespace[m std;
-[33m  6 
-  7 [m[32mint[m main()
-[33m  8 [m{
-[33m  9 [m    [32mstruct[m stat s;
-[33m 10 [m    stat([31m"[m[4m[31mstat2[m[31m.[m[4m[31mcpp[m[31m"[m,&s);
-[33m 11 [m    cout << oct;
-[33m 12 [m    cout << s.st_mode << endl;
-[33m 13 
- 14 [m    [33mif[m (s.st_mode & S_IRUSR) cout << [31m"[m[4m[31mr[m[31m"[m;
-[33m 15 [m    [33melse[m cout << [31m"-"[m;
-[33m 16 
- 17 [m    cout << endl;
-[33m 18 [m}
-[1m[34m~                                                                   [20;1H~                                                                   [21;1H~                                                                   [22;1H~                                                                   [23;1H~                                                                   [24;1H~                                                                   [m[25;51H1,1[11CAll]2;stat2.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[25;51H2[2;5H[?12l[?25h[?25l[25;51H3[3;5H[?12l[?25h[?25l[25;51H4[4;5H[?12l[?25h[?25l[25;51H5[5;5H[?12l[?25h[?25l[25;51H6,0-1[6;5H[?12l[?25h[?25l[25;51H7,1  [7;5H[?12l[?25h[?25l[8;5H[46m{[18;5H}[m[25;51H8[8;5H[?12l[?25h[?25l{[18;5H}[25;51H9[9;5H[?12l[?25h[?25l[25;51H10,1[10;5H[?12l[?25h[?25l[25;52H1[11;5H[?12l[?25h[?25l[25;52H2[12;5H[?12l[?25h[?25l[25;52H3,0-1[13;5H[?12l[?25h[?25l[25;52H4,1  [14;5H[?12l[?25h[?25l    [34m//if ([m[4m[34ms[m[34m.st_mode & [m[4m[34mS[m[34m_[m[4m[34mIRUSR[m[34m) [m[4m[34mcout[m[34m << "[m[4m[34mr[m[34m";]2;stat2.cpp + (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[m[25;52H5,5[15;9H[?12l[?25h[?25l[34m//else [m[4m[34mcout[m[34m << "-";[m[25;52H6,0-1[16;5H[?12l[?25h[?25l[25;52H5,1  [15;5H[?12l[?25h[?25l[25;52H4[14;5H[?12l[?25h[?25l[25;52H3,0-1[13;5H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;13H[K[25;51H14,1[10CTop[14;9H[K[15;11H[34mif ([m[4m[34ms[m[34m.st_mode & [m[4m[34mS[m[34m_[m[4m[34mIRUSR[m[34m) [m[4m[34mcout[m[34m << "[m[4m[34mr[m[34m";[16;9H//else [m[4m[34mcout[m[34m << "-";[m[17;9H[K[18;5H    cout << endl;
-[33m 19 [m}[19;6H[K[14;5H[?12l[?25h[?25l[25;54H5[10CAll[14;9H[?12l[?25h[?25lc[25;54H6[14;10H[?12l[?25h[?25lo[25;54H7[14;11H[?12l[?25h[?25lu[25;54H8[14;12H[?12l[?25h[?25lt[25;54H9[14;13H[?12l[?25h[?25l[25;54H10[14;14H[?12l[?25h[?25l<[25;55H1[14;15H[?12l[?25h[?25l<[25;55H2[14;16H[?12l[?25h[?25l[25;55H3[14;17H[?12l[?25h[?25l([25;51H[K[25;51H14,14[9CAll[14;18H[?12l[?25h[?25l([25;51H[K[25;51H14,15[9CAll[14;19H[?12l[?25h[?25ls[25;55H6[14;20H[?12l[?25h[?25l.[25;55H7[14;21H[?12l[?25h[?25ls[25;55H8[14;22H[?12l[?25h[?25lt[25;55H9[14;23H[?12l[?25h[?25l_[25;54H20[14;24H[?12l[?25h[?25lm[25;55H1[14;25H[?12l[?25h[?25lo[25;55H2[14;26H[?12l[?25h[?25ld[25;55H3[14;27H[?12l[?25h[?25le[25;55H4[14;28H[?12l[?25h[?25l&[25;55H5[14;29H[?12l[?25h[?25lS[25;55H6[14;30H[?12l[?25h[?25l[14;29H[K[25;55H5[14;29H[?12l[?25h[?25ls[25;55H6[14;30H[?12l[?25h[?25l[14;29H[K[25;55H5[14;29H[?12l[?25h[?25lS[25;55H6[14;30H[?12l[?25h[?25l_[25;55H7[14;31H[?12l[?25h[?25lI[25;55H8[14;32H[?12l[?25h[?25lR[25;55H9[14;33H[?12l[?25h[?25lU[25;54H30[14;34H[?12l[?25h[?25lS[25;55H1[14;35H[?12l[?25h[?25lT[25;55H2[14;36H[?12l[?25h[?25l[14;35H[K[25;55H1[14;35H[?12l[?25h[?25lR[25;55H2[14;36H[?12l[?25h[?25l)[14;18H[46m([17C)[m[25;51H[K[25;51H14,33[9CAll[14;37H[?12l[?25h[?25l?[18;21H[1m[37m[41m;[19;5H}[m[14;18H([17C)[25;55H4[14;38H[?12l[?25h[?25l[31m"[15;5H    //if ([m[4m[31ms[m[31m.st_mode & [m[4m[31mS[m[31m_[m[4m[31mIRUSR[m[31m) [m[4m[31mcout[m[31m << "[mr[31m";[16;5H    //else [m[4m[31mcout[m[31m << "[m-[31m";[18;5H    [m[4m[31mcout[m[31m << [m[4m[31mendl[m[31m;[19;5H}[m[25;55H5[14;39H[?12l[?25h[?25l[31mr[m[25;55H6[14;40H[?12l[?25h[?25l[4m[31mr[m[31m"[m[15;5H    [34m//if ([m[4m[34ms[m[34m.st_mode & [m[4m[34mS[m[34m_[m[4m[34mIRUSR[m[34m) [m[4m[34mcout[m[34m << "[m[4m[34mr[m[34m";[m[16;5H    [34m//else [m[4m[34mcout[m[34m << "-";[m[18;5H    cout << endl[1m[37m[41m;[19;5H}[m[25;55H7[14;41H[?12l[?25h[?25l:[18;21H;[19;5H}[25;55H8[14;42H[?12l[?25h[?25l[31m"[15;5H    //if ([m[4m[31ms[m[31m.st_mode & [m[4m[31mS[m[31m_[m[4m[31mIRUSR[m[31m) [m[4m[31mcout[m[31m << "[mr[31m";[16;5H    //else [m[4m[31mcout[m[31m << "[m-[31m";[18;5H    [m[4m[31mcout[m[31m << [m[4m[31mendl[m[31m;[19;5H}[m[25;55H9[14;43H[?12l[?25h[?25l[31m-[m[25;54H40[14;44H[?12l[?25h[?25l[31m"[m[15;5H    [34m//if ([m[4m[34ms[m[34m.st_mode & [m[4m[34mS[m[34m_[m[4m[34mIRUSR[m[34m) [m[4m[34mcout[m[34m << "[m[4m[34mr[m[34m";[m[16;5H    [34m//else [m[4m[34mcout[m[34m << "-";[m[18;5H    cout << endl;[19;5H}[25;55H1[14;45H[?12l[?25h[?25l)[14;17H[46m([27C)[m[25;51H[K[25;51H14,42[9CAll[14;46H[?12l[?25h[?25l;[14;17H([27C)[25;55H3[14;47H[?12l[?25h[25;1H[K[14;46H[?25l[25;51H14,42[9CAll[14;46H[?12l[?25h[?25l[25;51H[K[25;1H:[?12l[?25hw[?25l"stat2.cpp" 19L, 346C written[21C14,42[9CAll]2;stat2.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[25;51H[K[25;51H14,42[9CAll[14;46H[?12l[?25h[?25l[25;52H5[15;46H[?12l[?25h[?25l[25;52H6,23[16;27H[?12l[?25h[?25l[25;52H5,42[15;46H[?12l[?25h[?25l[25;52H4[14;46H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;13H[K[25;51H15,5[10CTop[15;9H[K[16;11H[34mif ([m[4m[34ms[m[34m.st_mode & [m[4m[34mS[m[34m_[m[4m[34mIRUSR[m[34m) [m[4m[34mcout[m[34m << "[m[4m[34mr[m[34m";[17;9H//else [m[4m[34mcout[m[34m << "-";[m[18;9H[K[19;5H    cout << endl;
-[33m 20 [m}[20;6H[K]2;stat2.cpp + (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[15;9H[?12l[?25h[?25l[25;52H6[12CAll[16;9H[?12l[?25h[?25l[25;52H7[17;9H[?12l[?25h[?25l[25;52H6[16;9H[?12l[?25h[?25l[25;52H5,1[15;5H[?12l[?25h[?25l[25;52H4,5[14;9H[?12l[?25h[?25l[25;54H43[14;47H[?12l[?25h[?25l[14;17H[46m([27C)[m[25;51H[K[25;51H14,42[9CAll[14;46H[?12l[?25h[?25l[25;55H1[14;45H[?12l[?25h[?25l[14;17H([27C)[25;55H0[14;44H[?12l[?25h[?25l[25;54H39[14;43H[?12l[?25h[?25l[25;55H8[14;42H[?12l[?25h[?25l[25;55H7[14;41H[?12l[?25h[?25l[25;55H6[14;40H[?12l[?25h[?25l[25;55H5[14;39H[?12l[?25h[?25l[25;55H4[14;38H[?12l[?25h[?25li[31m"[m[4m[31mr[m[31m"[m:[31m"-"[m);[25;55H5[14;39H[?12l[?25h[?25l([31m"[m[4m[31mr[m[31m"[m:[31m"-"[m)[1m[37m[41m;[19;21H;[20;5H}[m[14;39H[46m([7C)[m[25;51H[K[25;51H14,36[9CAll[14;40H[?12l[?25h[?25lt[31m"[m[4m[31mr[m[31m"[m:[31m"-[m[31m[46m"[m)[1m[37m[41m;[m[14;39H([7C[31m"[m[25;55H7[14;41H[?12l[?25h[?25lr[31m"[m[4m[31mr[m[31m"[m:[31m"-"[m)[1m[37m[41m;[m[25;55H8[14;42H[?12l[?25h[?25l[31mu"[m[4m[31mr[m[31m"[m:[31m"-"[m)[1m[37m[41m;[m[25;55H9[14;43H[?12l[?25h[?25l[31mtrue"[m[4m[31mr[m[31m"[m:[31m"-"[m)[1m[37m[41m;[m[25;54H40[14;44H[?12l[?25h[?25l?[31m"[m[4m[31mr[m[31m"[m:[31m"-"[m)[1m[37m[41m;[m[25;55H1[14;45H[?12l[?25h[?25l[1C[31mr[m[25;55H2[14;46H[?12l[?25h[?25l[25;55H3[14;47H[?12l[?25h[?25l[4m[31mr[m[25;55H4[14;48H[?12l[?25h[?25l::[31m"-"[m[1m[37m[41m);[m[25;55H5[14;49H[?12l[?25h[?25l[31m":"[m-[31m");[16;5H    //if ([m[4m[31ms[m[31m.st_mode & [m[4m[31mS[m[31m_[m[4m[31mIRUSR[m[31m) [m[4m[31mcout[m[31m << "[mr[31m";[17;5H    //else [m[4m[31mcout[m[31m << "[m-[31m";[19;5H    [m[4m[31mcout[m[31m << [m[4m[31mendl[m[31m;[20;5H}[m[25;55H6[14;50H[?12l[?25h[?25l[31mn:"[m-[31m");[m[25;55H7[14;51H[?12l[?25h[?25l[31me:"[m-[31m");[m[25;55H8[14;52H[?12l[?25h[?25l[31mv:"[m-[31m");[m[25;55H9[14;53H[?12l[?25h[?25l[31me:"[m-[31m");[m[25;54H50[14;54H[?12l[?25h[?25l[31mr:"[m-[31m");[m[25;55H1[14;55H[?12l[?25h[?25l[31m :"[m-[31m");[m[25;55H2[14;56H[?12l[?25h[?25l[31mh:"[m-[31m");[m[25;55H3[14;57H[?12l[?25h[?25l[31ma:"[m-[31m");[m[25;55H4[14;58H[?12l[?25h[?25l[31mp:"[m-[31m");[m[25;55H5[14;59H[?12l[?25h[?25l[31mp:"[m-[31m");[m[25;55H6[14;60H[?12l[?25h[?25l[31me:"[m-[31m");[m[25;55H7[14;61H[?12l[?25h[?25l[31mn:"[m-[31m");[m[25;55H8[14;62H[?12l[?25h[?25l[31m"[m:[31m"-"[m)[1m[37m[41m;[m[16;5H    [34m//if ([m[4m[34ms[m[34m.st_mode & [m[4m[34mS[m[34m_[m[4m[34mIRUSR[m[34m) [m[4m[34mcout[m[34m << "[m[4m[34mr[m[34m";[m[17;5H    [34m//else [m[4m[34mcout[m[34m << "-";[m[19;5H    cout << endl[1m[37m[41m;[20;5H}[m[25;55H9[14;63H[?12l[?25h[?25l[15;24r[15;1H[L[1;25r[14;63H):[31m"-"[m))[15;1H[33m    [m;[20;21H;[21;5H}[25;51H[K[25;51H14,60[9CAll[14;39H[46m([23C)[m[4C))[15;1H[33m [m[25;51H[K[25;51H14,60[9CAll[14;64H[?12l[?25h[25;1H[K[14;63H[?25l[5C))[15;1H[33m [m[25;51H14,59[9CAll[14;63H[?12l[?25h[?25l[25;51H[K[25;1H:[?12l[?25hw[?25l"stat2.cpp" 20L, 370C written[21C14,59[9CAll]2;stat2.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[25;51H[K[25;51H14,59[9CAll[14;63H[?12l[?25h[?25l[25;1H1 change; before #6  9 seconds ago[25;51H[K[14;24r[24;1H
-[1;25r[14;2H[33m14[m[1C    cout << ((s.st_mode&S_IRUSR)?i([31mtrue[m?[31m"[m[4m[31mr[m[31m"[m:[31m"-"[m)[1m[37m[41m;[19;21H;[20;5H}[m[24;1H[1m[34m~                                                                   [m[25;1H[K[25;51H14,44[9CAll]2;stat2.cpp + (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[14;48H[?12l[?25h[?25l[25;1H1 change; before #5  14 seconds ago[25;51H[K[14;38H[31m"[m[4m[31mr[m[31m"[m:[31m"-"[m);[14;47H[K[19;21H;[20;5H}[25;51H14,34[9CAll[14;38H[?12l[?25h[?25l[25;1H[K[25;1H:[?12l[?25hw[?25l"stat2.cpp" 20L, 347C written[21C14,34[9CAll]2;stat2.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[25;51H[K[25;51H14,34[9CAll[14;38H[?12l[?25h[?25l[25;52H5,0-1[15;5H[?12l[?25h[?25l[25;52H6,34 [16;38H[?12l[?25h[?25l[25;52H5,0-1[15;5H[?12l[?25h[?25l[25;52H4,34 [14;38H[?12l[?25h[?25l[15;9Hcout << ((s.st_mode&S_IRUSR)?[31m"[m[4m[31mr[m[31m"[m:[31m"-"[m);[16;9H[K[17;11H[34mif ([m[4m[34ms[m[34m.st_mode & [m[4m[34mS[m[34m_[m[4m[34mIRUSR[m[34m) [m[4m[34mcout[m[34m << "[m[4m[34mr[m[34m";[18;9H//else [m[4m[34mcout[m[34m << "-";[m[19;9H[K[20;5H    cout << endl;
-[33m 21 [m}[21;6H[K]2;stat2.cpp + (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[25;52H5,5 [15;9H[?12l[?25h[?25l[16;9Hcout << ((s.st_mode&S_IRUSR)?[31m"[m[4m[31mr[m[31m"[m:[31m"-"[m);[17;9H[K[18;11H[34mif ([m[4m[34ms[m[34m.st_mode & [m[4m[34mS[m[34m_[m[4m[34mIRUSR[m[34m) [m[4m[34mcout[m[34m << "[m[4m[34mr[m[34m";[19;9H//else [m[4m[34mcout[m[34m << "-";[m[20;9H[K[21;5H    cout << endl;
-[33m 22 [m}[22;6H[K[25;52H6[16;9H[?12l[?25h[?25l[25;52H5[15;9H[?12l[?25h[?25l[25;54H10[15;14H[?12l[?25h[?25l<< [46m([27C)[m[25;55H3[15;17H[?12l[?25h[?25l([27C)[25;52H6,5 [16;9H[?12l[?25h[?25l[25;52H5[15;9H[?12l[?25h[?25l[25;54H42[15;46H[?12l[?25h[?25l[15;17H[46m([27C)[m[25;55H1[15;45H[?12l[?25h[?25l[15;17H([27C)[25;55H0[15;44H[?12l[?25h[?25l[25;54H39[15;43H[?12l[?25h[?25l[25;55H8[15;42H[?12l[?25h[?25l[25;55H7[15;41H[?12l[?25h[?25l[25;55H6[15;40H[?12l[?25h[?25l[25;55H5[15;39H[?12l[?25h[?25l[4m[31mw[?12l[?25h[?25l[m[25;52H6[16;39H[?12l[?25h[?25l[31mx[?12l[?25h[?25l[m[25;52H5[15;39H[?12l[?25h[?25l[25;55H4[15;38H[?12l[?25h[?25l[25;55H3[15;37H[?12l[?25h[?25l[15;18H[46m([17C)[m[25;55H2[15;36H[?12l[?25h[?25l[15;18H([17C)[25;55H1[15;35H[?12l[?25h[?25l[25;55H0[15;34H[?12l[?25h[?25l[25;54H29[15;33H[?12l[?25h[?25l[25;55H8[15;32H[?12l[?25h[?25lW[?12l[?25h[?25l[25;52H6[16;32H[?12l[?25h[?25lX[?12l[?25h[?25l[25;1H[K[25;1H:[?12l[?25hwq[?25l"stat2.cpp" 22L, 433C written]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes
-[?1l>[?12l[?25h[?1049l$ clear
-[H[2J$ clear$ vim stat2.cpp$ ls -l stat2.cpp $ g++ stat2.cpp && ./a.out 
-100644
-rw-
-$ (reverse-i-search)`': l': clears': ls -l stat2.cpp [22P$ 
--rw-r--r-- 1 user user 433 Feb  2 16:18 stat2.cpp
-$ ls -l stat2.cpp $ g++ stat2.cpp && ./a.out $ clear[K$ g++ stat2.cpp && ./a.out $ [9Pls -l stat2.cpp $ [Kfg
-bash: fg: current: no such job
-$ (reverse-i-search)`': v': vim stat2.cpp[1@i': [1@m': [23P$ 
-[?1049h[?1h=[1;25r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[25;1H"stat2.cpp" 22L, 433C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
-[33m  2 [m[35m#include [m[31m<sys/types.h>[m
-[33m  3 [m[35m#include [m[31m<sys/stat.h>[m
-[33m  4 [m[35m#include [m[31m<unistd.h>[m
-[33m  5 using[m [32mnamespace[m std;
-[33m  6 
-  7 [m[32mint[m main()
-[33m  8 [m{
-[33m  9 [m    [32mstruct[m stat s;
-[33m 10 [m    stat([31m"[m[4m[31mstat2[m[31m.[m[4m[31mcpp[m[31m"[m,&s);
-[33m 11 [m    cout << oct;
-[33m 12 [m    cout << s.st_mode << endl;
-[33m 13 
- 14 [m    cout << ((s.st_mode&S_IRUSR)?[31m"[m[4m[31mr[m[31m"[m:[31m"-"[m);
-[33m 15 [m    cout << ((s.st_mode&S_IWUSR)?[31m"[m[4m[31mw[m[31m"[m:[31m"-"[m);
-[33m 16 [m    cout << ((s.st_mode&S_IXUSR)?[31m"x"[m:[31m"-"[m);
-[33m 17 
- 18 [m    [34m//if ([m[4m[34ms[m[34m.st_mode & [m[4m[34mS[m[34m_[m[4m[34mIRUSR[m[34m) [m[4m[34mcout[m[34m << "[m[4m[34mr[m[34m";[m
-[33m 19 [m    [34m//else [m[4m[34mcout[m[34m << "-";[m
-[33m 20 
- 21 [m    cout << endl;
-[33m 22 [m}
-[1m[34m~                                                                   [24;1H~                                                                   [m[25;51H1,1[11CAll]2;stat2.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[25;51H2[2;5H[?12l[?25h[?25l[25;51H3[3;5H[?12l[?25h[?25l[25;51H4[4;5H[?12l[?25h[?25l[25;51H5[5;5H[?12l[?25h[?25l[25;51H6,0-1[6;5H[?12l[?25h[?25l[25;51H7,1  [7;5H[?12l[?25h[?25l[8;5H[46m{[22;5H}[m[25;51H8[8;5H[?12l[?25h[?25l{[22;5H}[25;51H9[9;5H[?12l[?25h[?25l[25;51H10,1[10;5H[?12l[?25h[?25l[25;52H1[11;5H[?12l[?25h[?25l[25;52H2[12;5H[?12l[?25h[?25l[25;52H3,0-1[13;5H[?12l[?25h[?25l[25;52H4,1  [14;5H[?12l[?25h[?25l[25;52H5[15;5H[?12l[?25h[?25l[25;52H6[16;5H[?12l[?25h[?25l[25;52H7,0-1[17;5H[?12l[?25h[?25l[25;52H8,1  [18;5H[?12l[?25h[?25l[25;52H9[19;5H[?12l[?25h[?25l[25;52H8[18;5H[?12l[?25h[?25l[25;52H7,0-1[17;5H[?12l[?25h[?25l[25;52H6,1  [16;5H[?12l[?25h[?25l[25;52H5[15;5H[?12l[?25h[?25l[25;52H4[14;5H[?12l[?25h[?25l[25;52H3,0-1[13;5H[?12l[?25h[?25l[25;52H2,1  [12;5H[?12l[?25h[?25l[25;52H1[11;5H[?12l[?25h[?25l[25;52H0[10;5H[?12l[?25h[?25l[25;51H9,1 [9;5H[?12l[?25h[?25l[8;5H[46m{[22;5H}[m[25;51H8[8;5H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;13H[K[25;51H9,5[11CTop[9;9H[K[10;9H[32mstruct[m stat s;[10;23H[K[11;9Hstat([31m"[m[4m[31mstat2[m[31m.[m[4m[31mcpp[m[31m"[m,&s);[12;17Hoct;[12;21H[K[13;9Hcout << s.st_mode << endl;[14;9H[K[15;32HR[6C[4m[31mr[m[16;32HW[6C[4m[31mw[m[17;9Hcout << ((s.st_mode&S_IXUSR)?[31m"x"[m:[31m"-"[m);[18;9H[K[19;11H[34mif ([m[4m[34ms[m[34m.st_mode & [m[4m[34mS[m[34m_[m[4m[34mIRUSR[m[34m) [m[4m[34mcout[m[34m << "[m[4m[34mr[m[34m";[20;9H//else [m[4m[34mcout[m[34m << "-";[m[21;9H[K[22;5H[46m [m   cout << endl;
-[33m 23 [m}[23;6H[K[8;5H{[22;5H ]2;stat2.cpp + (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[9;9H[?12l[?25h[?25l/[25;53H6[11CAll[9;10H[?12l[?25h[?25l[34m/*[10;5H    [m[4m[34mstruct[m[34m stat [m[4m[34ms[m[34m;[11;5H    stat("[m[4m[34mstat2[m[34m.[m[4m[34mcpp[m[34m",&[m[4m[34ms[m[34m);[12;5H    [m[4m[34mcout[m[34m << [m[4m[34moct[m[34m;[13;5H    [m[4m[34mcout[m[34m << [m[4m[34ms[m[34m.st_mode << [m[4m[34mendl[m[34m;[15;5H    [m[4m[34mcout[m[34m << (([m[4m[34ms[m[34m.st_mode&[m[4m[34mS[m[34m_[m[4m[34mIRUSR[m[34m)?"[m[4m[34mr[m[34m":"-");[16;5H    [m[4m[34mcout[m[34m << (([m[4m[34ms[m[34m.st_mode&[m[4m[34mS[m[34m_[m[4m[34mIWUSR[m[34m)?"[m[4m[34mw[m[34m":"-");[17;5H    [m[4m[34mcout[m[34m << (([m[4m[34ms[m[34m.st_mode&[m[4m[34mS[m[34m_[m[4m[34mIXUSR[m[34m)?"x":"-");[19;5H    [20;5H    [22;5H    [m[4m[34mcout[m[34m << [m[4m[34mendl[m[34m;[23;5H}[m[25;53H7[9;11H[?12l[?25h[?25l[25;51H10,7[10;11H[?12l[?25h[?25l[25;52H1[11;11H[?12l[?25h[?25l[25;52H2[12;11H[?12l[?25h[?25l[25;52H1[11;11H[?12l[?25h[?25l[25;52H0[10;11H[?12l[?25h[25;1H[K[10;10H[?25l[25;51H10,6[10CAll[10;10H[?12l[?25h[?25l[25;1H1 line less; before #1  3 seconds ago[25;51H[K[9;9H[32mstruct[m stat s;[10;5H    stat([31m"[m[4m[31mstat2[m[31m.[m[4m[31mcpp[m[31m"[m,&s);[11;5H    cout << oct;[11;21H[K[12;5H    cout << s.st_mode << endl;[13;5H[K[14;9Hcout << ((s.st_mode&S_IRUSR)?[31m"[m[4m[31mr[m[31m"[m:[31m"-"[m);[15;5H    cout << ((s.st_mode&S_IWUSR)?[31m"[m[4m[31mw[m[31m"[m:[31m"-"[m);[16;5H    cout << ((s.st_mode&S_IXUSR)?[31m"x"[m:[31m"-"[m);[17;5H[K[18;9H[34m//if ([m[4m[34ms[m[34m.st_mode & [m[4m[34mS[m[34m_[m[4m[34mIRUSR[m[34m) [m[4m[34mcout[m[34m << "[m[4m[34mr[m[34m";[m[19;5H    [2C[34melse [m[4m[34mcout[m[34m << "-";[m[19;28H[K[20;5H[K[21;9Hcout << endl;[22;5H}[22;6H[K[23;1H[1m[34m~                                                                   [m[25;51H8,1[11CAll]2;stat2.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[8;5H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;14H[K[25;51H9,5[11CTop[9;9H[K[10;9H[32mstruct[m stat s;[10;23H[K[11;9Hstat([31m"[m[4m[31mstat2[m[31m.[m[4m[31mcpp[m[31m"[m,&s);[12;17Hoct;[12;21H[K[13;9Hcout << s.st_mode << endl;[14;9H[K[15;32HR[6C[4m[31mr[m[16;32HW[6C[4m[31mw[m[17;9Hcout << ((s.st_mode&S_IXUSR)?[31m"x"[m:[31m"-"[m);[18;9H[K[19;11H[34mif ([m[4m[34ms[m[34m.st_mode & [m[4m[34mS[m[34m_[m[4m[34mIRUSR[m[34m) [m[4m[34mcout[m[34m << "[m[4m[34mr[m[34m";[20;9H//else [m[4m[34mcout[m[34m << "-";[m[21;9H[K[22;5H    cout << endl;
-[33m 23 [m}[23;6H[K]2;stat2.cpp + (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[9;9H[?12l[?25h[?25lc[25;53H6[11CAll[9;10H[?12l[?25h[?25lo[25;53H7[9;11H[?12l[?25h[?25lu[25;53H8[9;12H[?12l[?25h[?25lt[25;53H9[9;13H[?12l[?25h[?25l[25;53H10[9;14H[?12l[?25h[?25l<[25;54H1[9;15H[?12l[?25h[?25l<[25;54H2[9;16H[?12l[?25h[?25l[25;54H3[9;17H[?12l[?25h[?25l[31m2[m[25;54H4[9;18H[?12l[?25h[?25l[25;54H5[9;19H[?12l[?25h[?25l<[25;54H6[9;20H[?12l[?25h[?25l<[25;54H7[9;21H[?12l[?25h[?25l[25;54H8[9;22H[?12l[?25h[?25l[31m2[m[25;54H9[9;23H[?12l[?25h[?25l[25;53H20[9;24H[?12l[?25h[?25l<[25;54H1[9;25H[?12l[?25h[?25l<[25;54H2[9;26H[?12l[?25h[?25l[25;54H3[9;27H[?12l[?25h[?25le[25;54H4[9;28H[?12l[?25h[?25ln[25;54H5[9;29H[?12l[?25h[?25ld[25;54H6[9;30H[?12l[?25h[?25ll[25;54H7[9;31H[?12l[?25h[?25l;[25;54H8[9;32H[?12l[?25h[?25l[10;9H[K[11;9H[32mstruct[m stat s;[11;23H[K[12;9Hstat([31m"[m[4m[31mstat2[m[31m.[m[4m[31mcpp[m[31m"[m,&s);[13;17Hoct;[13;21H[K[14;9Hcout << s.st_mode << endl;[15;9H[K[16;32HR[6C[4m[31mr[m[17;32HW[6C[4m[31mw[m[18;9Hcout << ((s.st_mode&S_IXUSR)?[31m"x"[m:[31m"-"[m);[19;9H[K[20;11H[34mif ([m[4m[34ms[m[34m.st_mode & [m[4m[34mS[m[34m_[m[4m[34mIRUSR[m[34m) [m[4m[34mcout[m[34m << "[m[4m[34mr[m[34m";[21;9H//else [m[4m[34mcout[m[34m << "-";[m[22;9H[K[23;5H    cout << endl;
-[33m 24 [m}[24;6H[K[25;51H10,5[10;9H[?12l[?25h[?25lr[25;54H6[10;10H[?12l[?25h[?25le[25;54H7[10;11H[?12l[?25h[?25lt[25;54H8[10;12H[?12l[?25h[?25lu[25;54H9[10;13H[?12l[?25h[?25lr[25;54H10[10;14H[?12l[?25h[?25l[33mreturn[m[25;55H1[10;15H[?12l[?25h[?25l[25;55H2[10;16H[?12l[?25h[?25l[31m0[m[25;55H3[10;17H[?12l[?25h[?25l;[25;55H4[10;18H[?12l[?25h[?25l[11;9H[K[12;9H[32mstruct[m stat s;[12;23H[K[13;9Hstat([31m"[m[4m[31mstat2[m[31m.[m[4m[31mcpp[m[31m"[m,&s);[14;17Hoct;[14;21H[K[15;9Hcout << s.st_mode << endl;[16;9H[K[17;32HR[6C[4m[31mr[m[18;32HW[6C[4m[31mw[m[19;9Hcout << ((s.st_mode&S_IXUSR)?[31m"x"[m:[31m"-"[m);[20;9H[K[21;11H[34mif ([m[4m[34ms[m[34m.st_mode & [m[4m[34mS[m[34m_[m[4m[34mIRUSR[m[34m) [m[4m[34mcout[m[34m << "[m[4m[34mr[m[34m";[22;9H//else [m[4m[34mcout[m[34m << "-";[m[23;9H[K[24;5H    cout << endl;[25;52H1,5 [9CTop[11;9H[?12l[?25h[25;1H[K[11;5H[?25l[25;51H11,0-1[8CTop[11;5H[?12l[?25h[?25l[25;51H[K[25;1H:[?12l[?25hwq[?25l"stat2.cpp" 25L, 476C written]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes
-[?1l>[?12l[?25h[?1049l$ vim stat2.cpp$ fg[Kls -l stat2.cpp $ fg[Kls -l stat2.cpp $ fg[Kvim stat2.cpp$ [Kvim stat2.cpp
-[?1049h[?1h=[1;25r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[25;1H"stat2.cpp" 25L, 476C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
-[33m  2 [m[35m#include [m[31m<sys/types.h>[m
-[33m  3 [m[35m#include [m[31m<sys/stat.h>[m
-[33m  4 [m[35m#include [m[31m<unistd.h>[m
-[33m  5 using[m [32mnamespace[m std;
-[33m  6 
-  7 [m[32mint[m main()
-[33m  8 [m{
-[33m  9 [m    cout << [31m2[m << [31m2[m << endl;
-[33m 10 [m    [33mreturn[m [31m0[m;
-[33m 11 
- 12 [m    [32mstruct[m stat s;
-[33m 13 [m    stat([31m"[m[4m[31mstat2[m[31m.[m[4m[31mcpp[m[31m"[m,&s);
-[33m 14 [m    cout << oct;
-[33m 15 [m    cout << s.st_mode << endl;
-[33m 16 
- 17 [m    cout << ((s.st_mode&S_IRUSR)?[31m"[m[4m[31mr[m[31m"[m:[31m"-"[m);
-[33m 18 [m    cout << ((s.st_mode&S_IWUSR)?[31m"[m[4m[31mw[m[31m"[m:[31m"-"[m);
-[33m 19 [m    cout << ((s.st_mode&S_IXUSR)?[31m"x"[m:[31m"-"[m);
-[33m 20 
- 21 [m    [34m//if ([m[4m[34ms[m[34m.st_mode & [m[4m[34mS[m[34m_[m[4m[34mIRUSR[m[34m) [m[4m[34mcout[m[34m << "[m[4m[34mr[m[34m";[m
-[33m 22 [m    [34m//else [m[4m[34mcout[m[34m << "-";[m
-[33m 23 
- 24 [m    cout << endl;[25;51H1,1[11CTop]2;stat2.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[25;1H[K[25;1H:[?12l[?25hwq[?25l"stat2.cpp" 25L, 476C written]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes
-[?1l>[?12l[?25h[?1049l$ vim stat2.cpp$ fg[Kls -l stat2.cpp $ g++ stat2.cpp && ./a.out 
-22
-$ (reverse-i-search)`': f': fg[1@g': $ fg[K[2@[3[1@~[1Pg[20@(reverse-i-search)`': [3~v': vim stat2.cpp[1@i': [1@m': [23P$ 
-[?1049h[?1h=[1;25r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[25;1H"stat2.cpp" 25L, 476C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
-[33m  2 [m[35m#include [m[31m<sys/types.h>[m
-[33m  3 [m[35m#include [m[31m<sys/stat.h>[m
-[33m  4 [m[35m#include [m[31m<unistd.h>[m
-[33m  5 using[m [32mnamespace[m std;
-[33m  6 
-  7 [m[32mint[m main()
-[33m  8 [m{
-[33m  9 [m    cout << [31m2[m << [31m2[m << endl;
-[33m 10 [m    [33mreturn[m [31m0[m;
-[33m 11 
- 12 [m    [32mstruct[m stat s;
-[33m 13 [m    stat([31m"[m[4m[31mstat2[m[31m.[m[4m[31mcpp[m[31m"[m,&s);
-[33m 14 [m    cout << oct;
-[33m 15 [m    cout << s.st_mode << endl;
-[33m 16 
- 17 [m    cout << ((s.st_mode&S_IRUSR)?[31m"[m[4m[31mr[m[31m"[m:[31m"-"[m);
-[33m 18 [m    cout << ((s.st_mode&S_IWUSR)?[31m"[m[4m[31mw[m[31m"[m:[31m"-"[m);
-[33m 19 [m    cout << ((s.st_mode&S_IXUSR)?[31m"x"[m:[31m"-"[m);
-[33m 20 
- 21 [m    [34m//if ([m[4m[34ms[m[34m.st_mode & [m[4m[34mS[m[34m_[m[4m[34mIRUSR[m[34m) [m[4m[34mcout[m[34m << "[m[4m[34mr[m[34m";[m
-[33m 22 [m    [34m//else [m[4m[34mcout[m[34m << "-";[m
-[33m 23 
- 24 [m    cout << endl;[25;51H1,1[11CTop]2;stat2.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[25;51H2[2;5H[?12l[?25h[?25l[25;51H3[3;5H[?12l[?25h[?25l[25;51H4[4;5H[?12l[?25h[?25l[25;51H5[5;5H[?12l[?25h[?25l[25;51H6,0-1[6;5H[?12l[?25h[?25l[25;51H7,1  [7;5H[?12l[?25h[?25l[25;51H8[8;5H[?12l[?25h[?25l[25;51H9[9;5H[?12l[?25h[?25l[25;51H10,1[10;5H[?12l[?25h[?25l[25;51H9,1 [9;5H[?12l[?25h[?25l[25;53H5[9;9H[?12l[?25h[?25l[25;53H10[9;14H[?12l[?25h[?25l[25;54H3[9;17H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;13H[K[25;51H9,13[10CTop[9;17H[?12l[?25h[?25l([31m2[m << [31m2[m << endl;[25;51H[K[25;51H9,14[10CTop]2;stat2.cpp + (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[9;18H[?12l[?25h[?25l[25;54H6[9;20H[?12l[?25h[?25l[25;54H9[9;23H[?12l[?25h[?25l[25;53H20[9;24H[?12l[?25h[?25l) << endl;[9;17H[46m([6C)[m[25;51H[K[25;51H9,21[10CTop[9;25H[?12l[?25h[25;1H[K[9;24H[?25l[25;51H9,20[10CTop[9;24H[?12l[?25h[?25l[25;51H[K[25;1H:[?12l[?25hw[?25l"stat2.cpp" 25L, 478C written[21C9,20[10CTop]2;stat2.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[25;51H[K[25;51H9,20[10CTop[9;24H[?12l[?25h[?25l[9;17H([6C)[25;51H10,13[10;17H[?12l[?25h[?25l[25;52H1,0-1[11;5H[?12l[?25h[?25l[25;1H[K[25;1H:[?12l[?25hwq[?25l"stat2.cpp" 25L, 478C written]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes
-[?1l>[?12l[?25h[?1049l$ vim stat2.cpp$ g++ stat2.cpp && ./a.out 
-8
-$ g++ stat2.cpp && ./a.out $ [12Pvim stat2.cpp
-[?1049h[?1h=[1;25r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[25;1H"stat2.cpp" 25L, 478C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
-[33m  2 [m[35m#include [m[31m<sys/types.h>[m
-[33m  3 [m[35m#include [m[31m<sys/stat.h>[m
-[33m  4 [m[35m#include [m[31m<unistd.h>[m
-[33m  5 using[m [32mnamespace[m std;
-[33m  6 
-  7 [m[32mint[m main()
-[33m  8 [m{
-[33m  9 [m    cout << ([31m2[m << [31m2[m) << endl;
-[33m 10 [m    [33mreturn[m [31m0[m;
-[33m 11 
- 12 [m    [32mstruct[m stat s;
-[33m 13 [m    stat([31m"[m[4m[31mstat2[m[31m.[m[4m[31mcpp[m[31m"[m,&s);
-[33m 14 [m    cout << oct;
-[33m 15 [m    cout << s.st_mode << endl;
-[33m 16 
- 17 [m    cout << ((s.st_mode&S_IRUSR)?[31m"[m[4m[31mr[m[31m"[m:[31m"-"[m);
-[33m 18 [m    cout << ((s.st_mode&S_IWUSR)?[31m"[m[4m[31mw[m[31m"[m:[31m"-"[m);
-[33m 19 [m    cout << ((s.st_mode&S_IXUSR)?[31m"x"[m:[31m"-"[m);
-[33m 20 
- 21 [m    [34m//if ([m[4m[34ms[m[34m.st_mode & [m[4m[34mS[m[34m_[m[4m[34mIRUSR[m[34m) [m[4m[34mcout[m[34m << "[m[4m[34mr[m[34m";[m
-[33m 22 [m    [34m//else [m[4m[34mcout[m[34m << "-";[m
-[33m 23 
- 24 [m    cout << endl;[25;51H1,1[11CTop]2;stat2.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[25;51H2[2;5H[?12l[?25h[?25l[25;51H3[3;5H[?12l[?25h[?25l[25;51H4[4;5H[?12l[?25h[?25l[25;51H5[5;5H[?12l[?25h[?25l[25;51H6,0-1[6;5H[?12l[?25h[?25l[25;51H7,1  [7;5H[?12l[?25h[?25l[25;51H8[8;5H[?12l[?25h[?25l[25;51H9[9;5H[?12l[?25h[?25l[25;53H5[9;9H[?12l[?25h[?25l[25;53H10[9;14H[?12l[?25h[?25l<< [46m([6C)[m[25;54H3[9;17H[?12l[?25h[?25l([6C)[25;54H4[9;18H[?12l[?25h[?25l[25;54H5[9;19H[?12l[?25h[?25l[25;54H6[9;20H[?12l[?25h[?25l< [31m2[m) << endl;[9;33H[K]2;stat2.cpp + (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[9;20H[?12l[?25h[?25l [31m2[m) << endl;[9;32H[K[9;20H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;13H[K[25;51H9,16[10CTop[9;20H[?12l[?25h[?25l> [31m2[m) << endl;[25;54H7[9;21H[?12l[?25h[?25l> [31m2[m) << endl;[25;54H8[9;22H[?12l[?25h[25;1H[K[9;21H[?25l[25;51H9,17[10CTop[9;21H[?12l[?25h[?25l[25;51H[K[25;1H:[?12l[?25hwq[?25l"stat2.cpp" 25L, 478C written]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes
-[?1l>[?12l[?25h[?1049l$ vim stat2.cpp$ g++ stat2.cpp && ./a.out 
-0
-$ g++ stat2.cpp && ./a.out $ [12Pvim stat2.cpp
-[?1049h[?1h=[1;25r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[25;1H"stat2.cpp" 25L, 478C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
-[33m  2 [m[35m#include [m[31m<sys/types.h>[m
-[33m  3 [m[35m#include [m[31m<sys/stat.h>[m
-[33m  4 [m[35m#include [m[31m<unistd.h>[m
-[33m  5 using[m [32mnamespace[m std;
-[33m  6 
-  7 [m[32mint[m main()
-[33m  8 [m{
-[33m  9 [m    cout << ([31m2[m >> [31m2[m) << endl;
-[33m 10 [m    [33mreturn[m [31m0[m;
-[33m 11 
- 12 [m    [32mstruct[m stat s;
-[33m 13 [m    stat([31m"[m[4m[31mstat2[m[31m.[m[4m[31mcpp[m[31m"[m,&s);
-[33m 14 [m    cout << oct;
-[33m 15 [m    cout << s.st_mode << endl;
-[33m 16 
- 17 [m    cout << ((s.st_mode&S_IRUSR)?[31m"[m[4m[31mr[m[31m"[m:[31m"-"[m);
-[33m 18 [m    cout << ((s.st_mode&S_IWUSR)?[31m"[m[4m[31mw[m[31m"[m:[31m"-"[m);
-[33m 19 [m    cout << ((s.st_mode&S_IXUSR)?[31m"x"[m:[31m"-"[m);
-[33m 20 
- 21 [m    [34m//if ([m[4m[34ms[m[34m.st_mode & [m[4m[34mS[m[34m_[m[4m[34mIRUSR[m[34m) [m[4m[34mcout[m[34m << "[m[4m[34mr[m[34m";[m
-[33m 22 [m    [34m//else [m[4m[34mcout[m[34m << "-";[m
-[33m 23 
- 24 [m    cout << endl;[25;51H1,1[11CTop]2;stat2.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[25;51H2[2;5H[?12l[?25h[?25l[25;51H3[3;5H[?12l[?25h[?25l[25;51H4[4;5H[?12l[?25h[?25l[25;51H5[5;5H[?12l[?25h[?25l[25;51H6,0-1[6;5H[?12l[?25h[?25l[25;51H7,1  [7;5H[?12l[?25h[?25l[25;51H8[8;5H[?12l[?25h[?25l[25;51H9[9;5H[?12l[?25h[?25l[25;53H29[9;33H[?12l[?25h[?25l[25;54H8[9;32H[?12l[?25h[?25l[25;54H7[9;31H[?12l[?25h[?25l[25;54H6[9;30H[?12l[?25h[?25l[25;54H5[9;29H[?12l[?25h[?25l[25;54H4[9;28H[?12l[?25h[?25l[25;54H3[9;27H[?12l[?25h[?25l[25;54H2[9;26H[?12l[?25h[?25l[25;54H1[9;25H[?12l[?25h[?25l[9;17H[46m([6C)[m[25;54H0[9;24H[?12l[?25h[?25l[9;17H([6C)[25;53H19[9;23H[?12l[?25h[?25l[31m1]2;stat2.cpp + (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[?12l[?25h[?25l[m[25;1H[K[25;1H:[?12l[?25hw[?25l"stat2.cpp" 25L, 478C written[21C9,19[10CTop]2;stat2.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;stat2.cpp[25;51H[K[25;51H9,19[10CTop[9;23H[?12l[?25h[?25l[25;1H[K[25;1H:[?12l[?25h[?25l[25;1H[K[25;51H9,19[10CTop[9;23H[?12l[?25h[?25l[25;51H[K[25;1H:[?12l[?25hwq[?25l"stat2.cpp" 25L, 478C written]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes
-[?1l>[?12l[?25h[?1049l$ clear
-[H[2J$ pwd
-/home/user/proj/ucr-cs100/lecture-notes
-$ vim valgrind.cpp
-[?1049h[?1h=[1;25r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[25;1H"valgrind.cpp" [New File][>c[1;1H[33m  1 [m
-[1m[34m~                                                                   [3;1H~                                                                   [4;1H~                                                                   [5;1H~                                                                   [6;1H~                                                                   [7;1H~                                                                   [8;1H~                                                                   [9;1H~                                                                   [10;1H~                                                                   [11;1H~                                                                   [12;1H~                                                                   [13;1H~                                                                   [14;1H~                                                                   [15;1H~                                                                   [16;1H~                                                                   [17;1H~                                                                   [18;1H~                                                                   [19;1H~                                                                   [20;1H~                                                                   [21;1H~                                                                   [22;1H~                                                                   [23;1H~                                                                   [24;1H~                                                                   [m[25;51H0,0-1[9CAll]2;valgrind.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[25;1H[1m-- INSERT --[m[25;13H[K[25;51H0,1[11CAll[1;5H[?12l[?25h[?25l#[25;51H1,2]2;valgrind.cpp + (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[1;6H[?12l[?25h[?25li[25;53H3[1;7H[?12l[?25h[?25ln[25;53H4[1;8H[?12l[?25h[?25lc[25;53H5[1;9H[?12l[?25h[?25ll[25;53H6[1;10H[?12l[?25h[?25lu[25;53H7[1;11H[?12l[?25h[?25ld[25;53H8[1;12H[?12l[?25h[?25le[25;53H9[1;13H[?12l[?25h[?25l[25;53H10[1;14H[?12l[?25h[?25l[1;5H[35m#include <[m[25;54H1[1;15H[?12l[?25h[?25li[25;54H2[1;16H[?12l[?25h[?25lo[25;54H3[1;17H[?12l[?25h[?25ls[25;54H4[1;18H[?12l[?25h[?25lt[25;54H5[1;19H[?12l[?25h[?25lr[25;54H6[1;20H[?12l[?25h[?25le[25;54H7[1;21H[?12l[?25h[?25la[25;54H8[1;22H[?12l[?25h[?25lm[25;54H9[1;23H[?12l[?25h[?25l[1;14H[31m<iostream>[m[25;53H20[1;24H[?12l[?25h[?25l
-[33m  2 [m[2;5H[K[25;51H2,1 [2;5H[?12l[?25h[?25lu[25;53H2[2;6H[?12l[?25h[?25ls[25;53H3[2;7H[?12l[?25h[?25li[25;53H4[2;8H[?12l[?25h[?25ln[25;53H5[2;9H[?12l[?25h[?25l[33musing[m[25;53H6[2;10H[?12l[?25h[?25l[25;53H7[2;11H[?12l[?25h[?25ln[25;53H8[2;12H[?12l[?25h[?25la[25;53H9[2;13H[?12l[?25h[?25lm[25;53H10[2;14H[?12l[?25h[?25le[25;54H1[2;15H[?12l[?25h[?25ls[25;54H2[2;16H[?12l[?25h[?25lp[25;54H3[2;17H[?12l[?25h[?25la[25;54H4[2;18H[?12l[?25h[?25lc[25;54H5[2;19H[?12l[?25h[?25l[2;11H[32mnamespace[m[25;54H6[2;20H[?12l[?25h[?25l[2;11Hnamespaces[25;54H7[2;21H[?12l[?25h[?25l[2;11H[32mnamespace[m[2;20H[K[25;54H6[2;20H[?12l[?25h[?25l[25;54H7[2;21H[?12l[?25h[?25ls[25;54H8[2;22H[?12l[?25h[?25lt[25;54H9[2;23H[?12l[?25h[?25ld[25;53H20[2;24H[?12l[?25h[?25l;[25;54H1[2;25H[?12l[?25h[?25l
-[33m  3 [m[3;5H[K[25;51H3,1 [3;5H[?12l[?25h[?25l
-[33m  4 [m[4;5H[K[25;51H4[4;5H[?12l[?25h[?25li[25;53H2[4;6H[?12l[?25h[?25ln[25;53H3[4;7H[?12l[?25h[?25l[32mint[m[25;53H4[4;8H[?12l[?25h[?25l[25;53H5[4;9H[?12l[?25h[?25lm[25;53H6[4;10H[?12l[?25h[?25la[25;53H7[4;11H[?12l[?25h[?25li[25;53H8[4;12H[?12l[?25h[?25ln[25;53H9[4;13H[?12l[?25h[?25l([25;51H[K[25;51H4,10[10CAll[4;14H[?12l[?25h[?25l)[46m()[m[25;51H[K[25;51H4,11[10CAll[4;15H[?12l[?25h[?25l
-[33m  5 [m[5;5H[K[4;13H()[25;51H5,1 [5;5H[?12l[?25h[?25l{[25;51H[K[25;51H5,2[11CAll[5;6H[?12l[?25h[?25l
-[33m  6 [m    [6;9H[K[25;51H6,5[6;9H[?12l[?25h[?25l}[5;5H[46m{[6;5H}[m[25;51H[K[25;51H6,2[11CAll[6;6H[?12l[?25h[?25l[25;51H[K[25;51H5,2[11CAll[5;6H[?12l[?25h[?25l[6;5H[46m [m
-[33m  7 [m}[7;6H[K[5;5H{[6;5H [25;51H6,5[6;9H[?12l[?25h[?25lr[25;53H6[6;10H[?12l[?25h[?25le[25;53H7[6;11H[?12l[?25h[?25lt[25;53H8[6;12H[?12l[?25h[?25lu[25;53H9[6;13H[?12l[?25h[?25lr[25;53H10[6;14H[?12l[?25h[?25l[33mreturn[m[25;54H1[6;15H[?12l[?25h[?25l[25;54H2[6;16H[?12l[?25h[?25l[31m0[m[25;54H3[6;17H[?12l[?25h[?25l;[25;54H4[6;18H[?12l[?25h[?25l[5;5H[46m{[7;5H}[m[25;51H[K[25;51H5,2[11CAll[5;6H[?12l[?25h[?25l[6;9H[K[7;5H[46m [m   [33mreturn[m [31m0[m;
-[33m  8 [m}[8;6H[K[5;5H{[7;5H [25;51H6,5[6;9H[?12l[?25h[?25lc[25;53H6[6;10H[?12l[?25h[?25lo[25;53H7[6;11H[?12l[?25h[?25lu[25;53H8[6;12H[?12l[?25h[?25lt[25;53H9[6;13H[?12l[?25h[?25l[25;53H10[6;14H[?12l[?25h[?25l<[25;54H1[6;15H[?12l[?25h[?25l<[25;54H2[6;16H[?12l[?25h[?25l[25;54H3[6;17H[?12l[?25h[?25l[31m"[m[25;54H4[6;18H[?12l[?25h[?25l[31mH[m[25;54H5[6;19H[?12l[?25h[?25l[31mo[m[25;54H6[6;20H[?12l[?25h[?25l[31md[m[25;54H7[6;21H[?12l[?25h[?25l[31mo[m[25;54H8[6;22H[?12l[?25h[?25l[31mr[m[25;54H9[6;23H[?12l[?25h[?25l[4m[31mHodor[m[31m [m[25;53H20[6;24H[?12l[?25h[?25l[31mh[m[25;54H1[6;25H[?12l[?25h[?25l[31mo[m[25;54H2[6;26H[?12l[?25h[?25l[31md[m[25;54H3[6;27H[?12l[?25h[?25l[31mo[m[25;54H4[6;28H[?12l[?25h[?25l[31mr[m[25;54H5[6;29H[?12l[?25h[?25l[4m[31mhodor[m[31m [m[25;54H6[6;30H[?12l[?25h[?25l[31mh[m[25;54H7[6;31H[?12l[?25h[?25l[31mo[m[25;54H8[6;32H[?12l[?25h[?25l[31md[m[25;54H9[6;33H[?12l[?25h[?25l[31mo[m[25;53H30[6;34H[?12l[?25h[?25l[31mr[m[25;54H1[6;35H[?12l[?25h[?25l[4m[31mhodor[m[31m.[m[25;54H2[6;36H[?12l[?25h[?25l[31m.[m[25;54H3[6;37H[?12l[?25h[?25l[31m.[m[25;54H4[6;38H[?12l[?25h[?25l[31m [m[25;54H5[6;39H[?12l[?25h[?25l[31mH[m[25;54H6[6;40H[?12l[?25h[?25l[31mO[m[25;54H7[6;41H[?12l[?25h[?25l[31mD[m[25;54H8[6;42H[?12l[?25h[?25l[31mO[m[25;54H9[6;43H[?12l[?25h[?25l[31mR[m[25;53H40[6;44H[?12l[?25h[?25l[4m[31mHODOR[m[31m![m[25;54H1[6;45H[?12l[?25h[?25l[31m![m[25;54H2[6;46H[?12l[?25h[?25l[31m![m[25;54H3[6;47H[?12l[?25h[?25l[31m"[m[25;54H4[6;48H[?12l[?25h[?25l[25;54H5[6;49H[?12l[?25h[?25l<[25;54H6[6;50H[?12l[?25h[?25l<[25;54H7[6;51H[?12l[?25h[?25l[25;54H8[6;52H[?12l[?25h[?25le[25;54H9[6;53H[?12l[?25h[?25ln[25;53H50[6;54H[?12l[?25h[?25ld[25;54H1[6;55H[?12l[?25h[?25l;[25;54H2[6;56H[?12l[?25h[?25l[6;55H[K[25;54H1[6;55H[?12l[?25h[?25ll[25;54H2[6;56H[?12l[?25h[?25l;[25;54H3[6;57H[?12l[?25h[25;1H[K[6;56H[?25l[25;51H6,52[10CAll[6;56H[?12l[?25h[?25l[25;51H[K[25;1H:[?12l[?25hwq[?25l"valgrind.cpp" [New] 8L, 124C written]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes
-[?1l>[?12l[?25h[?1049l$ g++ valgrind.cpp && .a /a.out 
-Hodor hodor hodor... HODOR!!!
-$ valgrind ./a.out
-==18985== Memcheck, a memory error detector
-==18985== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
-==18985== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
-==18985== Command: ./a.out
-==18985== 
-Hodor hodor hodor... HODOR!!!
-==18985== 
-==18985== HEAP SUMMARY:
-==18985==     in use at exit: 0 bytes in 0 blocks
-==18985==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
-==18985== 
-==18985== All heap blocks were freed -- no leaks are possible
-==18985== 
-==18985== For counts of detected and suppressed errors, rerun with: -v
-==18985== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 4 from 4)
-$ (reverse-i-search)`': v': valgrind ./a.outi': vim valgrind.cpp[1@m': [23P$ 
-[?1049h[?1h=[1;25r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[25;1H"valgrind.cpp" 8L, 124C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
-[33m  2 using[m [32mnamespace[m std;
-[33m  3 
-  4 [m[32mint[m main()
-[33m  5 [m{
-[33m  6 [m    cout << [31m"[m[4m[31mHodor[m[31m [m[4m[31mhodor[m[31m [m[4m[31mhodor[m[31m... [m[4m[31mHODOR[m[31m!!!"[m << endl;
-[33m  7 [m    [33mreturn[m [31m0[m;
-[33m  8 [m}
-[1m[34m~                                                                   [10;1H~                                                                   [11;1H~                                                                   [12;1H~                                                                   [13;1H~                                                                   [14;1H~                                                                   [15;1H~                                                                   [16;1H~                                                                   [17;1H~                                                                   [18;1H~                                                                   [19;1H~                                                                   [20;1H~                                                                   [21;1H~                                                                   [22;1H~                                                                   [23;1H~                                                                   [24;1H~                                                                   [m[25;51H1,1[11CAll]2;valgrind.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[25;51H2[2;5H[?12l[?25h[?25l[25;51H3,0-1[3;5H[?12l[?25h[?25l[25;51H4,1  [4;5H[?12l[?25h[?25l[5;5H[46m{[8;5H}[m[25;51H5[5;5H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;13H[K[25;51H6,5[11CTop[6;9H[K[7;9Hcout << [31m"[m[4m[31mHodor[m[31m [m[4m[31mhodor[m[31m [m[4m[31mhodor[m[31m... [m[4m[31mHODOR[m[31m!!!"[m << endl;[8;5H[46m [m   [33mreturn[m [31m0[m;
-[33m  9 [m}[9;6H[K[5;5H{[8;5H ]2;valgrind.cpp + (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[6;9H[?12l[?25h[?25lc[25;53H6[11CAll[6;10H[?12l[?25h[?25lh[25;53H7[6;11H[?12l[?25h[?25la[25;53H8[6;12H[?12l[?25h[?25l[32mchar[m[25;53H9[6;13H[?12l[?25h[?25l[25;53H10[6;14H[?12l[?25h[?25lb[25;54H1[6;15H[?12l[?25h[?25lu[25;54H2[6;16H[?12l[?25h[?25lf[25;54H3[6;17H[?12l[?25h[?25l[25;54H0[6;14H[?12l[?25h[?25l*buf[25;54H1[6;15H[?12l[?25h[?25l[25;54H4[6;18H[?12l[?25h[?25l=[25;54H5[6;19H[?12l[?25h[?25ln[25;54H6[6;20H[?12l[?25h[?25le[25;54H7[6;21H[?12l[?25h[?25l[33mnew[m[25;54H8[6;22H[?12l[?25h[?25l[25;54H9[6;23H[?12l[?25h[?25lc[25;53H20[6;24H[?12l[?25h[?25lh[25;54H1[6;25H[?12l[?25h[?25la[25;54H2[6;26H[?12l[?25h[?25l[32mchar[m[25;54H3[6;27H[?12l[?25h[?25l[[7;56H[1m[37m[41m;[8;17H;[m[25;51H[K[25;51H6,24[10CAll[6;28H[?12l[?25h[?25l[31m1[m[25;54H5[6;29H[?12l[?25h[?25l[31m0[m[25;54H6[6;30H[?12l[?25h[?25l[31m2[m[25;54H7[6;31H[?12l[?25h[?25l[31m4[m[25;54H8[6;32H[?12l[?25h[?25l][7;56H;[8;17H;[6;27H[46m[[4C][m[25;51H[K[25;51H6,29[10CAll[6;33H[?12l[?25h[?25l([6;27H[[4C][25;51H[K[25;51H6,30[10CAll[6;34H[?12l[?25h[?25l)[46m()[m[25;51H[K[25;51H6,31[10CAll[6;35H[?12l[?25h[?25l;()[25;54H2[6;36H[?12l[?25h[?25l[7;9H[K[8;9Hcout << [31m"[m[4m[31mHodor[m[31m [m[4m[31mhodor[m[31m [m[4m[31mhodor[m[31m... [m[4m[31mHODOR[m[31m!!!"[m << endl;[9;5H    [33mreturn[m [31m0[m;
-[33m 10 [m}[10;6H[K[25;51H7,5 [7;9H[?12l[?25h[25;1H[K[7;5H[?25l[25;51H7,0-1[9CAll[7;5H[?12l[?25h[?25l[25;51H[K[25;1H:[?12l[?25hw[?25l"valgrind.cpp" 10L, 157C written[18C7,0-1[9CAll]2;valgrind.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[25;51H[K[25;51H7,0-1[9CAll[7;5H[?12l[?25h[?25l[?12l[?25h[?25l[25;1H[K[25;1H:[?12l[?25hwq[?25l"valgrind.cpp" 10L, 157C written]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes
-[?1l>[?12l[?25h[?1049l$ clear
-[H[2J$ clear$ vim valgrind.cpp$ valgrind ./a.out$ g++ valgrind.cpp && ./a.out 
-Hodor hodor hodor... HODOR!!!
-$ g++ valgrind.cpp && ./a.out $ clear[K$ vim valgrind.cpp$ valgrind ./a.out
-==20057== Memcheck, a memory error detector
-==20057== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
-==20057== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
-==20057== Command: ./a.out
-==20057== 
-Hodor hodor hodor... HODOR!!!
-==20057== 
-==20057== HEAP SUMMARY:
-==20057==     in use at exit: 1,024 bytes in 1 blocks
-==20057==   total heap usage: 1 allocs, 0 frees, 1,024 bytes allocated
-==20057== 
-==20057== LEAK SUMMARY:
-==20057==    definitely lost: 1,024 bytes in 1 blocks
-==20057==    indirectly lost: 0 bytes in 0 blocks
-==20057==      possibly lost: 0 bytes in 0 blocks
-==20057==    still reachable: 0 bytes in 0 blocks
-==20057==         suppressed: 0 bytes in 0 blocks
-==20057== Rerun with --leak-check=full to see details of leaked memory
-==20057== 
-==20057== For counts of detected and suppressed errors, rerun with: -v
-==20057== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 4 from 4)
-$ cla   clear
-[H[2J$ clear$ valgrind ./a.out --leak-check=full
-==21233== Memcheck, a memory error detector
-==21233== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
-==21233== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
-==21233== Command: ./a.out --leak-check=full
-==21233== 
-Hodor hodor hodor... HODOR!!!
-==21233== 
-==21233== HEAP SUMMARY:
-==21233==     in use at exit: 1,024 bytes in 1 blocks
-==21233==   total heap usage: 1 allocs, 0 frees, 1,024 bytes allocated
-==21233== 
-==21233== LEAK SUMMARY:
-==21233==    definitely lost: 1,024 bytes in 1 blocks
-==21233==    indirectly lost: 0 bytes in 0 blocks
-==21233==      possibly lost: 0 bytes in 0 blocks
-==21233==    still reachable: 0 bytes in 0 blocks
-==21233==         suppressed: 0 bytes in 0 blocks
-==21233== Rerun with --leak-check=full to see details of leaked memory
-==21233== 
-==21233== For counts of detected and suppressed errors, rerun with: -v
-==21233== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 4 from 4)
-$ valgrind ./a.out --leak-check=fullout[1P[1P[1P[1P[1P[1P[1P[1P --leak-check=full ./a.out
-==21724== Memcheck, a memory error detector
-==21724== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
-==21724== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
-==21724== Command: ./a.out
-==21724== 
-Hodor hodor hodor... HODOR!!!
-==21724== 
-==21724== HEAP SUMMARY:
-==21724==     in use at exit: 1,024 bytes in 1 blocks
-==21724==   total heap usage: 1 allocs, 0 frees, 1,024 bytes allocated
-==21724== 
-==21724== 1,024 bytes in 1 blocks are definitely lost in loss record 1 of 1
-==21724==    at 0x4C28147: operator new[](unsigned long) (vg_replace_malloc.c:348)
-==21724==    by 0x4008CD: main (in /home/user/proj/ucr-cs100/lecture-notes/a.out)
-==21724== 
-==21724== LEAK SUMMARY:
-==21724==    definitely lost: 1,024 bytes in 1 blocks
-==21724==    indirectly lost: 0 bytes in 0 blocks
-==21724==      possibly lost: 0 bytes in 0 blocks
-==21724==    still reachable: 0 bytes in 0 blocks
-==21724==         suppressed: 0 bytes in 0 blocks
-==21724== 
-==21724== For counts of detected and suppressed errors, rerun with: -v
-==21724== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 4 from 4)
-$ valgrind --leak-check=full ./a.out$ valgrind ./a.out --leak-check=full$ clear[K$ valgrind ./a.out$ g++ valgrind.cpp && ./a.out            -g
-$ g++ valgrind.cpp -g$ valgrind --leak-check=full ./a.out
-==22086== Memcheck, a memory error detector
-==22086== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
-==22086== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
-==22086== Command: ./a.out
-==22086== 
-Hodor hodor hodor... HODOR!!!
-==22086== 
-==22086== HEAP SUMMARY:
-==22086==     in use at exit: 1,024 bytes in 1 blocks
-==22086==   total heap usage: 1 allocs, 0 frees, 1,024 bytes allocated
-==22086== 
-==22086== 1,024 bytes in 1 blocks are definitely lost in loss record 1 of 1
-==22086==    at 0x4C28147: operator new[](unsigned long) (vg_replace_malloc.c:348)
-==22086==    by 0x4008CD: main (valgrind.cpp:6)
-==22086== 
-==22086== LEAK SUMMARY:
-==22086==    definitely lost: 1,024 bytes in 1 blocks
-==22086==    indirectly lost: 0 bytes in 0 blocks
-==22086==      possibly lost: 0 bytes in 0 blocks
-==22086==    still reachable: 0 bytes in 0 blocks
-==22086==         suppressed: 0 bytes in 0 blocks
-==22086== 
-==22086== For counts of detected and suppressed errors, rerun with: -v
-==22086== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 4 from 4)
-$ rm a, .out 
-$ rm a.out $ valgrind --leak-check=full ./a.out$ [15Pg++ valgrind.cpp -g   $ g++ valgrind$ g++ [1@-[1@g[1@ 
-$ g++ -g valgrind.cpp$ [10Prm a.out $ valgrind --leak-check=full ./a.out
-==22217== Memcheck, a memory error detector
-==22217== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
-==22217== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
-==22217== Command: ./a.out
-==22217== 
-Hodor hodor hodor... HODOR!!!
-==22217== 
-==22217== HEAP SUMMARY:
-==22217==     in use at exit: 1,024 bytes in 1 blocks
-==22217==   total heap usage: 1 allocs, 0 frees, 1,024 bytes allocated
-==22217== 
-==22217== 1,024 bytes in 1 blocks are definitely lost in loss record 1 of 1
-==22217==    at 0x4C28147: operator new[](unsigned long) (vg_replace_malloc.c:348)
-==22217==    by 0x4008CD: main (valgrind.cpp:6)
-==22217== 
-==22217== LEAK SUMMARY:
-==22217==    definitely lost: 1,024 bytes in 1 blocks
-==22217==    indirectly lost: 0 bytes in 0 blocks
-==22217==      possibly lost: 0 bytes in 0 blocks
-==22217==    still reachable: 0 bytes in 0 blocks
-==22217==         suppressed: 0 bytes in 0 blocks
-==22217== 
-==22217== For counts of detected and suppressed errors, rerun with: -v
-==22217== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 4 from 4)
-$ vim 
-.env.cpp.swp
-.func.cpp.swp
-.hw0testcases.swp
-.map.cpp.swp
-.signals.cpp.swp
-.sort.cpp.swp
-a.out
-bitwise-quiz.cpp
-exec.cpp
-file1
-file2
-fileio.cpp
-gittest/
-hw0testcases
-lecture1
-lecture2
-lecture4
-lecture5
-lecture7
-ls.cpp
-macros.cpp
-stat2.cpp
-stupidprogram
-test
---More--[K$ vim ^C
-$ (reverse-i-search)`': v': valgrind --leak-check=full ./a.out(reverse-i-search)`v': [17Pi': vim valgrind.cpp[1@m': [1@ ': [24P$ 
-[?1049h[?1h=[1;25r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[25;1H"valgrind.cpp" 10L, 157C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
-[33m  2 using[m [32mnamespace[m std;
-[33m  3 
-  4 [m[32mint[m main()
-[33m  5 [m{
-[33m  6 [m    [32mchar[m *buf=[33mnew[m [32mchar[m[[31m1024[m]();
-[33m  7 
-  8 [m    cout << [31m"[m[4m[31mHodor[m[31m [m[4m[31mhodor[m[31m [m[4m[31mhodor[m[31m... [m[4m[31mHODOR[m[31m!!!"[m << endl;
-[33m  9 [m    [33mreturn[m [31m0[m;
-[33m 10 [m}
-[1m[34m~                                                                   [12;1H~                                                                   [13;1H~                                                                   [14;1H~                                                                   [15;1H~                                                                   [16;1H~                                                                   [17;1H~                                                                   [18;1H~                                                                   [19;1H~                                                                   [20;1H~                                                                   [21;1H~                                                                   [22;1H~                                                                   [23;1H~                                                                   [24;1H~                                                                   [m[25;51H1,1[11CAll]2;valgrind.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[25;51H2[2;5H[?12l[?25h[?25l[25;51H3,0-1[3;5H[?12l[?25h[?25l[25;51H4,1  [4;5H[?12l[?25h[?25l[5;5H[46m{[10;5H}[m[25;51H5[5;5H[?12l[?25h[?25l{[10;5H}[25;51H6[6;5H[?12l[?25h[?25l    [34m//char *[m[4m[34mbuf[m[34m=new char[1024]();]2;valgrind.cpp + (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[m[25;51H7,0-1[7;5H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;13H[K[25;51H7,1[11CTop[8;9H[K[9;9Hcout << [31m"[m[4m[31mHodor[m[31m [m[4m[31mhodor[m[31m [m[4m[31mhodor[m[31m... [m[4m[31mHODOR[m[31m!!!"[m << endl;[10;5H    [33mreturn[m [31m0[m;
-[33m 11 [m}[11;6H[K[7;5H[?12l[?25h[?25l[25;53H5[11CAll[7;9H[?12l[?25h[?25lb[25;53H6[7;10H[?12l[?25h[?25lu[25;53H7[7;11H[?12l[?25h[?25l[7;10H[K[25;53H6[7;10H[?12l[?25h[?25l[7;9H[K[25;53H5[7;9H[?12l[?25h[?25lc[25;53H6[7;10H[?12l[?25h[?25lh[25;53H7[7;11H[?12l[?25h[?25la[25;53H8[7;12H[?12l[?25h[?25l[32mchar[m[25;53H9[7;13H[?12l[?25h[?25l[25;53H10[7;14H[?12l[?25h[?25lb[25;54H1[7;15H[?12l[?25h[?25lu[25;54H2[7;16H[?12l[?25h[?25lg[25;54H3[7;17H[?12l[?25h[?25l[7;16H[K[25;54H2[7;16H[?12l[?25h[?25lf[25;54H3[7;17H[?12l[?25h[?25l[[9;56H[1m[37m[41m;[10;17H;[m[25;51H[K[25;51H7,14[10CAll[7;18H[?12l[?25h[?25l[31m1[m[25;54H5[7;19H[?12l[?25h[?25l[31m0[m[25;54H6[7;20H[?12l[?25h[?25l[31m2[m[25;54H7[7;21H[?12l[?25h[?25l[31m4[m[25;54H8[7;22H[?12l[?25h[?25l][9;56H;[10;17H;[7;17H[46m[[4C][m[25;51H[K[25;51H7,19[10CAll[7;23H[?12l[?25h[?25l;[7;17H[[4C][25;53H20[7;24H[?12l[?25h[25;1H[K[7;23H[?25l[25;51H7,19[10CAll[7;23H[?12l[?25h[?25l[25;51H[K[25;1H:[?12l[?25hW[?25l[1m[37m[41mE492: Not an editor command: W[m[20C7,19[10CAll[7;23H[?12l[?25h[?25l[25;1H[K[25;1H:[?12l[?25hw[?25l"valgrind.cpp" 11L, 179C written[18C7,19[10CAll]2;valgrind.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[25;51H[K[25;51H7,19[10CAll[7;23H[?12l[?25h[?25l[25;51H6[6;23H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;13H[K[25;51H7,7[11CTop[7;9H[34m//[m[7;11H[K[8;9H[32mchar[m buf[[31m1024[m];[9;9H[K[10;9Hcout << [31m"[m[4m[31mHodor[m[31m [m[4m[31mhodor[m[31m [m[4m[31mhodor[m[31m... [m[4m[31mHODOR[m[31m!!!"[m << endl;[11;5H    [33mreturn[m [31m0[m;
-[33m 12 [m}[12;6H[K]2;valgrind.cpp + (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[7;11H[?12l[?25h[?25l/[7;10H[K[25;53H6[11CAll[7;10H[?12l[?25h[?25l[7;9H[K[25;53H5[7;9H[?12l[?25h[?25lc[25;53H6[7;10H[?12l[?25h[?25lh[25;53H7[7;11H[?12l[?25h[?25la[25;53H8[7;12H[?12l[?25h[?25l[32mchar[m[25;53H9[7;13H[?12l[?25h[?25l[25;53H10[7;14H[?12l[?25h[?25l*[25;54H1[7;15H[?12l[?25h[?25lb[25;54H2[7;16H[?12l[?25h[?25lu[25;54H3[7;17H[?12l[?25h[?25lf[25;54H4[7;18H[?12l[?25h[25;1H[K[7;17H[?25l[25;51H7,13[10CAll[7;17H[?12l[?25h[?25l[8;17H[46m[[4C][m[25;51H8[8;17H[?12l[?25h[?25l[8;9H    [34m//char [m[4m[34mbuf[m[34m[1024];[m[25;51H9,0-1[9;5H[?12l[?25h[?25l[25;51H8,1  [8;5H[?12l[?25h[?25l[25;51H7[7;5H[?12l[?25h[?25l[25;51H6[6;5H[?12l[?25h[?25l[25;51H7[7;5H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;51H[K[25;51H7,2[11CAll[7;6H[?12l[?25h[?25l[25;53H14[7;18H[?12l[?25h[?25l=[25;54H5[7;19H[?12l[?25h[?25lm[25;54H6[7;20H[?12l[?25h[?25la[25;54H7[7;21H[?12l[?25h[?25ll[25;54H8[7;22H[?12l[?25h[?25ll[25;54H9[7;23H[?12l[?25h[?25lo[25;53H20[7;24H[?12l[?25h[?25lc[25;54H1[7;25H[?12l[?25h[?25l([25;51H[K[25;51H7,22[10CAll[7;26H[?12l[?25h[?25l)[46m()[m[25;51H[K[25;51H7,23[10CAll[7;27H[?12l[?25h[?25ll()[25;54H4[7;28H[?12l[?25h[25;1H[K[7;27H[?25l[25;51H7,23[10CAll[7;27H[?12l[?25h[?25l;[?12l[?25h[?25l[25;51H[K[25;1H:[?12l[?25hw[?25l"valgrind.cpp" 12L, 209C written[18C7,23[10CAll]2;valgrind.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[25;51H[K[25;51H7,23[10CAll[7;27H[?12l[?25h[?25l[46m()[m[25;54H2[7;26H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;13H[K[25;51H7,22[10CAll[7;26H[?12l[?25h[?25l[31m[46m1[m);[31m1[m[46m)[m[25;54H3]2;valgrind.cpp + (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[7;27H[?12l[?25h[?25l[31m[46m0[m);[31m0[m[46m)[m[25;54H4[7;28H[?12l[?25h[?25l[31m[46m2[m);[31m2[m[46m)[m[25;54H5[7;29H[?12l[?25h[?25l[31m[46m4[m);[31m4[m[46m)[m[25;54H6[7;30H[?12l[?25h[25;1H[K[7;29H[?25l([4C)[25;51H7,25[10CAll[7;29H[?12l[?25h[?25l[25;51H[K[25;1H:[?12l[?25hw[?25l"valgrind.cpp" 12L, 213C written[18C7,25[10CAll]2;valgrind.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[25;51H[K[25;51H7,25[10CAll[7;29H[?12l[?25h[?25l[25;54H4[7;28H[?12l[?25h[?25l[25;54H3[7;27H[?12l[?25h[?25l[25;54H2[7;26H[?12l[?25h[?25l[46m([4C)[m[25;54H1[7;25H[?12l[?25h[?25l([4C)[25;54H0[7;24H[?12l[?25h[?25l[25;53H19[7;23H[?12l[?25h[?25l[25;54H8[7;22H[?12l[?25h[?25l[25;54H7[7;21H[?12l[?25h[?25l[25;54H6[7;20H[?12l[?25h[?25l[25;54H5[7;19H[?12l[?25h[25;1H
-[?1l>[?1049l]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes
-[1]+  Stopped                 vim valgrind.cpp
-$ man malloc
-man: can't set the locale; make sure $LC_* and $LANG are correct
-[?1049h[?1h=MALLOC(3)            Linux Programmer's Manual           MALLOC(3)[m
-[m
-[1mNAME[0m[m
-       malloc,  free,  calloc, realloc - allocate and free dynamic[m
-       memory[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<stdlib.h>[0m[m
-[m
-       [1mvoid[0m [1m*malloc(size_t[0m [4msize[24m[1m);[0m[m
-       [1mvoid[0m [1mfree(void[0m [4m*ptr[24m[1m);[0m[m
-       [1mvoid[0m [1m*calloc(size_t[0m [4mnmemb[24m[1m,[0m [1msize_t[0m [4msize[24m[1m);[0m[m
-       [1mvoid[0m [1m*realloc(void[0m [4m*ptr[24m[1m,[0m [1msize_t[0m [4msize[24m[1m);[0m[m
-[m
-[1mDESCRIPTION[0m[m
-       The [1mmalloc[0m() function allocates [4msize[24m bytes  and  returns  a[m
-       pointer  to  the  allocated memory.  [4mThe[24m [4mmemory[24m [4mis[24m [4mnot[24m [4mini-[24m[m
-       [4mtialized[24m.  If [4msize[24m is 0, then [1mmalloc[0m() returns either NULL,[m
-       or  a  unique  pointer value that can later be successfully[m
-       passed to [1mfree[0m().[m
-[m
-       The [1mfree[0m() function frees the memory space  pointed  to  by[m
-       [4mptr[24m,  which  must  have been returned by a previous call to[m
-       [1mmalloc[0m(),  [1mcalloc[0m()  or  [1mrealloc[0m().    Otherwise,   or   if[m
-[7m Manual page malloc(3) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ man malloc$ vim valgrind.cpp
-[?1049h[?1h=[1;25r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[25;1HE325: ATTENTION
-Found a swap file by the name ".valgrind.cpp.swp"
-[10Cowned by: user   dated: Mon Feb  2 16:52:21 2015
-[9Cfile name: ~user/proj/ucr-cs100/lecture-notes/valgrind.cpp
-[10Cmodified: no
-[9Cuser name: user   host name: userland
-[8Cprocess ID: 23536 (still running)
-While opening file "valgrind.cpp"
-[13Cdated: Mon Feb  2 16:52:21 2015
-
-(1) Another program may be editing the same file.  If this is the c
-[24;68Ha[25;1Hse,
-    be careful not to end up with two different instances of the sa
-[24;68Hm[25;1He
-    file when making changes.  Quit, or continue with caution.
-(2) An edit session for this file crashed.
-    If this is the case, use ":recover" or "vim -r valgrind.cpp"
-    to recover the changes (see ":help recovery").
-    If you did this already, delete the swap file ".valgrind.cpp.sw
-[24;68Hp[25;1H"
-    to avoid this message.
-
-Swap file ".valgrind.cpp.swp" already exists!
-[O]pen Read-Only, (E)dit anyway, (R)ecover, (Q)uit, (A)bort:[?12l[?25h[25;1H[K[25;1H
-[?1l>[?1049l$ fg
-vim valgrind.cpp
-]2;valgrind.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[?1049h[?1h=[?12;25h[?12l[?25h[27m[m[H[2J[?25l[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
-[33m  2 using[m [32mnamespace[m std;
-[33m  3 
-  4 [m[32mint[m main()
-[33m  5 [m{
-[33m  6 [m    [34m//char *[m[4m[34mbuf[m[34m=new char[1024]();[m
-[33m  7 [m    [32mchar[m *buf=malloc([31m1024[m);
-[33m  8 [m[8C[34m//char [m[4m[34mbuf[m[34m[1024];[m
-[33m  9 
- 10 [m    cout << [31m"[m[4m[31mHodor[m[31m [m[4m[31mhodor[m[31m [m[4m[31mhodor[m[31m... [m[4m[31mHODOR[m[31m!!!"[m << endl;
-[33m 11 [m    [33mreturn[m [31m0[m;
-[33m 12 [m}
-[1m[34m~                                                                   [14;1H~                                                                   [15;1H~                                                                   [16;1H~                                                                   [17;1H~                                                                   [18;1H~                                                                   [19;1H~                                                                   [20;1H~                                                                   [21;1H~                                                                   [22;1H~                                                                   [23;1H~                                                                   [24;1H~                                                                   [m[25;51H7,15[10CAll[7;19H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;51H[K[25;51H7,15[10CAll[7;19H[?12l[?25h[?25l(malloc([31m1024[m);[25;51H[K[25;51H7,16[10CAll]2;valgrind.cpp + (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[7;20H[?12l[?25h[?25lcmalloc([31m1024[m);[25;54H7[7;21H[?12l[?25h[?25lhmalloc([31m1024[m);[25;54H8[7;22H[?12l[?25h[?25lamalloc([31m1024[m);[25;54H9[7;23H[?12l[?25h[?25lrmalloc([31m1024[m);[25;53H20[7;24H[?12l[?25h[?25l[32mchar[m*malloc([31m1024[m);[25;54H1[7;25H[?12l[?25h[?25l)malloc([31m1024[m);[7;19H[46m([5C)[m[25;51H[K[25;51H7,22[10CAll[7;26H[?12l[?25h[25;1H[K[7;25H[?25l[25;51H7,21[10CAll[7;25H[?12l[?25h[?25l[25;51H[K[25;1H:[?12l[?25hw[?25l"valgrind.cpp" 12L, 220C written[18C7,21[10CAll]2;valgrind.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[25;51H[K[25;51H7,21[10CAll[7;25H[?12l[?25h[?25l([5C)[25;51H8[8;25H[?12l[?25h[?25l[25;1H[K[25;1H:[?12l[?25hwq[?25l"valgrind.cpp" 12L, 220C written]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes
-[?1l>[?12l[?25h[?1049l$ clear
-[H[2J$ clear$ [3Pfgvim valgrind.cpp$ [6Pman malloc$ vim valgrind.cpp$ valgrind --leak-check=full ./a.out$ [15Pg++ -g valgrind.cpp
-valgrind.cpp: In function 'int main()':
-valgrind.cpp:7:33: error: 'malloc' was not declared in this scope
-$ man malloc
-man: can't set the locale; make sure $LC_* and $LANG are correct
-[?1049h[?1h=MALLOC(3)            Linux Programmer's Manual           MALLOC(3)[m
-[m
-[1mNAME[0m[m
-       malloc,  free,  calloc, realloc - allocate and free dynamic[m
-       memory[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<stdlib.h>[0m[m
-[m
-       [1mvoid[0m [1m*malloc(size_t[0m [4msize[24m[1m);[0m[m
-       [1mvoid[0m [1mfree(void[0m [4m*ptr[24m[1m);[0m[m
-       [1mvoid[0m [1m*calloc(size_t[0m [4mnmemb[24m[1m,[0m [1msize_t[0m [4msize[24m[1m);[0m[m
-       [1mvoid[0m [1m*realloc(void[0m [4m*ptr[24m[1m,[0m [1msize_t[0m [4msize[24m[1m);[0m[m
-[m
-[1mDESCRIPTION[0m[m
-       The [1mmalloc[0m() function allocates [4msize[24m bytes  and  returns  a[m
-       pointer  to  the  allocated memory.  [4mThe[24m [4mmemory[24m [4mis[24m [4mnot[24m [4mini-[24m[m
-       [4mtialized[24m.  If [4msize[24m is 0, then [1mmalloc[0m() returns either NULL,[m
-       or  a  unique  pointer value that can later be successfully[m
-       passed to [1mfree[0m().[m
-[m
-       The [1mfree[0m() function frees the memory space  pointed  to  by[m
-       [4mptr[24m,  which  must  have been returned by a previous call to[m
-       [1mmalloc[0m(),  [1mcalloc[0m()  or  [1mrealloc[0m().    Otherwise,   or   if[m
-[7m Manual page malloc(3) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l$ fg
-bash: fg: current: no such job
-$ (reverse-i-search)`': v': g++ -g valgrind.cpp[2Pi': vim[1@m': [23P$ 
-[?1049h[?1h=[1;25r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[25;1H"valgrind.cpp" 12L, 220C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
-[33m  2 using[m [32mnamespace[m std;
-[33m  3 
-  4 [m[32mint[m main()
-[33m  5 [m{
-[33m  6 [m    [34m//char *[m[4m[34mbuf[m[34m=new char[1024]();[m
-[33m  7 [m    [32mchar[m *buf=([32mchar[m*)malloc([31m1024[m);
-[33m  8 [m[8C[34m//char [m[4m[34mbuf[m[34m[1024];[m
-[33m  9 
- 10 [m    cout << [31m"[m[4m[31mHodor[m[31m [m[4m[31mhodor[m[31m [m[4m[31mhodor[m[31m... [m[4m[31mHODOR[m[31m!!!"[m << endl;
-[33m 11 [m    [33mreturn[m [31m0[m;
-[33m 12 [m}
-[1m[34m~                                                                   [14;1H~                                                                   [15;1H~                                                                   [16;1H~                                                                   [17;1H~                                                                   [18;1H~                                                                   [19;1H~                                                                   [20;1H~                                                                   [21;1H~                                                                   [22;1H~                                                                   [23;1H~                                                                   [24;1H~                                                                   [m[25;51H1,1[11CAll]2;valgrind.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[25;1H[1m-- INSERT --[m[25;13H[K[25;51H2,1[11CTop[2;5H[K[3;5H[33musing[m [32mnamespace[m std;[4;5H[K[5;5H[32mint[m main()[6;5H{[6;9H[K[7;9H[34m//char *[m[4m[34mbuf[m[34m=new char[1024]();[m[7;38H[K[8;9H[32mchar[m *buf=([32mchar[m*)malloc([31m1024[m);[9;13H[34m//char [m[4m[34mbuf[m[34m[1024];[m[10;9H[K[11;9Hcout << [31m"[m[4m[31mHodor[m[31m [m[4m[31mhodor[m[31m [m[4m[31mhodor[m[31m... [m[4m[31mHODOR[m[31m!!!"[m << endl;[12;5H    [33mreturn[m [31m0[m;
-[33m 13 [m}[13;6H[K]2;valgrind.cpp + (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[2;5H[?12l[?25h[?25l@[25;53H2[11CAll[2;6H[?12l[?25h[?25l[2;5H[K[25;53H1[2;5H[?12l[?25h[?25l#[25;53H2[2;6H[?12l[?25h[?25li[25;53H3[2;7H[?12l[?25h[?25ln[25;53H4[2;8H[?12l[?25h[?25lc[25;53H5[2;9H[?12l[?25h[?25ll[25;53H6[2;10H[?12l[?25h[?25lu[25;53H7[2;11H[?12l[?25h[?25ld[25;53H8[2;12H[?12l[?25h[?25le[25;53H9[2;13H[?12l[?25h[?25l[25;53H10[2;14H[?12l[?25h[?25l[2;5H[35m#include <[m[25;54H1[2;15H[?12l[?25h[?25ls[25;54H2[2;16H[?12l[?25h[?25lt[25;54H3[2;17H[?12l[?25h[?25ld[25;54H4[2;18H[?12l[?25h[?25ll[25;54H5[2;19H[?12l[?25h[?25li[25;54H6[2;20H[?12l[?25h[?25lb[25;54H7[2;21H[?12l[?25h[?25lg[25;54H8[2;22H[?12l[?25h[?25l[2;21H[K[25;54H7[2;21H[?12l[?25h[?25l.[25;54H8[2;22H[?12l[?25h[?25lh[25;54H9[2;23H[?12l[?25h[?25l[2;14H[31m<stdlib.h>[m[25;53H20[2;24H[?12l[?25h[25;1H[K[2;23H[?25l[25;51H2,19[10CAll[2;23H[?12l[?25h[?25l[25;51H[K[25;1H:[?12l[?25hw[?25l"valgrind.cpp" 13L, 240C written[18C2,19[10CAll]2;valgrind.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[25;51H[K[25;51H2,19[10CAll[2;23H[?12l[?25h[?25l[25;51H1[1;23H[?12l[?25h[?25l[1;5H[7m[35m#include [m[7m[31m<iostream[m[1C[7m [m[25;1H[1m-- VISUAL LINE --[m[25;18H[K[25;51H1,19[10CAll[1;23H[?12l[?25h[?25l[1;5H[35m#include [m[31m<iostream[m[1;24H[K[25;1H[K[25;51H1,19[10CAll[1;23H[?12l[?25h[?25l[25;51H2[2;23H[?12l[?25h[?25l[25;54H8[2;22H[?12l[?25h[?25l[25;54H7[2;21H[?12l[?25h[?25l[25;51H3[3;21H[?12l[?25h[?25l[25;51H2[2;21H[?12l[?25h[?25l[25;51H1[1;21H[?12l[?25h[?25l[25;54H8[1;22H[?12l[?25h[?25l[25;54H9[1;23H[?12l[?25h[?25l[25;51H2[2;23H[?12l[?25h[?25l[25;51H[K[25;1H:[?12l[?25hwq[?25l"valgrind.cpp" 13L, 240C written]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes
-[?1l>[?12l[?25h[?1049l$ vim valgrind.cpp$ fg[Kvim valgrind.cpp
-[?1049h[?1h=[1;25r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[25;1H"valgrind.cpp" 13L, 240C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
-[33m  2 [m[35m#include [m[31m<stdlib.h>[m
-[33m  3 using[m [32mnamespace[m std;
-[33m  4 
-  5 [m[32mint[m main()
-[33m  6 [m{
-[33m  7 [m    [34m//char *[m[4m[34mbuf[m[34m=new char[1024]();[m
-[33m  8 [m    [32mchar[m *buf=([32mchar[m*)malloc([31m1024[m);
-[33m  9 [m[8C[34m//char [m[4m[34mbuf[m[34m[1024];[m
-[33m 10 
- 11 [m    cout << [31m"[m[4m[31mHodor[m[31m [m[4m[31mhodor[m[31m [m[4m[31mhodor[m[31m... [m[4m[31mHODOR[m[31m!!!"[m << endl;
-[33m 12 [m    [33mreturn[m [31m0[m;
-[33m 13 [m}
-[1m[34m~                                                                   [15;1H~                                                                   [16;1H~                                                                   [17;1H~                                                                   [18;1H~                                                                   [19;1H~                                                                   [20;1H~                                                                   [21;1H~                                                                   [22;1H~                                                                   [23;1H~                                                                   [24;1H~                                                                   [m[25;51H1,1[11CAll]2;valgrind.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[25;51H2[2;5H[?12l[?25h[?25l[25;54H0[2;14H[?12l[?25h[?25l[25;54H1[2;15H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;13H[K[25;51H2,11[10CAll[2;15H[?12l[?25h[?25l[31mcstdlib.h>[m[25;54H2]2;valgrind.cpp + (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[2;16H[?12l[?25h[?25l[25;53H21[2;25H[?12l[?25h[?25l[25;54H0[2;24H[?12l[?25h[?25l[31m>[m[2;24H[K[25;53H19[2;23H[?12l[?25h[?25l[31m>[m[2;23H[K[25;54H8[2;22H[?12l[?25h[25;1H[K[2;21H[?25l[25;51H2,17[10CAll[2;21H[?12l[?25h[?25l[25;1H1 change; before #2  2 seconds ago[25;51H[K[2;22H[31m.h>[m[25;51H2,20[10CAll[2;24H[?12l[?25h[?25l[25;19H1  5[25;51H[K[2;15H[31mstdlib.h>[m[2;24H[K[25;51H2,11[10CAll]2;valgrind.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[2;15H[?12l[?25h[?25l[25;1H[K[25;1H:[?12l[?25hwq[?25l"valgrind.cpp" 13L, 240C written]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes
-[?1l>[?12l[?25h[?1049l$ vim valgrind.cpp$ fg[Kman malloc$ g++ -g valgrind.cpp
-$ fg
-bash: fg: current: no such job
-$ (reverse-i-search)`': v': g++ -g valgrind.cpp[2Pi': vim[1@m': [1@ ': [24P$ 
-[?1049h[?1h=[1;25r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[25;1H"valgrind.cpp" 13L, 240C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
-[33m  2 [m[35m#include [m[31m<stdlib.h>[m
-[33m  3 using[m [32mnamespace[m std;
-[33m  4 
-  5 [m[32mint[m main()
-[33m  6 [m{
-[33m  7 [m    [34m//char *[m[4m[34mbuf[m[34m=new char[1024]();[m
-[33m  8 [m    [32mchar[m *buf=([32mchar[m*)malloc([31m1024[m);
-[33m  9 [m[8C[34m//char [m[4m[34mbuf[m[34m[1024];[m
-[33m 10 
- 11 [m    cout << [31m"[m[4m[31mHodor[m[31m [m[4m[31mhodor[m[31m [m[4m[31mhodor[m[31m... [m[4m[31mHODOR[m[31m!!!"[m << endl;
-[33m 12 [m    [33mreturn[m [31m0[m;
-[33m 13 [m}
-[1m[34m~                                                                   [15;1H~                                                                   [16;1H~                                                                   [17;1H~                                                                   [18;1H~                                                                   [19;1H~                                                                   [20;1H~                                                                   [21;1H~                                                                   [22;1H~                                                                   [23;1H~                                                                   [24;1H~                                                                   [m[25;51H1,1[11CAll]2;valgrind.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[25;51H2[2;5H[?12l[?25h[?25l[25;51H3[3;5H[?12l[?25h[?25l[25;51H4,0-1[4;5H[?12l[?25h[?25l[25;51H5,1  [5;5H[?12l[?25h[?25l[6;5H[46m{[13;5H}[m[25;51H6[6;5H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;13H[K[25;51H7,5[11CTop[7;9H[K[8;9H[34m//char *[m[4m[34mbuf[m[34m=new char[1024]();[m[8;38H[K[9;9H[32mchar[m *buf=([32mchar[m*)malloc([31m1024[m);[10;13H[34m//char [m[4m[34mbuf[m[34m[1024];[m[11;9H[K[12;9Hcout << [31m"[m[4m[31mHodor[m[31m [m[4m[31mhodor[m[31m [m[4m[31mhodor[m[31m... [m[4m[31mHODOR[m[31m!!!"[m << endl;[13;5H[46m [m   [33mreturn[m [31m0[m;
-[33m 14 [m}[14;6H[K[6;5H{[13;5H ]2;valgrind.cpp + (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[7;9H[?12l[?25h[?25lf[25;53H6[11CAll[7;10H[?12l[?25h[?25lo[25;53H7[7;11H[?12l[?25h[?25l[33mfor[m[25;53H8[7;12H[?12l[?25h[?25l[25;53H9[7;13H[?12l[?25h[?25l([25;51H[K[25;51H7,10[10CAll[7;14H[?12l[?25h[?25lu[25;54H1[7;15H[?12l[?25h[?25ln[25;54H2[7;16H[?12l[?25h[?25ls[25;54H3[7;17H[?12l[?25h[?25li[25;54H4[7;18H[?12l[?25h[?25lg[25;54H5[7;19H[?12l[?25h[?25ln[25;54H6[7;20H[?12l[?25h[?25le[25;54H7[7;21H[?12l[?25h[?25l[7;14H[32munsigned[m[25;54H8[7;22H[?12l[?25h[?25l[25;54H9[7;23H[?12l[?25h[?25ll[25;53H20[7;24H[?12l[?25h[?25lo[25;54H1[7;25H[?12l[?25h[?25ln[25;54H2[7;26H[?12l[?25h[?25l[32mlong[m[25;54H3[7;27H[?12l[?25h[?25l;[25;54H4[7;28H[?12l[?25h[?25l[25;54H5[7;29H[?12l[?25h[?25l[25;54H4[7;28H[?12l[?25h[?25l[25;54H3[7;27H[?12l[?25h[?25l ;[25;54H4[7;28H[?12l[?25h[?25li;[25;54H5[7;29H[?12l[?25h[?25l ;[25;54H6[7;30H[?12l[?25h[?25l=;[25;54H7[7;31H[?12l[?25h[?25l[31m0[m;[25;54H8[7;32H[?12l[?25h[?25l; [25;54H7[7;31H[?12l[?25h[?25l; [25;54H6[7;30H[?12l[?25h[?25l; [25;54H5[7;29H[?12l[?25h[?25l; [25;54H4[7;28H[?12l[?25h[?25l; [25;54H3[7;27H[?12l[?25h[?25llon; [25;54H2[7;26H[?12l[?25h[?25l; [25;54H1[7;25H[?12l[?25h[?25l; [25;54H0[7;24H[?12l[?25h[?25l; [25;53H19[7;23H[?12l[?25h[?25l; [25;54H8[7;22H[?12l[?25h[?25l[7;14Hunsigne; [25;54H7[7;21H[?12l[?25h[?25l; [25;54H6[7;20H[?12l[?25h[?25l; [25;54H5[7;19H[?12l[?25h[?25l; [25;54H4[7;18H[?12l[?25h[?25l; [25;54H3[7;17H[?12l[?25h[?25l; [25;54H2[7;16H[?12l[?25h[?25l; [25;54H1[7;15H[?12l[?25h[?25l; [25;51H[K[25;51H7,10[10CAll[7;14H[?12l[?25h[?25l; [25;53H9 [7;13H[?12l[?25h[?25l(;[25;51H[K[25;51H7,10[10CAll[7;14H[?12l[?25h[?25li;[25;54H1[7;15H[?12l[?25h[?25ln;[25;54H2[7;16H[?12l[?25h[?25l[32mint[m;[25;54H3[7;17H[?12l[?25h[?25l ;[25;54H4[7;18H[?12l[?25h[?25li;[25;54H5[7;19H[?12l[?25h[?25l=;[25;54H6[7;20H[?12l[?25h[?25l[31m0[m;[25;54H7[7;21H[?12l[?25h[25;1H[K[7;20H[?25l[25;51H7,16[10CAll[7;20H[?12l[?25h[?25l[7;9H[34m//char *[m[4m[34mbuf[m[34m=new char[1024]();[m[8;9H[32mchar[m *buf=([32mchar[m*)malloc([31m1024[m);[9;9H    [34m//char [m[4m[34mbuf[m[34m[1024];[m[9;30H[K[10;13H[K[11;9Hcout << [31m"[m[4m[31mHodor[m[31m [m[4m[31mhodor[m[31m [m[4m[31mhodor[m[31m... [m[4m[31mHODOR[m[31m!!!"[m << endl;[12;9H[33mreturn[m [31m0[m;[12;18H[K[13;5H}[13;9H[K[14;1H[1m[34m~                                                                   [m[25;53H5 [7;9H[?12l[?25h[?25l[25;51H[K[25;1H:[?12l[?25hw[?25l"valgrind.cpp" 13L, 240C written[18C7,5[11CAll]2;valgrind.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[25;51H[K[25;51H7,5[11CAll[7;9H[?12l[?25h[?25l[25;51H8[8;9H[?12l[?25h[?25l[25;51H9[9;9H[?12l[?25h[?25l[25;51H8[8;9H[?12l[?25h[?25l[25;53H10[8;14H[?12l[?25h[?25l[25;51H9,9 [9;13H[?12l[?25h[?25l[25;51H8[8;13H[?12l[?25h[?25l[25;53H10[8;14H[?12l[?25h[?25l[25;54H1[8;15H[?12l[?25h[?25l[25;54H4[8;18H[?12l[?25h[?25l[25;54H6[8;20H[?12l[?25h[?25l[46m([5C)[m[25;54H5[8;19H[?12l[?25h[?25l([5C)[25;51H7[7;19H[?12l[?25h[?25l[25;54H [7;5H[?12l[?25h[?25l[25;53H2[7;6H[?12l[?25h[?25l[25;53H3[7;7H[?12l[?25h[?25l[25;53H4[7;8H[?12l[?25h[?25l[25;53H5[7;9H[?12l[?25h[?25l/[32mchar[m *buf=[33mnew[m [32mchar[m[[31m1024[m]();[7;37H[K]2;valgrind.cpp + (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[7;9H[?12l[?25h[?25l[32mchar[m *buf=[33mnew[m [32mchar[m[[31m1024[m]();[7;36H[K[7;9H[?12l[?25h[?25l[25;53H6[7;10H[?12l[?25h[?25l[25;53H7[7;11H[?12l[?25h[?25l[25;53H8[7;12H[?12l[?25h[?25l[25;53H9[7;13H[?12l[?25h[?25l[25;53H10[7;14H[?12l[?25h[?25l[25;54H1[7;15H[?12l[?25h[?25l[25;54H2[7;16H[?12l[?25h[?25l[25;54H3[7;17H[?12l[?25h[?25l[25;54H4[7;18H[?12l[?25h[?25l[25;54H5[7;19H[?12l[?25h[?25l[25;54H6[7;20H[?12l[?25h[?25l[25;54H7[7;21H[?12l[?25h[?25l[25;54H8[7;22H[?12l[?25h[?25l[25;54H9[7;23H[?12l[?25h[?25l[25;53H20[7;24H[?12l[?25h[?25l[25;54H1[7;25H[?12l[?25h[?25l[25;54H2[7;26H[?12l[?25h[?25l[1C[46m[[4C][m[25;54H3[7;27H[?12l[?25h[?25l[[4C][25;54H4[7;28H[?12l[?25h[?25l[46m[[4C][m[25;54H3[7;27H[?12l[?25h[?25l[[4C][25;54H2[7;26H[?12l[?25h[?25l[25;54H1[7;25H[?12l[?25h[?25l[25;54H0[7;24H[?12l[?25h[?25l[25;53H19[7;23H[?12l[?25h[?25l[46m[[m[31m1024[m[46m][m();[7;32H[K[7;23H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;13H[K[25;51H7,19[10CAll[7;23H[?12l[?25h[?25l[46mi[m[[31m102[m[31m[46m4[m]();[7;23Hi[46m[[m[3C[31m4[m[46m][m[25;53H20[7;24H[?12l[?25h[?25l[46mn[m[[31m102[m[31m[46m4[m]();[7;24Hn[46m[[m[3C[31m4[m[46m][m[25;54H1[7;25H[?12l[?25h[?25l[32min[m[32m[46mt[m[[31m102[m[31m[46m4[m]();[7;25H[32mt[m[46m[[m[3C[31m4[m[46m][m[25;54H2[7;26H[?12l[?25h[?25l[[4C][25;53H19[7;23H[?12l[?25h[?25l[25;54H5[7;19H[?12l[?25h[?25l[25;54H4[7;18H[?12l[?25h[?25l[25;54H3[7;17H[?12l[?25h[?25l[25;54H2[7;16H[?12l[?25h[?25l[25;54H1[7;15H[?12l[?25h[?25l[25;54H0[7;14H[?12l[?25h[?25l[25;53H9 [7;13H[?12l[?25h[?25lcha *buf=[33mnew[m [32mint[m[[31m1024[m]();[7;34H[K[25;53H8[7;12H[?12l[?25h[?25l *buf=[33mnew[m [32mint[m[[31m1024[m]();[7;33H[K[25;53H7[7;11H[?12l[?25h[?25l *buf=[33mnew[m [32mint[m[[31m1024[m]();[7;32H[K[25;53H6[7;10H[?12l[?25h[?25l *buf=[33mnew[m [32mint[m[[31m1024[m]();[7;31H[K[25;53H5[7;9H[?12l[?25h[?25li *buf=[33mnew[m [32mint[m[[31m1024[m]();[25;53H6[7;10H[?12l[?25h[?25ln *buf=[33mnew[m [32mint[m[[31m1024[m]();[25;53H7[7;11H[?12l[?25h[?25l[32mint[m *buf=[33mnew[m [32mint[m[[31m1024[m]();[25;53H8[7;12H[?12l[?25h[25;1H[K[7;11H[?25l[25;51H7,7[11CAll[7;11H[?12l[?25h[?25l[25;51H8[8;11H[?12l[?25h[?25l[25;51H7[7;11H[?12l[?25h[?25l[25;53H9[7;13H[?12l[?25h[?25l[25;53H18[7;22H[?12l[?25h[?25l[25;51H8,5 [8;9H[?12l[?25h[?25l[25;51H7[7;9H[?12l[?25h[?25l[7m    [m[1C[7m[32mnt[m[7m *buf=[m[7m[33mnew[m[7m [m[7m[32mint[m[7m[[m[7m[31m1024[m[7m](); [m[25;1H[1m-- VISUAL LINE --[m[25;51H[K[25;51H7,5[11CAll[7;9H[?12l[?25h[?25l    [1C[32mnt[m *buf=[33mnew[m [32mint[m[[31m1024[m]();[7;34H[K[25;1H[K[25;51H7,5[11CAll[7;9H[?12l[?25h[?25l[25;51H8[8;9H[?12l[?25h[?25l *buf=([32mchar[m*)malloc([31m1024[m);[8;35H[K[8;9H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;51H[K[25;51H8,5[11CAll[8;9H[?12l[?25h[?25li *buf=([32mchar[m*)malloc([31m1024[m);[25;53H6[8;10H[?12l[?25h[?25ln *buf=([32mchar[m*)malloc([31m1024[m);[25;53H7[8;11H[?12l[?25h[?25l[32mint[m *buf=([32mchar[m*)malloc([31m1024[m);[25;53H8[8;12H[?12l[?25h[25;1H[K[8;11H[?25l[25;51H8,7[11CAll[8;11H[?12l[?25h[?25l[25;53H9[8;13H[?12l[?25h[?25l[25;51H9[9;13H[?12l[?25h[?25l[25;51H8[8;13H[?12l[?25h[?25l[25;53H12[8;16H[?12l[?25h[?25lf=[46m([5C)[m[25;54H4[8;18H[?12l[?25h[?25l([5C)[25;54H8[8;22H[?12l[?25h[?25l[25;54H5[8;19H[?12l[?25h[?25l*)malloc([31m1024[m);[8;34H[K[8;19H[?12l[?25h[?25l[25;1H1 change; before #11  1 seconds ago[25;51H[K[8;19H[32mchar[m*)malloc([31m1024[m);[25;51H8,15[10CAll[8;19H[?12l[?25h[?25l[25;20H0  4[25;51H[K[8;9H *buf=([32mchar[m*)malloc([31m1024[m);[8;35H[K[25;51H8,5[11CAll[8;9H[?12l[?25h[?25l[7;25H[46m[[4C][m[25;51H7,26[7;30H[?12l[?25h[?25l[25;19H9  6 seconds ago[25;35H[K[7;25H[[4C][8;9H[32mchar[m *buf=([32mchar[m*)malloc([31m1024[m);[25;51H8,5[11CAll[8;9H[?12l[?25h[?25l[25;53H10[8;14H[?12l[?25h[?25l[25;54H1[8;15H[?12l[?25h[?25l[25;11Hafter #9  8 seconds ago[25;34H[K[8;9H *buf=([32mchar[m*)malloc([31m1024[m);[8;35H[K[25;51H8,5[11CAll[8;9H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;13H[K[25;51H8,5[11CAll[8;9H[?12l[?25h[?25li *buf=([32mchar[m*)malloc([31m1024[m);[25;53H6[8;10H[?12l[?25h[?25ln *buf=([32mchar[m*)malloc([31m1024[m);[25;53H7[8;11H[?12l[?25h[?25l[32mint[m *buf=([32mchar[m*)malloc([31m1024[m);[25;53H8[8;12H[?12l[?25h[?25l[25;53H9[8;13H[?12l[?25h[?25l[25;53H10[8;14H[?12l[?25h[?25l[25;54H1[8;15H[?12l[?25h[?25l[25;54H2[8;16H[?12l[?25h[?25l[25;54H3[8;17H[?12l[?25h[?25l=[46m([5C)[m[25;54H4[8;18H[?12l[?25h[?25l[25;51H[K[25;51H8,15[10CAll[8;19H[?12l[?25h[25;1H[K[8;18H[?25l[25;51H8,14[10CAll[8;18H[?12l[?25h[?25l([5C)[25;54H5[8;19H[?12l[?25h[?25l*)malloc([31m1024[m);[8;34H[K[8;19H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;51H[K[25;51H8,15[10CAll[8;19H[?12l[?25h[?25li*)malloc([31m1024[m);[25;54H6[8;20H[?12l[?25h[?25ln*)malloc([31m1024[m);[25;54H7[8;21H[?12l[?25h[?25l[32mint[m*)malloc([31m1024[m);[25;54H8[8;22H[?12l[?25h[25;1H[K[8;21H[?25l[25;51H8,17[10CAll[8;21H[?12l[?25h[?25l[25;51H[K[25;1H:[?12l[?25hw[?25l"valgrind.cpp" 13L, 234C written[18C8,17[10CAll]2;valgrind.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[25;51H[K[25;51H8,17[10CAll[8;21H[?12l[?25h[?25l[?12l[?25h[?25l[25;51H7[7;21H[?12l[?25h[?25l[7;5H[7m    [m[7m[32mint[m[7m *buf=[m[7m[33mnew[m [7m[32mint[m[7m[[m[7m[31m1024[m[7m](); [m[25;1H[1m-- VISUAL LINE --[m[25;18H[K[25;51H7,17[10CAll[7;21H[?12l[?25h[?25l[7;5H    [32mint[m *buf=[33mnew[m [32mint[m[[31m1024[m]();[7;34H[K[25;1H[K[25;51H7,17[10CAll[7;21H[?12l[?25h[?25l[25;51H8[8;21H[?12l[?25h[?25l[25;51H9[9;21H[?12l[?25h[?25l[25;51H10,0-1[10;5H[?12l[?25h[?25l[25;51H9,17  [9;21H[?12l[?25h[?25l[25;51H8[8;21H[?12l[?25h[?25l[25;51H7[7;21H[?12l[?25h[?25l[25;54H6[7;20H[?12l[?25h[?25l[25;54H5[7;19H[?12l[?25h[?25l[25;54H4[7;18H[?12l[?25h[?25l[25;54H3[7;17H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;51H[K[25;51H7,13[10CAll[7;17H[?12l[?25h[?25l1=[33mnew[m [32mint[m[[31m1024[m]();[25;54H4]2;valgrind.cpp + (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[7;18H[?12l[?25h[?25l[8;18H[46m([4C)[m[25;51H8[8;18H[?12l[?25h[?25l([4C)[25;54H3[8;17H[?12l[?25h[?25l2=([32mint[m*)malloc([31m1024[m);[25;54H4[8;18H[?12l[?25h[25;1H[K[8;17H[?25l[25;51H8,13[10CAll[8;17H[?12l[?25h[?25l[25;51H9[9;17H[?12l[?25h[?25l[25;51H10,0-1[10;5H[?12l[?25h[?25l[25;52H1,13 [11;17H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;51H[K[25;51H12,5[10CTop[12;9H[K[13;5H    [33mreturn[m [31m0[m;
-[33m 14 [m}[14;6H[K[12;9H[?12l[?25h[?25ld[25;54H6[10CAll[12;10H[?12l[?25h[?25le[25;54H7[12;11H[?12l[?25h[?25ll[25;54H8[12;12H[?12l[?25h[?25le[25;54H9[12;13H[?12l[?25h[?25lt[25;54H10[12;14H[?12l[?25h[?25l[33mdelete[m[25;55H1[12;15H[?12l[?25h[?25l[25;55H2[12;16H[?12l[?25h[?25lb[25;55H3[12;17H[?12l[?25h[?25lu[25;55H4[12;18H[?12l[?25h[?25lf[25;55H5[12;19H[?12l[?25h[?25l1[25;55H6[12;20H[?12l[?25h[?25l;[25;55H7[12;21H[?12l[?25h[?25l[13;9H[K[14;5H    [33mreturn[m [31m0[m;
-[33m 15 [m}[15;6H[K[25;52H3,5 [13;9H[?12l[?25h[?25ld[25;54H6[13;10H[?12l[?25h[?25le[25;54H7[13;11H[?12l[?25h[?25ll[25;54H8[13;12H[?12l[?25h[?25le[25;54H9[13;13H[?12l[?25h[?25lt[25;54H10[13;14H[?12l[?25h[?25l[33mdelete[m[25;55H1[13;15H[?12l[?25h[?25l[25;55H2[13;16H[?12l[?25h[?25lb[25;55H3[13;17H[?12l[?25h[?25lu[25;55H4[13;18H[?12l[?25h[?25lf[25;55H5[13;19H[?12l[?25h[?25l2[25;55H6[13;20H[?12l[?25h[?25l;[25;55H7[13;21H[?12l[?25h[?25l[25;55H [13;5H[?12l[?25h[?25l[25;54H5[13;9H[?12l[?25h[?25lelete buf2;[13;20H[K[13;9H[?12l[?25h[?25llete buf2;[13;19H[K[13;9H[?12l[?25h[?25lete buf2;[13;18H[K[13;9H[?12l[?25h[?25lte buf2;[13;17H[K[13;9H[?12l[?25h[?25le buf2;[13;16H[K[13;9H[?12l[?25h[?25l buf2;[13;15H[K[13;9H[?12l[?25h[?25lbuf2;[13;14H[K[13;9H[?12l[?25h[?25lfbuf2;[25;54H6[13;10H[?12l[?25h[?25lrbuf2;[25;54H7[13;11H[?12l[?25h[?25lebuf2;[25;54H8[13;12H[?12l[?25h[?25lebuf2;[25;54H9[13;13H[?12l[?25h[?25l(buf2;[25;51H[K[25;51H13,10[9CAll[13;14H[?12l[?25h[?25l[25;55H5[13;19H[?12l[?25h[?25l[25;55H4[13;18H[?12l[?25h[?25l);[13;13H[46m([mbuf2[46m)[m[25;51H[K[25;51H13,15[9CAll[13;19H[?12l[?25h[25;1H[K[13;18H[?25l[25;51H13,14[9CAll[13;18H[?12l[?25h[?25l[25;51H[K[25;1H:[?12l[?25hw[?25l"valgrind.cpp" 15L, 269C written[18C13,14[9CAll]2;valgrind.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[25;51H[K[25;51H13,14[9CAll[13;18H[?12l[?25h[?25l(buf2)[25;52H2[12;18H[?12l[?25h[?25l[13;13H[46m([mbuf2[46m)[m[25;52H3[13;18H[?12l[?25h[?25l[25;1H[K[25;1H:[?12l[?25hw[?25l"valgrind.cpp" 15L, 269C written[18C13,14[9CAll[25;51H[K[25;51H13,14[9CAll[13;18H[?12l[?25h[?25l[25;1H[K[25;1H:[?12l[?25hwq[?25l"valgrind.cpp" 15L, 269C written]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes
-[?1l>[?12l[?25h[?1049l$ (reverse-i-search)`': g': vim valgrind.cpp[4@+': g++ -g[1@+': [23P$ 
-$ (reverse-i-search)`': v': g++ -g valgrind.cpp[1@a': g++ -g [1@l': g++ -g [23P$ g++ -g 
-$ g++ -g valgrind.cpp$ [3Pvim valgrind.cpp$ [3@g++ -g valgrind.cpp$ [K(reverse-i-search)`': .': g++ -g valgrind.cpp/': valgrind --leak-check=full ./a.out(reverse-i-search)`./[1@a': valgrind --leak-check=full (reverse-i-search)`./a[1@.': valgrind --leak-check=full [24P$ valgrind --leak-check=full 
-==26299== Memcheck, a memory error detector
-==26299== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
-==26299== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
-==26299== Command: ./a.out
-==26299== 
-Hodor hodor hodor... HODOR!!!
-==26299== Mismatched free() / delete / delete []
-==26299==    at 0x4C279DC: operator delete(void*) (vg_replace_malloc.c:457)
-==26299==    by 0x400A0F: main (valgrind.cpp:12)
-==26299==  Address 0x595a040 is 0 bytes inside a block of size 4,096 alloc'd
-==26299==    at 0x4C28147: operator new[](unsigned long) (vg_replace_malloc.c:348)
-==26299==    by 0x4009AD: main (valgrind.cpp:7)
-==26299== 
-==26299== 
-==26299== HEAP SUMMARY:
-==26299==     in use at exit: 0 bytes in 0 blocks
-==26299==   total heap usage: 2 allocs, 2 frees, 5,120 bytes allocated
-==26299== 
-==26299== All heap blocks were freed -- no leaks are possible
-==26299== 
-==26299== For counts of detected and suppressed errors, rerun with: -v
-==26299== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 4 from 4)
-$ (reverse-i-search)`': v': valgrind --leak-check=full ./a.out(reverse-i-search)`v': [17Pi': vim valgrind.cpp[1@m': [23P$ 
-[?1049h[?1h=[1;25r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[25;1H"valgrind.cpp" 15L, 269C[>c[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
-[33m  2 [m[35m#include [m[31m<stdlib.h>[m
-[33m  3 using[m [32mnamespace[m std;
-[33m  4 
-  5 [m[32mint[m main()
-[33m  6 [m{
-[33m  7 [m    [32mint[m *buf1=[33mnew[m [32mint[m[[31m1024[m]();
-[33m  8 [m    [32mint[m *buf2=([32mint[m*)malloc([31m1024[m);
-[33m  9 [m[8C[34m//char [m[4m[34mbuf[m[34m[1024];[m
-[33m 10 
- 11 [m    cout << [31m"[m[4m[31mHodor[m[31m [m[4m[31mhodor[m[31m [m[4m[31mhodor[m[31m... [m[4m[31mHODOR[m[31m!!!"[m << endl;
-[33m 12 [m    [33mdelete[m buf1;
-[33m 13 [m    free(buf2);
-[33m 14 [m    [33mreturn[m [31m0[m;
-[33m 15 [m}
-[1m[34m~                                                                   [17;1H~                                                                   [18;1H~                                                                   [19;1H~                                                                   [20;1H~                                                                   [21;1H~                                                                   [22;1H~                                                                   [23;1H~                                                                   [24;1H~                                                                   [m[25;51H1,1[11CAll]2;valgrind.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[1;5H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[25;51H2[2;5H[?12l[?25h[?25l[25;51H3[3;5H[?12l[?25h[?25l[25;51H4,0-1[4;5H[?12l[?25h[?25l[25;51H5,1  [5;5H[?12l[?25h[?25l[6;5H[46m{[15;5H}[m[25;51H6[6;5H[?12l[?25h[?25l{[15;5H}[25;51H7[7;5H[?12l[?25h[?25l[25;53H5[7;9H[?12l[?25h[?25l[25;53H9[7;13H[?12l[?25h[?25l[25;53H10[7;14H[?12l[?25h[?25l[25;54H1[7;15H[?12l[?25h[?25l[25;54H2[7;16H[?12l[?25h[?25l[25;54H3[7;17H[?12l[?25h[?25l[25;54H4[7;18H[?12l[?25h[?25l[25;54H5[7;19H[?12l[?25h[?25l[25;54H6[7;20H[?12l[?25h[?25l[25;54H7[7;21H[?12l[?25h[?25l[25;54H8[7;22H[?12l[?25h[?25l[25;54H9[7;23H[?12l[?25h[?25l[25;53H20[7;24H[?12l[?25h[?25l[25;54H1[7;25H[?12l[?25h[?25l[1C[46m[[4C][m[25;54H2[7;26H[?12l[?25h[?25l[[4C][25;54H3[7;27H[?12l[?25h[?25l[25;54H4[7;28H[?12l[?25h[?25l[25;54H5[7;29H[?12l[?25h[?25l[25;54H4[7;28H[?12l[?25h[?25l[25;54H3[7;27H[?12l[?25h[?25l[46m[[4C][m[25;54H2[7;26H[?12l[?25h[?25l[[4C][25;51H8[8;26H[?12l[?25h[?25l[25;51H9[9;26H[?12l[?25h[?25l[25;51H10,0-1[10;5H[?12l[?25h[?25l[25;52H1,22 [11;26H[?12l[?25h[?25l[25;52H2,16[12;20H[?12l[?25h[?25l[25;55H5[12;19H[?12l[?25h[?25l[25;55H4[12;18H[?12l[?25h[?25l[25;55H3[12;17H[?12l[?25h[?25l[25;55H2[12;16H[?12l[?25h[?25l[25;1H[1m-- INSERT --[m[25;13H[K[25;51H12,12[9CAll[12;16H[?12l[?25h[?25l[buf1[1m[37m[41m;[13;19H;[14;17H;[m[25;51H[K[25;51H12,13[9CAll]2;valgrind.cpp + (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[12;17H[?12l[?25h[?25l]buf1;[13;19H;[14;17H;[12;16H[46m[][m[25;51H[K[25;51H12,14[9CAll[12;18H[?12l[?25h[?25l buf1;[12;16H[][25;55H5[12;19H[?12l[?25h[25;1H[K[12;18H[?25l[25;51H12,14[9CAll[12;18H[?12l[?25h[?25l[25;51H[K[25;1H:[?12l[?25hw[?25l"valgrind.cpp" 15L, 272C written[18C12,14[9CAll]2;valgrind.cpp (~/proj/ucr-cs100/lecture-notes) - VIM]1;valgrind.cpp[25;51H[K[25;51H12,14[9CAll[12;18H[?12l[?25h[27m[m[H[2J[?25l[1;1H[33m  1 [m[35m#include [m[31m<iostream>[m
-[33m  2 [m[35m#include [m[31m<stdlib.h>[m
-[33m  3 using[m [32mnamespace[m std;
-[33m  4 
-  5 [m[32mint[m main()
-[33m  6 [m{
-[33m  7 [m    [32mint[m *buf1=[33mnew[m [32mint[m[[31m1024[m]();
-[33m  8 [m    [32mint[m *buf2=([32mint[m*)malloc([31m1024[m);
-[33m  9 [m[8C[34m//char [m[4m[34mbuf[m[34m[1024];[m
-[33m 10 
- 11 [m    cout << [31m"[m[4m[31mHodor[m[31m [m[4m[31mhodor[m[31m [m[4m[31mhodor[m[31m... [m[4m[31mHODOR[m[31m!!!"[m << endl;
-[33m 12 [m    [33mdelete[m [] buf1;
-[33m 13 [m    free(buf2);
-[33m 14 [m    [33mreturn[m [31m0[m;
-[33m 15 [m}
-[1m[34m~                                                                                         [17;1H~                                                                                         [18;1H~                                                                                         [19;1H~                                                                                         [20;1H~                                                                                         [21;1H~                                                                                         [22;1H~                                                                                         [23;1H~                                                                                         [24;1H~                                                                                         [m[25;73H12,14[9CAll[12;18H[?12l[?25h[?25l[25;73H[K[25;1H:[?12l[?25hwq[?25l"valgrind.cpp" 15L, 272C written]2;user@userland: ~/proj/ucr-cs100/lecture-notes]1;user@userland: ~/proj/ucr-cs100/lecture-notes
-[?1l>[?12l[?25h[?1049l$ exit
-exit
-
-Script done on Mon Feb  2 17:13:11 2015

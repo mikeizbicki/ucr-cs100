@@ -1,6 +1,6 @@
 ## cs100 - open source software construction
 
-This is a course on [how to be a hacker](http://www.catb.org/esr/faqs/hacker-howto.html).
+This is a course on [how to be a hacker](http://www.catb.org/ESR/faqs/hacker-howto.html).
 Being a hacker [means a lot of things](http://www.catb.org/jargon/html/H/hacker.html).
 It means:
 
@@ -41,19 +41,17 @@ and you will collaborate with each other at various points.
 Many of the required readings for this course were written by former cs100 students.
 If you do a good job on this project, future cs 100 students will be learning from you for years to come!
 
-**By the end of the course, you should be comfortable running your own open source projects and contributing to other people's projects.**
+By the end of the course, you should be comfortable running your own open source projects and contributing to other people's projects.
 
 ### instructors
 
 position | name | office hours (WCH 110)
 --- | --- | ---
-lecturer | Mike Izbicki | Tuesday 11-noon
-teaching assistant | Busra Celikkaya | Friday 2pm-3pm
-teaching assistant | Zachary Benavides | Friday 1pm-2pm
+lecturer | Mike Izbicki | TBD
+teaching assistant | Busra Celikkaya | TBD
 
 **IMPORTANT:**
-If you want to contact the instructors about the course, you should NOT do it via email.
-Instead, you should report an issue via github.
+If you want to contact the instructors about the course, you should report an issue via github.
 We will talk about how to do this in class.
 This is a system similar to the piazza system you may already be familiar with,
 but it is more popular for open source software development.
@@ -64,43 +62,61 @@ Our lectures will roughly follow this schedule.
 You should do the required readings before class.
 I will occasionally have unscheduled quizzes to ensure you are doing the reading.
 
-week | date | reading/quiz | topics
+week | date | reading | topics
 --- | --- | --- | ---
-1 | Jan05 | | introduction; using vim
-1 | Jan07 | Daniel Lemire's [how to learn efficiently](http://lemire.me/blog/archives/2014/12/30/how-to-learn-efficiently/); Paul Graham's [what to do in college](http://www.paulgraham.com/college.html); and Ian Malpass's [advice to future software engineers](https://medium.com/@indec/advice-to-future-software-engineers-64a29669d179)| version control with git
-2 | Jan12 | esr's [all about unix](http://www.catb.org/esr/writings/taoup/html/context.html) and [about common software licenses](http://www.catb.org/esr/writings/taoup/html/ch16s07.html) | version control with git
-2 | Jan14 | **quiz**; the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls)| syscalls: managing processes (`fork`,`wait`,`exec`,`perror`)
-3 | Jan19 | Lucas Xu's [Makefile tutorial](textbook/tools/Makefiles); Alexander Ortiz's [how to write a README file](textbook/bestpractices/WritingREADMEs); esr's thoughts on [unix documentation part I](http://www.catb.org/esr/writings/taoup/html/ch18s02.html) and [part II](http://www.catb.org/esr/writings/taoup/html/ch18s06.html) | syscalls: managing files (`open`,`close`,`read`,`write`)
-3 | Jan21 | Kenley Arai's tutorial on [test driven development](textbook/bestpractices/TestDrivenDevelopment); Gabriel Ruiz's [tutorial on how to design test cases](textbook/bestpractices/WritingGoodTestCases);  | debugging tools (`gdb`)
-4 | Jan26 | William Coates' [valgrind tutorial](textbook/tools/valgrind); Paul Graham's [how to be a good hacker](http://www.paulgraham.com/gh.html); Jeff Atwood's [how to become a better programmer](http://blog.codinghorror.com/how-to-become-a-better-programmer-by-not-programming/) | debugging tools (`valgrind`,`cppcheck`)
-4 | Jan28 | **quiz**; [bitwise operators](textbook/assignment-help/bitwise-ops); [macros](textbook/assignment-help/macros); the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls) | syscalls: managing directories (`readdir`,`stat`)
-5 | Feb02 | Ycombinator's [startup ideas we'd like to fund](http://old.ycombinator.com/ideas.html) and Paul Graham's [start up funding](http://paulgraham.com/startupfunding.html) | shell scripting: io redirection/piping
-5 | Feb04 | Patrick McKenzie [on salary negotiation for programmers](http://www.kalzumeus.com/2012/01/23/salary-negotiation/) (it's long; you don't have to read it all) | shell scripting: io redirection/piping
-6 | Feb09 | the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls) | syscalls: io redirection/piping (`pipe`,`dup`)
-6 | Feb11 | **quiz** | shell scripting: control flow with `if` and `for`
-7 | Feb16 | esr's thoughts on [using make](http://www.catb.org/esr/writings/taoup/html/ch15s04.html) | shell scripting: detailed makefiles
-7 | Feb18 | Shubhro Saha's [why engineers should write](http://www.shubhro.com/2014/12/27/software-engineers-should-write/); the economist's [good writing style](http://www.economist.com/styleguide/introduction) | syscalls: signal handling (`signal`,`sigaction`)
-8 | Feb23 | the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls) | shell scripting: environment variables (`export`,`PATH`,`HOME`,`EDITOR`)
-8 | Feb25 | **quiz** | syscalls: environment variables (`getenv`,`setenv`)
-9 | Mar02 | esr's classic [Master Foo series](http://www.catb.org/esr/writings/taoup/html/unix_koans.html) | syscalls: pthreads
-9 | Mar04 | esr's thoughts on [flaws with unix](http://www.catb.org/esr/writings/taoup/html/ch20s03.html); Poul-Henning Kamp's [a generation lost in the bazaar](https://queue.acm.org/detail.cfm?id=2349257&ref=fullrss) | syscalls: sockets
-10 | Mar09 | **quiz** | case study: hacking the email system and the [ioccc.org](http://ioccc.org)
-10 | Mar11 | --- | case study: stuxnet and heartbleed
+1 | Mar30 | Daniel Lemire's [how to learn efficiently](http://lemire.me/blog/archives/2014/12/30/how-to-learn-efficiently/) (recommended; not required) | introduction; using vim
+1 | Apr01 | ESR's [all about unix](http://www.catb.org/ESR/writings/taoup/html/context.html) | version control with git
+1 | Apr03 | ERS's [about common software licenses](http://www.catb.org/ESR/writings/taoup/html/ch16s07.html); the New Yorker's [30 year retrospective on the GNU manifesto](http://www.newyorker.com/business/currency/the-gnu-manifesto-turns-thirty?intcid=mod-latest) | version control with git
+2 | Apr06 | Paul Graham's [what to do in college](http://www.paulgraham.com/college.html) | version control with git
+2 | Apr08 | Ian Malpass's [advice to future software engineers](https://medium.com/@indec/advice-to-future-software-engineers-64a29669d179) | version control with git
+2 | Apr10 | Lucas Xu's [Makefile tutorial](textbook/tools/Makefiles); Alexander Ortiz's [how to write a README file](textbook/bestpractices/WritingREADMEs); ESR's thoughts on [unix documentation part I](http://www.catb.org/ESR/writings/taoup/html/ch18s02.html) and [part II](http://www.catb.org/ESR/writings/taoup/html/ch18s06.html) | syscalls: managing processes (`fork`,`wait`,`exec`,`perror`); **quiz**
+3 | Apr13 | the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls) | syscalls: managing processes (`fork`,`wait`,`exec`,`perror`)
+3 | Apr15 | [bitwise operators](textbook/assignment-help/bitwise-ops); [macros](textbook/assignment-help/macros) | syscalls: managing files (`open`,`close`,`read`,`write`)
+3 | Apr17 | the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls)  | syscalls: managing files (`open`,`close`,`read`,`write`)
+4 | Apr20 | William Coates' [valgrind tutorial](textbook/tools/valgrind); | debugging tools (`gdb`,`valgrind`,`cppcheck`)
+4 | Apr22 | Jeff Atwood's [how to become a better programmer](http://blog.codinghorror.com/how-to-become-a-better-programmer-by-not-programming/) | debugging tools (`gdb`,`valgrind`,`cppcheck`)
+4 | Apr24 | the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls) | syscalls: managing directories (`readdir`,`stat`);**quiz**
+5 | Apr27 | Ycombinator's [startup ideas we'd like to fund](http://old.ycombinator.com/ideas.html) and Paul Graham's [start up funding](http://paulgraham.com/startupfunding.html)| shell scripting: io redirection/piping
+5 | Apr29 | Patrick McKenzie [on salary negotiation for programmers](http://www.kalzumeus.com/2012/01/23/salary-negotiation/) (it's long; you don't have to read it all)| shell scripting: io redirection/piping
+5 | May01 | Shubhro Saha's [why engineers should write](http://www.shubhro.com/2014/12/27/software-engineers-should-write/); the economist's [good writing style](http://www.economist.com/styleguide/introduction) | writing good documentation
+6 | May04 | | syscalls: io redirection/piping (`pipe`,`dup`)
+6 | May06 | the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls) | syscalls: io redirection/piping (`pipe`,`dup`)
+6 | May08 | ESR's classic [Master Foo series](http://www.catb.org/ESR/writings/taoup/html/unix_koans.html) | shell scripting: control flow with `if` and `for`; **quiz**
+7 | May11 | | shell scripting: environment variables (`export`,`PATH`,`HOME`,`EDITOR`)
+7 | May13 | | shell scripting: environment variables (`export`,`PATH`,`HOME`,`EDITOR`)
+7 | May15 | | syscalls: signal handling (`signal`,`sigaction`)
+8 | May18 | | syscalls: signal handling (`signal`,`sigaction`)
+8 | May20 | the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls) | shell scripting: environment variables (`export`,`PATH`,`HOME`,`EDITOR`)
+8 | May22 | | syscalls: environment variables (`getenv`,`setenv`); **quiz**
+9 | May25 | |
+9 | May27 | |
+9 | May29 | ESR's thoughts on [flaws with unix](http://www.catb.org/ESR/writings/taoup/html/ch20s03.html); Poul-Henning Kamp's [a generation lost in the bazaar](https://queue.acm.org/detail.cfm?id=2349257&ref=fullrss) | the flaws of Unix and open source
+10 | Jun01 | | case study: hacking the email system and the [ioccc.org](http://ioccc.org)
+10 | Jun03 | | case study: stuxnet and heartbleed
+10 | Jun05 | | **final quiz**
+
+<!--
+ESR's thoughts on [using make](http://www.catb.org/ESR/writings/taoup/html/ch15s04.html)
+Kenley Arai's tutorial on [test driven development](textbook/bestpractices/TestDrivenDevelopment); Gabriel Ruiz's [tutorial on how to design test cases](textbook/bestpractices/WritingGoodTestCases);
+Paul Graham's [how to be a good hacker](http://www.paulgraham.com/gh.html);
+-->
 
 If there's something you want to learn not on the schedule, let me know!
 We have a lot of flexibility in this course to learn fun things.
 
 The assignments are due on the following days:
 
-assignment | date
---- | ---
-[hw0](assignments/hw/hw0-rshell) | Friday of week 3 (Jan 23rd) @ 11:59 PM
-[hw1](assignments/hw/hw1-ls) | Sunday of week 6 (Feb 8th) @ 11:59 PM
-[hw4](assignments/hw/hw4-contributing) - topic | Wednesday of week 6 (Feb 11th) before class
-[hw2](assignments/hw/hw2-piping) | Sunday of week 8 (Feb 22th) @ 11:59 PM
-[hw4](assignments/hw/hw4-contributing) - draft | Wednesday of week 8 (Feb 25th) before class
-[hw3](assignments/hw/hw3-signals) | Sunday of week 10 (Mar 8th) @ 11:59 PM
-[hw4](assignments/hw/hw4-contributing) - final | Friday of week 10 (Mar 13th) @ 11:59 PM
+assignment                                      | date
+----------------------------------------------- | --------------------------------------------
+[hw0](assignments/hw/hw0-rshell)                | Friday Apr17 @ 11:59 PM
+[hw1](assignments/hw/hw1-ls)                    | Friday May01 @ 11:59 PM
+[hw4](assignments/hw/hw4-contributing) - topic  | Wednesday May04 before class
+[hw2](assignments/hw/hw2-piping)                | Friday May17 @ 11:59 PM
+[hw4](assignments/hw/hw4-contributing) - draft  | Wednesday May20 before class
+[hw3](assignments/hw/hw3-signals)               | Sunday May29 @ 11:59 PM
+[hw4](assignments/hw/hw4-contributing) - final  | Friday Jun05 @ 11:59 PM
+
+You will receive -10 pts for each hour (rounded up) that your assignment is late.
 
 ### grades
 
