@@ -10,7 +10,7 @@ The source code is available in [`fd_code.cpp`](./fd_code.cpp).
 
 To begin, we'll use `open` to create file descriptors to `fileold` and non-existent `filenew`.
 The file descriptors can be referenced through their integer values, which we store in `int`s.
-We'll call `open` twice for both files, but we'll pass in a different flag and mode to each syscall, determining the file descriptor behavior:
+We will call `open` twice for both files, but we'll pass in a different flag and mode to each syscall, determining the file descriptor behavior:
 
 ```
 int fdnew;

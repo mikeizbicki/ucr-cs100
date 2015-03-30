@@ -2,7 +2,9 @@ Permission
 ===
 This tutorial will introduce the basic permission in the file system. 
 
-The big advantage that Linux has is its multi-user concept- the idea will allow one or more users use or log into same computer to do a specific or different jobs. Although there are already a lot of good security features built into Linux-based systems, one very important potential vulnerability can exist when local access is granted - - that is file permission based on issues resulting from a user not assigning the correct permissions to files and directories. So I will go over some simple concepts about the permission and how to manage the file-permission.
+The big advantage that Linux has is its multi-user concept- the idea will allow one or more users use or log into same computer to do a specific or different jobs. 
+Although there are already a lot of good security features built into Linux-based systems, one very important potential vulnerability can exist when local access is granted - - that is file permission based on issues resulting from a user not assigning the correct permissions to files and directories. 
+So we will go over some simple concepts about the permission and how to manage the file-permission.
 
 This tutorial will use two commands **chmod** and **umask**.
 
@@ -23,7 +25,8 @@ We can decide the file permission type by this information:
 
 * Anyone else can read this file
 
-In the diagram below, we see how the first portion of the listing is interpreted. It consists of a character indicating the file type, followed by three sets of three characters that convey the reading, writing and execution permission for the owner, group, and everybody else.
+In the diagram below, we see how the first portion of the listing is interpreted. 
+It consists of a character indicating the file type, followed by three sets of three characters that convey the reading, writing and execution permission for the owner, group, and everybody else.
 
 ![permissions_diagram](https://cloud.githubusercontent.com/assets/9039778/5336536/b9d34ed4-7e72-11e4-8576-b93584d756fc.gif)
 
@@ -58,28 +61,41 @@ Therefore, there is a table about permission setting in binary:
 
 ## simple file system
 
-Let's talk about a little file system briefly. This is what file system looks like below. This picture may be in your computer, or a server (just like you login into the computer in the lab).
+Let's talk about a little file system briefly. 
+This is what file system looks like below. 
+This picture may be in your computer, or a server (just like you login into the computer in the lab).
 
 ![fs-layout](https://cloud.githubusercontent.com/assets/9039778/5335933/7a337768-7e68-11e4-9288-d82c3f90ba52.png)
 
 [Copyright (c) 2002-2007, Machtelt Garrels](http://tldp.org/LDP/intro-linux/html/intro_07.html)
 
-On the left "/" means root directory, which is the top level directory on a system. That is, it is the directory in which all other directories, including their subdirectories, and files reside. The root directory is designated by a forward slash ( / ). Usually, the permission of root directory's files is owned by **root** which is superuser.
+On the left "/" means root directory, which is the top level directory on a system. 
+That is, it is the directory in which all other directories, including their subdirectories, and files reside. 
+The root directory is designated by a forward slash ( / ). 
+Usually, the permission of root directory's files is owned by **root** which is superuser.
 ![screenshot-sjin010 tango-18 -](https://cloud.githubusercontent.com/assets/9039778/5391515/cf552a56-80d0-11e4-9bae-eeaf495f3cce.png)
 
 
 You are a member of root group, so you have right to access and execute the file, but do not have right to change the file. 
 
-In the diagram of filesystem, you will see `home` directory which is a group directory. In this directory in the picture, there is four usernames: rick, anna, emmy and bob -- in the lab, you will see `csgrads csmajs grads` in the `home` directory. In this group of members, you don't have right access those directories, only I have right access to the /home/csgrads/sjin010, which is my account.
+In the diagram of filesystem, you will see `home` directory which is a group directory. 
+In this directory in the picture, there is four usernames: rick, anna, emmy and bob -- in the lab, you will see `csgrads csmajs grads` in the `home` directory. 
+In this group of members, you don't have right access those directories, only we have right access to the /home/csgrads/sjin010, which is my account.
 ![screenshot-sjin010 tango-18](https://cloud.githubusercontent.com/assets/9039778/5337107/992c241a-7e79-11e4-9ed3-2019375cd4fb.png)
 
-So this is how users protect themselves from each other in a server. In a personal computer, there is usually only one group and one user in the `home` directory.
+So this is how users protect themselves from each other in a server. 
+In a personal computer, there is usually only one group and one user in the `home` directory.
 
 ##Changing permission
 
 ###umask
 
-When a user creates a file or directory, there are a set of default permissions. For example, if a text file has `666` (which is the same as the `rw-rw-rw` permission), it grants read and write permission to everyone. Similarly a directory with `777` permissions, it gives the user read, write, and execute permission to everyone. The user file-creation mask(umask) is used to determine the file permission for newly created files. It can control the default file permission for new files. It is a four-digit octal number. A umask can be set or expressed using **Symbolic values** and **Octal values**.
+When a user creates a file or directory, there are a set of default permissions. 
+For example, if a text file has `666` (which is the same as the `rw-rw-rw` permission), it grants read and write permission to everyone. 
+Similarly a directory with `777` permissions, it gives the user read, write, and execute permission to everyone. 
+The user file-creation mask(umask) is used to determine the file permission for newly created files. 
+It can control the default file permission for new files. It is a four-digit octal number. 
+A umask can be set or expressed using **Symbolic values** and **Octal values**.
 
 Here is table of Octal values:
 
@@ -101,9 +117,11 @@ The new file's permissions changed.
 
 
 ###chmod - modify file access rights
-Use this command to change file's permission which is created by owner. Just simply type `chmod 600 file`
+Use this command to change file's permission which is created by owner. 
+Just simply type `chmod 600 file`
 
-The 600 is the file's permission setting. As mentioned before, the machine thinks the permission settings as a series of bits.
+The 600 is the file's permission setting. 
+As we are pointing out above, the machine thinks the permission settings as a series of bits.
 
 ![screenshot-sjin010 tango-18 -hw4-1](https://cloud.githubusercontent.com/assets/9039778/5392292/580b3f04-80d9-11e4-85ea-723411b89cc6.png)
 
@@ -144,7 +162,13 @@ So, how do we set the sticky bit to a file or directory? There is several ways t
 
 ##Security
 
-When you write into a read-only file in vim, you will be given a warning - "this file is read-only". However, it also has a tip on the next "using `!` can override this file. " This is because, you are actually writing a temp file into the system, then the system will delete the original file and create a new one. So you have permission to make the file read-only, but you don't have actual permission to change the permission settings under the system level. Many applications delete and create new files when edits are made, if your directory permissions are not secure. This can be a security concern. Therefore, the permission settings will be very important on the security system.
+When you write into a read-only file in vim, you will be given a warning - "this file is read-only". 
+However, it also has a tip on the next "using `!` can override this file. " 
+This is because, you are actually writing a temp file into the system, then the system will delete the original file and create a new one. 
+So you have permission to make the file read-only, but you don't have actual permission to change the permission settings under the system level. 
+Many applications delete and create new files when edits are made, if your directory permissions are not secure. 
+This can be a security concern. 
+Therefore, the permission settings will be very important on the security system.
 
 
 

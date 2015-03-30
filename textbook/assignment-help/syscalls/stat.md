@@ -1,9 +1,12 @@
 #System calls to get the status of a file
 
-This document contains information on how to get the status of a file. The system calls described here are `stat`, `fstat`, and `lstat`.
+This document contains information on how to get the status of a file. 
+The system calls described here are `stat`, `fstat`, and `lstat`.
 
 ## What does stat, fstat, and lstat do?
-`stat`, `fstat`, and `lstat` obtain information of a file. All three return a `stat` structure when successful.
+
+`stat`, `fstat`, and `lstat` obtain information of a file. 
+All three return a `stat` structure when successful.
 
 The `stat` structure is as follows:
 ```
@@ -24,7 +27,8 @@ struct stat {
 };
 ```
 ####Returns:
-As mentioned above, a `stat` structure is returned upon sucess. If an error occurs, -1 is returned.
+As mentioned above, a `stat` structure is returned upon sucess.
+If an error occurs, -1 is returned.
 
 ####Headers:
 `#include <sys/types.h>` `#include <sys/stat.h>`  `#include <unistd.h>`
@@ -46,7 +50,9 @@ stat (path, &buf); 	// call stat (no error check)
 ```
 
 **fstat**
-Instead of a pathname, `fstat` uses a file descriptor to stat. You can obtain a file descriptor by using the `open` syscall. (See the [file descriptors section](./fd.md))  on how to use it.)
+Instead of a pathname, `fstat` uses a file descriptor to stat.
+You can obtain a file descriptor by using the `open` syscall. 
+(See the [file descriptors section](./fd.md))  on how to use it.)
 ```
 struct stat buf;  	 // create a stat struct
 int fd; 			// file descriptor (obtained from open syscall)
@@ -54,16 +60,20 @@ fstat (fd, &buf); 	// call fstat (no error check)
 ```
 
 **lstat**
-In this case, the pathname used in `lstat` is a symbolic link. Because of this, `lstat` returns information about that link and not the file itself.
+In this case, the pathname used in `lstat` is a symbolic link. 
+Because of this, `lstat` returns information about that link and not the file itself.
 ```
 struct stat buf;		// create a stat struct
 const char* symLink;	// name of symbolic link
 lstat (symLink, &buf);	// call lstat (no error check)
 ```
 ####Obtaining information from stat
-After successfully calling `stat`, you can now obtain information about it. Remember the `stat` structure mentioned earlier? We will be using parts of that structure to get the info we need.
+After successfully calling `stat`, you can now obtain information about it. 
+Remember the `stat` structure mentioned earlier? 
+We will be using parts of that structure to get the info we need.
 
-Let's say that you want to know about the file's permissions. We can use the `st_mode` field and [Bitwise Operators](../bitwise-ops/README.md) to do so.
+Let's say that you want to know about the file's permissions.
+We can use the `st_mode` field and [Bitwise Operators](../bitwise-ops/README.md) to do so.
 
 For example, we can determine if the owner has read permissions on a file stat `fStat`:
 ```
@@ -74,7 +84,8 @@ if (fStat.st_mode & S_IRUSR) // bitwise ops is used here
 else
   cout << "Owner does NOT have read permissions"
 ```
-Similarily, you can do bitwise ops with the `st_mode` field to obtain info about the other permissions. Below is a list of some of them.
+Similarily, you can do bitwise ops with the `st_mode` field to obtain info about the other permissions.
+Below is a list of some of them.
 
 Flag    | Permission
 ------- | ------------------------------

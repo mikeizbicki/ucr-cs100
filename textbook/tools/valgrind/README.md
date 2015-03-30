@@ -59,9 +59,12 @@ We get the following output:
 ```
 
 
-If we look at the line under ```HEAP SUMMARY```, we can see that there were still 1,024 bytes still in use when the program exited. These 1024 bytes come from when we allocated the memory for our ```char *```.
+If we look at the line under ```HEAP SUMMARY```, we can see that there were still 1,024 bytes still in use when the program exited. 
+These 1024 bytes come from when we allocated the memory for our ```char *```.
 
-Also at the next line, we can see that there was 1 allocation and 0 deallocation. This 1 allocation comes from calling the ```new``` function and the 0 deallocations comes from not calling the ```delete``` function. This implies that there is a memory leak in our program.
+Also at the next line, we can see that there was 1 allocation and 0 deallocation. 
+This 1 allocation comes from calling the ```new``` function and the 0 deallocations comes from not calling the ```delete``` function. 
+This implies that there is a memory leak in our program.
 
 We can also look at the ```LEAK SUMMARY``` to see if we can recover any leaked memory.
 
@@ -100,7 +103,8 @@ This information will help you find where your leaks are at in your program.
 
 If we take our old program example1.cpp and add a ```delete``` right under the ```new``` statement, our problem should be fixed!
 
-This is an important problem to fix because if you never free up your memory when you run programs, it could cause you to run out of memory in your computer. This is not a very good situation to be in.
+This is an important problem to fix because if you never free up your memory when you run programs, it could cause you to run out of memory in your computer. 
+This is not a very good situation to be in.
 
 
 ```
@@ -147,11 +151,6 @@ Using Valgrind on a more difficult example
 
 
 ```
-    #include <iostream>
-    #include <cstring>
-     
-    using namespace std;
-     
     void doSomething(char *ptr)
     {
         char *var2 = new char[1024]; // create a new char*
@@ -172,14 +171,18 @@ Using Valgrind on a more difficult example
     }  
 ```
 
-This program listed above just creates a character string or cstring and copies the string "hello world" into it. Then the program outputs the cstring. Then it passes this cstring into a function which declares another cstring and copies the first cstring into the second one. Then the function prints out the cstring. The following is what is supposed to be output by this program
+This program we are listing above just creates a character string or cstring and copies the string "hello world" into it. 
+Then the program outputs the cstring. 
+Then it passes this cstring into a function which declares another cstring and copies the first cstring into the second one. 
+Then the function prints out the cstring. The following is what is supposed to be output by this program
 
 ```
     hello world
     hello world
 ```
 
-In our program above, we call the ```new``` operator twice and never call the ```delete``` operator. We call the first ```new``` operator in our ```main``` function and the second ```new``` in our function ```doSomething```. 
+In our program above, we call the ```new``` operator twice and never call the ```delete``` operator. 
+We call the first ```new``` operator in our ```main``` function and the second ```new``` in our function ```doSomething```. 
 
 Now lets run our program with Valgrind and Memcheck:
 
@@ -215,7 +218,8 @@ We will get the following message:
 ```
 
 
-As we can see the program runs normal, printing out "hello world" twice under the ```Command: ./a.out``` line, but when we look at the ```HEAP SUMMARY``` we see that there were 3 allocations and 1 free. This means that we have a memory leak again.
+As we can see the program runs normal, printing out "hello world" twice under the ```Command: ./a.out``` line, but when we look at the ```HEAP SUMMARY``` we see that there were 3 allocations and 1 free. 
+This means that we have a memory leak again.
  
 If we look back at our program we can see that we used ```new``` but never called ```delete```.
 
@@ -224,11 +228,6 @@ As stated above ```Delete``` is necessary to free up memory so that you do run i
 To fix our problem we need to add in some deletes for the ```VAR``` pointer and the ```PTR``` pointer like such:
 
 ```
-    #include <iostream>
-    #include <cstring>
- 
-    using namespace std;
-
     void doSomething(char *ptr)
     {
         char *var2 = new char[1024]; // create a new char*
@@ -278,11 +277,6 @@ While Valgrind can check if you have deallocated memory, it can also check if yo
 If we take our example2.cpp code and modify it slightly on the first line in ```main```:
 
 ```
-    #include <iostream>
-    #include <cstring>
- 
-    using namespace std;
-
     void doSomething(char *ptr)
     {
         char *var2 = new char[1024]; // create a new char*
@@ -302,7 +296,7 @@ If we take our example2.cpp code and modify it slightly on the first line in ```
         return 0; 
     } 
 ```
-I modified the ```char *var = new char[1024]``` to ```char *var``` in order to induce the problem of not allocating memory before using that memory.
+We modified the ```char *var = new char[1024]``` to ```char *var``` in order to induce the problem of not allocating memory before using that memory.
 
 When we compile and run this program through Valgrind using Memcheck, we get:
 
@@ -345,11 +339,15 @@ When we compile and run this program through Valgrind using Memcheck, we get:
     Segmentation fault (core dumped)
 ```
 
-We can see right under ```Command:``` that we have the statement ```Use of uninitialized value of size 8```. This statement implies that we tried to use memory, that we have not allocated, which would cause a segmentation fault. This segmentation fault is shown at the end of the output.
+We can see right under ```Command:``` that we have the statement ```Use of uninitialized value of size 8```. 
+This statement implies that we tried to use memory, that we have not allocated, which would cause a segmentation fault. 
+This segmentation fault is shown at the end of the output.
 
-We also see that below the line ```Process terminating with default action of signal 11(SIGSEGV)``` we get the message ```Bad permissions for mapped region at address 0x400AC0```. The ```Bad permission``` statement also states that we have not allocated the memory that we want to access.
+We also see that below the line ```Process terminating with default action of signal 11(SIGSEGV)``` we get the message ```Bad permissions for mapped region at address 0x400AC0```. 
+The ```Bad permission``` statement also states that we have not allocated the memory that we want to access.
 
-We can see that Valgrind and Memcheck are trying to help us find our issue by giving us the message ```Use --track-origins=yes to see where uninitialized values come from```. So let's give this a try ourselves:
+We can see that Valgrind and Memcheck are trying to help us find our issue by giving us the message ```Use --track-origins=yes to see where uninitialized values come from```. 
+So let's give this a try ourselves:
 
 Let's run the command:
 

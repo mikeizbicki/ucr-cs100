@@ -24,11 +24,6 @@ map<string, int> example_map;
 Let's look at an example of a map in use:
 
 ```c++
-#include <iostream>
-#include <map>
-
-using namespace std;
-
 int main() {
     //create a map
     map<string, int> books;
@@ -45,16 +40,13 @@ We then add an element ```451``` with the key ```"fahrenheit"```.
 we then output the element associated with the key ```"fahrenheit"```.
 
 ## Maps with function pointers
-Let's picture a nightmare scenario
+Let's picture a nightmare scenario.
 Suppose that your evil professor assigns you the task of replicating the ```ls``` terminal program.
 ```ls``` has a **lot** of optional flags, some of them doing exactly the same thing (ex. ```-a``` and ```--all```).
 
 We *could* use a bunch of if-else statements:
 
 ```c++
-#include <iostream>
-
-using namespace std;
 int main(int argc, char* argv[]) {
     for (int i = 1 ; i < argc ; i++)
     {
@@ -78,11 +70,6 @@ This is where we bring out our inner mad (computer) scientist.
 What if we created a map with [function pointers](http://www.cprogramming.com/tutorial/function-pointers.html) as elements?
 
 ```c++
-#include <iostream>
-#include <map>
-
-using namespace std;
-
 void printAll();
 void printLong();
 void printRecursive();

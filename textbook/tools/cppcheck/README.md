@@ -143,10 +143,12 @@ Checking usage of global functions..
 $
 ```
 ####Why?
-Because you wrote a function when it wasn't even needed. Sheesh what a waste of time.
-Ok, fine here's what this code is and does. We added the main function and we still get the same as errors for not using variables i, but now we also get errors for an unused function `greaterThanZero`.
+Because you are writing a function when it is not even needed.
+Sheesh what a waste of time.
+Ok, fine here's what this code is and does. 
+We are adding the main function and we still get the same as errors for not using variables i, but now we also get errors for an unused function `greaterThanZero`.
 _l2Code_
-To fix the problems listed above in the cppcheck report would be to remove the unused function and to remove the variables that were not used.
+To fix the problems we have above in the cppcheck report would be to remove the unused function and to remove the variables that were not used.
 What we will be left with will be the `main()` function and the `foo(int x, int y)` function.
 By removing the `greaterThanZero(int x)` function, we fix the errors stating how `Variable 'i' is assigned a value that is never used` and `The function 'greaterThanZero' is never used`.
 
@@ -230,10 +232,6 @@ With beginner programmers, these kind of mistakes happen often.
 The following code is a great example of a mistake that beginner programmers might make.
 ##Unused function return value
 ```
-#include<iostream>
-
-using namespace std;
-
 int TestReturn(int &x, int &y)
 {
     x = 10;
@@ -271,12 +269,10 @@ Using another static debugger would be useful here.
 
 <a name="overflowing"></a>
 ##Overflow
-This example is to show the result of overflow. A majority of the students
-have probably made the mistake of subtracting a number from 0 in an unsigned integer variable.
+This example is to show the result of overflow. 
+A majority of the students have probably made the mistake of subtracting a number from 0 in an unsigned integer variable.
 The following code shows what happens when you overlook the potential of overflowing.
 ```
-#include<iostream>
-using namespace std;
 int main()
 {
 	int i = 2147483647;
@@ -294,7 +290,7 @@ $ cppcheck overflow.cpp
 Checking overflow.cpp...
 $
 ```
-####Seems normal to me!
+####Seems normal to us!
 One other bug that cppcheck does not check for is overflow.
 If we run this code, it would only print out "Hello World!" once.
 Why does this happen?
@@ -308,8 +304,6 @@ Using the visual studio static debugger <a href="http://www.viva64.com/en/pvs-st
 This example was made to show that cppcheck does not cover all out of bounds on arrays.
 The difference in this code from the earlier one is that the index is passed in through an argument of a function.
 ```
-#include<iostream>
-using namespace std;
 void f(char c)
 {
         char *p = new char[10];
@@ -330,9 +324,12 @@ Checking TrickyArray.cpp...
 $
 ```
 ####But didn't you say it checked array bounds?
-Yes, it does check array bounds, but not if its index is passed in through an argument. Currently, cppcheck does not check functions with respect of the parameter.
-Cppcheck checks the body of the code but does not evaluate the whole function with the argument included. Thus, it does not give us a message about it being out of bounds.
-Remember, one of the goals of cppcheck is to have little to no false positives. This is an example where cppcheck fails where other static debugger succeed.         
+Yes, it does check array bounds, but not if its index is passed in through an argument. 
+Currently, cppcheck does not check functions with respect of the parameter.
+Cppcheck checks the body of the code but does not evaluate the whole function with the argument included. 
+Thus, it does not give us a message about it being out of bounds.
+Remember, one of the goals of cppcheck is to have little to no false positives. 
+This is an example where cppcheck fails where other static debugger succeed.         
 
 
 An Example of a Cppcheck Feature
@@ -384,8 +381,8 @@ What this means is with general usage, cppcheck will not check much but what it 
 Similar to a crafting NPC in a game, cppcheck will tell you only what it can tell you for sure.
 Given the right ingredients, or in cppcheck's case, configurations and flags, it will give you errors that are almost guaranteed to be errors.
 
-cppcheck works in a way where it trues to avoid false positives so many of the bugs listed will be actual bugs.
-this being said, there will be many things that cppcheck will not catch such as [stylistic errors](#styleuse), syntax, and [runtime](#overflowing) bugs.
+cppcheck works in a way where it trues to avoid false positives so many of the bugs listed will be actual bugs. 
+This being said, there will be many things that cppcheck will not catch such as [stylistic errors](#styleuse), syntax, and [runtime](#overflowing) bugs.
 
 *tl;dr: cppcheck is good at what it does, but use a variety of tools to fully debug your programs.*              
 

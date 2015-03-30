@@ -40,7 +40,7 @@ $ ./hello
 Hello World!
 ```
 Our source code successfully compiled and we ran the executable `hello`. 
-If we updated `hello.cpp` to output `Hello World! Great weather today!`, we make the necessary changes to the source code and enter `make`:
+If we update `hello.cpp` to output `Hello World! Great weather today!`, we make the necessary changes to the source code and enter `make`:
 ```
 $ make
 g++ hello.cpp -o hello
@@ -54,7 +54,7 @@ Whenever you update your source code, you can just enter the `make` command inst
 In projects, `Makefile`s should be placed in the root directory, all source code should be placed in a directory called `src`. 
 The executables you create from your `Makefile` should be stored in a directory called `bin`.
 In our previous example we did not have our source code in a directory `src` and our executables in directory `bin`.
-If we were to use the `ls` command in our previous example, the current working directory would look similar to this:
+If we are to use the `ls` command in our previous example, the current working directory would look similar to this:
 ```
 $ ls
 hello   hello.cpp   Makefile   README.md
@@ -100,7 +100,7 @@ You should see the following:
 if [ ! -d bin ]; then mkdir bin; fi
 g++ src/hello.cpp -o bin/hello
 ```
-Our source code compiled successfully and the `bin` directory was made if it did not already exist. 
+Our source code compiles successfully and the `bin` directory is made if it did not already exist. 
 Now enter the following to run the executable:
 ```
 $ bin/hello

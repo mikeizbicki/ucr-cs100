@@ -3,7 +3,11 @@ Why and How to Use Pseudocode
 
 Why use pseudocode?
 -------------------
-Pseudocode may sound like a generic concept, but you can think of it as an outline of your code. Just like an outline of an essay/research paper you may start out with a simple outline (first example). You also need to consider the flow of information, and move paragraphs around to create the best story (second example). As the essay development continues your outline fills in, and you ultimately end up with a just a few points of concern (third example). Eventually everything comes together, and you have a complete essay (see the fully working program).
+Pseudocode may sound like a generic concept, but you can think of it as an outline of your code. 
+Just like an outline of an essay/research paper you may start out with a simple outline (first example). 
+You also need to consider the flow of information, and move paragraphs around to create the best story (second example). 
+As the essay development continues your outline fills in, and you ultimately end up with a just a few points of concern (third example). 
+Eventually everything comes together, and you have a complete essay (see the fully working program).
 
 
 What are some advantages of pseudocode?
@@ -17,33 +21,38 @@ What are some advantages of pseudocode?
   	http://en.wikipedia.org/wiki/Test-driven_development
 
 
-Although there are no real rules for pseudocode I will give a couple basic rules I use for each pseudocode example. Our example will be of a relatively simple neuronal circuit model.
+Although there are no real rules for pseudocode we will give a couple basic rules we use for each pseudocode example. 
+Our example will be of a relatively simple neuronal circuit model.
 
 Background
 -------------------------------------------
 In order to understand exactly what the program should ultimately do, we should first discuss some basic properties of neurons, and how they influence each other's activity.
 
-A neuron is defined as an electrically excitable cell that can process and transmit information through electrical or chemical signals. The membrane of the neuron contains specialized proteins
-that generate differences in ion concentrations between the external and internal parts of the neuron. This imbalance in ion concentrations between the external and internal parts of the neuron
-leads to a charge difference across the membrane called the membrane potential. When the neuron is at rest, i.e. not receiving or transmitting signals, the membrane potential is negative. The neuron
-becomes excited when the membrane potential becomes less negative. Neurons tap in to the energy stored in the ion concentration gradients in order to send electrical pulses to neighboring cells, thereby
-transmitting information from one cell to another. A single neuron can receive input from thousands of other neurons, and in turn output information onto thousands of other cells. For the purposes
-of this model, we focus on local connections between 2 neurons.
+A neuron is defined as an electrically excitable cell that can process and transmit information through electrical or chemical signals. The membrane of the neuron contains specialized proteins that generate differences in ion concentrations between the external and internal parts of the neuron. 
+This imbalance in ion concentrations between the external and internal parts of the neuron leads to a charge difference across the membrane called the membrane potential. 
+When the neuron is at rest, i.e. not receiving or transmitting signals, the membrane potential is negative. 
+The neuron becomes excited when the membrane potential becomes less negative. 
+Neurons tap in to the energy stored in the ion concentration gradients in order to send electrical pulses to neighboring cells, thereby transmitting information from one cell to another. 
+A single neuron can receive input from thousands of other neurons, and in turn output information onto thousands of other cells. For the purposes of this model, we focus on local connections between 2 neurons.
 
-Neurons form specialized connections called synapses which allow them to receive and send information. Synapses are said to be either excitatory or inhibitory depending on how it influences
-the activity of the receiving (or postsynaptic) neuron. At excitatory synapses, the postsynaptic neuron is excited by the release of excitatory chemicals (or neurotransmitters) from the presynaptic neuron. When the
-excitatory neurotransmitter, glutamate for example, is released from the presynaptic neuron into the synapse, it will bind to glutamate receptor proteins, AMPA receptors for example, on the postsynaptic neuron and allow positive ions to
-rush into the neuron. This sudden influx of positive ions will cause the membrane potential to become more positive thereby exciting the cell. At inhibitory synapses, the postsynaptic neuron will become
-inhibited by the release of inhibitory neurotransmitters (i.e. GABA) by the presynaptic neuron. The inhibitory neurotransmitter GABA will cross the synapse and bind to GABA receptors on the postsynaptic
-neuron resulting in the influx of negatively charged ions. This influx of negatively charged ions will make the membrane potential more negative and prevent the neuron from sending electrical signals.
+Neurons form specialized connections called synapses which allow them to receive and send information. 
+Synapses are said to be either excitatory or inhibitory depending on how it influences the activity of the receiving (or postsynaptic) neuron. 
+At excitatory synapses, the postsynaptic neuron is excited by the release of excitatory chemicals (or neurotransmitters) from the presynaptic neuron. 
+When the excitatory neurotransmitter, glutamate for example, is released from the presynaptic neuron into the synapse, it will bind to glutamate receptor proteins, AMPA receptors for example, on the postsynaptic neuron and allow positive ions to rush into the neuron. 
+This sudden influx of positive ions will cause the membrane potential to become more positive thereby exciting the cell. 
+At inhibitory synapses, the postsynaptic neuron will become inhibited by the release of inhibitory neurotransmitters (i.e. GABA) by the presynaptic neuron. 
+The inhibitory neurotransmitter GABA will cross the synapse and bind to GABA receptors on the postsynaptic neuron resulting in the influx of negatively charged ions. 
+This influx of negatively charged ions will make the membrane potential more negative and prevent the neuron from sending electrical signals.
 Below is a cartoon showing the synaptic connection between two neurons:
 
 ![Output sample](https://github.com/ogonz007/neuron/blob/master/synapse.gif)
 
 
 Based on the brief description of some neuronal properties, we will generate code that models a small network of two neurons. Neuron 1 will receive a brief excitatory sine wave stimulus.
-Neuron 1 will then send an electrical pulse to Neuron 2. This signal will result in the excitation of Neuron 2 which will then send a signal back to Neuron 1. In this sense, the two neurons will form
-recurrent connections with each other. A cartoon representation of the small neural circuit is shown below:
+Neuron 1 will then send an electrical pulse to Neuron 2. 
+This signal will result in the excitation of Neuron 2 which will then send a signal back to Neuron 1. 
+In this sense, the two neurons will form recurrent connections with each other. 
+A cartoon representation of the small neural circuit is shown below:
 
 ![Output sample](https://github.com/ogonz007/neuron/blob/master/2neuronCartoon_woEqns.gif)
 
@@ -72,8 +81,9 @@ Rules:
 
 ```
 What is my code supposed to accomplish?
-The code needs to create two neurons. One neuron will receive a sine wave as a stimulating input for 
-a certain amount of time. The neurons will have recursive excitatory synapses... meaning: 
+The code needs to create two neurons. 
+One neuron will receive a sine wave as a stimulating input for a certain amount of time. 
+The neurons will have recursive excitatory synapses... meaning: 
 sin_wave -> neuron1 <-> neuron2 (see Background section for image).
 
 define how long we want to calculate the neurons' responses (total iterations)
@@ -121,9 +131,8 @@ Rules:
 
 ![Output sample](https://github.com/ogonz007/neuron/blob/master/neuronFlowChart.gif)
 
-Up to this point, we have had a good idea of what the program should do, in what order certain operations should be done, and have visualized the flow of information through
-the program. We will use information from the previous pseudocode examples to generate code based pseudocode for 
-one function of the final working program.
+Up to this point, we have had a good idea of what the program should do, in what order certain operations should be done, and have visualized the flow of information through the program. 
+We will use information from the previous pseudocode examples to generate code based pseudocode for one function of the final working program.
 
 ### 3. Code based pseudocode
 
@@ -166,7 +175,9 @@ void fun(int t, RS (&cellType1)[ncellType1], RS (&cellType2)[ncellType2], bool (
 
 ```
 
-Here, we have provided an example of code based pseudocode for one of the functions in the fully working program below. This type of pseudocode should be generated for particularly difficult algorithms or functions. You will use this code based pseudocode to easily transfer to code, you can track how we did that in the final code presented next.
+Here, we have provided an example of code based pseudocode for one of the functions in the fully working program below. 
+This type of pseudocode should be generated for particularly difficult algorithms or functions. 
+You will use this code based pseudocode to easily transfer to code, you can track how we did that in the final code presented next.
 
 Our Final Code
 --------------
@@ -211,7 +222,8 @@ void fun(int t, RS (&cellType1)[ncellType1], RS (&cellType2)[ncellType2], bool (
 }
 
 ```
-For the full neuron code, see the file simple_model.cxx. To run the model yourself download simple_model.cxx and the Makefile, then use make run to compile and run the executable.
+For the full neuron code, see the file simple_model.cxx. 
+To run the model yourself download simple_model.cxx and the Makefile, then use make run to compile and run the executable.
 
 Our Code Output plotted in MATLAB and made into a gif
 -----------------------------------------------------

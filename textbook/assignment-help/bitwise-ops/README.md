@@ -1,30 +1,45 @@
 ## Introduction to Bitwise Operators
 
-Hey you! Yea, you! Do you want to learn about bitwise operators? Well, it doesn't matter what you want because you're going to learn them anyway! And do you know why? It's so you can do stuff like this:
+Hey you!
+Yea, you! 
+Do you want to learn about bitwise operators?
+Well, it doesn't matter what you want because you're going to learn them anyway!
+And do you know why? 
+It's so you can do stuff like this:
 
 ```
  int fd = open("filename", O_WRONLY | O_APPEND, S_IRUSR | S_IWUSR);
 ```
-Whoa what's the vertical bar thing? That's the bitwise `OR` operator, one of the bitwise operators you will learn about! Here, we pass in multiple flags to the `open` [system call](http://linux.die.net/man/2/open). "But it only takes in 2 `int` values. How did you pass in more than one flag/macro each?" The secret is the `OR` operator: the `OR` operator combines the flags into one value that we then pass in.
+Whoa what's the vertical bar thing? 
+That's the bitwise `OR` operator, one of the bitwise operators you will learn about!
+Here, we pass in multiple flags to the `open` [system call](http://linux.die.net/man/2/open).
+"But it only takes in 2 `int` values. 
+How did you pass in more than one flag/macro each?" 
+The secret is the `OR` operator: the `OR` operator combines the flags into one value that we then pass in.
 
-But wait! Did you notice how `open` had `int` parameters? That's right, these flags and macros are nothing more than a bunch of integers! This means that we could actually just memorize the number for every single flag combination in every library. Then we wouldn't need to use bitwise operators! Of course, that's super impractical, which is why we have the bitwise operators. We just need to look up the macro names, and the bitwise operators can take care of the rest, no memorization needed. Let's get started!
+But wait! Did you notice how `open` had `int` parameters? 
+That's right, these flags and macros are nothing more than a bunch of integers! 
+This means that we could actually just memorize the number for every single flag combination in every library. 
+Then we wouldn't need to use bitwise operators! Of course, that's super impractical, which is why we have the bitwise operators.
+We just need to look up the macro names, and the bitwise operators can take care of the rest, no memorization needed. 
+Let's get started!
 
-For bitwise operators, you're going to need more than just the regular decimal
-counting system. We'll assume you already know binary, but if you need a guide
-or refresher on binary, click  [here!](http://www.mathisfun.com/binary-number-system.html)
+For bitwise operators, you're going to need more than just the regular decimal counting system. 
+We'll assume you already know binary, but if you need a guide or refresher on binary, click  [here!](http://www.mathisfun.com/binary-number-system.html)
 Although, binary is used in these bit calculations, we'll need to learn the octal and the hexadecimal number systems too.
 Don't worry, we'll teach you those!
 
 ## Practical Uses
 
-The two most used bitwise operator in C/C++ are the `OR` and `AND` operators, as the others are simply not as useful for accessing information. But we will still cover them just in case!
+The two most used bitwise operator in C/C++ are the `OR` and `AND` operators, as the others are simply not as useful for accessing information. 
+But we will still cover them just in case!
 
-Earlier, we learned that `OR` is able to store multiple flags into a single value. Well, how useful would that be if we don't know what we actually stored right? That's why we have the `AND` operator! We can use `AND` to check if a value contains a certain flag, like so:
+Earlier, we learned that `OR` is able to store multiple flags into a single value. 
+Well, how useful would that be if we don't know what we actually stored right? 
+That's why we have the `AND` operator! 
+We can use `AND` to check if a value contains a certain flag, like so:
 
 ```c++
- #include <fcntl.h>
- #include <sys/stat.h>
-
  struct stat buf;
  int fd = open("filename", O_RDONLY);
  if (fstat(fd, &buf) == 0)
@@ -35,7 +50,8 @@ Earlier, we learned that `OR` is able to store multiple flags into a single valu
 	}
  }
 ```
-Here, we want to check if `filename` is a directory or not, which we can used the macro `S_IFDIR` to do. Utilizing bitwise `AND`, we are able to see if the value holding all the flags, `buf.st_mode`, contains `S_IFDIR`. If it does, then we know it's a directory!
+Here, we want to check if `filename` is a directory or not, which we can used the macro `S_IFDIR` to do. 
+Utilizing bitwise `AND`, we are able to see if the value holding all the flags, `buf.st_mode`, contains `S_IFDIR`. If it does, then we know it's a directory!
 
 Of course, we'll go more into detail on `AND` later on, but hopefully you've grasped that bitwise operators aren't something that you'll stop using.
 As long as you're coding in C/C++, you're bound to use these operators often!
@@ -43,6 +59,7 @@ As long as you're coding in C/C++, you're bound to use these operators often!
 Before we go on to how these operators work on different number systems, we'll discuss a way to organize our numbers.
 
 ## Digit Separators
+
 Digit separators are a small addition to the C++ standard introduced in C++14.
 A single-quote character can be used arbitrarily as a digit separator in numeric literals.
 For example it can be used to separate digits into thousands:
@@ -115,7 +132,8 @@ It prints to screen TRUE if the first is larger and FALSE otherwise.
 
 #### Octal
 
-Octal is the base-8 number system, which means its digits can only have 8 different values, ranging from 0 to 7. This means that whenever a digit exceeds 7, we must carry over the value to the next digit.
+Octal is the base-8 number system, which means its digits can only have 8 different values, ranging from 0 to 7. 
+This means that whenever a digit exceeds 7, we must carry over the value to the next digit.
 
 For example:
 
@@ -136,7 +154,9 @@ Note that to denote an octal value in C/C++, we precede it with `0`!
  Therefore, 084 = 68.
 ```
 
-Quick! Recall the example we showed with `AND`. Remember that it involved us using `AND` to search for the `S_IFDIR` flag? Well that flag is contained in the `sys/stat.h` library! Here's a snippet of that and some other flags defined:
+Quick! Recall the example we showed with `AND`. Remember that it involved us using `AND` to search for the `S_IFDIR` flag? 
+Well that flag is contained in the `sys/stat.h` library! 
+Here's a snippet of that and some other flags defined:
 
 ```
  #define S_IFDIR 0040000
@@ -145,11 +165,19 @@ Quick! Recall the example we showed with `AND`. Remember that it involved us usi
  #define S_IFREG 0100000
 ```
 
-And would you look at that! They're octal values! Good thing we know how octal values work! And now, we understand how to read some of the flags set in our previous examples! But we have to learn about hexadecimal first, so let's put octal on hold.
+And would you look at that! They're octal values! 
+Good thing we know how octal values work! 
+And now, we understand how to read some of the flags set in our previous examples! 
+But we have to learn about hexadecimal first, so let's put octal on hold.
 
 #### Hexadecimal
 
-Hexadecimal is a little more difficult to see, compared to decimal, octal, and binary. Hexadecimal is the base-16 number system. Now, you might be wondering what we use to represent values past 9. Well it's simple really - hexadecimal values range from 0-F. That's right! We use the first 6 letters of the alphabet! Here are a couple of examples of hex math:
+Hexadecimal is a little more difficult to see, compared to decimal, octal, and binary. Hexadecimal is the base-16 number system.
+Now, you might be wondering what we use to represent values past 9.
+Well it's simple really - hexadecimal values range from 0-F. 
+That's right!
+We use the first 6 letters of the alphabet! 
+Here are a couple of examples of hex math:
 
 Note that to represent a hexadecimal value in C++, we precede it with `0x`!
 ```
@@ -167,7 +195,10 @@ And to convert it to a decimal number, we use the same method as in octal, only 
  Therefore, 0x26 = 38
 ```
 
-Looking back at the two examples we gave for `OR` and `AND`, you can see we utilized the flags `O_WRONLY`, `O_APPEND`, and `O_RDONLY`. These flags are defined in the `fcntl.h` library. And guess what? They're actually hexadecimal values!
+Looking back at the two examples we gave for `OR` and `AND`, you can see we utilized the flags `O_WRONLY`, `O_APPEND`, and `O_RDONLY`. 
+These flags are defined in the `fcntl.h` library.
+And guess what? 
+They're actually hexadecimal values!
 
 ##### fcntl.h
 ```
@@ -179,7 +210,9 @@ Looking back at the two examples we gave for `OR` and `AND`, you can see we util
 ```
 [Take a look at the other values!](http://unix.superglobalmegacorp.com/Net2/newsrc/sys/fcntl.h.html)
 
-Right away, we've seen that there was a point to learning these number systems. We can read the bits of these values! This sets us up to be able to do the bitwise operations on these values, and we'll finally be able to know the full picture behind the two examples.
+Right away, we've seen that there was a point to learning these number systems.
+We can read the bits of these values! 
+This sets us up to be able to do the bitwise operations on these values, and we'll finally be able to know the full picture behind the two examples.
 
 Here's a table of corresponding values:
 
@@ -243,7 +276,8 @@ Here's a table of corresponding values:
 
 #### Bitwise OR
 
-The bitwise OR operator is a single pipe: `|`. Bitwise OR functions in the same way logical OR does, only it compares each bit between the two values.
+The bitwise OR operator is a single pipe: `|`.
+Bitwise OR functions in the same way logical OR does, only it compares each bit between the two values.
 
 The usage of bitwise OR is:
 
@@ -326,11 +360,15 @@ So, as our calculations show, we could actually rewrite our example as:
 ```
  int fd = open("filename", 0x0009, 0000600);
 ```
-Like we mentioned earlier, we could just pass in these numbers. But that's a huge hassle, since we can just look up the names associated with each value and use `OR`. But now you've seen how the bitwise `OR` truly works with the flags!
+Like we mentioned earlier, we could just pass in these numbers.
+But that's a huge hassle, since we can just look up the names associated with each value and use `OR`.
+But now you've seen how the bitwise `OR` truly works with the flags!
 
 #### Bitwise AND
 
-The bitwise AND operator is a single ampersand: `&`. Bitwise AND works the same way the logical AND works! However, rather than operating only two boolean variables, the bitwise AND operates on every bit pair between the two given values!
+The bitwise AND operator is a single ampersand: `&`. 
+Bitwise AND works the same way the logical AND works! 
+However, rather than operating only two boolean variables, the bitwise AND operates on every bit pair between the two given values!
 
 The usage of bitwise AND is:
 
@@ -377,11 +415,15 @@ For example, lets bitwise AND the decimal values 5 and 9:
     = 1
 ```
 
-Thus, `5 & 9 = 1`. Pretty simple right? Good! Now let's try it on the example from before:
+Thus, `5 & 9 = 1`. 
+Pretty simple right? 
+Good!
+Now let's try it on the example from before:
 ```
  if (buf.st_mode & S_IFDIR)
 ```
-Let's assume that `buf.st_mode` has a value of 0100644. Now, using what we know about `S_IFDIR`:
+Let's assume that `buf.st_mode` has a value of 0100644. 
+Now, using what we know about `S_IFDIR`:
 ```
     (buf.st_mode & S_IFDIR) == (0100644 & 0040000)
     001'000'000'110'100'100
@@ -390,7 +432,9 @@ Let's assume that `buf.st_mode` has a value of 0100644. Now, using what we know 
     000'000'000'000'000
     = 0000000
 ```
-We receive a resulting value of 0, our file is NOT a directory! However, can we determine what kind of file this is? Let's try a different macro this time:
+We receive a resulting value of 0, our file is NOT a directory!
+However, can we determine what kind of file this is? 
+Let's try a different macro this time:
 ```
     (buf.st_mode & S_IFREG) == (0100644 & 0100000)
     001'000'000'110'100'100
@@ -399,13 +443,21 @@ We receive a resulting value of 0, our file is NOT a directory! However, can we 
     001 000 000 000 000 000
     = 0100000
 ```
-Would you look at that? The resulting value was not 0, meaning `buf.st_mode` contains this flag. And this flag tells us that it's just a simple regular file! Cool! (There are still other flags in `buf.st_mode`! See if you can figure out what they say!)
+Would you look at that? The resulting value was not 0, meaning `buf.st_mode` contains this flag.
+And this flag tells us that it's just a simple regular file! 
+Cool! 
+(There are still other flags in `buf.st_mode`! 
+See if you can figure out what they say!)
 
-Phew, that's a lot of learning. I know what you're thinking. "This is really exciting and I can't wait to keep learning more about bitwise operations!" That's really great to hear because we still have four more operators. Woohoo the fun doesn't end!
+Phew, that's a lot of learning. I know what you're thinking. 
+"This is really exciting and I can't wait to keep learning more about bitwise operations!"
+That's really great to hear because we still have four more operators.
+Woohoo the fun doesn't end!
 
 #### Bitwise XOR
 
-The bitwise exclusive OR operator `^` - get it? EXclusive OR. XOR! - compares each bit between the two given operands, returning 1 only when one of the compared bits equals 1.
+The bitwise exclusive OR operator `^` - get it? 
+EXclusive OR. XOR! - compares each bit between the two given operands, returning 1 only when one of the compared bits equals 1.
 
 The bitwise XOR expressions looks like:
 
@@ -439,7 +491,8 @@ The truth table for the XOR operation is:
 	</TR>
 </TABLE>
 
-Looks like it's time for another example! Let’s perform the XOR operation on 015 and 023:
+Looks like it's time for another example! 
+Let’s perform the XOR operation on 015 and 023:
 ```
     015 ^ 023 //Ah yes, use their binary representations!
 
@@ -451,7 +504,10 @@ Looks like it's time for another example! Let’s perform the XOR operation on 0
 
     Therefore, 015 ^ 023 = 036!
 ```
-There isn't much daily use for the `XOR` operator. However, as far as we've found, you can use it for encryption! In our previous example, `015 ^ 023` turned into `036`. What happens when we `XOR` it with `023`?
+There isn't much daily use for the `XOR` operator.
+However, as far as we've found, you can use it for encryption!
+In our previous example, `015 ^ 023` turned into `036`.
+What happens when we `XOR` it with `023`?
 ```
     036 ^ 023
 
@@ -461,11 +517,19 @@ There isn't much daily use for the `XOR` operator. However, as far as we've foun
     001'101
     = 015
 ```
-We got the same value as before! If you use `XOR` with the same value twice, you'll receive the value you originally had! So we could potentially `XOR` a value with many different numbers to encrypt them and then `XOR` them again to decrypt them! However, security systems generally use number encryptions instead of bit encryptions, so you won't find much use. But it's still good information to have!
+We got the same value as before! 
+If you use `XOR` with the same value twice, you'll receive the value you originally had!
+So we could potentially `XOR` a value with many different numbers to encrypt them and then `XOR` them again to decrypt them!
+However, security systems generally use number encryptions instead of bit encryptions, so you won't find much use. 
+But it's still good information to have!
 
 #### Bitwise Leftshift
 
-The left-shift operator shifts the bits of the operand a number of times to the left. This number is determined by the value the user passes in. Sounds a little bit confusing right? Don't worry, it's not actually that complicated! Also, we'll provide some visual examples later in this section.
+The left-shift operator shifts the bits of the operand a number of times to the left. 
+This number is determined by the value the user passes in. 
+Sounds a little bit confusing right?
+Don't worry, it's not actually that complicated!
+Also, we'll provide some visual examples later in this section.
 
 The bitwise left-shift expression looks like:
 
@@ -473,7 +537,12 @@ The bitwise left-shift expression looks like:
 expression<<value
 ```
 
-Now, let's do the operations on the 8-bit representation of 1! Remember what the 8-bit representation for 1 is? That's okay you can scroll all the way back up to find out! But because we're nice guys, we'll show it right here: '0000 0001'. You're welcome. Anyway, let's see what shifting left once looks like:
+Now, let's do the operations on the 8-bit representation of 1!
+Remember what the 8-bit representation for 1 is?
+That's okay you can scroll all the way back up to find out!
+But because we're nice guys, we'll show it right here: '0000 0001'. 
+You're welcome.
+Anyway, let's see what shifting left once looks like:
 
 ```
  Given 0000'0001 (1)
@@ -481,7 +550,9 @@ Now, let's do the operations on the 8-bit representation of 1! Remember what the
  0000'0010 (2)
 ```
 
-Notice how that one bit on the far right moved to the left? And then a 0 was added to where it once was? That's how left shifting works! Let's do some more examples!
+Notice how that one bit on the far right moved to the left?
+And then a 0 was added to where it once was? 
+That's how left shifting works! Let's do some more examples!
 
 ```
  Base Value: 1 = 0000 0001
@@ -495,13 +566,21 @@ Notice how that one bit on the far right moved to the left? And then a 0 was add
  1<<7 = 1000'0000 (128)
 ```
 
-There we go. Super simple! Also notice how that values are doubling? That's what left-shifting essentially does! It doubles the size of your value! Of course, this operator doesn't have much value in C++, as we can just multiply by two. But it's nice to have in mind!
+There we go. Super simple!
+Also notice how that values are doubling? 
+That's what left-shifting essentially does! 
+It doubles the size of your value! Of course, this operator doesn't have much value in C++, as we can just multiply by two. 
+But it's nice to have in mind!
 
-If you're tired, don't worry! You're on the home stretch!
+If you're tired, don't worry!
+You're on the home stretch!
 
 #### Bitwise Rightshift
 
-The right-shift operator works in the same way the left-shift operator does, only in the complete opposite direction! That means, you guessed it, it shifts all the bits to the right! And, since it's shifted the other way, it means that the values get divided by two! Bring out the examples!
+The right-shift operator works in the same way the left-shift operator does, only in the complete opposite direction!
+That means, you guessed it, it shifts all the bits to the right!
+And, since it's shifted the other way, it means that the values get divided by two!
+Bring out the examples!
 
 The syntax for the right-shift operator is nearly the same as the left-shift one too:
 
@@ -525,6 +604,11 @@ And here's some right-shift in action:
 
 ## Conclusion
 
-You've finally made it! You now know about all the bitwise operators! While you may not be comfortable with octal, hexadecimal, and the operators yet, don't worry! There's a lot of time to get used to them through practice, such as doing sample calculations like we did in our examples. Also, test a lot of these operators in whatever IDE you'd like and output them! That way you can see them in action yourself! (Don't forget that the output is usually in decimal though!)
+You've finally made it! 
+You now know about all the bitwise operators!
+While you may not be comfortable with octal, hexadecimal, and the operators yet, don't worry!
+There's a lot of time to get used to them through practice, such as doing sample calculations like we did in our examples. 
+Also, test a lot of these operators in whatever IDE you'd like and output them! 
+That way you can see them in action yourself! (Don't forget that the output is usually in decimal though!)
 
 Hope you enjoyed this tutorial!
