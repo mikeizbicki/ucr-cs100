@@ -1,6 +1,6 @@
 ## cs100 - open source software construction
 
-This is a course on [how to be a hacker](http://www.catb.org/ESR/faqs/hacker-howto.html).
+This is a course on [how to be a hacker](http://www.catb.org/esr/faqs/hacker-howto.html).
 Being a hacker [means a lot of things](http://www.catb.org/jargon/html/H/hacker.html).
 It means:
 
@@ -65,11 +65,11 @@ I will occasionally have unscheduled quizzes to ensure you are doing the reading
 week | date | reading | topics
 --- | --- | --- | ---
 1 | Mar30 | Daniel Lemire's [how to learn efficiently](http://lemire.me/blog/archives/2014/12/30/how-to-learn-efficiently/) (recommended; not required) | introduction; using vim
-1 | Apr01 | ESR's [all about unix](http://www.catb.org/ESR/writings/taoup/html/context.html) | version control with git
-1 | Apr03 | ERS's [about common software licenses](http://www.catb.org/ESR/writings/taoup/html/ch16s07.html); the New Yorker's [30 year retrospective on the GNU manifesto](http://www.newyorker.com/business/currency/the-gnu-manifesto-turns-thirty?intcid=mod-latest) | version control with git
+1 | Apr01 | ESR's [all about unix](http://www.catb.org/esr/writings/taoup/html/context.html) | version control with git
+1 | Apr03 | ERS's [about common software licenses](http://www.catb.org/esr/writings/taoup/html/ch16s07.html); the New Yorker's [30 year retrospective on the GNU manifesto](http://www.newyorker.com/business/currency/the-gnu-manifesto-turns-thirty?intcid=mod-latest) | version control with git
 2 | Apr06 | Paul Graham's [what to do in college](http://www.paulgraham.com/college.html) | version control with git
 2 | Apr08 | Ian Malpass's [advice to future software engineers](https://medium.com/@indec/advice-to-future-software-engineers-64a29669d179) | version control with git
-2 | Apr10 | Lucas Xu's [Makefile tutorial](textbook/tools/Makefiles); Alexander Ortiz's [how to write a README file](textbook/bestpractices/WritingREADMEs); ESR's thoughts on [unix documentation part I](http://www.catb.org/ESR/writings/taoup/html/ch18s02.html) and [part II](http://www.catb.org/ESR/writings/taoup/html/ch18s06.html) | syscalls: managing processes (`fork`,`wait`,`exec`,`perror`); **quiz**
+2 | Apr10 | Lucas Xu's [Makefile tutorial](textbook/tools/Makefiles); Alexander Ortiz's [how to write a README file](textbook/bestpractices/WritingREADMEs); ESR's thoughts on [unix documentation part I](http://www.catb.org/esr/writings/taoup/html/ch18s02.html) and [part II](http://www.catb.org/esr/writings/taoup/html/ch18s06.html) | syscalls: managing processes (`fork`,`wait`,`exec`,`perror`); **quiz**
 3 | Apr13 | the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls) | syscalls: managing processes (`fork`,`wait`,`exec`,`perror`)
 3 | Apr15 | [bitwise operators](textbook/assignment-help/bitwise-ops); [macros](textbook/assignment-help/macros) | syscalls: managing files (`open`,`close`,`read`,`write`)
 3 | Apr17 | the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls)  | syscalls: managing files (`open`,`close`,`read`,`write`)
@@ -81,7 +81,7 @@ week | date | reading | topics
 5 | May01 | Shubhro Saha's [why engineers should write](http://www.shubhro.com/2014/12/27/software-engineers-should-write/); the economist's [good writing style](http://www.economist.com/styleguide/introduction) | writing good documentation
 6 | May04 | | syscalls: io redirection/piping (`pipe`,`dup`)
 6 | May06 | the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls) | syscalls: io redirection/piping (`pipe`,`dup`)
-6 | May08 | ESR's classic [Master Foo series](http://www.catb.org/ESR/writings/taoup/html/unix_koans.html) | shell scripting: control flow with `if` and `for`; **quiz**
+6 | May08 | ESR's classic [Master Foo series](http://www.catb.org/esr/writings/taoup/html/unix_koans.html) | shell scripting: control flow with `if` and `for`; **quiz**
 7 | May11 | | shell scripting: environment variables (`export`,`PATH`,`HOME`,`EDITOR`)
 7 | May13 | | shell scripting: environment variables (`export`,`PATH`,`HOME`,`EDITOR`)
 7 | May15 | | syscalls: signal handling (`signal`,`sigaction`)
@@ -90,13 +90,13 @@ week | date | reading | topics
 8 | May22 | | syscalls: environment variables (`getenv`,`setenv`); **quiz**
 9 | May25 | |
 9 | May27 | |
-9 | May29 | ESR's thoughts on [flaws with unix](http://www.catb.org/ESR/writings/taoup/html/ch20s03.html); Poul-Henning Kamp's [a generation lost in the bazaar](https://queue.acm.org/detail.cfm?id=2349257&ref=fullrss) | the flaws of Unix and open source
+9 | May29 | ESR's thoughts on [flaws with unix](http://www.catb.org/esr/writings/taoup/html/ch20s03.html); Poul-Henning Kamp's [a generation lost in the bazaar](https://queue.acm.org/detail.cfm?id=2349257&ref=fullrss) | the flaws of Unix and open source
 10 | Jun01 | | case study: hacking the email system and the [ioccc.org](http://ioccc.org)
 10 | Jun03 | | case study: stuxnet and heartbleed
 10 | Jun05 | | **final quiz**
 
 <!--
-ESR's thoughts on [using make](http://www.catb.org/ESR/writings/taoup/html/ch15s04.html)
+ESR's thoughts on [using make](http://www.catb.org/esr/writings/taoup/html/ch15s04.html)
 Kenley Arai's tutorial on [test driven development](textbook/bestpractices/TestDrivenDevelopment); Gabriel Ruiz's [tutorial on how to design test cases](textbook/bestpractices/WritingGoodTestCases);
 Paul Graham's [how to be a good hacker](http://www.paulgraham.com/gh.html);
 -->
