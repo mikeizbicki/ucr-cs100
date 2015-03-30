@@ -35,7 +35,7 @@ if(!getcwd(buf,1024))
 
 [man page](http://linux.die.net/man/3/getpwuid)
 
-Notes: As you can probably see, `getpwuid` is a bit different from the other syscalls previously mentioned. It takes in the  user’s ID, which is in a numerical form. After that, it will return a pointer to a structure, which contains these fields:
+Notes: As you can probably see, `getpwuid` is a bit different from the other syscalls previously mentioned. It takes in the user’s ID, which is in a numerical form. After that, it will return a pointer to a structure, which contains these fields:
 ```
 struct passwd {
     char   *pw_name;       /* username */
@@ -48,7 +48,7 @@ struct passwd {
 };
 ```
 
-The main purpose of this function is  to assist in finding info about the user, and their info. This is particularly useful when implementing things such as `ls` (an assignment in cs-100), and is necessary to implement the `-l` flag for `ls`.
+The main purpose of this function is to assist in finding info about the user, and their info. This is particularly useful when implementing things such as `ls` (an assignment in cs-100), and is necessary to implement the `-l` flag for `ls`.
 
 Here’s a quick implementation of `getpwuid`, where `s` is a `stat struct`:
 ```
@@ -78,11 +78,12 @@ struct group {
 };
 ```
 
-The main purpose of this function is  to assist in finding info about the group and its info, and much like `getpwuid`, is particularly useful  when implementing things such as `ls` (an assignment in cs-100), and is necessary to implement the `-l` flag for `ls`.
+The main purpose of this function is to assist in finding info about the group and its info, and much like `getpwuid`, is particularly useful  when implementing things such as `ls` (an assignment in cs-100), and is necessary to implement the `-l` flag for `ls`.
 
 Here’s a quick implementation of `getgrgid`, where s is a `stat struct`:
 ```
-struct passwd *gp;
+struct group *gp;
 if(!(gp = getgrgid(s.st_gid)))
    perror("there was an error in getgrgid. ");
 ```
+

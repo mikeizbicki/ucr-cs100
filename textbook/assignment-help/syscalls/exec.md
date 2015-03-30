@@ -1,6 +1,6 @@
 #System calls relating to the use of Exec
 
-This file will include the system calls needed to use `exec`. It will include `fork`, `wait` and `exec` itself. `fork` is necessary when using `exec` because `exec` will end the program upon completion and only return if it failed. Therefore we need to create a new process for it to run in. Then we need `wait` so that we do not have any zombie chlid processes and do not incur race conditions.
+This file will include the system calls needed to use `exec`. It will include `fork`, `wait` and `exec` itself. `fork` is necessary when using `exec` because `exec` will end the program upon completion and only return if it failed. Therefore we need to create a new process for it to run in. Then we need `wait` so that we do not have any zombie child processes and do not incur race conditions.
 
 ##fork:
 
@@ -16,7 +16,7 @@ This is perhaps one of the most important syscall of them all so make sure you r
 
 `fork` creates a new process so you can have two programs running at once (multitasking, huzzah!). To create this new process, `fork` creates a copy of the process that was already running. This new process is called a child, while the older process is called the parent.
 
-Its important to note, that `fork` creates an exact copy of the parent process, and that the child and parent both continue running from the line immediately following `fork`. After this, there is no communication between the child and parent processes (except with `wait` or `pipe` which will be explained later), so anything changed in the parent or child after `fork` will not affect the other. You can think of this like a function which creates local copies of variables and once the function ends, these copies go out of scope and disappear.
+It's important to note, that `fork` creates an exact copy of the parent process, and that the child and parent both continue running from the line immediately following `fork`. After this, there is no communication between the child and parent processes (except with `wait` or `pipe` which will be explained later), so anything changed in the parent or child after `fork` will not affect the other. You can think of this like a function which creates local copies of variables and once the function ends, these copies go out of scope and disappear.
 
 If you’re creating your own bash shell you will HAVE to use `fork`. You'll use the child process of the `fork` to execute all of your commands because `exec` will end the process its running in upon completion.
 
@@ -44,7 +44,7 @@ else if(pid > 0) //parent function
 }
 ```
 
-Here we’re setting `pid`, which is an `int`, to the return value of `fork`. This works even though the declaration returns `pid_t`, because `pid_t` is basically an integer, but is defined this way to work across systems and conform to older systems that use `short` or some other data type. If fork returns 0, that means that we are in the child process. Otherwise, if fork returns a non-zero (not including -1, which you must error check), `fork` returned the pid of the child process and we are therefore in the parent. So, as we can see, the first `else if` statement will only be executed by the child process and the second will only be excecuted by the parent. You have to have the `exit()` statement when you’re done executing everything you want to in the child. If the exit statement isn't present, the child will continue executing through the rest of the code, which is likely intended for the parent. This may cause unforseen errors and in the case of a shell where we run in a loop, the child will become a zombie process - that is, it will not exit, and continue to run, taking up memory and hampering the program's performance; essentially running two concurrent shells - and we don't want that do we?
+Here we’re setting `pid`, which is an `int`, to the return value of `fork`. This works even though the declaration returns `pid_t`, because `pid_t` is basically an integer, but is defined this way to work across systems and conform to older systems that use `short` or some other data type. If fork returns 0, that means that we are in the child process. Otherwise, if fork returns a non-zero (not including -1, which you must error check), `fork` returned the pid of the child process and we are therefore in the parent. So, as we can see, the first `else if` statement will only be executed by the child process and the second will only be executed by the parent. You have to have the `exit()` statement when you’re done executing everything you want to in the child. If the exit statement isn't present, the child will continue executing through the rest of the code, which is likely intended for the parent. This may cause unforeseen errors and in the case of a shell where we run in a loop, the child will become a zombie process - that is, it will not exit, and continue to run, taking up memory and hampering the program's performance; essentially running two concurrent shells - and we don't want that do we?
 
 Of course, with a child, there must be a parent. In this particular example, the parent simply waits for the child process to finish running (because of the wait call, which will be explained later), and executes after the child process is finished.
 
@@ -171,7 +171,7 @@ Macros used can be found on the man page.
 
 **includes:** `#include <unistd.h>`
 
-**declaration:** (multiple declarations depending on which `exec` funtion is used)
+**declaration:** (multiple declarations depending on which `exec` function is used)
 
 Here is an example of the two most common ones: `int execv(const char *path, char *const argv[]);`  `int execvp(const char *file, char *const argv[]);`
 
@@ -205,7 +205,7 @@ else if(pid == 0)//when pid is 0 you are in the child process
 else if(pid > 0) //parent function
 {
     if( -1 == wait(0)) //wait for the child process to finish executing
-        perror(“There was an error with wait().);
+        perror(“There was an error with wait(). ");
 }
 ```
 
@@ -213,6 +213,7 @@ else if(pid > 0) //parent function
 
 The parameters for `execvp` are: `const char *file, char *const argv[]`. In this example, `file` is `argv[0]` and `argv` is `argv[]`. `argv`, in this example, is a char pointer pointer containing the user input of what commands they wish to execute.
 
-For example, the user can input `ls -l -a` and `argv[0] = ls`, `argv[1]= -l`, `argv[2]= -a`. So esentially, `argv[0]` is the command, while everything after is the flag.
+For example, the user can input `ls -l -a` and `argv[0] = ls`, `argv[1]= -l`, `argv[2]= -a`. So essentially, `argv[0]` is the command, while everything after is the flag.
 
 As we told you above, `execvp` finds the path for you. If you wanted to use `execv` you would have to add the path to the front of the command, for example if you input `ls` the program would change it to `/usr/bin/ls` for the `execv` call.
+

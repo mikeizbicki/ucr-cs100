@@ -1,4 +1,4 @@
-#Tutorial: Simple Syntaxs For Bash Script
+#Tutorial: Simple Syntaxes For Bash Script
 
 ##All begin with a simple example
 
@@ -12,29 +12,38 @@ echo 'Hello world!!!'
 
 There are three lines of code in the above script:
 
-* The last line is an echo command to show 'Hello world!!!'. It also works on the command line in the terminal:
+* The last line is an echo command to show 'Hello world!!!'. 
+It also works on the command line in the terminal:
 
 ```
 $ echo 'Hello world!!!'
 Hello world!!!
 ```
 
-* The second line is a comment, because it begins with '#'. Everything after '#' in the current command line will be ignored:
+* The second line is a comment, because it begins with '#'. 
+Everything after '#' in the current command line will be ignored:
 
 ```
 $ echo 'Hello world!!!' #Our first script!!!
 Hello world!!!
 ```
 
-* We can see that every shell script includes the first line. It looks like a comment since it starts with '#'. However, it is created on purpose because it tells the system which interpreter (such as bash, ruby, python, and others) should be used to execute the followed script. For this script, it runs in the bash shell. And '#!' is a special character construct called shebang.
+* We can see that every shell script includes the first line. 
+It looks like a comment since it starts with '#'. However, it is created on purpose because it tells the system which interpreter (such as bash, ruby, python, and others) should be used to execute the followed script.
+For this script, it runs in the bash shell. 
+And '#!' is a special character construct called shebang.
 
-A shell script is a file containing a sequence of commands for a UNIX-based operating system. We also can consider each line of code of the script as a line of command in the terminal.
+A shell script is a file containing a sequence of commands for a UNIX-based operating system. 
+We also can consider each line of code of the script as a line of command in the terminal.
 
 The following tutorial has two parts: 
 
 ##Part 1: How to make your script become executable
 
-To successfully run our shell script, we need to make our script become executable. For the above "hello world" example, I save it as 'hello.sh'. For a shell script file, try to use the file extension as '.sh'. So it can be easily identified by us as shell script.
+To successfully run our shell script, we need to make our script become executable. 
+For the above "hello world" example, we save it as 'hello.sh'. 
+For a shell script file, try to use the file extension as '.sh'. 
+So it can be easily identified by us as shell script.
 
 There are two ways to execute a shell script:
 
@@ -43,7 +52,9 @@ $ bash hello.sh
 $ ./hello.sh
 ```
 
-Here, I use the second way to run my script. However, the system is very picky about not treating any text files as a program. Then each time we create a shell script we may meet a problem about permission: 
+Here, I use the second way to run my script. 
+However, the system is very picky about not treating any text files as a program. 
+Then each time we create a shell script we may meet a problem about permission: 
 
 ```
 $ ./hello.sh
@@ -57,7 +68,9 @@ $ ls -l hello.sh
 -rw------- 1 user group 35 Dec  4 04:40 hello.sh
 ```
 
-We can see that we only have 'rw', which means a reading and writing permission for the user. How do we add executing permission for the user? Luckily, we have the 'chmod' command to change the permission of the files:
+We can see that we only have 'rw', which means a reading and writing permission for the user. 
+How do we add executing permission for the user? 
+Luckily, we have the 'chmod' command to change the permission of the files:
 
 ```
 $ chmod u+x hello.sh
@@ -65,16 +78,18 @@ $ ls -l hello.sh
 -rwx------ 1 user group 35 Dec  4 04:40 hello.sh
 ```
 
-Now we have 'x' added, which means executing permission has been given to the user. Let us execute this shell script again:
+Now we have 'x' added, which means executing permission has been given to the user. 
+Let us execute this shell script again:
 
 ```
 $ ./hello.sh
 Hello world!!!
 ```
 
-Tip: there is an alterative way to change permission. If you want to learn more about it, you can go to this link: http://linuxcommand.org/lts0070.php 
+Tip: there is an alternative way to change permission. 
+If you want to learn more about it, you can go to this link: http://linuxcommand.org/lts0070.php 
 
-##Part 2: More syntaxs about shell scripts
+##Part 2: More syntax about shell scripts
 
 ###Variables
 
@@ -84,7 +99,8 @@ The following line of command shows how to define a variable:
 x="Hello"
 ```
 
-bash does not allow us to leave a space on either side of '=' sign. The following will gives an error message:
+Bash does not allow us to leave a space on either side of '=' sign. 
+The following will gives an error message:
 
 ```
 x = "Hello"
@@ -96,7 +112,8 @@ And we can access it as follows:
 $x
 ```
 
-We can also access our argument variables by using '$0', '$1', '$2',... The following script will show the value for those variables:
+We can also access our argument variables by using '$0', '$1', '$2',... 
+The following script will show the value for those variables:
 
 ```
 #!/bin/bash
@@ -123,7 +140,10 @@ d
 5
 ```
 
-'$#' represents the number of the total arguments. '$0' represents the first argument which is script itself. '$1' represents your first provided argument. Likewise, '$2' represents the second provided argument, '$3' represents the third provided argument, and etc.
+'$#' represents the number of the total arguments. 
+'$0' represents the first argument which is script itself. 
+'$1' represents your first provided argument. 
+Likewise, '$2' represents the second provided argument, '$3' represents the third provided argument, and etc.
 
 There are also some preset variables in Unix, and you can use those variables in any other programs:
 
@@ -154,7 +174,8 @@ $ expr 30 % 7
 $ echo `expr 30 % 7`
 ```
 
-Do not use single or double quotes, it only works in the back quote. If you want to perform mathmetic operations to assign value to a variable, you can look at the following example:
+Do not use single or double quotes, it only works in the back quote. 
+If you want to perform mathematic operations to assign value to a variable, you can look at the following example:
 
 ```
 #!/bin/bash
@@ -168,7 +189,7 @@ After a shell script is executed, it returns two types of exit statuses:
 
 * If the command is successful, it returns value zero(0)
 
-* If the command is not successful, it returns a nonzero value in the range between 1 to 255;
+* If the command is not successful, it returns a nonzero value in the range between 1 and 255;
 
 We can examine the exit status of your last command by using parameter '$?':
 
@@ -192,7 +213,7 @@ We can see that only the first command is successful and it returns zero(0).
 
 ###read
 
-The read statement can get input from the keyboard and stored to variable, the following is an example script:
+The read statement can get a line from standard input and store it into a variable, the following is an example script:
 
 ```
 #!/bin/bash
@@ -211,13 +232,14 @@ For more details, you can check this link: http://www.lehman.cuny.edu/cgi-bin/ma
 $ convert image.jpg image.png
 ```
 
-we just changed the format of the image from '.jpg' to '.png'.
+The above line changed the format of the image from '.jpg' to '.png'.
 
 For more details, please check this link: http://linux.die.net/man/1/convert
 
 ###test
 
-Before starting to introduce the 'if' statement, I want to introduce the 'test' statement first, because it is often used with the 'if' statement to perform true/false decisions. The following example tests whether there are arguments provided:
+Before we introduce the 'if' statement,we want to introduce the 'test' statement first, because it is often used with the 'if' statement to perform true/false decisions. 
+The following example tests whether there are arguments provided:
 
 ```
 #!/bin/bash
@@ -237,7 +259,8 @@ exit 1
 fi
 ```
 
-'-eq' is a test operator which means equal to. There is a summary for test operators in the main page, here is the link: http://linux.die.net/man/1/test
+'-eq' is a test operator which means equal to. 
+There is a summary for test operators in the man page, here is the link: http://linux.die.net/man/1/test
 
 ###if
 
@@ -259,7 +282,10 @@ echo "$1 is negative"
 fi
 ```
 
-For the first 'if', I already introduced that it decides whether there are provided arguments. For the second 'if', the condition is if the first provided argument is great than 0, then the command is echo "$1 is positive". then 'elif' represents 'else if'. Finally, we use 'fi' to end this 'if/else' statement.
+For the first 'if', you know that it decides whether there are provided arguments. 
+For the second 'if', the condition is: if the first provided argument is greater than 0, then the command is echo "$1 is positive". 
+Then 'elif' represents 'else if'. 
+Finally, we use 'fi' to end this 'if/else' statement.
 
 For more details, please check this link: http://ss64.com/bash/if.html
 
@@ -280,7 +306,8 @@ while [ $x -le 10 ]; do
 done
 ```
 
-At first, I set variable 'X' equal to 0; the condition of the 'while' loop is $X if it is less than or equal to 10. Then 'do' the commands. We use 'done' to finish the loop.
+At first, I set variable 'X' equal to 0; the condition of the 'while' loop is $X if it is less than or equal to 10. Then 'do' the commands. 
+We use 'done' to finish the loop.
 
 For more details, please check this link: http://linux.die.net/man/1/while
 
@@ -301,7 +328,7 @@ For more details, please check this link: http://bash.cyberciti.biz/guide/Until_
 
 ####for
 
-I will give a example for converting the format of images in the current directory from '.jpg' to '.png':
+I will give an example for converting the format of images in the current directory from '.jpg' to '.png':
 
 ```
 #!/bin/bash
@@ -313,7 +340,9 @@ done
 For more details, please check this link: http://www.cyberciti.biz/faq/bash-for-loop/
 
 ##Conclusion
-By writing shell scripts and gaining more knowledge about shell scripts, it helps us to have a better understanding about cs100 and the unix system. If you want to learn more advanced skills and more details about shell script, here is the link: http://linux.die.net/man/1/bash or http://linuxcommand.org/lc3_writing_shell_scripts.php
+By writing shell scripts and gaining more knowledge about shell scripts, it helps us to have a better understanding about cs100 and the Unix system. 
+If you want to learn more advanced skills and more details about shell script, here is the link: http://linux.die.net/man/1/bash or http://linuxcommand.org/lc3_writing_shell_scripts.php
 
 Thank you for reading and have fun in cs100! :)
+
 
