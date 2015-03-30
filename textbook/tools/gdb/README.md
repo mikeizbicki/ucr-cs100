@@ -1,31 +1,38 @@
-Basic guide for gdb
+Basic guide for GDB
 ===================
 
-#####What is gdb?
+#####What is GDB?
 
-GDB is a debugger which allows the user to see what is going on inside of an executed program. If the written program crashes, the user can use GDB to step through the program to see where the program crashed. GDB helps the user to find and locate bugs such as segmentation faults, errors in output formating, ect. However, gdb does not find memory leaks. In order to find memory leaks, tools such as valgrind and cppcheck should be used. One thing to remember while using GDB is that it is a tool to help a programmer debug a program. GDB does not ensure the program is perfect if ran with GDB.
+GDB is the debugger that runs on many Unix-like systems which allows the user to trace and alter the execution of a program. 
+One of the most useful GDB features is backtrace which gives a summary of how your program executed line by line. 
+If your program crashes in GDB, typing backtrace will print out information about your crash and possibly the line numbers of the code that caused the crash. GDB helps the user to find and locate bugs such as segmentation faults or errors in output formating. 
+However, it is important to note that GDB does nothing to find memory leaks. 
+In order to find memory leaks, use tools such as valgrind and cppcheck. 
+It is important to remember that GDB is only a tool to help a programmer debug their program, GDB does not ensure the program will be perfect or be free of all of the programs bugs.
 
 
-#####GDB Download
+#####Download GDB
 
 
-To download and install GDB, click on the following links
+To download and install GDB, click on the following links:
 
 [Download GDB](www.gnu.org/software/gdb/download/)
 
 [How to Install](http://www.tutorialspoint.com/gnu_debugger/installing_gdb.htm)
 
-#####Starting gdb
+#####Using GDB
 
-To use `gdb` properly, we need a compiled and executable program. If you have not downloaded the test program, `test.cpp`, do so now from the repository under in `src` folder. To download the examples from the github repository, run the command:
+To use `gdb` properly, we need a compiled and executable program. 
+If you have not downloaded the test program, `test.cpp`, do so now from the repository under in `src` folder. 
+To download the examples from the github repository, run the command:
 
 
 ```
 $ git clone https://github.com/kle016/gdb.git
 ```
-Once downloaded, you can get familiarized with GDB by going through the following examples. 
+After your download is finished, go ahead and get familiarized with GDB by working through the following examples. 
 
-These examples will be covering `run`, `quit`, `help`, `breakpoint`, `info break`, `backtrace`, `delete`, `continue`, `next`, `step`, `finish`, `print`, and `list`. In addition, you will learn how `gdb` can automatically find `segfaults`.
+These examples will be covering `run`, `quit`, `help`, `breakpoint`, `info break`, `backtrace`, `delete`, `continue`, `next`, `step`, `finish`, `print`, and `list`. Additionally we will cover how `gdb` can automatically find `segfaults`.
 
 (Note: Please do these examples in order because they build off of each other.)
 
@@ -39,6 +46,8 @@ These examples will be covering `run`, `quit`, `help`, `breakpoint`, `info break
 
 
 
-By practicing with these examples, you will be able to debug your future programs more efficiently rather than going through your code, line by line and trying to find bugs. You will save time by using `gdb`.
+
+So now you know the very basics of GDB. 
+With practice, you will be debugging like a pro and hopefully, `gdb` will end up saving you a lot of time!
 
 

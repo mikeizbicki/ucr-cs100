@@ -13,12 +13,12 @@ Checking for problems
 ---------------------
 
 
-let's start with a code example from the program example1.cpp:
+Let's start with a code example from the program example1.cpp:
 
 ```
     int main()
     {   
-        char *var = new char[1024};
+        char *var = new char[1024];
         return 0;
     }
 ```
@@ -59,9 +59,12 @@ We get the following output:
 ```
 
 
-If we look at the line under ```HEAP SUMMARY```, we can see that there were still 1,024 bytes still in use when the program exited. These 1024 bytes come from when we allocated the memory for our ```char *```.
+If we look at the line under ```HEAP SUMMARY```, we can see that there were still 1,024 bytes still in use when the program exited. 
+These 1024 bytes come from when we allocated the memory for our ```char *```.
 
-Also at the next line, we can see that there was 1 allocation and 0 deallocation. This 1 allocation comes from calling the ```new``` function and the 0 deallocations comes from not calling the ```delete``` function. This implies that there is a memory leak in our program.
+Also at the next line, we can see that there was 1 allocation and 0 deallocation. 
+This 1 allocation comes from calling the ```new``` function and the 0 deallocations comes from not calling the ```delete``` function. 
+This implies that there is a memory leak in our program.
 
 We can also look at the ```LEAK SUMMARY``` to see if we can recover any leaked memory.
 
@@ -71,7 +74,7 @@ Looking at the line right below, we see that the 1,024 bytes lost are not recove
 ### How to fix memory leaks
 
 
-To obtain more information about where the memory leak may have occured you can type the command:
+To obtain more information about where the memory leak may have occurred you can type the command:
 
 ```
     $ valgrind --tool=memcheck --leak-check=full ./a.out
@@ -90,7 +93,7 @@ Between the ```HEAP SUMMARY``` and ```LEAK SUMMARY``` we will get the message:
 ```
 
 We can see that in the third line, Valgrind says that the memory leak is cause BY the function main and in the second line, Valgrind says the leak is cause AT ```new[]```.
-We can also see that all the memory that was not deallocated was definitely lost, meaning we can not retrieve this memory.
+We can also see that all the memory that was not deallocated was definitely lost, meaning we cannot retrieve this memory.
 
 This information will help you find where your leaks are at in your program.
 
@@ -98,9 +101,10 @@ This information will help you find where your leaks are at in your program.
 ### Fix all leaks and rerun
 
 
-If we take our old program example1.cpp, and add a ```delete``` right under the ```new``` statement, our problem should be fixed!
+If we take our old program example1.cpp and add a ```delete``` right under the ```new``` statement, our problem should be fixed!
 
-This is an important problem to fix because if you never free up your memory when you run programs, it could cause you to run out of memory for your computer. This is not a very good situation to be in.
+This is an important problem to fix because if you never free up your memory when you run programs, it could cause you to run out of memory in your computer. 
+This is not a very good situation to be in.
 
 
 ```
@@ -140,18 +144,13 @@ Now if we recompile and run Valgrind with Memcheck we get:
 
 If we look at the ```HEAP SUMMARY``` section, we can see that our change worked and that for 1 allocation we have 1 free.
 
-We just looked at a very simple example that only has 6 lines of code, of course there will be more complicated programs and now I will demonstrate Valgrind and Memcheck with more complex program, example2.cpp.
+We just looked at a very simple example that only has 6 lines of code, of course there will be more complicated programs and now I will demonstrate Valgrind and Memcheck with a more complex program, example2.cpp.
 
 Using Valgrind on a more difficult example
 ------------------------------------------
 
 
 ```
-    #include <iostream>
-    #include <cstring>
-     
-    using namespace std;
-     
     void doSomething(char *ptr)
     {
         char *var2 = new char[1024]; // create a new char*
@@ -172,14 +171,18 @@ Using Valgrind on a more difficult example
     }  
 ```
 
-This program listed above just creates a character string or cstring and copies the string "hello world" into it. Then the program outputs the cstring. Then it passes this cstring into a function which declares another cstring and copies the first cstring into the second one. Then the function prints out the cstring. The following is what is supposed to be output by this program
+This program we are listing above just creates a character string or cstring and copies the string "hello world" into it. 
+Then the program outputs the cstring. 
+Then it passes this cstring into a function which declares another cstring and copies the first cstring into the second one. 
+Then the function prints out the cstring. The following is what is supposed to be output by this program
 
 ```
     hello world
     hello world
 ```
 
-In our program above, we call the ```new``` operator twice and never call the ```delete``` operator. We call the first ```new``` operator in our ```main``` function and the second ```new``` in our function ```doSomething```. 
+In our program above, we call the ```new``` operator twice and never call the ```delete``` operator. 
+We call the first ```new``` operator in our ```main``` function and the second ```new``` in our function ```doSomething```. 
 
 Now lets run our program with Valgrind and Memcheck:
 
@@ -215,7 +218,8 @@ We will get the following message:
 ```
 
 
-As we can see the program runs normal, printing out "hello world" twice under the ```Command: ./a.out``` line, but when we look at the ```HEAP SUMMARY``` we see that there were 3 allocations and 1 free. This means that we have a memory leak again.
+As we can see the program runs normal, printing out "hello world" twice under the ```Command: ./a.out``` line, but when we look at the ```HEAP SUMMARY``` we see that there were 3 allocations and 1 free. 
+This means that we have a memory leak again.
  
 If we look back at our program we can see that we used ```new``` but never called ```delete```.
 
@@ -224,11 +228,6 @@ As stated above ```Delete``` is necessary to free up memory so that you do run i
 To fix our problem we need to add in some deletes for the ```VAR``` pointer and the ```PTR``` pointer like such:
 
 ```
-    #include <iostream>
-    #include <cstring>
- 
-    using namespace std;
-
     void doSomething(char *ptr)
     {
         char *var2 = new char[1024]; // create a new char*
@@ -278,11 +277,6 @@ While Valgrind can check if you have deallocated memory, it can also check if yo
 If we take our example2.cpp code and modify it slightly on the first line in ```main```:
 
 ```
-    #include <iostream>
-    #include <cstring>
- 
-    using namespace std;
-
     void doSomething(char *ptr)
     {
         char *var2 = new char[1024]; // create a new char*
@@ -302,7 +296,7 @@ If we take our example2.cpp code and modify it slightly on the first line in ```
         return 0; 
     } 
 ```
-I modified the ```char *var = new char[1024]``` to ```char *var``` in order to induce the problem of not allocating memory before using that memory.
+We modified the ```char *var = new char[1024]``` to ```char *var``` in order to induce the problem of not allocating memory before using that memory.
 
 When we compile and run this program through Valgrind using Memcheck, we get:
 
@@ -340,16 +334,20 @@ When we compile and run this program through Valgrind using Memcheck, we get:
     ==4942== Rerun with --leak-check=full to see details of leaked memory
     ==4942== 
     ==4942== For counts of detected and suppressed errors, rerun with: -v
-    ==4942== Use --track-origins=yes to see where uninitialised values come from
+    ==4942== Use --track-origins=yes to see where uninitialized values come from
     ==4942== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
     Segmentation fault (core dumped)
 ```
 
-We can see right under ```Command:``` that we have the statement ```Use of uninitialised value of size 8```, this statement implies that we tried to use memory that we have not allocated which would cause a segmentation fault. This segmentation fault is shown at the end of the output.
+We can see right under ```Command:``` that we have the statement ```Use of uninitialized value of size 8```. 
+This statement implies that we tried to use memory, that we have not allocated, which would cause a segmentation fault. 
+This segmentation fault is shown at the end of the output.
 
-We also see that below the line ```Process terminating with default action of signal 11(SIGSEGV)``` we get the message ```Bad permissions for mapped region at address 0x400AC0```. The ```Bad permission``` statement also states that we have not allocated the memory that we want to access.
+We also see that below the line ```Process terminating with default action of signal 11(SIGSEGV)``` we get the message ```Bad permissions for mapped region at address 0x400AC0```. 
+The ```Bad permission``` statement also states that we have not allocated the memory that we want to access.
 
-We can see that Valgrind and Memcheck are trying to help us find our issue by giving us the message ```Use --track-origins=yes to see where uninitialised values come from```. So lets give this a try ourselves:
+We can see that Valgrind and Memcheck are trying to help us find our issue by giving us the message ```Use --track-origins=yes to see where uninitialized values come from```. 
+So let's give this a try ourselves:
 
 Let's run the command:
 
@@ -367,7 +365,7 @@ We get the following output that is different from before:
     ==5278==    at 0x400BFA: main (in /home/william/ucr-cs100/tutorials/valgrind/a.out)
 ```
 
-The extra two lines added from before tell you what function the uninitialised value was created in, in this case ```main```.
+The extra two lines added from before tell you what function the uninitialized value was created in, in this case ```main```.
 
 
 This feature of Valgrind and Memcheck can help tremendously in debugging your programs and save you tons of time.
@@ -377,6 +375,6 @@ Conclusion
 
 Valgrind has a lot of functionality that can drastically decrease your debugging time and let you focus on being a better programmer. 
 
-Now you can test your programs uing Valgrind to catch the pesky memory leaks that are almost impossible to find with the naked eye.
+Now you can test your programs using Valgrind to catch the pesky memory leaks that are almost impossible to find with the naked eye.
 
 Happy programming!!!

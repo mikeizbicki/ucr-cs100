@@ -64,8 +64,9 @@
 
 ##1. What is hamano.c?
 Hamano.c is a program written for the 21st International Obfuscated C Code Contest (2012) by Tsukasa Hamano. It is the winner of most elementary use of C - silver award.
-Its purpose is to output a pdf file containing dancing characters based upon input text. This output pdf file can also be compiled and the new program based on your text
-input will output the original text input given to hamano. Hamano.c is also able to obfuscate input c code.   
+Its purpose is to output a pdf file containing dancing characters based upon input text. 
+This output pdf file can also be compiled and the new program based on your text input will output the original text input given to hamano. 
+Hamano.c is also able to obfuscate input c code.   
 
 This guide will only focus on the classical methods of obfuscation found within hamano.c and generation of the dancing man pdf file.
 
@@ -78,7 +79,7 @@ Download the winning files here: [**www.ioccc.org/years.html#2012_hamano**](http
 
 ##2. Helpful things to know
 
-This section is intended to provide a starting point to begin deobfuscation and convey prequisite information.
+This section is intended to provide a starting point to begin deobfuscation and convey prerequisite information.
 
 
 ####Operation of hamano.c
@@ -98,7 +99,7 @@ Become familiar with the basic structure of an unpolluted pdf file, comparing an
 This will be used to remove code not useful to pdf creation and as a guide to direct deobfuscation.
 
 
-_Note:_ the file below has been modified to be of reduced size, it is the output of hamano, and anything which is not pdf relevant has been ommitted
+_Note:_ the file below has been modified to be of reduced size, it is the output of hamano, and anything which is not pdf relevant has been omitted
 
 ```
 **HEADER**
@@ -269,13 +270,13 @@ This section will step through the code in logical blocks and explain the obfusc
 
 #define o(s) b[s]=_; p("%u    0  obj",s);
 //create beginning object tags in pdf, %u places arg s into the string
-//everytime this is called reference table data is saved
+//every time this is called reference table data is saved
 
 #define E for(c=d;c  < 123;c++) //copy into code, will be REMOVED
 #define DANCE "trailer   " D(/Root 3 0            R /Size %d) "\nstartxref %u %%%%EOF\n*/" //trailer of pdf file
 
 #define p(s, ...)_+=printf(s,  ##__VA_ARGS__)
-// ... and __VA_ARGS__ is used to specifiy undetermined amount of arguments to print
+// ... and __VA_ARGS__ is used to specify undetermined amount of arguments to print
 // ## in __VA_ARGS__ allows printf to function if there is only one argument
 
 //entire contents is sent to p later in code which populations %d and %f, this holds the font info
@@ -316,7 +317,7 @@ This section will step through the code in logical blocks and explain the obfusc
 ####Section 2: Variable declarations
 
 ``` c
-//these obfusticate the data types, they can be used interchangably with the type they are defined as
+//these obfuscate the data types, they can be used interchangeably with the type they are defined as
 //will be REMOVED
 typedef int N;
 typedef char*Nyan;
@@ -334,7 +335,7 @@ Nyan w[]={"+*-(,&-&","+*,&-&","+*.&/&","+*/*/+","+*())'('"  ,"+**&)&","+*(&'&","
 
 2. Typedef to hide variable types
 
-3. Unecessary variable creation
+3. Unnecessary variable creation
 
 4. Use of memory addresses stored in an array
 
@@ -363,7 +364,7 @@ Nyan nyan(Nyan _,N y,A n){ //pass in a memory address past the beginning of body
     // | is bitwise or
     // n is of type char, characters decimal value is being used, value can be found in ASCII charts
     
-    for(a=0;*_=*s++;a++,_++,*_++=32){ //many uncessary items placed in increment section to obfuscate, intentionally filled condition section
+    for(a=0;*_=*s++;a++,_++,*_++=32){ //many unnecessary items placed in increment section to obfuscate, intentionally filled condition section
         *_+=*_-32?10:0;//ternary operator, if condition before ? is true expression before : will run, if false expression after : will run
         
         if(a%2&&*_/16==3){
@@ -379,7 +380,7 @@ Nyan nyan(Nyan _,N y,A n){ //pass in a memory address past the beginning of body
     }
     
     return n?n-9?nyan(_,y,n-2):_:nyan(_+=~y&' '?sprintf(_,17[w]):0,y,9);
-    //equivalent of nested if statments
+    //equivalent of nested if statements
 }
 ```
 **Obfuscation used:**
@@ -451,7 +452,7 @@ char* processBody(char* bodyAddr, int c, char n){
 ####Section 4: main
 
 ``` c
-N main(N c){ //int c uneeded here, recieves nothing, can be moved in main
+N main(N c){ //int c unneeded here, receives nothing, can be moved in main
     
     A e[256]; //bodyData
     
@@ -636,4 +637,5 @@ Complete source of deobfuscated code can be found attached as myhamano.c
 
 outputORIG.pdf is output from unchanged hamano using text `aabbccddxx`
 
-output.pdf is ouput from myhamano.c using text `aabbccddxx`
+output.pdf is output from myhamano.c using text `aabbccddxx`
+
