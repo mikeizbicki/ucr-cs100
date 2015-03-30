@@ -1,10 +1,14 @@
 Markdown Quick Reference Guide
 ===
-This is a quick reference guide for various Markdown syntax that I found useful throughout cs100. Please enjoy!
+This is a quick reference guide for various Markdown syntax that we found useful throughout cs100. Please enjoy!
 
 Flavors
 ---
-There are a variety of Markdown "flavors". These "flavors" are different implementations of Markdown with varying syntax. Entities such as [Github](https://help.github.com/articles/github-flavored-markdown/), [Reddit](http://www.reddit.com/wiki/commenting), and [Stack Exchange](http://stackoverflow.com/editing-help) have their own flavors of Markdown. Recently there has been a push for a standard implementation of Markdown, you can read more about that [here](http://blog.codinghorror.com/standard-flavored-markdown/), but for the time being there are multiple implementations that must be recognized. The following tutorial is guaranteed to interpret correctly as Github flavored Markdown. But, the same results cannot be guaranteed when interpreted as any other flavor of Markdown.
+There are a variety of Markdown "flavors". 
+These "flavors" are different implementations of Markdown with varying syntax. 
+Entities such as [Github](https://help.github.com/articles/github-flavored-markdown/), [Reddit](http://www.reddit.com/wiki/commenting), and [Stack Exchange](http://stackoverflow.com/editing-help) have their own flavors of Markdown. Recently there has been a push for a standard implementation of Markdown, you can read more about that [here](http://blog.codinghorror.com/standard-flavored-markdown/), but for the time being there are multiple implementations that must be recognized. 
+The following tutorial is guaranteed to interpret correctly as Github flavored Markdown.
+But, the same results cannot be guaranteed when interpreted as any other flavor of Markdown.
 
 Creating a Markdown Document
 ---
@@ -49,7 +53,8 @@ I think ~~your~~ you're bad at grammar.
     
 Lists and nested lists
 ---
-Lists can either be ordered or unordered. To create an ordered list begin the list item with ```n.``` where ```n``` is the number of the list item. To create an unordered list begin each item with an ```*```. Lists can be nested by using white space to indent the nested items.
+Lists can either be ordered or unordered. To create an ordered list begin the list item with ```n.``` where ```n``` is the number of the list item. 
+To create an unordered list begin each item with an ```*```. Lists can be nested by using white space to indent the nested items.
 
 Example usage:
     
@@ -89,7 +94,9 @@ Example usage:
 
 Code
 ---
-To insert code into your Markdown document surround the code with at least 1 `` ` `` on each side. Being able to use varying amounts of ``` ` ``` means that  ``` ` ``` can be used to escape ``` ` ```. You can indicate syntax highlighting specific to a language by adding the name of the language after the opening `` ` ``, for this to work you must use at least 3 `` ` ``. 
+To insert code into your Markdown document surround the code with at least 1 `` ` `` on each side. 
+Being able to use varying amounts of ``` ` ``` means that  ``` ` ``` can be used to escape ``` ` ```. 
+You can indicate syntax highlighting specific to a language by adding the name of the language after the opening `` ` ``, for this to work you must use at least 3 `` ` ``. 
 
 Example usage:
     

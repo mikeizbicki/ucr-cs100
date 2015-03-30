@@ -24,9 +24,9 @@ The history will be like:
 
 ![commit 1](https://github.com/jinhangwang/git-patch-and-rebase/blob/master/image/commit1.png)
 
-If you want to keep all of your commits **only** on the `cs100` branch, then you can use git rebase
-(Using `merge` will create a merge commit and integrate all commits on the `master` branch.
-I will compare them later):
+If you want to keep all of your commits **only** on the `cs100` branch, then you can use git rebase (Using `merge` will create a merge commit and integrate all commits on the `master` branch.
+we will compare them later):
+
 ```
 $ git checkout cs100
 $ git rebase master
@@ -187,7 +187,8 @@ reword db42315 added yliu127 info
 exec echo the interactive rebase success
 ```
 
-Interactive rebase will then skip the next two `pick` commands and then process the `fixup` command which automatically merges `2dcfbe6` into `57ecb22`. Both changes contain the same message `"Corrected spelling errors in Lab0"`.
+Interactive rebase will then skip the next two `pick` commands and then process the `fixup` command which automatically merges `2dcfbe6` into `57ecb22`. 
+Both changes contain the same message `"Corrected spelling errors in Lab0"`.
 
 Then it goes to `edit bffd586`, and it stops to display information on terminal:
 ```
@@ -285,11 +286,11 @@ $ git push https://github.com/Laviness/ucr-cs100.git --force
 ```
 
 since you have changed the existing history on the server.
-But I only recommend you to do it **locally** with commits that don't exist on the server using `git push origin` because changing the existing history on the server can cause serious problems.
+But we only recommend you to do it **locally** with commits that don't exist on the server using `git push origin` because changing the existing history on the server can cause serious problems.
 
 ##The drawbacks of Rebasing
 Rebasing is great, but it depends on how you use it.
-It's not perfect and will easily induce a lot of problems with a few steps.
+It is not perfect and will easily induce a lot of problems with a few steps.
 Now we will teach you how to **destory** a repository like an expert. 
 
 **rebase commits that exist outside one's repository.**

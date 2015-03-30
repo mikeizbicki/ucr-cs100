@@ -8,17 +8,17 @@ These features include:
 * Tuple Addressing by Type ([example](./tupleaddressingexample.cpp))
 
 ### Return type deduction
-Introduced back in C++11, the auto keyword for variables specifies that the type of the variable that is being declared will be automatically deduced from it's initializer.<br />
-This means you can do things like:
+Introduced back in C++11, the auto keyword for variables specifies that the type of the variable that is being declared will be automatically deduced from it's initializer.
+<br /> This means you can do things like:
 ```c++
 double a = 2.5;
 auto x = 2 * a; // x is initialized to type double
 ```
-Here, the expression `2 * a`, which is used to initialize the variable `x`, returns a value of type `double`.
+The expression `2 * a`, which is used to initialize the variable `x`, returns a value of type `double`.
 `auto` is then able to specify that the type of the variable is `double`.
 
-A similar form of type deduction can be used in the declaration of `for` loops.<br />
-For example:
+We can use a similar form of type deduction in the declaration of `for` loops.
+<br /> For example:
 ```c++
 std::vector<int> v = { 2 , 3 , 5 , 7 }
 for(std::vector<int>::iterator iter = v.begin(); iter != v.end(); ++iter) {
@@ -33,11 +33,10 @@ for(auto iter = v.begin(); iter != v.end(); ++iter) {
 	std::cout << *iter << std::endl;
 }
 ```
-Here `auto` is able to infer, from the return type of `v.begin()`, that the
-variable `iter` is of type `std::vector<int>::iterator`.
+Here `auto` is able to infer, from the return type of `v.begin()`, that the variable `iter` is of type `std::vector<int>::iterator`.
 
 C++11 extended the auto type specifier to functions, allowing the return type of the function to be deduced from its return statements.
-A function of the form `auto function -> return type` could take advantage of the `auto` keyword but the function still had to have the trailing return type at the end of the function declaration in order for type deduction to take place.
+A function of the form `auto function -> return type` could take advantage of the `auto` keyword but the function still has to have the trailing return type at the end of the function declaration in order for type deduction to take place.
 ```c++
 auto add(double a, int b) -> decltype(a + b) // the return type is the type of operator+(double, int)
 {
@@ -46,9 +45,10 @@ auto add(double a, int b) -> decltype(a + b) // the return type is the type of o
 ```
 
 ##### The auto keyword for all functions
-C++14 extended the auto type specifier to all functions allowing them to deduce the return type based on the expression given to the return statement.
+C++14 has been extended the auto type specifier to all functions allowing them to deduce the return type based on the expression given to the return statement.
 This is accomplished without the need of a trailing return type in the declaration.
 Below is a simple example of a function using return type deduction this way:
+
 ```c++
 auto eulerNo() { // deduced to return type of variable e
 	double e = 2.718281;
@@ -162,6 +162,6 @@ The statement, `std::get<string>(myTuple)`, returns "I am a string".
 Since there is only one `string` in the `tuple`, the statements executes without error.
 
 ### Conclusion
-C++14 was intended to be a minor update to the standard improving mainly on readability and practicality.
+C++14 is intended to be a minor update to the standard improving mainly on readability and practicality.
 More in depth examples are available in the example folder.
 All of the code can be compiled with the `-std=c++1y` option.

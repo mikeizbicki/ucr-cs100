@@ -116,6 +116,7 @@ token: butter
 Now this looks better, but keep in mind that this delimiter set does not contain *all* white space.
 Try looking up [ASCII character codes](http://www.petefreitag.com/cheatsheets/ascii-codes/) for other types of white space (and other miscellaneous characters that you might need).
 
+
 ###Repeated characters in our delimiter
 
 What if our delimiter set contains reapeated characters?
@@ -232,7 +233,7 @@ But what if there are multiple delimiters right next to each other?
 Say we have this string `c&&ar` where our delimiter is `&`.
 When the tokenizer reaches the first `&`, it will know that `c` is a token.
 Then it will start working on the next token, but it will find another `&` right after and it will think, that's the end of the token.
-But there was nothing that was actually put into this token and thus we have an **empty token**.
+But there is nothing that is actually put into this token and thus we have an **empty token**.
 
 Tokenizers such as `strtok` will not output these empty tokens but maybe it might be useful to know where these empty tokens are, so the boost tokenizer gives us this option.
 In order to do this, `keep_empty_tokens` must be passed in as the third paramter for `char_separator<char>.`
@@ -255,9 +256,6 @@ The Boost tokenizer provides an easy way to parse through a string.
 Do not forget to declare these things before using the tokenizer:
 
 ```
-#include <boost/tokenizer.hpp>
-using namespace boost;
-
 //if you want to declare a delimeter instead of the default
 char_separator<char> delim("&");
 tokenizer< char_separator<char> > mytok(str, delim);
@@ -276,7 +274,8 @@ explicit char_separator(const char* dropped_delims,
                         empty_token_policy empty_tokens = drop_empty_tokens)
 ```
 
-The `dropped_delim` parameter should always be passed in but if it wasn't, boost tokenizer will still parse the string.  Otherwise `kept_delims` and `empty_tokens` are already set to defaults and are optional traits.
+The `dropped_delim` parameter should always be passed in but if it wasn't, boost tokenizer will still parse the string.  
+Otherwise `kept_delims` and `empty_tokens` are already set to defaults and are optional traits.
 In order to use `kept_delims`, we simply pass in what delimiters we want to keep, and in order to use empty tokens we pass in `keep_empty_tokens` for `empty_tokens`.
 
 References:
