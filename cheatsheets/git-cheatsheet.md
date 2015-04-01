@@ -6,16 +6,16 @@ Git Cheat Sheet
 Git has a number of global configuration settings. You just need to make these changes once, and they will be applied anytime you use Git.
 
 ```
-$ git config --global user.name [your username]
+$ git config --global user.name "firstname lastname"
 ```
-This command will set the name that will appear on your commit transactions.
-You should set this value to your full (first and last) name.
+Sets the name that will appear on your commit transactions.
+You should set this value to your full proper name.
 
 
 ```
-$ git config --global user.email [email address]
+$ git config --global user.email "email@domain"
 ```
-This command will set the email of your commit transactions.
+Set the email that will appear on your commit transactions.
 
 
 ```
@@ -29,9 +29,9 @@ Displays all of your globally configured settings, including name and email.
 If you need help to use some Git command, you can always use the command `git help`.
 There are three ways to use it:
 ```
-$ git help [command name]
-$ git [command name] --help
-$ man git-[command name]
+$ git help <command>
+$ git <command> --help
+$ man git <command>
 ```
 For example, if you need some help with the config command, you can use:
 ```
@@ -46,13 +46,17 @@ You can create a Git project using two different methods: By creating a new repo
 ```
 $ git init
 ```
-With `git init`, you will create a new Git repository on the project that you are working on. This project can be a new one (that doesn’t have anything on it) or it can be a project that already exists but you want to use version control on it. You should run this command from the root folder of your project.
+Create a new Git repository in the current directory.
+This directory can be empty or contain an existing project.
+If the directory contains files, you will have to run `git add` and `git commit` before they are added to the repo.
 
 
 ```
-$ git clone [url]
+$ git clone <url>
 ```
-With `git clone`, you will download a copy of a Git repo that already exists. For example, you can take a url from a GitHub project that you want to contribute to, and clone it. This will create a new folder with all the projects on it, in the current directory.
+Downloads a copy of a Git repo that already exists.
+For example, you can take a url from a GitHub project that you want to contribute to, and clone it.
+This will create a new folder with the same name as the project in the current directory.
 
 
 #####MAKE CHANGES
@@ -60,83 +64,122 @@ With `git clone`, you will download a copy of a Git repo that already exists. Fo
 After creating a new repository, you can start doing your project. To keep the repository up to date, you have to commit the changes that you've made on your local machine.
 
 ```
-$ git add [file]
+$ git add <files>
 ````
-With the `git add` command, the files that you changed will be ready to commit.
+Adds all `<files>` to the "staging area".
+You must later run `git commit` to add these changes into the repo.
+You can add as many files as you want in a single command.
+If you add a directory, all files within the directory will be added.
+You should only ever run `git add` on text files, never on binary files.
 
 ```
-$ git rm [file]
+$ git rm <files>
 ```
-If you want to remove a file from your project, you also have to remove it from Git so you can commit your changes.
+Delete all `<files>` from the harddrive (if they exist) and removes them from the staging area.
+You must later run `git commit` to add this change to the repo.
 
 ```
 $ git status
 ```
-This command will list for you all the files that were modified since the last time you committed something, for example, you made some changes in a `main.cpp` file of your project. If you have not committed yet, the command `git status` will show it for you.
+Lists all the files that were modified since your last commit.
+You should run this everytime before running `git commit` to make sure you're committing the right files.
 
 
 ```
 $ git diff
 ```
-This is a more detailed version of `git status`.  It will compare what is in your working directory with what is in your staging area (the things you changed, but have not used the command `git add` yet). It outputs all the lines on each file that has changed.
+This is a more detailed version of `git status`.
+It compares what is in your working directory with what is in your staging area (the things you changed, but have not used the command `git add` yet).
+It outputs all the lines on each file that has changed.
 
 
 
 ```
-$ git commit -m [descriptive message]
+$ git commit -m "descriptive message"
 ```
-You will use this command to commit the changes that you've made and staged. After using `git add` on the files that you want to add, you will use `git commit -m "..."` to commit it. The `-m` flag will set the commit message.
+Creates a new commit in your repo with all the changes in your staging area. 
+You should run this command after using `git add` on the files that you want to add/modify.
+The `-m` flag lets you set the commit message from the command line.
 
 
 ```
 $ git commit
 ```
-If you want to use the command `git commit` without the `-m` flag, the editor of your choice will be launched and you can type your commit message there. Your commit must have a message. If you don't do it, the commit will be aborted.
+Without the `-m` flag, Git will launch an editor so you can type your commit message.
+Use this version of the command if you've made lots of changes, and so have a long commit message.
+All commit must have a message.
+If you don't add one, the commit will be aborted.
 
 
 
 
 #####GROUP CHANGES
-Name a series of commits and combine completed efforts. 
 
-Using Git, you can work with multiple versions of the same project at the same time. This is called branching. Every project can have many branches (versions) and they can be completely different from each other. This is very useful when you want to add a new feature to a project that is already working, and not ruin it. You can just make another branch, work on your new feature in it, and when the feature is ready, you merge the new branch with the origin.
+
+You can work with multiple versions of your project at the same time.
+Each version is called a branch.
+A repo can have many branches, and each branch can be completely different.
+
+Branches let many different developers work the project without interfering with each other.
+Branches are used when adding new features to a project.
+You make a new branch for your feature, and commit all your changes to that branch.
+When the feature is ready, you merge this feature branch with master.
 
 ```
 $ git branch
 ```
-The command `git branch` will list every branch that your project has, and it will mark the branch that you are currently in with a `*` sign. The main branch (that every project has) is called `master`. 
+List every branch that your project has.
+Your "current branch" is marked with a `*`.
+Any commit you make will be applied to your current branch.
 
 ```
-$ git branch [branch-name]
+$ git branch <branchname>
 ```
-Using `git branch` with a name as 3rd parameter will create a new branch. This branch will point to the spot on the project that you are at the moment. For example, If I call `git branch test` with the repository up-to-date on the `master` branch, my new branch (`test`) will point to the last commit of the `master` branch. This means that everything that the branch `master` has, the branch `test` will have as well.
+Create a new branch called `<branchname>`.
+This branch's head will point to the current commit you have checked out.
+For example, If I call `git branch test` with the repository up-to-date on the `master` branch, my new branch (`test`) will point to the last commit of the `master` branch.
+This means that everything that the branch `master` has, the branch `test` will have as well.
 
 ```
-$ git checkout [branch-name]
+$ git checkout <branchname>
 ```
-This command will switch from the branch that you are in to the one specified.
+Changes your current branch to `<branchname>`.
 
 ```
-$ git checkout -b [branch-name]
+$ git checkout -b <branchname>
 ```
-You can use the `-b` flag to create the new branch and switch to it at the same time.
+Creates a new branch and switches to it in one command.
+This is equivalent to calling `git branch <branchname>` followed by `git checkout <branchname>`.
 
 ```
-$ git merge [branch]
+$ git merge <branchname>
 ```
-To merge branches, you will checkout to the branch that you want to add the modifications to. For example, now that I am done with the `test` branch, I want to merge it with the `master` branch, so I have to run `git checkout master` and then run `git merge test`. This will merge what is in the `test` branch with the `master` branch,
-but this command can create a conflict problem. The conflict will happen if we change the same file in different branches. For example, I made changes in the file `main.cpp` in the `test` branch. Then, I went back to the `master branch` and made more changes there, in the same `main.cpp` file. When you try to merge the branches, you will get an error message. To solve this problem you have to open the file that has the conflict and manually merge the different lines of code. The lines between `<<<<<<< HEAD` and `=======` are from the `master` branch, while the lines between `=======` and `>>>>>>> test` are from the `test` branch.
+Merges all the commits in `<branchname>` into your current branch.
+For example, now that I am done with the `test` branch, I want to merge it with the `master` branch.
+So I run `git checkout master`; then `git merge test`.
+This adds the changes from the `test` branch into the `master` branch.
+
+Sometimes this creates a "merge conflict" if we change the same file in both branches.
+For example, I made changes in the file `main.cpp` in the `test` branch.
+Then, I went back to the `master` branch and also changed `main.cpp` there.
+When you try to merge the branches, you will get an error message saying there was a merge conflict.
+To procede with the merge, you have to open the conflicting file that and manually merge the code.
+The lines between `<<<<<<< HEAD` and `=======` are from the current branch,
+while the lines between `=======` and `>>>>>>> test` are from the `test` branch.
+Select which version you want and delete the rest.
 
 
 ```
-$ git branch -d [branch-name]
+$ git branch -d <branchname>
 ```
-Command to delete a branch.
+Deletes `<branchname>` from your local machine only.
 
 ```
-$ git tag [tag name]
+$ git tag <tagname>
 ```
-The git tag command will give a name (tag) to the last commit that you made. This is helpful because you can access this commit later, even if you've already commit something else.  Unlike a branch, a tag always stays attached to the same commit.  This makes tags useful for releasing versions of your project.
+Assigns the name `<tagname>` to your currently checkedout commit.
+Unlike a branch, a tag always stays attached to the same commit.
+This makes tags useful for releasing versions.
 
 #####REVIEW HISTORY
 Browse and inspect the history of the project.
@@ -145,37 +188,45 @@ $ git log
 $ git log -p
 $ git log -p -2
 ```
-With `git log` command, you will have the list of the commits made in that repository in reverse chronological order. If you add the flag `-p`, the output will be a list of commits with the diff introduced in each one. You can also limit the number of commits you want displayed with the flag `-[number]`, which will display the number of commits you want.
+Lists the commits made in the current branch in reverse chronological order.
+If you add the flag `-p`, the output will be a list of commits with the diff introduced in each one.
+You can also limit the number of commits you want displayed with the flag `-number`.
 
 
 ```
-$ git diff [first-branch]...[second-branch]
+$ git diff <branch1> <branch2>
 ```
-The `git diff` command is used to see the difference between commits, branches, etc. For example, the `git diff test...master` will show the changes that occurred on the master branch since when the test branch was started off it.
+Shows all the lines of all the files that have changed between `<branch1>` and `<branch2>`.
 
 
 #####SYNCHRONIZE CHANGES
-Keep your local repository and your project on GitHub the same.
+Once you've committed your changes to your local repo, you should send them to a remote repository like GitHub.
+This gives you a backup in case your computer dies, a way to work on multiple computers, and a way to communicate
 
 ```
-$ git push
+$ git push [<remote> [<branch>]]
 ```
-With `git push`, you will send all the commits you've made in your local repository to GitHub.
-
-
-```
-$ git pull
-```
-  With `git pull`, you will update your local repository with what is in GitHub. For example, you are working on a team on the same project. When somebody changes the code and push it to GitHub, you will take those changes with the `git pull` command.
+Update the `<remote>` repo with all the commits you've added to `<branch>`.
+Both the `<remote>` and `<branch>` parameters are optional.
+If they are ommitted, then Git will default to pushing to every location you've previously pushed to.
 
 
 ```
-$ git push origin [tag name]
+$ git pull [<remote> [<branch>]]
 ```
-When you use the `git push` command, every commit is pushed to GitHub. But to push your tags you have to use the command `git push origin [tag name]` with the tag name. This will update the tags on GitHub. 
+Update your local repository's `<branch>` with the commits from `<remote>`.
+This is useful when collaborating with others.
+If Alice recently pushed some changes to your shared repo on GitHub, then you will need to run `git pull` to update your local repo with those changes.
+
 
 ```
-$ git push origin --tags
+$ git push [<remote> [<tag>]]
 ```
-Using the `--tags` flag, you will push all tags to GitHub.
+Pushes a tag (instead of a branch) to the remote repo.
+You must do this in order to share your tagged commits with others.
+
+```
+$ git push [<remote>] --tags
+```
+Pushes all tags to the remote repo.
 
