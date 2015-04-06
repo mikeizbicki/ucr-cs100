@@ -71,10 +71,10 @@ Similarly, write a tutorial on some of the features in the recent C++ 11 or 14 s
 
 #### writing style
 
-Your writeup must be FUN and ENGAGING.
+Your write-up must be FUN and ENGAGING.
 Informal writing is encouraged.
 Imagine your favorite internet blog post and write like that.
-A short, clear writeup is MUCH better than a long wordy writeup.
+A short, clear write-up is MUCH better than a long wordy write-up.
 
 In particular, don't write long, drawn-out sentences that use sophisticated verbiage because no one wants to read that, especially not cs100 students or random programmers on the internet be kind to us oh and use proper punctuation because reading this sentence totally sucks.
 Also, spll chck ur writing and dnt use txt spk b/c I hate tht 5|-|!7.
@@ -101,19 +101,19 @@ You MAY use images that you did not create yourself if the use conforms to the i
 There are three submissions for this assignment:
 
 The first is part is due before class on **Wednesday, Feb 11**.
-In this submission, you must create an issue on github describing what your tutorial will be about, and who will be on your team.
+In this submission, you must create an issue on GitHub describing what your tutorial will be about, and who will be on your team.
 I will use this submission to ensure your topic is appropriate.
 
 The second submission is due before class on **Wednesday, Feb 25**.
 This is a rough draft submission of your project.
-Create a folder in this repo called `/textbook/yoursubject` or put your writeup in whatever subfolder of `textbook` that is appropriate.
-You should create a pull request through github on this repo showing the current status of your project.
+Create a folder in this repo called `/textbook/yoursubject` or put your write-up in whatever subfolder of `textbook` that is appropriate.
+You should create a pull request through GitHub on this repo showing the current status of your project.
 You should be approximately 75% complete with your project's content at this point.
 I will use this submission to make sure that your project will actually provide benefit to future cs100 students.
 
 Your third submission is due at midnight on **Friday, March 13**.
 This will be the final submission for your project.
-You must submit your tutorial as a pull request on this repository through github.
+You must submit your tutorial as a pull request on this repository through GitHub.
 Use the same folder from above.
 Inside the folder should be at least a file called `README.md` that contains the contents of your tutorial.
 You may include other files in this folder, such as images or cpp files, if they are relevant to the tutorial.
@@ -128,10 +128,10 @@ I will evaluate the pull request the same as any other pull request into an open
 40 points for writing style
 
 Ultimately, grading is entirely subjective on my part.
-If I enjoyed reading your writeup, you will get a good score.
+If I enjoyed reading your write-up, you will get a good score.
 If I don't enjoy reading it, you will get a bad score.
 Therefore, I recommend you show me drafts of your progress.
-I'll give you advice on how to make your writeup more fun.
+I'll give you advice on how to make your write-up more fun.
 
 If you visit the writing center, I will give you +5 points of extra credit on this assignment.
 (You'll also get a much higher grade anyways.)

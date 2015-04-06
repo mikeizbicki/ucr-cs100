@@ -39,7 +39,7 @@ $ ssh <your username>@hammer.cs.ucr.edu
 **IMPORTANT:**
 The symbol `$` is called the "prompt."
 You don't type this into the terminal.
-It's purpose is to let you know that all the text after `$` is a command that should be typed in.
+Its purpose is to let you know that all the text after `$` is a command that should be typed in.
 
 You may be prompted to log in after you `ssh` into hammer. Hammer is a server provided by UCR specifically for CS100 to break stuff! You will be doing all of your work in hammer so remember to always `ssh` into hammer when you go to lab!
 
@@ -122,7 +122,7 @@ $ touch main.cpp
 $ ls
 ```
 Notice how the file appears in the directory.
-Congratulations, you've just created your first file on linux!
+Congratulations, you've just created your first file on Linux!
 
 If you `touch` a file that already exists, it will update the date last modified. Try running these commands and compare the last modified date for `main.cpp`:
 ```
@@ -195,7 +195,7 @@ It's quite empty in here right? Let's furnish it with some files. Create a new f
 
 **Hint:** If you type `cd` with no parameters, it will always take you back to your HOME directory. In this case, it is the directory you were in when you first `ssh` into hammer.
 
-Now lets go back to the directory you were just in previously! How do you go back one directory? That's your exercise!
+Now let's go back to the directory you were just in previously! How do you go back one directory? That's your exercise!
 
 **Exercise:**
 
@@ -219,11 +219,11 @@ $ cp [SOURCE] [DESTINATION]
 ```
 **Note:** If the destination path does not exist, `cp` will create a copy of the file or directory with the name of the destination path given.
 
-Remember that `main.cpp` we left behind in the HOME directory? Lets make a copy of it named `mainbro.cpp` and move it to our CS100 directory with the command:
+Remember that `main.cpp` we left behind in the HOME directory? Let's make a copy of it named `mainbro.cpp` and move it to our CS100 directory with the command:
 ```
 $ cp main.cpp CS100/mainbro.cpp
 ```
-Lets check our progress in the `CS100` directory with:
+Let's check our progress in the `CS100` directory with:
 ```
 $ ls CS100
 ```
@@ -297,7 +297,7 @@ man (manual)
 ```
 man [commandname]
 ```
-Lets use the `man` command to find out the purpose of `cat`:
+Let's use the `man` command to find out the purpose of `cat`:
 ```
 $ man cat
 ```
