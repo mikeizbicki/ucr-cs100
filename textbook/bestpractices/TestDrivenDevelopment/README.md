@@ -1,4 +1,4 @@
-# Tutorial on Test Driven Development
+﻿# Tutorial on Test Driven Development
 
 # Contents
 
@@ -199,7 +199,7 @@ Running 1 test case...
 
 This is a pitfall I wanted to point out. Our code does pass the test, however the code was implemented to only pass that one test. If the test was slightly adjusted at all, the test would immediately fail.  
 
-Now we need to begin refractoring our implementation. 
+Now we need to begin refactoring our implementation. 
 
 ```
 vector<string> tok_string(const string& input)

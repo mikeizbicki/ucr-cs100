@@ -1,11 +1,11 @@
-
+﻿
 ## enrolling in this course
 
-We will not be using ilearn in this course.  We will be using git and github to manage everything.  This will give you practice working with open source software.  To enroll in this course, you will follow the same steps that you would do to contribute to an open source project.
+We will not be using ilearn in this course.  We will be using git and GitHub to manage everything.  This will give you practice working with open source software.  To enroll in this course, you will follow the same steps that you would do to contribute to an open source project.
 
 ### subscribing to the course
 
-If you do not already have a github account, you will need to create one.  Go to http://www.github.com and register an account.  Your github account does NOT need to be the same as your CS account.  For example, my account is just my full name `mikeizbicki`.  Feel free to get creative and pick something fun.  If you already have a github account, you do not need to register a new one.
+If you do not already have a GitHub account, you will need to create one.  Go to http://www.github.com and register an account.  Your GitHub account does NOT need to be the same as your CS account.  For example, my account is just my full name `mikeizbicki`.  Feel free to get creative and pick something fun.  If you already have a GitHub account, you do not need to register a new one.
 
 Return to http://github.com/mikeizbicki/ucr-cs100. At the top of the page there is a button labeled `Watch`:
 
@@ -35,7 +35,7 @@ Click this button to create a new version of this repository in your own GitHub 
 
 By default, you are the only person with write access to your new repository.  You must give all the instructors write access so we can update your grades.  Visit the page:
 
-*(Use your actual github username below)*
+*(Use your actual GitHub username below)*
 
 ```
 https://github.com/examplestudent/ucr-cs100
@@ -67,7 +67,7 @@ Because you don't have write permission to this repo, adding changes will involv
 
 You've already forked the repository, so we can skip that step.  In order to modify the forked repo, you'll need to copy it onto your local computer.  This process is called "cloning" a repository.  Run the command:
 
-*(Use your actual github username below)*
+*(Use your actual GitHub username below)*
 
 ```
 git clone https://github.com/examplestudent/ucr-cs100.git
@@ -83,7 +83,7 @@ giturl = http://github.com/examplestudent/ucr-cs100.git
 
 # you MUST put valid accounts for each of the following websites below
 # if you do not have an account (or do not want to list one you already have) then you may create a new, empty account
-github = examplestudent
+GitHub = examplestudent
 stackoverflow = mikeizbicki
 slashdot = jackpirate
 reddit = PokerPirate
@@ -100,7 +100,7 @@ You need to add into the file all the information contained in the `examplestude
 
 * The `giturl` field is the url that we should use to clone your forked repo.
 
-* The `github` field is the name of your github account.
+* The `GitHub` field is the name of your GitHub account.
 
 * The `stackoverflow` field is the name of your stackoverflow account.
 If you don't have one, you must go to http://stackoverflow.com and create one before continuing.
@@ -123,17 +123,17 @@ You are not required to participate, but you still MUST provide valid social net
 In order to opt out, you should create new accounts at each of the sites, provide those usernames, and then never user those accounts again.
 
 We have two more steps to get your changes added into the original repository.
-First, we have to update your forked repository on the github servers.
+First, we have to update your forked repository on the GitHub servers.
 Run the command:
 
 ```
 git push origin 2015winter
 ```
 
-This "pushes" all the changes you've made back up to github.
+This "pushes" all the changes you've made back up to GitHub.
 
 Now you need to issue a "pull request" to this repository.
-This is done through the github web server and not through the command line.
+This is done through the GitHub web server and not through the command line.
 Visit your forked project's webpage at: http://www.github.com/yourusername/ucr-cs100.
 There is a dull gray button labeled `pull request`:
 
