@@ -34,7 +34,7 @@ Bugs/Limitations/Issues
 
 Things **not** to do
 ---
-* Do not include an authors and contributors section in your README, this information can be found elsewhere on Github.
+* Do not include an authors and contributors section in your README, this information can be found elsewhere on GitHub.
 * There is no need to list the files in your repository in your README.
 * Avoid listing commands in words, instead explicitly list the commands using ``` ` ``` in sequential order.
 * It is not necessary to include information about your licensing beyond where to find it in your README.
