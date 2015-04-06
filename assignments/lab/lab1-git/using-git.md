@@ -1,10 +1,10 @@
-# using git and github
+# using git and GitHub
 
 We will not be using ilearn in this class.  Instead, we will be using a version control system called `git`.  Version control systems are widely used in industry and in open source projects.  They are the tool that lets many programmers work together on large, complex software.  I don't know what programming language you will use at your future job (it may not even exist yet!), but I guarantee you will be using version control.
 
-In this lab, you will first learn the basics of how to use `git` and github.  Then, we will discuss how to use these tools to access your grades and submit assignments.
+In this lab, you will first learn the basics of how to use `git` and GitHub.  Then, we will discuss how to use these tools to access your grades and submit assignments.
 
-### creating your first repo (and some basic unix commands)
+### creating your first repo (and some basic Unix commands)
 
 Open a terminal, and `cd` into the directory you will be doing your cs100 work in.  Then create a folder named `firstrepo` and `cd` into it:
 
@@ -32,7 +32,7 @@ Now we are ready to add some files into our repo.  Every repo in this class must
 $ touch README
 ```
 
-The `touch` command is a standard unix command.  If the input file does not already exist, `touch` creates an empty file with that name.  If the file does already exist, it updates the file's timestamp to the current time.  The `ls -l` command displays the full information about each file in the current directory.  Run the following commands:
+The `touch` command is a standard Unix command.  If the input file does not already exist, `touch` creates an empty file with that name.  If the file does already exist, it updates the file's timestamp to the current time.  The `ls -l` command displays the full information about each file in the current directory.  Run the following commands:
 
 ```
 $ ls -l
@@ -365,7 +365,7 @@ Your tree will now look like this:
 <img src="images/10.png?raw=true">
 </p>
 
-Using branches like this to patch bugs is an extremely common usage pattern.  Whether you're developing open source software or working on facebook's user interface, this is the same basic procedure you will follow.
+Using branches like this to patch bugs is an extremely common usage pattern.  Whether you're developing open source software or working on Facebook's user interface, this is the same basic procedure you will follow.
 
 With real bugs on more complicated software, bug fixes won't be quite this easy.  They might require editing several different files and many commits.  It might take us weeks just to find out what's even causing the bug!  By putting our changes in a separate branch, we make it easy to have someone fixing the bug while someone else is adding new features.
 
