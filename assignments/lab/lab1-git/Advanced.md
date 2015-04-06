@@ -366,7 +366,7 @@ This stops git from performing the merge if the branch pointer cant be simply up
 ###Woo this stream has little streams attached to it
 
 Using the last few commands results in a merge commit since they are not fast-forwards.
-To make sure you changes are always on top of the upstream repository we can rebase our current branch.
+To make sure your changes are always on top of the upstream repository we can rebase our current branch.
 We can do this using `git rebase`. 
 Git must use some point as base, its main reference pointer. 
 Once we have modified our repository the pointer to our version is different than the upstream.
