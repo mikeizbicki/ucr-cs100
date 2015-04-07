@@ -9,7 +9,7 @@ text/path/name
 I assume that you have already forked your repository from mikeizbikis github.
 If you have not, here are instruction to [fork](Enrolling.md#forking-your-repo-) the repository.
 Start by cloning the class repository from your student github account.
-From there checkout the `2015winter` branch, then create and checkout a branch named `2015winter-student`.
+From there checkout the `2015spring` branch, then create and checkout a branch named `2015spring-student`.
 
 ##The stream flows both ways
 
@@ -24,7 +24,7 @@ This uploads our version of the repository to a server online or within a local 
 Doing this allows others to see our changes as well as make changes based off of those changes.
     
     $ git push <url> <branch>
-    $ git push https://github.com/<your user name>/ucr-cs100.git 2015winter-student
+    $ git push https://github.com/<your user name>/ucr-cs100.git 2015spring-student
 
 Isn't there a better way to push changes to a repository you ask. Git has what is called a remote
 to handle this issue.
@@ -61,7 +61,7 @@ In our case we see that origin points to our github fork.
 So instead of using a URL for `git push` we can now push using a remote
 
     $ git push <remote> <branch>
-    $ git push origin 2015winter-student
+    $ git push origin 2015spring-student
 
 
 Now Lets add a remote so that we can 'pull' from our remote repository.
@@ -105,14 +105,14 @@ This mean that commands like `git pull`, and `git push` already know what branch
 To do this we can just push our branch while passing the -u flag.
 
 
-    $ git push -u origin 2015winter-student
+    $ git push -u origin 2015spring-student
 
 Now you may be asking why you didn't have to add the remote for the upstream remote but not the origin remote.
 Well when you cloned a repository using git clone, a remote is set up automatically called origin that is set to the URL you cloned from.
 What if you have already pushed your changes or do no not wish to push your changes yet?
 We can still set the remote tracking branch using `git branch --set-upstream-to` to set the upstream
 
-    $ git branch --set-upstream-to=origin/2015winter-student
+    $ git branch --set-upstream-to=origin/2015spring-student
 
 There you go, now you can get a already created repo, you can push changes to the repo, and add remotes.
 You may be wondering, 'How do I get changes from others that committed on the project'.
@@ -148,14 +148,14 @@ To grab another remote other than the one named `origin` we will specify the rem
 
     $ git fetch <remote> git fetch upstream
 
-Lets get onto the upstream 2015winter branch.
+Lets get onto the upstream 2015spring branch.
 To verify the branch is there first run git branch with the `-r` (remote) option passed
 
     $ git branch -r
 
 The branch is there
 
-    $ git checkout upstream/2015winter
+    $ git checkout upstream/2015spring
 
 #### In a little deep
 
@@ -163,7 +163,7 @@ You should see something similar to this message.
 Don't be alarmed its just telling us that we are not on a branch and the changes we make wont be saved unless we create one from this point.
 So if you want your changes saved you will need to create and checkout a branch from before switching to another branch.
 
-        Note: checking out 'upstream/2015winter'.
+        Note: checking out 'upstream/2015spring'.
         
         You are in 'detached HEAD' state.
         You can look around, make
@@ -179,13 +179,13 @@ So if you want your changes saved you will need to create and checkout a branch 
           git checkout -b new_branch_name
         
         HEAD is now at e3a3a63...
-        Merge branch '2015winter' of https://github.com/mikeizbicki/ucr-cs100 into 2015winter
+        Merge branch '2015spring' of https://github.com/mikeizbicki/ucr-cs100 into 2015spring
 
 The little checkout message is precisely the command we will use to create our local branch.
 We are doing this to simulate that there are changes happening upstream.
 Most of the time there is no need to create a local branch of the upstream branch.
 
-    $ git checkout -b 2015winter-upstream
+    $ git checkout -b 2015spring-upstream
 
 This is how we use can use `git fetch` to create a remote branch in any repository.
 This can be used in many more places though.
@@ -195,7 +195,7 @@ In addition we can create a branch from any git repository that we have a remote
 ###Preparing to jump in 
 
 Now that you know how to use fetch to get remote branches into you repo lets update our local student branch.
-If we had true upstream changes to merge into our repository we could replace `2015winter-upstream` with `FETCH_HEAD`.
+If we had true upstream changes to merge into our repository we could replace `2015spring-upstream` with `FETCH_HEAD`.
 I will give both version here.
 Before you update the local branch its a good idea to check for changes make upstream against your own branch.
 To do that we will use git log again, this time passing a revision instead of a single branch.
@@ -206,16 +206,16 @@ Doing this gives us a set of commits to view using git log, instead of all the c
     $ git log <branch name>..<branch name> 
     where <branch name> can also be a <remote/branch>
 
-    $ git log 2015winter-student..2015winter-upstream
-    $ git log 2015winter-student..FETCH_HEAD
+    $ git log 2015spring-student..2015spring-upstream
+    $ git log 2015spring-student..FETCH_HEAD
 
 Okay so now we know that there are commit differences so lets check them out visually.
 We can use git diff for this
 
     $ git diff <branch name> <branch name>
     
-    $ git log 2015winter-student 2015winter-upstream
-    $ git log 2015winter-student FETCH_HEAD
+    $ git log 2015spring-student 2015spring-upstream
+    $ git log 2015spring-student FETCH_HEAD
 
 Depending on how many commit differences there are, there could be a lot of files changes.
 This can give you an idea of the state of changes against your current repo.
@@ -224,12 +224,12 @@ Lets play it safe on work on a temporary student branch.
 
     
     $ git checkout 2015-student 
-    $ git checkout -b 2015winter-stutmp
+    $ git checkout -b 2015spring-stutmp
 
-Lets merge our upstream into the `2015winter-stutmp` branch(we are currently on it)
+Lets merge our upstream into the `2015spring-stutmp` branch(we are currently on it)
     
     $ git merge <branch name> 
-    $ git merge 2015winter-upstream
+    $ git merge 2015spring-upstream
 
 Edit the merge commit so it will reflect what you want.
 Most times the merge commit message is enough if it is generated.
@@ -246,12 +246,12 @@ When performing a fast-forward the tree will looks similar to this afterwards:
 
 ![Post fast-forward](images/fast-forward1.png)
 
-To illustrate this point checkout the 2015winter-upstream branch, make a change to the README.md, then commit that change.
-Next checkout the 2015winter-stutmp branch and make a change to README.md again.
+To illustrate this point checkout the 2015spring-upstream branch, make a change to the README.md, then commit that change.
+Next checkout the 2015spring-stutmp branch and make a change to README.md again.
 Make it at the same place but  make it a different change.
 This time we should have a problem when we merge.
 
-    $ git merge 2015winter-upstream
+    $ git merge 2015spring-upstream
 
 You should get a message similar to
 
@@ -314,7 +314,7 @@ Once you resolve these merge conflicts save the files and run git commit to fini
 
 Notice the commit message tells you what files had a conflict.
 Don't forget to edit the commit now if you want to remove the conflict notice.
-In our case lets edit message to use `2015winter-student` instead of `2015winter-stutmp`
+In our case lets edit message to use `2015spring-student` instead of `2015spring-stutmp`
 
 There are many mergetools that can be used. 
 A common one that is used in a GUI is meld which is on the list of tools git knows about.
@@ -325,14 +325,14 @@ To use another tool that is not configured for automatic use pass mergetool the 
 Meld will bring up a GUI based mergetool to help you finish the merge.
 Lets bring our student branch up to date.
     
-    $ git checkout 2015winter-student 
-    $ git merge 2015winter-stutmp
+    $ git checkout 2015spring-student 
+    $ git merge 2015spring-stutmp
 
 Notice this time a merge isn't actually performed, rather a fast-forward of the student branch is performed.
 Now the student branch is up to date with the stutmp branch.
 We can now delete the stutmp branch
 
-    $ git branch -d 2015winter-stutmp
+    $ git branch -d 2015spring-stutmp
 
 ###Skip the mess, let's just jump right in
 
@@ -346,11 +346,11 @@ It is `git pull`.
 Though this does not follow the previous steps exactly, it does perform a `git fetch` followed by a `git merge`.
 Since we don't pull local branches into a repositroy, we merge them, pull implicitly uses a remote and remote branch.
 So that mean that `git pull` uses the `FETCH_HEAD` for merging.
-Assume that there are commits on the upstream remote branch named `2015winter` that we do not have.
+Assume that there are commits on the upstream remote branch named `2015spring` that we do not have.
 
 
     $ git pull <remote> <branch> 
-    $ git pull  upstream 2015winter
+    $ git pull  upstream 2015spring
 
 This will fetch and merge just like we did manually before.
 
@@ -388,11 +388,11 @@ Lets use `git log --pretty` to format the output for easier viewing
     $ git log --pretty=oneline
 
 Lets checkout the commit before the merge.
-Create a local branch from this detached head and call it 2015winter-rebase.
+Create a local branch from this detached head and call it 2015spring-rebase.
 Since we already have the changes on both branches lets go ahead an rebase our changes onto our upstream branch.
 
 
-    $ git rebase 2015winter-upstream
+    $ git rebase 2015spring-upstream
 
 This command should result in a merge conflict.
 This time the merge conflict happened when we applied our commit on top of the upstream commit.
