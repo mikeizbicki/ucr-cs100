@@ -7,7 +7,7 @@ If you have ever made a change to a project and wish that you could go back befo
 A VCS tracks changes you make to a project and will allow you to return to a saved point.
 
 
-This lab contains three exercises. 
+This lab contains three exercises.
 The first exercise will introduce you to `git` and will step you through some basic git commands.
 The second exercise will introduce you to some more advanced `git` commands as well as more options for the ones learned in exercise one.
 The third exercise will enroll you in the course.
@@ -23,4 +23,4 @@ You are not officially enrolled in this course until you finish that portion of 
 
 You must get your drawing of the final git repository from exercise one checked off by the TA
 
-Tell the TA once you have issued your pull request from exercise thee.
+Tell the TA once you have issued your pull request from exercise three.
