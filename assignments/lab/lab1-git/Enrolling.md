@@ -127,7 +127,7 @@ First, we have to update your forked repository on the github servers.
 Run the command:
 
 ```
-git push origin 2015winter
+git push origin 2015spring
 ```
 
 This "pushes" all the changes you've made back up to github.
