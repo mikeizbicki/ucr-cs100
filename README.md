@@ -48,7 +48,7 @@ By the end of the course, you should be comfortable running your own open source
 position | name | office hours (WCH 110)
 --- | --- | ---
 lecturer | Mike Izbicki | Tuesdays, 11AM
-teaching assistant | Busra Celikkaya | TBD
+teaching assistant | Busra Celikkaya | Fridays, 1-3PM
 
 **IMPORTANT:**
 If you want to contact the instructors about the course, you should report an issue via github.
