@@ -280,4 +280,4 @@ Here is a complete list of resources created by previous cs100 students that mig
 
 * [the Markdown formatting language](../../../textbook/bestpractices/WritingREADMEs/Markdown.md)
 
-* [writing Makefiles](../../../textbook/tools/Makefiles/README.md)
+* [writing Makefiles](../../../textbook/tools/make/README.md)
