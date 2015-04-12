@@ -1,11 +1,12 @@
-include <iostream>
+#include <iostream>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 
 using namespace std;
 
-int main(){
-	string cmd;
+int main(int argc, char **argv){
 	cout << "$";
-	cin >> cmd;
-
+	
 	return 0;
 }
