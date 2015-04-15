@@ -44,7 +44,7 @@ If you choose a topic like this, make sure it stays nice and cohesive and is not
 * [Antoine Guerrero's writeup of how he hacked git to change his grades in this course](https://github.com/aguerrero/Faking-Git-Commits).
 If you have a similarly engaging story about some cool programming trick you've done, that would make a good writeup.
 
-* [Brunna Amorim's git cheatsheet](../../../textbook/cheatsheets/git-cheatsheet.md).
+* [Brunna Amorim's git cheatsheet](../../../cheatsheets/git-cheatsheet.md).
 A similar cheatsheet for `gdb` or `bash` would make a decent topic.
 
 * [Kevin Nguyen clarified lab 1 by adding pictures to the README file](../../lab/lab1-git).
