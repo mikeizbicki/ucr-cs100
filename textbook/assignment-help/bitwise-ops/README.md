@@ -35,7 +35,7 @@ Earlier, we learned that `OR` is able to store multiple flags into a single valu
 	}
  }
 ```
-Here, we want to check if `filename` is a directory or not, which we can used the macro `S_IFDIR` to do. Utilizing bitwise `AND`, we are able to see if the value holding all the flags, `buf.st_mode`, contains `S_IFDIR`. If it does, then we know it's a directory!
+Here, we want to check if `filename` is a directory or not, which we can use the macro `S_IFDIR` to do. Utilizing bitwise `AND`, we are able to see if the value holding all the flags, `buf.st_mode`, contains `S_IFDIR`. If it does, then we know it's a directory!
 
 Of course, we'll go more into detail on `AND` later on, but hopefully you've grasped that bitwise operators aren't something that you'll stop using.
 As long as you're coding in C/C++, you're bound to use these operators often!
