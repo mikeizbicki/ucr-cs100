@@ -7,7 +7,7 @@ In this tutorial, we will cover the use and nuances of the `strtok` function. Le
 ```
 char example_0[] = "behold the power of strtok!";
 ```
-If we wanted to split it up into smaller components that are separated by the space character `' '`, we would so something like this:
+If we wanted to split it up into smaller components that are separated by the space character `' '`, we would do something like this:
 ```
 cout << strtok(example_0, " ") << endl;
 cout << strtok(NULL, " ") << endl;
