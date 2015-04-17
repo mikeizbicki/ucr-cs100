@@ -48,9 +48,9 @@ A single-quote character can be used arbitrarily as a digit separator in numeric
 For example it can be used to separate digits into thousands:
 ```c++
 auto int_lit = 1000000;             // this is an example of an integer literal
-									// with bo digit separators
+									// with no digit separators
 
-auto int_lit_digseps = 1'000'000;   // this is the same number ad the one
+auto int_lit_digseps = 1'000'000;   // this is the same number as the one above
 									// but this one uses digit separators
 ```
 Here, both `int_lit` and `int_lit_digseps` contain the same exact number only `int_lit_digseps` uses single quotes as digit separators and `int_lit` does not.
@@ -99,7 +99,7 @@ Since no prefix indicating a numeral system is specified, the value of `1101` de
 This means that x stores the value `1101` and not `13`
 This applies to all numeral systems.
 
-Binary literals can be used wherever an constant integral type is expected.
+Binary literals can be used wherever a constant integral type is expected.
 The following code compares two binary numbers:
 ```c++
 cout << "100101 = " << 0b100101 << endl;
