@@ -44,7 +44,7 @@ If you choose a topic like this, make sure it stays nice and cohesive and is not
 * [Antoine Guerrero's writeup of how he hacked git to change his grades in this course](https://github.com/aguerrero/Faking-Git-Commits).
 If you have a similarly engaging story about some cool programming trick you've done, that would make a good writeup.
 
-* [Brunna Amorim's git cheatsheet](../../../textbook/cheatsheets/git-cheatsheet.md).
+* [Brunna Amorim's git cheatsheet](../../../cheatsheets/git-cheatsheet.md).
 A similar cheatsheet for `gdb` or `bash` would make a decent topic.
 
 * [Kevin Nguyen clarified lab 1 by adding pictures to the README file](../../lab/lab1-git).
@@ -100,18 +100,18 @@ You MAY use images that you did not create yourself if the use conforms to the i
 
 There are three submissions for this assignment:
 
-The first is part is due before class on **Wednesday, Feb 11**.
+The first is part is due before class on **Wednesday, May 04**.
 In this submission, you must create an issue on github describing what your tutorial will be about, and who will be on your team.
 I will use this submission to ensure your topic is appropriate.
 
-The second submission is due before class on **Wednesday, Feb 25**.
+The second submission is due before class on **Wednesday, May 20**.
 This is a rough draft submission of your project.
 Create a folder in this repo called `/textbook/yoursubject` or put your writeup in whatever subfolder of `textbook` that is appropriate.
 You should create a pull request through github on this repo showing the current status of your project.
 You should be approximately 75% complete with your project's content at this point.
 I will use this submission to make sure that your project will actually provide benefit to future cs100 students.
 
-Your third submission is due at midnight on **Friday, March 13**.
+Your third submission is due at midnight on **Friday, June 05**.
 This will be the final submission for your project.
 You must submit your tutorial as a pull request on this repository through github.
 Use the same folder from above.

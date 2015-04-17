@@ -32,7 +32,7 @@ There should be no limit to the number of commands that can be chained together 
 and your program must be able to handle any combination of operators.
 For example, you should be able to handle the command:
 ```
-$ ls -a; echo hello && mkdir test || echo world; cd test
+$ ls -a; echo hello && mkdir test || echo world; git status
 ```
 
 3. Execute the command.
@@ -280,4 +280,4 @@ Here is a complete list of resources created by previous cs100 students that mig
 
 * [the Markdown formatting language](../../../textbook/bestpractices/WritingREADMEs/Markdown.md)
 
-* [writing Makefiles](../../../textbook/tools/Makefiles/README.md)
+* [writing Makefiles](../../../textbook/tools/make/README.md)
