@@ -481,7 +481,7 @@ Now, let's do the operations on the 8-bit representation of 1! Remember what the
  0000'0010 (2)
 ```
 
-Notice how that one bit on the far right moved to the left? And then a 0 was added to where it once was? That's how left shifting works! Let's do some more examples!
+Notice how that one bit on the far right moved one to the left? And then a 0 was added to the position where the one bit used to be? That's how left shifting works! Let's do some more examples!
 
 ```
  Base Value: 1 = 0000 0001
