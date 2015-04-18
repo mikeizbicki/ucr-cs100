@@ -70,6 +70,9 @@ Do all of your work under this branch.
 When finished, merge the `exec` branch into the `master` branch, and create a tag called `hw0`.
 Remember that tags and branches in git are case sensitive!
 
+**NOTE:** `git push` will not automatically push tags to your repository.
+Use `git push origin hw0` to update your repository to include the `hw0` tag.
+
 To download and grade your homework, the TA will run the following commands from the `hammer` server:
 
 ```
