@@ -73,8 +73,8 @@ week | date | reading | topics
 3 | Apr13 | the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls) | syscalls: managing processes (`fork`,`wait`,`exec`,`perror`)
 3 | Apr15 | [bitwise operators](textbook/assignment-help/bitwise-ops); [macros](textbook/assignment-help/macros) | syscalls: managing files (`open`,`close`,`read`,`write`)
 3 | Apr17 | the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls)  | syscalls: managing files (`open`,`close`,`read`,`write`)
-4 | Apr20 | William Coates' [valgrind tutorial](textbook/tools/valgrind); | debugging tools (`gdb`,`valgrind`,`cppcheck`)
-4 | Apr22 | Jeff Atwood's [how to become a better programmer](http://blog.codinghorror.com/how-to-become-a-better-programmer-by-not-programming/) | debugging tools (`gdb`,`valgrind`,`cppcheck`)
+4 | Apr20 | William Coates' [valgrind tutorial](textbook/tools/valgrind); | debugging tools (`gdb`,`valgrind`,`cppcheck`):**No class**
+4 | Apr22 | Jeff Atwood's [how to become a better programmer](http://blog.codinghorror.com/how-to-become-a-better-programmer-by-not-programming/) | debugging tools (`gdb`,`valgrind`,`cppcheck`);**quiz** 
 4 | Apr24 | the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls) | syscalls: managing directories (`readdir`,`stat`);**quiz**
 5 | Apr27 | Ycombinator's [startup ideas we'd like to fund](http://old.ycombinator.com/ideas.html) and Paul Graham's [start up funding](http://paulgraham.com/startupfunding.html)| shell scripting: io redirection/piping
 5 | Apr29 | Patrick McKenzie [on salary negotiation for programmers](http://www.kalzumeus.com/2012/01/23/salary-negotiation/) (it's long; you don't have to read it all)| shell scripting: io redirection/piping
@@ -108,7 +108,7 @@ The assignments are due on the following days:
 
 assignment                                      | date
 ----------------------------------------------- | --------------------------------------------
-[hw0](assignments/hw/hw0-rshell)                | Friday Apr17 @ 11:59 PM
+[hw0](assignments/hw/hw0-rshell)                | Sunday Apr19 @ 11:59 PM
 [hw1](assignments/hw/hw1-ls)                    | Friday May01 @ 11:59 PM
 [hw4](assignments/hw/hw4-contributing) - topic  | Wednesday May04 before class
 [hw2](assignments/hw/hw2-piping)                | Friday May17 @ 11:59 PM
