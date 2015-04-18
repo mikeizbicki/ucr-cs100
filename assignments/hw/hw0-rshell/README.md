@@ -229,8 +229,6 @@ other deductions:
 
 * for every warning during compilation they get -5 pts
 
-* for every memory leak reported by `valgrind` -5 pts up to -20 points; if `valgrind` wasn't run then -20 points
-
 * for every error reported by cppchecker, -5 points
 
 extra credit:
