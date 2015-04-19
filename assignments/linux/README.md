@@ -15,7 +15,7 @@ So make backups first!
 The second option is as a virtual machine inside of your windows/mac computer.
 This option will earn you a little bit less credit on the assignment, but is easier to set up.
 
-**RECOMENDATION:**
+**RECOMMENDATION:**
 Make this a group activity.
 Get together with some of your classmates and spend a Saturday installing Linux on everyone's computers.
 It will be a lot more fun this way, and you'll be able to help each other out when you get stuck.
