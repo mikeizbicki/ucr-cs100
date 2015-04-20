@@ -108,12 +108,12 @@ The assignments are due on the following days:
 
 assignment                                      | date
 ----------------------------------------------- | --------------------------------------------
-[hw0](assignments/hw/hw0-rshell)                | Friday Apr17 @ 11:59 PM
+[hw0](assignments/hw/hw0-rshell)                | Sunday Apr19 @ 11:59 PM
 [hw1](assignments/hw/hw1-ls)                    | Friday May01 @ 11:59 PM
-[hw4](assignments/hw/hw4-contributing) - topic  | Wednesday May04 before class
-[hw2](assignments/hw/hw2-piping)                | Friday May17 @ 11:59 PM
+[hw4](assignments/hw/hw4-contributing) - topic  | Monday May04 before class
+[hw2](assignments/hw/hw2-piping)                | Sunday May17 @ 11:59 PM
 [hw4](assignments/hw/hw4-contributing) - draft  | Wednesday May20 before class
-[hw3](assignments/hw/hw3-signals)               | Sunday May29 @ 11:59 PM
+[hw3](assignments/hw/hw3-signals)               | Friday May29 @ 11:59 PM
 [hw4](assignments/hw/hw4-contributing) - final  | Friday Jun05 @ 11:59 PM
 
 You will receive -10 pts for each hour (rounded up) that your assignment is late.
