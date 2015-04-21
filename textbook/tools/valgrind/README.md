@@ -219,7 +219,7 @@ As we can see the program runs normal, printing out "hello world" twice under th
  
 If we look back at our program we can see that we used ```new``` but never called ```delete```.
 
-As stated above ```Delete``` is necessary to free up memory so that you do run into memory issues later on.
+As stated above ```delete``` is necessary to free up memory so that you don't run into memory issues later on.
  
 To fix our problem we need to add in some deletes for the ```VAR``` pointer and the ```PTR``` pointer like such:
 
