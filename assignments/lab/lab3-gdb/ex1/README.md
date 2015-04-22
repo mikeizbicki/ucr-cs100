@@ -78,6 +78,10 @@ Second: hello
 `gdb` will pause our program at breakpoints, and let us inspect the values of the variables.
 We create breakpoints with the `breakpoint` (or `b`) command followed by the line number to create the breakpoint.
 
+To delete a breakpoint, you need to enter ```delete NUMBER``` with ```NUMBER``` being the number of the breakpoint you would like to delete.  To delete all breakpoints, simply enter ```delete``` without an argument and all breakpoints will be removed.
+
+To check the status of all of your breakpoints, type the command ```info break```.  You will be displayed with useful information such as the number of each of your breakpoints, what function the breakpoint is in, what line the breakpoint is on, etc.
+
 Let's set a "breakpoint" inside the `my_strcpy` function:
 ```
 (gdb) b 25
