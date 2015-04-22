@@ -131,6 +131,48 @@ Another important command is the `next` (or `n`) command.
 This causes `gdb` to execute only a single line and stop.
 `continue` will execute many lines, but `next` will only execute one.
 
+While debugging in `gdb`, it is good to note how to remove breakpoints.  
+The command to remove a breakpoint is ```delete NUMBER``` where ```NUMBER``` is the number of the breakpoint.
+Consider the following example:
+
+```
+(gdb) b 25
+Breakpoint 1 at 0x4008aa: file ex1/ex1.cpp, line 25.
+(gdb) b 27
+Breakpoint 2 at 0x4008b4: file ex1/ex1.cpp, line 27.
+(gdb) b 30
+Breakpoint 3 at 0x4008e6: file ex1/ex1.cpp, line 30.
+```
+
+Here, we created three breakpoints at lines `25`, `27`, and `30`.  However, suppose that we no longer want the breakpoint at line `27`.
+Since we know that this breakpoint is number `2` as described after the creation the breakpoint, you can delete this breakpoint by entering the following into `gdb`:
+
+```
+(gdb) delete 2
+```
+
+Thus, the breakpoint at line 27 is now removed.  But how can we confirm this?  You can enter the command ```info b``` to get information about all of your current breakpoints.  So if we now enter ```info b``` in our current example, we would get:
+
+```
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x00000000004008aa in my_strcpy(char*, char const*) at ex1.cpp:25
+3       breakpoint     keep y   0x00000000004008e6 in my_strcpy(char*, char const*) at ex1.cpp:30
+```
+
+We can now clearly see that our second breakpoint is removed.  The command ```info b``` displays useful information about your breakpoints such as the number of each of your breakpoints, what function the breakpoint is in, what line the breakpoint is on, etc.
+
+Say you would like to start afresh and remove all of your breakpoints.  Instead of having to delete each one individually, you can simply type ```delete``` without any arguments and it will delete all of your breakpoints.  For instance, continuing with our previous example: 
+
+``` 
+(gdb) delete
+Delete all breakpoints? (y or n) y
+(gdb) info b
+No breakpoints or watchpoints.
+```
+
+Now all of our breakpoints are removed and we have confirmed so by checking with ```info b```.
+
+
 Using these `gdb` commands, answer the following questions on a piece of paper:
 
 1. What are the values of `src` and `dst` before and after the delete command on line 32?
