@@ -125,11 +125,84 @@ COPY DONE
 First:
 Second: goodbye
 [Inferior 1 (process 22293) exited normally]
-(gdb) quit
 ```
 Another important command is the `next` (or `n`) command.
 This causes `gdb` to execute only a single line and stop.
 `continue` will execute many lines, but `next` will only execute one.
+
+It is useful to also know and keep track of general information about your breakpoints.
+The command `info b` displays useful information about your breakpoints such as the number of each of your breakpoints, what function the breakpoint is in, what line the breakpoint is on, etc.
+For instance, if we use the `info b` command in our current example, we would get:
+
+```
+(gdb) info b
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x00000000004008aa in my_strcpy(char*, char const*) at ex1/ex1.cpp:25
+        breakpoint already hit 1 time
+```
+
+This tells us that we have one active breakpoint labeled as number `1` on line `25` in the `my_strcpy` function and that we have hit this breakpoint a total of `1` time.  
+
+Now, let's create a breakpoint at line `32` so that we may look at the new value the variable `dst` has been assigned on line `30` and then call `info b` so see how it has updated with the new breakpoint.
+
+```
+(gdb) b 32
+Breakpoint 2 at 0x4008ee: file ex1/ex1.cpp, line 32.
+(gdb) info b
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x00000000004008aa in my_strcpy(char*, char const*) at ex1/ex1.cpp:25
+        breakpoint already hit 1 time
+2       breakpoint     keep y   0x00000000004008ee in my_strcpy(char*, char const*) at ex1/ex1.cpp:32
+```
+
+Here, we can see that a new breakpoint has been successfully created on line `32` in the `my_strcpy` function and is labled as number `2`.
+
+After several runs through the file, suppose you no longer want a breakpoint on line `32` anymore.
+To delete a breakpoint, type ```delete NUMBER``` where ```NUMBER``` is the number of the breakpoint.
+You can find the number of each of your breakpoints by running the `info b` command.
+Here, we will delete the breakpoint we had on line 32:
+
+```
+(gdb) info b
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x00000000004008aa in my_strcpy(char*, char const*) at ex1/ex1.cpp:25
+        breakpoint already hit 1 time
+2       breakpoint     keep y   0x00000000004008ee in my_strcpy(char*, char const*) at ex1/ex1.cpp:32
+(gdb) delete 2
+(gdb) info b
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x00000000004008aa in my_strcpy(char*, char const*) at ex1/ex1.cpp:25
+        breakpoint already hit 1 time
+```
+
+In the first `info b` call, we checked that the number of our breakpoint that was on line `32` was `2`.
+Then we entered `delete 2` to delete that specific breakpoint and confirmed its removal by running `info b` again, showing that breakpoint `2` no longer exists.
+
+Say you would like to start afresh and remove all of your breakpoints.
+Instead of having to delete each one individually, you can simply type ```delete``` without any arguments and it will delete all of your breakpoints.
+For instance, continuing with our previous example, we would like to remove all of our breakpoints that still exist in `gdb`:
+
+```
+(gdb) info b
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x00000000004008aa in my_strcpy(char*, char const*) at ex1/ex1.cpp:25
+        breakpoint already hit 1 time
+(gdb) delete
+Delete all breakpoints? (y or n) y
+(gdb) info b
+No breakpoints or watchpoints.
+```
+
+We had one existing breakpoint at line `25` of our file.
+After using the command `delete` without any arguments and entered `y` (for yes) after the warning prompt, all of our breakpoints were deleted as we confirmed by running `info b` afterwards.
+
+Once you feel that you have finished debugging with `gdb`, you can exit by typing the `quit` command and you will return to your normal terminal:
+
+```
+(gdb) quit
+$
+```
+
 
 Using these `gdb` commands, answer the following questions on a piece of paper:
 
