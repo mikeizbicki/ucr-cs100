@@ -32,7 +32,7 @@ There should be no limit to the number of commands that can be chained together 
 and your program must be able to handle any combination of operators.
 For example, you should be able to handle the command:
 ```
-$ ls -a; echo hello && mkdir test || echo world; cd test
+$ ls -a; echo hello && mkdir test || echo world; git status
 ```
 
 3. Execute the command.
@@ -69,6 +69,9 @@ Create a branch called `exec`.
 Do all of your work under this branch.
 When finished, merge the `exec` branch into the `master` branch, and create a tag called `hw0`.
 Remember that tags and branches in git are case sensitive!
+
+**NOTE:** `git push` will not automatically push tags to your repository.
+Use `git push origin hw0` to update your repository to include the `hw0` tag.
 
 To download and grade your homework, the TA will run the following commands from the `hammer` server:
 

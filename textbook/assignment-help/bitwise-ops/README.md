@@ -35,7 +35,7 @@ Earlier, we learned that `OR` is able to store multiple flags into a single valu
 	}
  }
 ```
-Here, we want to check if `filename` is a directory or not, which we can used the macro `S_IFDIR` to do. Utilizing bitwise `AND`, we are able to see if the value holding all the flags, `buf.st_mode`, contains `S_IFDIR`. If it does, then we know it's a directory!
+Here, we want to check if `filename` is a directory or not, which we can use the macro `S_IFDIR` to do. Utilizing bitwise `AND`, we are able to see if the value holding all the flags, `buf.st_mode`, contains `S_IFDIR`. If it does, then we know it's a directory!
 
 Of course, we'll go more into detail on `AND` later on, but hopefully you've grasped that bitwise operators aren't something that you'll stop using.
 As long as you're coding in C/C++, you're bound to use these operators often!
@@ -48,9 +48,9 @@ A single-quote character can be used arbitrarily as a digit separator in numeric
 For example it can be used to separate digits into thousands:
 ```c++
 auto int_lit = 1000000;             // this is an example of an integer literal
-									// with bo digit separators
+									// with no digit separators
 
-auto int_lit_digseps = 1'000'000;   // this is the same number ad the one
+auto int_lit_digseps = 1'000'000;   // this is the same number as the one above
 									// but this one uses digit separators
 ```
 Here, both `int_lit` and `int_lit_digseps` contain the same exact number only `int_lit_digseps` uses single quotes as digit separators and `int_lit` does not.
@@ -99,7 +99,7 @@ Since no prefix indicating a numeral system is specified, the value of `1101` de
 This means that x stores the value `1101` and not `13`
 This applies to all numeral systems.
 
-Binary literals can be used wherever an constant integral type is expected.
+Binary literals can be used wherever a constant integral type is expected.
 The following code compares two binary numbers:
 ```c++
 cout << "100101 = " << 0b100101 << endl;
@@ -481,7 +481,7 @@ Now, let's do the operations on the 8-bit representation of 1! Remember what the
  0000'0010 (2)
 ```
 
-Notice how that one bit on the far right moved to the left? And then a 0 was added to where it once was? That's how left shifting works! Let's do some more examples!
+Notice how that one bit on the far right moved one to the left? And then a 0 was added to the position where the one bit used to be? That's how left shifting works! Let's do some more examples!
 
 ```
  Base Value: 1 = 0000 0001
