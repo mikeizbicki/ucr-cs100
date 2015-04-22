@@ -28,8 +28,8 @@ Second: hello
 This is incorrect.
 If you look at the source code, you can figure out that the result after `COPY DONE` should read:
 ```
-First: goodbye
-Second: goodbye
+First: hello
+Second: hello
 ```
 So our `my_strcpy` function has a bug.
 And we're going to use `gdb` to find it!
