@@ -125,11 +125,92 @@ COPY DONE
 First:
 Second: goodbye
 [Inferior 1 (process 22293) exited normally]
-(gdb) quit
 ```
 Another important command is the `next` (or `n`) command.
 This causes `gdb` to execute only a single line and stop.
 `continue` will execute many lines, but `next` will only execute one.
+
+It is useful to also know and keep track of general information about your breakpoints.
+The command `info b` displays the number of each of your breakpoints, what function the breakpoint is in, what line the breakpoint is on, etc.
+If we enter the command `info b`, we would get:
+
+```
+(gdb) info b
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x00000000004008aa in my_strcpy(char*, char const*) at ex1/ex1.cpp:25
+breakpoint already hit 1 time
+```
+
+The output tells us several things:
+* There is one active breakpoint labeled as number `1`.
+* `breakpoint 1` is on line `25`.
+* `breakpoint 1` is in the `my_strcpy` function.
+* We have hit `breakpoint 1` a total of `1` time.
+
+Now, we'll create a breakpoint at line `32`.
+Doing so allows us to view the new value assigned to `dst` on line `30`.
+
+```
+(gdb) b 32
+Breakpoint 2 at 0x4008ee: file ex1/ex1.cpp, line 32.
+```
+
+Let's call `info b` to see how it has updated with the new breakpoint.
+
+```
+(gdb) info b
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x00000000004008aa in my_strcpy(char*, char const*) at ex1/ex1.cpp:25
+        breakpoint already hit 1 time
+2       breakpoint     keep y   0x00000000004008ee in my_strcpy(char*, char const*) at ex1/ex1.cpp:32
+```
+
+Here, we can see that:
+* A new breakpoint has been created labeled as number `2`.
+* `breakpoint 2` is on line `32`.
+* `breakpoint 2` is in the `my_strcpy` function.
+
+Suppose you no longer want a breakpoint on line `32`.
+To delete a breakpoint, type ```delete NUMBER``` where ```NUMBER``` is the number of the breakpoint.
+You can find the number of each of your breakpoints by running the `info b` command.
+Here, we will delete the breakpoint we had on line 32:
+
+```
+(gdb) delete 2
+```
+
+By running `info b` again, we confirm that breakpoint `2` no longer exists.
+
+```
+(gdb) info b
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x00000000004008aa in my_strcpy(char*, char const*) at ex1/ex1.cpp:25
+        breakpoint already hit 1 time
+```
+
+Say you would like to start afresh and remove all of your breakpoints.
+Instead of having to delete each one individually, you can simply type ```delete``` without any arguments and it will delete all of your breakpoints.
+We will remove all of our breakpoints that still exist in `gdb`:
+
+```
+(gdb) delete
+Delete all breakpoints? (y or n) y
+```
+
+Now, let's verify that they're deleted:
+
+```
+(gdb) info b
+No breakpoints or watchpoints.
+```
+
+Once you have finished debugging with `gdb`, using the `quit` command will return to your normal terminal:
+
+```
+(gdb) quit
+$
+```
+
 
 Using these `gdb` commands, answer the following questions on a piece of paper:
 
