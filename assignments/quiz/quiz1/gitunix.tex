@@ -1,0 +1,122 @@
+\documentclass{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{listings}
+\lstset{numbers=left,frame=single,basicstyle=\ttfamily}
+
+\begin{document}
+\renewcommand{\arraystretch}{2}
+\hfill
+\begin{tabular}{lcr}
+full name & : &\\
+\hline
+cs account login & :  & \\
+\hline
+grader name & : & \\
+\hline
+grade & : & ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~/ 20\\
+\hline
+\end{tabular}
+%\end{tabular}
+
+\vspace{0.25in}
+\begin{center}
+{ \huge
+Quiz 1: Git and Unix
+}
+
+{ \Large
+cs100 open source software construction
+}
+\end{center}
+\vspace{0.15in}
+
+
+\noindent
+Answer the questions below based on the following bash session.
+
+\begin{lstlisting}
+$ mkdir quiz
+$ cd quiz
+$ git init
+$ echo "This is an empty README file" > README
+$ git add README
+$ git commit -m "starting project"
+$ git tag beginning
+$ git branch coding
+$ git checkout coding
+$ echo "int main() { return 0; }" > main.cpp
+$ g++ main.cpp
+$ git add main.cpp
+$ git commit -m "added some code"
+$ ls
+$ touch LICENSE
+$ git add LICENSE
+$ git commit -m "added a license file"
+$ git checkout beginning
+$ ls -a
+$ mkdir src
+$ echo "int main() {return 1; }" > src/main.cpp
+$ git add src/main.cpp
+$ git commit -m "added different code"
+$ git checkout coding
+$ ls -a
+\end{lstlisting}
+
+\begin{enumerate}
+\item
+(3pts)
+On line 14, what does the \lstinline{ls} command display?
+\vspace{0.5in}
+
+\item
+(3pts)
+On line 19, what does the \lstinline{ls -a} command display?
+\vspace{0.5in}
+
+\item
+(3pts)
+On line 25, what does the \lstinline{ls -a} command display?
+\vspace{0.5in}
+
+\newpage
+\item
+(5pts)
+Write a \lstinline{Makefile} with two targets: \lstinline{build} and \lstinline{install}.
+The \lstinline{build} target should compile the file \lstinline{main.cpp} into executable \lstinline{rshell},
+and the \lstinline{install} target should copy the file \lstinline{rshell} into \lstinline{/usr/local/bin}.
+The \lstinline{install} target should depend on the \lstinline{build} target.
+\vspace{4in}
+
+\item
+(2pts)
+According to your reading, what is the most important file in any repository?
+\vspace{1in}
+
+\item
+(2pts)
+If you want detailed information about what a unix command does, where should you look?
+(Or, what command should you run?)
+\vspace{1in}
+
+\item
+(3pts)
+In \lstinline{vim}:
+\begin{enumerate}
+
+\item
+What is the command to move the cursor to line 57?
+\vspace{0.5in}
+
+\item
+What is the command to move the cursor to the bottom of the page?
+\vspace{0.5in}
+
+\item
+What is the command to delete the whole line the cursor is on?
+\vspace{0.5in}
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
