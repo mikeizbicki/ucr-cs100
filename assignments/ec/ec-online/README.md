@@ -4,12 +4,6 @@ Participating in online programming communities is a fun way to expand your prog
 I want to encourage you to participate.
 Here are four ways you can get extra credit from participation:
 
-1. Every programmer should have a webpage.
-If you create a webpage showing off your portfolio,
-I will give you between 5-25 points extra credit depending on the quality.
-This webpage must be hosted on your own personal domain, and cannot be hosted on UCR's domain.
-If you want an example, you can visit my webpage at https://izbicki.me.
-
 1. If you have a project on github that earns more than 10 stars, you will get 10 points extra credit.
 Stars from fellow cs100 students count as only 1/4 a star.
 

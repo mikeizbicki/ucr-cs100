@@ -48,7 +48,7 @@ By the end of the course, you should be comfortable running your own open source
 position | name | office hours (WCH 110)
 --- | --- | ---
 lecturer | Mike Izbicki | Tuesdays, 11AM
-teaching assistant | Busra Celikkaya | TBD
+teaching assistant | Busra Celikkaya | Fridays, 12:30-2:30PM
 
 **IMPORTANT:**
 If you want to contact the instructors about the course, you should report an issue via github.
@@ -66,7 +66,7 @@ week | date | reading | topics
 --- | --- | --- | ---
 1 | Mar30 | Daniel Lemire's [how to learn efficiently](http://lemire.me/blog/archives/2014/12/30/how-to-learn-efficiently/) (recommended; not required) | introduction; using vim
 1 | Apr01 | ESR's [all about unix](http://www.catb.org/esr/writings/taoup/html/context.html) | version control with git
-1 | Apr03 | ERS's [about common software licenses](http://www.catb.org/esr/writings/taoup/html/ch16s07.html); the New Yorker's [30 year retrospective on the GNU manifesto](http://www.newyorker.com/business/currency/the-gnu-manifesto-turns-thirty?intcid=mod-latest) | version control with git
+1 | Apr03 | ESR's [about common software licenses](http://www.catb.org/esr/writings/taoup/html/ch16s07.html); the New Yorker's [30 year retrospective on the GNU manifesto](http://www.newyorker.com/business/currency/the-gnu-manifesto-turns-thirty?intcid=mod-latest) | version control with git
 2 | Apr06 | Paul Graham's [what to do in college](http://www.paulgraham.com/college.html) | version control with git
 2 | Apr08 | Ian Malpass's [advice to future software engineers](https://medium.com/@indec/advice-to-future-software-engineers-64a29669d179); Linus Tolvalds [gets interviewed on why he developed git](http://www.linux.com/news/featured-blogs/185-jennifer-cloer/821541-10-years-of-git-an-interview-with-git-creator-linus-torvalds) | version control with git
 2 | Apr10 | Lucas Xu's [Makefile tutorial](textbook/tools/make); Alexander Ortiz's [how to write a README file](textbook/bestpractices/WritingREADMEs); ESR's thoughts on [unix documentation part I](http://www.catb.org/esr/writings/taoup/html/ch18s02.html) and [part II](http://www.catb.org/esr/writings/taoup/html/ch18s06.html) | syscalls: managing processes (`fork`,`wait`,`exec`,`perror`); **quiz**
@@ -108,12 +108,12 @@ The assignments are due on the following days:
 
 assignment                                      | date
 ----------------------------------------------- | --------------------------------------------
-[hw0](assignments/hw/hw0-rshell)                | Friday Apr17 @ 11:59 PM
+[hw0](assignments/hw/hw0-rshell)                | Sunday Apr19 @ 11:59 PM
 [hw1](assignments/hw/hw1-ls)                    | Friday May01 @ 11:59 PM
-[hw4](assignments/hw/hw4-contributing) - topic  | Wednesday May04 before class
-[hw2](assignments/hw/hw2-piping)                | Friday May17 @ 11:59 PM
+[hw4](assignments/hw/hw4-contributing) - topic  | Wednesday May06 before class
+[hw2](assignments/hw/hw2-piping)                | Friday May15 @ 11:59 PM
 [hw4](assignments/hw/hw4-contributing) - draft  | Wednesday May20 before class
-[hw3](assignments/hw/hw3-signals)               | Sunday May29 @ 11:59 PM
+[hw3](assignments/hw/hw3-signals)               | Friday May29 @ 11:59 PM
 [hw4](assignments/hw/hw4-contributing) - final  | Friday Jun05 @ 11:59 PM
 
 You will receive -10 pts for each hour (rounded up) that your assignment is late.

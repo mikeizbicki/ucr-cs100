@@ -1,5 +1,5 @@
 #time.h
-`time.h` is a C library that allow you to denote time in their programs.
+`time.h` is a C library that allows you to denote time in a program.
 Time in Unix is measured by [number of seconds](http://www.coolepochcountdown.com/) since Epoch (00:00:00 UTC, January 1, 1970).
 To use time correctly in Unix, you must initialize a `time_t` or `struct tm` variable with `time()` or `localtime()`, respectively.
 
