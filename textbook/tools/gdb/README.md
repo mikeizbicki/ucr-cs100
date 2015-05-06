@@ -11,7 +11,7 @@ GDB is the debugger that runs on many Unix-like systems which allows the user to
 
 To download and install GDB, click on the following links:
 
-[Download GDB](www.gnu.org/software/gdb/download/)
+[Download GDB](http://www.gnu.org/software/gdb/download/)
 
 [How to Install](http://www.tutorialspoint.com/gnu_debugger/installing_gdb.htm)
 
