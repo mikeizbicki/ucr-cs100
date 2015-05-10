@@ -82,7 +82,7 @@ week | date | reading | topics
 6 | May04 | | syscalls: io redirection/piping (`pipe`,`dup`)
 6 | May06 | the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls) | syscalls: io redirection/piping (`pipe`,`dup`)
 6 | May08 | ESR's classic [Master Foo series](http://www.catb.org/esr/writings/taoup/html/unix_koans.html) | shell scripting: control flow with `if` and `for`; **quiz**
-7 | May11 | | shell scripting: environment variables (`export`,`PATH`,`HOME`,`EDITOR`)
+7 | May11 | [regular expressions](textbook/tools/bash/regex#regular-expressions) | shell scripting: environment variables (`export`,`PATH`,`HOME`,`EDITOR`)
 7 | May13 | | shell scripting: environment variables (`export`,`PATH`,`HOME`,`EDITOR`)
 7 | May15 | | syscalls: signal handling (`signal`,`sigaction`)
 8 | May18 | | syscalls: signal handling (`signal`,`sigaction`)
