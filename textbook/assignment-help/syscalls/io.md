@@ -137,6 +137,8 @@ else if(pid > 0) //first parent function
    }
    else if(pid2 > 0) //second parent function
    {
+      if (-1 == close(fd[PIPE_WRITE])) //close the write end of the pipe in the parent so the second child isn't left waiting
+         perror("There was an error with close. ");
       if(-1 == wait(0)) //wait for the child process to finish executing
          perror("There was an error with wait(). ");
    }
