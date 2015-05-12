@@ -9,7 +9,7 @@ If you would like to practice regex, we have developed a tool for you to use. Ch
 
 <a name="top"/>
 ##Table of Contents
-[1. What is it?](#what)    
+[1. What is Regex?](#what)    
 [2. Regex Practice program](#practice)    
 [3. Basic characters/Literal characters](#literal)    
 [4. Special/Metacharacters](#meta)    
@@ -225,12 +225,11 @@ I like <strong><em>cat</em></strong>s and <strong><em>dog</em></strong>s</code><
 
 See also: [Alternation](http://www.regular-expressions.info/alternation.html)
 
-+ `{ }` - A specified number of repetitions
-
-`{n}` - Matches exactly n repetitions    
-`{n,}` - Matches n or more repetitions    
-`{n, m}` - Matches no more than `m` repetitions but no less than `n` repetitions    
-The brackets must be escaped in standard regex.
++ `{ }` - A specified number of repetitions 
++ `{n}` - Matches exactly n repetitions  
++ `{n,}` - Matches n or more repetitions  
++ `{n, m}` - Matches no more than `m` repetitions but no less than `n` repetitions  
+The brackets must be escaped in standard regex.  
 
 <table>
   <tr>
