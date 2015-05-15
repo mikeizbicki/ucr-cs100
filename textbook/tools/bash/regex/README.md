@@ -95,7 +95,7 @@ Here are all the metacharacters:
 
 + `\` - The escape character. You'll need it if you want to match the literal character for all of the next few symbols.
 
-+ `[ ]` - Indicates a group of characters to match. Adding a `^` in front of the characters indicates not those characters.
++ `[ ]` - Indicates a set of characters available to match. Adding a `^` in front of the characters tells the system NOT to match those characters.
 
 <table>
   <tr>
