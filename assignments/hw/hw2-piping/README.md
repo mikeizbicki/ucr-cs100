@@ -99,3 +99,4 @@ Here is a complete list of resources created by previous cs100 students that mig
 
 * video: [how to use pipes](https://www.youtube.com/watch?v=uHH7nHkgZ4w)
 
+* video: [how to use dup() syscall cartoon](https://www.youtube.com/watch?v=fmXDTFCnKZk)
