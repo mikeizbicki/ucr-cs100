@@ -256,7 +256,7 @@ See also: [Limiting Repetition](http://www.regular-expressions.info/repeat.html)
 
 + `(` and `)` - Captures variables and creates character groups.
 
-The parenthesis must be escaped in standard Posix
+The parentheses must be escaped in standard Posix.
 
 <table>
   <tr>
