@@ -6,9 +6,13 @@ You will make three modifications to your `rshell` project.
 
 1. Implement the `cd` command.
 Your implementation must support the following forms:
+
     a. `cd PATH` will change the current working directory to `PATH`
+
     b. `cd` will change the current working directory to the user's home directory
+
     c. `cd -` will change the current working directory to the previous working directory
+
 Every time the `cd` command is called, you must update the `PWD` and `OLDPWD` environment variables appropriately.
 This will require using the `chdir`,`getenv`, and `setenv` functions.
 
