@@ -155,7 +155,7 @@ This will pull up the contents of the file, along with the commit number that th
 If you want to know who changed certain lines, you can use the -L flag to figure out who changed those lines.
 You can use the command:
 
-    git blame -L <line-number><ending-linenumber> <filename>
+    git blame -L <line-number>,<ending-linenumber> <filename>
  
 `line-number` is the line you wish to start at.
 
