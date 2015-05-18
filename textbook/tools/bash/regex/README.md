@@ -384,6 +384,9 @@ See also: [Leftmost Longest Rule](http://www.boost.org/doc/libs/1_46_1/libs/rege
 <a name="resources"/>
 ##Additional Resources
 http://regexone.com is an excellent learning tool which provides an interactive tutorial which walks through the basics of regex.    
+https://www.memberpress.com/2014/10/how-to-become-a-regular-expression-power-user/
+
+
 http://www.regular-expressions.info has many pages dedicated to both quickly learning regex and POSIX specific regex. This resource has also been linked throughout this document.
 
 [Back to table of contents](#top)
