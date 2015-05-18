@@ -47,7 +47,7 @@ By the end of the course, you should be comfortable running your own open source
 
 position | name | office hours (WCH 110)
 --- | --- | ---
-lecturer | Mike Izbicki | Tuesdays, 11AM
+lecturer | Mike Izbicki | Tuesdays, 12:40-2PM
 teaching assistant | Busra Celikkaya | Fridays, 12:30-2:30PM
 
 **IMPORTANT:**
@@ -82,7 +82,7 @@ week | date | reading | topics
 6 | May04 | | syscalls: io redirection/piping (`pipe`,`dup`)
 6 | May06 | the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls) | syscalls: io redirection/piping (`pipe`,`dup`)
 6 | May08 | ESR's classic [Master Foo series](http://www.catb.org/esr/writings/taoup/html/unix_koans.html) | shell scripting: control flow with `if` and `for`; **quiz**
-7 | May11 | | shell scripting: environment variables (`export`,`PATH`,`HOME`,`EDITOR`)
+7 | May11 | [regular expressions](textbook/tools/bash/regex#regular-expressions) | shell scripting: environment variables (`export`,`PATH`,`HOME`,`EDITOR`)
 7 | May13 | | shell scripting: environment variables (`export`,`PATH`,`HOME`,`EDITOR`)
 7 | May15 | | syscalls: signal handling (`signal`,`sigaction`)
 8 | May18 | | syscalls: signal handling (`signal`,`sigaction`)
@@ -111,7 +111,7 @@ assignment                                      | date
 [hw0](assignments/hw/hw0-rshell)                | Sunday Apr19 @ 11:59 PM
 [hw1](assignments/hw/hw1-ls)                    | Friday May01 @ 11:59 PM
 [hw4](assignments/hw/hw4-contributing) - topic  | Wednesday May06 before class
-[hw2](assignments/hw/hw2-piping)                | Friday May15 @ 11:59 PM
+[hw2](assignments/hw/hw2-piping)                | Sunday May17 @ 11:59 PM
 [hw4](assignments/hw/hw4-contributing) - draft  | Wednesday May20 before class
 [hw3](assignments/hw/hw3-signals)               | Friday May29 @ 11:59 PM
 [hw4](assignments/hw/hw4-contributing) - final  | Friday Jun05 @ 11:59 PM
