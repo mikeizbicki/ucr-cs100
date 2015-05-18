@@ -45,7 +45,8 @@ We then add an element ```451``` with the key ```"fahrenheit"```.
 we then output the element associated with the key ```"fahrenheit"```.
 
 ## Maps with function pointers
-Let's picture a nightmare scenario
+Let's picture a nightmare scenario:
+
 Suppose that your evil professor assigns you the task of replicating the ```ls``` terminal program.
 ```ls``` has a **lot** of optional flags, some of them doing exactly the same thing (ex. ```-a``` and ```--all```).
 
