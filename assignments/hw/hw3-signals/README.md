@@ -5,12 +5,15 @@
 You will make three modifications to your `rshell` project.
 
 1. Implement the `cd` command.
-Your implementation must support the following forms:
-    a. `cd PATH` will change the current working directory to `PATH`
-    b. `cd` will change the current working directory to the user's home directory
-    c. `cd -` will change the current working directory to the previous working directory
-Every time the `cd` command is called, you must update the `PWD` and `OLDPWD` environment variables appropriately.
+Every time this command is run, you must update the `PWD` and `OLDPWD` environment variables appropriately.
 This will require using the `chdir`,`getenv`, and `setenv` functions.
+Your implementation must support the following forms:
+
+    a. `cd <PATH>` will change the current working directory to `<PATH>`
+
+    b. `cd` will change the current working directory to the user's home directory
+
+    c. `cd -` will change the current working directory to the previous working directory
 
 1. Change your prompt so that it displays the current working directory.
 
@@ -85,7 +88,7 @@ You can earn up to 30 points of extra credit for this.
 If the current working directory contains the user's homefolder, replace the home folder with a `~`.
 For example, my home folder is `/home/user`.
 So if I'm in the directory `/home/user/proj/ucr-cs100`, then my prompt would display `~/proj/ucr-cs100`.
-If the current working directory does not container the user's homefolder, then display the directory normally.
+If the current working directory does not contain the user's homefolder, then display the directory normally.
 
 You can earn 5 points of extra credit for this.
 It should be a very simple task.

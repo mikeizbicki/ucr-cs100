@@ -127,7 +127,7 @@ else if(pid > 0) //first parent function
 
       if(-1 == dup2(fd[PIPE_READ],0))//make stdin the read end of the pipe
          perror("There was an error with dup2. ");
-      if(-1 == close(fd[PIPE_WRITE])//close the write end of the pipe because we're not doing anything with it right now
+      if(-1 == close(fd[PIPE_WRITE]))//close the write end of the pipe because we're not doing anything with it right now
          perror("There was an error with close. ");
 
       if(-1 == execvp(argv2[0], argv2))

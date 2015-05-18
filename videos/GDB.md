@@ -1,6 +1,6 @@
 # GDB Video Tutorial
 
-Intereseted in learning to about GDB? 
+Interested in learning about GDB? 
 Well, you might be interested in this tutorial.
 GDB is used amongst professionals, hobbyists and beginning level coders across the globe.
 Debugging can be quite labor intensive, luckily GDB can make that struggle a whole lot easier.
@@ -9,8 +9,8 @@ I hope in the end you'll find that debugging without GDB to be a thing you once 
 
 What is GDB
 ====
-Well, GDB is just software you can use to debug your code.
-You can use GDB on a number of different languages. 
+Well, GDB is just software that you can use to debug your code.
+You can use GDB on a number of different programming languages. 
 GDB is used to debug efficiently and professionally.
 And it is constantly being maintained and updated.
 You can find out more at https://www.gnu.org/software/gdb/
@@ -43,10 +43,10 @@ Keep in mind though, there are a lot more.
 GDB Intro/Segfaults
 ----------------
 In this introduction video, we'll go over setting up GDB, as well as using some very basic GDB commands.
-In Particular, we'll look at how we can go about finding and fixing segfaults.
+In particular, we'll look at how we can go about finding and fixing segfaults.
 Finding and fixing segfaults is one of the best features that GDB offers.
 You should be able to follow along fairly easily with this tutorial and see just why gdb is so useful.
-Remember there are much more commands.
+Remember there are many more commands.
 This video just scratches the surface of how vital GDB is. 
 
 <a href="https://www.youtube.com/watch?v=vcVmWbYEIsk" target="_blank"><img src="https://i.ytimg.com/vi/vcVmWbYEIsk/2.jpg?time=1427005811814" 

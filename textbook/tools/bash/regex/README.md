@@ -147,7 +147,8 @@ See also: [Character classes](http://www.regular-expressions.info/charclass.html
 
 See also: [The dot](http://www.regular-expressions.info/dot.html)
 
-+ `^` - The caret matches at the beginning of a string or line.  `$` - The dollar sign matches at the end of a string or line.
++ `^` - The caret matches at the beginning of a string or line.
++ `$` - The dollar sign matches at the end of a string or line.
 
 <table>
   <tr>
@@ -168,7 +169,8 @@ successful suc<strong><em>cess</em></strong></code></pre>
 
 See also: [Anchors](http://www.regular-expressions.info/anchors.html)
 
-+ `*` - Indicates **zero or more repetitions** of a character (or group). `+` - Indicates **one or more repetitions** of a character (or group).
++ `*` - The character (or group) before this can occur **ZERO or more times** in a row.
++ `+` - The character (or group) before this can occur **ONE or more times** in a row.
 
 <table>
   <tr>
@@ -189,7 +191,8 @@ hi th<strong><em>is</em></strong> h<strong><em>iss</em></strong></code></pre>
 
 See also: [Repeating character classes](http://www.regular-expressions.info/charclass.html)
 
-+ `?` - Indicates an optional character (or group). It is extended posix only. Use `\{0,1\}` in standard posix.
++ `?` - The character (or group) before this is optional. This is extended posix only.
++ In standard posix, `\{0,1\}` performs similarly.  See {n,m} format below.
 
 <table>
   <tr>
@@ -229,6 +232,7 @@ See also: [Alternation](http://www.regular-expressions.info/alternation.html)
 + `{n}` - Matches exactly n repetitions  
 + `{n,}` - Matches n or more repetitions  
 + `{n, m}` - Matches no more than `m` repetitions but no less than `n` repetitions  
+
 The brackets must be escaped in standard regex.  
 
 <table>
@@ -248,10 +252,11 @@ The brackets must be escaped in standard regex.
   </tr>
 </table>
 
-See also:
+See also: [Limiting Repetition](http://www.regular-expressions.info/repeat.html)
 
-+ `(` and `)` - Captures variables and creates character groups.    
-The parenthesis must be escaped in standard Posix
++ `(` and `)` - Captures variables and creates character groups.
+
+The parentheses must be escaped in standard Posix.
 
 <table>
   <tr>
@@ -348,7 +353,7 @@ These are used to indicate special characters or characteristics. They work in c
 <a name="posix"/>
 ##POSIX Specific Syntax
 
-There are a few key differences POSIX standard says that the **longest** match is returned. Normal regex usually stops with the **first** match found. However, it will still match the **leftmost** result.
+There are a few key differences in the POSIX standard compared to general regex. When matching (and when applicable), POSIX returns the **longest** match. Normal regex usually stops at the **first** match. However, if there is only one possible match, POSIX will still match the **leftmost** result.  At the end of the matching, if there are still multiple possible matches, it will return the first found.
 
 <table>
   <tr>
@@ -371,8 +376,8 @@ Result: Set <strong><em>SetStatus</em></strong>
   </tr>
 </table> 
 
-
 See also: [POSIX](http://www.regular-expressions.info/posix.html)
+See also: [Leftmost Longest Rule](http://www.boost.org/doc/libs/1_46_1/libs/regex/doc/html/boost_regex/syntax/leftmost_longest_rule.html)
 
 [Back to table of contents](#top)
 
