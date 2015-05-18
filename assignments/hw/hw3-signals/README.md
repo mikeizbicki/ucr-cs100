@@ -9,7 +9,7 @@ Every time this command is run, you must update the `PWD` and `OLDPWD` environme
 This will require using the `chdir`,`getenv`, and `setenv` functions.
 Your implementation must support the following forms:
 
-    a. `cd PATH` will change the current working directory to `PATH`
+    a. `cd <PATH>` will change the current working directory to `<PATH>`
 
     b. `cd` will change the current working directory to the user's home directory
 
