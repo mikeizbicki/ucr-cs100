@@ -43,5 +43,33 @@ Let's create and edit out first file through `vim`:
 
 Before start entering text into your file, don't forget to press `i` while on `vim` to enter _insert mode_.
 
+The following text creates a basic file: 
+
+```
+\documentclass[12pt]{article}
+\begin{document}
+
+Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and 
+printing in place of English to emphasise design elements over content. 
+
+It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. 
+It helps to outline the visual elements of a document or presentation, eg typography, font, or layout.
+
+\end{document}
+```
+
+This small example shows us that the first information LaTeX needs to know when processing a file is
+the type of document. This is specified with the `\documentclass` command. Further explanation on different classes 
+can be found [here](http://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes).
+
+After saving and closing vim (i.e. `:wq`), it's time to compile our first LaTeX file and create the `.pdf`. 
+One simple command should do all this work for us:
+
+`pdflatex part1.tex`
+
+If everything worked fine, now you should be able to open the pdf file `part1.pdf` that will look like this:
+
+
+
 
 
