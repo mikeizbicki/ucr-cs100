@@ -30,6 +30,8 @@ we will just skip this part.
 ###First steps
 Now that the package to compile TeX files is installed, let's get started. 
 
+####Before coding
+
 Throughout this tutorial we will be using the folder `article`. After creating the folder (i.e. `mkdir`) and navigating by using the `cd` command 
 to get to the `article` folder, initialize the git repository: 
 
@@ -42,6 +44,8 @@ Let's create and edit out first file through `vim`:
 `vim part1.tex`
 
 Before start entering text into your file, don't forget to press `i` while on `vim` to enter _insert mode_.
+
+####My First LaTeX
 
 The following text creates a basic file: 
 
@@ -68,8 +72,6 @@ One simple command should do all this work for us:
 `pdflatex part1.tex`
 
 If everything worked fine, now you should be able to open the pdf file `part1.pdf` that will look like this:
-
-
 
 
 
