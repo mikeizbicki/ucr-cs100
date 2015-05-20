@@ -105,7 +105,7 @@ To use `gitdags`, you will need
 
 ## An example
 
-The code below, compiled with `pdflatex`, will produce the graph shown above.
+The code below, compiled with `pdflatex`, will produce the graph shown above. HERE IS GONNA BE OUR PERSONAL EXAMPLE, TEACHING HOW STUDENTS REALLY USE IT (CREATING BOXES, POINTING IT TO ANOTHERS, ETC)
 
 ```latex
 \documentclass{article}
