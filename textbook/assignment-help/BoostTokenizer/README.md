@@ -1,9 +1,56 @@
 #The Boost Library Tokenizer
 
+>"...one of the most highly regarded and expertly designed C++ library projects in the world"
+> - Herb Sutter and Andrei Alexandrescu, C++ Coding Standards
+
+Boost is a set of very useful and highly regarded libraries, supporting a wide variety of tasks.
+One of Boost's most useful libraries is the Boost Tokenizer library.
+
+So what does a tokenizer do? 
 A tokenizer extracts meaningful substrings from a string.
 These substrings are called tokens.
 Tokenizing makes life easier when you want to break up a string.
 For example, you can tokenize the string `Get thee to a nunnery`, which will be broken up into the tokens: `Get`, `thee`, `to`, `a`, and `nunnery`.
+
+##Tokenizer Class
+Boost Tokenizer uses a `tokenizer` class to tokenize the string that it is passed.
+```
+template <
+	class TokenizerFunc = char_delimiters_separator<char>,
+	class Iterator = std::string::const_iterator,
+	class Type = std::string
+>
+class tokenizer
+```
+Above is the class declaration for the `tokenizer` class. As you can see, there are three template parameters.
+The `TokenizerFunc` parameter determines how a data type (almost always a string) is broken into tokens.
+The `Iterator` and `Type` parameters determine what iterator type and data type are used.
+For the rest of this tutorial, the data type being used will be a string.
+
+To access the tokens created by the `tokenizer`, in order, you use token iterators.
+
+##TokenizerFunction Models
+As stated above, the `TokenizerFunc` template parameter for tokenizer determines how a string is broken up into tokens.
+A `TokenizerFunction` is functor, which means that it is a class with operator() overloaded,  which makes it so that the class appears as a function.
+The tokenizer class uses four kinds of `TokenizerFunctions`:
+
+1. char_separator
+	* The `char_separator` class separates the string into tokens based on character delimiters.
+	* You can also choose to keep or drop delimiters.
+	* This tutorial will cover the `char_separator` class, as an example of the functionality of Boost Tokenizer.
+2. [escaped_list_separator](escaped_list_separator.md)
+	* The `escaped_list_separator` class seperates a string into fields using separators, which act just like delimiters.
+	* By putting quotes around a field, you can keep the separator in the field.
+	* For more information, please see the [escaped_list_separator tutorial](escaped_list_separator.md).
+3. [offset_separator](offset_separator.md)
+	* The `offset_seperator` class breaks a string into tokens based on a sequence of integers, known as offsets.
+	* For more information, please see the [offset_separator tutorial](offset_separator.md).
+4. char_delimiter_separator
+	* The `char_delimiter_separator` class is the default `TokenizerFunction` model used in the `tokenizer` class.
+	* It functions similarly to the `char_separator`.
+	* The `char_delimiter_separator` class is a deprecated class, meaning that it is either dangerous to use or a better alternative exists.
+	If possible try to use the `char_separator` class.
+	* This tutorial will not discuss the `char_delimiter_separator` class in detail.
 
 ##How do we use the boost tokenizer?
 
