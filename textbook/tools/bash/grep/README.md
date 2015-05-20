@@ -7,9 +7,10 @@ Grep is a useful search tool. It searches input files for lines that contain a m
 #####How do I use grep?
 
 	It’s pretty easy, really! Grep uses the following format:
-	```
-	grep optional_flags pattern input_file_names
-	```
+
+```
+grep optional_flags pattern input_file_names
+```
 	
 	As mentioned, grep’s flags are optional. You can include anything between zero and all of the flags if you want to.
 	Grep can search through one or more input files, separated by spaces. The input file names are technically optional as well. If no input file names are included, grep uses standard input as the input. This is pretty useless for programming and such, but it is an easy way to see how the grep command works.
