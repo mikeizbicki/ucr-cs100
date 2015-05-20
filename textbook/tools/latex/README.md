@@ -38,7 +38,7 @@ Time to get some TeX code finally done! Let's create and edit out first file thr
 
 `vim part1.tex`
 
-Before start entering text into your file, don't forget to press `i` while on `vim` to enter _insert mode_. At this point, you should have completed your vim tutorial... If you don't, it can be found ![here](https://github.com/mikeizbicki/ucr-cs100/tree/2015spring/assignments/lab/lab0-vim)... But if you still "without time to finish it" you can start it at least knowing how to quit it as well (believe me, that can be a challenge at the very beginning and you will really want to know how to do it, haha). To quite, press `:q`. To save and quit `vim`, press `:wq`. If while you being programming you need some extra help, press `:help`.
+Before start entering text into your file, don't forget to press `i` while on `vim` to enter _insert mode_. At this point, you should have completed your vim tutorial... If you don't, it can be found [here](https://github.com/mikeizbicki/ucr-cs100/tree/2015spring/assignments/lab/lab0-vim)... But if you still "without time to finish it" you can start it at least knowing how to quit it as well (believe me, that can be a challenge at the very beginning and you will really want to know how to do it, haha). To quite, press `:q`. To save and quit `vim`, press `:wq`. If while you being programming you need some extra help, press `:help`.
 
 ####My First LaTeX
 
@@ -81,19 +81,19 @@ Now we are ready to commit:
 
 `git commit -m "My first TeX"`
 
-In small projects you may not have a lot of commits, but in huge projects it's gonna happen all the time. So now, we are going to present a package for drawing Git history graphs using LaTeX, called gitdags. You are going to need it in this lab ![here]().
+In small projects you may not have a lot of commits, but in huge projects it's gonna happen all the time. So now, we are going to present a package for drawing Git history graphs using LaTeX, called gitdags. It can be really helpful to draw a really nice looking git repository for this [lab1](https://github.com/mikeizbicki/ucr-cs100/tree/2015spring/assignments/lab/lab1-git).
 
-#A brief introduction to gitdags
+###A brief introduction to gitdags
 
 `gitdags` is a LaTeX package that allows you to effortlessly produce pretty Git history graphs. It is really convenient for demonstrating the effects of Git commands such as `checkout`, `reset`, `merge`, `rebase`, etc. on a repository.
 
 ![alt tag](http://i.stack.imgur.com/Tg7Kn.png)
 
-## What `gitdags` is *not*
+### What `gitdags` is *not*
 
 Automatic generation of history graphs of repositories is *not* the purpose of `gitdags`... 
 
-## Dependencies
+### Dependencies
 
 To use `gitdags`, you will need
 
@@ -102,7 +102,7 @@ To use `gitdags`, you will need
 * the [`xcolor-solarized`](https://github.com/Jubobs/xcolor-solarized) package.
 
 
-## An example
+### An example
 
 The code below, compiled with `pdflatex`, will produce the graph shown above. HERE IS GONNA BE OUR PERSONAL EXAMPLE, TEACHING HOW STUDENTS REALLY USE IT (CREATING BOXES, POINTING IT TO ANOTHERS, ETC)
 
