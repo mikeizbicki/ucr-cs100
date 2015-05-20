@@ -1,14 +1,14 @@
 ##Cool linux tools that any CS student should know
-This is a tutorial for LaTeX that combines the main unix tools together that a GOOD computer scientist should know. 
+This is a tutorial on LaTeX that combines the main unix tools together that a GOOD computer scientist should know. 
 The tools that will be covered here are:
 
 * LaTeX: to create the documents
-* git: to version control the documents
-* vim: to edit the text - link
-* Makefile: to put things together - link
+* [git](https://github.com/mikeizbicki/ucr-cs100/blob/2015spring/assignments/lab/lab1-git/using-git.md): to version control the documents
+* [vim](https://github.com/mikeizbicki/ucr-cs100/blob/2015spring/cheatsheets/vim-cheatsheet.pdf): to edit the text
+* [Makefile](https://github.com/mikeizbicki/ucr-cs100/tree/2015spring/textbook/tools/make): to put things together
 * pdflatex: to output as a pdf file.
 
-If you don't know any of these tools, this is your chance! YEY... The tools that have their owns it's just click on it to access. The rest you can check here... So let's get started!
+If you don't know any of these tools, this is your chance! YEY... The tools that have their own tutorials, you can just click on the links and access. The rest you can check here... So let's get started!
 
 ##LaTeX
 As computer scientists or engineers, we are supposed to write papers and other kind of documents that require features not easily found in conventional word processors. With that being said, the first tool that we want to present is LaTeX -- a great tool that produces beautiful type and is written in a language that is fairly intuitive. 
@@ -34,11 +34,11 @@ Throughout this tutorial we will be using the folder `article`. After creating t
 
 `git init`
 
-Time to get some TeX code finally up! Let's create and edit out first file through `vim`: 
+Time to get some TeX code finally done! Let's create and edit out first file through `vim`: 
 
 `vim part1.tex`
 
-Before start entering text into your file, don't forget to press `i` while on `vim` to enter _insert mode_. At this point, you should have completed your vim tutorial... If you don't, it can be found ![here]()... But if you still "without time to finish it" you can start it at least knowing how to quit it as well (believe me, that can be a challenge at the very begnning and you will really want to know how to do it, haha). To quite, press `:q`. To save and quit `vim`, press `:wq`. If while you being programming you need some extra help, press `:help`.
+Before start entering text into your file, don't forget to press `i` while on `vim` to enter _insert mode_. At this point, you should have completed your vim tutorial... If you don't, it can be found ![here](https://github.com/mikeizbicki/ucr-cs100/tree/2015spring/assignments/lab/lab0-vim)... But if you still "without time to finish it" you can start it at least knowing how to quit it as well (believe me, that can be a challenge at the very beginning and you will really want to know how to do it, haha). To quite, press `:q`. To save and quit `vim`, press `:wq`. If while you being programming you need some extra help, press `:help`.
 
 ####My First LaTeX
 
@@ -59,7 +59,7 @@ This small example shows us that the first information LaTeX needs to know when 
 the type of document. This is specified with the `\documentclass` command. Further explanation on different classes 
 can be found [here](http://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes).
 
-After saving and closing vim (i.e., `:wq <name of the file>`), it's time to compile our first LaTeX file and create the `.pdf`. 
+After saving and closing vim (i.e., `:wq`), it's time to compile our first LaTeX file and create the `.pdf`. 
 One simple command should do all this work for us:
 
 `pdflatex part1.tex`
@@ -192,5 +192,4 @@ The code below, compiled with `pdflatex`, will produce the graph shown above. HE
 Finally, now that you you learned a lot of cool tools, it is time to mention that in your own Resume and being at the front line in the Computer Science market.
 The following tutorial will teach some codes that you can use to creat a new beatiful Resume using LaTeX.
 
-...
 
