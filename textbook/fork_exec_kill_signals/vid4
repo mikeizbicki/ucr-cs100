@@ -1,0 +1,24 @@
+Intro
+
+	Hello, this is Sandie and I am going to be talking to you about the other use of kill.
+
+	Using kill to send signals to processes.
+	In the previous video we used kill -9 and killall -9.
+
+	The -9 actually meant passing the signal SIGKILL to those processes. SIGKILL will drop the process immediately as long as under STAT isn't a letter D.
+
+	We are going to talk about other signals you can pass to those processes.
+
+Description
+
+	Briefly talk about certain signals we use in everyday coding.
+
+	Ctrl-C, SIGINT, is to kill running processes in the foreground process.
+
+	Ctrl-\, SIGQUIT, is to quit a program and to core dump
+
+	Ctrl-Z, is to stop the foreground process
+
+	Talk about how SIGKILL and SIGSTOP can not be caught or ignored
+
+	Why SIGKILL is effective (in most cases)

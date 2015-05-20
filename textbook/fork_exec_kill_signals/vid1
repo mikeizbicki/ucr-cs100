@@ -1,0 +1,37 @@
+introduce
+
+start with fork
+	say what a fork is
+		bring up man page
+		creates a child process and parent process
+		they both copy the current process/program
+		error checking
+	fork a return a 2 pid_t
+		child pid is 0
+		parent pid is PID of current process
+	show ps
+		talk very briefly
+		will say go into detail in the next video
+	??? why wait for the child to finish
+		wait(0) and waitpid
+		have an example of for loop in parent that takes longer than child
+		what happens if the child is taking longer than the parent to finish
+		how to use wait (libraries, sys/wait.h and sys/types.h)
+	talk about exit()
+
+then execvp
+	say what execvp is
+		talk about exec
+		say we are using execvp for this video
+		what execvp parameters are
+		library for execvp
+		error checking
+	say what we included in next file
+		hardcoded char**
+		say you need a NULL at the end for execvp to work
+		you can pass in parameters
+	do with no parameter (ls)
+	do with parameters (ls -l)
+	pass in without a null
+	pass in with garbage command
+		tell about perror

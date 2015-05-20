@@ -1,0 +1,62 @@
+INTRO
+
+	Hello, this is Kenny and I am going to be talking to you about the UNIX command PS.
+
+	Ps is short for Process Status.
+
+	It basically shows the active processes you are running.
+
+	If you remember from the previous video, the video about fork() and execvp() , Sandie briefly talked to you about ps.
+
+	PS will be useful for you when you will be using certain syscalls such as fork() and execvp.
+
+	Maybe you are going to run into problems where your child didn't end properly or where there will be zombie processes.
+
+	PS will help you troubleshoot them!
+
+Description
+
+	(Run a program)
+
+	(Go back into terminal using crt-z)
+
+	Run ps
+
+	Talk about the output of ps
+
+	PID is for Process ID Number
+
+	TTY shows what terminal the process is running. Ps by itself will show only the processes of the current terminal. 
+
+	TIME is how long the process has been up according to the CPU. It is not the time you would expect if you were expecting real time. (Can go into more depth)
+
+	COMMAND is for the name of the process (along with any arguments, such as ps a.
+
+	Run ps -aux
+
+	(probably the most useful ps command)
+
+	Talk about the CPU and MEM usage(brief)
+
+	Talk about the user(brief)
+
+	Go into depth about STAT
+
+	The certain letters mean certain things about the process.
+
+	Z is for zombie(important, bring up correlation with fork() and execvp)
+
+	Do not have zombie processes; it takes it resources.
+
+	S is for sleeping
+
+	W is for paging
+
+Usage
+
+	ps can be used in conjunction with kill
+
+	For kill:
+	can be used to find the PID for kill
+	can be used to find the command for killall
+

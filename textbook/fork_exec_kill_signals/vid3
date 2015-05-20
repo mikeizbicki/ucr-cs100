@@ -1,0 +1,49 @@
+Intro
+	Hello, this is Kenny and I am going to be talking to you about the UNIX command kill(and the variations).
+
+	For just this video, we will be talking about killing processes.
+
+	If you remember from our last video, I was talking about how you can retrieve the process ID number, PID, by using the ps command.
+
+	Using either the PID or command name, you can effectively kill a program.
+
+Description
+
+	Say how you have to be the user to kill the process
+
+	For security issues, linux does not allow other users to kill processes of other users
+
+	Can kill any processes if root/sudo user
+
+	Pull up kill -l
+
+	Briefly talk about signals(more in depth in next video)
+
+	Explain the differences between kill and killall
+
+	kill uses PID to indicate what to kill
+
+	killall uses the command name to kill any process with that command name.
+
+	kill can often not work(as if it is only politely asking the process to die)
+
+	use kill -9 instead(the -9 flag or SIGKILL cannot be ignored)
+
+	kill's arguments can only be PIDs or the number of the signal you want to pass through
+
+	killall -9 does the same thing but with the command name
+
+	killall can use the arguments with the signal name(without the SIG part)
+
+	killall -KILL same as killall -9
+
+	kill bash just for fun
+
+Usage
+
+	Kill off zombie processes that are taking up resources
+
+	Maybe an application has stopped working and you can't end it by normal means
+
+	Send a certain signal to a process (more in depth in next video)
+
