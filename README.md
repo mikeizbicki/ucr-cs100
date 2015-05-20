@@ -47,7 +47,7 @@ By the end of the course, you should be comfortable running your own open source
 
 position | name | office hours (WCH 110)
 --- | --- | ---
-lecturer | Mike Izbicki | TBD
+lecturer | Mike Izbicki | Tuesdays, 11AM
 teaching assistant | Busra Celikkaya | TBD
 
 **IMPORTANT:**
@@ -68,7 +68,7 @@ week | date | reading | topics
 1 | Apr01 | ESR's [all about unix](http://www.catb.org/esr/writings/taoup/html/context.html) | version control with git
 1 | Apr03 | ERS's [about common software licenses](http://www.catb.org/esr/writings/taoup/html/ch16s07.html); the New Yorker's [30 year retrospective on the GNU manifesto](http://www.newyorker.com/business/currency/the-gnu-manifesto-turns-thirty?intcid=mod-latest) | version control with git
 2 | Apr06 | Paul Graham's [what to do in college](http://www.paulgraham.com/college.html) | version control with git
-2 | Apr08 | Ian Malpass's [advice to future software engineers](https://medium.com/@indec/advice-to-future-software-engineers-64a29669d179) | version control with git
+2 | Apr08 | Ian Malpass's [advice to future software engineers](https://medium.com/@indec/advice-to-future-software-engineers-64a29669d179); Linus Tolvalds [gets interviewed on why he developed git](http://www.linux.com/news/featured-blogs/185-jennifer-cloer/821541-10-years-of-git-an-interview-with-git-creator-linus-torvalds) | version control with git
 2 | Apr10 | Lucas Xu's [Makefile tutorial](textbook/tools/make); Alexander Ortiz's [how to write a README file](textbook/bestpractices/WritingREADMEs); ESR's thoughts on [unix documentation part I](http://www.catb.org/esr/writings/taoup/html/ch18s02.html) and [part II](http://www.catb.org/esr/writings/taoup/html/ch18s06.html) | syscalls: managing processes (`fork`,`wait`,`exec`,`perror`); **quiz**
 3 | Apr13 | the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls) | syscalls: managing processes (`fork`,`wait`,`exec`,`perror`)
 3 | Apr15 | [bitwise operators](textbook/assignment-help/bitwise-ops); [macros](textbook/assignment-help/macros) | syscalls: managing files (`open`,`close`,`read`,`write`)

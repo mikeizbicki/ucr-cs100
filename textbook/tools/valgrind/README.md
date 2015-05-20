@@ -106,7 +106,7 @@ This is an important problem to fix because if you never free up your memory whe
 ```
     int main()
     {   
-        char *var = new char[1024};
+        char *var = new char[1024];
         delete [] var;
         return 0;
     }
