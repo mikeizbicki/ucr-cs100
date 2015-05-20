@@ -4,12 +4,11 @@ The tools that will be covered here are:
 
 * LaTeX: to create the documents
 * git: to version control the documents
-* vim: to edit the text
-* Makefile: to put things together
+* vim: to edit the text - link
+* Makefile: to put things together - link
 * pdflatex: to output as a pdf file.
 
-If you don't know any of these tools, this is your chance! YEY... 
-So let's get started!
+If you don't know any of these tools, this is your chance! YEY... The tools that have their owns it's just click on it to access. The rest you can check here... So let's get started!
 
 ##LaTeX
 As computer scientists or engineers, we are supposed to write papers and other kind of documents that require features not easily found in conventional word processors. With that being said, the first tool that we want to present is LaTeX -- a great tool that produces beautiful type and is written in a language that is fairly intuitive. 
@@ -189,10 +188,8 @@ The code below, compiled with `pdflatex`, will produce the graph shown above. HE
 \end{document}
 ```
 
-Organize
+Finally, now that you you learned a lot of cool tools, it is time to mention that in your own Resume and being at the front line in the Computer Science market.
+The following tutorial will teach some codes that you can use to creat a new beatiful Resume using LaTeX.
 
-
-Since the other tools have their owns [tutorials](https://github.com/fvera002/ucr-cs100/tree/2015spring/textbook/tools),
-we will just skip this part.
-
+...
 
