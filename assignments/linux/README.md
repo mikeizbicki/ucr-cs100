@@ -15,7 +15,7 @@ So make backups first!
 The second option is as a virtual machine inside of your windows/mac computer.
 This option will earn you a little bit less credit on the assignment, but is easier to set up.
 
-**RECOMENDATION:**
+**RECOMMENDATION:**
 Make this a group activity.
 Get together with some of your classmates and spend a Saturday installing Linux on everyone's computers.
 It will be a lot more fun this way, and you'll be able to help each other out when you get stuck.
@@ -39,6 +39,8 @@ If you do not have a personal computer to install Linux on, see me and I'll work
 
 #### extra credit
 
-+5 points if you install the [xmonad](http://xmonad.org/) tiling window manager and use it as your default
++5 points if you install the [xmonad](http://xmonad.org/) tiling window manager.
+It must be your default window manager, and you must be able to use `mod-p` to launch programs.
 
-+5 points if you set up your computer as a [tor relay](https://www.torproject.org/docs/tor-doc-relay.html.en)
++5 points if you set up your computer as a [tor relay](https://www.torproject.org/docs/tor-doc-relay.html.en).
+This helps reporters in repressive countries communicate with the outside world.
