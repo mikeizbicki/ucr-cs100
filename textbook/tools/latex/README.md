@@ -73,5 +73,19 @@ One simple command should do all this work for us:
 
 If everything worked fine, now you should be able to open the pdf file `part1.pdf` that will look like this:
 
+![example1](https://cloud.githubusercontent.com/assets/9004719/7717927/543e6fba-fe5e-11e4-8896-becfe2d40650.png)
+
+And you repository will look like this: 
+
+![dir1](https://cloud.githubusercontent.com/assets/9004719/7717933/586da8a8-fe5e-11e4-9a84-c396d3a61739.png)
+
+If we succeed at the previous steps, it's time to our first commit. But first, we need to add the files to the staging area of git. Remember! We should commit only source code files. We don't want our git repository to be full of executable and log files. In other words, out `part1.tex` file should be the only one that is added to the git repository. All the rest (`part1.log`, `part1.aux`, `part.pdf`) should *not* be added. 
+
+`git add part1.tex`
+
+Now we are ready to commit:
+
+`git commit -m "My first TeX"`
+
 
 
