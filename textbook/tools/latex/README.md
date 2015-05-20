@@ -1,6 +1,5 @@
 ##Cool linux tools that any CS student should know
-
-This is a tutorial on LaTeX that combines the main unix tools together that a GOOD computer scientist shold know. 
+This is a tutorial for LaTeX that combines the main unix tools together that a GOOD computer scientist should know. 
 The tools that will be covered here are:
 
 * LaTeX: to create the documents
@@ -9,11 +8,11 @@ The tools that will be covered here are:
 * Makefile: to put things together
 * pdflatex: to output as a pdf file.
 
-If you don't know some of these tools, this is your chance! YEY... 
+If you don't know any of these tools, this is your chance! YEY... 
 So let's get started!
 
 ##LaTeX
-As computer scientists or engineers, we are supposed to write papers and other kind of documents that require features not easily found in conventional word processors. With that being said, the first tool that we wan't to present is LaTeX -- a great tool that produces beautiful type and is written in a language that is fairly intuitive. 
+As computer scientists or engineers, we are supposed to write papers and other kind of documents that require features not easily found in conventional word processors. With that being said, the first tool that we want to present is LaTeX -- a great tool that produces beautiful type and is written in a language that is fairly intuitive. 
 
 ###Installation 
 
@@ -40,7 +39,7 @@ Time to get some TeX code finally up! Let's create and edit out first file throu
 
 `vim part1.tex`
 
-Before start entering text into your file, don't forget to press `i` while on `vim` to enter _insert mode_. At this point, you should have completed your vim tutorial... If you don't, it can be find [here]... But if you still "without time to finish it" you can start it at least knowing how to quit it as well (believe me, that can be a challenge at the very begnning and you will really want to know how to do it, haha). To quite, press `:q`. To save and quit `vim`, press `:wq`. If while you being programming you need some extra help, press `:help`.
+Before start entering text into your file, don't forget to press `i` while on `vim` to enter _insert mode_. At this point, you should have completed your vim tutorial... If you don't, it can be found ![here]()... But if you still "without time to finish it" you can start it at least knowing how to quit it as well (believe me, that can be a challenge at the very begnning and you will really want to know how to do it, haha). To quite, press `:q`. To save and quit `vim`, press `:wq`. If while you being programming you need some extra help, press `:help`.
 
 ####My First LaTeX
 
