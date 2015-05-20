@@ -43,13 +43,7 @@ When the end of the line is reached, the pattern space is output to the output s
 
 This example does not actually need to use the hold space since there was no need for temporary storage. So let&#39;s look at a different example that does use the hold space.
 
-Say we want to capture the line before a line that matches a search pattern. The command,
-
-```
-sed -n '/regex/{x;1!p;x}; h'
-```
-
-will do this.
+Say we want to capture the line before a line that matches a search pattern. The command,`sed -n '/regex/{x;1!p;x}; h'` will do this.
 
 Before you can see what this expression is doing, there are a few things you should know.
 
@@ -181,7 +175,7 @@ and so forth.
 
 Each of these instances will have the same output as the original example.
 
-A missing delimiter will result in a "Unterminated 's' command" error.
+A missing delimiter will result in an "Unterminated 's' command" error.
 
 *3.* The string you want to search for (i.e. "aol.com" the search pattern) is on the left side of the delimiter sequence.
 
@@ -210,7 +204,7 @@ With that in mind, let&#39;s move on to the next example.
 
 The president of the UCR ACM chapter has the 100 new members all enter their phone numbers in his laptop. Everyone enters their number in the form of "##########," which is not easy on the eyes. So after the president gets back home and sees that no one distinguished their area code from the rest of the seven digit phone number, he decides to run a `sed` script to place a set of parentheses around the first 3 digits of every phone number.
 
-Since there is no way for him to anticipate the exact first three numbers for each phone number, the president will have to write a **regular expression** to get the job done. Regular expressions themselves are worthy of their own tutorial, so we will not delve too deep into the intricacies of writing one, but we will use them to demonstrate `sed`&#39;s power. For a detailed introduction to regular expressions, please visit [this][regex] tutorial.
+Since there is no way for him to anticipate the exact first three numbers for each phone number, the president will have to write a **regular expression** to get the job done. Regular expressions themselves are worthy of their own tutorial, so we will not delve too deep into the intricacies of writing one, but we will use them to demonstrate the power of `sed`. For a detailed introduction to regular expressions, please visit [this][regex] tutorial.
 
 The president&#39;s regular expression will require a `^`, which in a regular expression dictates that the match must begin at the start of the line, a
 `[[:digit:]]`, which translates to the first character of a match needing to be a digit, and lastly a `&`, which is a variable that represents the pattern that was matched.
