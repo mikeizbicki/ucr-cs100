@@ -1,0 +1,13 @@
+name = Kenneth Chan
+giturl = http://github.com/kchan049/ucr-cs100.git
+
+# you MUST put valid accounts for each of the following websites below
+# if you do not have an account (or do not want to list one you already have) then you may create a new, empty account
+github = kchan049
+stackoverflow = kchan049
+slashdot = kchan049
+reddit = kchan049
+hackernews = kchan049
+
+# only include a personal website if you already have one
+website =

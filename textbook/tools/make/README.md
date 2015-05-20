@@ -2,7 +2,7 @@
 ---
 
 The `make` tool automates the process of building a project from its source code.
-For `make` to work, your need to add a file named `Makefile` into your project's root folder.
+For `make` to work, you need to add a file named `Makefile` into your project's root folder.
 In this tutorial, we provide five example `Makefile`s.
 
 Example 1: Hello World
