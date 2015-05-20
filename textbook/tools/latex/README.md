@@ -101,7 +101,8 @@ To use `gitdags`, you will need
 * a LaTeX distribution,
 * the `tikz` package (v3.0 or later),
 * the [`xcolor-solarized`](https://github.com/Jubobs/xcolor-solarized) package.
-* 
+
+
 ## An example
 
 The code below, compiled with `pdflatex`, will produce the graph shown above.
