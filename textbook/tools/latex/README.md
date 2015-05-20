@@ -46,6 +46,7 @@ The following text creates a basic file:
 
 ```
 \documentclass[12pt]{article}
+\usepackage{color}
 \begin{document}
 Mike Izbicki is a great professor. Actually, he is the best professor ever... 
 All cs100 students \textcolor{red}{LOVE} him. 
