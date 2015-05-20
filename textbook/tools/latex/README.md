@@ -44,7 +44,7 @@ Before start entering text into your file, don't forget to press `i` while on `v
 
 The following text creates a basic file: 
 
-```
+```latex
 \documentclass[12pt]{article}
 \usepackage{color}
 \begin{document}
