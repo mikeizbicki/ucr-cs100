@@ -66,7 +66,7 @@ One simple command should do all this work for us:
 
 If everything worked fine, now you should be able to open the pdf file `part1.pdf` that will look like this:
 
-![example1](https://cloud.githubusercontent.com/assets/9004719/7720453/66d07adc-fe82-11e4-82d3-dd7434cc27cf.jpg)
+![example1](https://cloud.githubusercontent.com/assets/9013439/7720575/b7d1c4bc-fe83-11e4-94c7-362913a08292.jpg)
 
 And you repository will look like this: 
 
