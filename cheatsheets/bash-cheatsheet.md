@@ -66,7 +66,7 @@ Passing a string and a file searches the file for the given string and prints th
   $ cat users.txt
   user:student password:123
   user:teacher password:321
-  $ grep 'student` file1.txt
+  $ grep 'student' file1.txt
   user:student password:123
 ```
 `grep` can take multiple files as parameters and regular expressions to specify a pattern in text.
@@ -141,6 +141,240 @@ The `ping` command tests a network connection. <br>
   rtt min/avg/max/mdev = 7.794/8.422/10.792/0.699 ms
 ```
 The statistics at the end show an overview of how many connections went through before we called `^C` and how long it took.
+###cp 
+Copies files and directories.
+```
+cp [flags] FileToCopy DestinationPath
+```
+You can copy many files at a time into a directory, or just copy one file.
+```
+cp [flags] FileToCopy1 FileToCopy2 FileToCopy3 DestinationPath
+```
+To copy a directory, you need to use the `-r` or `-R` flags to recursively copy everything in.
+Files will keep their name unless you don’t enter a path or directory that is the current directory, and instead enter a new name for the copy file.
+```
+cp [flags] file1 file1WithNewName
+cp -r testfile1 newfile
+```
+Another flag is the `-v` flag which outputs the files as they are copied, which is useful for recursive copies.
+```
+$cp -r -v test1 test2
+test1 -> test2
+test1/b -> test2/b
+test1/c -> test2/c
+```
+###sort
+Outputs given input in sorted order.
+Takes in a file, reads it, and outputs each line.
+If no files are specified, it takes in stdin.
+```
+sort [flags] file1 file2 file2...
+```
+`-n` sorts numerically, `-r` is for reverse order
+###mv
+Used for moving or renaming files. <br>
+If the last parameter is a directory, the file is moved into the directory.
+You can move many files at a time into a directory, or just one file.
+```
+mv [flags] FileToMove DestinationPath
+mv [flags] FileToMove1 FileToMove2 FileToMove3 DestinationPath
+```
+If the last parameter is a file name, the first file is renamed to the second.
+```
+mv [flags] FileToRename NewNameForFile
+```
+The `-b` flag makes a backup of every file that would otherwise be overwritten or removed.
+###rm
+Used to remove files, and you can remove multiple files at once. <br>
+```
+rm [flags] FileToRemove1 FileToRemove2
+```
+The `-r` and `-R` flags remove directories and their content recursively.
+Without one of these flags, directories require the `rmdir` command to remove them instead.
+###wc
+The `wc` command, short for word count, counts and then prints the number of newlines, whitespace-separated words, and bytes/characters (in that order)
+given by the file passed in, or standard input if no files are given. <br>
+```
+wc [flags] File1 File2
+wc [flags]
+```
+For multiple files, each file’s info is given individually, then a running total at the bottom.
+```
+ $ wc testfile.md
+   341  2011 12397 testfile.md
+   230  1341  7639 anotherFile.md
+   571  3352 20036 total
+```
+The `-l` flag prints only the newline count, `-w` only the word count, and `-c` only the byte count.
+###rmdir
+The `rmdir` command is for removing empty directories. <br>
+```
+rmdir [flags] DirectoryToRemove1 DirectoryToRemove2
+```
+###stat
+Reports the status of the files passed in.
+```
+stat [flags] File1 File2
+```
+An example of stat used on file index.htm,
+```
+ $ stat index.htm
+   File: 'index.htm'
+   Size: 17137 Blocks: 40 IO Block: 8192 regular file
+ Device: 8h/8d Inode: 23161443 Links: 1
+ Access: (0644/-rw-r--r--) 
+ Uid: (17433/comphope) Gid: ( 32/ www)
+ Access: 2007-04-03 09:20:18.000000000 -0600
+ Modify: 2007-04-01 23:13:05.000000000 -0600
+ Change: 2007-04-02 16:36:21.000000000 -0600
+```
+The first `Access:` shows the permissions of the file (explained later in this cheatsheet).
+The bottom three things are listing the dates the file was last accessed, modified, and its status changed. <br>
+The `-f` flag is used to get the status of a file system instead of a file.
+```
+ $ stat -f testfile.md
+   File: "testfile.md"
+     ID: 0        Namelen: 255     Type: nfs
+ Block size: 32768      Fundamental block size: 32768
+ Blocks: Total: 22319030   Free: 760709     Available: 760709
+ Inodes: Total: 24798928   Free: 8265892
+```
+###touch
+The `touch` command is used to update file timestamps, or create empty files. <br>
+```
+touch [flags] File1ToUpdate File2ToUpdate
+```
+If the filename you use isn’t an existing file it creates that file.
+If it does, the timestamps are updated to the current time.
+The flag `-c` will prevent a file that doesn’t exist from being created.
+The flag `-a` will updates only the access timestamp, while `-m` updates only the modification timestamp.
+###tee
+Used for redirecting output to multiple files,
+this command copies standard input into standard output as well as any files given as arguments. <br>
+Used a lot with pipes (see Piping section below).
+```
+tee [flags] File1
+```
+The `-a` flag is used to append the standard input to the end of the files, rather than overwriting them.
+###printenv
+The `printenv` command prints environment variables. <br>
+```
+printenv [variables]
+```
+Using variables prints the values of each.
+```
+ $printenv PWD HOSTNAME SHELL
+ /home/csmajs
+ hammer.cs.ucr.edu
+ /bin/bash
+```
+If no variables are given, all environment variables are printed instead.
+###kill
+Sends a signal to processes, usually used to terminate them.
+```
+kill [-s sigspec] [-n signum] [-sigspec] pid
+kill -l [exit_status]
+kill -l [sigspec]
+```
+pid is the the process id of the process you want to send the signal to.
+`sigspec` is the signal name.
+`kill -l [sigspec]` will list the `signum`, the number, for each `sigspec`.
+To get a full list of the signals, use `kill -l` with nothing else. <br>
+This command is usually used to kill processes, using the `ps` command to get a processes’ pid.
+For example, to send SIGKILL, the kill signal, to a currently running process, a.out, with pid 23456
+```
+ $ kill -9 23456
+ [1]+  Killed                  ./a.out
+```
+###jobs
+The `jobs` command lists the processes running in the background.
+```
+jobs [flags] [jobspec]
+```
+The jobspec is a % followed by a number (starting from 1) given to each job.
+The `-l` flag lists pids along with the normal info.
+If `jobs` is run on its own, all processes running in the background are listed.
+###fg
+Used to bring a command in the background to the foreground.
+```
+fg [jobspec]
+```
+If no jobspec is given, it will bring the recent background job to the foreground, making it the current process. <br>
+The jobspecs are listed using the `jobs` command, with % followed by the number.
+For example,
+```
+ $ jobs
+ [1]+  Stopped                 ./a.out
+ $ fg %1
+ ./a.out
+```
+###sleep
+The `sleep` command is used to have bash wait or delay for a specific amount of time.
+```
+sleep number[suffix]
+```
+If no suffix is given, bash will wait in seconds.
+The other suffixes are 'm' for minutes, 'h' for hours, and 'd' for days.
+So to have bash wait for 3 days,
+```
+ $ sleep 3d
+```
+###whoami
+Prints current user name.
+```
+ $ whoami
+ tgilli1969
+```
+###id
+The `id` command prints the user id (uid), group id (gid), and identity info about the given user.
+```
+id [flags] [username]
+```
+If no options or username is given, it prints the real user id,
+real group id, effective user id if different from the real user id,
+effective group id if different from the real group id, and supplemental group ids.
+The flag `-g` prints only the group id, `-G` only the supplementary groups, `-u` only the user id.
+###date
+The `date` command outputs the date.
+```
+date [flags] [+format]
+```
+`date` by itself prints the current date. 
+The flag `date==string` displays the time described by `string`, with '1 day ago', 'yesterday', '3 months', and such, as valid strings.
+The flag `-u` gives the current Coordinated Universal Time.
+The format controls the output, with `+D` printing date in mm/dd/yy format.
+See [the man page](http://ss64.com/bash/date.html) for a full list of formats.
+###env
+The `env` command is used to display, set or, remove environment variables.
+```
+env [flags] [VariableName=value] [command [arguments]]
+```
+Having nothing after `env` just prints all the environment variables.
+Use `VariableName=value` to set the VariableName to the value.
+The flag `-u VariableName` removes the variable VariableName from the environment.
+###uname
+The `uname` command is used to print system info.
+```
+uname [flags]
+```
+No flags given prints the kernal name.
+The `-m` flag prints the machine (hardware) type,
+the `-p` the machine's processor type,
+the `-o` flag prints the operating system,
+and the `-a` flag is prints all the flag's info.
+###hostname
+This command is used to print or set the system name.
+```
+hostname [NewName]
+```
+If NewName is not given, the name of the current host system is printed.
+If you have the appropriate privileges, the host name will be set to NewName.
+###groups
+Prints the group names a user is in.
+```
+groups [username]
+```
+Multiple usernames can be passed in.
 ###git
 `Git` is a version control system that is commonly used in the industry and in open source projects. <br>
 [See git tutorial](../../assignments/lab/lab1-git)
@@ -150,6 +384,18 @@ The `PATH` variable contains a list of directories where systems look for execut
 The `HOME` variable contains the path to the home directory of the current user. <br>
 The `PS1` variable is the default prompt to control appearances of the command prompt. <br>
 ##Connectors
+Connectors allow you to run multiple commands at once.
+
+Connector | Description
+--- | --- | ---
+`Git` is a version control system that is commonly used in the industry and in open source projects. <br>
+[See git tutorial](../../assignments/lab/lab1-git)
+##Environment Variables
+Environment variables are named variables that contain values used by one or more applications. <br>
+The `PATH` variable contains a list of directories where systems look for executable files. <br>
+The `HOME` variable contains the path to the home directory of the current user. <br>
+The `PS1` variable is the default prompt to control appearances of the command prompt. <br>
+onnectors
 Connectors allow you to run multiple commands at once.
 
 Connector | Description
