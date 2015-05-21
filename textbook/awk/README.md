@@ -3,8 +3,9 @@
 
 #What is AWK?#
 -----------
-AWK is a very powerful and simple text-processing utlity on GNU/Linux.
-AWK can be used to sort through large tables of data, produce formatted reports, and a variety of other things.
+AWK is text-based programming language and a very powerful and simple text-processing utlity on GNU/Linux.
+It focuses on the interpretation of streams, which makes it ideal for such tasks as filestream manipulation or piping.
+In particular, AWK can be used to sort through large tables of data, produce formatted reports, and a variety of other things.
 
 #Using AWK#
 -------------
