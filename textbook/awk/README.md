@@ -32,6 +32,18 @@ To print every line with a length greater than x characters:
 	awk 'length($0) > x' fileName
 ```
 
+##Arithmetic##
+AWK utilizes a variety of unary/binary operators, which function quite similarly to those found in the C programming language
+
+###Unary Operators###
+
+###Assignment Operators###
+
+####Shortcuts####
+++ and --
+
++=, -+, etc.
+
 ##Conditional Statements##
 AWK supports conditional statements similar to most other programming languages.
 You are allowed to declare your own variables, use for loops, if statements, and so on.
