@@ -4,7 +4,7 @@ Participating in online programming communities is a fun way to expand your prog
 I want to encourage you to participate.
 Here are four ways you can get extra credit from participation:
 
-1. If you have a project on github that earns more than 10 stars, you will get 10 points extra credit.
+1. If you have a project on github that earns more than 10 stars, you will get 5 points extra credit.
 Stars from fellow cs100 students count as only 1/4 a star.
 
 2. If you star 20 repos created by other people, you will get 5 points extra credit.
