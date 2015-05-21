@@ -52,3 +52,7 @@ Things to add:
 More advanced usages of awk
 Example files - tables, lists
 Conclusion
+
+
+#References:
+[Grymoire Tutorial](http://www.grymoire.com/Unix/Awk.html#uh-7)
