@@ -33,11 +33,26 @@ To print every line with a length greater than x characters:
 ```
 
 ##Arithmetic##
-AWK utilizes a variety of unary/binary operators, which function quite similarly to those found in the C programming language
+AWK utilizes a variety of unary/binary operators, which function quite similarly to those found in the C programming language.
+Note that order of operations is considered, just as it would in C.
 
 ###Unary Operators###
+Positive/negative
+
+One example which DOES actually work in AWK:
+``
+var = 4;
+print = -var;
+``
 
 ###Assignment Operators###
+``
+[variable] = [expression]
+``
+For example:
+``
+myVar = 5 * x + 4;
+``
 
 ####Shortcuts####
 ++ and --
