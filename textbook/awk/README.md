@@ -40,12 +40,16 @@ You are allowed to declare your own variables, use for loops, if statements, and
 
 for loop
 ```
-
+for (i=1;i<=10;i++) {
+	
+}
 ```
 
 if statements
 ```
-
+if (myVar < 0) {
+	
+}
 ```
 
 
