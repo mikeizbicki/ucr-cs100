@@ -208,6 +208,5 @@ integer 4
 double 3.98
 character V
 string hello world
-
 ```
 Note: In the function above it is required to overload each operator in the variant or else the function will not compile.
