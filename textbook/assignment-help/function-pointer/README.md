@@ -141,7 +141,7 @@ It's the declaration of a function taking an `int` and a pointer to a function (
 
 We can interpret by treating everything in parentheses as a single entity and then working inwards using the "declaration follows usage" rule.
 ```
-void `~~(*signal(int sig, void (*func)(int)))~~`(int);
+void `` ~~(*signal(int sig, void (*func)(int)))~~ ``(int);
 ```
 The entity in the brackets looks like a function taking `int` and returning `void`.
 Stripping away the outer part:
