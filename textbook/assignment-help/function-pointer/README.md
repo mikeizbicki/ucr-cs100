@@ -41,7 +41,7 @@ The same as:
 int (*(ff(int)))(int *, int);
 ```
 
-*A Simple Function and Function Pointer Case
+* A Simple Function and Function Pointer Case
 ```
 #include <stdio.h>;
 
@@ -59,7 +59,7 @@ int main() {
 ```
 Don’t forget the parentheses.
 
-*A Function Pointer with Parameters and Return Value
+* A Function Pointer with Parameters and Return Value
 ```
 #include <stdio.h>
 
@@ -86,7 +86,7 @@ int main() {
 }
 ```
 
-*Passing a Function Pointer as a Parameter
+* Passing a Function Pointer as a Parameter
 ```
 #include <stdio.h>
 
