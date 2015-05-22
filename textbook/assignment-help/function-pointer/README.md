@@ -140,9 +140,7 @@ This is the original function declaration for UNIX function `signal()` in `signa
 It's the declaration of a function taking an `int` and a pointer to a function (taking `int` returning void) and returning a pointer to a function (taking `int` and returning void).
 
 We can interpret by treating everything in parentheses as a single entity and then working inwards using the "declaration follows usage" rule.
-```
-void `` ~~(*signal(int sig, void (*func)(int)))~~ ``(int);
-```
+<code>void <strike>(*signal(int sig, void (*func)(int)))</strike> ``(int);</code>
 The entity in the brackets looks like a function taking `int` and returning `void`.
 Stripping away the outer part:
 
