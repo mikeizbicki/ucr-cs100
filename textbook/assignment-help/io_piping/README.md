@@ -49,7 +49,7 @@ To understand how this works, we will first learn the Unix system calls required
 
 ###Using `dup()` and `dup2()`
 
-To understand how to use the `dup()` and `dup2()` system calls,
+To understand how to use the `dup()` and `dup2()` system calls, we look at the man page for all the basic information.
 
 Basic Information:
 Synopsis:
@@ -68,6 +68,27 @@ Refer to the dup/dup2 man page for more detailed information here:
 
 Or refer to the textbook from the UCR software construction course Github:
 [Textbook](https://github.com/mikeizbicki/ucr-cs100/blob/2015spring/textbook/assignment-help/syscalls/io.md)
+
+But how do`dup()` and `dup2()` work?
+
+We read from the man page that dup uses the lowest-numbered unused file descriptor for the new file decriptor.
+So what does this actually mean?
+
+Well, by default, we have 3 file descriptors represented as integers.
+* 0 for standard input or messages to the terminal
+* 1 for standard output or messages you type to the terminal
+* 2 for standard error
+
+Note: From now on, we will refer to standard input, standard output, and standard error as stdin, stdout and stderr, respectively.
+
+When unspecified, programs will take input from 0(by default stdin) and 1(by default stdout).
+Now let us say we instead wanted to send all output to a file.
+Well, since dup takes the LOWEST free number for a file descriptor, we need to free up file descriptor 1.
+After freeing it, we can now use `dup()` to set out file as output.
+
+But how do we free up a file descriptor you ask? By using the syscalls `open()` and `close()` of course!
+
+####Using `open()` and `close()` System Calls
 
 
 
