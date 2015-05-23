@@ -90,13 +90,17 @@ But how do we free up a file descriptor you ask? By using the syscalls `open()` 
 
 To understand the basics of the `open()` and `close()` system calls, we look at their man page:
 
+#####`open()`
 Basic Information:
 Synopsis:
-`#include <sys/types.h>`
-`#include <sys/stat.h>`
+`#include <sys/types.h>`,
+`#include <sys/stat.h>`,
 `#include <fcntl.h>`
+
 Description:
-* int open(const char *pathname, int flags) 
+
+`int open(const char *pathname, int flags)`
+
 Given a pathname for a file, open() returns a file descriptor, a small, nonnegative integer.
 The file descriptor returned by a successful call will be the lowest-numbered file descriptor not currently open for the process.
 The argument flags must include one of the following access modes: O_RDONLY, O_WRONLY, or O_RDWR.
