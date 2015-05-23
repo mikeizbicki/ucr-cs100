@@ -264,9 +264,8 @@ You can use pipes to run more that one command at once and pipes also connect th
 With pipes, you can become an amazing hacker, maybe even unstoppable..
 (Okay, maybe we will not go that far...)
 
-In the terminal, we can symbolize pipes with the pipe command: '|'.
-
-For example, run this command in the terminal:
+In the terminal, we symbolize pipes with the pipe command: '|'.
+Here is a quick example to walk through:
 
 First, make a file in your current directory named `names.txt`. 
 Then add these names to the file, each on a separate line: "Donna, Ann, Dan, Lauren, Leon, Beyonce, Eminem, 50 Cent, Maroon 5, Julia, Jessica, Diane, Megan, Michelle".
@@ -282,8 +281,6 @@ To do so, run the command:
 `$ cat name.txt | sort `
 
 Now our names are sorted! Yay! :)
-
-Pipes can be used in processes. A new process can be created by using the fork() system call.
 
 Using the system call `pipe` creates a pipe, a one-way data channel that can be used for communication between two or more processes.
 It takes stdout from the first process and links/pipes/channels/ it to the stdin to the other end of the pipe where the second process waits.
