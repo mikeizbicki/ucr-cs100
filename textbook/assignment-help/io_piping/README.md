@@ -88,10 +88,13 @@ But how do we free up a file descriptor you ask? By using the syscalls `open()` 
 
 ####Using `open()` and `close()` System Calls
 
-To understand the basics of the `open()` and `close()` system calls, we look at their man page:
+To understand the basics of the `open()` and `close()` system calls, we look at their man pages:
+
+-------------------------------------------------------------------------------------
 
 #####`open()`
 Basic Information:
+
 Synopsis:
 `#include <sys/types.h>`,
 `#include <sys/stat.h>`,
@@ -116,6 +119,7 @@ Refer to the `open()` man page for more detailed information here:
 
 #####`close()`
 Basic Information:
+
 Synopsis:
 `#include <sys/types.h>`,
 `#include <sys/stat.h>`,
@@ -134,4 +138,4 @@ Return Value:
 Refer to the `close()` man page for more detailed information here:
 [Man Page](http://linux.die.net/man/2/close "man")
 
-
+-------------------------------------------------------------------------------------
