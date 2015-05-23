@@ -88,7 +88,7 @@ You can earn up to 30 points of extra credit for this.
 If the current working directory contains the user's homefolder, replace the home folder with a `~`.
 For example, my home folder is `/home/user`.
 So if I'm in the directory `/home/user/proj/ucr-cs100`, then my prompt would display `~/proj/ucr-cs100`.
-If the current working directory does not container the user's homefolder, then display the directory normally.
+If the current working directory does not contain the user's homefolder, then display the directory normally.
 
 You can earn 5 points of extra credit for this.
 It should be a very simple task.
