@@ -42,10 +42,21 @@ $ cat < outfile.txt
 You should see the text we added into outfile onto the terminal.
 We redirected the text from outfile to output to the screen using input redirection.
 
+There is also the output redirection that appends standard output.
+
+For example, in the terminal run the command:
+
+```c++
+echo "This is the content that we appended to outfile" >> outfile.txt
+cat < outfile.txt
+```
+
+Now, the sentence we added will be in the file! 
+
 No, it is not magic! 
 But it is pretty useful to help keep track of testing your programs.
 
-To understand how this works, we will first learn the Unix system calls required to build I/O Redirection, `open()`, `close()`, `dup()`, `dup2()`, and `pipe`.
+To understand how this works, we will first learn the Unix system calls required to build I/O Redirection, `open()`, `close()`, `dup()`, and `dup2()`.
 
 ###Using `dup()` and `dup2()`
 
@@ -272,13 +283,17 @@ Then add these names to the file, each on a separate line: "Donna, Ann, Dan, Lau
 
 Now run the cat command to output the names of the file:
 
-`$ cat names.txt`
+```c++
+$ cat names.txt
+```
 
 As you can see the names are out of order.
 If we want to sort the names, we can use the bash command `sort` to do so using a pipe.
 To do so, run the command:
 
-`$ cat name.txt | sort `
+```c++
+$ cat name.txt | sort
+```
 
 Now our names are sorted! 
 Yay! :) 
@@ -288,12 +303,16 @@ So it outputs the context of names.txt AFTER it sorts the contents of the file.
 For a different example, we will search through the terminal history.
 First type this command into your terminal:
 
-`$ history`
+```c++
+$ history
+```
 
 Whoa, this prints out ALL your terminal history to stdout.
 To shorten this output a little, or search for a specific command, in this case `g++`, we will use the grep command:
 
-`$ history | grep 'g++'`
+```c++
+$ history | grep 'g++'
+```
 
 BOOM!!!
 There is now a lot less history than before!
@@ -335,6 +354,9 @@ Refer to the `pipe()` man page for more detailed information here:
 
 Here is example code so we can better understand how pipes work:
 
+ADD PICTURE/CHART TO SHOW HOW PIPING WORKS WITH FORK()
+
+Add perror messages to code!
 (Maybe change the way this works)
 
 ```c++
@@ -400,3 +422,15 @@ int main(){
      }
 }
 ```
+
+In this code example, first we create the array of new file descriptors that is needed for the `pipe()` system call.
+We need to make sure that the pipe system call is called before the the `fork()` system call.
+This is because we need the pipe to be accessable in both processes.
+If we were to call `pipe()` after we call `fork()` the pipe would only be accessable in the first child and not the others.
+
+Add more info about how pipe works
+
+Exercise (Piping):
+ADD THIS LATER
+
+2 exercises, one with just 2 processes and one pipe, one with multiple pipes
