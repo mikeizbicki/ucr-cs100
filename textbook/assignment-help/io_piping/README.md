@@ -112,6 +112,8 @@ Return Value:
 Refer to the `open()` man page for more detailed information here:
 [Man Page](http://linux.die.net/man/2/open "man")
 
+-------------------------------------------------------------------------------------
+
 #####`close()`
 Basic Information:
 Synopsis:
@@ -126,7 +128,6 @@ Description:
 `close()` closes a file descriptor, so that it no longer refers to any file and may be reused.
 
 Return Value:
-
 `close()` returns zero on success. On error, -1 is returned, and errno is set appropriately.
 
 
