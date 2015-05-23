@@ -60,16 +60,14 @@ Description:
 
 Return Value:
 On success, these system calls return the new file descriptor.
-
 On error, -1 is returned and *errno* is set properly.
 
 Refer to the dup/dup2 man page for more detailed information here:
 [Man Page](https://man7.org/linux/man-pages/man2/dup.2.html "man")
-
 Or refer to the textbook from the UCR software construction course Github:
 [Textbook](https://github.com/mikeizbicki/ucr-cs100/blob/2015spring/textbook/assignment-help/syscalls/io.md)
 
-But how do`dup()` and `dup2()` work?
+But how does `dup()` and `dup2()` work?
 
 We read from the man page that dup uses the lowest-numbered unused file descriptor for the new file decriptor.
 So what does this actually mean?
@@ -90,5 +88,23 @@ But how do we free up a file descriptor you ask? By using the syscalls `open()` 
 
 ####Using `open()` and `close()` System Calls
 
+To understand the basics of the `open()` and `close()` system calls, we look at their man page:
+
+Basic Information:
+Synopsis:
+`#include <sys/types.h>`
+`#include <sys/stat.h>`
+`#include <fcntl.h>`
+Description:
+* int open(const char *pathname, int flags) 
+Given a pathname for a file, open() returns a file descriptor, a small, nonnegative integer.
+The file descriptor returned by a successful call will be the lowest-numbered file descriptor not currently open for the process.
+The argument flags must include one of the following access modes: O_RDONLY, O_WRONLY, or O_RDWR.
+These request opening the file read-only, write-only, or read/write, respectively.
+Return Value:
+`open()` returns the new file descriptor, or -1 if an error occurred (in which case, errno is set appropriately).
+
+Refer to the `open()` man page for more detailed information here:
+[Man Page](http://linux.die.net/man/2/open "man")
 
 
