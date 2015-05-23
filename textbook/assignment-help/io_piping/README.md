@@ -280,7 +280,24 @@ To do so, run the command:
 
 `$ cat name.txt | sort `
 
-Now our names are sorted! Yay! :)
+Now our names are sorted! 
+Yay! :) 
+What this command did was it connected the output of the cat process to the input of the sort process.
+So it outputs the context of names.txt AFTER it sorts the contents of the file.
+
+For a different example, we will search through the terminal history.
+First type this command into your terminal:
+
+`$ history`
+
+Whoa, this prints out ALL your terminal history to stdout.
+To shorten this output a little, or search for a specific command, in this case `g++`, we will use the grep command:
+
+`$ history | grep 'g++'`
+
+BOOM!!!
+There is now a lot less history than before!
+This command searches through your history and prints out where g++ was typed into the terminal.
 
 Using the system call `pipe` creates a pipe, a one-way data channel that can be used for communication between two or more processes.
 It takes stdout from the first process and links/pipes/channels/ it to the stdin to the other end of the pipe where the second process waits.
