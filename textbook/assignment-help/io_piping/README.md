@@ -7,6 +7,8 @@ Using I/O Redirection can make programming for a beginner level programmer, even
 You can use I/O Redirection to simply manipulate files within the command line or to check thousands of lines of output from a program.
 Once you know the ins and outs of I/O Redirection, programming will be a breeze!
 
+-----------------------------------------------------------------------------------------
+
 ##What is I/O Redirection?
 
 Often times, it can be necessary for input or output to be received from a file or another program rather than human input.
@@ -77,6 +79,8 @@ Refer to the dup/dup2 man page for more detailed information here:
 [Man Page](https://man7.org/linux/man-pages/man2/dup.2.html "man")
 Or refer to the textbook from the UCR software construction course Github:
 [Textbook](https://github.com/mikeizbicki/ucr-cs100/blob/2015spring/textbook/assignment-help/syscalls/io.md)
+
+-----------------------------------------------------------------------------------------
 
 ####But how does `dup()` and `dup2()` work?
 
@@ -265,7 +269,7 @@ That concludes that `dup` and `dup2` tutorial.
 Lab Exercise 1:
 IN PROGRESS
 
-=========================================================================================
+-----------------------------------------------------------------------------------------
 
 ##What are Pipes?
 
