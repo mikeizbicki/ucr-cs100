@@ -105,10 +105,32 @@ Given a pathname for a file, open() returns a file descriptor, a small, nonnegat
 The file descriptor returned by a successful call will be the lowest-numbered file descriptor not currently open for the process.
 The argument flags must include one of the following access modes: O_RDONLY, O_WRONLY, or O_RDWR.
 These request opening the file read-only, write-only, or read/write, respectively.
+
 Return Value:
 `open()` returns the new file descriptor, or -1 if an error occurred (in which case, errno is set appropriately).
 
 Refer to the `open()` man page for more detailed information here:
 [Man Page](http://linux.die.net/man/2/open "man")
+
+#####`close()`
+Basic Information:
+Synopsis:
+`#include <sys/types.h>`,
+`#include <sys/stat.h>`,
+`#include <fcntl.h>`
+
+Description:
+
+`int close(int fd)`
+
+`close()` closes a file descriptor, so that it no longer refers to any file and may be reused.
+
+Return Value:
+
+`close()` returns zero on success. On error, -1 is returned, and errno is set appropriately.
+
+
+Refer to the `close()` man page for more detailed information here:
+[Man Page](http://linux.die.net/man/2/close "man")
 
 
