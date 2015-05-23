@@ -192,4 +192,103 @@ int main()
 }
 ```
 
+Notice: We error check every system call we make.
+ALWAYS REMEMBER TO ERROR CHECK!
+You can find the return value of dup() and dup2() on the man pages.
+They return -1 when there is an error.
 
+Note that the value of fd is 1.
+Now run:
+
+`$ cat outfile`
+
+And we should get:
+
+`fd: 1`
+
+printed to the screen.
+
+We have successfully redirected to a file!
+
+Equivalently, we can avoid the use of `close()` by using the `dup2()` system call.
+
+`dup2()` works similarly to `dup()` except that it will close whatever the second parameter is, if it isn’t closed already.
+In other words, we don’t necessarily have to call `close()` before we call `dup2()`.
+
+So in our example, we can achieve the same results doing this:
+
+```c++
+#include <iostream>
+#include <unistd.h> //dup and dup2
+#include <sys/types.h> //open close
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <stdio.h> //perror
+using namespace std;
+
+int main()
+{
+	int savestdout = dup(1);
+	//open the file we want the output going to
+	int fd = open("outfile", O_WRONLY|O_CREAT|O_TRUNC, 00664);
+	if(-1 == fd)
+	{
+		perror("Error: open()");
+	}
+	if(dup2(fd, 1) == -1)
+	{
+		perror("Error: dup");
+	}
+	cout << "This should print to file" << endl;
+	//restore output back to the terminal
+	if(dup2(savestdout, 1) == -1)
+	{
+		perror("Error: dup()");
+	}
+	cout << "This should print to terminal" << endl;
+	return 0;
+}
+```
+That concludes that `dup` and `dup2` tutorial.
+
+Lab Exercise 1:
+IN PROGRESS
+
+##What are Pipes?
+
+What exactly is a pipe?
+Understanding how pipe works is a bit confusing, so put down your phone and pay attention!
+
+Using the system call `pipe` creates a pipe, a one-way data channel that can be used for communication between two or more processes.
+It takes stdout from the first process and links/pipes/channels/ it to the stdin to the other end of the pipe where the second process waits.
+
+NEED TO EXPLAIN PIPE MORE
+
+Here is an illistration to better understand pipe:
+
+INSERT PICTURE/CHART HERE
+
+###Using the `pipe()` System Call
+
+First, we can look at the basics of the `pipe()` system call:
+
+Basic Information
+
+Synopsis: 
+
+#include <unistd.h>
+
+Description: 
+
+`int pipe(int pipefd[2])`
+
+`pipe()` creates a pipe, a unidirectional data channel that can be used for interprocess communication.
+The array `pipefd` is used to return two file descriptors referring to the ends of the pipe.
+`pipefd[0]` refers to the read end of the pipe.
+`pipefd[1]` refers to the write end of the pipe.
+
+Return value: 
+On success, zero is returned. On error, -1 is returned, and errno is set appropriately.
+
+Refer to the `pipe()` man page for more detailed information here:
+[Man Page](https://man7.org/linux/man-pages/man2/dup.2.html "man")
