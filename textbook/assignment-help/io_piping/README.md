@@ -265,6 +265,8 @@ That concludes that `dup` and `dup2` tutorial.
 Lab Exercise 1:
 IN PROGRESS
 
+=========================================================================================
+
 ##What are Pipes?
 
 What exactly is a pipe?
@@ -327,6 +329,8 @@ Here is an illistration to better understand pipe:
 
 INSERT PICTURE/CHART HERE
 
+-----------------------------------------------------------------------------------------
+
 ###Using the `pipe()` System Call
 
 First, we can look at the basics of the `pipe()` system call:
@@ -351,6 +355,8 @@ On success, zero is returned. On error, -1 is returned, and errno is set appropr
 
 Refer to the `pipe()` man page for more detailed information here:
 [Man Page](https://man7.org/linux/man-pages/man2/dup.2.html "man")
+
+-----------------------------------------------------------------------------------------
 
 Here is example code so we can better understand how pipes work:
 
