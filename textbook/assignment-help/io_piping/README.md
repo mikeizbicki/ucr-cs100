@@ -67,7 +67,7 @@ Refer to the dup/dup2 man page for more detailed information here:
 Or refer to the textbook from the UCR software construction course Github:
 [Textbook](https://github.com/mikeizbicki/ucr-cs100/blob/2015spring/textbook/assignment-help/syscalls/io.md)
 
-But how does `dup()` and `dup2()` work?
+####But how does `dup()` and `dup2()` work?
 
 We read from the man page that dup uses the lowest-numbered unused file descriptor for the new file decriptor.
 So what does this actually mean?
@@ -257,7 +257,33 @@ IN PROGRESS
 ##What are Pipes?
 
 What exactly is a pipe?
-Understanding how pipe works is a bit confusing, so put down your phone and pay attention!
+Understanding what pipes are and how the system call pipe works is a bit confusing, so put down your phone and pay attention!
+
+Using pipes makes navigating your terminal and using shortcuts SO much easier!
+You can use pipes to run more that one command at once and pipes also connect the aspects of each command together!
+With pipes, you can become an amazing hacker, maybe even unstoppable..
+(Okay, maybe we will not go that far...)
+
+In the terminal, we can symbolize pipes with the pipe command: '|'.
+
+For example, run this command in the terminal:
+
+First, make a file in your current directory named `names.txt`. 
+Then add these names to the file, each on a separate line: "Donna, Ann, Dan, Lauren, Leon, Beyonce, Eminem, 50 Cent, Maroon 5, Julia, Jessica, Diane, Megan, Michelle".
+
+Now run the cat command to output the names of the file:
+
+`$ cat names.txt`
+
+As you can see the names are out of order.
+If we want to sort the names, we can use the bash command `sort` to do so using a pipe.
+To do so, run the command:
+
+`$ cat name.txt | sort `
+
+Now our names are sorted! Yay! :)
+
+Pipes can be used in processes. A new process can be created by using the fork() system call.
 
 Using the system call `pipe` creates a pipe, a one-way data channel that can be used for communication between two or more processes.
 It takes stdout from the first process and links/pipes/channels/ it to the stdin to the other end of the pipe where the second process waits.
