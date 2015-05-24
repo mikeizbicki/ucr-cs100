@@ -69,20 +69,20 @@ week | date | reading | topics
 1 | Apr03 | ESR's [about common software licenses](http://www.catb.org/esr/writings/taoup/html/ch16s07.html); the New Yorker's [30 year retrospective on the GNU manifesto](http://www.newyorker.com/business/currency/the-gnu-manifesto-turns-thirty?intcid=mod-latest) | version control with git
 2 | Apr06 | Paul Graham's [what to do in college](http://www.paulgraham.com/college.html) | version control with git
 2 | Apr08 | Ian Malpass's [advice to future software engineers](https://medium.com/@indec/advice-to-future-software-engineers-64a29669d179); Linus Tolvalds [gets interviewed on why he developed git](http://www.linux.com/news/featured-blogs/185-jennifer-cloer/821541-10-years-of-git-an-interview-with-git-creator-linus-torvalds) | version control with git
-2 | Apr10 | Lucas Xu's [Makefile tutorial](textbook/tools/make); Alexander Ortiz's [how to write a README file](textbook/bestpractices/WritingREADMEs); ESR's thoughts on [unix documentation part I](http://www.catb.org/esr/writings/taoup/html/ch18s02.html) and [part II](http://www.catb.org/esr/writings/taoup/html/ch18s06.html) | syscalls: managing processes (`fork`,`wait`,`exec`,`perror`); **quiz**
-3 | Apr13 | the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls) | syscalls: managing processes (`fork`,`wait`,`exec`,`perror`)
-3 | Apr15 | [bitwise operators](textbook/assignment-help/bitwise-ops); [macros](textbook/assignment-help/macros) | syscalls: managing files (`open`,`close`,`read`,`write`)
-3 | Apr17 | the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls)  | syscalls: managing files (`open`,`close`,`read`,`write`)
-4 | Apr20 | William Coates' [valgrind tutorial](textbook/tools/valgrind); | debugging tools (`gdb`,`valgrind`,`cppcheck`)
+2 | Apr10 | Lucas Xu's [Makefile tutorial](textbook/chapter0-unix-shell-basics/section2-make); Alexander Ortiz's [how to write a README file](textbook/appendix/bestpractices/WritingREADMEs); ESR's thoughts on [unix documentation part I](http://www.catb.org/esr/writings/taoup/html/ch18s02.html) and [part II](http://www.catb.org/esr/writings/taoup/html/ch18s06.html) | syscalls: managing processes (`fork`,`wait`,`exec`,`perror`); **quiz**
+3 | Apr13 | the relevant sections of the [syscalls tutorial](textbook/chapter0-unix-shell-basics/section0-system-calls) | syscalls: managing processes (`fork`,`wait`,`exec`,`perror`)
+3 | Apr15 | [bitwise operators](textbook/chapter1-writing-shell-commands/section2-bitwise-operators/bitwise-ops); [macros](textbook/appendix/macros) | syscalls: managing files (`open`,`close`,`read`,`write`)
+3 | Apr17 | the relevant sections of the [syscalls tutorial](textbook/chapter1-writing-shell-commands/section0-file-descriptors)  | syscalls: managing files (`open`,`close`,`read`,`write`)
+4 | Apr20 | William Coates' [valgrind tutorial](textbook/chapter1-writing-shell-commands/section6-valgrind); | debugging tools (`gdb`,`valgrind`,`cppcheck`)
 4 | Apr22 | Jeff Atwood's [how to become a better programmer](http://blog.codinghorror.com/how-to-become-a-better-programmer-by-not-programming/) | debugging tools (`gdb`,`valgrind`,`cppcheck`)
-4 | Apr24 | the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls) | syscalls: managing directories (`readdir`,`stat`);**quiz**
+4 | Apr24 | the relevant sections of the [syscalls tutorial](textbook/chapter1-writing-shell-commands/) | syscalls: managing directories (`readdir`,`stat`);**quiz**
 5 | Apr27 | Ycombinator's [startup ideas we'd like to fund](http://old.ycombinator.com/ideas.html) and Paul Graham's [start up funding](http://paulgraham.com/startupfunding.html)| shell scripting: io redirection/piping
 5 | Apr29 | Patrick McKenzie [on salary negotiation for programmers](http://www.kalzumeus.com/2012/01/23/salary-negotiation/) (it's long; you don't have to read it all)| shell scripting: io redirection/piping
 5 | May01 | Shubhro Saha's [why engineers should write](http://www.shubhro.com/2014/12/27/software-engineers-should-write/); the economist's [good writing style](http://www.economist.com/styleguide/introduction) | writing good documentation
 6 | May04 | | syscalls: io redirection/piping (`pipe`,`dup`)
-6 | May06 | the relevant sections of the [syscalls tutorial](textbook/assignment-help/syscalls) | syscalls: io redirection/piping (`pipe`,`dup`)
+6 | May06 | the relevant sections of the [syscalls tutorial](textbook/chapter2-pipes-and-io-redirection/section0-io-redirection) | syscalls: io redirection/piping (`pipe`,`dup`)
 6 | May08 | ESR's classic [Master Foo series](http://www.catb.org/esr/writings/taoup/html/unix_koans.html) | shell scripting: control flow with `if` and `for`; **quiz**
-7 | May11 | [regular expressions](textbook/tools/bash/regex#regular-expressions) | shell scripting: environment variables (`export`,`PATH`,`HOME`,`EDITOR`)
+7 | May11 | [regular expressions](textbook/appendix/tools/bash/regex#regular-expressions) | shell scripting: environment variables (`export`,`PATH`,`HOME`,`EDITOR`)
 7 | May13 | | shell scripting: environment variables (`export`,`PATH`,`HOME`,`EDITOR`)
 7 | May15 | | syscalls: signal handling (`signal`,`sigaction`)
 8 | May18 | | syscalls: signal handling (`signal`,`sigaction`)
@@ -106,15 +106,15 @@ We have a lot of flexibility in this course to learn fun things.
 
 The assignments are due on the following days:
 
-assignment                                      | date
------------------------------------------------ | --------------------------------------------
-[hw0](assignments/hw/hw0-rshell)                | Sunday Apr19 @ 11:59 PM
-[hw1](assignments/hw/hw1-ls)                    | Friday May01 @ 11:59 PM
-[hw4](assignments/hw/hw4-contributing) - topic  | Wednesday May06 before class
-[hw2](assignments/hw/hw2-piping)                | Sunday May17 @ 11:59 PM
-[hw4](assignments/hw/hw4-contributing) - draft  | Wednesday May20 before class
-[hw3](assignments/hw/hw3-signals)               | Friday May29 @ 11:59 PM
-[hw4](assignments/hw/hw4-contributing) - final  | Friday Jun05 @ 11:59 PM
+assignment                                                         | date
+------------------------------------------------------------------ | --------------------------------------------
+[hw0](textbook/chapter0-unix-shell-basics/hw0-rshell)              | Sunday Apr19 @ 11:59 PM
+[hw1](assignments/chapter1-writing-shell-commands/hw1-ls)          | Friday May01 @ 11:59 PM
+[hw4](assignments/chapter4-contributing/hw4-contributing) - topic  | Wednesday May06 before class
+[hw2](assignments/chapter2-pipes-and-io-redirection/hw2-piping)    | Sunday May17 @ 11:59 PM
+[hw4](assignments/chapter4-contributing/hw4-contributing) - draft  | Wednesday May20 before class
+[hw3](assignments/chapter3-signals/hw3-signals)                    | Friday May29 @ 11:59 PM
+[hw4](assignments/chapter4-contributing/hw4-contributing) - final  | Friday Jun05 @ 11:59 PM
 
 You will receive -10 pts for each hour (rounded up) that your assignment is late.
 
