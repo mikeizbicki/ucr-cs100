@@ -15,7 +15,7 @@ This document describes the system calls pertaining to input and output redirect
 
 We all know about the default file descriptors 0, 1 and 2 with 0 meaning stdin, 1 meaning stdout and 2 meaning stderr. `dup(int oldfd)` can be used to copy the file descriptor given for `oldfd`, for example we can do `int fd = dup(1)` which copies stdout to `fd`. `dup` chooses our new file descriptor by choosing the lowest number of the unused descriptors, so if we only have 0, 1 and 2 as our file descriptors(only the default ones) it will choose 3 as our new one. So, in this `dup` example our new `fd` can be used interchangeably with stdout.
 
-Now say, for example, we wanted to redirect the stdout to the screen into a file. We could use `dup2` (we could also use `dup` but I think `dup2` is a simpler way). The way `dup2` works is it takes two parameters `int oldfd` and `int newfd`, `oldfd` is the file descriptor you want to change to what the `newfd`. Let's take our redirect example, we want to take stdout which is 1 and instead of linking it to 1 we want to link it to whatever file descriptor belongs to the file we want to redirect to. For this redirection we would do something like: `dup2(fd,1)` (where `fd` is the file descriptor for the file we want to write to). `dup2` also closes `newfd` after the call. Therefore, after this call stdout is now closed and instead it is rerouted to the file.
+Now say, for example, we wanted to redirect the stdout to the screen into a file. We could use `dup2` (we could also use `dup` but I think `dup2` is a simpler way). The way `dup2` works is it takes two parameters `int oldfd` and `int newfd`. `oldfd` is the file descriptor you want to change to `newfd` by copying `oldfd` to `newfd`. Let's take our redirect example, we want to take stdout which is 1 and instead of linking it to 1 we want to link it to whatever file descriptor belongs to the file we want to redirect to. For this redirection we would do something like: `dup2(fd,1)` (where `fd` is the file descriptor for the file we want to write to). `dup2` also closes `newfd` after the call. Therefore, after this call stdout is now closed and instead it is rerouted to the file.
 
 
 In our previous example we've added a small snippet of `dup` at the end.
@@ -127,7 +127,7 @@ else if(pid > 0) //first parent function
 
       if(-1 == dup2(fd[PIPE_READ],0))//make stdin the read end of the pipe
          perror("There was an error with dup2. ");
-      if(-1 == close(fd[PIPE_WRITE])//close the write end of the pipe because we're not doing anything with it right now
+      if(-1 == close(fd[PIPE_WRITE]))//close the write end of the pipe because we're not doing anything with it right now
          perror("There was an error with close. ");
 
       if(-1 == execvp(argv2[0], argv2))
@@ -137,6 +137,8 @@ else if(pid > 0) //first parent function
    }
    else if(pid2 > 0) //second parent function
    {
+      if (-1 == close(fd[PIPE_WRITE])) //close the write end of the pipe in the parent so the second child isn't left waiting
+         perror("There was an error with close. ");
       if(-1 == wait(0)) //wait for the child process to finish executing
          perror("There was an error with wait(). ");
    }
