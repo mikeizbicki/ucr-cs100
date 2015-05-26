@@ -1,0 +1,9 @@
+#Homework 2: Implementing the rm command
+Write a C++ program that implements the GNU rm command. 
+The -r/-R/--recursive and -f/--force flags should be supported.
+
+##Testing:
+rm should remove/unlink the desired files. 
+rm -r, rm -R and rm --recursive should all remove directories and their contents.
+rm -f and rm --force should both force removable by ignoring nonexistent files. 
+Your test cases should show that these commands can be properly executed. 
