@@ -1,0 +1,21 @@
+Sample Homework #1: Your First Program
+
+In this assignment, you will learn how to make your program read input from the
+user (aka you) and send it to standard output.
+
+Instructions:
+- Create a cpp file called "hello.cpp".
+
+- Prompt the user, asking to enter your name.
+
+- Your program should then write to standard output a greeting, including your
+what you entered as input.
+
+- Your program should include the streams 'cin' and 'cout'.
+
+- Compile it using 'g++' and test your executable, 'a.out', to see if it works.
+Once you are done, submit the cpp file to your instructor by pushing the changes
+to your forked repo using 'git push' and making a pull request.
+
+Collaboration Policy:
+- You may NOT work with other students on this assignment.
