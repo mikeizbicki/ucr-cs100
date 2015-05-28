@@ -1,5 +1,6 @@
 # Advanced Vim Usage
-This tutorial will go a little bit in-depth about some more features in Vim, covering tabs, viewports, and sessions.
+This tutorial will go a little bit in-depth about some more features in Vim.
+We will cover tabs, viewports, and sessions, as well as the file explorer and command execution within Vim.
 
 ### Tabs
 
@@ -24,13 +25,13 @@ We can create new tabs by using the `:tabe` function. You can specify a filename
 
 You can only specify one file at a time when opening a new tab.
 
-To navigate around each tab, we can either type out `:tabn` or `:tabp` multiple times in order to navigate.
-Alternatively we can use the `gt` and `gT` commands to quickly traverse through multiple tabs.
-We can also specify a number `i` using `igT` in order to go to a specific tab number.
-
 #### Navigating and moving tabs
 
 ![Navigating and Moving Tabs] (gifs/movingtabs.gif)
+
+To navigate around each tab, we can either type out `:tabn` or `:tabp` multiple times in order to navigate.
+Alternatively we can use the `gt` and `gT` commands to quickly traverse through multiple tabs.
+We can also specify a number `i` using `igT` in order to go to a specific tab number.
 
 If you want to move tabs around, use the `tabm i` command where `i` is a number in order to move the tab to that position.
 Not specifying a number will move the tab to the last position.
@@ -45,7 +46,7 @@ igt
 :tabm i
 ```
 
-You can close tabs as you would when you close Vim by calling the `:q` command, the `:tabclose` command, or even the `:tabclose i` command to close the `i-th` tab.
+You can close tabs as you would close Vim by calling the `:q` command, the `:tabclose` command, or even the `:tabclose i` command to close the `i-th` tab.
 
 ### Viewports
 
@@ -53,8 +54,9 @@ You can close tabs as you would when you close Vim by calling the `:q` command, 
 
 ![Creating Viewports] (gifs/viewports.gif)
 
-If you want to view one or more files on a single screen at a time, then `:split` and `:vsplit` will allow you to split to screen to view multiple files.
-Splitting views can be useful when you need to refer to multiple files at once, such as referring to a header file and its implementation.
+If you want to view one or more files on a single screen at the same time, then `:split` and `:vsplit` will allow you to split to screen in order to view multiple files.
+Splitting views can be useful when you need to refer to multiple files at once.
+This can be useful when reading a header file and its implementation, or viewing different parts of a larger file.
 
 ```
 :split
@@ -63,9 +65,9 @@ Splitting views can be useful when you need to refer to multiple files at once, 
 :vsp
 ```
 
-You can specify a filename to automatically have that view open the supplied filename.
+You can specify a filename to have that viewport open the file.
 Otherwise it will open up another view of the current file.
-Closing these viewports would be the same as closing tabs.
+Closing these viewports can be done in the same manner as closing tabs (`:q`).
 
 #### Navigating and adjusting viewports
 
@@ -91,22 +93,35 @@ The following commands allow you to navigate and adjust viewports. The `<C-w>` n
 
 ```
 
-Most of these commands can have a number prefixed to them in order to repeat the command that many times.
+Like many other Vim commands, most of these can have a number prefixed to them in order to repeat the command that many times.
+
+### The `Explore` command
+![Explore] (gifs/explore.gif)
+
+The `:Explore` command allows you to look through your filesystem in order to open a specific file.
+This also allows you to rename, move, or even delete other files.
+
+![Explore edit] (gifs/exploreedit.gif)
+
+To create a file, type `%` and type in the name of the file you want to create.
+To delete a file, type `D` while selecting the file you want to delete.
+To rename a file, type `R` while selecting the file you want to rename.
+You can also change how the files are sorted by using the `s` key.
 
 ### Running `bash` commands in Vim
 ![Running in Vim] (gifs/make.gif)
 
-You can run `bash` commands in Vim without having to put it in the background.
+You can run `bash` commands without having to suspend Vim to the background.
 Just go into command mode, and then type a `!` before your command.
 This will cause those commands to be executed as if you were using `bash`.
-This is convenient if you want to compile and immediately execute your program.
+This is convenient if you want to compile and immediately execute your program after editing it.
 
 ```
 :!<command>
 :!make
 :!make && ./a.out
 ```
-While running `bash` commands in Vim, the `%` character will be the same as the current file.
+While running `bash` commands in Vim, the `%` character will be the same as the current filename.
 This can let you easily make a bindable command that compiles and runs your program on success.
 ```
 :!g++ % -o foo && ./foo
@@ -115,9 +130,9 @@ This can let you easily make a bindable command that compiles and runs your prog
 ### Saving Vim sessions
 
 ![Saving sessions] (gifs/sessions.gif)
-While you can keep opening tabs and viewports, they will disappear when its closed.
-You might have 20-30 files open, and having to open and close them multiple times can be very annoying.
-If you want to keep the current vim session, you can use the `:mksession` command.
+While you can keep opening tabs and viewports, they will disappear when Vim is closed.
+You might have 20-30 files open, and having to both open and adjust them every time can be cumbersome.
+If you want to keep the current Vim workspace, you can use the `:mksession` command.
 ```
 :mksession current_session.vim
 ```
@@ -126,10 +141,12 @@ To restore it, you use the `:source` command, or open the `.vim` file with the `
 :source current_session.vim
 vim -S current_session.vim
 ```
-By saving vim sessions, you can quickly resume work on a large number of files without having to reconfigure your workspace.
+By saving Vim sessions, you can quickly resume work on a large number of files without having to reconfigure your workspace.
 
 # Closing
-This is barely a mere step into the world of Vim.
-If you want to learn more about Vim, you can start off by learning some [Vimscript](http://learnvimscriptthehardway.stevelosh.com).
-You can also take a look at other `.vimrc` files to see what they've done, and attempt to implement them into your own.
-While you might get a few snazzy commands from others, the important thing to do in Vim is to figure out what's best for you, and customize your own settings accordingly.
+Effective usage of the above commands can make Vim more convenient for you.
+Using tabs and viewports can allow you to easily navigate and work with several files.
+Exploring the filesystem is convenient if you need to quickly modify a specific file.
+Executing commands within Vim can let you see immediate results.
+Saving Vim sessions can help you quickly get back to where you were before you left.
+If you want to learn more about Vim, you can start by learning some [Vimscript](http://learnvimscriptthehardway.stevelosh.com).
