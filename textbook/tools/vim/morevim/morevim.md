@@ -1,4 +1,4 @@
-# Advanced Vim Usage
+# More about Vim
 This tutorial will go a little bit in-depth about some more features in Vim.
 We will cover tabs, viewports, and sessions, as well as the file explorer and command execution within Vim.
 
@@ -17,7 +17,8 @@ vim -p src/rshell.cpp README.md Makefile
 
 #### Creating tabs
 
-We can create new tabs by using the `:tabe` function. You can specify a filename after calling the `tabe` command in order to open that file in a new tab.
+We can create new tabs by using the `:tabe` function.
+You can specify a filename after calling the `tabe` command in order to open that file in a new tab.
 ```
 :tabe
 :tabe README.md
