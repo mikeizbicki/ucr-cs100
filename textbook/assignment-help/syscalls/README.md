@@ -75,7 +75,7 @@ if(pid == -1)//fork’s return value for an error is -1
 else if(pid == 0)//when pid is 0 you are in the child process
 {
    cout<<"This is the child process ";
-   exit(1);  //when the child process finishes doing what we want it to, cout, 
+   exit(1);  //when the child process finishes doing what we want it to, cout,
              //we want to kill the child process so it doesn’t go on in the program so we exit
 }
 //if pid is not 0 then we’re in the parent
@@ -88,4 +88,8 @@ So if fork fails, the output will look something like this:
 We can see that it outputs our `char *` appended by a `:` and then the error message from the system.
 
 We use the `if` statement to see if our system call failed. Generally system calls will return `-1` or `NULL` upon error depending on what data type they return. In this case, `fork` returns `-1` so we check to see if it failed. If it did, then output an error message and exit the program. As you can see, we set our parameter for `perror` as simply, `fork`. This message can be customized however you desire. Additional useful information you can output is the function it’s in, the line it’s on in your code, among other things - the choice is yours! But beware, with great power comes great responsibility! Outputting error messages that are irrelevant or unnecessarily long are unlikely to be very helpful.
+
+__P.S.__ Although we only talk about `perror` here, in general when programming, if a function can return an error, you MUST check to see if it succeeded.
+If you make this a habit after leaving this class, you will save yourself thousands of hours of frustrating debugging.
+
 
