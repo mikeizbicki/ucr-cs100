@@ -54,3 +54,9 @@ Everyone get's an A++++++.
 ### deliverables
 
 When finished, demo your working code for the TA.  
+
+After completing the lab, you must fill out a survey form at: http://goo.gl/forms/7kM4LrvaSw.
+This gives you a chance to provide detailed feedback on the parts of the course you like/didn't like.
+Every quarter, we make changes to this course based on you feedback, so please be honest and detailed!
+
+We'd also appreciate if you visit http://ieval.ucr.edu to fill out another survey, although this is not mandatory.
