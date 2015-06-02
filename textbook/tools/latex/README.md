@@ -1,4 +1,4 @@
-###Tutorial on ```latex\LaTeX```
+###Tutorial on ```LaTeX```
 
 After being in touch with the most important tools that a computer scientist must know, we want to introduce one last tool, which is called LaTeX.
 Before you know what LaTeX is necessary to know the TEX. TEX is a program created by
