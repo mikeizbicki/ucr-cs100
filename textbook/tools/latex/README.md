@@ -193,7 +193,7 @@ In order to use many languages in the same LaTeX file, we need to use this:
 }
 …
 ```
-How the final file is supposed to look like, you can find here
+How the final file is supposed to look like, you can find [here](https://github.com/isadoramariamendes/ucr-cs100/blob/2015spring/textbook/tools/latex/ex23.tex)
 
 
 
