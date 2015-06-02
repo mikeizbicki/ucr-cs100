@@ -1,0 +1,7 @@
+\documentclass[12pt]{article}
+\begin{document}
+  The volume inside a sphere is defined by 
+  \[
+      V = \frac{4}{3} \pi r^{3}
+  \]   
+\end{document}
