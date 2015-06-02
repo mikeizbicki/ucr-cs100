@@ -2,8 +2,9 @@
 _______
 
 After being in touch with the most important tools that a computer scientist must know, we want to introduce one last tool, which is called LaTeX.
-Before you know what LaTeX is necessary to know the TEX. TEX is a program created by
-Donald Knuth in the 70s in order to increase the quality of printing texts and mathematical formulas. Nowadays it can be used for basically anything, even to document programs that you create from now on. 
+Before you know what LaTeX is necessary to know the TEX. 
+TEX is a program created by Donald Knuth in the 70s to increase the quality of printing texts and mathematical formulas. 
+Nowadays it can be used for basically anything, even to document programs that you create from now on. 
 Latex is a program that collects commands using TEX as processing base and it was created by Leslie Lamport in the 80s in order to facilitate the use of TEX through commands for different functions.
 
 LaTeX is a processor based on a two logical style. 
@@ -14,8 +15,7 @@ This is known as WHAT-YOU-SEE-IS-WHAT-YOU-GET (WYSIWYG).
 Logical style this category processing is done in two stages.
 - The text to be printed and formatting commands are written in a file
 source with the use of an editor.
-- Then this file is compiled and generates an output file that can be
-displayed. Eg HTML.
+- Then this file is compiled and generates an output file that can be displayed (e.g. HTML).
 
 We are going to learn the second option.
 
@@ -25,8 +25,10 @@ The LaTeX language works the command base that start with \ which is a marker
 (Tags, tag languages).
 The commands are written in the forms `\ command` or `\ begin {command} ... \ end {command}`.
 When it comes written in the second version, it is called environment.
-The text of each document type starts with `\ begin {document}` and ends with `\ end {document}`. Everything that comes before that is considered the preamble and everything that comes after `\ end {document}` is ignored.
-It is in the preamble that are placed all the information on the main characteristics are placed.It begins with `\documentclass{style}`.
+The text of each document type starts with `\ begin {document}` and ends with `\ end {document}`. 
+Everything that comes before that is considered the preamble and everything that comes after `\ end {document}` is ignored.
+It is in the preamble that are placed all the information on the main characteristics are placed.
+It begins with `\documentclass{style}`.
 
 In style place we put the name of one of the predefined styles, which are:
 - article
@@ -56,10 +58,9 @@ Example 1:
 
 ###Packages
 It can be defined as a set of packets files that implement a certain additional feature for documents written in LaTeX.
-Some packages now come as the basic distribution of LaTeX, others can be found
-separately, because all the time new packages are created by users worldwide.
-These packages are inserted in the preamble using the command
-`\ usepackage [optional] {package}`
+Some packages now come as the basic distribution of LaTeX.
+Others can be found separately because all the time new packages are created by users worldwide.
+These packages are inserted in the preamble using the command `\ usepackage [optional] {package}`
 
 The main packages are: 
 
@@ -79,15 +80,19 @@ As science, math and enginering students, using LaTeX can be really handy to wri
 ##Setting up
 There are three main ways for inserting formulas or other calculations:
 * Inline : 
+  Example 2:
   ```latex
   \documentclass[12pt]{article}
   \begin{document}
     The volume inside a sphere is defined by $V = \frac{4}{3} \pi r^{3}$.
   \end{document}
   ```
+  
+  Result:
   ![equation1](https://cloud.githubusercontent.com/assets/9013439/7931482/e34dd80a-08c5-11e5-8f74-a6f05c3e0dfa.png)
   
 * New line with section number:
+  Example 3:
     ```latex
   \documentclass[12pt]{article}
   \begin{document}
@@ -97,9 +102,11 @@ There are three main ways for inserting formulas or other calculations:
     \]   
   \end{document}
   ```
+  Result:
   ![equation2](https://cloud.githubusercontent.com/assets/9013439/7931480/e34d0362-08c5-11e5-9637-ad29c408150f.png)
   
 * New Line without section number:
+Example 4:
     ```latex
   \documentclass[12pt]{article}
   \begin{document}
@@ -114,6 +121,7 @@ There are three main ways for inserting formulas or other calculations:
 ##Building Formulas
 Here come some really useful tool to build your formulas using LaTeX.
 * Power:
+Example 5:
   ```latex
   \documentclass[12pt]{article}
   \begin{document}
@@ -123,9 +131,11 @@ Here come some really useful tool to build your formulas using LaTeX.
     \]   
   \end{document}
   ```
+  Result:
   ![power](https://cloud.githubusercontent.com/assets/9013439/7931483/e34e86ba-08c5-11e5-9187-e3b176a03fad.png)
 
 * Index:
+Example 6:
   ```latex
   \documentclass[12pt]{article}
   \begin{document}
@@ -139,7 +149,7 @@ Here come some really useful tool to build your formulas using LaTeX.
 ###CS Environment
 As Computer Scientists we may want to use LaTeX to document what we are coding... Here are some examples on how to handle languages in LaTeX so it's gonna look great.
 
-Example 2: Code in C++ using LaTeX
+Example 7: Code in C++ using LaTeX
 
 ```latex
 \documentclass[a4paper]{article}
@@ -191,7 +201,7 @@ When compiled, it’s gonna look like this:
 
 ![ex2](https://cloud.githubusercontent.com/assets/9004719/7930619/d09a2558-08be-11e5-82d1-8ea4d48e8f4c.jpg)
 
-Example 3: Code in Java
+Example 8: Code in Java
 
 ```latex
 \documentclass[a4paper]{article}
@@ -241,6 +251,7 @@ When compiled, it’s gonna look like this:
 ![ex3](https://cloud.githubusercontent.com/assets/9004719/7930862/ee8c3c3e-08c0-11e5-8739-9c3717f01b7a.jpg)
 
 In order to use many languages in the same LaTeX file, we need to use this:
+Example 9:
 
 ```
 ...
@@ -281,15 +292,15 @@ Before start entering text into your file, don't forget to press `i` while on `v
 ####My First LaTeX
 
 The following text creates a basic file: 
-
+Example 10:
 ```latex
 \documentclass[12pt]{article}
 \usepackage{color}
 \begin{document}
-Mike Izbicki is a great professor. Actually, he is the best professor ever... 
-All cs100 students \textcolor{red}{LOVE} him. 
-Mike Izbicki is a great professor. Actually, he is the best professor ever... 
-All cs100 students \textcolor{blue}{LOVE} him. 
+  Mike Izbicki is a great professor. Actually, he is the best professor ever... 
+  All cs100 students \textcolor{red}{LOVE} him. 
+  Mike Izbicki is a great professor. Actually, he is the best professor ever... 
+  All cs100 students \textcolor{blue}{LOVE} him. 
 \end{document}
 ```
 
@@ -342,7 +353,8 @@ To use `gitdags`, you will need
 
 ### An example
 
-The code below, compiled with `pdflatex`, will produce the graph shown above. HERE IS GONNA BE OUR PERSONAL EXAMPLE, TEACHING HOW STUDENTS REALLY USE IT (CREATING BOXES, POINTING IT TO ANOTHERS, ETC)
+The code below, compiled with `pdflatex`, will produce the graph shown above. 
+Example 11:
 
 ```latex
 \documentclass{article}
