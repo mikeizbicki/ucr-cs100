@@ -163,10 +163,9 @@ public class HelloWorldApp {
 \end{lstlisting}
 \end{document}
 ```
+When compiled, it’s gonna look like this:
 
 ![ex3](https://cloud.githubusercontent.com/assets/9004719/7930862/ee8c3c3e-08c0-11e5-8739-9c3717f01b7a.jpg)
-
-When compiled, it’s gonna look like this:
 
 In order to use many languages in the same LaTeX file, we need to use this:
 
