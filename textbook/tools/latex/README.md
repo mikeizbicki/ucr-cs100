@@ -426,12 +426,12 @@ The code below, compiled with `pdflatex`, will produce the graph shown above. HE
 \end{document}
 ```
 
-
+###Conclusion
+So as you can see, we can use:
 * LaTeX: to create the documents
 * [git](https://github.com/mikeizbicki/ucr-cs100/blob/2015spring/assignments/lab/lab1-git/using-git.md): to version control the documents
 * [vim](https://github.com/mikeizbicki/ucr-cs100/blob/2015spring/cheatsheets/vim-cheatsheet.pdf): to edit the text
 * [Makefile](https://github.com/mikeizbicki/ucr-cs100/tree/2015spring/textbook/tools/make): to put things together
 * pdflatex: to output as a pdf file.
 
-Finally, now that you you learned a lot of cool tools, it is time to mention that in your own Resume and being at the front line in the Computer Science market.
-The following tutorial will teach some codes that you can use to creat a new beatiful Resume using LaTeX.
+I hope you liked this tutorial and use it in the future!
