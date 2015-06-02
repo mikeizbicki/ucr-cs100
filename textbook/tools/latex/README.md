@@ -1,4 +1,5 @@
-###Tutorial on ```LaTeX```
+###Tutorial on LaTeX
+_______
 
 After being in touch with the most important tools that a computer scientist must know, we want to introduce one last tool, which is called LaTeX.
 Before you know what LaTeX is necessary to know the TEX. TEX is a program created by
@@ -74,6 +75,7 @@ listings: To write shows coding in C, C++, Java, etc.
 
 ###Math Environment
 As science, math and enginering students, using LaTeX can be really handy to write papers that include formulas.
+
 ##Setting up
 There are three main ways for inserting formulas or other calculations:
 * Inline : 
@@ -134,9 +136,9 @@ Here come some really useful tool to build your formulas using LaTeX.
   ```
   ![index](https://cloud.githubusercontent.com/assets/9013439/7931484/e34fbff8-08c5-11e5-97c1-06b632f08592.png)
   
-As Computer Scientists we may want to use LaTeX to document what we are doing... Here are some examples on how to handle languages in LaTeX so it's gonna look great.
+As Computer Scientists we may want to use LaTeX to document what we are coding... Here are some examples on how to handle languages in LaTeX so it's gonna look great.
 
-Example x: Code in C++ using LaTeX
+Example 2: Code in C++ using LaTeX
 
 ```latex
 \documentclass[a4paper]{article}
@@ -188,7 +190,7 @@ When compiled, it’s gonna look like this:
 
 ![ex2](https://cloud.githubusercontent.com/assets/9004719/7930619/d09a2558-08be-11e5-82d1-8ea4d48e8f4c.jpg)
 
-Example xx: Code in Java
+Example 3: Code in Java
 
 ```latex
 \documentclass[a4paper]{article}
