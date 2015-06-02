@@ -135,7 +135,8 @@ Here come some really useful tool to build your formulas using LaTeX.
   \end{document}
   ```
   ![index](https://cloud.githubusercontent.com/assets/9013439/7931484/e34fbff8-08c5-11e5-97c1-06b632f08592.png)
-  
+
+###CS Environment
 As Computer Scientists we may want to use LaTeX to document what we are coding... Here are some examples on how to handle languages in LaTeX so it's gonna look great.
 
 Example 2: Code in C++ using LaTeX
