@@ -62,13 +62,17 @@ These packages are inserted in the preamble using the command
 
 The main packages are: 
 
-graphicx: To insert graphics.
-color: To use color in your text.
+graphicx: To insert graphics;
+
+color: To use color in your text;
+
 amsfonts: Defines some styles of letters to the mathematical environment;
-fancyhdr: To make custom headers.
+
+fancyhdr: To make custom headers;
+
 listings: To write shows coding in C, C++, Java, etc.
 
-Example 2: Code in C++
+Example 2: Code in C++ using LaTeX
 
 ```latex
 \documentclass[a4paper]{article}
