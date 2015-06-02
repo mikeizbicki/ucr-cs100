@@ -1,4 +1,62 @@
-##Cool linux tools that any CS student should know
+#Tutorial on LaTeX
+
+After being in touch with the most important tools that a computer scientist must know, we want to introduce one last tool, which is called LaTeX.
+Before you know what LaTeX is necessary to know the TEX. TEX is a program created by
+Donald Knuth in the 70s in order to increase the quality of printing texts and mathematical formulas. Nowadays it can be used for basically anything, even to document programs that you create from now on. 
+Latex is a program that collects commands using TEX as processing base and it was created by Leslie Lamport in the 80s in order to facilitate the use of TEX through commands for different functions.
+
+LaTeX is a processor based on a two logical style. 
+
+Visual style:
+This is known as WHAT-YOU-SEE-IS-WHAT-YOU-GET (WYSIWYG). 
+
+Logical style this category processing is done in two stages.
+- The text to be printed and formatting commands are written in a file
+source with the use of an editor.
+- Then this file is compiled and generates an output file that can be
+displayed. Eg HTML.
+
+We are going to learn the second option.
+
+###Structure
+
+The LaTeX language works the command base that start with \ which is a marker
+(Tags, tag languages).
+The commands are written in the forms `\ command` or `\ begin {command} ... \ end {command}`.
+When it comes written in the second version, it is called environment.
+The text of each document type starts with `\ begin {document}` and ends with `\ end {document}`. Everything that comes before that is considered the preamble and everything that comes after `\ end {document}` is ignored.
+It is in the preamble that are placed all the information on the main characteristics are placed.It begins with `\documentclass{style}`.
+
+In style place we put the name of one of the predefined styles, which are:
+- article
+- report
+- book
+
+Here are some options within the chosen style
+- size: Letter Standard (12pt is more used)
+- twoside: prints on both sides of the page;
+- oneside: prints on one side of the page;
+- twocolumn: produces text in two columns on the page;
+- onecolumn: produces text arranged in a column;
+- landscape: produces a page in the form of landscape;
+- Sheet size: Can be a4, letterpaper, etc ...
+
+Example 1:
+
+```latex
+\documentstyle[twocolumn,12pt,a4]{article}
+\usepackage{pacote}
+\begin{document}
+.
+.
+.
+\end{document}
+```
+
+
+
+
+__________
 This is a tutorial on LaTeX that combines the main unix tools together that a GOOD computer scientist should know. 
 The tools that will be covered here are:
 
