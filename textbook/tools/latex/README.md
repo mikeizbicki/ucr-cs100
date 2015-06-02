@@ -88,7 +88,6 @@ There are three main ways for inserting formulas or other calculations:
   \end{document}
   ```
   
-  Result:
   ![equation1](https://cloud.githubusercontent.com/assets/9013439/7931482/e34dd80a-08c5-11e5-8f74-a6f05c3e0dfa.png)
   
 * New line with section number:
@@ -102,7 +101,6 @@ There are three main ways for inserting formulas or other calculations:
     \]   
   \end{document}
   ```
-  Result:
   ![equation2](https://cloud.githubusercontent.com/assets/9013439/7931480/e34d0362-08c5-11e5-9637-ad29c408150f.png)
   
 * New Line without section number:
@@ -131,7 +129,6 @@ Example 5:
     \]   
   \end{document}
   ```
-  Result:
   ![power](https://cloud.githubusercontent.com/assets/9013439/7931483/e34e86ba-08c5-11e5-9187-e3b176a03fad.png)
 
 * Index:
