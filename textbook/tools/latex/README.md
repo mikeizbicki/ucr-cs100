@@ -1,5 +1,3 @@
-#Tutorial on LaTeX
-
 After being in touch with the most important tools that a computer scientist must know, we want to introduce one last tool, which is called LaTeX.
 Before you know what LaTeX is necessary to know the TEX. TEX is a program created by
 Donald Knuth in the 70s in order to increase the quality of printing texts and mathematical formulas. Nowadays it can be used for basically anything, even to document programs that you create from now on. 
@@ -68,7 +66,7 @@ amsfonts: Defines some styles of letters to the mathematical environment;
 fancyhdr: To make custom headers.
 listings: To write shows coding in C, C++, Java, etc.
 
-Example 2:
+Example 2: Code in C++
 
 ```latex
 \documentclass[a4paper]{article}
@@ -115,6 +113,87 @@ int main()
  } \end{lstlisting}
 \end{document}
 ```
+
+When compiled, it’s gonna look like this:
+
+![ex2](https://cloud.githubusercontent.com/assets/9004719/7930619/d09a2558-08be-11e5-82d1-8ea4d48e8f4c.jpg)
+
+Example 3: Code in Java
+
+```latex
+\documentclass[a4paper]{article}
+\usepackage{xcolor}
+% Definindo novas cores
+\definecolor{verde}{rgb}{0.25,0.5,0.35}
+\definecolor{jpurple}{rgb}{0.5,0,0.35}
+% Configurando layout para mostrar codigos Java
+\usepackage{listings}
+\lstset{
+  language=Java,
+  basicstyle=\ttfamily\small, 
+  keywordstyle=\color{jpurple}\bfseries,
+  stringstyle=\color{red},
+  commentstyle=\color{verde},
+  morecomment=[s][\color{blue}]{/**}{*/},
+  extendedchars=true, 
+  showspaces=false, 
+  showstringspaces=false, 
+  numbers=left,
+  numberstyle=\tiny,
+  breaklines=true, 
+  backgroundcolor=\color{cyan!10}, 
+  breakautoindent=true, 
+  captionpos=b,
+  xleftmargin=0pt,
+  tabsize=4
+}
+\pagestyle{empty}
+\begin{document}
+\begin{lstlisting}[style=Java]
+/**
+ * comment
+ */
+public class HelloWorldApp {
+    public static void main (String argv[])
+    {
+      // comment
+      System.out.println("Hello World!");
+    }
+}
+\end{lstlisting}
+\end{document}
+```
+
+![ex3](https://cloud.githubusercontent.com/assets/9004719/7930862/ee8c3c3e-08c0-11e5-8739-9c3717f01b7a.jpg)
+
+When compiled, it’s gonna look like this:
+
+In order to use many languages in the same LaTeX file, we need to use this:
+
+```
+...
+\lstdefinestyle{LaTeX}{
+  language={[LaTeX]TeX},
+  basicstyle=\ttfamily\small, 
+  identifierstyle=\color{black}, 
+  keywordstyle=\color{blue}, 
+  commentstyle=\color{red}, 
+  extendedchars=true, 
+  showspaces=false, 
+  showstringspaces=false, 
+  numbers=none,
+  breaklines=true,
+  backgroundcolor=\color{yellow!20}, 
+  breakautoindent=true, 
+  captionpos=b,
+  xleftmargin=0pt,
+  frame=none,
+  rframe={},
+}
+…
+```
+How the final file is supposed to look like, you can find here
+
 
 
 
