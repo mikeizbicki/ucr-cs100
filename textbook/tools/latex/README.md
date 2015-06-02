@@ -72,7 +72,71 @@ fancyhdr: To make custom headers;
 
 listings: To write shows coding in C, C++, Java, etc.
 
-Example 2: Code in C++ using LaTeX
+###Math Environment
+As science, math and enginering students, using LaTeX can be really handy to write papers that include formulas.
+##Setting up
+There are three main ways for inserting formulas or other calculations:
+* Inline : 
+  ```latex
+  \documentclass[12pt]{article}
+  \begin{document}
+    The volume inside a sphere is defined by $V = \frac{4}{3} \pi r^{3}$.
+  \end{document}
+  ```
+  ![equation1](https://cloud.githubusercontent.com/assets/9013439/7931482/e34dd80a-08c5-11e5-8f74-a6f05c3e0dfa.png)
+  
+* New line with section number:
+    ```latex
+  \documentclass[12pt]{article}
+  \begin{document}
+    The volume inside a sphere is defined by 
+    \[
+        V = \frac{4}{3} \pi r^{3}
+    \]   
+  \end{document}
+  ```
+  ![equation2](https://cloud.githubusercontent.com/assets/9013439/7931480/e34d0362-08c5-11e5-9637-ad29c408150f.png)
+  
+* New Line without section number:
+    ```latex
+  \documentclass[12pt]{article}
+  \begin{document}
+    The volume inside a sphere is defined by 
+    \begin{equation}
+      V = \frac{4}{3} \pi r^{3}
+    \end{equation}    
+  \end{document}
+  ```
+  ![equation3](https://cloud.githubusercontent.com/assets/9013439/7931481/e34d801c-08c5-11e5-9f12-07a4a59ad66e.png)
+  
+##Building Formulas
+Here come some really useful tool to build your formulas using LaTeX.
+* Power:
+  ```latex
+  \documentclass[12pt]{article}
+  \begin{document}
+    Hypotenuse is 
+    \[
+      c = \sqrt{a^{2} + b^{2}}
+    \]   
+  \end{document}
+  ```
+  ![power](https://cloud.githubusercontent.com/assets/9013439/7931483/e34e86ba-08c5-11e5-9187-e3b176a03fad.png)
+
+* Index:
+  ```latex
+  \documentclass[12pt]{article}
+  \begin{document}
+    \[
+      x_{3j}^{2i}
+    \]   
+  \end{document}
+  ```
+  ![index](https://cloud.githubusercontent.com/assets/9013439/7931484/e34fbff8-08c5-11e5-97c1-06b632f08592.png)
+  
+As Computer Scientists we may want to use LaTeX to document what we are doing... Here are some examples on how to handle languages in LaTeX so it's gonna look great.
+
+Example x: Code in C++ using LaTeX
 
 ```latex
 \documentclass[a4paper]{article}
@@ -124,7 +188,7 @@ When compiled, it’s gonna look like this:
 
 ![ex2](https://cloud.githubusercontent.com/assets/9004719/7930619/d09a2558-08be-11e5-82d1-8ea4d48e8f4c.jpg)
 
-Example 3: Code in Java
+Example xx: Code in Java
 
 ```latex
 \documentclass[a4paper]{article}
