@@ -3,8 +3,9 @@
 
 #What is AWK?#
 -----------
-AWK is a very powerful and simple text-processing utlity on GNU/Linux.
-AWK can be used to sort through large tables of data, produce formatted reports, and a variety of other things.
+AWK is text-based programming language and a very powerful and simple text-processing utlity on GNU/Linux.
+It focuses on the interpretation of streams, which makes it ideal for such tasks as filestream manipulation or piping.
+In particular, AWK can be used to sort through large tables of data, produce formatted reports, and a variety of other things.
 
 #Using AWK#
 -------------
@@ -31,6 +32,33 @@ To print every line with a length greater than x characters:
 	awk 'length($0) > x' fileName
 ```
 
+##Arithmetic##
+AWK utilizes a variety of unary/binary operators, which function quite similarly to those found in the C programming language.
+Note that order of operations is considered, just as it would in C.
+
+###Unary Operators###
+Positive/negative
+
+One example which DOES actually work in AWK:
+``
+var = 4;
+print = -var;
+``
+
+###Assignment Operators###
+``
+[variable] = [expression]
+``
+For example:
+``
+myVar = 5 * x + 4;
+``
+
+####Shortcuts####
+++ and --
+
++=, -+, etc.
+
 ##Conditional Statements##
 AWK supports conditional statements similar to most other programming languages.
 You are allowed to declare your own variables, use for loops, if statements, and so on.
@@ -39,12 +67,16 @@ You are allowed to declare your own variables, use for loops, if statements, and
 
 for loop
 ```
-
+for (i=1;i<=10;i++) {
+	
+}
 ```
 
 if statements
 ```
-
+if (myVar < 0) {
+	
+}
 ```
 
 
@@ -52,3 +84,9 @@ Things to add:
 More advanced usages of awk
 Example files - tables, lists
 Conclusion
+
+
+#References:
+[Grymoire Tutorial](http://www.grymoire.com/Unix/Awk.html#uh-7)
+
+[GNU AWK Manual](https://www.gnu.org/software/gawk/manual/html_node/)
