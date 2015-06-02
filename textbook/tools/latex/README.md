@@ -263,44 +263,9 @@ In order to use many languages in the same LaTeX file, we need to use this:
 ```
 How the final file is supposed to look like, you can find [here](https://github.com/isadoramariamendes/ucr-cs100/blob/2015spring/textbook/tools/latex/ex23.tex)
 
+Now, let's combine some of the main unix tools together, so you can have an idea on how use it in the future.
 
-
-
-
-
-__________
-This is a tutorial on LaTeX that combines the main unix tools together that a GOOD computer scientist should know. 
-The tools that will be covered here are:
-
-* LaTeX: to create the documents
-* [git](https://github.com/mikeizbicki/ucr-cs100/blob/2015spring/assignments/lab/lab1-git/using-git.md): to version control the documents
-* [vim](https://github.com/mikeizbicki/ucr-cs100/blob/2015spring/cheatsheets/vim-cheatsheet.pdf): to edit the text
-* [Makefile](https://github.com/mikeizbicki/ucr-cs100/tree/2015spring/textbook/tools/make): to put things together
-* pdflatex: to output as a pdf file.
-
-If you don't know any of these tools, this is your chance! YEY... The tools that have their own tutorials, you can just click on the links and access. The rest you can check here... So let's get started!
-
-##LaTeX
-As computer scientists or engineers, we are supposed to write papers and other kind of documents that require features not easily found in conventional word processors. With that being said, the first tool that we want to present is LaTeX -- a great tool that produces beautiful type and is written in a language that is fairly intuitive. 
-
-###Installation 
-
-The following commands are the only thing you need to install LaTeX on Debian or Ubuntu:
-
-```
-$ apt-get update
-$ apt-get install texlive texlive-base
-```
-
-If you need more help installing, you can find it [here](http://www.tug.org/texlive/).
-
-
-###First steps
-Now that the package to compile TeX files is installed, let's get started. 
-
-####Before coding
-
-Throughout this tutorial we will be using the folder `article`. After creating the folder (i.e., `mkdir article`) and navigating by using the `cd` command to get in on it, initialize the git repository: 
+First of all, let's set our environment. We will be using the folder `article`. After creating the folder (i.e., `mkdir article`) and navigating by using the `cd` command to get in on it, initialize the git repository: 
 
 `git init`
 
@@ -458,6 +423,13 @@ The code below, compiled with `pdflatex`, will produce the graph shown above. HE
 
 \end{document}
 ```
+
+
+* LaTeX: to create the documents
+* [git](https://github.com/mikeizbicki/ucr-cs100/blob/2015spring/assignments/lab/lab1-git/using-git.md): to version control the documents
+* [vim](https://github.com/mikeizbicki/ucr-cs100/blob/2015spring/cheatsheets/vim-cheatsheet.pdf): to edit the text
+* [Makefile](https://github.com/mikeizbicki/ucr-cs100/tree/2015spring/textbook/tools/make): to put things together
+* pdflatex: to output as a pdf file.
 
 Finally, now that you you learned a lot of cool tools, it is time to mention that in your own Resume and being at the front line in the Computer Science market.
 The following tutorial will teach some codes that you can use to creat a new beatiful Resume using LaTeX.
