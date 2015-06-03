@@ -34,28 +34,28 @@ It begins with `\documentclass{style}`.
 
 In style place we put the name of one of the predefined styles, which are:
 
-** - article**
+** -article**
 
-** - report**
+** -report**
 
-** - book**
+** -book**
 
 
 Here are some options within the chosen style:
 
-** - size:** Letter Standard (12pt is more used)
+** -size:** Letter Standard (12pt is more used)
 
-** - twoside:** prints on both sides of the page;
+** -twoside:** prints on both sides of the page;
 
-** - oneside:** prints on one side of the page;
+** -oneside:** prints on one side of the page;
 
-** - twocolumn:** produces text in two columns on the page;
+** -twocolumn:** produces text in two columns on the page;
 
-** - onecolumn:** produces text arranged in a column;
+** -onecolumn:** produces text arranged in a column;
 
-** - landscape:** produces a page in the form of landscape;
+** -landscape:** produces a page in the form of landscape;
 
-** - paper size:** Can be a4, letterpaper, etc ...
+** -paper size:** Can be a4, letterpaper, etc ...
 
 
 Example 1:
@@ -78,19 +78,19 @@ These packages are inserted in the preamble using the command `\ usepackage [opt
 
 The main packages are: 
 
-** - graphicx:** To insert graphics;
+** -graphicx:** To insert graphics;
 
 
-** - color:** To use color in your text;
+** -color:** To use color in your text;
 
 
-** - amsfonts:** Defines some styles of letters to the mathematical environment;
+** -amsfonts:** Defines some styles of letters to the mathematical environment;
 
 
-** - fancyhdr:** To make custom headers;
+** -fancyhdr:** To make custom headers;
 
 
-** - listings:** To write shows coding in C, C++, Java, etc.
+** -listings:** To write shows coding in C, C++, Java, etc.
 
 
 ###Math Environment
