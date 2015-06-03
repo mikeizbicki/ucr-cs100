@@ -1,5 +1,9 @@
 name = Vincent Chang
 giturl = http://github.com/vchan019/ucr-cs100.git
+<<<<<<< HEAD
+=======
+
+>>>>>>> e6dc69137bab6face1a3406ad667eadfcb238afa
 github = vchan019
 stackoverflow = vincent_c
 slashdot = vincent_c
