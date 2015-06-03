@@ -20,7 +20,6 @@ This category processing is done in two stages.
 source with the use of an editor.
 - Then this file is compiled and generates an output file that can be displayed (e.g. HTML).
 
-We are going to learn the second option.
 
 ###Structure
 
