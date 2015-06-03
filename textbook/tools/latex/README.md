@@ -12,7 +12,8 @@ LaTeX is a processor based on a two logical style.
 Visual style:
 This is known as WHAT-YOU-SEE-IS-WHAT-YOU-GET (WYSIWYG). 
 
-Logical style this category processing is done in two stages.
+Logical style:
+This category processing is done in two stages.
 - The text to be printed and formatting commands are written in a file
 source with the use of an editor.
 - Then this file is compiled and generates an output file that can be displayed (e.g. HTML).
