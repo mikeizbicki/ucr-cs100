@@ -40,7 +40,8 @@ In style place we put the name of one of the predefined styles, which are:
 **- book**
 
 
-Here are some options within the chosen style
+Here are some options within the chosen style:
+
 **- size:** Letter Standard (12pt is more used)
 
 **- twoside:** prints on both sides of the page;
@@ -76,15 +77,20 @@ These packages are inserted in the preamble using the command `\ usepackage [opt
 
 The main packages are: 
 
-graphicx: To insert graphics;
+**graphicx:** To insert graphics;
 
-color: To use color in your text;
 
-amsfonts: Defines some styles of letters to the mathematical environment;
+**color:** To use color in your text;
 
-fancyhdr: To make custom headers;
 
-listings: To write shows coding in C, C++, Java, etc.
+**amsfonts:** Defines some styles of letters to the mathematical environment;
+
+
+**fancyhdr:** To make custom headers;
+
+
+**listings:** To write shows coding in C, C++, Java, etc.
+
 
 ###Math Environment
 As science, math and enginering students, using LaTeX can be really handy to write papers that include formulas.
