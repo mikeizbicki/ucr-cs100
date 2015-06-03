@@ -32,18 +32,29 @@ It is in the preamble that are placed all the information on the main characteri
 It begins with `\documentclass{style}`.
 
 In style place we put the name of one of the predefined styles, which are:
+
 **- article**
+
 **- report**
+
 **- book**
+
 
 Here are some options within the chosen style
 **- size:** Letter Standard (12pt is more used)
+
 **- twoside:** prints on both sides of the page;
+
 **- oneside:** prints on one side of the page;
+
 **- twocolumn:** produces text in two columns on the page;
+
 **- onecolumn:** produces text arranged in a column;
+
 **- landscape:** produces a page in the form of landscape;
+
 **- paper size:** Can be a4, letterpaper, etc ...
+
 
 Example 1:
 
