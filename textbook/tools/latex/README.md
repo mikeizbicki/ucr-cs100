@@ -34,9 +34,9 @@ It begins with `\documentclass{style}`.
 
 In style place we put the name of one of the predefined styles, which are:
 
-** -article**
+**- article**
 
-** -report**
+**- report**
 
 ** -book**
 
