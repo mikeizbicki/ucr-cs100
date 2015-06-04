@@ -41,10 +41,19 @@ Class #19 taught by Lynelle Katzman
 ```
 As we did not specify a pattern, the above command will simply print the entire file.
 Obviously this is not very useful (we could have used `cat` for that).
+We can also specify what is printed using the following format:
+```
+{print paramA, paramB, paramC}
+```
+So,
+```
+awk '{print "hello","world"}' class.txt
+```
+prints `hello world` for every line with a match.
 
 Let's take things a bit further.
 What if we wanted only to view classes, and omit student information?
-AWK can function similarly to grep:
+Utilizing the pattern field, AWK can function similarly to grep:
 ```
 awk '/Class/' class.txt
 ```
@@ -65,7 +74,7 @@ awk '!/Class/' class.txt
 The '!' in front of the pattern negates, so that AWK will only search lines without "Class".
 ```
 ...
-	Richelle Quade                       Grade: F
+        Richelle Quade                       Grade: F
         Edgardo Persinger                    Grade: B
         Kari Dougan                          Grade: F
         Tawna Braun                          Grade: D
@@ -94,6 +103,7 @@ Sherryl Paschall
 As a side note, you can use `$0` to refer to all columns, or the entire line.
 
 ##AWK Logic##
+AWK can handle a variety of boolean expressions.
 ```
 awk '/Richelle Quade/ {print ($4 == "A" || $4 == "B" || $4 == "C") ? "pass" : "fail" }' class.txt
 ```
@@ -103,99 +113,34 @@ fail
 ```
 
 ##Extended AWK##
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#Rough Draft Below#
--------------------
-
-##Searching for a Specific String##
-To print the lines containing a certain string, type:
-
+The following format will allow you to write AWK scripts on multiple lines
 ```
-	awk '/string/ { print $0 } ' fileName
+awk 'BEGIN { action; }
+/pattern/ { action; }
+END { action; }' [filepath]
 ```
-string is the text you wish to search for and fileName is the file you are searching through.
-
-###Example###
-Let's say we are presented with the problem of searching a text file called 'inventoryList' for the string 'apple'.
-In order to find all lines containing the string apple, we type:
-
+Where `BEGIN` will initiate a multi-line editor and `END` will exit the editor and initiate the command.
+For instance, say we want to label the columns above the class list:
 ```
-	awk '/apple/ { print $0 } ' inventoryList
+awk 'BEGIN {print "\tNAME\t\t\t\t\tGRADE\n";}
+{print;}
+END { print "\nEnd of class list" }' class.txt
 ```
-The print $0 in the code above means print the line that is currently being scanned if apple is found.
-
-##Searching by Line Length##
-To print every line with a length greater than x characters:
+The `BEGIN` action will initiate first, and the `END` action will initiate last.  So,
 ```
-	awk 'length($0) > x' fileName
+        Name                                    Grade
+
+Class #1 taught by Berta Quinney
+        Shery Principe                       Grade: C
+        Marget Creighton                     Grade: A
+        Meggan Rugg                          Grade: A
+...
+        Myron Lorusso                        Grade: F
+        Maranda Litten                       Grade: D
+
+End of class list
 ```
-
-##Arithmetic##
-AWK utilizes a variety of unary/binary operators, which function quite similarly to those found in the C programming language.
-Note that order of operations is considered, just as it would in C.
-
-###Unary Operators###
-Positive/negative
-
-One example which DOES actually work in AWK:
-``
-var = 4;
-print = -var;
-``
-
-###Assignment Operators###
-``
-[variable] = [expression]
-``
-For example:
-``
-myVar = 5 * x + 4;
-``
-
-####Shortcuts####
-++ and --
-
-+=, -+, etc.
-
-##Conditional Statements##
-AWK supports conditional statements similar to most other programming languages.
-You are allowed to declare your own variables, use for loops, if statements, and so on.
-
-###Examples###
-
-for loop
-```
-for (i=1;i<=10;i++) {
-	
-}
-```
-
-if statements
-```
-if (myVar < 0) {
-	
-}
-```
-
+is our output
 
 Things to add:
 More advanced usages of awk
