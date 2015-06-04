@@ -186,7 +186,11 @@ if (myVar < 0) {
 	
 }
 ```
-
+##Conclusioin##
+I hope that after reading through my tutorial you have a good enough understanding of AWK to be able to use it for your purposes.
+It truly is a powerful tool that is easy to learn.
+You do not need to use AWK in all of the ways described in this tutorial, you could use it to filter out unnecessary data or other simple things like that.
+Familiarizing yourself with AWK could save you a lot of time down the road since you could accomplish what a whole program could do in a single line.
 
 Things to add:
 More advanced usages of awk
