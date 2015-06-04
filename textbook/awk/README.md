@@ -123,6 +123,30 @@ outputs this:
 ```
 fail
 ```
+OK great!  Now that we know how to write conditionals, we can move on.
+This particular school is not too satisfied with its student body performance, and its time for a purge.
+So how can we drop everyone who isn't up to snuff?
+We get to use the if statement:
+```
+if (condition) {action}
+```
+Let's put it to practice:
+```
+awk '{if ($4=="A" || $4=="B" || $1=="Class") print }' class.txt
+```
+And viola!
+```
+Class #1 taught by Berta Quinney
+        Marget Creighton                     Grade: A
+        Meggan Rugg                          Grade: A
+        Lara Dietz                           Grade: B
+        Sandy Lundberg                       Grade: B
+        Johnna Noren                         Grade: A
+        Debbra Bonin                         Grade: A
+        Annetta Slay                         Grade: B
+...
+```
+
 
 ##Extended AWK##
 The following format will allow you to write AWK scripts on multiple lines
