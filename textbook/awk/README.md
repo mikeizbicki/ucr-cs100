@@ -103,11 +103,23 @@ Sherryl Paschall
 As a side note, you can use `$0` to refer to all columns, or the entire line.
 
 ##AWK Logic##
-AWK can handle a variety of boolean expressions.
+AWK can handle a variety of boolean logic.
+
+Operator | Definition
+-------- | --------------------------------------------
+||       | OR
+&&       | AND
+!        | NOT
+==       | equal
+!=       | not equal
+>=       | greater or equal
+<=       | less or equal
+
+So the following check for a student's passing status:
 ```
 awk '/Richelle Quade/ {print ($4 == "A" || $4 == "B" || $4 == "C") ? "pass" : "fail" }' class.txt
 ```
-Output
+outputs this:
 ```
 fail
 ```
