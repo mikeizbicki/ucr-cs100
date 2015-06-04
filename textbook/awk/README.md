@@ -9,6 +9,52 @@ In particular, AWK can be used to sort through large tables of data, produce for
 
 #Using AWK#
 -------------
+
+In this tutorial we will be using an text file "class.txt", which contains teh records of a hypothetical elementary school class.
+Try it yourself! Clone this repo and launch `make`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Rough Draft Below#
+-------------------
+
 ##Searching for a Specific String##
 To print the lines containing a certain string, type:
 
