@@ -131,14 +131,14 @@ awk 'BEGIN { action; }
 /pattern/ { action; }
 END { action; }' [filepath]
 ```
-Where `BEGIN` will initiate a multi-line editor and `END` will exit the editor and initiate the command.
+where the `BEGIN` action will initiate first, and the `END` action will initiate last.
 For instance, say we want to label the columns above the class list:
 ```
 awk 'BEGIN {print "\tNAME\t\t\t\t\tGRADE\n";}
 {print;}
 END { print "\nEnd of class list" }' class.txt
 ```
-The `BEGIN` action will initiate first, and the `END` action will initiate last.  So,
+So,
 ```
         Name                                    Grade
 
