@@ -93,6 +93,15 @@ Sherryl Paschall
 ```
 As a side note, you can use `$0` to refer to all columns, or the entire line.
 
+##AWK Logic##
+```
+awk '/Richelle Quade/ {print ($4 == "A" || $4 == "B" || $4 == "C") ? "pass" : "fail" }' class.txt
+```
+Output
+```
+fail
+```
+
 ##Extended AWK##
 
 
