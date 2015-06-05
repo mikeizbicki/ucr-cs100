@@ -173,11 +173,6 @@ Let's write a command so that everyone with an A gets entered three times:
 ```
 awk '{if ($4=="A") { for (i=0;i<3;i++) print }else{print } }' class.txt
 ```
-<<<<<<< HEAD
-=======
-Notice the `i` variable.  Awk support variable assignment, and they do not need to be explicitly declared beforehand.  More on that later.
-
->>>>>>> patch-4
 Here's our output:
 ```
 Class #1 taught by Berta Quinney
