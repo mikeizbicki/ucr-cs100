@@ -183,7 +183,7 @@ This will now output:
 As you can see, the cast is very important in how the code ends up being executed.
 Now, you might be thinking that it would be easier to create separate variables so you don't have to worry about casting the types, so let's use Boost.Any with vectors.
 
-One Boost.Any vector can hold multiple variables of different types.
+One Boost.Any `vector` can hold multiple variables of different types.
 <!--
 Should change wording
 -->
@@ -196,12 +196,12 @@ vect.push_back(8);
 vect.push_back(9.09);
 
 ```
-Vector vect now holds the values `'a', 8, 9.09`.
+`Vector vect` now holds the values `'a', 8, 9.09`.
 
 ##Boost.Variant
 Uses library `<boost/variant.hpp>`
 
-With a Boost.Variant variable, you can create a list of possible types (ex: int, double, etc.) that the variable can be assigned to.
+With a Boost.Variant variable, you can create a list of possible types (ex: `int`, `double`, etc.) that the variable can be assigned to.
 
 Remember: At least one parameter must be specified.
 <!--
@@ -241,7 +241,7 @@ hello world
 ```
 If you wanted to use other operators on the values other than just stream, then you'd have to do something similar to the cast used in Boost.Any.
 The way to do that is to use `boost::get<type>(var)` where `<type>` is the variable type you want `var` to be interpreted as. 
-So to add two ints or to concatenate two strings, you'd have to change the code to:
+So to add two `ints` or to concatenate two `strings`, you'd have to change the code to:
 ```
 #include <boost/variant.hpp>
 #include <string>
@@ -265,7 +265,7 @@ This will output:
 8
 hello world
 ```
-If you had attempted to do var + var in the previous example without using `boost::get<type>` then the computer wouldn't know which of the types in the original variable declaration you would want the variable to be interpreted as.
+If you had attempted to do `var + var` in the previous example without using `boost::get<type>` then the computer wouldn't know which of the types in the original variable declaration you would want the variable to be interpreted as.
 
 Another thing that Boost.Variant can do is send a variable to a function.
 <!--
@@ -322,7 +322,7 @@ When the variant variable type is the same as the `operator()(type)` then that p
 (explain how apply_visitor works)
 --->
 Since there are multiple possible results based on the visitor functional object that are passed into `apply_visitor`, we are able to do different types of outputs without needing to know specifically which type of variable we are dealing with.
-If we wanted to choose to add two ints or concatenate two strings, then we could use `apply_visitor` to do that for us.
+If we wanted to choose to add two `ints` or concatenate two `strings`, then we could use `apply_visitor` to do that for us.
 
 ```
 struct func : public boost::static_visitor<>
@@ -347,7 +347,7 @@ This will output:
 integer 8
 string hello hello
 ```
-Note: If you wanted to have a boost::variant variable and cast it to another type to use in the `apply_visitor` function to make the int act like a string as we did with Boost.Any, then you'd have to use the [boost::lexical_cast](http://theboostcpplibraries.com/boost.lexical_cast) library to do so.
+Note: If you wanted to have a Boost.Variant variable and cast it to another type to use in the `apply_visitor` function to make the `int` act like a string as we did with Boost.Any, then you'd have to use the [boost::lexical_cast](http://theboostcpplibraries.com/boost.lexical_cast) library to do so.
 The main function of the previous example would need to become:
 ```
 int main()
