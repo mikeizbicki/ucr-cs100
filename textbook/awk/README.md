@@ -157,7 +157,7 @@ if (condition) {action} else {action}
 ```
 Let's put it to practice:
 ```
-awk '{**if ($4=="A" || $4=="B" || $1=="Class"){ print } else { print "\tDROPPED" } **}' class.txt
+awk '{ if ($4=="A" || $4=="B" || $1=="Class"){ print } else { print "\tDROPPED" } }' class.txt
 ```
 
 And viola!
@@ -177,7 +177,7 @@ Picture perfect classrooms! Alternatively, we can use AWK loops to pad its class
 ###For loops###
 Let's write a command so that everyone with an A gets entered three times:
 ```
-awk '{if ($4=="A") { **for (i=0;i<3;i++) print** } else{ print } }' class.txt
+awk '{if ($4=="A") { for (i=0;i<3;i++) print } else { print } }' class.txt
 ```
 Here's our output:
 ```
