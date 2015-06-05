@@ -102,8 +102,22 @@ Sherryl Paschall
 ```
 As a side note, you can use `$0` to refer to all columns, or the entire line.
 
-##AWK Logic##
-AWK can handle a variety of boolean logic.
+##Formulas and Expressions##
+Variable assignment is easy in AWK. You do not need to explicitly declare a variable.  Simply define the variable and AWK will automatically declare it.  For instance, instead of `int i = 1`, simply write `i = 1`.
+
+Arithmetic expressions can be performed very similarly to your programming language of choice.
+
+Operator | Definition
+-------- | --------------------------------------------
++        | add
+-        | subtract
+*        | multiply
+/        | divide
+%        | modulo
+
+You can also do this: `x+=2` or `x%=2`, which is equivalent to `x=x+2` or `x=x%2`.
+
+AWK can also handle boolean logic.
 
 Operator | Definition
 -------- | --------------------------------------------
@@ -123,7 +137,7 @@ outputs this:
 ```
 fail
 ```
-OK great!  Now that we know how to write conditionals, we can move on.
+OK great!  Now that we know how to write expressions, we can move on.
 
 
 ###if/else statements###
@@ -157,6 +171,8 @@ Let's write a command so that everyone with an A gets entered three times:
 ```
 awk '{if ($4=="A") { for (i=0;i<3;i++) print }else{print } }' class.txt
 ```
+Notice the `i` variable.  Awk support variable assignment, and they do not need to be explicitly declared beforehand.  More on that later.
+
 Here's our output:
 ```
 Class #1 taught by Berta Quinney
