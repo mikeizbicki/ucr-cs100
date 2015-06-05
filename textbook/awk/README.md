@@ -18,6 +18,10 @@ Simple single line commands can be made in the following format:
 ```
 awk '/pattern/ {action}' [filepath]
 ```
+Similar to C, you can also use `;` to denote the end of an action.  This is useful for multiple actions.
+```
+awk '/pattern/ {action; action}' [filepath]
+```
 Let's try printing our class.txt file:
 ```
 awk '{print}' class.txt
@@ -103,6 +107,8 @@ Sherryl Paschall
 As a side note, you can use `$0` to refer to all columns, or the entire line.
 
 ##Formulas and Expressions##
+Within the `{ action }` field you can define a variety of instructions using arithmetic and conditional expressions.
+
 Variable assignment is easy in AWK. You do not need to explicitly declare a variable.  Simply define the variable and AWK will automatically declare it.  For instance, instead of `int i = 1`, simply write `i = 1`.
 
 Arithmetic expressions can be performed very similarly to your programming language of choice.
