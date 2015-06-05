@@ -41,10 +41,19 @@ Class #19 taught by Lynelle Katzman
 ```
 As we did not specify a pattern, the above command will simply print the entire file.
 Obviously this is not very useful (we could have used `cat` for that).
+We can also specify what is printed using the following format:
+```
+{print paramA, paramB, paramC}
+```
+So,
+```
+awk '{print "hello","world"}' class.txt
+```
+prints `hello world` for every line with a match.
 
 Let's take things a bit further.
 What if we wanted only to view classes, and omit student information?
-AWK can function similarly to grep:
+Utilizing the pattern field, AWK can function similarly to grep:
 ```
 awk '/Class/' class.txt
 ```
@@ -65,7 +74,7 @@ awk '!/Class/' class.txt
 The '!' in front of the pattern negates, so that AWK will only search lines without "Class".
 ```
 ...
-	Richelle Quade                       Grade: F
+        Richelle Quade                       Grade: F
         Edgardo Persinger                    Grade: B
         Kari Dougan                          Grade: F
         Tawna Braun                          Grade: D
@@ -93,104 +102,113 @@ Sherryl Paschall
 ```
 As a side note, you can use `$0` to refer to all columns, or the entire line.
 
+##AWK Logic##
+AWK can handle a variety of boolean logic.
+
+Operator | Definition
+-------- | --------------------------------------------
+||       | OR
+&&       | AND
+!        | NOT
+==       | equal
+!=       | not equal
+>=       | greater or equal
+<=       | less or equal
+
+So the following check for a student's passing status:
+```
+awk '/Richelle Quade/ {print ($4 == "A" || $4 == "B" || $4 == "C") ? "pass" : "fail" }' class.txt
+```
+outputs this:
+```
+fail
+```
+OK great!  Now that we know how to write conditionals, we can move on.
+
+
+###if/else statements###
+
+This school's poor student performance is hurting its funding, and its time for a purge.
+So how can we drop everyone who isn't up to snuff?
+We get to use the if statement:
+```
+if (condition) {action} else {action}
+```
+Let's put it to practice:
+```
+awk '{if ($4=="A" || $4=="B" || $1=="Class"){ print } else {print "\tDROPPED"} }' class.txt
+```
+And viola!
+```
+Class #1 taught by Berta Quinney
+        DROPPED
+        Marget Creighton                     Grade: A
+        Meggan Rugg                          Grade: A
+        DROPPED
+        Lara Dietz                           Grade: B
+        Sandy Lundberg                       Grade: B
+
+...
+```
+Picture perfect classrooms! Alternatively, we can use AWK loops to pad its classes a little...
+
+###For loops###
+Let's write a command so that everyone with an A gets entered three times:
+```
+awk '{if ($4=="A") { for (i=0;i<3;i++) print }else{print } }' class.txt
+```
+Here's our output:
+```
+Class #1 taught by Berta Quinney
+        Shery Principe                       Grade: C
+        Marget Creighton                     Grade: A
+        Marget Creighton                     Grade: A
+        Marget Creighton                     Grade: A
+        Meggan Rugg                          Grade: A
+        Meggan Rugg                          Grade: A
+        Meggan Rugg                          Grade: A
+        Minna Harmon                         Grade: F
+        Lara Dietz                           Grade: B
+        Sandy Lundberg                       Grade: B
+...
+```
+And now our student averages are top notch!
+
 ##Extended AWK##
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#Rough Draft Below#
--------------------
-
-##Searching for a Specific String##
-To print the lines containing a certain string, type:
-
+The following format will allow you to write AWK scripts on multiple lines
 ```
-	awk '/string/ { print $0 } ' fileName
+awk 'BEGIN { action; }
+/pattern/ { action; }
+END { action; }' [filepath]
 ```
-string is the text you wish to search for and fileName is the file you are searching through.
-
-###Example###
-Let's say we are presented with the problem of searching a text file called 'inventoryList' for the string 'apple'.
-In order to find all lines containing the string apple, we type:
-
+where the `BEGIN` action will initiate first, and the `END` action will initiate last.
+For instance, say we want to label the columns above the class list:
 ```
-	awk '/apple/ { print $0 } ' inventoryList
+awk 'BEGIN {print "\tNAME\t\t\t\t\tGRADE\n";}
+{print;}
+END { print "\nEnd of class list" }' class.txt
 ```
-The print $0 in the code above means print the line that is currently being scanned if apple is found.
-
-##Searching by Line Length##
-To print every line with a length greater than x characters:
+So,
 ```
-	awk 'length($0) > x' fileName
+        Name                                    Grade
+
+Class #1 taught by Berta Quinney
+        Shery Principe                       Grade: C
+        Marget Creighton                     Grade: A
+        Meggan Rugg                          Grade: A
+...
+        Myron Lorusso                        Grade: F
+        Maranda Litten                       Grade: D
+
+End of class list
 ```
+is our output
 
-##Arithmetic##
-AWK utilizes a variety of unary/binary operators, which function quite similarly to those found in the C programming language.
-Note that order of operations is considered, just as it would in C.
-
-###Unary Operators###
-Positive/negative
-
-One example which DOES actually work in AWK:
-``
-var = 4;
-print = -var;
-``
-
-###Assignment Operators###
-``
-[variable] = [expression]
-``
-For example:
-``
-myVar = 5 * x + 4;
-``
-
-####Shortcuts####
-++ and --
-
-+=, -+, etc.
-
-##Conditional Statements##
-AWK supports conditional statements similar to most other programming languages.
-You are allowed to declare your own variables, use for loops, if statements, and so on.
-
-###Examples###
-
-for loop
-```
-for (i=1;i<=10;i++) {
-	
-}
-```
-
-if statements
-```
-if (myVar < 0) {
-	
-}
-```
-##Conclusioin##
-I hope that after reading through my tutorial you have a good enough understanding of AWK to be able to use it for your purposes.
-It truly is a powerful tool that is easy to learn.
-You do not need to use AWK in all of the ways described in this tutorial, you could use it to filter out unnecessary data or other simple things like that.
-Familiarizing yourself with AWK could save you a lot of time down the road since you could accomplish what a whole program could do in a single line.
+##Conclusion##
+I hope that after reading through our tutorial you have a good enough understanding of AWK to be able to use it for your purposes.
+It is truly a powerful tool that is easy to learn but will be able to save you a lot of parsing time.
+You do not need to use AWK in all the ways described in this tutorial, you could use it to filter out unnecessary data or other simple thingsn like that.
+Familiarizing yourself with AWK could allow you to save the time of creating a whole program to parse data that could be done in one line with AWK.
 
 Things to add:
 More advanced usages of awk
