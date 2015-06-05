@@ -124,29 +124,55 @@ outputs this:
 fail
 ```
 OK great!  Now that we know how to write conditionals, we can move on.
-This particular school is not too satisfied with its student body performance, and its time for a purge.
+
+
+###if/else statements###
+
+This school's poor student performance is hurting its funding, and its time for a purge.
 So how can we drop everyone who isn't up to snuff?
 We get to use the if statement:
 ```
-if (condition) {action}
+if (condition) {action} else {action}
 ```
 Let's put it to practice:
 ```
-awk '{if ($4=="A" || $4=="B" || $1=="Class") print }' class.txt
+awk '{if ($4=="A" || $4=="B" || $1=="Class"){ print } else {print "\tDROPPED"} }' class.txt
 ```
 And viola!
 ```
 Class #1 taught by Berta Quinney
+        DROPPED
         Marget Creighton                     Grade: A
         Meggan Rugg                          Grade: A
+        DROPPED
         Lara Dietz                           Grade: B
         Sandy Lundberg                       Grade: B
-        Johnna Noren                         Grade: A
-        Debbra Bonin                         Grade: A
-        Annetta Slay                         Grade: B
+
 ...
 ```
+Picture perfect classrooms! Alternatively, we can use AWK loops to pad its classes a little...
 
+###For loops###
+Let's write a command so that everyone with an A gets entered three times:
+```
+awk '{if ($4=="A") { for (i=0;i<3;i++) print }else{print } }' class.txt
+```
+Here's our output:
+```
+Class #1 taught by Berta Quinney
+        Shery Principe                       Grade: C
+        Marget Creighton                     Grade: A
+        Marget Creighton                     Grade: A
+        Marget Creighton                     Grade: A
+        Meggan Rugg                          Grade: A
+        Meggan Rugg                          Grade: A
+        Meggan Rugg                          Grade: A
+        Minna Harmon                         Grade: F
+        Lara Dietz                           Grade: B
+        Sandy Lundberg                       Grade: B
+...
+```
+And now our student averages are top notch!
 
 ##Extended AWK##
 The following format will allow you to write AWK scripts on multiple lines
