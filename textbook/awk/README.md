@@ -92,7 +92,7 @@ There's an AWK for that:
 ```
 awk '!/Class/ {print $1,$2}' class.txt
 ```
-The `$num` notation denotes columns on a line.  So in the previous output's first line, `$1,$2` refer to `Richell Quade`, whereas `$4` refers to `F`.  Therefore our output becomes
+The `$num` notation denotes columns on a line.  By default, columns are divided by whitespace.  So in the previous output's first line, `$1,$2` refer to `Richell Quade`, whereas `$4` refers to `F`.  Therefore our output becomes
 ```
 ...
 Richelle Quade
