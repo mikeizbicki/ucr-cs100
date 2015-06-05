@@ -226,7 +226,6 @@ I hope that after reading through our tutorial you have a good enough understand
 It is truly a powerful tool that is easy to learn but will be able to save you a lot of parsing time.
 You do not need to use AWK in all the ways described in this tutorial, you could use it to filter out unnecessary data or other simple thingsn like that.
 Familiarizing yourself with AWK could allow you to save the time of creating a whole program to parse data that could be done in one line with AWK.
->>>>>>> patch-4
 
 Things to add:
 More advanced usages of awk
