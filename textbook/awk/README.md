@@ -175,9 +175,8 @@ Class #1 taught by Berta Quinney
 And now our student averages are top notch!
 
 ##Extended AWK##
-In order to write AWK scripts on multiple lines, simply don't include the ending `'` quote until the last line.  From now on we will use this method.
+In order to write AWK scripts on multiple lines, use the following format:
 
-The following format will allow you to beginning and ending conditions
 ```
 awk 'BEGIN { action; }
 /pattern/ { action; }
