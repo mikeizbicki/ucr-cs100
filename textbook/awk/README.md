@@ -102,8 +102,22 @@ Sherryl Paschall
 ```
 As a side note, you can use `$0` to refer to all columns, or the entire line.
 
-##AWK Logic##
-AWK can handle a variety of boolean logic.
+##Formulas and Expressions##
+Variable assignment is easy in AWK. You do not need to explicitly declare a variable.  Simply define the variable and AWK will automatically declare it.  For instance, instead of `int i = 1`, simply write `i = 1`.
+
+Arithmetic expressions can be performed very similarly to your programming language of choice.
+
+Operator | Definition
+-------- | --------------------------------------------
++        | add
+-        | subtract
+*        | multiply
+/        | divide
+%        | modulo
+
+You can also do this: `x+=2` or `x%=2`, which is equivalent to `x=x+2` or `x=x%2`.
+
+AWK can also handle boolean logic.
 
 Operator | Definition
 -------- | --------------------------------------------
@@ -123,7 +137,7 @@ outputs this:
 ```
 fail
 ```
-OK great!  Now that we know how to write conditionals, we can move on.
+OK great!  Now that we know how to write expressions, we can move on.
 
 
 ###if/else statements###
@@ -133,11 +147,13 @@ So how can we drop everyone who isn't up to snuff?
 We get to use the if statement:
 ```
 if (condition) {action} else {action}
+
 ```
 Let's put it to practice:
 ```
-awk '{if ($4=="A" || $4=="B" || $1=="Class"){ print } else {print "\tDROPPED"} }' class.txt
+awk '{if ($4=="A" || $4=="B" || $1=="Class"){ print } else { print "\tDROPPED" } }' class.txt
 ```
+
 And viola!
 ```
 Class #1 taught by Berta Quinney
@@ -157,6 +173,11 @@ Let's write a command so that everyone with an A gets entered three times:
 ```
 awk '{if ($4=="A") { for (i=0;i<3;i++) print }else{print } }' class.txt
 ```
+<<<<<<< HEAD
+=======
+Notice the `i` variable.  Awk support variable assignment, and they do not need to be explicitly declared beforehand.  More on that later.
+
+>>>>>>> patch-4
 Here's our output:
 ```
 Class #1 taught by Berta Quinney
@@ -184,6 +205,7 @@ END { action; }' [filepath]
 ```
 where the `BEGIN` action will initiate first, and the `END` action will initiate last.
 For instance, say we want to label the columns above the class list:
+<<<<<<< HEAD
 ```
 awk 'BEGIN {print "\tNAME\t\t\t\t\tGRADE\n";}
 {print;}
@@ -204,6 +226,34 @@ Class #1 taught by Berta Quinney
 End of class list
 ```
 is our output
+=======
+```
+awk 'BEGIN {print "\tNAME\t\t\t\t\tGRADE\n";}
+{print;}
+END { print "\nEnd of class list" }' class.txt
+```
+So,
+```
+        Name                                    Grade
+
+Class #1 taught by Berta Quinney
+        Shery Principe                       Grade: C
+        Marget Creighton                     Grade: A
+        Meggan Rugg                          Grade: A
+...
+        Myron Lorusso                        Grade: F
+        Maranda Litten                       Grade: D
+
+End of class list
+```
+is our output
+
+##Conclusion##
+I hope that after reading through our tutorial you have a good enough understanding of AWK to be able to use it for your purposes.
+It is truly a powerful tool that is easy to learn but will be able to save you a lot of parsing time.
+You do not need to use AWK in all the ways described in this tutorial, you could use it to filter out unnecessary data or other simple thingsn like that.
+Familiarizing yourself with AWK could allow you to save the time of creating a whole program to parse data that could be done in one line with AWK.
+>>>>>>> patch-4
 
 Things to add:
 More advanced usages of awk
