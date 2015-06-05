@@ -200,28 +200,6 @@ END { action; }' [filepath]
 ```
 where the `BEGIN` action will initiate first, and the `END` action will initiate last.
 For instance, say we want to label the columns above the class list:
-<<<<<<< HEAD
-```
-awk 'BEGIN {print "\tNAME\t\t\t\t\tGRADE\n";}
-{print;}
-END { print "\nEnd of class list" }' class.txt
-```
-So,
-```
-        Name                                    Grade
-
-Class #1 taught by Berta Quinney
-        Shery Principe                       Grade: C
-        Marget Creighton                     Grade: A
-        Meggan Rugg                          Grade: A
-...
-        Myron Lorusso                        Grade: F
-        Maranda Litten                       Grade: D
-
-End of class list
-```
-is our output
-=======
 ```
 awk 'BEGIN {print "\tNAME\t\t\t\t\tGRADE\n";}
 {print;}
