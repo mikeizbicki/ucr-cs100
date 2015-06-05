@@ -66,7 +66,7 @@ Passing a string and a file searches the file for the given string and prints th
   $ cat users.txt
   user:student password:123
   user:teacher password:321
-  $ grep `student` file1.txt
+  $ grep 'student' file1.txt
   user:student password:123
 ```
 `grep` can take multiple files as parameters and regular expressions to specify a pattern in text.
@@ -172,30 +172,284 @@ sort [flags] file1 file2 file2...
 ```
 `-n` sorts numerically, `-r` is for reverse order
 ###mv
+Used for moving or renaming files. <br>
+
+If the last parameter is a directory, the file is moved into the directory.
+
+You can move many files at a time into a directory, or just one file.
+
+```
+
+mv [flags] FileToMove DestinationPath
+
+mv [flags] FileToMove1 FileToMove2 FileToMove3 DestinationPath
+
+```
+
+If the last parameter is a file name, the first file is renamed to the second.
+
+```
+
+mv [flags] FileToRename NewNameForFile
+
+```
+
+The `-b` flag makes a backup of every file that would otherwise be overwritten or removed.
+
 ###rm
+
+Used to remove files, and you can remove multiple files at once. <br>
+
+```
+
+rm [flags] FileToRemove1 FileToRemove2
+
+```
+
+The `-r` and `-R` flags remove directories and their content recursively. Without one of these flags, directories require the `rmdir` command to remove them instead.
+
 ###wc
+
+The `wc` command, short for word count, counts and then prints the number of newlines, whitespace-separated words, and bytes/characters (in that order)
+
+given by the file passed in, or standard input if no files are given. <br>
+
+```
+
+wc [flags] File1 File2
+
+wc [flags]
+
+```
+
+For multiple files, each file’s info is given individually, then a running total at the bottom.
+
+```
+
+ $ wc testfile.md
+
+   341  2011 12397 testfile.md
+
+   230  1341  7639 anotherFile.md
+
+   571  3352 20036 total
+
+```
+
+The Flags | Description 
+
+--- | ---
+
+  `-c` or `--bytes` or `--chars` | print only the byte count
+
+  `-w` or `--words` | print only the word count
+
+  `-l` or `--lines` | print only the newline count
+
+
+
 ###rmdir
-###chown
-###chgrp
+
+The `rmdir` command is for removing empty directories. <br>
+
+```
+
+rmdir [flags] DirectoryToRemove1 DirectoryToRemove2
+
+```
+
+###stat
+
+Reports the status of the files passed in.
+
+```
+
+stat [flags] File1 File2
+
+```
+
+An example of stat used on file index.htm,
+
+```
+
+ $ stat index.htm
+
+   File: 'index.htm'
+
+   Size: 17137 Blocks: 40 IO Block: 8192 regular file
+
+ Device: 8h/8d Inode: 23161443 Links: 1
+
+ Access: (0644/-rw-r--r--) 
+
+ Uid: (17433/comphope) Gid: ( 32/ www)
+
+ Access: 2007-04-03 09:20:18.000000000 -0600
+
+ Modify: 2007-04-01 23:13:05.000000000 -0600
+
+ Change: 2007-04-02 16:36:21.000000000 -0600
+
+```
+
+The first `Access:` shows the permissions of the file (explained later in this cheatsheet). The bottom three things are listing the dates the file was last accessed, modified, and its status changed. <br>
+
+The `-f` flag is used to get the status of a file system instead of a file.
+
+```
+
+ $ stat -f testfile.md
+
+   File: “testfile.md"
+
+     ID: 0        Namelen: 255     Type: nfs
+
+ Block size: 32768      Fundamental block size: 32768
+
+ Blocks: Total: 22319030   Free: 760709     Available: 760709
+
+ Inodes: Total: 24798928   Free: 8265892
+
+```
+
 ###touch
+
+The `touch` command is used to update file timestamps, or create empty files. <br>
+
+```
+
+touch [flags] File1ToUpdate File2ToUpdate
+
+```
+
+If the filename you use isn’t an existing file it creates that file.
+
+If it does, the timestamps are updated to the current time.
+
+The flag `-c` will prevent a file that doesn’t exist from being created.
+
+The flag `-a` will updates only the access timestamp, while `-m` updates only the modification timestamp.
+
 ###tee
+
+Used for redirecting output to multiple files, this command copies standard input into standard output as well as any files given as arguments. <br>
+
+Used a lot with pipes (see Piping section below).
+
+```
+
+tee [flags] File1
+
+```
+
+The `-a` flag is used to append the standard input to the end of the files, rather than overwriting them.
+
 ###printenv
-###id
-###logname
-###whoami
-###groups
-###users
-###chown
-###chgrp
-###date
-###nproc
-###uname
-###hostname
-###hostid
+
+The `printenv` command prints environment variables. <br>
+
+```
+
+printenv [variables]
+
+```
+
+Using variables prints the values of each.
+
+```
+
+ $printenv PWD HOSTNAME SHELL
+
+ /home/csmajs
+
+ hammer.cs.ucr.edu
+
+ /bin/bash
+
+```
+
+If no variables are given, all environment variables are printed instead.
+
 ###kill
+
+Sends a signal to processes, usually used to terminate them.
+
+```
+
+kill [-s sigspec] [-n signum] [-sigspec] pid
+
+kill -l [exit_status]
+
+kill -l [sigspec]
+
+```
+
+pid is the the process id of the process you want to send the signal to.
+
+`sigspec` is the signal name.
+
+`kill -l [sigspec]` will list the `signum`, the number, for each `sigspec`.
+
+To get a full list of the signals, use `kill -l` with nothing else. <br>
+
+This command is usually used to kill processes, using the `ps` command to get a processes’ pid.
+
+For example, to send SIGKILL, the kill signal, to a currently running process, a.out, with pid 23456
+
+```
+
+ $ kill -9 23456
+
+ [1]+  Killed                  ./a.out
+
+```
+
 ###fg
+
+
+
 ###bg
+
 ###sleep
+
+###whoami
+
+print effective user id
+
+###date
+
+###set
+
+###env?
+
+
+
+###nproc
+
+###uname
+
+###hostname
+
+print or set system name
+
+###hostid
+
+###id
+
+print user identity
+
+###logname
+
+print current login name
+
+###groups
+
+###users
+
+###chown
+
+###chgrp
+
 
 ###git
 `Git` is a version control system that is commonly used in the industry and in open source projects. <br>
