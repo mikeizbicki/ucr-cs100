@@ -66,7 +66,7 @@ Passing a string and a file searches the file for the given string and prints th
   $ cat users.txt
   user:student password:123
   user:teacher password:321
-  $ grep 'student` file1.txt
+  $ grep `student` file1.txt
   user:student password:123
 ```
 `grep` can take multiple files as parameters and regular expressions to specify a pattern in text.
@@ -141,6 +141,62 @@ The `ping` command tests a network connection. <br>
   rtt min/avg/max/mdev = 7.794/8.422/10.792/0.699 ms
 ```
 The statistics at the end show an overview of how many connections went through before we called `^C` and how long it took.
+###cp 
+Copies files and directories.
+```
+cp [flags] FileToCopy DestinationPath
+```
+You can copy many files at a time into a directory, or just copy one file.
+```
+cp [flags] FileToCopy1 FileToCopy2 FileToCopy3 DestinationPath
+```
+To copy a directory, you need to use the `-r` or `-R` flags to recursively copy eveything in.
+Files will keep their name unless you don’t enter a path or directory that is the current directory, and instead enter a new name for the copy file.
+```
+cp [flags] file1 file1WithNewName
+cp -r testfile1 newfile
+```
+Another flag is the `-v` flag which outputs the files as they are copied, which is useful for recursive copies.
+```
+$cp -r -v test1 test2
+test1 -> test2
+test1/b -> test2/b
+test1/c -> test2/c
+```
+###sort
+Outputs given input in sorted order.
+Takes in a file, reads it, and outputs each line.
+If no files are specified, it takes in stdin.
+```
+sort [flags] file1 file2 file2...
+```
+`-n` sorts numerically, `-r` is for reverse order
+###mv
+###rm
+###wc
+###rmdir
+###chown
+###chgrp
+###touch
+###tee
+###printenv
+###id
+###logname
+###whoami
+###groups
+###users
+###chown
+###chgrp
+###date
+###nproc
+###uname
+###hostname
+###hostid
+###kill
+###fg
+###bg
+###sleep
+
 ###git
 `Git` is a version control system that is commonly used in the industry and in open source projects. <br>
 [See git tutorial](../../assignments/lab/lab1-git)
