@@ -1,0 +1,34 @@
+0/ 100
+
+  
+
+Part 1: /30
+  [ /5]run any command with no params
+  [ /5]run any command with a small number of params
+  [ /5]run any command with a large (>10) number of params
+  [ /5]run both a command in `/bin` and a command in the current directory;
+for example, run rshell from within rshell
+  [ /5]if command doesn't exist, print appropriate error message
+  [ /5]commands with lots of spaces between parameters, e.g. `     ls      -a -l        -R`
+
+Part 2: /35 (5pt extra)
+  [ /15]simple example showing two commands connected with each operator;
+they must show both the case where the first command succeeds and the
+case where the first command fails.
+  [ /5] example showing lots of commands chained together
+  [ /10]two examples mixing and matching different operators in one command 
+  [ /5] parsing example showing that the operators can be right next to each
+command or they can have spaces separating them; e.g. `ls -l||cat
+  ; rm -rf *`
+
+Part 3: /20
+  [ /5]exit all by itself
+  [ /5]exit with parameters passed to it 
+  [ /5]exit as a parameter to something else shouldn't exit, e.g. `ls -l exit`
+  [ /5] exit in a chain of commands should exit, e.g. `ls -l; exit`
+
+Part 4: /20
+  [ /10]comment within a command: `ls -l # this is a comment`
+  [ /5]comment on a line by itself
+  [ /5]comment where `#` touches something else: `ls -l# this is a comment
+  here` 

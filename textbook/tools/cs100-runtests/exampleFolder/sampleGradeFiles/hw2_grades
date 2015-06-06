@@ -1,0 +1,18 @@
+0 /100
+
+[0 /25] Input redirection (<) from an existing file
+
+[0 /15] Output redirection (>) to a non-existing file
+
+[0 /10] Output append (>>) to an existing file
+
+[0 /15] Command with one pipe
+
+[0 /15] Command with more than one pipe
+
+[0 /5] Input redirection with piping
+
+[0 /5] Output redirection with piping
+
+[0 /10] Input redirection, output redirection, and piping
+

@@ -1,0 +1,18 @@
+0/ 100
+Last update Fri May 29 21:52:11 2015 -0700
+
+cd PATH: /40
+     (The prompt must change correctly for all of the cases below for full
+     credit, otherwise -5)
+    [/10] Change to a directory underneath the current working directory.
+    [/10] Change to a directory above the current working directory.
+    [/10] Change to a directory specified using an absolute path.
+    [/10] Change to a directory which does not exist.
+
+cd: /20 (if prompt not correct -10) 
+
+cd -: /20 (if prompt not correct -10)
+
+^C signal: /40
+    [/40] ^C when running a child process does not stop the entire shell.
+
