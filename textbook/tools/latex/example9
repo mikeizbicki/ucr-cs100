@@ -1,0 +1,18 @@
+\lstdefinestyle{LaTeX}{
+  language={[LaTeX]TeX},
+  basicstyle=\ttfamily\small, 
+  identifierstyle=\color{black}, 
+  keywordstyle=\color{blue}, 
+  commentstyle=\color{red}, 
+  extendedchars=true, 
+  showspaces=false, 
+  showstringspaces=false, 
+  numbers=none,
+  breaklines=true,
+  backgroundcolor=\color{yellow!20}, 
+  breakautoindent=true, 
+  captionpos=b,
+  xleftmargin=0pt,
+  frame=none,
+  rframe={},
+}
