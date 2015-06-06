@@ -18,6 +18,10 @@ Simple single line commands can be made in the following format:
 ```
 awk '/pattern/ {action}' [filepath]
 ```
+Similar to C, you can also use `;` to denote the end of an action.  This is useful for multiple actions.
+```
+awk '/pattern/ {action; action}' [filepath]
+```
 Let's try printing our class.txt file:
 ```
 awk '{print}' class.txt
@@ -88,7 +92,7 @@ There's an AWK for that:
 ```
 awk '!/Class/ {print $1,$2}' class.txt
 ```
-The `$num` notation denotes columns on a line.  So in the previous output's first line, `$1,$2` refer to `Richell Quade`, whereas `$4` refers to `F`.  Therefore our output becomes
+The `$num` notation denotes columns on a line.  By default, columns are divided by whitespace.  So in the previous output's first line, `$1,$2` refer to `Richell Quade`, whereas `$4` refers to `F`.  Therefore our output becomes
 ```
 ...
 Richelle Quade
@@ -102,8 +106,24 @@ Sherryl Paschall
 ```
 As a side note, you can use `$0` to refer to all columns, or the entire line.
 
-##AWK Logic##
-AWK can handle a variety of boolean logic.
+##Formulas and Expressions##
+Within the `{ action }` field you can define a variety of instructions using arithmetic and conditional expressions.
+
+Variable assignment is easy in AWK. You do not need to explicitly declare a variable.  Simply define the variable and AWK will automatically declare it.  For instance, instead of `int i = 1`, simply write `i = 1`.
+
+Arithmetic expressions can be performed very similarly to your programming language of choice.
+
+Operator | Definition
+-------- | --------------------------------------------
++        | add
+-        | subtract
+*        | multiply
+/        | divide
+%        | modulo
+
+You can also do this: `x+=2` or `x%=2`, which is equivalent to `x=x+2` or `x=x%2`.
+
+AWK can also handle boolean logic.
 
 Operator | Definition
 -------- | --------------------------------------------
@@ -123,7 +143,7 @@ outputs this:
 ```
 fail
 ```
-OK great!  Now that we know how to write conditionals, we can move on.
+OK great!  Now that we know how to write expressions, we can move on.
 
 
 ###if/else statements###
@@ -133,11 +153,13 @@ So how can we drop everyone who isn't up to snuff?
 We get to use the if statement:
 ```
 if (condition) {action} else {action}
+
 ```
 Let's put it to practice:
 ```
-awk '{if ($4=="A" || $4=="B" || $1=="Class"){ print } else {print "\tDROPPED"} }' class.txt
+awk '{ if ($4=="A" || $4=="B" || $1=="Class"){ print } else { print "\tDROPPED" } }' class.txt
 ```
+
 And viola!
 ```
 Class #1 taught by Berta Quinney
@@ -155,7 +177,7 @@ Picture perfect classrooms! Alternatively, we can use AWK loops to pad its class
 ###For loops###
 Let's write a command so that everyone with an A gets entered three times:
 ```
-awk '{if ($4=="A") { for (i=0;i<3;i++) print }else{print } }' class.txt
+awk '{if ($4=="A") { for (i=0;i<3;i++) print } else { print } }' class.txt
 ```
 Here's our output:
 ```
@@ -175,7 +197,8 @@ Class #1 taught by Berta Quinney
 And now our student averages are top notch!
 
 ##Extended AWK##
-The following format will allow you to write AWK scripts on multiple lines
+In order to write AWK scripts on multiple lines, use the following format:
+
 ```
 awk 'BEGIN { action; }
 /pattern/ { action; }
