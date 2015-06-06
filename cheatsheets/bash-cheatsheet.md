@@ -352,15 +352,28 @@ env [flags] [VariableName=value] [command [arguments]]
 Having nothing after `env` just prints all the enviornment variables.
 Use `VariableName=value` to set the VariableName to the value.
 The flag `-u VariableName` removes the variable VariableName from the environment.
-
-###nproc
-
+###export
+The `export` command sets up variables and fuctions to pass to child processes.
+```
+export [flags] [Name[=value]]
+```
+The `-f`flag  makes the Names refer to fuctions in the shell, otherwise Names must refer to variables.
+If the `-f` is given, or no Names are given, then a list of all exported variables is printed.
+You can set variables as you use this command, but setting the Names to the desired values.
 ###uname
+The `uname` command is used to print system info.
+```
+uname [flags]
+```
+No flags given prints the kernal name.
+The `-m` flag prints the machine (hardware) type,
+the `-p` the machine's processor type,
+the `-o` flag prints the operating system,
+and the `-a` flag is prints all the flag's info.
+
 ###hostname
 print or set system name
 ###hostid
-###id
-print user identity
 ###logname
 print current login name
 ###groups
@@ -376,6 +389,18 @@ set [flags] [-o option]
 
 
 ###git
+`Git` is a version control system that is commonly used in the industry and in open source projects. <br>
+[See git tutorial](../../assignments/lab/lab1-git)
+##Environment Variables
+Environment variables are named variables that contain values used by one or more applications. <br>
+The `PATH` variable contains a list of directories where systems look for executable files. <br>
+The `HOME` variable contains the path to the home directory of the current user. <br>
+The `PS1` variable is the default prompt to control appearances of the command prompt. <br>
+##Connectors
+Connectors allow you to run multiple commands at once.
+
+Connector | Description
+--- | --- | ---
 `Git` is a version control system that is commonly used in the industry and in open source projects. <br>
 [See git tutorial](../../assignments/lab/lab1-git)
 ##Environment Variables
@@ -477,18 +502,6 @@ user | name of user
 group | name of group
 ###chmod
 The `chmod` command, short for change mode, changes the permissions of a file. <br>
-There is a combination of letters that need to be known in order to change specific users' permission. 
-
-Letter | User
---- | ---
-u | User who owns it
-g | Users in the group
-a | All users
-You call `chmod` by describing which actions you want to perform and to which file.
-The `-` symbol represents taking away permissions while the `+` symbol represents adding permissions.
-The following example makes the file readable and writable to the user who owns it and the group.
-```
-  $ chmod ug+rw test.txt
   $ ls -l test.txt
   -rw-rw----  1  user  group  1097374 January 26 2:48 test.txt
 ```
