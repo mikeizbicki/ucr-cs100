@@ -150,7 +150,7 @@ You can copy many files at a time into a directory, or just copy one file.
 ```
 cp [flags] FileToCopy1 FileToCopy2 FileToCopy3 DestinationPath
 ```
-To copy a directory, you need to use the `-r` or `-R` flags to recursively copy eveything in.
+To copy a directory, you need to use the `-r` or `-R` flags to recursively copy everything in.
 Files will keep their name unless you don’t enter a path or directory that is the current directory, and instead enter a new name for the copy file.
 ```
 cp [flags] file1 file1WithNewName
@@ -301,7 +301,7 @@ fg [jobspec]
 ```
 If no jobspec is given, it will bring the recent background job to the foreground, making it the current process. <br>
 The jobspecs are listed using the `jobs` command, with % followed by the number.
-For exmaple,
+For example,
 ```
  $ jobs
  [1]+  Stopped                 ./a.out
@@ -345,11 +345,11 @@ The flag `-u` gives the current Coordinated Universal Time.
 The format controls the output, with `+D` printing date in mm/dd/yy format.
 See [the man page](http://ss64.com/bash/date.html) for a full list of formats.
 ###env
-The `env` command is used to display, set or, remove enviornment variables.
+The `env` command is used to display, set or, remove environment variables.
 ```
 env [flags] [VariableName=value] [command [arguments]]
 ```
-Having nothing after `env` just prints all the enviornment variables.
+Having nothing after `env` just prints all the environment variables.
 Use `VariableName=value` to set the VariableName to the value.
 The flag `-u VariableName` removes the variable VariableName from the environment.
 ###uname
@@ -375,10 +375,6 @@ Prints the group names a user is in.
 groups [username]
 ```
 Multiple usernames can be passed in.
-###users
-###chown
-###chgrp
-
 ###git
 `Git` is a version control system that is commonly used in the industry and in open source projects. <br>
 [See git tutorial](../../assignments/lab/lab1-git)
