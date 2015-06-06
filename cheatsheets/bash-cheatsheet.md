@@ -352,14 +352,6 @@ env [flags] [VariableName=value] [command [arguments]]
 Having nothing after `env` just prints all the enviornment variables.
 Use `VariableName=value` to set the VariableName to the value.
 The flag `-u VariableName` removes the variable VariableName from the environment.
-###export
-The `export` command sets up variables and fuctions to pass to child processes.
-```
-export [flags] [Name[=value]]
-```
-The `-f`flag  makes the Names refer to fuctions in the shell, otherwise Names must refer to variables.
-If the `-f` is given, or no Names are given, then a list of all exported variables is printed.
-You can set variables as you use this command, but setting the Names to the desired values.
 ###uname
 The `uname` command is used to print system info.
 ```
@@ -370,23 +362,22 @@ The `-m` flag prints the machine (hardware) type,
 the `-p` the machine's processor type,
 the `-o` flag prints the operating system,
 and the `-a` flag is prints all the flag's info.
-
 ###hostname
-print or set system name
-###hostid
-###logname
-print current login name
+This command is used to print or set the system name.
+```
+hostname [NewName]
+```
+If NewName is not given, the name of the current host system is printed.
+If you have the appropriate privileges, the host name will be set to NewName.
 ###groups
+Prints the group names a user is in.
+```
+groups [username]
+```
+Multiple usernames can be passed in.
 ###users
 ###chown
 ###chgrp
-###set
-The `set` command is used to manipulate shell variables and fuctions.
-```
-set [flags] [-o option] 
-```
-
-
 
 ###git
 `Git` is a version control system that is commonly used in the industry and in open source projects. <br>
