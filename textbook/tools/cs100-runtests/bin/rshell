@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# demo "rshell" that does nothing
+
+while read -r -p "$ " line
+do
+  echo "I am an rshell (\"$line\")"
+done

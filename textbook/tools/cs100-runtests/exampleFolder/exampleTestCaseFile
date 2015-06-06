@@ -1,0 +1,8 @@
+Test       space      fidelity
+
+/\ blank line
+abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+control-C
+# and back
+
+foregrounded using job control!

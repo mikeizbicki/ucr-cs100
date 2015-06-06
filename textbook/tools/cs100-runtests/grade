@@ -1,0 +1,39 @@
+90 / 90
+
+Grade file
+
+  [4/ 4]  Objective 1
+  [6/ 6]  Objective 2
+  [8/ 8]  Objective 3
+  [10/ 10] Objective 4
+  [12/ 12] Objective 5
+
+
+
+
+***Notes about grade file format***
+
+[] This text is a comment
+  [0/ will not match ]
+  ( unless, of course, "zero" is run. )
+  ( it doesn't depend on validity of fields to put)
+  ( a zero in the right place )
+
+Text can go anywhere. It will not get touched when grading commands are called.
+This allows you to format the the grade file in any way that is easily readable to you.
+
+***Example Grade Line Formats***
+
+text [10/ 10] text
+
+text [10/10]
+
+[10/ 10] text
+
+text
+[10/ 10]
+
+[10/ 10]
+text
+
+Any combination of the above text and [# of points/ total points] will work.
