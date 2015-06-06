@@ -18,6 +18,7 @@ Simple single line commands can be made in the following format:
 ```
 awk '/pattern/ {action}' [filepath]
 ```
+
 Similar to C, you can also use `;` to denote the end of an action.  This is useful for multiple actions.
 ```
 awk '/pattern/ {action; action}' [filepath]
@@ -226,17 +227,19 @@ Class #1 taught by Berta Quinney
 End of class list
 ```
 is our output
-
+##Tips and Tricks##
+If you do not include a filepath, AWK applies the program to whatever you type on terminal until you quit via ^Z.
+If you wish to add newlines to your AWK statement, ending a line with \ will allow you to continue the program on the next line no matter where you are.
+If you type your AWK commands in a text file, you can run it by typing:
+```
+awk -f (file name here) '/pattern/ {action} ' [filepath]
+```
 ##Conclusion##
 I hope that after reading through our tutorial you have a good enough understanding of AWK to be able to use it for your purposes.
 It is truly a powerful tool that is easy to learn but will be able to save you a lot of parsing time.
 You do not need to use AWK in all the ways described in this tutorial, you could use it to filter out unnecessary data or other simple thingsn like that.
 Familiarizing yourself with AWK could allow you to save the time of creating a whole program to parse data that could be done in one line with AWK.
-
-Things to add:
-More advanced usages of awk
-Example files - tables, lists
-Conclusion
+However if you find you would need to write more than a hundred lines of AWK to do a job, perhaps it would be better to use a different programming language.
 
 
 #References:
