@@ -395,7 +395,7 @@ Environment variables are named variables that contain values used by one or mor
 The `PATH` variable contains a list of directories where systems look for executable files. <br>
 The `HOME` variable contains the path to the home directory of the current user. <br>
 The `PS1` variable is the default prompt to control appearances of the command prompt. <br>
-##Connectors
+onnectors
 Connectors allow you to run multiple commands at once.
 
 Connector | Description
@@ -489,6 +489,18 @@ user | name of user
 group | name of group
 ###chmod
 The `chmod` command, short for change mode, changes the permissions of a file. <br>
+There is a combination of letters that need to be known in order to change specific users' permission. 
+
+Letter | User
+--- | ---
+u | User who owns it
+g | Users in the group
+a | All users
+You call `chmod` by describing which actions you want to perform and to which file.
+The `-` symbol represents taking away permissions while the `+` symbol represents adding permissions.
+The following example makes the file readable and writable to the user who owns it and the group.
+```
+  $ chmod ug+rw test.txt
   $ ls -l test.txt
   -rw-rw----  1  user  group  1097374 January 26 2:48 test.txt
 ```
