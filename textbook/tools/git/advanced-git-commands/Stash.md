@@ -31,7 +31,7 @@ int main()
 {
 }
 ```
-Now use git stash to interupt the current work and back to the last commit cd3e990:
+Now use git stash to interrupt the current work and back to the last commit cd3e990:
 ```
 $ git stash
 Saved working directory and index state WIP on master: df93074 helloworld a.cpp
@@ -41,7 +41,7 @@ make some change(fix the bug in `a.cpp`) and commit it:
 ```
 $ echo // a new line in a.cpp to test stash >> a.cpp
 $ cat a.cpp
-// hellow world
+// hello world
 // a new line in a.cpp to test stash
 $ git add a.cpp
 $ git commit -m "add a line in a.cpp"
@@ -61,7 +61,7 @@ int main()
 {
 }
 $ cat a.cpp
-// hellow world
+// hello world
 // a new line in a.cpp
 ```
 just a reminder: it seems that SVN doesn't have that function.
