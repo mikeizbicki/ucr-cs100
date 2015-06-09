@@ -1,89 +1,170 @@
-#System calls pertaining to getting information about a process
 
-This document is for system calls that are used to get information about a process, or an environment variable. The system calls described here will be `getcwd`, `getpwuid`, and `getgrgid`.
 
-##getcwd:
+#Using getpwuid, getgrgid, and getcwd
+In this write-up, we will learn how use three system calls: `getpwuid`, `getgrgid`, and `getcwd`.
+We will look at each of their function calls, parameters, and return values.
+Let's dive in!
 
-**includes:** `#include <unistd.h>`
+##getpwuid
+This system call retrieves information on a user.
 
-**declaration:** `char *getcwd(char *buf, size_t size);`
-
-**returns:** When successful, the function returns a pointer to a `string` containing the pathname of the current working directory. On error, it returns `NULL`.
-
-[man page](http://linux.die.net/man/3/getcwd)
-
-As stated above, getcwd gets the c-string containing the current working directory. It inserts the c-string into `buf` to be used later. The parameter size is the length of the `char*` you pass in as the first parameters. For example, if you created `char directory[250]`, you’d pass in `directory, 250`.
-
-Notes: This function is useful when implementing bash commands such as `cd`, and you need to display the current working directory the user is in.
-
-Here is a quick example of `getcwd` in action:
+Here is an example of calling `getpwuid` in order to print the username of a file's owner:
 ```
-char buf[1024];
-if(!getcwd(buf,1024))
-   perror(“problem with getcwd.”);
+struct stat s1;
+
+const char* path1 = "./file1"
+
+if(-1 == (stat(path1, s1))){
+	perror("stat failed");
+}
+
+struct passwd* p1;
+
+p1 = getpwuid(s1.st_uid);
+if(p1 == NULL){
+	perror("getpwuid failed");
+}
+
+std::cout << p1->pw_name << std::endl;
+```
+Because the `getpwuid` function requires a `uid_t uid` parameter (A user's ID), we use the `stat` system call to load `s1` of type `struct stat` with the information regarding the file specified by `path1`.
+Among this information is the `uid` of the user who owns the file, which we can use as the parameter for `getpwuid`.
+
+After error checking `stat`, we initialize `p1` of type `struct passwd*`, the same type as the return value of `getpwuid`.
+
+We then call `getpwuid`, passing in the `uid` value in `s1` as the parameter by writing `getpwuid(s1.st_uid)`.
+
+We then set `p1` to catch the function's return value and perform an error check.
+Upon success, `p1` will be loaded with the user's information.
+On failure, `p1` will have the value `NULL`.
+
+Lastly, we print out the user's username using the variable `pw_name`,  which is one of the contents of the returned `struct passwd*` type.
+
+To use the `getpwuid` system call, include the following headers in a program:
+```
+#include <sys/types.h>
+#include <pwd.h>
 ```
 
-`buf` now contains the path to the current directory you're in, you can output it before your command line prompt to simulate the real bash shell. When you create your own bash shell you will have to implement `cd` with `getcwd` instead of using `exec`.
+###struct passwd
+Being the return value type of the `getpwuid` function call, we can look at its content to see what information is given about the user:
 
-##getpwuid:
-**includes:** `#include <pwd.h>`
-          `#include <sys/types.h>`
-
-**declaraton:** `struct passwd *getpwuid(uid_t uid);`
-
-**returns:** If an error occurs `NULL` is returned, otherwise it returns a pointer to a `passwd struct` (seen below)
-
-[man page](http://linux.die.net/man/3/getpwuid)
-
-Notes: As you can probably see, `getpwuid` is a bit different from the other syscalls previously mentioned. It takes in the user’s ID, which is in a numerical form. After that, it will return a pointer to a structure, which contains these fields:
 ```
 struct passwd {
-    char   *pw_name;       /* username */
-    char   *pw_passwd;     /* user password */
-    uid_t   pw_uid;        /* user ID */
-    gid_t   pw_gid;        /* group ID */
-    char   *pw_gecos;      /* user information */
-    char   *pw_dir;        /* home directory */
-    char   *pw_shell;      /* shell program */
+	char   *pw_name;       /* username */
+	char   *pw_passwd;     /* user password */
+	uid_t   pw_uid;        /* user ID */
+	gid_t   pw_gid;        /* group ID */
+	char   *pw_gecos;      /* user information */
+	char   *pw_dir;        /* home directory */
+	char   *pw_shell;      /* shell program */
 };
 ```
+For more information on `getpwuid`, visit the following man page:
 
-The main purpose of this function is to assist in finding info about the user, and their info. This is particularly useful when implementing things such as `ls` (an assignment in cs-100), and is necessary to implement the `-l` flag for `ls`.
+####[man page](http://linux.die.net/man/3/getpwuid)
 
-Here’s a quick implementation of `getpwuid`, where `s` is a `stat struct`:
+or enter the following command into your linux terminal to access the man page locally:
 ```
-struct passwd *pw;
-if(!(pw = getpwuid(s.st_uid)))
-   perror("there was an error in getpwuid. ");
+$ man getpwuid
 ```
 
-##getgrgid:
+##getgrgid
+This system call is used to retrieve information about a group.
+Much like the user, someone who is a part of a group can be granted certain access and permissions to files and directories that others outside the group cannot access.
 
-**includes:** `#include <sys/types.h>`
-          `#include <grp.h>`
+Here is an example of using `getgrgid` to print out the group-name by using a file owned by that group:
+```
+struct stat s2;
 
-**declaraton:** `struct group *getgrgid(gid_t gid);`
+const char* path2 = "./file2";
 
-**returns:** If an error occurs `NULL` is returned, otherwise it returns a pointer to a `group struct`
+if(-1 == (stat(path2, s2))){
+	perror("stat failed");
+}
 
-[man page](http://linux.die.net/man/3/getgrgid)
+struct group* g1;
 
-Much like `getpwuid`, `getgrgid` also returns a pointer to a structure, which contains these fields:
+g1 = getgrgid(s2.st_gid);
+
+if(g1 == NULL){
+	perror("getgrgid failed");
+}
+
+std::cout << g1->gr_name << std::endl;
+```
+First we call `stat` on our chosen file, giving us a `struct stat` type that contains the `gid_t` variable (the group ID) we need to call `getgrgid`.
+
+After error checking `stat`, we initialize `g1` of type `struct group*`, which will receive the group's information after `getgrgid` executes.
+
+We then call `getgrgid` with the parameter `s2.st_gid`, which is the `gid_t` variable contained in `s2` that we needed.
+
+Next, `g1` is loaded with the function's return value of type `struct group*`, which we then error check.
+Upon the function's success, `g1` will be loaded with the group's information.
+On failure, `g1` will have the value `NULL`.
+
+Finally, we print out the group's name by using the `gr_name` variable found in the `struct group*` type.
+
+To use `getgrgid`, include the following headers in a program:
+```
+#include <sys/types.h>
+#include <grp.h>
+```
+
+###struct group
+The contents of this structure show what kind of information we can retrieve on a group:
 ```
 struct group {
-    char   *gr_name;       /* group name */
-    char   *gr_passwd;     /* group password */
-    gid_t   gr_gid;        /* group ID */
-    char  **gr_mem;        /* group members */
+	char   *gr_name;       /* group name */
+	char   *gr_passwd;     /* group password */
+	gid_t   gr_gid;        /* group ID */
+	char  **gr_mem;        /* group members */
 };
 ```
+For more information on getgrgid, visit the following man page:
 
-The main purpose of this function is to assist in finding info about the group and its info, and much like `getpwuid`, is particularly useful  when implementing things such as `ls` (an assignment in cs-100), and is necessary to implement the `-l` flag for `ls`.
+####[man page](http://linux.die.net/man/3/getgrgid)
 
-Here’s a quick implementation of `getgrgid`, where s is a `stat struct`:
+or enter the following command into your linux terminal to access the man page locally:
 ```
-struct group *gp;
-if(!(gp = getgrgid(s.st_gid)))
-   perror("there was an error in getgrgid. ");
+$ man getpwuid
 ```
+##getcwd
 
+This system call returns the current working directory. (The pathname between the home directory and the directory containing the program)
+If your program depends on moving between several directories, this system call is great for telling the user which directory they are in.
+
+Here is an example of calling `getcwd` and printing the CWD:
+```
+char c[1024];
+if(getcwd(c, sizeof(c)) == NULL){
+	perror("getcwd failed");
+}
+
+std::cout << c << std::endl;		//print current working directory
+```
+First we initialize a cstring large enough to contain a pathname.
+Initializing it with a size of 1024 is more than enough space.
+
+Next we call the function for `getcwd`.
+The first parameter takes in our cstring, whether or not it be empty.
+The second parameter is of type 'size_t', and its value should always be that of the first parameter's size.
+Using the function `sizeof()` makes this easier than inputting a number, should that number ever change.
+
+After `getcwd` executes, our cstring used as the first parameter will contain the null-terminated pathname of the CWD.
+
+Next we catch the function's return value of type `char*`, and perform an error check.
+Upon success, the function returns the same `char*` value that is loaded into the first parameter.
+On failure, the function returns the `NULL` value.
+
+Finally, we can print the CWD by simply calling `std::cout`.
+
+For more information on the getcwd command, consider reviewing its man page linked below:
+
+###[man page](http://linux.die.net/man/3/getcwd)
+
+or enter the following command into your linux terminal to access the man page locally:
+
+```
+$ man getcwd
+```

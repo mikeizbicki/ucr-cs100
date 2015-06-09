@@ -50,7 +50,7 @@ Variables in <code>.bashrc</code> are also important since some are predefined t
 
     $ HOME=/your/proffered/path
     $ echo $HOME                    # prints /your/preferred/path
-    $ cd ~                          # takes you to /your/preffered/path
+    $ cd ~                          # takes you to /your/preferred/path
 
 Note that this lasts only for the duration of the shell.
 
