@@ -3,12 +3,12 @@
 Links are a simple way to map two or more filenames to the same inode.
 Without links Inode are associated with one directory entry at a time.
 With links, you can access the same inode with more than one entry.
-Why whould someone want to do this?
+Why would someone want to do this?
 It allows organization of the filesystem in amazing ways.
 #Inodes
 ###What are Inodes?
 Inodes or index nodes are a file structure of a file system. 
-Inodes repersent a file system object - either a file or directory.
+Inodes represent a file system object - either a file or directory.
 Files are not directly linked to data blocks.
 Instead they link to inodes.
 Every unix system uses inodes except Solaris.
@@ -26,8 +26,8 @@ These inodes contain information about the corresponding file such as:
 Inodes are around 128 bytes of data.
 ###Example
 ![Alt text](pictures/inode_ex.jpg?raw=true)
-In this picture, you can see foo.txt is a file with the inode number 1234 linking to the datablock containing hellow world.
-There is also a directory cs100 with the inode number 2345 linking to a datablock contaning bar.txt.
+In this picture, you can see `foo.txt` is a file with the inode number 1234 linking to the datablock containing hello world.
+There is also a directory cs100 with the inode number 2345 linking to a datablock contaning `bar.txt`
 #Data Blocks
 Data blocks in unix are usually 1024, 2048, or 4096 bytes.
 As you can see, data blocks stores data.
@@ -35,7 +35,7 @@ If you want to store data less than or equal to 1024 bytes, it takes up one bloc
 The amount of blocks it takes up is the amount of data you want to store divided by 1024 bytes rounded to the nearest block.
 If you want to store 1025 bytes, you want to use 2 blocks.
 ###Fragmentation
-Storing data in block can cause fragmenttation. 
+Storing data in block can cause fragmentation. 
 ![Alt test](pictures/frag_1.jpg?raw=true)
 As you can see there is a green file, a blue file and a red file. Now the user wants to delete the blue file and store a pink file
 
@@ -50,7 +50,7 @@ To fix this problem, the system regularly defragments the grouping of data block
 Since Solid State Drives don't have moving parts, you do not need to defrag them.
 
 #Practical Uses
-So now that you have this knowlage how can you use it?
+So now that you have this knowledge how can you use it?
 ###Restoring Deleted Files on ext2 ext3
 Because the `rm` command does not overwrite any data and just deletes the node, 
 we can restore data deleted.
@@ -76,8 +76,8 @@ If your file is located on `/dev/sda2` use
 ```
 sudo debugfs -w /dev/sda2
 ```
-`/dev/sda2` is the unix way of naming filesystmes much like the `C:` on windows.
-`/dev/` contains the divices files and `sda2` is the second partition on the first drive.
+`/dev/sda2` is the unix way of naming filesystems much like the `C:` on Windows.
+`/dev/` contains the device files and `sda2` is the second partition on the first drive.
 
 If your file is located in the file system `/home`, use `/dev/mapper/SysVolGroup-LogVolRoot`
 
@@ -92,7 +92,7 @@ Now run
 logdump -i <4590386>
 ```
 
-A lot of output will appear but we are only intrested on the line 
+A lot of output will appear but we are only interested on the line 
 `Blocks: (0+1): 7559168`
 
 ```
@@ -131,7 +131,7 @@ The problem is that these forms of storage can only sync what is in their folder
 This is where symbolic links are useful.
 
 ```
-ln -s ~/Doccuments/essays ~/Dropbox
+ln -s ~/Documents/essays ~/Dropbox
 ```
 
 Here we are creating a soft link of the folder called essays into the dropbox folder. 
@@ -145,16 +145,16 @@ ln -s Dropbox/essays Documents
 
 Instead of syncing the symbolic link to the file, we can sync the actual file and we have a symbolic link to our documents folder.
 
-Using this method has numerious advantages over just copying the files you want to sync over.
+Using this method has numerous advantages over just copying the files you want to sync over.
 First off, it allows us to keep the changes we make in that folder up to date so we wouldn't have to keep recopying the contents. 
 It will keep our folder structure. 
-In our essays folder, we can seperate the essays by class and dropbox will copy the structure for us.
+In our essays folder, we can separate the essays by class and dropbox will copy the structure for us.
 We can backup important files without changing where our files are on our computer.
 
 ###Accessing files in a different partition
-When starting out with linux it is easy to break your instelation.
-Assuming you have a seperate partition with all of your important data and you named the partition Data, 
-all you have to do is run the folling commands:
+When starting out with linux it is easy to break your installation.
+Assuming you have a separate partition with all of your important data and you named the partition Data, 
+all you have to do is run the following commands:
 
 ```
 ln -fsn /media/Data/Documents ~/
@@ -167,18 +167,18 @@ This command replaces your Documents, Pictures and Videos folder in your directo
 You can access and change the files in the folders as long as the partition is mounted. 
 
 Why do all the extra work to access some files on another partition?
-This allows you to keep all of your previous data from before you moved to linux so you wouldn't have to redownload all this data again. 
+This allows you to keep all of your previous data from before you moved to linux so you wouldn't have to download all this data again. 
 If you duo boot, you can access the same files from both OS's saving a large amount of space. 
 If you break your linux install, you can simply reinstall linux without deleting all of your files. 
 
-###Fixing Compatability issues
+###Fixing Compatibility issues
 Not only can you link to files and folders but you can also link to executables and execute the executable with a link.
 
 ```
 ln -s /opt/program-1.2.3.4 program
 ```
 This creates a soft link to the latest version of program 
-Some features are not backwards compatable so multiple versions are kept.
+Some features are not backwards compatible so multiple versions are kept.
 Everything the program updates all you have to update is the link.
 Running the program multiple times a day will save lots of typing!
 ###Organization with Links
@@ -190,17 +190,17 @@ We will now be creating a hardlink of a picture for another directory
 ln ../Family/12352162.png .
 ```
 
-You can edit one picture and it will change all the other pictuers.
+You can edit one picture and it will change all the other pictures.
 It works just like a tagging system but with folders.
 Why not soft links?
 We use hard links in this case so moving files will not break the soft links.
-Deleting a folder garentees nothing will break.
+Deleting a folder guarantees nothing will break.
 Hard links use slightly less space.
 
 
-#Intresting Facts
+#Interesting Facts
 ###Why are Hard Links not allowed for Directories and What Happens When We Try?
-First lest make a emply directory and use `ls` to see some details about it.
+First lets make a empty directory and use `ls` to see some details about it.
 ```
 $ mkdir test
 $ ls -la test
@@ -213,11 +213,11 @@ So there can be hardlinks to directories but we just can't make it.
 That is because of performance overhead and an extra complication for the file system.
 One of the complications is when you delete a directory which has hardlinks, what should `..` point to?
 If the directory is deleted from its parent but its link count is still greater than 0 then there must still be something pointing to it.
-To find out way you whould have to traverse the entire file system.
+To find out way you would have to traverse the entire file system.
 
 ###How the mv and rm command works
 `rm` just unlinks the file but does not overwrite the data. 
-As long as you are in the same filesystem, mv just creates a hard link and removes the previous directory entry. 
+As long as you are in the same filesystem, `mv` just creates a hard link and removes the previous directory entry. 
 This allows for faster reorganization without actually changing the data at all. 
 
 
