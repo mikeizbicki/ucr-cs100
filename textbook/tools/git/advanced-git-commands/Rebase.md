@@ -64,10 +64,10 @@ and what `merge` does is that it creates a new merge commit `C2'` on `master` wh
 
 ![commit 3 conflict](https://github.com/jinhangwang/git-patch-and-rebase/blob/master/image/commit3conflict.png)
 
-Compared with `rebase`, `merge` would be a little bit messy for the `merge commits` performed everytime when using `git merge`.
+Compared with `rebase`, `merge` would be a little bit messy for the `merge commits` performed every time when using `git merge`.
 Therefore, `rebase` will present a better history, not only for the contributors, but also for the future readers.
 
-##Inerteractive Rebasing
+##Interactive Rebasing
 Under this mode, you can rewrite your commits before the pull request.
 This is really important for a beginner in Github because, if you mess up the history in the repo forked from Mike, you will have to delete your repo and fork again which can cause a lot problems that can get a F in this course.
 
@@ -290,7 +290,7 @@ But I only recommend you to do it **locally** with commits that don't exist on t
 ##The drawbacks of Rebasing
 Rebasing is great, but it depends on how you use it.
 It's not perfect and will easily induce a lot of problems with a few steps.
-Now we will teach you how to **destory** a repository like an expert. 
+Now we will teach you how to **destroy** a repository like an expert. 
 
 **rebase commits that exist outside one's repository.**
 
