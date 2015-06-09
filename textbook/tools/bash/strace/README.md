@@ -1,7 +1,7 @@
 #strace Tutorial
 
 ###What is strace?
-`strace` is a debugging tool that lists and orgranizes the system calls an executable uses.
+`strace` is a debugging tool that lists and organizes the system calls an executable uses.
 
 ###Using strace
 Let's first run `strace` on [example1.cpp](example1.cpp) without any flags to see what the output will typically look like.
@@ -361,9 +361,9 @@ However, `perror` may not catch all of the problems in more complicated code, so
 
 Say that we want to keep a record `strace`'s output.
 An idea that comes to mind may be to use redirection in the terminal.
-However, doing so would actually redirect the output of the exectuable instead of `strace`.
+However, doing so would actually redirect the output of the executable instead of `strace`.
 
-To correctly accomplish this task, all we need to do is run strace with the `-o` flag, followed by the name of the file to store the ouput in, and then the executable's name.
+To correctly accomplish this task, all we need to do is run strace with the `-o` flag, followed by the name of the file to store the output in, and then the executable's name.
 
 ```
 $ strace -o output.txt ./main.out
