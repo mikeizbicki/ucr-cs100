@@ -4,7 +4,7 @@
 
 Extend your `rshell` program so that it properly handles input redirection `<`, output redirection `>` and `>>`, and piping `|`.
 This will require using the Unix functions `dup` and `pipe`.
-You can find help on how to use these functions in the man pages and the [additional resources](#additional resources) section below.
+You can find help on how to use these functions in the man pages and the [additional resources](#additional-resources) section below.
 
 As an example, after this assignment, your program should be able to successfully handle the following command:
 
@@ -99,3 +99,4 @@ Here is a complete list of resources created by previous cs100 students that mig
 
 * video: [how to use pipes](https://www.youtube.com/watch?v=uHH7nHkgZ4w)
 
+* video: [how to use dup() syscall cartoon](https://www.youtube.com/watch?v=fmXDTFCnKZk)
