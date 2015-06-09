@@ -43,13 +43,10 @@ When the end of the line is reached, the pattern space is output to the output s
 
 This example does not actually need to use the hold space since there was no need for temporary storage. So let&#39;s look at a different example that does use the hold space.
 
-Say we want to capture the line before a line that matches a search pattern. The command,
-
+If we want to capture the line before a line that matches a search pattern, we can use the following command:
 ```
 sed -n '/regex/{x;1!p;x}; h'
 ```
-
-will do this.
 
 Before you can see what this expression is doing, there are a few things you should know.
 
@@ -181,7 +178,7 @@ and so forth.
 
 Each of these instances will have the same output as the original example.
 
-A missing delimiter will result in a "Unterminated 's' command" error.
+A missing delimiter will result in an "Unterminated 's' command" error.
 
 *3.* The string you want to search for (i.e. "aol.com" the search pattern) is on the left side of the delimiter sequence.
 
