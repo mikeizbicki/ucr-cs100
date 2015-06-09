@@ -1,0 +1,22 @@
+allrecipes.com/Recipe/Yummy-Honey-Chicken-Kabobs/Detail.aspx?soid=recs_recipe_3:662:    <h1 id="itemTitle" class="plaincharacterwrap fn" itemprop="name">Yummy Honey Chicken Kabobs</h1>
+allrecipes.com/Recipe/Yummy-Honey-Chicken-Kabobs/Detail.aspx?soid=recs_recipe_3:1113:                            <span id="lblIngAmount" class="ingredient-amount">1/4 cup</span>
+allrecipes.com/Recipe/Yummy-Honey-Chicken-Kabobs/Detail.aspx?soid=recs_recipe_3:1114:                            <span id="lblIngName" class="ingredient-name">vegetable oil</span>
+allrecipes.com/Recipe/Yummy-Honey-Chicken-Kabobs/Detail.aspx?soid=recs_recipe_3:1124:                            <span id="lblIngAmount" class="ingredient-amount">1/3 cup</span>
+allrecipes.com/Recipe/Yummy-Honey-Chicken-Kabobs/Detail.aspx?soid=recs_recipe_3:1125:                            <span id="lblIngName" class="ingredient-name">honey</span>
+allrecipes.com/Recipe/Yummy-Honey-Chicken-Kabobs/Detail.aspx?soid=recs_recipe_3:1135:                            <span id="lblIngAmount" class="ingredient-amount">1/3 cup</span>
+allrecipes.com/Recipe/Yummy-Honey-Chicken-Kabobs/Detail.aspx?soid=recs_recipe_3:1136:                            <span id="lblIngName" class="ingredient-name">soy sauce</span>
+allrecipes.com/Recipe/Yummy-Honey-Chicken-Kabobs/Detail.aspx?soid=recs_recipe_3:1146:                            <span id="lblIngAmount" class="ingredient-amount">1/4 teaspoon</span>
+allrecipes.com/Recipe/Yummy-Honey-Chicken-Kabobs/Detail.aspx?soid=recs_recipe_3:1147:                            <span id="lblIngName" class="ingredient-name">ground black pepper</span>
+allrecipes.com/Recipe/Yummy-Honey-Chicken-Kabobs/Detail.aspx?soid=recs_recipe_3:1157:                            <span id="lblIngAmount" class="ingredient-amount">8</span>
+allrecipes.com/Recipe/Yummy-Honey-Chicken-Kabobs/Detail.aspx?soid=recs_recipe_3:1158:                            <span id="lblIngName" class="ingredient-name">skinless, boneless chicken breast halves - cut into 1 inch cubes</span>
+allrecipes.com/Recipe/Yummy-Honey-Chicken-Kabobs/Detail.aspx?soid=recs_recipe_3:1173:                            <span id="lblIngAmount" class="ingredient-amount">2 cloves</span>
+allrecipes.com/Recipe/Yummy-Honey-Chicken-Kabobs/Detail.aspx?soid=recs_recipe_3:1174:                            <span id="lblIngName" class="ingredient-name">garlic</span>
+allrecipes.com/Recipe/Yummy-Honey-Chicken-Kabobs/Detail.aspx?soid=recs_recipe_3:1184:                            <span id="lblIngAmount" class="ingredient-amount">5 small</span>
+allrecipes.com/Recipe/Yummy-Honey-Chicken-Kabobs/Detail.aspx?soid=recs_recipe_3:1185:                            <span id="lblIngName" class="ingredient-name">onions, cut into 2 inch pieces</span>
+allrecipes.com/Recipe/Yummy-Honey-Chicken-Kabobs/Detail.aspx?soid=recs_recipe_3:1195:                            <span id="lblIngAmount" class="ingredient-amount">2</span>
+allrecipes.com/Recipe/Yummy-Honey-Chicken-Kabobs/Detail.aspx?soid=recs_recipe_3:1196:                            <span id="lblIngName" class="ingredient-name">red bell peppers, cut into 2 inch pieces</span>
+allrecipes.com/Recipe/Yummy-Honey-Chicken-Kabobs/Detail.aspx?soid=recs_recipe_3:1207:                            <span id="lblIngName" class="ingredient-name">skewers</span>
+allrecipes.com/Recipe/Yummy-Honey-Chicken-Kabobs/Detail.aspx?soid=recs_recipe_3:1266:																<li><span class="plaincharacterwrap break">In a large bowl, whisk together oil, honey, soy sauce, and pepper. Before adding chicken, reserve a small amount of marinade to brush onto kabobs while cooking. Place the chicken, garlic, onions and peppers in the bowl, and marinate in the refrigerator at least 2 hours (the longer the better).</span></li>
+allrecipes.com/Recipe/Yummy-Honey-Chicken-Kabobs/Detail.aspx?soid=recs_recipe_3:1268:																<li><span class="plaincharacterwrap break">Preheat the grill for high heat.</span></li>
+allrecipes.com/Recipe/Yummy-Honey-Chicken-Kabobs/Detail.aspx?soid=recs_recipe_3:1270:																<li><span class="plaincharacterwrap break">Drain marinade from the chicken and vegetables, and discard marinade. Thread chicken and vegetables alternately onto the skewers.</span></li>
+allrecipes.com/Recipe/Yummy-Honey-Chicken-Kabobs/Detail.aspx?soid=recs_recipe_3:1272:																<li><span class="plaincharacterwrap break">Lightly oil the grill grate. Place the skewers on the grill. Cook for 12 to 15 minutes, until chicken juices run clear. Turn and brush with reserved marinade frequently.</span></li>
