@@ -89,7 +89,7 @@ Between the ```HEAP SUMMARY``` and ```LEAK SUMMARY``` we will get the message:
     ==4102==    by 0x40071E: main (in /home/william/cs100/hw5/a.out)
 ```
 
-We can see that in the third line, Valgrind says that the memory leak is cause BY the function main and in the second line, Valgrind says the leak is cause AT ```new[]```.
+We can see that in the third line, Valgrind says that the memory leak is cause by the function main and in the second line, Valgrind says the leak is caused by ```new[]```.
 We can also see that all the memory that was not deallocated was definitely lost, meaning we cannot retrieve this memory.
 
 This information will help you find where your leaks are at in your program.
