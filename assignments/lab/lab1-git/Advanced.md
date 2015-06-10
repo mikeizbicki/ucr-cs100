@@ -41,7 +41,7 @@ This is a place where versions of the git project are hosted at, online or with 
 They are not the actual repository but rather it is a URL to that repository.
 Managing remotes are essential to working with different collaborators.
 Git uses remotes to allow us to identify what URLs are attached to repository.
-Remotes re how git deals with uploading and downloading project versions.
+Remotes are how git deals with uploading and downloading project versions.
 To view the current remotes for the repo issues the `git remote` command
 
     $ git remote
@@ -51,15 +51,20 @@ Notice there is nothing in this output but the remote named origin.
 This is the default remote for a cloned repo.
  
 This will generally be your personal fork of a repo.
+<<<<<<< HEAD
 If you cloned from a repository that is not your own, you will need to add a remote to the location that you have push access to, i.e. your personal fork on git1hub. 
 Now that we see we have a remote let’s take a look at where this remote points to. 
+=======
+If you cloned from a repository that is not your own, you will need to add a remote to the location that you have push access to, ie. your personal fork on github. 
+Now that we see we have a remote lets take a look at where this remote points to. 
+>>>>>>> 15e193b... Fixed typos
 
 
 To get a little more detail about the remote use the -v flag 
 
     $ git remote -v
 
-This gives both the remote names as well as their push/push URL associated with that remote.
+This gives both the remote names as well as their push/pull URL associated with that remote.
 
 <<<<<<< HEAD
 Why is their a separate URL for both push and pull? That is because each can be set separate for a remote.
