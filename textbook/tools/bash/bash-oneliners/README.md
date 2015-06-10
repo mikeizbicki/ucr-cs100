@@ -73,6 +73,8 @@ Feel like someone snooped through your computer lately? What if they stole some 
 
 No worries! We can use the command listed above to determine which files were accessed in the past 10 days!
 Here is a sample output:
+
+![access](images/Capture2_HW4.PNG)
     
 ##6. Display the top 10 memory intensive processes on your computer
     $ ps aux | sort -nk +4 | tail
