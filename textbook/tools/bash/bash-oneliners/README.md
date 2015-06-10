@@ -1,8 +1,8 @@
-#10 Useful Bash One-liners#
+#8 Fascinating and Useful Bash One-liners#
 
 ![bash one-liner logo](https://pbs.twimg.com/profile_images/2032590984/brand_400x400.png)
 
-Here are 10 useful bash one-line commands. 
+Here are 8 useful bash one-line commands. 
 
 These commands are extremely versatile in that a LOT of these commands can be substituted with all files types, directories, etc.
 
@@ -20,7 +20,7 @@ For example, you could replace, the `.pdf` extension with whatever your heart de
 The same applies for the folder where these backup files are stored. You can place them in an already existing folder or a newly created one that will be made when you run the command.
 
 ##2. Display the ten largest files in current directory and subdirectories.
-    $ du -a ./ | sort -n -r | head -n 10
+    $ du -ah ./ | sort -n -r | head -n 10
 
 ![low disk space](http://www.datareign.com/wp-content/uploads/2013/08/low-disk-space-solution.jpg)
 
@@ -28,12 +28,21 @@ Something hogging your computer hard drive space? Need to figure out what it?
 
 Run the above command, but before you do it, change to your home directory. The command search will start in the current directory so changing to your home directory will search the majority of your filesystem.
 
+
 In other words, run
 
-    $ cd; du -a ./ | sort -n -r | head -n 10
+    $ cd; du -ah ./ | sort -n -r | head -n 10
     
 
-Here, `cd` will take you to your home directory. **then** you will run the command allowing you to retain the one-liner aspect. 
+Here, `cd` will take you to your home directory. **then** you will run the command allowing you to retain the one-liner aspect.
+
+The flags: 
+* `-a` flag lists all directories and files.
+* `-h` converts into human readable format
+
+Here is the command in action:
+
+![hog](images/Capture3_HW4.PNG)
 
 ##3. Find all executable files in the current directory and subdirectories
     $ find ./ -type f -perm -o+rx -exec ls -ld '{}' \;
