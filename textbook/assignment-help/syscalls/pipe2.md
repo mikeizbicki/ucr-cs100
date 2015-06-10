@@ -1,18 +1,6 @@
 #Pipe System Call
 Documentation on the pipe. This call is used to create a data path in which communication between processes can occur. There are `pipe()` and `pipe2()` sys calls.
 
-##Pipe
-###Inclusion
-`#include <fcntl.h>`
-
-`#include <unistd.h>`
-
-###Declaration
-`int pipe(int pipefd[2]);`
-
-###Return Value
-Returns 0 on success. If an error occurs, -1 is returned and errno is set.
-
 ##Pipe2
 Contains identical includes and return values. The key difference is that pipe2 has an extra parameter, int flags that affect the behaviour of the call.
 
