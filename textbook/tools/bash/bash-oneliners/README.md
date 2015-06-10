@@ -42,8 +42,16 @@ Here, `cd` will take you to your home directory. **then** you will run the comma
 
 Combining `ls` and `find` commands along with some flag parameters, we can generate a list of executable files that exist within the current and subdirectories.
 
+
+
 ##4. Print your top 10 most frequently used bash commands
     $ history | sed 's/^ \+//;s/  / /' | cut -d' ' -f2- | awk '{ count[$0]++ } END { for (i in count) print count[i], i }' | sort -rn | head -10
+    
+What commands are you typing the most?
+If you're anything like me, you'll see a lot of `ls` and `clear`. 
+Find out your most frequently typed bash commands by using the one-liner listed above.
+
+You'll see an output similar to this:
     
 ##5. Find the 5 most recently updated .txt files
     $ find . -name "*.txt" -mtime 5
