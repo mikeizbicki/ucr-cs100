@@ -57,8 +57,8 @@ int main()
 As you can see, 3 different permissions are passed in. `S_IRUSR` is the read permission for the owner. `S_IRGRP` is the read 
 permission for the group, and `S_IROTH` is the read permission for others. The permissions are split up by the `|` command, 
 so thus any one of these permissions can be passed through giving permissions to the owner, group, and others.
-If say for example, the `S_IRGRP` permission was removed, the above code would only give read permissions to the user and the others. Starting to get how this works? 
-
+If say for example, the `S_IRGRP` permission was removed, the above code would only give read permissions to the user and the
+others. Starting to get how this works? 
 
 
 Different permissions can be given for different purposes. A list of permissions can be give multiple types of permissions. 
@@ -90,3 +90,5 @@ what specifically needs to be done!
 
 
 [List of permissions](www.delorie.com/gnu/docs/glibc/libc_288.html)
+
+
