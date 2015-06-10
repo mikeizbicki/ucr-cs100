@@ -8,7 +8,8 @@ Let's dive in!
 ##getpwuid
 This system call retrieves information on a user.
 
-Here is an example of calling `getpwuid` in order to print the username of a file's owner:
+Say we want to use `getpwuid` in order to retrieve the username of a file's owner.
+Here is the beginning code segment to an example of that:
 ```
 struct stat s1;
 
@@ -17,37 +18,25 @@ const char* path1 = "./file1"
 if(-1 == (stat(path1, s1))){
 	perror("stat failed");
 }
-
+```
+Because the `getpwuid` function requires a `uid_t uid` parameter (A user's ID), we use the `stat` system call to load `s1` of type `struct stat` with the information regarding the file specified by `path1`.
+Among this information is the `uid` of the user who owns the file, which we can use as the parameter for `getpwuid` in the next code segment:
+```
 struct passwd* p1;
 
 p1 = getpwuid(s1.st_uid);
 if(p1 == NULL){
 	perror("getpwuid failed");
 }
-
-std::cout << p1->pw_name << std::endl;
 ```
-Because the `getpwuid` function requires a `uid_t uid` parameter (A user's ID), we use the `stat` system call to load `s1` of type `struct stat` with the information regarding the file specified by `path1`.
-Among this information is the `uid` of the user who owns the file, which we can use as the parameter for `getpwuid`.
-
-After error checking `stat`, we initialize `p1` of type `struct passwd*`, the same type as the return value of `getpwuid`.
-
-We then call `getpwuid`, passing in the `uid` value in `s1` as the parameter by writing `getpwuid(s1.st_uid)`.
+First we initialize `struct passwd* p1`, which will receive the return value of 'getpwuid'.
+We then call the `getpwuid` function, passing in the `uid` value in `s1` as the parameter by writing `getpwuid(s1.st_uid)`.
 
 We then set `p1` to catch the function's return value and perform an error check.
 Upon success, `p1` will be loaded with the user's information.
 On failure, `p1` will have the value `NULL`.
 
-Lastly, we print out the user's username using the variable `pw_name`,  which is one of the contents of the returned `struct passwd*` type.
-
-To use the `getpwuid` system call, include the following headers in a program:
-```
-#include <sys/types.h>
-#include <pwd.h>
-```
-
-###struct passwd
-Being the return value type of the `getpwuid` function call, we can look at its content to see what information is given about the user:
+We can now look at the contents of the `struct passwd` type to see what information `p1` contains on the user:
 
 ```
 struct passwd {
@@ -60,6 +49,12 @@ struct passwd {
 	char   *pw_shell;      /* shell program */
 };
 ```
+
+To print the user's username, we can simply write the following code into our program:
+```
+std::cout << p1->pw_name << std::endl;
+```
+
 For more information on `getpwuid`, visit the following man page:
 
 ####[man page](http://linux.die.net/man/3/getpwuid)
@@ -82,7 +77,11 @@ const char* path2 = "./file2";
 if(-1 == (stat(path2, s2))){
 	perror("stat failed");
 }
+```
+Because the `getgrgid` function requires a `gid_t gid` parameter (A group ID), we use the `stat` system call to load `s2` of type `struct stat` with the information regarding the file specified by `path2`.
+Among this information is the `gid` of the group who owns the file, which we can use as the parameter for `getgrgid` like so:
 
+```
 struct group* g1;
 
 g1 = getgrgid(s2.st_gid);
@@ -93,26 +92,14 @@ if(g1 == NULL){
 
 std::cout << g1->gr_name << std::endl;
 ```
-First we call `stat` on our chosen file, giving us a `struct stat` type that contains the `gid_t` variable (the group ID) we need to call `getgrgid`.
-
-After error checking `stat`, we initialize `g1` of type `struct group*`, which will receive the group's information after `getgrgid` executes.
-
+First, we initialize `struct group* g1`, which will receive the return value of the `getgrgid` function.
 We then call `getgrgid` with the parameter `s2.st_gid`, which is the `gid_t` variable contained in `s2` that we needed.
 
-Next, `g1` is loaded with the function's return value of type `struct group*`, which we then error check.
+After the function executes, `g1` is loaded with the function's return value, which we error check.
 Upon the function's success, `g1` will be loaded with the group's information.
 On failure, `g1` will have the value `NULL`.
 
-Finally, we print out the group's name by using the `gr_name` variable found in the `struct group*` type.
-
-To use `getgrgid`, include the following headers in a program:
-```
-#include <sys/types.h>
-#include <grp.h>
-```
-
-###struct group
-The contents of this structure show what kind of information we can retrieve on a group:
+We can now look at the contents of the `struct group` type to see what information `g1` has on the group:
 ```
 struct group {
 	char   *gr_name;       /* group name */
@@ -120,6 +107,17 @@ struct group {
 	gid_t   gr_gid;        /* group ID */
 	char  **gr_mem;        /* group members */
 };
+```
+We can now use any one of these variables in our program.
+For example, to print the group's name we can write the following code:
+```
+std::cout << g1->gr_name << std::endl;
+```
+Or we can even print out the list of users who are a part of that group:
+```
+for(unsigned i = 0; g1->gr_mem[i] != NULL ; ++i){
+	std::cout << g1->gr_mem[i] << std::endl;
+}
 ```
 For more information on getgrgid, visit the following man page:
 
@@ -131,25 +129,23 @@ $ man getpwuid
 ```
 ##getcwd
 
-This system call returns the current working directory. (The pathname between the home directory and the directory containing the program)
+This system call returns a string pointer containing the pathname of the current working directory (CWD).
 If your program depends on moving between several directories, this system call is great for telling the user which directory they are in.
 
 Here is an example of calling `getcwd` and printing the CWD:
 ```
-char c[1024];
+char c[BUFSIZ];
 if(getcwd(c, sizeof(c)) == NULL){
 	perror("getcwd failed");
 }
-
-std::cout << c << std::endl;		//print current working directory
 ```
 First we initialize a cstring large enough to contain a pathname.
-Initializing it with a size of 1024 is more than enough space.
+Initializing one with the constant `BUFSIZE` is good, as it represents the maximum number of characters that can be taken into stdin at once (a large number).
 
 Next we call the function for `getcwd`.
 The first parameter takes in our cstring, whether or not it be empty.
 The second parameter is of type 'size_t', and its value should always be that of the first parameter's size.
-Using the function `sizeof()` makes this easier than inputting a number, should that number ever change.
+Using the function `sizeof()` with our cstring as its parameter makes this easier than inputting a number or constant, should we ever need to change the size.
 
 After `getcwd` executes, our cstring used as the first parameter will contain the null-terminated pathname of the CWD.
 
@@ -157,7 +153,10 @@ Next we catch the function's return value of type `char*`, and perform an error 
 Upon success, the function returns the same `char*` value that is loaded into the first parameter.
 On failure, the function returns the `NULL` value.
 
-Finally, we can print the CWD by simply calling `std::cout`.
+Finally, we can print the CWD by writing:
+```
+std::cout << c << std::endl;
+```
 
 For more information on the getcwd command, consider reviewing its man page linked below:
 
