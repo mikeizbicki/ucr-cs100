@@ -49,7 +49,7 @@ char c[BUFSIZ];
 if(-1 == (size = read(fdold, c, sizeof(c)))) 
 {
     perror("There was an error with read(). ");
-    exit(1); }
+    exit(1);
 }
 ```
 

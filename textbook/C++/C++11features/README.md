@@ -141,8 +141,10 @@ The auto feature is accessible by standard compilers that accept C++11 features.
 
 In C++11, auto is a type-inferred data type, in that the data type of the variable is deduced by the compiler upon initialization or upon later inspection (e.g., when used as a function return type, which we will address soon.)  
 A general definition of `auto` can be explained as:  
-`auto x = expression;`  
-here, `auto` infers the resulting data type from `expression` and initializes the variable `x` with the same value and data type returned by `expression`.  
+```
+auto x = expression;
+```
+Here, `auto` infers the resulting data type from `expression` and initializes the variable `x` with the same value and data type returned by `expression`.  
 
 Let us look at some simple uses for auto to better understand how this type works. Looking at the sample initializations, we can see cases where auto is used correctly and incorrectly:  
 

@@ -5,7 +5,7 @@ These substrings are called tokens.
 Tokenizing makes life easier when you want to break up a string.
 For example, you can tokenize the string `Get thee to a nunnery`, which will be broken up into the tokens: `Get`, `thee`, `to`, `a`, and `nunnery`.
 
-##How do we do use the boost tokenizer?
+##How do we use the boost tokenizer?
 
 Let's look at the code from [ex1.cpp](https://github.com/vgarc018/cs100hw4/blob/master/src/ex_1.cpp).
 
