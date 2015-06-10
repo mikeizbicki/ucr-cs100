@@ -14,7 +14,7 @@ and we'll conclude with things *not* to do.
 
 There are two main formats for README files.
 The simplest is plaintext.
-This format is usually used by older projects (like the [Linux kernel](https://github.com/torvalds/linux/blob/master/README) or [git](https://duckduckgo.com/l/?kh=-1&uddg=https%3A%2F%2Fgithub.com%2Fgit%2Fgit)).
+This format is usually used by older projects (like the [Linux kernel](https://github.com/torvalds/linux/blob/master/README) or [git](https://github.com/git/git)).
 I recommend not using plaintext, and using markdown instead.
 Markdown is a special formatting language that is easy to read.
 Most newer projects use this format.
