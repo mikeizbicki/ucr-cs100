@@ -1,154 +1,193 @@
-Input and Output System Calls
-===
-This document describes the system calls pertaining to input and output redirections. These system calls involve manipulating file descriptors such as stdin(0), stdout(1) and stderr(2). The system calls that will be described here are `pipe` and `dup`
+#Input and Output System Calls
+ 
+This markdown file demonstrates how to use the system calls `dup` , `dup2` and `pipe`.
+This file contains code that we will be able to use to create simple programs that show us how to use `dup`, `dup2` and `pipe`.
+ 
+###dup() and dup2()
+The following is an example of how redirect standard out to a file using two different methods.
+The two different methods of doing this are with the use of `dup()` or `dup2()`.
+The source code on the `dup()` method can be found at [`io_dup.cpp`](./io_dup.cpp). 
+The source code on the `dup2()` method can be found at [`io_dup2.cpp`](./io_dup2.cpp).
 
-##dup:
+The first method we will be implementing is with the use of `dup`.
 
-**includes:** `#include <unistd.h>`
-
-**declaration:** These are the two `dup` declarations that are most useful:
-                 `int dup(int oldfd);`  `int dup2(int oldfd, int newfd);`
-
-**returns:** When an error occurs `dup` returns -1 otherwise `dup` returns the new file descriptor.
-
-[man page](http://linux.die.net/man/2/dup)
-
-We all know about the default file descriptors 0, 1 and 2 with 0 meaning stdin, 1 meaning stdout and 2 meaning stderr. `dup(int oldfd)` can be used to copy the file descriptor given for `oldfd`, for example we can do `int fd = dup(1)` which copies stdout to `fd`. `dup` chooses our new file descriptor by choosing the lowest number of the unused descriptors, so if we only have 0, 1 and 2 as our file descriptors(only the default ones) it will choose 3 as our new one. So, in this `dup` example our new `fd` can be used interchangeably with stdout.
-
-Now say, for example, we wanted to redirect the stdout to the screen into a file. We could use `dup2` (we could also use `dup` but I think `dup2` is a simpler way). The way `dup2` works is it takes two parameters `int oldfd` and `int newfd`. `oldfd` is the file descriptor you want to change to `newfd` by copying `oldfd` to `newfd`. Let's take our redirect example, we want to take stdout which is 1 and instead of linking it to 1 we want to link it to whatever file descriptor belongs to the file we want to redirect to. For this redirection we would do something like: `dup2(fd,1)` (where `fd` is the file descriptor for the file we want to write to). `dup2` also closes `newfd` after the call. Therefore, after this call stdout is now closed and instead it is rerouted to the file.
-
-
-In our previous example we've added a small snippet of `dup` at the end.
+The code is ran by typing the following commands in the terminal.
 ```
-int pid = fork();
-if(pid == -1)//fork’s return value for an error is -1
-{
-   perror("There was an error with fork(). ");
-   exit(1);//there was an error with fork so exit the program and go back and fix it
-}
-else if(pid == 0)//when pid is 0 you are in the child process
-{
-   cout<<"This is the child process ";
-   if(-1 == execvp(argv[0], argv))
-      perror("There was an error in execvp. ");
-
-   exit(1);  //when the child process finishes doing what we want it to, cout, we want to kill the child process so it doesn’t go on in the program so we exit
-}
-//if pid is not 0 then we’re in the parent
-else if(pid > 0) //parent function
-{
-   if( -1 == wait(0)) //wait for the child process to finish executing
-      perror(“There was an error with wait().);
-
-}
-int savestdin;
-if(-1 == (savestdin = dup(0)))//savestdin is now the same as regular stdin
-   perror("There is an error with dup. ");
-
-   //something can be done here to overwrite stdin, for example redirection
-
-if(-1 == dup2(savestdin,0))//restore stdin, if we would have overwritten stdin this is how we would restore it
-   perror("There is an error with dup2. ");
+$ g++ io_dup.cpp -o dup
+$ ./dup
+```
+After running the program, a file named `filename.txt` is created and standard out is redirected to the file.
+We can show this by typing the following command in the terminal.
+```
+$ cat filename.txt
+```
+This will display the following:
+```
+Standard Out is now a file.
 ```
 
-Here we can see both `dup` and `dup2` being used.
 
+Now that we know what the program is supposed to do, let's implement it.
 
-##pipe:
+We begin by opening a file that is used for writing only. 
+We will be using the system call `open()` with the flags `O_WRONLY`, `O_CREAT`, and `O_TRUNC`.
 
-**includes:** `#include <unistd.h>`
-          `#include <fcntl.h>`
-
-**declaration:** There are two different declarations for `pipe`:
-               `int pipe(int pipefd[2]);`
-               `int pipe2(int pipefd[2], int flags);`
-
-**returns:** When an error occurs -1 is returned, otherwise 0 is returned.
-
-[man page](http://linux.die.net/man/2/pipe)
-
-`pipe` is another syscall that is harder to understand, so PLEASE utilize outside resources if need be!
-
-`pipe` essentially creates an imaginary file that you can write to and read from. The parameter is an int array with two elements, which are the file descriptors for the imaginary file. In the example below, `fd[0]` is the read end of the pipe and `fd[1]` is the write end of the pipe. Let me be clear, however, that pipe ignores the input and only uses the write end as output to whatever it is piping to.
-
-This function is essential when implementing piping in a bash shell. Piping is moving the stdout of the left side of the pipe into the stdin of whatever program is on the right side of the pipe. For example, you have an executable `names` which outputs a list of names in a random order you can pipe this into `sort` which will sort it alphabetically. This command would look like: `names | sort`. The end result would be the contents of the name executable output to the screen, except sorted.
-
-Now that we’ve gone over the basics of what piping is we can talk about how to use the syscall `pipe` to create this. Because `pipe` creates an imaginary file that you can read and write from you can use this to implement piping in whatever program you desire to do so in. You will take the stdout of the command on the left side of the pipe symbol and write it to the pipe with `dup`. Then, later, you will read that data from the read end of the pipe.
-
-Here’s an example of `pipe` in action:
 ```
-const int PIPE_READ = 0;
-const int PIPE_WRITE = 1;
-int fd[2];
-if(pipe(fd) == -1)//call to pipe, it puts the read end and write end file descriptors in fd
-   perror("There was an error with pipe(). ");
-
-int pid = fork();
-if(pid == -1)//fork’s return value for an error is -1
+int outfd = -1
+    
+outfd = open("filename.txt", O_WRONLY | O_CREAT | O_TRUNC);
+    
+if(outfd < 0)
 {
-   perror("There was an error with fork(). ");
-   exit(1);//there was an error with fork so exit the program and go back and fix it
-}
-else if(pid == 0)//when pid is 0 you are in the first child process
-{
-   cout<<"This is the first child process ";
-
-   //write to the pipe
-   if(-1 == dup2(fd[PIPE_WRITE],1))//make stdout the write end of the pipe
-      perror("There was an error with dup2. ");
-   if(-1 == close(fd[PIPE_READ]))//close the read end of the pipe because we're not doing anything with it right now
-      perror("There was an error with close. ");
-
-   if(-1 == execvp(argv[0], argv))
-      perror("There was an error in execvp. ");
-
-
-   exit(1);  //prevents zombie process
-}
-//if pid is not 0 then we’re in the first parent
-else if(pid > 0) //first parent function
-{
-   //read end of the pipe
-   int savestdin;
-   if(-1 == (savestdin = dup(0)))//need to restore later or infinite loop
-      perror("There is an error with dup. ");
-   if( -1 == wait(0)) //wait for the child process to finish executing
-      perror(“There was an error with wait(). ");
-
-   int pid2 = fork();
-   if(pid2 == -1)//fork's return value for an error is -1
-   {
-      perror("There was an error with fork(). ");
-      exit(1);//there was an error with fork so exit the program and go back and fix it
-   }
-   else if(pid2 == 0)//when pid2 is 0 you are in the second child process
-   {
-      cout << "This is the second child process ";
-
-      if(-1 == dup2(fd[PIPE_READ],0))//make stdin the read end of the pipe
-         perror("There was an error with dup2. ");
-      if(-1 == close(fd[PIPE_WRITE]))//close the write end of the pipe because we're not doing anything with it right now
-         perror("There was an error with close. ");
-
-      if(-1 == execvp(argv2[0], argv2))
-         perror("There was an error in excecvp. ");
-
-      exit(1); //prevents zombie process
-   }
-   else if(pid2 > 0) //second parent function
-   {
-      if (-1 == close(fd[PIPE_WRITE])) //close the write end of the pipe in the parent so the second child isn't left waiting
-         perror("There was an error with close. ");
-      if(-1 == wait(0)) //wait for the child process to finish executing
-         perror("There was an error with wait(). ");
-   }
-
-   if(-1 == dup2(savestdin,0))//restore stdin
-      perror("There is an error with dup2. ");
+    perror("open()" );
+    exit(1);
 }
 ```
+In case we forgot what the flags mean:
 
-Here we see the full use of the `pipe` syscall. When we call `pipe` we have our `int fd[2]` as the parameter, `pipe` populates this array with the file descriptors of the read and write end of the imaginary file that is created. Then we `fork` the process, and in the child we change the stdout of whatever you are running to the write end of the imaginary file. In our example of `names|sort` the output of our names executable will be the input of our file. Then we go to our parent function and set the stdin to the read end of the `pipe`. We do this because we want the thing we wrote to the imaginary file to be the input to the right side of the pipe. In our example `names|sort` we want the names output to be the input of the sort program. After this we have to immediately call another `fork` function to execute the right side of the pipe.
+`O_WRONLY`: This flag is an access mode that means write only.
+
+`O_CREAT`: If the file does not exist, then it will be created.
+
+`O_TRUNC`:  If the file already exists and the access mode allows writing it will be truncated to length 0.
+
+Notice that output file descriptors (`outfd`) less than 0 are invalid and proper error checking is displayed.
+
+We will now close `stdout` and the lowest available file descriptor will now become `STDOUT_FILENO`, which we know is the integer value 1. 
+Once again, proper error checking is needed.
+
+```
+if(close(STDOUT_FILENO) < 0)
+{
+    perror("close()");
+    close(outfd);
+    exit(1);
+}
+```
+We can now copy `outfd` onto `STDOUT_FILENO` and provide proper error checking.
+
+```
+if(dup(outfd) != STDOUT_FILENO)
+{
+    perror("dup()");
+    close(outfd)
+    exit(1)
+}
+```
+The final step after everything has been successful is to close the original file:
+```
+close(outfd);
+```
+Remember: Closing files is very important!
+
+Now that we know how to use `dup()` to redirect `stdout` to a file, using the `dup2()` method should be fairly simple.
+
+The code for `dup2()` is ran by typing the following commands in the terminal.
+```
+$ g++ io_dup2.cpp -o dup2
+$ ./dup2
+```
+This program serves the same purpose as the program above, so when we type the following into the terminal:
+```
+$ cat filename.txt
+```
+We should get a message on the terminal that says:
+```
+This statement will print within filename.txt.
+```
+This shows that `stdout` was redirected to the file.
+
+Now that we know that it does the same job as the method above, let's see how the code differs.
+
+We begin by opening a file that is used only for writing as we did above, but we replace the next two steps in the `dup()` method with the `dup2()` system call. 
+To avoid confusion, the code should look like this:
+
+```
+outfd = open("filename.txt", O_WRONLY | O_CREAT | O_TRUNC);
+    
+if(outfd < 0)
+{
+    perror("open()" );
+    exit(1);
+}
+
+if(dup2(outfd,1) < 0)
+{
+    return 1;
+}
+```
+All we did was use the `dup2()` system call which takes in two file descriptors. 
+The first paramater is the old file descriptor and the second parameter is the new file descriptor. With this simple code,standard out has now been redirected and we can now write to the file.
 
 
+##pipe()
+We will now write a simple program that uses `pipe()` as an interproccess communication between two processes. The full source code can be found at [`io_pipe.cpp`](./io_pipe.cpp).
 
+The program can be ran by typing the following in the terminal:
+```
+$ g++ io_pipe.cpp -o pipe
+$ ./pipe
+```
+The program will then output the following message to the terminal:
+```
+Parent Proccess
+Child Process
+Hello World!
+```
+
+First we will begin by declaring our `pipefd[2]` array.
+We are also declaring a pid because we will be using two different processes in order to communicate between the both.
+We also declare a `char` array named `buf` that has a size of 15 because it will hold the message `Hello World!`.
+```
+pid_t pid;
+int pipefd[2];
+char buf[15];
+    
+```
+We can now create the pipe.
+```
+int ret = pipe(pipefd);
+```
+We now have to provide proper error checking for the pipe. A pipe returns -1 if an erro has been found so we should use the following for error checking.
+```
+if( ret == -1)
+{
+    perror ("pipe:" );
+    exit(1);
+}
+```
+We can now create our fork and provide proper error checking as well.
+```
+pid = fork() ;
+
+if(pid == -1)
+{
+    perror("fork():");
+        exit(1);
+}
+```
+We can now use `pipefd[1]` to write our message to the buffer through the pipe. Remember that when we use 1 as our parameter we are at the write end of the pipe and when a 0 is used we are at the read end of the pipe.
+Remember that when the `pid == 0` we are in the child proccess, so we will be writing in the child process. 
+
+```
+if(pid == 0) 
+{
+    printf("Child Process \n");
+    write(ourpipefd[1], "Hello World!" , 12);   
+}
+```
+We can now use `ourpipefd[0]` to read from one process to the other.
+We will be reading from the parent process since the `pid == 1`.
+We choose the value 13 so we make sure that we read the whole message.
+```
+else if(pid > 0)
+{
+    printf("Parent Process \n");
+    read(ourpipefd[0], buf, 13);
+    printf(buf);
+}
+```
+This program will now read from the write end of the pipe and display `Hello World!` to the screen. 
+This is a simple program, but it shows how `pipe()` can be used to communicate between processes.
+
+This is the end of the tutorial, hopefully we now have a better understanding of what the input and output system calls are and how to use them.
