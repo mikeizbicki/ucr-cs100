@@ -35,7 +35,7 @@ A short tutorial, on a very complicated and versatile tool.
 
 To use the `netcat` command all you have to do is type `nc IPADDRESS PORT` at a terminal, where IPADDRESS is the IP you want to connect to, and PORT is the port number you
 want to connect to. For most of this tutorial, we will connect to our own computers. The IP address of our own computer is `127.0.0.1`, or more simply `localhost`. The port
-can be anything less than 2^16. Some common ports are are 22 for file transfers (SSH), 80 for internet browsers (HTTP), 443 for secure internet
+can be anything less than 2^16. Some common ports are 22 for file transfers (SSH), 80 for internet browsers (HTTP), 443 for secure internet
 browsing (HTTP over SSL), and, a fun one, 3724 for Xbox Live.
 
 If you type `nc localhost 32981` you probably will not see anything in the output. This is because `netcat` is going to that port, checking if anything is there, and

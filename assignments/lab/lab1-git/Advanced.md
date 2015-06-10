@@ -6,20 +6,25 @@ At the same time we will be establishing a git workflow that keeps our local rep
 *Note:* All text with `<TEXT>` means to replace TEXT with the proper
 text/path/name
 
-I assume that you have already forked your repository from mikeizbikis github.
+I assume that you have already forked your repository from mikeizbikis GitHub.
 If you have not, here are instruction to [fork](Enrolling.md#forking-your-repo-) the repository.
+<<<<<<< HEAD
+Start by cloning the class repository from your student GitHub account.
+From there checkout the `2015winter` branch, then create and checkout a branch named `2015winter-student`.
+=======
 Start by cloning the class repository from your student github account.
 From there checkout the `2015spring` branch, then create and checkout a branch named `2015spring-student`.
+>>>>>>> upstream/2015spring
 
 ##The stream flows both ways
 
 Now that we have cloned the git repository we should set it up for `pushing` and `pulling` from a remote location.
-We will use the class project hosted on github as the main class repository. 
+We will use the class project hosted on GitHub as the main class repository. 
 The url is https://github.com/mikeizbicki/ucr-cs100.git 
 
 ###I think the stream is flowing away from me
 
-Since we cloned the repository from the URL above, we can upload our changes to github using `git push`.
+Since we cloned the repository from the URL above, we can upload our changes to GitHub using `git push`.
 This uploads our version of the repository to a server online or within a local network.
 Doing this allows others to see our changes as well as make changes based off of those changes.
     
@@ -46,8 +51,13 @@ Notice there is nothing in this output but the remote named origin.
 This is the default remote for a cloned repo.
  
 This will generally be your personal fork of a repo.
+<<<<<<< HEAD
+If you cloned from a repository that is not your own, you will need to add a remote to the location that you have push access to, i.e. your personal fork on git1hub. 
+Now that we see we have a remote let’s take a look at where this remote points to. 
+=======
 If you cloned from a repository that is not your own, you will need to add a remote to the location that you have push access to, ie. your personal fork on github. 
 Now that we see we have a remote lets take a look at where this remote points to. 
+>>>>>>> upstream/2015spring
 
 
 To get a little more detail about the remote use the -v flag 
@@ -56,15 +66,20 @@ To get a little more detail about the remote use the -v flag
 
 This gives both the remote names as well as their push/pull URL associated with that remote.
 
+<<<<<<< HEAD
+Why is their a separate URL for both push and pull? That is because each can be set separate for a remote.
+In our case we see that origin points to our GitHub fork.
+=======
 Why is there a separate URL for both push and pull? That is because each can be set separate for a remote.
 In our case we see that origin points to our github fork.
+>>>>>>> upstream/2015spring
 So instead of using a URL for `git push` we can now push using a remote
 
     $ git push <remote> <branch>
     $ git push origin 2015spring-student
 
 
-Now Lets add a remote so that we can 'pull' from our remote repository.
+Now let’s add a remote so that we can 'pull' from our remote repository.
 This can be done by telling `git remote` to add a remote.
 
 We do this by passing the 'add' argument to git remote.
@@ -75,7 +90,7 @@ remote to add and the URL to associate with that remote name.
     $ git remote add <remote name> <url>
     $ git remote add upstream https://github.com/mikeizbicki/ucr-cs100.git
 
-Lets view our remote again.
+Let’s view our remote again.
     
     $ git remote
 
@@ -86,18 +101,18 @@ Let's be verbose about it again.
     
 Since we might not have permission to push to the upstream repository we might want to push to our own fork using the upstream remote.
 So we set it to pull from the upstream repository and push to our remote.
-To to this we can use the 'set-url' option of git remote.
+To this we can use the 'set-url' option of git remote.
 
     $ git remote set-url --push [remote] [name of push repo] 
     $ git remote set-url --push upstream https://github.com/<your username>/ucr-cs100.git
 
 
-#### Well, at least I know where its going
+#### Well, at least I know where it’s going
 
 It may be the case that we push a branch to the same remote many times.
 To alleviate the issue of typing the remote and the branch every time we can set up a tracking branch.
 
-##### Where can I find you
+##### Where can I find you?
 
 What is a tracking branch?
 A tracking branch is local branch that has been setup to watch a remote branch.
@@ -114,11 +129,11 @@ We can still set the remote tracking branch using `git branch --set-upstream-to`
 
     $ git branch --set-upstream-to=origin/2015spring-student
 
-There you go, now you can get a already created repo, you can push changes to the repo, and add remotes.
+There you go, now you can get an already created repo, you can push changes to the repo, and add remotes.
 You may be wondering, 'How do I get changes from others that committed on the project'.
-More importantly how can we get the project we want.
+More importantly how can we get the project we want?
 
-### What awaits me upstream
+### What awaits me upstream?
 
 Now it time to learn how to grab external changes.
 Assuming that you have been following the guide up to this point, you have committed to your
@@ -133,11 +148,11 @@ This is usually called the upstream repo but can be called anything you like.
 We have already created this upstream remote in the previous sections.
 We have two remotes at this point. 
 One to our own repository and one to the original repository.
-Lets get a copy of the upstream version but let's not make any changes to ours just yet.
+Let’s get a copy of the upstream version but let's not make any changes to ours just yet.
 This is done using the 'fetch' git command.
 This command downloads a copy of the named remote with everything necessary to complete its history.
 It stores this information in a branch pointer name FETCH_HEAD, it only points to the latest remote and branch used by `git fetch`
-Lets go ahead and fetch the remote upstream repository.
+Let’s go ahead and fetch the remote upstream repository.
 
     $ git fetch
  
@@ -148,7 +163,11 @@ To grab another remote other than the one named `origin` we will specify the rem
 
     $ git fetch <remote> git fetch upstream
 
+<<<<<<< HEAD
+Let’s get onto the upstream 2015winter branch.
+=======
 Lets get onto the upstream 2015spring branch.
+>>>>>>> upstream/2015spring
 To verify the branch is there first run git branch with the `-r` (remote) option passed
 
     $ git branch -r
@@ -160,7 +179,7 @@ The branch is there
 #### In a little deep
 
 You should see something similar to this message.
-Don't be alarmed its just telling us that we are not on a branch and the changes we make wont be saved unless we create one from this point.
+Don't be alarmed it’s just telling us that we are not on a branch and the changes we make won’t be saved unless we create one from this point.
 So if you want your changes saved you will need to create and checkout a branch from before switching to another branch.
 
         Note: checking out 'upstream/2015spring'.
@@ -197,7 +216,7 @@ In addition we can create a branch from any git repository that we have a remote
 Now that you know how to use fetch to get remote branches into you repo lets update our local student branch.
 If we had true upstream changes to merge into our repository we could replace `2015spring-upstream` with `FETCH_HEAD`.
 I will give both version here.
-Before you update the local branch its a good idea to check for changes make upstream against your own branch.
+Before you update the local branch it’s a good idea to check for changes make upstream against your own branch.
 To do that we will use git log again, this time passing a revision instead of a single branch.
 This will give us the difference in commits, if there is no difference there will be no commits to display.
 The `..` tells git to include all commits on the right of the dots and then exclude all commits on the left side of the dots.
@@ -209,7 +228,7 @@ Doing this gives us a set of commits to view using git log, instead of all the c
     $ git log 2015spring-student..2015spring-upstream
     $ git log 2015spring-student..FETCH_HEAD
 
-Okay so now we know that there are commit differences so lets check them out visually.
+Okay so now we know that there are commit differences so let’s check them out visually.
 We can use git diff for this
 
     $ git diff <branch name> <branch name>
@@ -217,16 +236,24 @@ We can use git diff for this
     $ git log 2015spring-student 2015spring-upstream
     $ git log 2015spring-student FETCH_HEAD
 
+<<<<<<< HEAD
+Depending on how many commit differences, there could be a lot of files changes.
+=======
 Depending on how many commit differences there are, there could be a lot of files changes.
+>>>>>>> upstream/2015spring
 This can give you an idea of the state of changes against your current repo.
-I think its time to merge this upstream branch into our.
-Lets play it safe on work on a temporary student branch.
+I think it’s time to merge this upstream branch into ours.
+Let’s play it safe on work on a temporary student branch.
 
     
     $ git checkout 2015-student 
     $ git checkout -b 2015spring-stutmp
 
+<<<<<<< HEAD
+Let’s merge our upstream into the `2015winter-stutmp` branch(we are currently on it)
+=======
 Lets merge our upstream into the `2015spring-stutmp` branch(we are currently on it)
+>>>>>>> upstream/2015spring
     
     $ git merge <branch name> 
     $ git merge 2015spring-upstream
@@ -234,7 +261,11 @@ Lets merge our upstream into the `2015spring-stutmp` branch(we are currently on 
 Edit the merge commit so it will reflect what you want.
 Most times the merge commit message is enough if it is generated.
 
+<<<<<<< HEAD
+If there was no commits to the main class repo then git will finish the merge with an up to date message.
+=======
 If there were no commits to the main class repo then git will finish the merge with a up to date message.
+>>>>>>> upstream/2015spring
 If the merge could be completed without any problems but doesn't just update our branch pointer, then `git merge` will use a merge strategy.
 Most merge messages will inform you that recursive strategy was used.
 
@@ -261,7 +292,7 @@ You should get a message similar to
 Last time you saw a merge conflict you dealt with it manually, this time let's use some tools to help us along.
 When editing a few files that you have been working on merge tool might not help that much.
 When managing a larger repo with many conflicts, such as when updating a custom android ROM codebase against the Google version or against Cyanogenmod.
-Mergetool can help to address this issue by presenting a editor that displays the merge commits.
+Mergetool can help to address this issue by presenting an editor that displays the merge commits.
 No longer do you need to go and find the `<<<<<<<======>>>>>>>` in the files.
 Mergetool opens up to these locations in the given file.
 
@@ -323,7 +354,7 @@ To use another tool that is not configured for automatic use pass mergetool the 
     $ git mergetool -t meld
 
 Meld will bring up a GUI based mergetool to help you finish the merge.
-Lets bring our student branch up to date.
+Let’s bring our student branch up to date.
     
     $ git checkout 2015spring-student 
     $ git merge 2015spring-stutmp
@@ -344,7 +375,7 @@ Well, that seems like an awful lot to update a repository.
 Thankfully there is a command to do most of that work for us.
 It is `git pull`. 
 Though this does not follow the previous steps exactly, it does perform a `git fetch` followed by a `git merge`.
-Since we don't pull local branches into a repositroy, we merge them, pull implicitly uses a remote and remote branch.
+Since we don't pull local branches into a repository, we merge them, pull implicitly uses a remote and remote branch.
 So that mean that `git pull` uses the `FETCH_HEAD` for merging.
 Assume that there are commits on the upstream remote branch named `2015spring` that we do not have.
 
@@ -354,14 +385,14 @@ Assume that there are commits on the upstream remote branch named `2015spring` t
 
 This will fetch and merge just like we did manually before.
 
-If this results in the a merge conflict again we can use mergetool like we did last time.
+If this results in a merge conflict again we can use mergetool like we did last time.
 It may not always be the case that we want to deal with merge conflicts when using `git pull`.
 Is there a way let would make it so pulling will only accept histories that are 'fast-forwards' to the branch.
 To do this we pass the --ff-only flag to `git pull`
 
     $ git pull --ff-only [remote name]
 
-This stops git from performing the merge if the branch pointer cant be simply updated to the pulled remote branch.
+This stops git from performing the merge if the branch pointer can’t be simply updated to the pulled remote branch.
 
 ###Woo this stream has little streams attached to it
 
@@ -371,7 +402,7 @@ We can do this using `git rebase`.
 Git must use some point as base, its main reference pointer. 
 Once we have modified our repository the pointer to our version is different than the upstream.
 To make sure all of your changes happen after the changes of the remote repository we reestablish a base for our branch and the reapply your commits over the new base.
-This makes all of your commits appear after the last base commit and has the affect of making your git tree appear straight.
+This makes all of your commits appear after the last base commit and has the effect of making your git tree appear straight.
 We do this so that when we send pull request, if they pull using no fast-forwards, they don't have merge conflicts or merge commits.
 Just because rebasing a branch places your commit on top of the new base, it does not mean merge conflicts will not occur for you.
 Instead when `git rebase` encounters a merge conflict when reapplying your commit, it will let you fix the commit that is being applied.
@@ -383,13 +414,19 @@ To use rebase the command is `git rebase` and the branches to rebase.
 For this exercise you will need to rewind your student branch to before the merge commit, this is the commit we made the change to README.md at.
 Use git log for this.
 We don't need all that extra information in the log just the commit hash and the commit name.
-Lets use `git log --pretty` to format the output for easier viewing
+Let’s use `git log --pretty` to format the output for easier viewing
 
     $ git log --pretty=oneline
 
+<<<<<<< HEAD
+Let’s checkout the commit before the merge.
+Create a local branch from this detached head and call it 2015winter-rebase.
+Since we already have the changes on both branches lets go ahead and rebase our changes onto our upstream branch.
+=======
 Lets checkout the commit before the merge.
 Create a local branch from this detached head and call it 2015spring-rebase.
 Since we already have the changes on both branches lets go ahead an rebase our changes onto our upstream branch.
+>>>>>>> upstream/2015spring
 
 
     $ git rebase 2015spring-upstream
@@ -406,14 +443,14 @@ These are the options when in a rebase.
   
     The --continue flag is used to signal to git that you are done editing the source files for the conflicts.
     It will then finish applying that commit.
-    The --skip option tells git to for go this commit and not include it at all.
+    The --skip option tells git to forgo this commit and not include it at all.
     The --abort flag is used to stop the rebase completely without applying any commits to the base branch.
 
 If you check out the history there is no longer a merge commit.
 Instead, your changes are the newest commit.
 Take a good look at these commits.
 The commit that we just rebased onto the upstream branch has the same commit time as when we originally committed it.
-How is this possible, we just commited that again.
+How is this possible, we just committed that again.
 Not really, git tracks both the person who originally made the commit and the person who committed it to that repository.
 This is actually the original author commit time, but not that we rebased that commit.
 When we rebase we change the history of the tree.
@@ -424,8 +461,8 @@ We can view this using `git log` again using the `--pretty=fuller` option
 
 Now we see that the commit has the time we actually committed it at as well as the time that it was first committed at.
 Caution should be used when rebasing.
-If you rebase and push these changes to github it will deny the push even if the files all appear the same.
-This is because github defaults to fast-forward pushes.
+If you rebase and push these changes to GitHub it will deny the push even if the files all appear the same.
+This is because GitHub defaults to fast-forward pushes.
 This prevents someone from changing the history from under someone.
 You can force a non fast-forwards but can have devastating affects if other people have cloned your repository.
 If the central location changes because of a rebase, all forks are now out of sync with the main repo.
@@ -441,18 +478,18 @@ The first was using `git fetch` and `git merge` to manually merge remote reposit
 The second was  not dealing with `git fetch` and `git merge` manually but instead just using `git pull` to invoke these commands for us.
 
 Finally we used `git rebase` to move our commit on top of the upstream branch.
-This had the affect of modifying the commit time and author but not the actual commit author themselves.
+This had the effect of modifying the commit time and author but not the actual commit author themselves.
 Using these workflow you can keep your repo up to date.
 If you like a linear history you can use the rebase based workflow.
-Its a little harder to perform consistently but results in a straight git tree.
+It’s a little harder to perform consistently but results in a straight git tree.
 Using the fetch/merge or pull options results in merge commits for the git repo.
 Depending on whether or not you want merge commits is up to you.
 
 So we have everything we need to easily manage our repositories and keep them up to date with a upstream repository.
-At this point we can now push our changes to github and send a 'pull request' to a repository. 
-You will do exactly this when officially enroll in the class on github.
+At this point we can now push our changes to GitHub and send a 'pull request' to a repository. 
+You will do exactly this when officially enroll in the class on GitHub.
 
-## Dont forget to enroll
+## Don’t forget to enroll
 
 ***IMPORTANT***
 
