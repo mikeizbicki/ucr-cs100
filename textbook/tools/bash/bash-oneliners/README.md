@@ -42,6 +42,9 @@ The flags:
 
 Here is the command in action:
 
+![hog] (images/Capture3_HW4.PNG)
+
+As you can see, the total number of bytes the file takes up is listed in the left column.
 
 ##3. Find all executable files in the current directory and subdirectories
     $ find ./ -type f -perm -o+rx -exec ls -ld '{}' \;
