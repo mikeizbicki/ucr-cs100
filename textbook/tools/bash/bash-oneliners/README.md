@@ -1,5 +1,7 @@
 #10 Useful Bash One-liners#
 
+![bash one-liner logo](https://pbs.twimg.com/profile_images/2032590984/brand_400x400.png)
+
 Here are 10 useful bash one-line commands. 
 
 At LOT of these commands can be substituted with all files types, directories, etc.
@@ -67,7 +69,7 @@ Use the command above to track the top 5 `.txt` files
 ##6. Display the top 10 memory intensive processes on your computer
     $ ps aux | sort -nk +4 | tail
 
-Similar to #2, the command above, when run, prints out, in descending order, the top 10 processes that are utilizing the memory.
+Similar to #2, the command above prints out, in descending order, the top 10 processes that are utilizing the memory.
 
 ![Image of Google Chrome eating ram](http://i.imgur.com/bhfYx6R.jpg)
 
