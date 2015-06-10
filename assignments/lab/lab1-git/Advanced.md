@@ -9,12 +9,17 @@ text/path/name
 I assume that you have already forked your repository from mikeizbikis GitHub.
 If you have not, here are instruction to [fork](Enrolling.md#forking-your-repo-) the repository.
 <<<<<<< HEAD
+<<<<<<< HEAD
 Start by cloning the class repository from your student GitHub account.
 From there checkout the `2015winter` branch, then create and checkout a branch named `2015winter-student`.
 =======
 Start by cloning the class repository from your student github account.
 From there checkout the `2015spring` branch, then create and checkout a branch named `2015spring-student`.
 >>>>>>> 4ff9878... changed winter quarter to spring
+=======
+Start by cloning the class repository from your student github account.
+From there checkout the `2015spring` branch, then create and checkout a branch named `2015spring-student`.
+>>>>>>> upstream/2015spring
 
 ##The stream flows both ways
 
@@ -52,9 +57,12 @@ This is the default remote for a cloned repo.
  
 This will generally be your personal fork of a repo.
 <<<<<<< HEAD
+<<<<<<< HEAD
 If you cloned from a repository that is not your own, you will need to add a remote to the location that you have push access to, i.e. your personal fork on git1hub. 
 Now that we see we have a remote let’s take a look at where this remote points to. 
 =======
+=======
+>>>>>>> upstream/2015spring
 If you cloned from a repository that is not your own, you will need to add a remote to the location that you have push access to, ie. your personal fork on github. 
 Now that we see we have a remote lets take a look at where this remote points to. 
 >>>>>>> 15e193b... Fixed typos
@@ -67,9 +75,12 @@ To get a little more detail about the remote use the -v flag
 This gives both the remote names as well as their push/pull URL associated with that remote.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Why is their a separate URL for both push and pull? That is because each can be set separate for a remote.
 In our case we see that origin points to our GitHub fork.
 =======
+=======
+>>>>>>> upstream/2015spring
 Why is there a separate URL for both push and pull? That is because each can be set separate for a remote.
 In our case we see that origin points to our github fork.
 >>>>>>> 19c62ec... fixed some typos in Advanced.md
@@ -164,10 +175,14 @@ To grab another remote other than the one named `origin` we will specify the rem
     $ git fetch <remote> git fetch upstream
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Let’s get onto the upstream 2015winter branch.
 =======
 Lets get onto the upstream 2015spring branch.
 >>>>>>> 4ff9878... changed winter quarter to spring
+=======
+Lets get onto the upstream 2015spring branch.
+>>>>>>> upstream/2015spring
 To verify the branch is there first run git branch with the `-r` (remote) option passed
 
     $ git branch -r
@@ -237,10 +252,14 @@ We can use git diff for this
     $ git log 2015spring-student FETCH_HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Depending on how many commit differences, there could be a lot of files changes.
 =======
 Depending on how many commit differences there are, there could be a lot of files changes.
 >>>>>>> 19c62ec... fixed some typos in Advanced.md
+=======
+Depending on how many commit differences there are, there could be a lot of files changes.
+>>>>>>> upstream/2015spring
 This can give you an idea of the state of changes against your current repo.
 I think it’s time to merge this upstream branch into ours.
 Let’s play it safe on work on a temporary student branch.
@@ -250,10 +269,14 @@ Let’s play it safe on work on a temporary student branch.
     $ git checkout -b 2015spring-stutmp
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Let’s merge our upstream into the `2015winter-stutmp` branch(we are currently on it)
 =======
 Lets merge our upstream into the `2015spring-stutmp` branch(we are currently on it)
 >>>>>>> 4ff9878... changed winter quarter to spring
+=======
+Lets merge our upstream into the `2015spring-stutmp` branch(we are currently on it)
+>>>>>>> upstream/2015spring
     
     $ git merge <branch name> 
     $ git merge 2015spring-upstream
@@ -262,10 +285,14 @@ Edit the merge commit so it will reflect what you want.
 Most times the merge commit message is enough if it is generated.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 If there was no commits to the main class repo then git will finish the merge with an up to date message.
 =======
 If there were no commits to the main class repo then git will finish the merge with a up to date message.
 >>>>>>> 19c62ec... fixed some typos in Advanced.md
+=======
+If there were no commits to the main class repo then git will finish the merge with a up to date message.
+>>>>>>> upstream/2015spring
 If the merge could be completed without any problems but doesn't just update our branch pointer, then `git merge` will use a merge strategy.
 Most merge messages will inform you that recursive strategy was used.
 
@@ -419,10 +446,13 @@ Let’s use `git log --pretty` to format the output for easier viewing
     $ git log --pretty=oneline
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Let’s checkout the commit before the merge.
 Create a local branch from this detached head and call it 2015winter-rebase.
 Since we already have the changes on both branches lets go ahead and rebase our changes onto our upstream branch.
 =======
+=======
+>>>>>>> upstream/2015spring
 Lets checkout the commit before the merge.
 Create a local branch from this detached head and call it 2015spring-rebase.
 Since we already have the changes on both branches lets go ahead an rebase our changes onto our upstream branch.

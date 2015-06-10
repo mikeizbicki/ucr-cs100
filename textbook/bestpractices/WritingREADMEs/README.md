@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 README Quick Reference Guide
 ---
 * This is by no means an all-inclusive list of everything you should have in your README.
@@ -40,6 +41,8 @@ Things **not** to do
 * Avoid listing commands in words, instead explicitly list the commands using ``` ` ``` in sequential order.
 * It is not necessary to include information about your licensing beyond where to find it in your README.
 =======
+=======
+>>>>>>> upstream/2015spring
 # How to write a good README file
 
 The README file is the most important file in every repo.
@@ -152,4 +155,7 @@ I can just run `ls`/look on GitHub for that info.
 The [git game repo](https://github.com/hgarc014/git-game) breaks almost all the rules I've listed above, but it is super popular!
 If you read what the project does, you'll find out why it doesn't have a traditional README file.
 
+<<<<<<< HEAD
 >>>>>>> eaf388b... redid writing README files
+=======
+>>>>>>> upstream/2015spring
