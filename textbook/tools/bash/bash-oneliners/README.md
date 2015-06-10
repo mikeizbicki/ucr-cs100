@@ -1,10 +1,8 @@
 #10 Useful Bash One-liners#
 
-![bash-one-liner inside terminal](https://pbs.twimg.com/profile_images/2032590984/brand_400x400.png)
-
 Here are 10 useful bash one-line commands. 
 
-At LOT of these commands can be substitued with all files types, directories, etc.
+At LOT of these commands can be substituted with all files types, directories, etc.
 
 ##1. Create a copy of all pdf files into a directory called backup.
     $ for i in *.pdf; do cp $i /backup/; done
@@ -18,7 +16,7 @@ Part A)
 
     for i in *.pdf
 
-Here the for loop is iteratively searching through the current directory for `.pdf` files. 
+Here, the for-loop is iteratively searching through the current directory for `.pdf` files. 
 
 Part B)
 
@@ -44,25 +42,27 @@ In other words, run
     
 
 Here, `cd` will take you to your home directory **and then** you will run the command. 
-This way, you still have the one-liner aspect.
+This way, you still retain the one-liner aspect.
 
 ##3. Find all executable files in the current directory and subdirectories
     $ find ./ -type f -perm -o+rx -exec ls -ld '{}' \;
 
+Combining `ls` and `find` commands along with some flag parameters, we can generate a list of executable files that exist within the current and subdirectories.
+
 ##4. Print your top 10 most frequently used bash commands
     $ history | sed 's/^ \+//;s/  / /' | cut -d' ' -f2- | awk '{ count[$0]++ } END { for (i in count) print count[i], i }' | sort -rn | head -10
     
-##5. Find the 5 most recenetly updated .txt files
+##5. Find the 5 most recently updated .txt files
     $ find . -name "*.txt" -mtime 5
     
 If you are developing a large project, you probably already have a TON of documentation, right?
 With large projects that contain multiple README or `.txt` files, it is easy to lose track of what gets updated. 
-If you're not especially careful in continously committing your work, you'll potentionally skip or overwrite some valuable information. 
+If you're not especially careful in continuously committing your work, you'll potentially skip or overwrite some valuable information. 
 
 Use the above command to keep track and prevent the loss of precious information.
 
 
-Use the command above to to track the top 5 `.txt` files
+Use the command above to track the top 5 `.txt` files
     
 ##6. Display the top 10 memory intensive processes on your computer
     $ ps aux | sort -nk +4 | tail
