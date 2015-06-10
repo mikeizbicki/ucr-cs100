@@ -42,7 +42,6 @@ The flags:
 
 Here is the command in action:
 
-![hog](images/Capture3_HW4.PNG)
 
 ##3. Find all executable files in the current directory and subdirectories
     $ find ./ -type f -perm -o+rx -exec ls -ld '{}' \;
