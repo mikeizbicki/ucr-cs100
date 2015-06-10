@@ -147,7 +147,7 @@ int *(pfunc(int, int)); //pfunc is a function returns an int pointer.
 int (*pfunc)(int, int); //pfunc is a pointer which points to a function that returns an int value.
 ```
 
-Tricky case: a function pointer as the return value of a function pointer.
+Tricky case: a function pointer as the return value of a function.
 ```
 int (*ff(int))(int *, int);
 ```
