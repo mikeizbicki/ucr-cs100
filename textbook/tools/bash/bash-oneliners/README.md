@@ -4,35 +4,25 @@
 
 Here are 10 useful bash one-line commands. 
 
-At LOT of these commands can be substituted with all files types, directories, etc.
+These commands are extremely versatile in that a LOT of these commands can be substituted with all files types, directories, etc.
 
 ##1. Create a copy of all pdf files into a directory called backup.
     $ for i in *.pdf; do cp $i /backup/; done
-Wait, what? 
+![file backup](http://www.bestbackupservices.com/wp-content/uploads/2010/07/CopyBackupFiles.jpg)
 
-Yes, although it seems confusing at first, it will become clear very soon
-Let's break it down into components.
-This command contains three core parts:
+You aren't limited to only `.pdf` files!
+For example, you could replace, the `.pdf` extension with whatever your heart desires:
 
-Part A)
+    $ for i in *.txt; do cp $i /backup/; done
+    $ for i in *.md; do cp $i /backup/; done
+    $ for i in *.cpp; do cp $i /backup/; done
 
-    for i in *.pdf
+The same applies for the folder where these backup files are stored. You can place them in an already existing folder or a newly created one that will be made when you run the command.
 
-Here, the for-loop is iteratively searching through the current directory for `.pdf` files. 
-
-Part B)
-
-    do cp $i /backup/;
-Here it is taking the found `.pdf` file and copying it directory into the backup folder.
-
-Part C)
-
-    done
-    
-Finally it completes the process with the `done` command.
-
-##2. Display largest ten files in current directory and subdirectories.
+##2. Display the ten largest files in current directory and subdirectories.
     $ du -a ./ | sort -n -r | head -n 10
+
+![low disk space](http://www.datareign.com/wp-content/uploads/2013/08/low-disk-space-solution.jpg)
 
 Something hogging your computer hard drive space? Need to figure out what it? 
 
@@ -43,11 +33,12 @@ In other words, run
     $ cd; du -a ./ | sort -n -r | head -n 10
     
 
-Here, `cd` will take you to your home directory **and then** you will run the command. 
-This way, you still retain the one-liner aspect.
+Here, `cd` will take you to your home directory. **then** you will run the command allowing you to retain the one-liner aspect. 
 
 ##3. Find all executable files in the current directory and subdirectories
     $ find ./ -type f -perm -o+rx -exec ls -ld '{}' \;
+
+![exe files](http://outlookrepairhelp.com/wp-content/uploads/2013/08/ac829ddeecc44c12987cab354ba6ae7e.png)
 
 Combining `ls` and `find` commands along with some flag parameters, we can generate a list of executable files that exist within the current and subdirectories.
 
