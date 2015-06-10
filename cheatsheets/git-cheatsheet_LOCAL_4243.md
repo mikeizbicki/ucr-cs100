@@ -1,20 +1,16 @@
-Git Cheat Sheet
+Cheat Sheet
 ===========
+###Git and GitHub
 
-#####CONFIGURING GIT
+#####SETUP GIT
 
-<<<<<<< HEAD
 After installing Git, you can make modifications to customize the environment and identify yourself in it. 
 You just need to make these changes once.
-=======
-Git has a number of global configuration settings. You just need to make these changes once, and they will be applied anytime you use Git.
->>>>>>> dac379d... Update git-cheatsheet.md
 
 ```
 $ git config --global user.name [your username]
 ```
-This command will set the name that will appear on your commit transactions.
-You should set this value to your full (first and last) name.
+This command will set the username that will appear on your commit transactions.
 
 
 ```
@@ -26,16 +22,12 @@ This command will set the email of your commit transactions.
 ```
 $ git config --list
 ```
-Displays all of your globally configured settings, including name and email.
+Command to list all the settings of your Git, including username and email.
 
 
 #####USING HELP
 
-<<<<<<< HEAD
 If you need help to use some Git command, you can always use the command `git help`. 
-=======
-If you need help to use some Git command, you can always use the command `git help`.
->>>>>>> dac379d... Update git-cheatsheet.md
 There are three ways to use it:
 ```
 $ git help [command name]
@@ -55,25 +47,17 @@ You can create a Git project using two different methods: By creating a new repo
 ```
 $ git init
 ```
-<<<<<<< HEAD
 With `git init`, you will create a new Git repository on the project that you are working on. 
 This project can be a new one (that doesn’t have anything on it) or it can be a project that already exists but you want to use version control on it. 
 You should run this command on the folder of your project.
-=======
-With `git init`, you will create a new Git repository on the project that you are working on. This project can be a new one (that doesn’t have anything on it) or it can be a project that already exists but you want to use version control on it. You should run this command from the root folder of your project.
->>>>>>> dac379d... Update git-cheatsheet.md
 
 
 ```
 $ git clone [url]
 ```
-<<<<<<< HEAD
 With `git clone`, you will download a copy of a Git project that already exists. 
 For example, you can take a url from a GitHub project that you want to contribute to, and clone it. 
 This will create a new folder with all the projects on it, in the current directory.
-=======
-With `git clone`, you will download a copy of a Git repo that already exists. For example, you can take a url from a GitHub project that you want to contribute to, and clone it. This will create a new folder with all the projects on it, in the current directory.
->>>>>>> dac379d... Update git-cheatsheet.md
 
 
 #####MAKE CHANGES
@@ -82,7 +66,6 @@ After creating a new repository, you can start doing your project.
 To keep the repository up to date, you have to commit the changes that you've made on your local machine.
 
 ```
-<<<<<<< HEAD
 $ git status
 ```
 This command will list for you all the files that were modified since the last time you committed something, for example, you made some changes in a `main.cpp` file of your project. 
@@ -90,8 +73,6 @@ If you have not committed yet, the command `git status` will show it for you.
 
 
 ```
-=======
->>>>>>> dac379d... Update git-cheatsheet.md
 $ git add [file]
 ````
 With the `git add` command, the files that you changed will be ready to commit.
@@ -101,22 +82,12 @@ $ git rm [file]
 ```
 If you want to remove a file from your project, you also have to remove it from Git so you can commit your changes.
 
-```
-$ git status
-```
-This command will list for you all the files that were modified since the last time you committed something, for example, you made some changes in a `main.cpp` file of your project. If you have not committed yet, the command `git status` will show it for you.
-
 
 ```
 $ git diff
 ```
-<<<<<<< HEAD
 `git diff` will compare what is in your working directory with what is in your staging area (the things you changed, but have not used the command `git add` yet). 
 The result tells you the changes you’ve made that you have not staged.
-=======
-This is a more detailed version of `git status`.  It will compare what is in your working directory with what is in your staging area (the things you changed, but have not used the command `git add` yet). It outputs all the lines on each file that has changed.
-
->>>>>>> dac379d... Update git-cheatsheet.md
 
 
 ```
@@ -135,14 +106,11 @@ Your commit must have a message.
 If you don't do it, the commit will be aborted.
 
 
-<<<<<<< HEAD
 ```
 $ git tag [tag name]
 ```
 The git tag command will give a name (tag) to the last commit that you made. 
 This is helpful because you can access this commit later, even if you've already commit something else.
-=======
->>>>>>> dac379d... Update git-cheatsheet.md
 
 
 #####GROUP CHANGES
@@ -196,10 +164,6 @@ $ git branch -d [branch-name]
 ```
 Command to delete a branch.
 
-```
-$ git tag [tag name]
-```
-The git tag command will give a name (tag) to the last commit that you made. This is helpful because you can access this commit later, even if you've already commit something else.  Unlike a branch, a tag always stays attached to the same commit.  This makes tags useful for releasing versions of your project.
 
 #####REVIEW HISTORY
 Browse and inspect the history of the project.
