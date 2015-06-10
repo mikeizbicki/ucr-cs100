@@ -101,10 +101,14 @@ You MAY use images that you did not create yourself if the use conforms to the i
 There are three submissions for this assignment:
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 The first is part is due before class on **Wednesday, Feb 11**.
 In this submission, you must create an issue on GitHub describing what your tutorial will be about, and who will be on your team.
 =======
 The first is part is due before class on **Wednesday, May 04**.
+=======
+The first is part is due before class on **Wednesday, May 06**.
+>>>>>>> 487ad26... fixed date: Wed is May 6
 In this submission, you must create an issue on github describing what your tutorial will be about, and who will be on your team.
 >>>>>>> 56b26a4... updated hw4 due dates to spring quarter dates
 I will use this submission to ensure your topic is appropriate.
