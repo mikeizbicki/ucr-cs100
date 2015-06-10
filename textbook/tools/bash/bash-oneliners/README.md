@@ -1,5 +1,7 @@
 #10 Useful Bash One-liners#
 
+![bash-one-liner inside terminal](https://pbs.twimg.com/profile_images/2032590984/brand_400x400.png)
+
 Here are 10 useful bash one-line commands. 
 
 At LOT of these commands can be substitued with all files types, directories, etc.
