@@ -56,8 +56,13 @@ To get a little more detail about the remote use the -v flag
 
 This gives both the remote names as well as their push/push URL associated with that remote.
 
+<<<<<<< HEAD
 Why is their a separate URL for both push and pull? That is because each can be set separate for a remote.
 In our case we see that origin points to our GitHub fork.
+=======
+Why is there a separate URL for both push and pull? That is because each can be set separate for a remote.
+In our case we see that origin points to our github fork.
+>>>>>>> 19c62ec... fixed some typos in Advanced.md
 So instead of using a URL for `git push` we can now push using a remote
 
     $ git push <remote> <branch>
@@ -217,7 +222,11 @@ We can use git diff for this
     $ git log 2015winter-student 2015winter-upstream
     $ git log 2015winter-student FETCH_HEAD
 
+<<<<<<< HEAD
 Depending on how many commit differences, there could be a lot of files changes.
+=======
+Depending on how many commit differences there are, there could be a lot of files changes.
+>>>>>>> 19c62ec... fixed some typos in Advanced.md
 This can give you an idea of the state of changes against your current repo.
 I think it’s time to merge this upstream branch into ours.
 Let’s play it safe on work on a temporary student branch.
@@ -234,7 +243,11 @@ Let’s merge our upstream into the `2015winter-stutmp` branch(we are currently on
 Edit the merge commit so it will reflect what you want.
 Most times the merge commit message is enough if it is generated.
 
+<<<<<<< HEAD
 If there was no commits to the main class repo then git will finish the merge with an up to date message.
+=======
+If there were no commits to the main class repo then git will finish the merge with a up to date message.
+>>>>>>> 19c62ec... fixed some typos in Advanced.md
 If the merge could be completed without any problems but doesn't just update our branch pointer, then `git merge` will use a merge strategy.
 Most merge messages will inform you that recursive strategy was used.
 
@@ -281,7 +294,7 @@ araxis bc3 codecompare emerge vimdiff Merging:
 >
 
 In my case vimdiff was the automatically selected mergetool.
-In any case when the tools open up their will generally be three windows.
+In any case when the tools open up there will generally be three windows.
 The window labeled `*.REMOTE` is the file to be merge from the remote repository.
 The `*.LOCAL` file is the local file with upstream changes being merged into and the `*.BASE` file is the common base to base files.
 This means that it doesn't  contain either changes from the local or remote repos.
