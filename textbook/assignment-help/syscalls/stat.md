@@ -39,15 +39,7 @@ We then catch the function's return value which is of type `int`, and perform an
 If the return value is 0, the function succeeded.
 if it is -1, it failed.
 
-To use the `stat` system call, include the following headers in a program:
-```
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <unistd.h>
-```
-
-##struct stat
-After we have called `stat`, we can look at the contents of our `struct stat` buffer to see what information its contents provide us with:
+After we have called `stat`, we can look at the contents of our `struct stat` buffer `s1` to see what information its contents provide us with:
 
 ```
 struct stat{
@@ -128,8 +120,6 @@ Flag	  | Information
 `S_IROTH` | Do others have read permission?
 `S_IWOTH` | Do others have write permission?
 `S_IXOTH` | Do others have execute permission?
-
-####Other elements of stat
 
 For the best details on the remaining elements of `struct stat`, the remaining flags used with `st_mode`, as well as the entirety of using the Stat system call, consider reviewing the stat man page linked here:
 
