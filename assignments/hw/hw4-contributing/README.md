@@ -11,13 +11,15 @@ If you have an idea you want to develop, now's your chance!
 It can be about anything you want.
 I'll help you spiffy it up and distribute it to the open source community.
 
-Here's some projects previous cs100 students have done:
+Here's some projects previous cs100 students have created:
 
-* Henry Garcia and Daniel Ramirez created [the git game](https://github.com/hgarc014/git-game): a game to help people learn git commands
+* Henry Garcia and Daniel Ramirez created [the git game](https://github.com/hgarc014/git-game): a game to help people learn git commands; this was really popular, and I think a sequel covering some more advanced features of git would be a huge success
 
 * Jamal Moon created [PacVim](https://github.com/jmoon018/PacVim): a game to help people learn vim commands
 
 * Thomas Liu and Adam Chao created [regexProgram](https://github.com/Liniarc/regexProgram): a tutorial to help students learn regular expression programming
+
+* Rica Feng and Stanley Cohen's [Melody Matcher](https://github.com/MiaoXiao/Melody-Matcher): a game for improving your tone recognition
 
 #### adding documentation
 
@@ -44,7 +46,7 @@ If you choose a topic like this, make sure it stays nice and cohesive and is not
 * [Antoine Guerrero's writeup of how he hacked git to change his grades in this course](https://github.com/aguerrero/Faking-Git-Commits).
 If you have a similarly engaging story about some cool programming trick you've done, that would make a good writeup.
 
-* [Brunna Amorim's git cheatsheet](../../../textbook/cheatsheets/git-cheatsheet.md).
+* [Brunna Amorim's git cheatsheet](../../../cheatsheets/git-cheatsheet.md).
 A similar cheatsheet for `gdb` or `bash` would make a decent topic.
 
 * [Kevin Nguyen clarified lab 1 by adding pictures to the README file](../../lab/lab1-git).
@@ -57,17 +59,12 @@ Some other ideas are:
 * Think of a topic that initially confused you, and explain it in a way that makes sense to you.
 This will help future students master the topic.
 
-* What aspect of computer science do you wish you knew more about?
-Research it and writeup your findings.
+* Pick one of the labs in this course and improve it.
 
-* The STL and boost libraries have lots of cool features not covered in courses here.
-Pick two or three related topics and write them up in a guide.
+* Create an entirely new lab on a topic that you wish you had more practice with.
 
-* Templates are becoming more and more important in C++ programming.
-Write a tutorial on how to do template meta programming.
-Similarly, write a tutorial on some of the features in the recent C++ 11 or 14 standards.
-
-<!--One simple way to format these tutorials is as a "top ten list."  For example, the project might be "the top ten most useful bash commands."  Then provide ten commands from bash and show how they work and why they're useful.-->
+* Pick a writeup that already exists within the repo and improve it somehow.
+This may entail a complete rewrite of the entire thing.
 
 #### writing style
 
@@ -100,18 +97,18 @@ You MAY use images that you did not create yourself if the use conforms to the i
 
 There are three submissions for this assignment:
 
-The first is part is due before class on **Wednesday, Feb 11**.
+The first is part is due before class on **Wednesday, May 06**.
 In this submission, you must create an issue on github describing what your tutorial will be about, and who will be on your team.
 I will use this submission to ensure your topic is appropriate.
 
-The second submission is due before class on **Wednesday, Feb 25**.
+The second submission is due before class on **Wednesday, May 20**.
 This is a rough draft submission of your project.
 Create a folder in this repo called `/textbook/yoursubject` or put your writeup in whatever subfolder of `textbook` that is appropriate.
 You should create a pull request through github on this repo showing the current status of your project.
 You should be approximately 75% complete with your project's content at this point.
 I will use this submission to make sure that your project will actually provide benefit to future cs100 students.
 
-Your third submission is due at midnight on **Friday, March 13**.
+Your third submission is due at midnight on **Friday, June 05**.
 This will be the final submission for your project.
 You must submit your tutorial as a pull request on this repository through github.
 Use the same folder from above.
