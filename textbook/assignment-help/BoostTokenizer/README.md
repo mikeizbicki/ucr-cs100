@@ -5,6 +5,8 @@ These substrings are called tokens.
 Tokenizing makes life easier when you want to break up a string.
 For example, you can tokenize the string `Get thee to a nunnery`, which will be broken up into the tokens: `Get`, `thee`, `to`, `a`, and `nunnery`.
 
+<<<<<<< HEAD
+=======
 The Boost Tokenizer package uses a `tokenizer` class to tokenize the string that is passed in. 
 The `tokenizer` class takes in several template parameters (which you can see in the [Boost Library Documentation](http://www.boost.org/doc/libs/1_57_0/libs/tokenizer/index.html)).
 One of these template parameters is a `TokenizerFunc` class.
@@ -12,6 +14,7 @@ One of these template parameters is a `TokenizerFunc` class.
 The `TokenizerFunc` template parameter is a class that determines how a string is broken up into tokens.
 The tokenizer class uses four `TokenizerFunction` models, or types: `char_separator`, `escaped_list_separator`, `offset_separator`, and `char_delimiter_separator`.
 
+>>>>>>> upstream/2015spring
 ##How do we use the boost tokenizer?
 
 Let's look at the code from [ex1.cpp](https://github.com/vgarc018/cs100hw4/blob/master/src/ex_1.cpp).

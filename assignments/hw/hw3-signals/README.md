@@ -33,7 +33,7 @@ You do not have to implement this feature.
 
 ### submission instructions
 
-You will add this code to your `rshell` project on github.  You may use any number of branches/commits you find convenient.  When finished, merge with the `master` branch and create a tag called `hw3`.
+You will add this code to your `rshell` project on GitHub.  You may use any number of branches/commits you find convenient.  When finished, merge with the `master` branch and create a tag called `hw3`.
 
 To download and grade your homework, the TA will run the following commands:
 
@@ -61,7 +61,7 @@ As with your previous assignments: Your `tests` directory will contain a file ca
 
 You MAY NOT look at the source code of any other student.
 
-You MAY discuss with other students in general terms how to use the unix functions.
+You MAY discuss with other students in general terms how to use the Unix functions.
 
 You are ENCOURAGED to talk with other students about test cases.
 You are allowed to freely share ideas in this regard.

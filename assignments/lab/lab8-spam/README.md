@@ -46,7 +46,7 @@ For example, if you were a jerk, you could spoof an email from me to one of your
 $ ./spam.sh classmate@ucr.edu mike@izbicki.me
 Class is cancelled forever.  
 There is no more homework.
-Everyone get's an A++++++.
+Everyone gets an A++++++.
 :)
 ^D
 ```

@@ -9,7 +9,7 @@ In this course, we won't be using any graphical interfaces.
 All our programming will be done on the terminal using a text editor called `vim`.
 The purpose of this lab is to introduce you to `vim`.
 It will seem weird at first.
-But with practice, you will find `vim` much more powerful than either the `geany` or `Cloud9` editors you are already familiar with.
+But with practice, you will find `vim` much more powerful than either the `Geany` or `Cloud9` editors you are already familiar with.
 
 ### part 1: vimtutor
 
