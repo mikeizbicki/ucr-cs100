@@ -39,8 +39,13 @@ Finally it completes the process with the `done` command.
 ##5. Find the 5 most recenetly updated .txt files
     $ find . -name "*.txt" -mtime 5
     
-##6 Determine the highest memory consumer on your computer!
+##6. Display the top 10 memory intensive processes on your computer
     $ ps aux | sort -nk +4 | tail
+    
+##7. Grab files from a remote server to you local machine
+    $ scp your_username@remotehost.edu:foobar.txt /some/local/directory
+    
+##8. Execute a command at midnight
+    $ echo cmd | at midnight
 
     
-
