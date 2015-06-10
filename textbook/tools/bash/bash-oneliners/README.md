@@ -85,11 +85,19 @@ Similar to #2, the command above prints out, in descending order, the top 10 pro
 
 Just like google chrome, there can be many other programs that are slowing down your computer.
 
-
 ##7. Grab files from a remote server to you local machine
     $ scp your_username@remotehost.edu:foobar.txt /some/local/directory
     
+
+To go the other way (local to server), format is as follows:
+    
+    $ scp /some/local/directory/file.txt your_username@remotehost.edu:/home/location/files
+
+scp is a wonderful bash one-liner for transferring files back and forth from server to local and local to server.
+scp is an alternate way for one to transfer files back and forth without having to use git.
+So it is great one-line command for those who are unfamilar with git and/or don't have the time to learn it.
+
 ##8. Execute a command at midnight
     $ echo cmd | at midnight
 
-    
+
