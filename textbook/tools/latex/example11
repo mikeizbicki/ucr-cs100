@@ -1,0 +1,40 @@
+\documentclass[landscape, 12pt]{article}
+
+\usepackage{subcaption}
+\usepackage{gitdags}
+
+\begin{document}
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+      \gitDAG[grow right sep = 2em]{ % arrow's size
+        % Commits that you create appear here 
+        Starting Project -- { 
+          Added LICENSE file, 
+          Added TEX file,
+        }
+      };
+      % Tag reference
+      \gittag
+        [beginning]       % node name
+        {beginning}       % node text
+        {above=of Starting Project} % node placement
+        {Starting Project}          % target
+      % Branch
+      \gitbranch
+        {master}     % node name and text 
+        {above=of Added LICENSE file} % node placement
+        {Added LICENSE file}          % target
+      % Branch
+      \gitbranch
+        {coding}     % node name and text 
+        {below=of Added TEX file} % node placement
+        {Added TEX file}          % target
+      % HEAD reference
+      \gitHEAD
+        {above=of master} % node placement
+        {master}          % target
+    \end{tikzpicture}
+\end{figure}
+
+\end{document}
