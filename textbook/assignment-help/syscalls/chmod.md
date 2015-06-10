@@ -9,6 +9,7 @@ Documentation on the 'chmod()' system call which is used to change the mode and/
 ##Inclusion
 
 `#include <sys/types.h>`
+
 `#include <sys/stat.h>`
 
 ##Declaration
