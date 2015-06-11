@@ -1,105 +1,131 @@
-#System calls to get the status of a file
+#Retrieving file information via the Stat system call
+In this write-up, we will be going over how to use the system call `stat`.
+We will go over the general purpose of `stat`, followed by its function call, parameters, and return value.
 
-This document contains information on how to get the status of a file. The system calls described here are `stat`, `fstat`, and `lstat`.
+##stat
+`stat` is a system call that can retrieve information from a single file.
 
-## What does stat, fstat, and lstat do?
-`stat`, `fstat`, and `lstat` obtain information of a file. All three return a `stat` structure when successful.
 
-The `stat` structure is as follows:
+Let's say that we are working in the following set of directories `head` and `tail`,
 ```
-struct stat {
-               dev_t     st_dev;         /* ID of device containing file */
-               ino_t     st_ino;         /* inode number */
-               mode_t    st_mode;        /* protection */
-               nlink_t   st_nlink;       /* number of hard links */
-               uid_t     st_uid;         /* user ID of owner */
-               gid_t     st_gid;         /* group ID of owner */
-               dev_t     st_rdev;        /* device ID (if special file) */
-               off_t     st_size;        /* total size, in bytes */
-               blksize_t st_blksize;     /* blocksize for filesystem I/O */
-               blkcnt_t  st_blocks;      /* number of 512B blocks allocated */
-               time_t    st_atime;       /* time of last access */
-               time_t    st_mtime;       /* time of last modification */
-               time_t    st_ctime;       /* time of last status change */
+head:
+	main.cpp
+	tail
+
+tail:
+	file1
+```
+writing in `main.cpp`, and want to retrieve information on `file1` with `stat`.
+To do so, we can write this inside `main.cpp`:
+```
+struct stat s1;
+
+const char* pathname1 = "./tail/file1";
+
+int return = stat(pathname1, s1);
+if(return == -1){
+	perror("stat failed");
+}
+```
+We initialize `struct stat s1` before calling `stat` because it will be used as a buffer to receive the file's information after `stat` executes.
+
+Then we initialize a `const char*` with the proper pathname from the directory the program is in, to the directory `file1` is in.
+
+We then call `stat`.
+The first parameter of the function call is of type `const char*` and will lead the function to the file specified by the pathname in `pathname1`.
+Next, we pass in our already initialized `s1` of type `struct stat` as the second parameter, which will receive the information on the file specified by `pathname1`.
+
+We then catch the function's return value which is of type `int`, and perform an error check.
+If the return value is 0, the function succeeded.
+if it is -1, it failed.
+
+After we have called `stat`, we can look at the contents of our `struct stat` buffer `s1` to see what information its contents provide us with:
+
+```
+struct stat{
+	t_dev;    			  /* ID of device containing file */
+	no_t	  st_ino;     /* inode number */
+	mode_t    st_mode;    /* protection 
+	nlink_t   st_nlink;   /* number of hard links */
+	uid_t     st_uid;     /* user ID of owner */
+	gid_t     st_gid;     /* group ID of owner */
+	dev_t     st_rdev;    /* device ID (if special file) */
+	off_t     st_size;    /* total size, in bytes */
+	blkcnt_t  st_blocks;  /* number of 512B blocks allocated */
+	time_t    st_atime;   /* time of last access */
+	time_t    st_mtime;   /* time of last modification */
+	time_t    st_ctime;   /* time of last status change */
 };
 ```
-####Returns:
-As mentioned above, a `stat` structure is returned upon sucess. If an error occurs, -1 is returned.
 
-####Headers:
-`#include <sys/types.h>` `#include <sys/stat.h>`  `#include <unistd.h>`
+####st_mode
+One of the contents of the `struct stat` type and a variable of type `mode_t`, the value of `st_mode` is an octal number whose value is determined by several different permissions and properties of the file.
+What we can do with this octal number is perform a bitwise AND operation with one or more available flags to determine whether that flag is true or false for our file.
 
-####Declaration:
-- stat: `int stat(const char*pathname, struct stat *buf);`
-- fstat: `int stat(int fd, struct stat *buf);`
-- lstat: `int stat(const char*pathname, struct stat *buf);`
-
-####[Man Page](http://linux.die.net/man/2/stat)
-
-##Example
-####Calling stat
-**stat**
+Here is an example of using such an operation with two different `struct stat` types:
 ```
-struct stat buf; 	// create a stat struct to store file status
-const char* path; 	// name of the path where the file is located
-stat (path, &buf); 	// call stat (no error check)
+struct stat s1;
+struct stat s2;
+
+const char* path1 = "./tail";
+const char* path2 = "./tail/file1";
+
+int return1 = stat(path1, s1);
+if(return1 == -1){
+	perror("stat failed");
+}
+
+int return2 = stat(path2, s2);
+if(return2 == -1){
+	perror("stat failed");
+}
+
+int isdir1 = (s1.st_mode & S_IFDIR);
+int isreg1 = (s1.st_mode & S_IFREG);
+
+int isdir2 = (s2.st_mode & S_IFDIR);
+int isreg2 = (s2.st_mode & S_IFREG);
 ```
+First we call two instances of `stat`, one for `tail` and the other for `file1`, giving us two `struct stat` types loaded with the information on each.
+Then after error checking, we grab the `st_mode` value from both `struct stat` types using `s1.st_mode` and `s2.st_mode`, and use the bitwise AND operation with the flags `S_IFDIR` and `S_IFREG`.
 
-**fstat**
-Instead of a pathname, `fstat` uses a file descriptor to stat. You can obtain a file descriptor by using the `open` syscall. (See the [file descriptors section](./fd.md))  on how to use it.)
+ANDing an `st_mode` value with the `S_IFDIR` flag will return 0 if the concerning file is not a directory.
+Otherwise it will return non-zero, letting us know that the file is actually a directory.
+
+ANDing the same value with the `S_IFREG` flag will return 0 if the concerning file is not a regular file.
+Otherwise it will return non-zero, letting us know that the file is indeed a regular file.
+
+In the case of our example, we would get the following values for our variables:
 ```
-struct stat buf;  	 // create a stat struct
-int fd; 			// file descriptor (obtained from open syscall)
-fstat (fd, &buf); 	// call fstat (no error check)
+isdir1 != 0
+isreg1 = 0
+
+isdir2 = 0
+isreg2 != 0
 ```
+So we know from this that `file1` is indeed a regular file, and `tail` is a directory.
 
-**lstat**
-In this case, the pathname used in `lstat` is a symbolic link. Because of this, `lstat` returns information about that link and not the file itself.
+Below is a list of flags that are also useful, and the information they provide when ANDed with `st_mode`:
+
+Flag	  | Information
+----------|--------------------------------
+`S_IFREG` | Is it a regular file?
+`S_IFDIR` | Is it a directory?
+`S_IRUSR` | Does the owner have read permission?
+`S_IWUSR` | Does the owner have write permission?
+`S_IXUSR` | Does the owner have execute permission?
+`S_IRGRP` | Does the group have read permission?
+`S_IWGRP` | Does the group have write permission?
+`S_IXGRP` | Does the group have execute permission?
+`S_IROTH` | Do others have read permission?
+`S_IWOTH` | Do others have write permission?
+`S_IXOTH` | Do others have execute permission?
+
+For the best details on the remaining elements of `struct stat`, the remaining flags used with `st_mode`, as well as the entirety of using the Stat system call, consider reviewing the stat man page linked here:
+
+#####[man page](http://linux.die.net/man/2/stat)
+
+Or you can enter the following command from inside your linux terminal to access the page locally:
 ```
-struct stat buf;		// create a stat struct
-const char* symLink;	// name of symbolic link
-lstat (symLink, &buf);	// call lstat (no error check)
+$ man 2 stat
 ```
-####Obtaining information from stat
-After successfully calling `stat`, you can now obtain information about it. Remember the `stat` structure mentioned earlier? We will be using parts of that structure to get the info we need.
-
-Let's say that you want to know about the file's permissions. We can use the `st_mode` field and [Bitwise Operators](../bitwise-ops/README.md) to do so.
-
-For example, we can determine if the owner has read permissions on a file stat `fStat`:
-```
-struct stat fStat; // assume stat was successful (no error)
-
-if (fStat.st_mode & S_IRUSR) // bitwise ops is used here
-  cout << "The owner has read permissions";
-else
-  cout << "Owner does NOT have read permissions"
-```
-Similarily, you can do bitwise ops with the `st_mode` field to obtain info about the other permissions. Below is a list of some of them.
-
-Flag    | Permission
-------- | ------------------------------
-S_IRUSR | Owner has read permission
-S_IWUSR | Owner has write permission
-S_IXUSR | Owner has execute permission
-S_IRGRP | Group has read permission
-S_IWGRP | Group has write permission
-S_IXGRP | Group has execute permission
-S_IROTH | Others have read permission
-S_IWOTH | Others have write permission
-S_IXOTH | Others have execute permission
-
-Besides the `st_mode` field, you can access the other fields to obtain information about the file.
-
-## Summary
-In conclusion, here's how the `stat` syscall works:
-
-1. Create an empty `stat` structure to store the stat.
-2. Get stat by calling it:
-  - If you have a path name:
-    - Path name is NOT a symbolic link:
-      - use `stat()`
-    - Path name is a symbolic link:
-      - use `lstat()`
-  - If you have a file descriptor (obtained from using `open`):
-    - use `fstat()`
-3. Obtain information from the stat (i.e. `fStat.st_mode`) and use bitwise ops if necessary.
