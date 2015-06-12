@@ -48,7 +48,7 @@ The only difference from the example above is the following line:
 
 This is, between the `[]` we defined the paper size, the letter size, and the layout of the page.
 There are many options that you may use in this tag.
-For example, you can create your document with two columns, change the font size, type and color, change the layout of the document.
+For example, you can create your document with two columns, change the font size, type and color, change the layout of the document and many other things.
 All the possibilities you can check [here](http://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_Class_Options).
 
 Result:
