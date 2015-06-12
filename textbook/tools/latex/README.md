@@ -16,6 +16,8 @@ One simple command on the terminal should do all this work for us:
 `pdflatex <name_of_file>.tex`
 
 Just replace `<name_of_file>` for the name you actually saved your file and... You're done! :D
+The fact that LaTeX uses plain text files is a great advantage, so it is compatible with git.
+
 
 ##Structure
 
@@ -23,7 +25,6 @@ The LaTeX language is based on commands that always starts with `\`, which is a 
 The commands are written like this `\<command>` or between `\begin{<command>}` and `\end{<command>}`.
 This is, instead of `<command>` you will replace it as the following example.
 
-Example:
 ```latex
 \documentclass {article}
 \title {My first \LaTeX}
@@ -45,18 +46,17 @@ The only difference from the example above is the following line:
 ```
 
 This is, between the `[]` we defined the paper size, the letter size, and the layout of the page.
-There are many options for this tag.
-If you want something more specific for your document, check [here](http://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_Class_Options).
+There are many options that you may use in this tag.
+For example, you can create your document with two columns, change the font size, type and color, change the layout of the document.
+All the possibilities you can check [here](http://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_Class_Options).
 
-This example is going to look like this once compiled:
+Result:
 ![1](https://cloud.githubusercontent.com/assets/9004719/8072381/ee3296b6-0ec9-11e5-83a4-514359626467.jpg)
 
 ##Packages
 Packages are add-ons that implement additional features for documents written in LaTeX.
 These packages are inserted in the preamble using the command `\usepackage [optional]{package}`
 If you want to check the packages that are pre-installed with LaTeX, check the  [package reference page](http://en.wikibooks.org/wiki/LaTeX/Package_Reference).
-
-Example:
 
 ```latex
 \documentclass[12pt]{article}
@@ -70,28 +70,27 @@ Ut sea agam laudem}.
 \end{document}
 ```
 
-This example is going to look like this once compiled:
+Result:
 ![2](https://cloud.githubusercontent.com/assets/9004719/8072379/ee25816a-0ec9-11e5-9764-744eb19a0aba.jpg)
 
-Users can also create their own packages. 
-In this case, the user need to download the file and put in the same folder of the project or somewhere else that LaTeX can find. 
+Any people can also create their own packages, even you!
+In this case, it's just put the package file in the same folder of the project. 
 In the [CS Environment section](/textbook/tools/latex/README.md#cs-environment) you are going to find a example on how it works.
 
 ##Math Environment
-As science, math and engineering students, using LaTeX can be really handy to write papers that include formulas.
+One of the main advantages of using LaTeX is the ability to write math formulas easily.
+That's why we, as science, math and engineering students, should learn LaTeX to write papers, articles, etc.
 
 ###Setting up
 There are three main ways to insert formulas or other calculations:
 * **Inline** by using dollar sign to start and to end a formula. 
 
-  Example:
-  
-  ```latex
+    ```latex
   The volume inside a sphere is given by $V = \frac{4}{3} \pi r^{3}$.
   ```
   
-  This example is going to look like this once compiled:
-  ![3](https://cloud.githubusercontent.com/assets/9004719/8072377/ee23d4d2-0ec9-11e5-847f-532143a60fbb.jpg)
+Result:
+![3](https://cloud.githubusercontent.com/assets/9004719/8072377/ee23d4d2-0ec9-11e5-847f-532143a60fbb.jpg)
 
   
   Note that in this example the `\frac` tag was used to build a fraction.
@@ -100,7 +99,6 @@ There are three main ways to insert formulas or other calculations:
 
 * **New line with section number** by using the `\[` operator to open and `\]`to close.
 
-  Example:
   ```latex
   The volume inside a sphere is defined by 
   \[
@@ -108,12 +106,11 @@ There are three main ways to insert formulas or other calculations:
   \]
   ```
   
-  This example is going to look like this once compiled:
-  ![4](https://cloud.githubusercontent.com/assets/9004719/8072378/ee240b78-0ec9-11e5-87d1-9575ede43ce3.jpg)
+Result:
+![4](https://cloud.githubusercontent.com/assets/9004719/8072378/ee240b78-0ec9-11e5-87d1-9575ede43ce3.jpg)
 
 * **New Line without section number** by using the tag `\begin{equation}` and `\end{equation}` to close.
 
-  Example:
   ```latex
   The volume inside a sphere is defined by 
   \begin{equation}
@@ -121,14 +118,13 @@ There are three main ways to insert formulas or other calculations:
   \end{equation}    
   ```
   
-  This example is going to look like this once compiled:
-  ![5](https://cloud.githubusercontent.com/assets/9004719/8072376/ee2385a4-0ec9-11e5-8595-e4e6f568186e.jpg)
+Result:
+![5](https://cloud.githubusercontent.com/assets/9004719/8072376/ee2385a4-0ec9-11e5-8595-e4e6f568186e.jpg)
   
 ###Building Formulas
 Here come some really useful tool to build your formulas using LaTeX.
 * Power.
 
-  Example:
   ```latex
   \[
   f(x) = \sqrt{x^{a} + y^{b}}
@@ -137,12 +133,11 @@ Here come some really useful tool to build your formulas using LaTeX.
   As you can see, by using the syntax `x^{a}`, `x` will become the base and `b` will become an exponent.
   Thus, we will have `x` to the power of `a`. 
   
-  This example is going to look like this once compiled:
-  ![6](https://cloud.githubusercontent.com/assets/9004719/8072738/429b6cc8-0ecf-11e5-9f81-3e42c52a81aa.jpg)  
+Result:
+![6](https://cloud.githubusercontent.com/assets/9004719/8072738/429b6cc8-0ecf-11e5-9f81-3e42c52a81aa.jpg)  
 
 * Index.
 
-  Example:
   ```latex
   \[
   x_{3j}^{2i}
@@ -151,14 +146,12 @@ Here come some really useful tool to build your formulas using LaTeX.
   In this case the syntax is pretty much the same as the "power example" aforementioned.
   The only difference is the underscore to indicate it's an index. 
   
-  This example is going to look like this once compiled:
-  ![7](https://cloud.githubusercontent.com/assets/9004719/8072375/ee20bff4-0ec9-11e5-9e42-720ad1e0acd3.jpg)
+Result:
+![7](https://cloud.githubusercontent.com/assets/9004719/8072375/ee20bff4-0ec9-11e5-9e42-720ad1e0acd3.jpg)
 
 ###CS Environment
 As Computer Scientists we may want to use LaTeX to document what we are coding.
-The package `listings` handles languages in LaTeX, such as C/C++, Java and others.
-
-Example:
+The package `listings` typesets code in LaTeX, such as C/C++, Java and others.
 
 ```latex
 \documentclass[a4paper]{article}
@@ -235,9 +228,9 @@ In order to use many languages in the same LaTeX file, we need to use this:
 ```
 You can find a complete example using many languages  [here](/textbook/tools/latex/ex23.tex).
 
-#Combining linux tools
+#Combining Unix tools
 
-Now, let's combine some of the main UNIX tools together, so you can have an idea on how use it in the future.
+Now, let's combine some of the main Unix tools together, so you can have an idea on how use it in the future.
 
 First of all, let's set our environment. 
 We will be using the folder `article`. 
@@ -251,13 +244,13 @@ Time to get some TeX code finally done! Let's create and edit out first file thr
 
 The following text creates a basic file.
 
-Example:
 ```latex
 \documentclass[12pt]{article}
 \begin{document}
 Lorem ipsum dolor sit amet, pro saperet luptatum repudiandae an. 
 Ex nam everti inimicus, ex has error scaevola consetetur, pericula molestiae ut usu. 
-Duo te consul concludaturque. Et blandit petentium torquatos eum, eam an facilis principes inciderint, nec an expetenda delicatissimi. 
+Duo te consul concludaturque.
+Et blandit petentium torquatos eum, eam an facilis principes inciderint, nec an expetenda delicatissimi. 
 Ut sea agam laudem. 
 \end{document}
 ```
@@ -269,7 +262,8 @@ If everything worked fine, now you should be able to open the pdf file `loremips
 
 If we succeed at the previous steps, it's time to do some commits. 
 But first, we need to add the files to the staging area of git. 
-Remember! We should commit ONLY source code, README and LICENSE files. NEVER add executable and log files. 
+Remember! We should commit ONLY source code, README and LICENSE files.
+This is, do not add pdf files.
 In the following example we are going to create some tags and branches just to exemplify the usage of `gitdags` that comes next.
 
 ```
@@ -287,22 +281,16 @@ touch LICENSE
 git add LICENSE
 git commit -m "Added license file"
 ```
-
 In small projects you may not have a lot of commits, but in huge projects it's gonna happen all the time.
+It allows collaboration with other people using the same tools that you are already familiar with.
 So now, we are going to present a package for drawing Git history graphs using LaTeX, called gitdags. 
 It can be really helpful to draw a really nice looking git repository for this [lab1](/assignments/lab/lab1-git).
 
-#Gitdags
+##Gitdags
 
 `gitdags` is a LaTeX package that allows the production of pretty Git history graphs. 
-The next image is an example on how your Git history graph can look like:
-
-![11](https://cloud.githubusercontent.com/assets/9004719/8072606/13436f40-0ecd-11e5-8ffe-a4d4cc795f65.jpg)
-
-
-##What `gitdags` is *not*
-
-Automatic generation of Git history graphs.
+It doesn't make automatic generation of Git history graphs, but it's handy.
+We really encourage you to use it in [this lab](/assignments/lab/lab1-git/using-git.md).
 
 ##Dependencies
 To use `gitdags`, we will need
@@ -312,8 +300,6 @@ To use `gitdags`, we will need
 
 If we decide to use `gitdags` to draw the Git history graphs of the example above, we may use the following code. 
 The explanation is commented on it.
-
-Example:
 
 ```latex
 \documentclass[landscape, 12pt]{article}
