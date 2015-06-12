@@ -20,7 +20,8 @@ Just replace `<name_of_file>` for the name you actually saved your file and... Y
 ##Structure
 
 The LaTeX language is based on commands that always starts with `\`, which is a marker. 
-The commands are written like this `\command` or between `\begin{command}` and `\end{command}`.
+The commands are written like this `\<command>` or between `\begin{<command>}` and `\end{<command>}`.
+This is, instead of `<command>` you will replace it as the following example.
 
 Example:
 ```latex
@@ -32,7 +33,7 @@ Hello World! This is my first \LaTeX!
 \end {document}
 ```
 Everything that comes after `\end {document}` will be ignored. 
-In the example above we used the document class "article", but there are many classes that you can use.
+In the example above we used the document class `article`, but there are many classes that you can use.
 You can find further explanation on different classes [here](http://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes).
 
 ##Style
