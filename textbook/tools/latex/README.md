@@ -295,7 +295,7 @@ We really encourage you to use it in [this lab](/assignments/lab/lab1-git/using-
 ##Dependencies
 To use `gitdags`, we will need
 * [gitdags.sty](https://raw.githubusercontent.com/Jubobs/gitdags/master/gitdags.sty) file;
-* `tikz` package (v3.0+);
+* `tikz` package - come automatically installed with every latex distribution;
 * [`xcolor-solarized`](https://github.com/Jubobs/xcolor-solarized) package.
 
 If we decide to use `gitdags` to draw the Git history graphs of the example above, we may use the following code. 
