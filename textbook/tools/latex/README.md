@@ -1,6 +1,5 @@
 #Tutorial on LaTeX
 
-This is a tutorial on LaTeX to beginners.
 As computer scientists and engineers we are supposed to produce papers and to document programs that we create.
 With that being said, we want to present LaTeX — a great tool which produces beautiful type and is written in an intuitive language. 
 
@@ -10,6 +9,13 @@ With that being said, we want to present LaTeX — a great tool which produces b
 **LaTeX** is a program that collects commands using TeX as processing base and it was created by Leslie Lamport in the 80s in order to facilitate the use of TEX through commands for different functions.
 
 If you want to know more about it you can check [Tex page](http://en.wikipedia.org/wiki/TeX) and [LaTeX page](http://en.wikipedia.org/wiki/LaTeX) on wikipedia!
+
+##Compiling
+One simple command on the terminal should do all this work for us:
+
+`pdflatex <name_of_file>.tex`
+
+Just replace `<name_of_file>` for the name you actually saved your file and... You're done! :D
 
 ##Structure
 
@@ -25,9 +31,7 @@ Example:
 Hello World! This is my first \LaTeX!
 \end {document}
 ```
-
-Everything that comes before `\begin {command}` is considered the preamble
-Everything that comes after `\end {document}` is ignored. 
+Everything that comes after `\end {document}` will be ignored. 
 In the example above we used the document class "article", but there are many classes that you can use.
 You can find further explanation on different classes [here](http://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes).
 
@@ -258,10 +262,6 @@ Ut sea agam laudem.
 ```
 
 After saving and closing `vim`, it's time to compile our LaTeX file and create the pdf file. 
-One simple command on the terminal should do all this work for us:
-
-`pdflatex loremipsum.tex`
-
 If everything worked fine, now you should be able to open the pdf file `loremipsum.pdf` that will look like this:
 
 ![9](https://cloud.githubusercontent.com/assets/9004719/8072630/70987320-0ecd-11e5-8dfa-8b82ec61aee5.jpg)
