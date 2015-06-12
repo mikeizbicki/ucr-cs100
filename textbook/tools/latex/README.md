@@ -349,7 +349,7 @@ This is a preview on the code above:
 ![10](https://cloud.githubusercontent.com/assets/9004719/8072572/95ed2f2c-0ecc-11e5-93f7-f1287b58f6d3.jpg)
 
 A more complex example can be found [here](https://github.com/Jubobs/gitdags/wiki).
-I really recommend that you take a few minutes and "play" with this codes.
+We really recommend that you take a few minutes and "play" with this codes.
 
 #Conclusion
 So as you can see, we can use:
@@ -359,4 +359,4 @@ So as you can see, we can use:
 * [Makefile](/textbook/tools/make): to put things together
 * pdflatex: to output as a pdf file.
 
-I hope you liked this tutorial and use it in the future!
+We hope you liked this tutorial and use it in the future!
