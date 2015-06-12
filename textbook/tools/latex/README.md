@@ -35,6 +35,7 @@ Hello World! This is my first \LaTeX!
 ```
 Everything that comes after `\end {document}` will be ignored. 
 In the example above we used the document class `article`, but there are many classes that you can use.
+Classes sets the overall document format like the available sectioning structure and also defines some basic font related macros.
 You can find further explanation on different classes [here](http://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes).
 
 ##Style
