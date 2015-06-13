@@ -106,7 +106,10 @@ There's an AWK for that:
 ```
 awk '!/Class/ {print $1,$2}' class.txt
 ```
-The `$num` notation denotes columns on a line.  By default, columns are divided by whitespace.  So in the previous output's first line, `$1,$2` refer to `Richell Quade`, whereas `$4` refers to `F`.  Therefore our output becomes
+The `$num` notation denotes columns on a line.
+By default, columns are divided by whitespace.
+So in the previous output's first line, `$1,$2` refer to `Richell Quade`, whereas `$4` refers to `F`.
+Therefore our output becomes
 ```
 ...
 Richelle Quade
@@ -123,7 +126,10 @@ As a side note, you can use `$0` to refer to all columns, or the entire line.
 ##Formulas and Expressions##
 Within the `{ action }` field you can define a variety of instructions using arithmetic and conditional expressions.
 
-Variable assignment is easy in AWK. You do not need to explicitly declare a variable.  Simply define the variable and AWK will automatically declare it.  For instance, instead of `int i = 1`, simply write `i = 1`.
+Variable assignment is easy in AWK.
+You do not need to explicitly declare a variable.
+Simply define the variable and AWK will automatically declare it.
+For instance, instead of `int i = 1`, simply write `i = 1`.
 
 Arithmetic expressions can be performed very similarly to your programming language of choice.
 
