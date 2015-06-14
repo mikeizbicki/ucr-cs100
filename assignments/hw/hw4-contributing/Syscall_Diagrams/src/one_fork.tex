@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage{nopageno}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz,listings, soul}
+\usetikzlibrary{shapes.geometric, arrows, decorations.markings, positioning, backgrounds, calc}
+
+\begin{document}
+\lstset{language=C++}  
+
+\tikzstyle{parent} = [rectangle, rounded corners, minimum width=3cm, minimum height=1.5cm, draw=black, thick, fill=yellow!40]
+\tikzstyle{child} = [rectangle, rounded corners, minimum width=3cm, minimum height=1.5cm, text centered, draw=black, thick, fill=yellow!40]
+\tikzstyle{arrow} = [thick, decoration={markings,mark=at position
+  1 with {\arrow[semithick]{open triangle 60}}},
+  double distance=1.4pt, shorten >= 5.5pt,
+  preaction = {decorate},
+  postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
+
+\begin{tikzpicture}[
+node distance=2cm,
+level distance=3cm,
+level 1/.style = {sibling distance=8cm}
+]
+%\draw [help lines] (-5,2) grid (5,-10);
+\node(fork1)[parent]{
+\begin{lstlisting}
+int pid=fork
+\end{lstlisting}
+};
+
+\node(wait) at (5,0)[parent]{
+\begin{lstlisting}
+wait
+\end{lstlisting}
+};
+
+\node(child1) at (0,-3.5)[child,fill=yellow!40]
+{
+\begin{lstlisting}
+execvp
+\end{lstlisting}
+};
+
+\node(child1d) [above=0.2cm of child1]{CHILD};
+\node(parent1d) [above=0.2cm of fork1]{PARENT};
+
+%Back Ground Outline
+\begin{pgfonlayer}{background}
+\path[fill=blue!20,rounded corners]
+($(child1.north west)+(-0.3,1)$)  rectangle ($(child1.south east)+(0.3,-0.4)$);
+\path[fill=green!20,rounded corners]
+($(fork1.north west)+(-0.3,1)$)  rectangle ($(wait.south east)+(0.3,-0.4)$);
+\end{pgfonlayer}
+
+\draw [arrow] (fork1) -- ($(child1.north)+(0,1)$);
+\draw [arrow] (fork1) -- (wait);
+\draw [arrow] ($(fork1.north)+(0,2)$) -- ($(fork1.north)+(0,1)$);
+\draw [arrow] (wait.east) -- ($(wait.east)+(1,0)$);
+
+\end{tikzpicture}
+
+\end{document}

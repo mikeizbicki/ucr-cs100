@@ -1,0 +1,120 @@
+\documentclass{article}
+\usepackage{nopageno}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz,listings, soul}
+\usetikzlibrary{shapes.geometric, arrows, decorations.markings, positioning, backgrounds, calc}
+
+\begin{document}
+\lstset{language=C++}  
+
+\tikzstyle{parent} = [rectangle, rounded corners, minimum width=3cm, minimum height=1.2cm, draw=black, thick, fill=yellow!40]
+\tikzstyle{child} = [rectangle, rounded corners, minimum width=3cm, minimum height=1.2cm, text centered, draw=black, thick, fill=yellow!40]
+\tikzstyle{arrow} = [thick, decoration={markings,mark=at position
+  1 with {\arrow[semithick]{open triangle 60}}},
+  double distance=1.4pt, shorten >= 5.5pt,
+  preaction = {decorate},
+  postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
+
+
+\hspace*{-4.5cm}
+\begin{tikzpicture}[
+node distance=2cm,
+]
+%\draw [help lines] (-5,2) grid (5,-10);
+
+\node(fork1) at (-5,0)[parent]{
+\begin{lstlisting}
+int pid = fork()
+\end{lstlisting}
+};
+
+\node(fork2) at (0,0) [parent]{
+\begin{lstlisting}
+int pid2 = fork()
+\end{lstlisting}
+};
+
+\node(fork3) at (5,0) [parent]{
+\begin{lstlisting}
+int pid3 = fork()
+\end{lstlisting}
+};
+
+\node(wait) at (10,0)[parent]{
+\begin{lstlisting}
+wait();
+\end{lstlisting}
+};
+
+\node(wait2) at (10,-2)[parent]{
+\begin{lstlisting}
+wait();
+\end{lstlisting}
+};
+
+\node(wait3) at (10,-4)[parent]{
+\begin{lstlisting}
+wait();
+\end{lstlisting}
+};
+
+\node(child1) at (-5,-3)[child,fill=yellow!40]
+{
+\begin{lstlisting}
+execvp
+\end{lstlisting}
+};
+
+\node(child2) at (-0,-3)[child,fill=yellow!40]
+{
+\begin{lstlisting}
+execvp
+\end{lstlisting}
+};
+
+\node(child3) at (5,-3)[child,fill=yellow!40]
+{
+\begin{lstlisting}
+execvp
+\end{lstlisting}
+};
+
+
+\node(child1d) [above=0.2cm of child1]{CHILD1};
+\node(child1d) [above=0.2cm of child2]{CHILD2};
+\node(child1d) [above=0.2cm of child3]{CHILD3};
+\node(parent1d) [above=0.2cm of fork1]{PARENT};
+
+%Back Ground Outline
+\begin{pgfonlayer}{background}
+%Child
+\path[fill=blue!20,rounded corners]
+($(child1.north west)+(-0.3,1)$)  rectangle ($(child1.south east)+(0.3,-0.4)$);
+\path[fill=blue!20,rounded corners]
+($(child2.north west)+(-0.3,1)$)  rectangle ($(child2.south east)+(0.3,-0.4)$);
+\path[fill=blue!20,rounded corners]
+($(child3.north west)+(-0.3,1)$)  rectangle ($(child3.south east)+(0.3,-0.4)$);
+%Parent
+\path[fill=green!20,rounded corners]
+($(fork1.north west)+(-0.3,1)$)  rectangle ($(wait.south east)+(0.3,-0.4)$);
+\path[fill=green!20,rounded corners]
+($(wait.north west)+(-0.3,1)$)  rectangle ($(wait3.south east)+(0.3,-0.4)$);
+\end{pgfonlayer}
+
+
+%Lines
+\draw [arrow] (fork1) -- ($(child1.north)+(0,1)$);
+\draw [arrow] (fork2) -- ($(child2.north)+(0,1)$);
+\draw [arrow] (fork3) -- ($(child3.north)+(0,1)$);
+\draw [arrow] (fork1) -- (fork2);
+\draw [arrow] (fork2) -- (fork3);
+\draw [arrow] (fork3) -- (wait);
+\draw [arrow] ($(fork1.north)+(0,2)$) -- ($(fork1.north)+(0,1)$);
+\draw [arrow] (wait) -- (wait2);
+\draw [arrow] (wait2) -- (wait3);
+\draw [arrow] (wait3.east) -- ($(wait3.east)+(1,0)$);
+
+\end{tikzpicture}
+
+
+\end{document}

@@ -1,0 +1,227 @@
+\documentclass{article}
+\usepackage{array,multirow}
+\usepackage[normalem]{ulem}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{listings,nopageno}
+\usetikzlibrary{arrows, decorations.markings,calc, backgrounds}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes.geometric, decorations.markings, arrows, positioning, backgrounds, calc, matrix}
+
+\begin{document}
+\lstset{language=C++}  
+
+\tikzstyle{parent} = [rectangle, rounded corners, minimum width=3cm, minimum height=1.2cm, draw=black, thick, fill=yellow!40]
+\tikzstyle{child} = [rectangle, rounded corners, minimum width=3cm, minimum height=1.2cm, text centered, draw=black, thick, fill=yellow!40]
+\tikzstyle{arrow} = [thick, decoration={markings,mark=at position
+1 with {\arrow[semithick]{open triangle 60}}},
+double distance=1.4pt, shorten >= 5.5pt,
+preaction = {decorate},
+postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
+
+
+\hspace*{-4.5cm}
+\begin{tikzpicture}[node distance=2cm]
+
+%PARENT
+\node(pipe) at (-5, -1) [parent]{
+\begin{lstlisting}
+int fd[4];
+pipe(fd);
+pipe(fd+2);
+\end{lstlisting}
+};
+\node(fork1) at (-5,-3)[parent]{
+\begin{lstlisting}
+int pid = fork()
+\end{lstlisting}
+};
+
+\node(fork2) at (0,-3) [parent]{
+\begin{lstlisting}
+int pid2 = fork()
+\end{lstlisting}
+};
+
+\node(fork3) at (5,-3) [parent]{
+\begin{lstlisting}
+int pid3 = fork()
+\end{lstlisting}
+};
+
+\node(wait1) at (10,-3)[parent]{
+\begin{lstlisting}
+wait()
+\end{lstlisting}
+};
+
+\node(wait2) at (10,-5)[child]
+{
+\begin{lstlisting}
+wait()
+\end{lstlisting}
+};
+
+\node(wait3) at (10,-7)[child]
+{
+\begin{lstlisting}
+wait()
+\end{lstlisting}
+};
+
+%Level1
+\node(child1) at (-5,-6)[child]
+{
+\begin{lstlisting}
+dup2(fd[1],1)
+\end{lstlisting}
+};
+
+\node(child2) at (0,-6)[child]
+{
+\begin{lstlisting}
+dup2(fd[0],0);
+dup2(fd[3],1);
+\end{lstlisting}
+};
+
+\node(child3) at (5,-6)[child]
+{
+\begin{lstlisting}
+dup2(fd[2],0)
+\end{lstlisting}
+};
+
+%Level 2
+\node(child1c) at (-5,-8)[child]
+{
+\begin{lstlisting}
+close(fd[0]);
+close(fd[1]);
+close(fd[2]);
+close(fd[3]);
+\end{lstlisting}
+};
+
+\node(child2c) at (0,-8)[child]
+{
+\begin{lstlisting}
+close(fd[0]);
+close(fd[1]);
+close(fd[2]);
+close(fd[3]);
+\end{lstlisting}
+};
+
+\node(child3c) at (5,-8)[child]
+{
+\begin{lstlisting}
+close(fd[0]);
+close(fd[1]);
+close(fd[2]);
+close(fd[3]);
+\end{lstlisting}
+};
+
+%Level3
+\node(child12) at (-5,-10)[child]
+{
+\begin{lstlisting}
+execvp
+\end{lstlisting}
+};
+
+\node(child22) at (-0,-10)[child]
+{
+\begin{lstlisting}
+execvp
+\end{lstlisting}
+};
+
+\node(child32) at (5,-10)[child]
+{
+\begin{lstlisting}
+execvp
+\end{lstlisting}
+};
+
+%Tables
+\begin{scope}[auto, every node/.style={draw,rectangle,minimum height=1.5cm,minimum width=1cm,inner sep=1,fill=white}]
+\node (table2)[below= 1cm of child22] {
+\begin{tabular}{r | >{\centering\arraybackslash}p{1.1cm}  | l}\cline{2-2}
+child1 $\rightarrow$ & in & \\\cline{2-2}
+& out & $\rightarrow$ child3 \\\cline{2-2}
+& err & $\rightarrow$ disp \\\cline{2-2}
+\end{tabular}
+};
+\node (table1)[left= .2cm of table2] {
+\begin{tabular}{r | >{\centering\arraybackslash}p{1.1cm}  | l}\cline{2-2}
+key $\rightarrow$ & in & \\\cline{2-2}
+& out & $\rightarrow$ child2 \\\cline{2-2}
+& err & $\rightarrow$ disp \\\cline{2-2}
+\end{tabular}
+};	
+\node (table3)[right= .2cm of table2] {
+\begin{tabular}{r | >{\centering\arraybackslash}p{1.1cm}  | l}\cline{2-2}
+child2 $\rightarrow$ & in & \\\cline{2-2}
+& out & $\rightarrow$ disp \\\cline{2-2}
+& err & $\rightarrow$ disp \\\cline{2-2}
+\end{tabular}
+};
+\end{scope}
+
+\node(child1d) [above=0.2cm of child1]{CHILD1};
+\node(child2d) [above=0.2cm of child2]{CHILD2};
+\node(child3d) [above=0.2cm of child3]{CHILD3};
+\node(parent1d) [above=1cm of fork3, xshift = -2cm]{ PARENT};
+\node(table1d) [above= 0.05cm of table1]{CHILD1};
+\node(table2d) [above= 0.05cm of table2]{CHILD2};
+\node(table3d) [above= 0.05cm of table3]{CHILD3};
+
+%Back Ground Outline
+\begin{pgfonlayer}{background}
+%Child
+\path[fill=blue!20,rounded corners]
+($(child1.north west)+(-0.3,1)$)  rectangle ($(child12.south east)+(0.3,-1)$);
+\path[fill=blue!20,rounded corners]
+($(child2.north west)+(-0.3,1)$)  rectangle ($(child22.south east)+(0.3,-1)$);
+\path[fill=blue!20,rounded corners]
+($(child3.north west)+(-0.3,1)$)  rectangle ($(child32.south east)+(0.3,-1)$);
+\path[fill=blue!20,rounded corners]
+($(table1.north west)+(-0.3,0.4)$)  rectangle ($(table3.south east)+(0.3,-0.4)$);
+%Parent
+\path[fill=green!20,rounded corners]
+($(pipe.north west)+(-0.6,.8)$)  rectangle ($(wait1.south east)+(0.3,-0.4)$);
+\path[fill=green!20,rounded corners]
+($(wait1.north west)+(-0.6,.8)$)  rectangle ($(wait3.south east)+(0.3,-0.4)$);
+\end{pgfonlayer}
+
+%Arrows
+\draw [arrow] ($(pipe.north)+(0,.5)$) -- (pipe.north);
+\draw [arrow] (pipe) -- (fork1);
+\draw [arrow] (fork1) -- ($(child1.north)+(0,1)$);
+\draw [arrow] (fork2) -- ($(child2.north)+(0,1)$);
+\draw [arrow] (fork3) -- ($(child3.north)+(0,1)$);
+\draw [arrow] (fork1) -- (fork2);
+\draw [arrow] (fork2) -- (fork3);
+\draw [arrow] (fork3) -- (wait1);
+\draw [arrow] (wait1) -- (wait2);
+\draw [arrow] (wait2) -- (wait3);
+\draw [arrow] (wait3.east) -- ($(wait3.east)+(1,0)$);
+\draw [arrow] (child1) -- (child1c);
+\draw [arrow] (child1c) -- (child12);
+\draw [arrow] (child2) -- (child2c);
+\draw [arrow] (child3) -- (child3c);
+\draw [arrow] (child3c) -- (child32);
+\draw [arrow] (child2c) -- (child22);
+
+\draw [thick,dashed,->] (child12.east) -- ($(child22.west)+(-0.4,0)$);
+\draw [thick,dashed,->] (child22.east) -- ($(child32.west)+(-0.4,0)$);
+
+\end{tikzpicture}
+
+\end{document}
