@@ -40,7 +40,7 @@ If you have done everything correctly so far, running the command `pdflatex` and
 You're done! :D
 The resulting pdf show look like this:
 
-![example1](/images/example1.png)
+![example1](images/example1.png)
 
 If you want, you can check our pdf [here](examples/example1.pdf). 
 
@@ -63,8 +63,7 @@ All the possibilities you can check [here](http://en.wikibooks.org/wiki/LaTeX/Do
 
 ##Packages
 Packages are add-ons that implement additional features for documents written in LaTeX.
-These packages are inserted in the preamble using the command `\usepackage [optional]{package}`
-If you want to check the packages that are pre-installed with LaTeX, check the  [package reference page](http://en.wikibooks.org/wiki/LaTeX/Package_Reference).
+Here is a great example:
 
 ```latex
 \documentclass[12pt]{article}
@@ -78,10 +77,20 @@ Ut sea agam laudem}.
 \end{document}
 ```
 
-Result:
-![2](https://cloud.githubusercontent.com/assets/9004719/8072379/ee25816a-0ec9-11e5-9764-744eb19a0aba.jpg)
+As you can see, packages are always inserted before `\begin{document}` by using the command `\usepackage [optional]{package}`.
+If you want to check the packages that are pre-installed with LaTeX, check the  [package reference page](http://en.wikibooks.org/wiki/LaTeX/Package_Reference). 
 
-Any people can also create their own packages, even you!
+Compile with: 
+
+`pdflatex example1.tex`
+
+Result:
+
+![example2](images/example2.png)
+
+If you want, you can check our pdf [here](examples/example2.pdf). 
+
+Also, know that anyone can create their own packages, even you!
 In this case, it's just put the package file in the same folder of the project. 
 In the [CS Environment section](/textbook/tools/latex/README.md#cs-environment) you are going to find a example on how it works.
 
