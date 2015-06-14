@@ -42,7 +42,7 @@ The resulting pdf show look like this:
 
 ![example1](images/example1.png)
 
-If you want, you can check our pdf [here](examples/example1.pdf). 
+If you want, you can take a look on the pdf file [here](examples/example1.pdf). 
 
 The fact that LaTeX uses plain text files is a great advantage, so it is compatible with git.
 It means that you can version control your TeX files and benfit from all advantages git offers.
@@ -82,13 +82,13 @@ If you want to check the packages that are pre-installed with LaTeX, check the  
 
 Compile with: 
 
-`pdflatex example1.tex`
+`pdflatex example2.tex`
 
 Result:
 
 ![example2](images/example2.png)
 
-If you want, you can check our pdf [here](examples/example2.pdf). 
+If you want, you can take a look on the pdf file [here](examples/example2.pdf). 
 
 Also, know that anyone can create their own packages, even you!
 In this case, it's just put the package file in the same folder of the project. 
@@ -100,21 +100,28 @@ That's why we, as science, math and engineering students, should learn LaTeX to 
 
 ###Setting up
 There are three main ways to insert formulas or other calculations:
-* **Inline** by using dollar sign to start and to end a formula. 
+* **Inline**: You can insert a formula in the same line as you text by using dollar sign to start and to end a formula. 
 
     ```latex
   The volume inside a sphere is given by $V = \frac{4}{3} \pi r^{3}$.
   ```
   
-Result:
-![3](https://cloud.githubusercontent.com/assets/9004719/8072377/ee23d4d2-0ec9-11e5-847f-532143a60fbb.jpg)
-
-  
   Note that in this example the `\frac` tag was used to build a fraction.
   The first pair of curly brackets contains the numerator and the second contains the denominator.
   Also, this example uses the `\pi` tag to show the corresponding symbol to the Greek letter Pi. 
+  
+  Compile with: 
 
-* **New line with section number** by using the `\[` operator to open and `\]`to close.
+  `pdflatex example3.tex`
+
+  Result:
+    
+  ![example3](images/example3.png)
+    
+  If you want, you can take a look on the pdf file [here](examples/example3.pdf). 
+
+* **New line with section number**: This is a really nice looking way to organize your formulas.
+  You just need to use the `\[` operator to open and `\]`to close.
 
   ```latex
   The volume inside a sphere is defined by 
@@ -123,10 +130,19 @@ Result:
   \]
   ```
   
-Result:
-![4](https://cloud.githubusercontent.com/assets/9004719/8072378/ee240b78-0ec9-11e5-87d1-9575ede43ce3.jpg)
+  By doing this LaTeX will centralize your formula and also insert whatever section this it belongs to.
+ 
+  Compile with: 
 
-* **New Line without section number** by using the tag `\begin{equation}` and `\end{equation}` to close.
+  `pdflatex example4.tex`
+
+  Result:
+    
+  ![example4](images/example4.png)
+    
+  If you want, you can take a look on the pdf file [here](examples/example4.pdf). 
+
+* **New Line without section number**: If you do not need the section number, this is the best option.
 
   ```latex
   The volume inside a sphere is defined by 
@@ -135,8 +151,17 @@ Result:
   \end{equation}    
   ```
   
-Result:
-![5](https://cloud.githubusercontent.com/assets/9004719/8072376/ee2385a4-0ec9-11e5-8595-e4e6f568186e.jpg)
+  As you can see, it can easily be done by using the tag `\begin{equation}` and `\end{equation}` to close.
+  
+  Compile with: 
+
+  `pdflatex example5.tex`
+
+  Result:
+    
+  ![example5](images/example5.png)
+    
+  If you want, you can take a look on the pdf file [here](examples/example5.pdf). 
   
 ###Building Formulas
 Here come some really useful tool to build your formulas using LaTeX.
