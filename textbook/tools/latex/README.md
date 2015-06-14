@@ -98,8 +98,10 @@ In the [CS Environment section](/textbook/tools/latex/README.md#cs-environment) 
 One of the main advantages of using LaTeX is the ability to write math formulas easily.
 That's why we, as science, math and engineering students, should learn LaTeX to write papers, articles, etc.
 
-###Setting up
-There are three main ways to insert formulas or other calculations:
+###Math Tags
+There are three main ways to insert formulas or other calculations. 
+This section will go over these three ways and also give more information about some useful tags to do math.
+
 * **Inline**: You can insert a formula in the same line as you text by using dollar sign to start and to end a formula. 
 
     ```latex
@@ -121,17 +123,19 @@ There are three main ways to insert formulas or other calculations:
   If you want, you can take a look on the pdf file [here](examples/example3.pdf). 
 
 * **New line with section number**: This is a really nice looking way to organize your formulas.
-  You just need to use the `\[` operator to open and `\]`to close.
+  You just need to use the tag `\begin{equation}` and `\end{equation}` to close.
 
-  ```latex
-  The volume inside a sphere is defined by 
-  \[
-  V = \frac{4}{3} \pi r^{3}
-  \]
+    ```latex 
+  \begin{equation}
+  f(x) = \sqrt{x^{a} + y^{b}}
+  \end{equation}    
   ```
+
+  By doing this, LaTeX will centralize your formula and also insert whatever section it belongs to.
+  Also, note that by using the syntax `x^{a}`, `x` will become the base and `b` will become an exponent.
+  Thus, we will have `x` to the power of `a`. 
   
-  By doing this LaTeX will centralize your formula and also insert whatever section this it belongs to.
- 
+  
   Compile with: 
 
   `pdflatex example4.tex`
@@ -145,13 +149,13 @@ There are three main ways to insert formulas or other calculations:
 * **New Line without section number**: If you do not need the section number, this is the best option.
 
   ```latex
-  The volume inside a sphere is defined by 
-  \begin{equation}
-  V = \frac{4}{3} \pi r^{3}
-  \end{equation}    
+  \[
+  x_{3j}^{2i}
+  \]
   ```
   
   As you can see, it can easily be done by using the tag `\begin{equation}` and `\end{equation}` to close.
+  Also, another important thing to note is that the underscore was used to indicate that the value between the curly brackets is being used as an index.
   
   Compile with: 
 
@@ -162,31 +166,7 @@ There are three main ways to insert formulas or other calculations:
   ![example5](images/example5.png)
     
   If you want, you can take a look on the pdf file [here](examples/example5.pdf). 
-  
-###Building Formulas
-Here come some really useful tool to build your formulas using LaTeX.
-* Power.
 
-  ```latex
-  \[
-  f(x) = \sqrt{x^{a} + y^{b}}
-  \]   
-  ```
-  As you can see, by using the syntax `x^{a}`, `x` will become the base and `b` will become an exponent.
-  Thus, we will have `x` to the power of `a`. 
-  
-Result:
-![6](https://cloud.githubusercontent.com/assets/9004719/8072738/429b6cc8-0ecf-11e5-9f81-3e42c52a81aa.jpg)  
-
-* Index.
-
-  ```latex
-  \[
-  x_{3j}^{2i}
-  \]   
-  ```
-  In this case the syntax is pretty much the same as the "power example" aforementioned.
-  The only difference is the underscore to indicate it's an index. 
   
 Result:
 ![7](https://cloud.githubusercontent.com/assets/9004719/8072375/ee20bff4-0ec9-11e5-9e42-720ad1e0acd3.jpg)
