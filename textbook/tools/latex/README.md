@@ -132,7 +132,8 @@ This section will go over these three ways and also give more information about 
   ```
 
   By doing this, LaTeX will centralize your formula and also insert whatever section it belongs to.
-  Also, note that by using the syntax `x^{a}`, `x` will become the base and `b` will become an exponent.
+  Also, the tag`\sqrt` was used to represent a square root so that everything in between the curly brackets gets under the square root symbol. 
+  Furthermore, note that by using the syntax `x^{a}`, `x` will become the base and `b` will become an exponent.
   Thus, we will have `x` to the power of `a`. 
   
   
@@ -154,7 +155,7 @@ This section will go over these three ways and also give more information about 
   \]
   ```
   
-  As you can see, it can easily be done by using the tag `\begin{equation}` and `\end{equation}` to close.
+  As you can see, it can easily be done by using the tag `\[` and `\]` to close.
   Also, another important thing to note is that the underscore was used to indicate that the value between the curly brackets is being used as an index.
   
   Compile with: 
@@ -167,9 +168,6 @@ This section will go over these three ways and also give more information about 
     
   If you want, you can take a look on the pdf file [here](examples/example5.pdf). 
 
-  
-Result:
-![7](https://cloud.githubusercontent.com/assets/9004719/8072375/ee20bff4-0ec9-11e5-9e42-720ad1e0acd3.jpg)
 
 ###CS Environment
 As Computer Scientists we may want to use LaTeX to document what we are coding.
@@ -222,8 +220,15 @@ int main()
 ```
 This example is in C++, but we can change to many languages. It's just change the value of the line `language=C++`
 
-When compiled, it’s going to look like this:
-![8](https://cloud.githubusercontent.com/assets/9004719/8072540/1e718182-0ecc-11e5-8fd1-72efdc5b3658.jpg)
+Compile with:
+
+`pdflatex example6.tex`
+
+Result:
+
+![example6](images/example6.png)
+
+If you want, you can take a look on the pdf file [here](examples/example6.pdf). 
 
 
 In order to use many languages in the same LaTeX file, we need to use this:
@@ -278,9 +283,16 @@ Ut sea agam laudem.
 ```
 
 After saving and closing `vim`, it's time to compile our LaTeX file and create the pdf file. 
-If everything worked fine, now you should be able to open the pdf file `loremipsum.pdf` that will look like this:
+Compile with:
 
-![9](https://cloud.githubusercontent.com/assets/9004719/8072630/70987320-0ecd-11e5-8dfa-8b82ec61aee5.jpg)
+`pdflatex example7.tex`
+
+When compiled, it’s going to look like this:
+
+![example7](images/example7.png)
+
+If everything worked fine, now you should be able to open the pdf file `example7.pdf`.
+
 
 If we succeed at the previous steps, it's time to do some commits. 
 But first, we need to add the files to the staging area of git. 
@@ -367,8 +379,16 @@ The explanation is commented on it.
 ```
 
 This is just a simple example on how you can use it.
-This is a preview on the code above:
-![10](https://cloud.githubusercontent.com/assets/9004719/8072572/95ed2f2c-0ecc-11e5-93f7-f1287b58f6d3.jpg)
+
+Compile with:
+
+`pdflatex example8.tex`
+
+Result:
+
+![example8](images/example8.png)
+
+If you want, you can take a look on the pdf file [here](examples/example8.pdf). 
 
 A more complex example can be found [here](https://github.com/Jubobs/gitdags/wiki).
 We really recommend that you take a few minutes and "play" with this codes.
