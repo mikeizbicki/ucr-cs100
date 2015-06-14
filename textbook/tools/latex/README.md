@@ -10,14 +10,6 @@ With that being said, we want to present LaTeX — a great tool which produces b
 
 If you want to know more about it you can check [Tex page](http://en.wikipedia.org/wiki/TeX) and [LaTeX page](http://en.wikipedia.org/wiki/LaTeX) on wikipedia!
 
-##Compiling
-One simple command on the terminal should do all this work for us:
-
-`pdflatex <name_of_file>.tex`
-
-Just replace `<name_of_file>` for the name you actually saved your file and... You're done! :D
-The fact that LaTeX uses plain text files is a great advantage, so it is compatible with git.
-
 
 ##Structure
 
@@ -38,6 +30,23 @@ In the example above we used the document class `article`, but there are many cl
 Classes sets the overall document format like the available sectioning structure and also defines some basic font related macros.
 You can find further explanation on different classes [here](http://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes).
 
+The next step to generate our first pdf is compiling.
+One simple command on the terminal should do the hard work for us:
+
+`pdflatex example1.tex`
+
+As you can see it's as simple as that. 
+If you have done everything correctly so far, running the command `pdflatex` and passing the name of your TeX file would be everything you need. 
+You're done! :D
+The resulting pdf show look like this:
+
+![example1](/images/example1.png)
+
+If you want, you can check our pdf [here](examples/example1.pdf). 
+
+The fact that LaTeX uses plain text files is a great advantage, so it is compatible with git.
+It means that you can version control your TeX files and benfit from all advantages git offers.
+
 ##Style
 In the `\documentclass` tag you may want to define some of your document's properties style as optional parameters.
 The only difference from the example above is the following line:
@@ -51,8 +60,6 @@ There are many options that you may use in this tag.
 For example, you can create your document with two columns, change the font size, type and color, change the layout of the document and many other things.
 All the possibilities you can check [here](http://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_Class_Options).
 
-Result:
-![1](https://cloud.githubusercontent.com/assets/9004719/8072381/ee3296b6-0ec9-11e5-83a4-514359626467.jpg)
 
 ##Packages
 Packages are add-ons that implement additional features for documents written in LaTeX.
