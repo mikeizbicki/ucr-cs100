@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage{nopageno}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz,listings, soul,lipsum, graphicx, amssymb, array, multirow}
+\usetikzlibrary{shapes.geometric, arrows, decorations.markings, positioning, backgrounds, calc}
+
+\begin{document}
+\lstset{language=C++}  
+
+\tikzstyle{parent} = [rectangle, rounded corners, minimum width=3cm, minimum height=1.5cm, draw=black, thick, fill=yellow!40]
+\tikzstyle{child} = [rectangle, rounded corners, minimum width=3cm, minimum height=1.5cm, text centered, draw=black, thick, fill=yellow!40]
+\tikzstyle{arrow} = [thick, decoration={markings,mark=at position
+  1 with {\arrow[semithick]{open triangle 60}}},
+  double distance=1.4pt, shorten >= 5.5pt,
+  preaction = {decorate},
+  postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
+\hspace{-2cm}
+\begin{tikzpicture}
+
+
+\node(code) at (-2.4,0) [child] {code};
+
+\node(ioe) [draw, below= .5cm of code.south, rectangle, minimum width =3cm, minimum height = 1.5cm,fill=white]{system};
+%Back Ground Outline
+\node(parent) [right= 2.5cm of code.east] {PARENT};
+\node(child) [below=1.5cm of parent.south] {CHILD};
+\begin{pgfonlayer}{background}
+\path[fill=blue!20,rounded corners]
+($(child.north west)+(-.5,.5)$)  rectangle ($(child.south east)+(.5,-.5)$);
+\path[fill=green!20,rounded corners]
+($(parent.north west)+(-.5,.5)$)  rectangle ($(parent.south east)+(.5,-.5)$);
+\end{pgfonlayer}
+
+\node(dash) [right=1.5cm of parent.east,fill=white] {flow of information};
+\draw [thick,dashed,->] (dash) -- ($(dash.east)+(1,0)$);
+
+\node(thick) [below=1.5cm of dash.south,fill=white] {flow of time};
+\draw [arrow] (thick) -- ($(thick.east)+(1,0)$);
+
+\end{tikzpicture}
+\end{document}
