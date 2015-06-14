@@ -291,7 +291,7 @@ When compiled, it’s going to look like this:
 
 ![example7](images/example7.png)
 
-If everything worked fine, now you should be able to open the pdf file `example7.pdf`.
+If everything worked fine, now you should be able to open the pdf file [example7.pdf](examples/example7.pdf). .
 
 
 If we succeed at the previous steps, it's time to do some commits. 
