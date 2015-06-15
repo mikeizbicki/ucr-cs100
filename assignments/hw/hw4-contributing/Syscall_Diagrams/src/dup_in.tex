@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage{nopageno}
+\usepackage{array,multirow}
+\usepackage[normalem]{ulem}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usetikzlibrary{arrows, decorations.markings}
+\usetikzlibrary{positioning}
+
+\lstset{upquote=true}
+
+\tikzstyle{parent} = [rectangle, rounded corners, minimum width=3cm, minimum height=1.5cm, draw=black, thick, fill=yellow!40]
+\tikzstyle{code} = [rectangle, rounded corners, minimum width=4cm, minimum height=1.25cm, text centered, draw=black, thick, fill=yellow!40]
+\tikzstyle{arrow} = [thick,->,>=stealth,scale=2]
+
+\tikzstyle{vecArrow} = [thick, decoration={markings,mark=at position
+  1 with {\arrow[semithick]{open triangle 60}}},
+  double distance=1.4pt, shorten >= 5.5pt,
+  preaction = {decorate},
+  postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
+\tikzstyle{innerWhite} = [semithick, white,line width=1.4pt, shorten >= 4.5pt]
+
+\begin{document}
+\hspace{-3.5cm}
+\begin{tikzpicture}
+	\begin{scope}[auto, every node/.style={draw,rectangle,minimum height=2cm,minimum width=10cm,inner sep=1,fill=white}]
+
+	\node(a) {
+		\hspace{.4cm}
+		\begin{tabular}{r r | >{\centering\arraybackslash}p{1.7cm}  | l}\cline{3-3}
+			tty (keyboard) $\rightarrow$ & 0 & in & \\\cline{3-3}
+			& 1 & out & $\rightarrow$  tty (display) \\\cline{3-3}
+			& 2 & err & $\rightarrow$  tty (display) \\\cline{3-3}
+		\end{tabular}
+	};
+	\node[below= 1cm of a.south] (b) { 
+		\hspace{.35cm}
+		\begin{tabular}{r r | >{\centering\arraybackslash}p{1.7cm}  | l}\cline{3-3}
+			tty (keyboard) $\rightarrow$ & 0 & in & \\\cline{3-3}
+			& 1 & out & $\rightarrow$  tty (display) \\\cline{3-3}
+			& 2 & err & $\rightarrow$  tty (display) \\\cline{3-3}
+			file $\rightarrow$ & 3 & fd & $\rightarrow$ file \\\cline{3-3}
+		\end{tabular}
+	};
+	
+	\node[below= 1cm of b.south] (c) {
+		\hspace{-.3cm}
+		\begin{tabular}{r r | >{\centering\arraybackslash}p{1.7cm}  | l}\cline{3-3}
+			\sout{tty (keyboard)} file $\rightarrow$ & 0 & \sout{in} fd & $\rightarrow$ file\\\cline{3-3}
+			& 1 & out & $\rightarrow$ tty (display) \\\cline{3-3}
+			& 2 & err & $\rightarrow$ tty (display) \\\cline{3-3}
+			file $\rightarrow$ & 3 & fd & $\rightarrow$ file \\\cline{3-3}
+		\end{tabular}
+	};
+	\node[below= 1cm of c.south] (d) {
+		\hspace{2cm}
+		\begin{tabular}{r r | >{\centering\arraybackslash}p{1.7cm}  | l}\cline{3-3}
+			file  $\rightarrow$ & 0 & fd & $\rightarrow$ file\\\cline{3-3}
+			& 1 & out& $\rightarrow$ tty (display) \\\cline{3-3}
+			& 2 & err & $\rightarrow$ tty (display) \\\cline{3-3}
+			\sout{file} $\rightarrow$ & 3 & \sout{fd} & $\rightarrow$ \sout{file} \\\cline{3-3}
+		\end{tabular}
+	};
+	\end{scope}
+	\node[draw,left= 1cm of b.west, code] (x)  {
+		\begin{lstlisting} 
+int fd = open("file"); 
+		\end{lstlisting}
+		};
+	\node[draw,left= 1cm of c.west,code] (y) {
+		\begin{lstlisting} 
+dup2(fd,0); 
+		\end{lstlisting}
+		};
+	\node[draw, left= 1cm of d.west, code] (z) {
+		\begin{lstlisting} 
+close(fd);
+		\end{lstlisting}
+		};
+	\draw[vecArrow] (a) to (b);
+	\draw[vecArrow] (b) to (c);
+	\draw[vecArrow] (c) to (d);
+\end{tikzpicture}
+\end{document}

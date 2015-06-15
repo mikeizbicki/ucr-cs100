@@ -1,0 +1,101 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz,listings, soul}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{nopageno}
+\usepackage{array,multirow}
+\usepackage[normalem]{ulem}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{array,multirow}
+\usetikzlibrary{shapes.geometric, arrows, positioning, backgrounds, calc, decorations.markings}
+
+\begin{document}
+\lstset{language=C++}  
+
+\tikzstyle{parent} = [rectangle, rounded corners, minimum width=3cm, minimum height=1.5cm, draw=black, thick, fill=yellow!40]
+\tikzstyle{child} = [rectangle, rounded corners, minimum width=3cm, minimum height=1.5cm, text centered, draw=black, thick, fill=yellow!40]
+\tikzstyle{arrow} = [thick,->,>=stealth,scale=2]
+\tikzstyle{vecArrow} = [thick, decoration={markings,mark=at position
+1 with {\arrow[semithick]{open triangle 60}}},
+double distance=1.4pt, shorten >= 5.5pt,
+preaction = {decorate},
+postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
+
+\begin{tikzpicture}[
+node distance=2cm,
+level distance=3cm,
+level 1/.style = {sibling distance=8cm}
+]
+%\draw [help lines] (-5,2) grid (5,-10);
+
+
+\node(fork1)[parent]{
+    \begin{lstlisting}
+int pid=fork
+    \end{lstlisting}
+};
+
+\node(wait)[right= 2cm of fork1,parent]{
+    \begin{lstlisting}
+wait
+    \end{lstlisting}
+};
+
+\node(open) at (0,-3.5)[child]
+{
+    \begin{lstlisting}
+open(file)
+    \end{lstlisting}
+};
+
+\node(dup)[child,below=1cm of open]
+{
+    \begin{lstlisting}
+dup2(fd,1)
+    \end{lstlisting}
+};
+
+\node(execvp)[child,below=1cm of dup]
+{
+    \begin{lstlisting}
+execvp
+    \end{lstlisting}
+};
+\begin{scope}[auto, every node/.style={draw,rectangle,minimum height=1.5cm,minimum width=6cm,inner sep=1,fill=white}]
+\node[below= 1cm of execvp.south] (table) {
+		\begin{tabular}{r r | >{\centering\arraybackslash}p{1.7cm}  | l}\cline{3-3}
+			tty (keyboard) $\rightarrow$ & 0 & in & \\\cline{3-3}
+			file $\rightarrow$ & 1 & fd & $\rightarrow$ file \\\cline{3-3}
+			& 2 & err & $\rightarrow$ tty (display) \\\cline{3-3}
+		\end{tabular}
+	};
+\end{scope}
+
+\node(child1d) [above=0.2cm of open]{CHILD};
+\node(parent1d) [above=0.2cm of fork1]{PARENT};
+
+
+
+%Back Ground Outline
+\begin{pgfonlayer}{background}
+\path[fill=blue!20,rounded corners]
+($(open.north west)+(-3.2,1)$)  rectangle ($(table.south east)+(0.3,-0.4)$);
+\path[fill=green!20,rounded corners]
+($(fork1.north west)+(-3.2,1)$)  rectangle ($(wait.south east)+(0.3,-0.4)$);
+\end{pgfonlayer}
+\draw [vecArrow] (wait) -- ($(wait.east)+(2,0)$);
+\draw [vecArrow] (fork1) -- ($(open.north)+(0,1)$);
+\draw [vecArrow] (fork1) -- (wait);
+\draw [vecArrow] (open) -- (dup);
+\draw [vecArrow] (dup) -- (execvp);
+\draw [vecArrow] ($(fork1.north)+(0,2)$) -- ($(fork1.north)+(0,1)$);
+\draw[thick,dashed,->] ($(execvp.east)+(0.3,0)$) -- ($(execvp.east)+(2,0)$) node[midway,above]{\textbf{file}};
+
+
+\end{tikzpicture}
+
+\end{document}
