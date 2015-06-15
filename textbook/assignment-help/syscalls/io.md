@@ -4,9 +4,9 @@ This markdown file demonstrates how to use the system calls `dup` , `dup2` and `
 This file contains code that we will be able to use to create simple programs that show us how to use `dup`, `dup2` and `pipe`.
  
 ###dup() and dup2()
-The following is an example of how redirect standard out to a file using two different methods.
+The following is an example of how to redirect standard out to a file using two different methods.
 The two different methods of doing this are with the use of `dup()` or `dup2()`.
-The source code on the `dup()` method can be found at [`io_dup.cpp`](./io_dup.cpp). 
+The source code on the `dup()` method can be found at [`io_dup.cpp`](./io_dup.cpp).
 The source code on the `dup2()` method can be found at [`io_dup2.cpp`](./io_dup2.cpp).
 
 The first method we will be implementing is with the use of `dup`.
@@ -21,15 +21,14 @@ We can show this by typing the following command in the terminal.
 ```
 $ cat filename.txt
 ```
-This will display the following:
+This will display the following to the terminal:
 ```
 Standard Out is now a file.
 ```
 
-
 Now that we know what the program is supposed to do, let's implement it.
 
-We begin by opening a file that is used for writing only. 
+We begin by opening a file that is used for writing only.
 We will be using the system call `open()` with the flags `O_WRONLY`, `O_CREAT`, and `O_TRUNC`.
 
 ```
@@ -53,7 +52,7 @@ In case we forgot what the flags mean:
 
 Notice that output file descriptors (`outfd`) less than 0 are invalid and proper error checking is displayed.
 
-We will now close `stdout` and the lowest available file descriptor will now become `STDOUT_FILENO`, which we know is the integer value 1. 
+We will now close `stdout` and the lowest available file descriptor will now become `STDOUT_FILENO`, which we know is the integer value 1.
 Once again, proper error checking is needed.
 
 ```
@@ -99,8 +98,7 @@ This shows that `stdout` was redirected to the file.
 
 Now that we know that it does the same job as the method above, let's see how the code differs.
 
-We begin by opening a file that is used only for writing as we did above, but we replace the next two steps in the `dup()` method with the `dup2()` system call. 
-To avoid confusion, the code should look like this:
+We begin by opening a file that is used only for writing as we did above, but instead of calling `dup`, we call `dup2`.
 
 ```
 outfd = open("filename.txt", O_WRONLY | O_CREAT | O_TRUNC);
@@ -116,7 +114,7 @@ if(dup2(outfd,1) < 0)
     return 1;
 }
 ```
-All we did was use the `dup2()` system call which takes in two file descriptors. 
+All we did was use the `dup2()` system call which takes in two file descriptors as parameters.
 The first paramater is the old file descriptor and the second parameter is the new file descriptor. With this simple code,standard out has now been redirected and we can now write to the file.
 
 
@@ -128,18 +126,13 @@ The program can be ran by typing the following in the terminal:
 $ g++ io_pipe.cpp -o pipe
 $ ./pipe
 ```
-The program will then output the following message to the terminal:
-```
-Parent Proccess
-Child Process
-Hello World!
-```
+Here is a terminal diplaying the ouput of the program:
+![](http://i.imgur.com/zhJRZQA.png)
 
 First we will begin by declaring our `pipefd[2]` array.
-We are also declaring a pid because we will be using two different processes in order to communicate between the both.
-We also declare a `char` array named `buf` that has a size of 15 because it will hold the message `Hello World!`.
+We also declare a `char` array named `buf` that has a size of 15.
+We want the array to be of size 15, because we want our message, `Hello World!`, to fit in without overflowing.
 ```
-pid_t pid;
 int pipefd[2];
 char buf[15];
     
@@ -158,7 +151,7 @@ if( ret == -1)
 ```
 We can now create our fork and provide proper error checking as well.
 ```
-pid = fork() ;
+pid_t pid = fork() ;
 
 if(pid == -1)
 {
@@ -167,18 +160,18 @@ if(pid == -1)
 }
 ```
 We can now use `pipefd[1]` to write our message to the buffer through the pipe. Remember that when we use 1 as our parameter we are at the write end of the pipe and when a 0 is used we are at the read end of the pipe.
-Remember that when the `pid == 0` we are in the child proccess, so we will be writing in the child process. 
+Remember that when the `pid == 0` we are in the child proccess, so we will be writing in the child process.
 
 ```
-if(pid == 0) 
+if(pid == 0)
 {
     printf("Child Process \n");
-    write(ourpipefd[1], "Hello World!" , 12);   
+    write(pipefd[1], "Hello World!" , 12);
 }
 ```
-We can now use `ourpipefd[0]` to read from one process to the other.
-We will be reading from the parent process since the `pid == 1`.
-We choose the value 13 so we make sure that we read the whole message.
+We can now use `pipefd[0]` to read from one process to the other.
+We will be reading in the parent process since the `pid > 0`.
+The value 13 is passed on to `read`, in order to make sure the whole message is read.
 ```
 else if(pid > 0)
 {
@@ -187,7 +180,7 @@ else if(pid > 0)
     printf(buf);
 }
 ```
-This program will now read from the write end of the pipe and display `Hello World!` to the screen. 
+This program will now read from the write end of the pipe and display `Hello World!` to the screen.
 This is a simple program, but it shows how `pipe()` can be used to communicate between processes.
 
 This is the end of the tutorial, hopefully we now have a better understanding of what the input and output system calls are and how to use them.

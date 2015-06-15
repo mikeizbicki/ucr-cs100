@@ -1,51 +1,42 @@
 #System calls relating to the use of Exec
 
 This markdown file will demonstrate how to use `exec` and the system calls needed to run `exec`.
-These system calls include `fork`, `wait` and `exec` itself. 
-There are examples that will show us how to use `fork` and `wait` by themselves and then we will connect them together with `exec` to implement them all together.
+These system calls include `fork`, `wait` and `exec` itself.
+The examples below will show us how to use `fork` and `wait` individually and then we will use them together along with `exec`.
 ##fork()
 The following is an example of how to use `fork`.
 The source code can be found at [`exec_fork.cpp`](./exec_fork.cpp).
 
-This is a simple program that creates a child proccess from a parent process and it then displays the `pids` to the terminal.
+This is a simple program that show us how to create a `fork`.
+The program then dislays the return value of the `fork` at the child and parent process.
 
 The program can be ran by typing the following in the terminal:
 ```
 $ g++ exec_fork.cpp -o fork
 $ ./fork
 ```
-The program will then output the following message to the terminal:
-```
-Parent: I'm the parent: parent pid
-Child: I'm the child: 0
-```
-Where the `parent pid` will be a number, greater than 0, which corresponds to the parent's `pid`. 
-The child's `pid` will always be 0.
+Here is a terminal diplaying the ouput of the program:
+![](http://i.imgur.com/f9UGWP7.png)
 
 Now that we know what the program is supposed to do, let's implement it.
 
-We begin by declaring a `pid`.
+We can now create the `fork`.
 ```
-pid_t pid;
-```
-
-We then duplicate the `pid` by using `fork`.
-```
-pid = fork();
+pid_t pid = fork();
 ```
 
 We now have to check the value of the `pid` to determine which process we are in.
-We know what values correspond to the parent process and child process. 
+We know what return values correspond to the parent process and child process.
 Any number less than 0 will indicate the fork failed so we show that with:
 ```
 if( pid < 0)
-{                                                                                                                           
+{
     perror("fork failed");
-    exit(1);                                                                                                                                        
+    exit(1);
 }
 ```
 We then check to see if the proccess is the child.
-If it is, we want to print the `pid` of it.
+If the return value of `fork` is 0, then we are in the child process.
 ```
 else if( pid == 0 )
 {
@@ -53,7 +44,8 @@ else if( pid == 0 )
 }
 ```
 We then check to see if the proccess is the parent.
-If it is, we want to print the `pid` of it.
+If the return value of `fork` is greater than 0, then we are in the parent process.
+The return value of `fork` here is the process id of the newly created child process.
 ```
 else if (pid > 0)
 {
@@ -74,15 +66,13 @@ The program can be ran by typing the following in the terminal:
 $ g++ exec_wait.cpp -o wait
 $ ./wait
 ```
-The program will then output the following message to the terminal:
-```
-Child: *child pid*: I'm the child
-Child: sleeping for 3 seconds.
-Parent: Child exited with status: 12
-```
+Here is a terminal diplaying the ouput of the program:
+![](http://i.imgur.com/oNjoHsw.png)
 
-We begin again by declaring the `pid.` 
-This time we will be using two `pid` variables and a `status` variable, so we can wait for the child process to end.
+We begin again by declaring the `pid.`
+This time we will be using two `pid` variables and a `status` variable.
+The `status` variable is used so we can wait check the status of the child process.
+
 
 ```
 pid_t c_pid, pid;
@@ -95,13 +85,16 @@ c_pid = fork();
 We can now check to see whether the `fork` failed like we did before.
 ```
 if( pid < 0)
-{                                                                                                                           
+{
     perror("fork failed");
-    exit(1);                                                                                                                                        
+    exit(1);
 }
 ```
-We now check if the process is the child, so we can wait using the function `sleep()`.
-We then need to exit the process after it is done sleeping and we will be doing that by using `exit(12)`, which is an exit status.
+We now check if the process is the child.
+If this is the child process, we can wait by using the function `sleep()`.
+The call to `sleep(3)` delays the child's exit by 3 seconds.
+We can then exit the process after it is done sleeping.
+We will be doing that by using `exit(12)`, which is an exit status.
 ```
 else if( c_pid == 0 )
 {
@@ -115,7 +108,8 @@ else if( c_pid == 0 )
 }
 ```
 
-We now check to see if the process is the parent process, and we wait using the `wait()` system call.
+We now check to see if the process is the parent process.
+If we are in the parent process, we can wait for the child process to finish by using the `wait()` system call.
 ```
 else if (c_pid > 0)
 {
@@ -132,32 +126,31 @@ else if (c_pid > 0)
 That is how you use the system call `wait()` to get the parent proccess to wait until the child process is finished.
 
 ##exec()
-The following is an example of how to use `exec`. 
-Now that we know how to `fork` and `wait`. 
-We will now use `execv()` and `execvp()` within a proccess to execute a program.
+The following is an example of how to use `exec`.
+We can now use `fork` and `wait` together with `exec` to run a program within a process.
+We will now use `execvp()` within a proccess to execute a program.
 We will be connecting all three system calls for the following example.
 The source code can be found at [`exec_code.cpp`](./exec_code.cpp).
 
-This is a simple program that runs `ls` within the child process and the parent process will wait for its child to finish.
+This is a simple program that runs `ls` within the child process and the parent process will wait for the child process to finish.
 
 The program can be ran by typing the following in the terminal:
 ```
 $ g++ exec_code.cpp -o exec
 $ ./exec
 ```
-The program will then output the following message to the terminal:
-```
-Child: executing ls
-*files within directory*
-Parent: finished
-```
+Here is a terminal diplaying the ouput of the program:
+![](http://i.imgur.com/YMlBWXH.png)
 
 We begin by declaring a `char *` array that will hold the job we want `execvp` to run.
 In this case it will be `ls`.
-We also declare the `pids` and `status` like we did before.
-We will then create our `fork`.
+
 ```
 char * args[2] = { "ls", NULL} ;
+```
+
+We will now declare the `pids` and `status` and create our `fork`.
+```
 pid_t c_pid, pid;
 int status;
 c_pid = fork();
@@ -173,18 +166,18 @@ if( c_pid < 0)
 ```
 
 We now check if the process is the child and if it is, we want to run `execvp` with `ls` passed in as the parameter.
-At this point `ls` is going to run and display the directories' contents on the terminal.
+At this point `ls` is going to run and display the files within the current directory onto the terminal.
 ```
 else if (c_pid == 0)
 {
-    printf("Child: executing ls\n");                                                                                                                                                                 
-    execvp( args[0], args);                                                                                                                
-    perror("execve failed");
+    printf("Child: executing ls\n");
+    execvp( args[0], args);
+    perror("execvp failed");
 }
 ```
 Notice that we only want to show the `perror` when `execvp` fails.
 
-We now check the parent process and `wait` like we did before, until the child process finishes.
+We now check the parent process and `wait` until the child process finishes.
 ```
 else if (c_pid > 0)
 {
