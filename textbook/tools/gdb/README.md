@@ -11,7 +11,7 @@ GDB is the debugger that runs on many Unix-like systems which allows the user to
 
 To download and install GDB, click on the following links:
 
-[Download GDB](www.gnu.org/software/gdb/download/)
+[Download GDB](http://www.gnu.org/software/gdb/download/)
 
 [How to Install](http://www.tutorialspoint.com/gnu_debugger/installing_gdb.htm)
 
@@ -37,7 +37,10 @@ These examples will be covering `run`, `quit`, `help`, `breakpoint`, `info break
 
 [Example 3](ex3/)
 
+[Example 4](ex4/)
 
+Example 4 is optional as the topics covered are watch, record, and reverse which are rarely used as record and reverse use a lot of resources.
+Watch however is useful in keeping track of variable and their values.
 
 So now you know the very basics of GDB. With practice, you will be debugging like a pro and hopefully, `gdb` will end up saving you a lot of time!
 
