@@ -2,7 +2,7 @@
 
 \usepackage[margin=0.5in]{geometry}
 \usepackage{listings}
-\lstset{numbers=left,frame=single}
+\lstset{numbers=left,frame=single,basicstyle=\ttfamily}
 
 \title{Quiz 4 - complex bash commands and regular expressions}
 \author{CS100 - software construction}
@@ -28,6 +28,9 @@ Replace all occurrences of the string ``Mike Izbicki'' in the file \lstinline{./
 
 \item
 Search your \lstinline{bash} history for all the times you've run the \lstinline{g++} command, and print only the most recent three.
+You may not have any false positives.
+For example, the command \lstinline{history | grep g++} will NOT work because it lists commands where \lstinline{g++} occurs \emph{anywhere} in the command.
+\lstinline{g++} must occur in the beginning of the command.
 
 \vspace{3in}
 
@@ -43,7 +46,11 @@ HINT: Use the \lstinline{wget} command with the appropriate flags to print the w
 \vspace{3in}
 
 \item
-Print all files in your computer whose filename ends with any of: ``.jpg'', ``.jpeg'', ``.png'', or ``.gif''.
+Print all files in your computer whose filename ends with any of:
+\lstinline{.jpg},
+\lstinline{.jpeg},
+\lstinline{.gif},
+\lstinline{.png}.
 
 \end{enumerate}
 \end{document}
