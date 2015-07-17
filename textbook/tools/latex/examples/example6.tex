@@ -1,0 +1,43 @@
+\documentclass[a4paper]{article}
+\usepackage{xcolor}
+% Define new colors
+\definecolor{green}{rgb}{0,0.5,0}
+% Setting layout to display codes C ++
+\usepackage{listings}
+\lstset{
+  language=C++,
+  basicstyle=\ttfamily\small, 
+  keywordstyle=\color{blue}, 
+  stringstyle=\color{green}, 
+  commentstyle=\color{red}, 
+  extendedchars=true, 
+  showspaces=false, 
+  showstringspaces=false, 
+  numbers=left,
+  numberstyle=\tiny,
+  breaklines=true, 
+  backgroundcolor=\color{green!10},
+  breakautoindent=true, 
+  captionpos=b,
+  xleftmargin=0pt,
+}
+\pagestyle{empty}
+\begin{document}
+\begin{lstlisting}
+#include 
+using namespace std;
+int main()
+{
+  /* Comment */
+  int n, i, a = 0, b = 1, F;
+  cout << "Enter the number of terms of Fibonacci’s sequence: ";
+   cin >> n;
+  cout << a << " " << b << " ";
+   for (i = 0; i < n - 2; i++)   {
+     F = a + b;
+     cout << F << " ";
+     a = b;
+     b = F;
+   } cout << endl; return 0;
+ } \end{lstlisting}
+\end{document}
