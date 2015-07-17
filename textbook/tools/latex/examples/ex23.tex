@@ -1,0 +1,118 @@
+\documentclass[a4paper]{article}
+\usepackage{tikz,fullpage}
+\usepackage{listings} % exibe codigos de linguagens
+\usepackage{showexpl} % exibe codigos de figuras
+
+% Defining new colors
+\definecolor{greencpp}{rgb}{0,0.5,0}
+\definecolor{greenjava}{rgb}{0.25,0.5,0.35}
+\definecolor{jpurple}{rgb}{0.5,0,0.35}
+
+% In order to use many languages in the same file \lstdefinestyle{}
+\lstdefinestyle{LaTeX}{
+  language={[LaTeX]TeX},
+  basicstyle=\ttfamily\small, 
+  identifierstyle=\color{black}, 
+  keywordstyle=\color{blue}, 
+  commentstyle=\color{red}, 
+  extendedchars=true, 
+  showspaces=false, 
+  showstringspaces=false, 
+  numbers=none,
+  %numberstyle=\tiny,
+  breaklines=true, 
+  backgroundcolor=\color{yellow!20}, 
+  breakautoindent=true, 
+  captionpos=b,
+  xleftmargin=0pt,
+  frame=none,   %%frame=single
+  rframe={},
+}
+
+\lstdefinestyle{CPP}
+{
+  language=C++,
+  alsolanguage={[Sharp]C},
+  basicstyle=\ttfamily\small, 
+  keywordstyle=\color{blue}, 
+  stringstyle=\color{greencpp}, 
+  commentstyle=\color{red}, 
+  extendedchars=true, 
+  showspaces=false, 
+  showstringspaces=false, 
+  numbers=left,
+  numberstyle=\tiny,
+  breaklines=true, 
+  backgroundcolor=\color{green!10},
+  breakautoindent=true, 
+  captionpos=b,
+  xleftmargin=0pt,
+}
+
+\lstdefinestyle{Java}
+{
+  language={Java},
+  basicstyle=\ttfamily\small, 
+  keywordstyle=\color{jpurple}\bfseries,
+  stringstyle=\color{red},
+  commentstyle=\color{greenjava},
+  morecomment=[s][\color{blue}]{/**}{*/},
+  extendedchars=true, 
+  showspaces=false, 
+  showstringspaces=false, 
+  numbers=left,
+  numberstyle=\tiny,
+  breaklines=true, 
+  backgroundcolor=\color{cyan!10}, 
+  breakautoindent=true, 
+  captionpos=b,
+  xleftmargin=0pt,
+  tabsize=4
+}
+
+\title{ Coding in \LaTeX}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{C++ Code}
+
+\begin{lstlisting}[style=CPP]
+#include <iostream>
+using namespace std;
+int main()
+{
+    /* Comment */
+    int n, i, a = 0, b = 1, F;
+    cout << "Enter the number of terms of Fibonacci’s sequence: ";
+    cin >> n;
+    cout << a << " " << b << " ";
+    for (i = 0; i < n - 2; i++)
+    {
+        F = a + b;
+        cout << F << " ";
+        a = b;
+        b = F;
+    }
+    cout << endl;
+    return 0;
+}
+\end{lstlisting}
+
+\section*{Java Code}
+
+\begin{lstlisting}[style=Java]
+/**
+ * comment
+ */
+public class HelloWorldApp {
+    public static void main (String argv[])
+    {
+      // comment
+      System.out.println("Hello World!");
+    }
+}
+\end{lstlisting}
+
+\end{document}
