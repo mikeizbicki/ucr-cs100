@@ -5,6 +5,6 @@ giturl = http://github.com/KojinKuro/ucr-cs100.git
 # if you do not have an account (or do not want to list one you already have) then you may create a new, empty account
 github = KojinKuro
 stackoverflow = KojinKuro
+slashdot = KojinKuro
 reddit = KojinKuro
-
-# only include a personal website if you already have one
+hackernews = KojinKuro
