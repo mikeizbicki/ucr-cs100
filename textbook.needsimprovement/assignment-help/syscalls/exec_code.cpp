@@ -23,7 +23,7 @@ int main(int argc, char * argv[]){
     
     printf("Child: executing ls\n");                                                                                                                                                                 
     execvp( args[0], args);                                                                                                                
-    perror("execve failed");
+    perror("execvp failed");
     
   }
   else if (c_pid > 0)
