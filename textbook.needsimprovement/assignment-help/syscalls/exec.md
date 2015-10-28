@@ -8,14 +8,14 @@ The following is an example of how to use `fork`.
 The source code can be found at [`exec_fork.cpp`](./exec_fork.cpp).
 
 This is a simple program that show us how to create a `fork`.
-The program then dislays the return value of the `fork` at the child and parent process.
+The program then displays the return value of the `fork` at the child and parent process.
 
 The program can be ran by typing the following in the terminal:
 ```
 $ g++ exec_fork.cpp -o fork
 $ ./fork
 ```
-Here is a terminal diplaying the ouput of the program:
+Here is a terminal displaying the output of the program:
 ![](http://i.imgur.com/f9UGWP7.png)
 
 Now that we know what the program is supposed to do, let's implement it.
@@ -35,7 +35,7 @@ if( pid < 0)
     exit(1);
 }
 ```
-We then check to see if the proccess is the child.
+We then check to see if the process is the child.
 If the return value of `fork` is 0, then we are in the child process.
 ```
 else if( pid == 0 )
@@ -43,7 +43,7 @@ else if( pid == 0 )
     printf("Child: I'm the child: %d\n", pid);
 }
 ```
-We then check to see if the proccess is the parent.
+We then check to see if the process is the parent.
 If the return value of `fork` is greater than 0, then we are in the parent process.
 The return value of `fork` here is the process id of the newly created child process.
 ```
@@ -59,14 +59,14 @@ We just have to make sure to check the `pid` and match it to the correct process
 The following is an example of how to use `wait`.
 The source code can be found at [`exec_wait.cpp`](./exec_wait.cpp).
 
-This is a simple program that creates a child proccess from a parent process and the parent process then waits for the child process to finish.
+This is a simple program that creates a child process from a parent process and the parent process then waits for the child process to finish.
 
 The program can be ran by typing the following in the terminal:
 ```
 $ g++ exec_wait.cpp -o wait
 $ ./wait
 ```
-Here is a terminal diplaying the ouput of the program:
+Here is a terminal displaying the output of the program:
 ![](http://i.imgur.com/oNjoHsw.png)
 
 We begin again by declaring the `pid.`
@@ -121,14 +121,14 @@ else if (c_pid > 0)
     }
 }
 ```
-`WIFEITED` and `WEXITSTATUS` are macros that are used to check if the status is true or false compared to the status we used to exit within the child process.
+`WIFEXITED` and `WEXITSTATUS` are macros that are used to check if the status is true or false compared to the status we used to exit within the child process.
 
-That is how you use the system call `wait()` to get the parent proccess to wait until the child process is finished.
+That is how you use the system call `wait()` to get the parent process to wait until the child process is finished.
 
 ##exec()
 The following is an example of how to use `exec`.
 We can now use `fork` and `wait` together with `exec` to run a program within a process.
-We will now use `execvp()` within a proccess to execute a program.
+We will now use `execvp()` within a process to execute a program.
 We will be connecting all three system calls for the following example.
 The source code can be found at [`exec_code.cpp`](./exec_code.cpp).
 
@@ -139,7 +139,7 @@ The program can be ran by typing the following in the terminal:
 $ g++ exec_code.cpp -o exec
 $ ./exec
 ```
-Here is a terminal diplaying the ouput of the program:
+Here is a terminal displaying the output of the program:
 ![](http://i.imgur.com/YMlBWXH.png)
 
 We begin by declaring a `char *` array that will hold the job we want `execvp` to run.
