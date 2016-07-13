@@ -132,7 +132,7 @@ You should only do this if you really need to reset your repository back to it's
 The second one is `--soft`. This mode will reset your repository to the state at that time, and keeps your changes as `changes to be committed`.
 
  
- #git diff
+#git diff
  `git diff` allows you to check the differences between the branches or commits.
  If you type it out automatically, you can checkout the differences between your last commit and the current changes that you have.
  You need to make sure that the two that you are comparing should be the same, so two branches, or two different commits.
@@ -143,7 +143,7 @@ The second one is `--soft`. This mode will reset your repository to the state at
     
 It can tell you the differences in the files that you have, or the files that you need to add in your next commit.
  
- #git blame 
+#git blame 
  `git blame` is a cool little feature in git that allows you to see who wrote what in the repository. The command to use this feature is:
  
     git blame <filename>
@@ -163,7 +163,7 @@ You can use the command:
 
 This will tell you who edit the file within those line numbers on the command line instead of pulling up a text-editor.
  
- #git stash
+#git stash
 `git stash` is another cool feature that allows you to save your changes without making any commits. 
 You can `git stash` several times, and later apply those changes when you see fit.
  
