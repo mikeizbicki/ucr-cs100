@@ -1,12 +1,12 @@
-#advanced git: the introductory tutorial
-   After the end of this tutorial, you should know how to add a remote, fetch the contents a remote, reset your HEAD pointer to a different commit, run a git blame, and git stash some changes that you do not want to commit just yet.
+# advanced git: the introductory tutorial
+After the end of this tutorial, you should know how to add a remote, fetch the contents a remote, reset your HEAD pointer to a different commit, run a git blame, and git stash some changes that you do not want to commit just yet.
    
    This is an introductory tutorial, so the goal is to get you acquainted with some of the more advanced features of git. 
 If you would like a complete run down of how to use a certain command, you can click on the command under the section `Topics covered:`, and it will link you to the man page of that specific command on the internet.
    
    `<>` indicates a variable at any time in this tutorial.
 
-#topics covered:
+# topics covered:
    * [git remote](http://git-scm.com/docs/git-remote)
    * [git fetch](http://git-scm.com/docs/git-fetch)
    * [git rebase](http://git-scm.com/docs/git-rebase)
@@ -15,7 +15,7 @@ If you would like a complete run down of how to use a certain command, you can c
    * [git blame](http://git-scm.com/docs/git-blame)
    * [git stash](http://git-scm.com/docs/git-stash)
 
-#starting git
+# starting git
 I will be assuming that you have completed the git lab for this course, and you have some general knowledge about how git works. 
 You can use `git init`, `git pull`, `git push`, `git checkout`, `git branch`, and `git tag`. 
 If you don't know, here is a basic rundown.
@@ -29,7 +29,7 @@ If you don't know, here is a basic rundown.
 
 Now to the juicier parts of git! :]
 
-#git remote
+# git remote
 `git remote` lets you manage a set of tracked repositories. 
 These tracked repositories are labeled as 'remotes'.
 
@@ -59,7 +59,7 @@ If at any time, you messed up, you can remove remotes with:
 
     git remote rm <remote_name>
 
-#git fetch
+# git fetch
 `git fetch` downloads all the objects and references from a specified repository. 
 This will download every branch and tag in the specified repository, unless you choose to not download branches and/or tags.
 
@@ -85,7 +85,7 @@ This updates your branch with the remote repositories that you have just fetched
 In a big group project, several versions of the same repository can be floating around. 
 Therefore, it's important to have the updated versions of the repository, as bugs can be squashed, and fixes will have been completed.
 
-#git rebase
+# git rebase
 `git rebase` allows you to do many things, but the main feature we will cover in this tutorial is squashing commits.
 Squashing commits cleans up your commit history. 
 Instead of having 15 commits, you can have 3 or 4 commits that focus more on features that were added or removed.
@@ -113,7 +113,7 @@ When you are doing picking and squashing the commits, exit from the text-editor.
 After you exit out of the window, git will automatically try to rebase your repository. 
 You should solve any merge conflicts that you get, and when it finishes completely, your project should reflect the commits that you have picked and squashed.
 
-#git reset
+# git reset
 `git reset` reverses the HEAD pointer to the specified commit or state.
 
 If you accidently changed your repository, and added a bunch of empty commits with git rebase, then you can use git reset to revert the repo to the commit number of your choosing. The command is:
@@ -126,13 +126,13 @@ There are two `mode` values that are pretty important to know.
 The first one is `--hard`. 
 This resets the pointer back to the commit number that you wish to reset to.
 
-##NOTE: THIS WILL RESET YOUR HEAD POINTER, AND YOU WILL LOSE YOUR WORK.
+## NOTE: THIS WILL RESET YOUR HEAD POINTER, AND YOU WILL LOSE YOUR WORK.
 You should only do this if you really need to reset your repository back to it's original format.
 
 The second one is `--soft`. This mode will reset your repository to the state at that time, and keeps your changes as `changes to be committed`.
 
  
-#git diff
+# git diff
  `git diff` allows you to check the differences between the branches or commits.
  If you type it out automatically, you can checkout the differences between your last commit and the current changes that you have.
  You need to make sure that the two that you are comparing should be the same, so two branches, or two different commits.
@@ -143,7 +143,7 @@ The second one is `--soft`. This mode will reset your repository to the state at
     
 It can tell you the differences in the files that you have, or the files that you need to add in your next commit.
  
-#git blame 
+# git blame 
  `git blame` is a cool little feature in git that allows you to see who wrote what in the repository. The command to use this feature is:
  
     git blame <filename>
@@ -163,7 +163,7 @@ You can use the command:
 
 This will tell you who edit the file within those line numbers on the command line instead of pulling up a text-editor.
  
-#git stash
+# git stash
 `git stash` is another cool feature that allows you to save your changes without making any commits. 
 You can `git stash` several times, and later apply those changes when you see fit.
  
@@ -199,7 +199,7 @@ This allows you to continue working on that portion of the project.
 If you apply without putting a number, then you apply the most current one in the stash.
 
 ---------------------------
-#more information
+# more information
 If you need more information on git, here are some resources that you can checkout.
 
 [git-scm](http://git-scm.com/) - 
