@@ -1,8 +1,8 @@
 Cheat Sheet
 ===========
-###Git and GitHub
+### Git and GitHub
 
-#####SETUP GIT
+##### SETUP GIT
 
 After installing Git, you can make modifications to customize the environment and identify yourself in it. 
 You just need to make these changes once.
@@ -25,7 +25,7 @@ $ git config --list
 Command to list all the settings of your Git, including username and email.
 
 
-#####USING HELP
+##### USING HELP
 
 If you need help to use some Git command, you can always use the command `git help`. 
 There are three ways to use it:
@@ -40,7 +40,7 @@ $ git config --help
 ```
 
 
-#####CREATE A NEW REPOSITORY
+##### CREATE A NEW REPOSITORY
 
 You can create a Git project using two different methods: By creating a new repository in an existing local project or directory or by cloning an existing remote repository.
 
@@ -60,7 +60,7 @@ For example, you can take a url from a GitHub project that you want to contribut
 This will create a new folder with all the projects on it, in the current directory.
 
 
-#####MAKE CHANGES
+##### MAKE CHANGES
 
 After creating a new repository, you can start doing your project. 
 To keep the repository up to date, you have to commit the changes that you've made on your local machine.
@@ -113,7 +113,7 @@ The git tag command will give a name (tag) to the last commit that you made.
 This is helpful because you can access this commit later, even if you've already commit something else.
 
 
-#####GROUP CHANGES
+##### GROUP CHANGES
 Name a series of commits and combine completed efforts. 
 
 Using Git, you can work with multiple versions of the same project at the same time. 
@@ -165,7 +165,7 @@ $ git branch -d [branch-name]
 Command to delete a branch.
 
 
-#####REVIEW HISTORY
+##### REVIEW HISTORY
 Browse and inspect the history of the project.
 ```
 $ git log
@@ -183,7 +183,7 @@ The `git diff` command is used to see the difference between commits, branches, 
 For example, the `git diff test...master` will show the changes that occurred on the master branch since when the test branch was started off it.
 
 
-#####SYNCHRONIZE CHANGES
+##### SYNCHRONIZE CHANGES
 Keep your local repository and your project on GitHub the same.
 
 ```
